@@ -14,14 +14,6 @@ const IMPLEMENTED = new Set(["accueil", "premiers_pas", "copilote", "contrat", "
   "besoins", "rdv", "animateur", "assistant", "assistants", "formulaires", "sources", "pdf", "historique", "parametres"]);
 
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
-const SECTIONS = [
-  ["accueil", "🏠 Accueil"], ["premiers_pas", "🧭 Premiers pas"], ["copilote", "🧠 Copilote réponse"], ["contrat", "📑 Recherche contrat"],
-  ["recherche", "🔎 Recherche globale"], ["glossaire", "📖 Glossaire"], ["comparateur", "⚖️ Comparateur"], ["besoins", "🎯 Analyse des besoins"],
-  ["rdv", "🗓 Préparation RDV"], ["animateur", "🎓 Animateur"],
-  ["assistant", "🤖 Assistant IA"], ["assistants", "💬 Avec ChatGPT / Claude"],
-  ["formulaires", "📝 Formulaires"], ["sources", "📚 Sources officielles"], ["pdf", "📄 PDF contractuels"],
-  ["historique", "🕘 Historique"], ["parametres", "⚙ Paramètres"],
-];
 
 // Impression PDF sans dépendance (quick win 4) : isole l'élément cible via CSS @media print
 // (déplie les accordéons pour tout imprimer), puis window.print(). Aucune librairie.
@@ -52,7 +44,7 @@ export async function mount(el, ctx) {
   const human = true;
   el.innerHTML = `<div class="view-body">Chargement…</div>`;
   const body = el.querySelector(".view-body");
-  const render = { accueil, premiers_pas, copilote, contrat, recherche, glossaire, assistant, assistants, comparateur, besoins, rdv, animateur, formulaires, sources, pdf, historique, parametres }[section] || accueil;
+  const render = { accueil, premiers_pas, copilote, contrat, recherche, glossaire, assistant, assistants, confiance, comparateur, besoins, rdv, animateur, formulaires, sources, pdf, historique, parametres }[section] || accueil;
   try { await render(body, human); }
   catch (e) { body.innerHTML = `<p class="warn">Erreur de la section (${esc(e.message)}).</p>`; }
 }
@@ -101,19 +93,85 @@ function tile(icon, label, href, sub) {
   return `<a class="tile" href="${href}"><span class="tile-i">${icon}</span><span class="tile-l">${esc(label)}</span><span class="tile-s">${esc(sub)}</span></a>`;
 }
 
-/* ---------- Premiers pas (tutoriel) ---------- */
+/* ---------- Premiers pas, FAQ, exemples, bonnes pratiques, limites ---------- */
+const PP_EXEMPLES = ["délai de carence décès", "exclusions garantie décès", "rachat possible", "conditions d'âge à l'adhésion", "fiscalité transmission", "invalidité IPT"];
+const PP_FAQ = [
+  ["Qu'est-ce que Gabriel AXA ?", "Un assistant de recherche dans la base contractuelle AXA (garanties, exclusions, conditions, définitions), à partir de documents publics. Il fait gagner du temps ; il ne remplace pas la notice, qui fait toujours foi."],
+  ["Est-ce que ça contient des données client ?", "Non. Aucune donnée client n'est stockée. Les documents embarqués proviennent de sources publiques (notices d'information, conditions générales)."],
+  ["Puis-je répondre à un client à partir d'un résultat ?", "Le résultat vous oriente et cite sa source. Avant toute réponse ferme, vérifiez la notice PDF à la page indiquée : c'est elle qui fait foi."],
+  ["Comment chercher efficacement ?", "Tapez en langage naturel (« le décès accidentel est-il couvert ? »). Les synonymes métier sont tolérés. Filtrez ensuite par type (garantie, exclusion, définition…)."],
+  ["C'est quoi Pack A et Pack B ?", "Pack A = les données contractuelles qui font foi. Pack B = une aide au raisonnement (jamais une preuve seule). Voir « Utiliser avec une IA »."],
+  ["Ça marche sur mobile ?", "Oui, l'interface est responsive. La recherche et les fiches sont utilisables sur téléphone."],
+];
 async function premiers_pas(body) {
   body.innerHTML = `
-    <p class="lead">Nouveau sur AXA Conseiller ? Ce guide explique l'essentiel en 3 minutes.
-    <a href="#/assistants">→ Utiliser AXA avec ChatGPT / Claude</a></p>
+    <p class="lead">Nouveau sur Gabriel AXA ? L'essentiel en 3 minutes : chercher une information contractuelle,
+    ouvrir la fiche, vérifier la source. <a href="#/assistants">→ Utiliser avec ChatGPT / Claude</a></p>
+
+    <h3 class="day-h">Guide rapide</h3>
     <div class="card"><div class="md" id="tuto_md">Rendu…</div></div>
-    <div class="grid">
-      ${tile("📑", "Ouvrir une fiche contrat", "#/contrat", "commencer par là")}
-      ${tile("🗓", "Préparer un rendez-vous", "#/rdv", "fiche prudente")}
-      ${tile("💬", "Prompts ChatGPT / Claude", "#/assistants", "prêts à copier")}
-    </div>`;
+
+    <h3 class="day-h">Exemples de recherches</h3>
+    <div class="filters" id="pp_ex">${PP_EXEMPLES.map(x => `<button class="chip" data-ex="${esc(x)}">${esc(x)}</button>`).join("")}</div>
+
+    <h3 class="day-h">Bonnes pratiques</h3>
+    <ul class="hlist">
+      <li>Partez d'une question concrète, comme à un collègue.</li>
+      <li>Repérez le <b>type</b> du résultat (garantie / exclusion / condition) et son contrat.</li>
+      <li><b>Ouvrez la notice</b> à la page citée avant toute réponse client.</li>
+      <li>En cas de doute entre deux contrats proches, utilisez le <a href="#/comparateur">comparateur</a>.</li>
+    </ul>
+
+    <h3 class="day-h">Limites</h3>
+    <ul class="hlist">
+      <li>Gabriel AXA <b>n'invente rien</b> : si une information n'est pas dans la base, il ne la fabrique pas.</li>
+      <li>Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à <b>vérifier dans la notice</b>.</li>
+      <li>La <b>notice PDF fait foi</b> — l'application est une aide, pas une source contractuelle.</li>
+    </ul>
+
+    <h3 class="day-h">Questions fréquentes</h3>
+    ${PP_FAQ.map(([q, a]) => `<details class="acc"><summary>${esc(q)}</summary><p class="card-b">${esc(a)}</p></details>`).join("")}`;
   const md = body.querySelector("#tuto_md");
   renderMarkdown(TUTORIEL).then(h => { md.innerHTML = h; }).catch(() => { md.textContent = TUTORIEL; });
+  body.querySelector("#pp_ex").addEventListener("click", e => {
+    const b = e.target.closest("[data-ex]"); if (!b) return;
+    set({ axaQuery: b.dataset.ex }); location.hash = "#/recherche";
+  });
+}
+
+/* ---------- Pourquoi faire confiance aux résultats (Partie 8) ---------- */
+async function confiance(body) {
+  const idx = await kb.source("index_global");
+  const s = idx?.statistiques;
+  body.innerHTML = `
+    <p class="lead">Gabriel AXA ne « génère » pas de réponses : il <b>retrouve</b> une information déjà écrite dans un
+    document AXA et vous <b>renvoie à sa source</b>. Voici pourquoi vous pouvez vous y fier.</p>
+
+    <div class="grid">
+      ${tile("📄", "Documents publics", "#/pdf", "notices d'information & CG diffusées par AXA")}
+      ${tile("🔗", "Tout est tracé", "#/contrat", "chaque fait cite sa notice et sa page")}
+      ${tile("🧠", "Preuve vs raisonnement", "#/assistants", "Pack A = preuve · Pack B = aide")}
+    </div>
+
+    <h3 class="day-h">Origine des données</h3>
+    <div class="card"><p class="card-b">Les informations proviennent exclusivement des <b>notices d'information et conditions
+    générales</b> des produits AXA — des documents <b>publics</b>, remis à tout prospect. Aucune donnée client, aucune
+    donnée interne, aucune source privée.</p></div>
+
+    <h3 class="day-h">Traçabilité</h3>
+    <div class="card"><p class="card-b">Chaque garantie, exclusion, condition ou définition affichée porte un
+    <b>badge « 📄 Notice p.X »</b> qui ouvre le PDF à la bonne page. Rien n'est présenté sans sa source.
+    ${s ? `La base couvre <b>${s.contrats} contrats</b> et ${s.faits_uniques ? `<b>${s.faits_uniques} faits contractuels</b> sourcés` : "des faits sourcés"}.` : ""}</p></div>
+
+    <h3 class="day-h">Aucune invention</h3>
+    <div class="card"><p class="card-b">L'application ne complète jamais un manque par une supposition. Si une information
+    n'existe pas dans la base, elle n'apparaît pas — et un tableau chiffré est signalé « à vérifier dans la notice ».
+    Les couches de données sont <b>dérivées</b> des documents sources ; les fichiers d'origine (masters) ne sont jamais réécrits.</p></div>
+
+    <h3 class="day-h">La règle qui prime</h3>
+    <div class="card"><p class="card-b"><b>La notice PDF fait toujours foi.</b> Gabriel AXA vous fait gagner du temps pour
+    <i>trouver</i> et <i>situer</i> l'information ; la réponse au client se valide sur la notice.</p>
+      <div class="btns"><a class="btn gold" href="#/recherche">🔎 Essayer une recherche</a><a class="btn ghost" href="#/pdf">📄 Voir les notices</a></div></div>`;
 }
 
 /* ---------- Utiliser AXA avec ChatGPT / Claude (prompts copiables) ---------- */
@@ -121,17 +179,33 @@ async function assistants(body) {
   const manifest = await kb.manifest();
   const masters = ["master_pack_a", "master_pack_b", "mode_emploi_ia"].filter(r => manifest.sources?.[r]);
   body.innerHTML = `
-    <p class="lead">L'app ne branche aucune IA. Pour te faire assister, tu utilises <b>ChatGPT ou Claude</b>
-    en leur fournissant la base de connaissances, puis un prompt cadré. La preuve reste le contrat / PDF.</p>
+    <p class="lead">Gabriel AXA ne branche aucune IA. Pour vous faire assister, vous fournissez la base de
+    connaissances à <b>ChatGPT ou Claude</b>, puis un prompt cadré. La preuve reste le contrat / la notice PDF.</p>
 
-    <div class="card"><h3 style="margin:0 0 8px">1. Quels fichiers fournir à l'assistant</h3>
+    <div class="card"><h3 style="margin:0 0 8px">Quand utiliser quoi</h3>
+      <div class="grid">
+        <div class="tile"><span class="tile-l">🔎 L'application</span><span class="tile-s">retrouver vite un fait précis (garantie, exclusion, condition), sourcé à la notice. Le réflexe quotidien.</span></div>
+        <div class="tile"><span class="tile-l">🤖 Une IA</span><span class="tile-s">reformuler pour un client, croiser plusieurs contrats, préparer un argumentaire — à partir des packs.</span></div>
+        <div class="tile"><span class="tile-l">🔁 Les deux</span><span class="tile-s">chercher le fait dans l'app (preuve + page), puis demander à l'IA de le mettre en forme. Recommandé.</span></div>
+      </div></div>
+
+    <div class="card"><h3 style="margin:0 0 8px">Workflow recommandé</h3>
+      <ol class="hlist">
+        <li>Cherchez le fait dans l'app → notez le contrat, la <b>notice et la page</b>.</li>
+        <li>Fournissez à l'IA le <b>Pack A</b> (ou l'extrait utile) + un prompt cadré ci-dessous.</li>
+        <li>Exigez une réponse <b>sourcée</b> ; refusez toute affirmation sans source.</li>
+        <li><b>Vérifiez la notice</b> avant de répondre au client.</li>
+      </ol>
+      <div class="btns"><a class="btn gold" href="#/ia">📖 Ouvrir la vue IA (restitution complète)</a></div></div>
+
+    <div class="card"><h3 style="margin:0 0 8px">Fichiers à fournir à l'assistant</h3>
       <ul class="hlist">
         <li><b>Pack A stable</b> — la référence contractuelle (fait foi).</li>
         <li><b>Pack B matrices</b> — uniquement pour le raisonnement complexe (jamais une preuve).</li>
         <li><b>Mode d'emploi IA</b> — explique le routage Pack A / Pack B.</li>
       </ul>
-      <div class="btns">${masters.map(r => `<a class="btn ghost" href="${esc(kb.fileUrl(manifest.sources[r].path))}" target="_blank" rel="noopener">⬇ ${esc(r.replace(/_/g, " "))}</a>`).join("")}
-        <a class="btn" href="#/assistants">📦 Générer un pack de contexte</a></div>
+      <div class="btns">${masters.map(r => `<a class="btn ghost" href="${esc(kb.fileUrl(manifest.sources[r].path))}" target="_blank" rel="noopener" download>⬇ ${esc(r.replace(/_/g, " "))}</a>`).join("")}
+        <a class="btn" href="#/ia">📖 Vue IA & téléchargements</a></div>
       <p class="muted">Astuce : pour une question ciblée, un extrait de la fiche contrat suffit souvent (plus léger qu'un master entier).</p></div>
 
     <div class="card"><h3 style="margin:0 0 8px">2. Comment poser une question (méthode)</h3>
@@ -157,14 +231,7 @@ async function assistants(body) {
   bindCopy(body.querySelector("#pr_all"), () => PROMPTS.map(p => `### ${p.titre}\n${p.texte}`).join("\n\n"), "✓ 7 prompts copiés");
 }
 
-/* ---------- Recherche contrat (vue conseiller par contrat) ---------- */
-const CONTRACT_SECTIONS = [
-  ["Garanties principales", "garanties_principales"], ["Exclusions importantes", "exclusions_importantes"],
-  ["Options", "options"], ["Cotisations & prix", "cotisations_prix"], ["Délais & franchises", "delais_franchises"],
-  ["Fiscalité", "fiscalite"], ["Points de vigilance", "points_de_vigilance"], ["Formules", "formules"],
-];
-// Sections ouvertes par défaut dans la fiche (quick win 2) : les 2 gestes les plus fréquents.
-const OPEN_BY_DEFAULT = new Set(["garanties_principales", "exclusions_importantes"]);
+/* ---------- Fiche contrat (écran métier conseiller) ---------- */
 async function contrat(body, human) {
   const resume = await kb.source("contrats_resume_humain");
   const contrats = resume?.contrats || [];

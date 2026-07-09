@@ -15,17 +15,19 @@ const NAV = [
     { id: "pdf", label: "Notices PDF", icon: "📄" },
   ]},
   { group: "Ressources", items: [
-    { id: "assistants", label: "Utiliser avec une IA", icon: "🤖" },
+    { id: "assistants", label: "Utiliser avec une IA", icon: "🤝" },
+    { id: "ia", label: "Vue IA (pour les modèles)", icon: "🤖", module: "ia" },
+    { id: "confiance", label: "Pourquoi faire confiance", icon: "🔒" },
     { id: "sources", label: "Sources officielles", icon: "📚" },
   ]},
-  { group: "Outils conseiller", items: [
-    { id: "besoins", label: "Analyse des besoins", icon: "🎯" },
-    { id: "rdv", label: "Préparation RDV", icon: "🗓" },
-    { id: "animateur", label: "Animateur", icon: "🎓" },
-    { id: "formulaires", label: "Formulaires", icon: "📝" },
-  ]},
   { group: "Aide", items: [
-    { id: "premiers_pas", label: "Premiers pas", icon: "🧭" },
+    { id: "premiers_pas", label: "Premiers pas & FAQ", icon: "🧭" },
+  ]},
+  { group: "Outils conseiller", items: [
+    { id: "besoins", label: "Analyse des besoins", icon: "🎯", beta: true },
+    { id: "rdv", label: "Préparation RDV", icon: "🗓", beta: true },
+    { id: "animateur", label: "Animateur", icon: "🎓", beta: true },
+    { id: "formulaires", label: "Formulaires", icon: "📝", beta: true },
   ]},
 ];
 const INDEX = {}; NAV.forEach(g => g.items.forEach(it => INDEX[it.id] = it));
@@ -39,7 +41,9 @@ const HELP = {
   comparateur: { what: "Deux contrats côte à côte pour choisir.", how: ["Sélectionne deux contrats à comparer."] },
   glossaire: { what: "Les termes définis dans les notices AXA, regroupés et sourcés.", how: ["Filtre un terme pour voir ses définitions par contrat."] },
   pdf: { what: "Les notices contractuelles — la source qui fait foi.", how: ["Ouvre une notice, si possible à la bonne page."] },
-  assistants: { what: "Comment utiliser Gabriel AXA avec ChatGPT ou Claude.", how: ["Copie le mode d'emploi ou le prompt conseiller.", "Pack A = preuve, Pack B = raisonnement."] },
+  assistants: { what: "Comment utiliser Gabriel AXA avec ChatGPT ou Claude : quand l'app, quand l'IA, quand les deux.", how: ["Suis le workflow recommandé.", "Copie un prompt prêt à l'emploi.", "Pack A = preuve, Pack B = raisonnement."] },
+  ia: { what: "Une vue conçue pour les modèles d'IA : restitution propre, complète et sourcée à faire lire à ChatGPT ou Claude.", how: ["Ouvre Pack A / Pack B / Glossaire / Contrats.", "Télécharge les fichiers bruts pour les fournir à un modèle."] },
+  confiance: { what: "D'où viennent les données et pourquoi s'y fier : documents publics, traçabilité, notice qui fait foi.", how: ["Chaque information renvoie à sa notice PDF.", "Rien n'est inventé."] },
   sources: { what: "Les sources officielles et règles publiques référencées.", how: ["Consulte les références ; la notice reste la preuve."] },
   besoins: { what: "Un questionnaire guidé pour cadrer le besoin du client.", how: ["Réponds aux questions ; oriente vers les contrats pertinents."] },
   rdv: { what: "Une trame pour préparer un rendez-vous client.", how: ["Suis la trame ; imprime si besoin."] },
@@ -51,7 +55,7 @@ const DEFAULT_HELP = { what: "Gabriel AXA : la base de connaissances contractuel
 function renderNav() {
   const cur = currentId();
   return NAV.map(g => `<div class="nv-g"><div class="nv-gh">${g.group}</div>` +
-    g.items.map(it => `<a class="nv-i ${it.id === cur ? "on" : ""}" href="#/${it.id}"><span>${it.icon}</span> ${it.label}</a>`).join("") +
+    g.items.map(it => `<a class="nv-i ${it.id === cur ? "on" : ""}" href="#/${it.id}"><span>${it.icon}</span> ${it.label}${it.beta ? ` <span class="nv-beta">bêta</span>` : ""}</a>`).join("") +
     `</div>`).join("");
 }
 function parseHash() {
@@ -64,9 +68,10 @@ async function route() {
   const { id, path } = parseHash(); const item = INDEX[id];
   document.querySelectorAll(".nv-i").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#/" + id));
   const view = document.getElementById("view");
-  view.innerHTML = `<div class="view-head"><h1>${item.icon} ${item.label}</h1></div><div id="sectionwrap"></div>`;
+  // La vue IA (/ia) porte son propre en-tête sémantique (h1) → pas de chrome d'en-tête d'app.
+  view.innerHTML = item.module === "ia" ? `<div id="sectionwrap"></div>` : `<div class="view-head"><h1>${item.icon} ${item.label}</h1></div><div id="sectionwrap"></div>`;
   try {
-    const m = await import("./modules/axa.js");
+    const m = await import(`./modules/${item.module || "axa"}.js`);
     await m.mount(document.getElementById("sectionwrap"), { section: id, path });
     document.title = `${item.label} — Gabriel AXA`;
     view.scrollTo && view.scrollTo(0, 0);

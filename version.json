@@ -1,7 +1,7 @@
 {
   "produit": "Gabriel AXA",
-  "version": "0.3.0",
-  "nom": "Fiche contrat refondue en écran métier : en-tête riche, « À retenir », rubriques prioritaires/secondaires hiérarchisées, items en cartes, sources PDF en badges",
+  "version": "1.0.0",
+  "nom": "v1.0 distribuable : vue IA (/ia), onboarding (Premiers pas & FAQ), « Utiliser avec une IA », « Pourquoi faire confiance », fiche métier, design pro, badges bêta",
   "date": "2026-07-09",
-  "note": "Application autonome dérivée du module AXA. Aucune dépendance à Gabriel Virtuel. La notice PDF fait foi."
+  "note": "Application métier autonome. Documents de sources publiques, aucune donnée client. Données dérivées, masters jamais modifiés. La notice PDF fait toujours foi."
 }
