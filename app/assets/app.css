@@ -266,3 +266,59 @@ li.diff{color:var(--gold)}
 .hero-search .btn{white-space:nowrap}
 *:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* ============================================================================
+   Fiche contrat — écran métier conseiller (présentation, hiérarchie, sources).
+   Aucune donnée modifiée : mise en forme uniquement. Sobre (Linear / Notion).
+   ============================================================================ */
+.card.fiche{padding:0;overflow:hidden}
+.fiche-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:16px 18px 12px}
+.fiche-name{font-size:20px;font-weight:660;letter-spacing:-.02em;margin:0;line-height:1.2}
+.fiche-type{font-size:13px;color:var(--muted);margin-top:4px;max-width:64ch}
+.fiche-badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.fbadge{font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:6px;border:1px solid var(--line);color:var(--muted);background:var(--surface-2)}
+.fbadge.fam{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,transparent);background:var(--accent-wash)}
+.fiche-actions{display:flex;gap:8px;flex-wrap:wrap}
+.fiche-assureur{font-size:13px;color:var(--fg);padding:0 18px 12px}
+.fiche-assureur-l{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-right:7px}
+.fiche .warnbox{margin:0 18px 12px}
+.fiche-retenir{margin:0 18px 14px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2)}
+.fiche-retenir-h{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:9px}
+.fiche-chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
+.fchip{font-size:12px;font-weight:500;padding:3px 9px;border-radius:20px;border:1px solid var(--line-strong);color:var(--fg);background:var(--card)}
+.fiche-retenir .fiche-resume,.fiche-retenir .fold{margin:0}
+.fiche-resume{font-size:14px;line-height:1.6;color:var(--fg);margin:0}
+.fiche-sep{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:16px 18px 8px;padding-top:12px;border-top:1px solid var(--line)}
+.fiche-foot{font-size:12px;color:var(--muted);margin:14px 18px 16px;font-style:italic}
+/* Rubriques */
+.fsec{margin:0 18px 8px;border:1px solid var(--line);border-radius:10px;background:var(--card);overflow:hidden}
+.fsec>.fsec-h{display:flex;align-items:center;gap:10px;padding:11px 13px;cursor:pointer;list-style:none;user-select:none}
+.fsec>.fsec-h::-webkit-details-marker{display:none}
+.fsec-h::after{content:"";width:7px;height:7px;border-right:1.6px solid var(--muted);border-bottom:1.6px solid var(--muted);transform:rotate(45deg);transition:transform .15s;margin-left:4px;flex:none;opacity:.7}
+.fsec[open]>.fsec-h::after{transform:rotate(-135deg)}
+.fsec-l{font-weight:560;font-size:14px}
+.fsec-n{margin-left:auto;font-family:var(--mono);font-size:11px;font-weight:600;min-width:22px;text-align:center;padding:1px 7px;border-radius:20px;background:var(--surface-2);color:var(--muted);border:1px solid var(--line)}
+.fsec-tag{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--muted)}
+.fsec[open]>.fsec-h{border-bottom:1px solid var(--line)}
+.fsec-body{padding:10px 13px;display:flex;flex-direction:column;gap:8px}
+/* Prioritaires : plus de poids + liseré de teinte par type */
+.t-ok{--tone:var(--ok)} .t-crit{--tone:var(--danger)} .t-warn{--tone:var(--warn)} .t-accent{--tone:var(--accent)} .t-neutral{--tone:var(--muted)}
+.fsec.prio{border-color:var(--line-strong);border-left:3px solid var(--tone,var(--accent))}
+.fsec.prio>.fsec-h{padding:13px}
+.fsec.prio .fsec-l{font-weight:620;font-size:14.5px}
+.fsec.prio .fsec-n{color:var(--tone,var(--accent));border-color:color-mix(in srgb,var(--tone,var(--accent)) 45%,transparent);background:transparent}
+/* Items = cartes lisibles */
+.fitem{border:1px solid var(--line);border-radius:8px;background:var(--surface-2);padding:10px 12px}
+.fitem-t{font-weight:600;font-size:13.5px;letter-spacing:-.01em;margin-bottom:3px}
+.fitem-b{font-size:13.5px;line-height:1.55;color:var(--fg);margin:0}
+.fitem-x{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+.fitem-xl{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-right:6px}
+.fitem .hlist{margin:3px 0 0}
+/* Badge source — visible et actionnable */
+.fsrc{display:inline-flex;align-items:center;gap:4px;margin-top:9px;font-family:var(--mono);font-size:11px;font-weight:600;color:var(--accent);background:var(--accent-wash);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:6px;padding:2px 8px;text-decoration:none;white-space:nowrap}
+.fsrc:hover{background:color-mix(in srgb,var(--accent) 22%,transparent);text-decoration:none}
+@media(max-width:640px){
+  .main{padding:16px 14px}
+  .fiche-head,.fiche-assureur,.fiche .warnbox,.fiche-retenir,.fsec,.fiche-sep,.fiche-foot{margin-left:10px;margin-right:10px}
+  .fiche-head{padding-left:12px;padding-right:12px}
+}

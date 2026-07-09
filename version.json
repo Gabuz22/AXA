@@ -1,7 +1,7 @@
 {
   "produit": "Gabriel AXA",
-  "version": "0.2.0",
-  "nom": "Design system pro (Jalon 4, sobriété Notion/Linear) + accueil-promesse avec recherche au centre (Jalon 1, cœur)",
+  "version": "0.3.0",
+  "nom": "Fiche contrat refondue en écran métier : en-tête riche, « À retenir », rubriques prioritaires/secondaires hiérarchisées, items en cartes, sources PDF en badges",
   "date": "2026-07-09",
   "note": "Application autonome dérivée du module AXA. Aucune dépendance à Gabriel Virtuel. La notice PDF fait foi."
 }

@@ -201,19 +201,34 @@ async function contrat(body, human) {
     contrats.push({ nom: d.nom, famille: (d.domaines || [])[0] || "", resume_neutre: "", pdfs, _minimal: true });
   }
   contrats.sort((a, b) => String(a.nom).localeCompare(String(b.nom), "fr", { sensitivity: "base" })); // tri alphabétique (quick win)
+  const noticeHref = (docSource, page) => {
+    const base = String(docSource).split("/").pop();
+    const first = page ? String(page).split(",")[0].trim() : "";
+    return (pdfByName.get(base) || ("../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/" + docSource)) + (first ? "#page=" + first : "");
+  };
+  // Source PDF = badge clair et actionnable (jamais masquée) : « 📄 Notice p.X ».
   const sourceLink = f => {
     const s = f && typeof f === "object" ? f.source : null;
     if (!s || !s.document_source) return "";
-    const base = String(s.document_source).split("/").pop();
-    const url = pdfByName.get(base) || ("../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/" + s.document_source);
-    const href = url + (s.page ? "#page=" + s.page : "");
     const titre = "Ouvrir la notice" + (s.page ? " page " + s.page : "") + (s.section ? " — " + s.section : "");
-    return ` <a class="src-link" href="${esc(href)}" target="_blank" rel="noopener" title="${esc(titre)}">📄 notice${s.page ? " p." + s.page : ""}</a>`;
+    return `<a class="fsrc" href="${esc(noticeHref(s.document_source, s.page))}" target="_blank" rel="noopener" title="${esc(titre)}">📄 Notice${s.page ? " p." + esc(String(s.page)) : ""}</a>`;
   };
-  const factLine = f => {
-    if (typeof f === "string") return isEmpty(f) ? "" : `<li>${esc(f)}</li>`;
+  // Un fait = une carte lisible (titre · texte · conditions/limites · source), plutôt qu'une puce dense.
+  const fitem = f => {
+    if (typeof f === "string") return isEmpty(f) ? "" : `<div class="fitem"><p class="fitem-b">${esc(f)}</p></div>`;
     const t = f.titre && !f.titre.startsWith("_") ? f.titre : "", x = f.resume_humain || f.texte || "";
-    return isEmpty(t) && isEmpty(x) ? "" : `<li>${t ? `<b>${esc(t)}</b>` : ""}${t && x ? " — " : ""}${esc(x)}${sourceLink(f)}</li>`;
+    if (isEmpty(t) && isEmpty(x)) return "";
+    const cond = (f.conditions_importantes || []).filter(Boolean), lim = (f.limites_exclusions || []).filter(Boolean);
+    return `<div class="fitem">${t ? `<div class="fitem-t">${esc(t)}</div>` : ""}${x ? `<p class="fitem-b">${esc(x)}</p>` : ""}`
+      + `${cond.length ? `<p class="fitem-x"><span class="fitem-xl">Conditions</span> ${esc(cond.join(" · "))}</p>` : ""}`
+      + `${lim.length ? `<p class="fitem-x"><span class="fitem-xl">Limites</span> ${esc(lim.join(" · "))}</p>` : ""}`
+      + `${sourceLink(f)}</div>`;
+  };
+  // Rubrique repliable, avec poids visuel selon la priorité (prio) et une teinte de type (tone).
+  const fsec = (label, items, { open = false, prio = false, tone = "" } = {}) => {
+    const rendered = (items || []).map(fitem).filter(Boolean);
+    if (!rendered.length) return "";
+    return `<details class="fsec ${prio ? "prio" : ""} ${tone}"${open ? " open" : ""}><summary class="fsec-h"><span class="fsec-l">${esc(label)}</span><span class="fsec-n">${rendered.length}</span></summary><div class="fsec-body">${rendered.join("")}</div></details>`;
   };
   const pdfsFor = c => (c.pdfs || []).map(p => typeof p === "string" ? p : (p.nom_fichier || p.fichier || "")).filter(Boolean);
   const meta = c => FAMILLE_META[c.famille] || null;
@@ -221,41 +236,64 @@ async function contrat(body, human) {
   const bullets = arr => `<ul class="hlist">${arr.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
 
   const card = c => {
-    const secs = CONTRACT_SECTIONS.map(([label, key]) => {
-      const items = (c[key] || []).map(factLine).filter(Boolean);
-      return items.length ? `<details class="acc"${OPEN_BY_DEFAULT.has(key) ? " open" : ""}><summary>${esc(label)} <span class="muted">(${items.length})</span></summary><ul class="hlist">${items.join("")}</ul></details>` : "";
-    }).join("");
+    const d = findDerived(c);
     const r = c.resume_neutre || "";
     const m = meta(c), conf = confusablesFor(c), pdfs = pdfsFor(c);
-    // Repères conseiller méthodologiques (génériques par famille) — clairement étiquetés.
-    const reperes = m ? `<details class="acc"><summary>🧭 Repères conseiller <span class="muted">(méthodologiques — vérifier au contrat)</span></summary>
-      <p class="card-x"><span class="xlabel">Cible</span> ${esc(m.cible)}</p>
-      <div class="card-x"><span class="xlabel">Questions à poser</span>${bullets(m.questions)}</div>
-      <div class="card-x"><span class="xlabel">Cas d'usage</span>${bullets(m.cas_usage)}</div>
-      <div class="card-x"><span class="xlabel">Erreurs fréquentes</span>${bullets([...m.erreurs, ...ERREURS_TRANSVERSES])}</div></details>` : "";
-    const neConfond = conf.length ? `<details class="acc"><summary>⚠ À ne pas confondre <span class="muted">(même famille : ${esc(c.famille)})</span></summary>${bullets(conf)}
-      <p class="muted">Contrats proches — vérifier les garanties/exclusions propres à chacun avant toute réponse.</p></details>` : "";
-    const pdfSec = pdfs.length ? `<details class="acc"><summary>📄 Documents PDF liés <span class="muted">(${pdfs.length} — font foi)</span></summary>${bullets(pdfs)}
-      <p class="muted"><a href="#/pdf">→ ouvrir les PDF contractuels</a></p></details>` : "";
-    // Sections issues de l'index dérivé Pack A (évolution ①) — chaque item porte sa source PDF.
-    const d = findDerived(c);
-    const defSec = d?.definitions?.length ? `<details class="acc"><summary>📖 Définitions <span class="muted">(${d.definitions.length})</span></summary>
-      <ul class="hlist">${d.definitions.map(x => `<li><b>${esc(x.terme)}</b> — ${esc(x.definition)}${sourceLink(x)}</li>`).join("")}</ul></details>` : "";
-    const condSec = d?.conditions_souscription?.length ? `<details class="acc"><summary>📌 Conditions de souscription <span class="muted">(${d.conditions_souscription.length} — âge, adhésion, médical…)</span></summary>
-      <ul class="hlist">${d.conditions_souscription.map(x => `<li>${esc(x.texte)}${sourceLink(x)}</li>`).join("")}</ul></details>` : "";
+    // Notice principale du contrat (bouton d'en-tête) : 1er PDF connu.
+    const mainNotice = (c.pdfs || []).map(p => pdfByName.get(String(p.nom_fichier || p.fichier || p).split("/").pop())).find(Boolean);
+    // « À retenir » : comptes calculés à partir des données présentes (aucune invention).
+    const n = (a) => (a || []).length;
+    const chips = [
+      [n(c.garanties_principales), "garantie", "garanties"], [n(c.exclusions_importantes), "exclusion", "exclusions"],
+      [n(c.points_de_vigilance), "point de vigilance", "points de vigilance"], [n(d?.conditions_souscription), "condition", "conditions"],
+      [n(d?.definitions), "définition", "définitions"],
+    ].filter(x => x[0]).map(([k, s, p]) => `${k} ${k > 1 ? p : s}`);
+
+    // Rubriques PRIORITAIRES (ouvertes, teintées par type).
+    const priBlock = [
+      fsec("Garanties principales", c.garanties_principales, { open: true, prio: true, tone: "t-ok" }),
+      fsec("Exclusions importantes", c.exclusions_importantes, { open: true, prio: true, tone: "t-crit" }),
+      d?.conditions_souscription?.length ? `<details class="fsec prio t-accent" open><summary class="fsec-h"><span class="fsec-l">Conditions de souscription</span><span class="fsec-n">${d.conditions_souscription.length}</span></summary><div class="fsec-body">${d.conditions_souscription.map(x => `<div class="fitem"><p class="fitem-b">${esc(x.texte)}</p>${sourceLink(x)}</div>`).join("")}</div></details>` : "",
+      fsec("Points de vigilance", c.points_de_vigilance, { open: true, prio: true, tone: "t-warn" }),
+    ].filter(Boolean).join("");
+
+    // Rubriques SECONDAIRES (repliées, sobres).
     const enriched = (d?.faits || []).filter(f => f.declencheurs.length || f.plafonds.length || f.franchises.length);
-    const enrSec = enriched.length ? `<details class="acc"><summary>🎯 Déclencheurs, plafonds & franchises <span class="muted">(${enriched.length})</span></summary>
-      ${enriched.map(f => `<div class="kvgroup"><div class="kv"><strong>${esc(f.titre)}</strong>${sourceLink(f)}</div>
-        ${f.declencheurs.length ? `<div class="kv"><span class="xlabel">Déclencheurs</span> ${esc(f.declencheurs.join(" · "))}</div>` : ""}
-        ${f.plafonds.length ? `<div class="kv"><span class="xlabel">Plafonds</span> ${esc(f.plafonds.join(" · "))}</div>` : ""}
-        ${f.franchises.length ? `<div class="kv"><span class="xlabel">Franchises</span> ${esc(f.franchises.join(" · "))}</div>` : ""}</div>`).join("")}
-      <p class="muted">Extraits contractuels sourcés — vérifier la notice pour le cas précis.</p></details>` : "";
-    return `<article class="card"><div class="card-h"><strong>${esc(c.nom)}</strong><span class="tag t-themes">${esc(c.famille || "")}</span>${c.date_document ? `<span class="muted">${esc(c.date_document)}</span>` : ""}<button class="btn ghost" data-print style="min-height:28px;padding:0 9px;margin-left:auto">🖨</button></div>
-      ${c.assureur ? `<p class="card-x"><span class="xlabel">Assureur</span> ${esc(c.assureur)}</p>` : ""}
-      ${c._minimal ? `<div class="warnbox">⚠ Données limitées pour ce contrat dans le projet — se référer à la notice PDF (ci-dessous). Fiche minimale.</div>` : ""}
-      ${r ? (r.length > 380 ? `<details class="fold"><summary class="card-b">${esc(r.slice(0, 380))}…</summary><p class="card-b">${esc(r.slice(380))}</p></details>` : `<p class="card-b">${esc(r)}</p>`) : ""}
-      ${reperes}${secs}${enrSec}${defSec}${condSec}${neConfond}${pdfSec}
-      <p class="muted">⚖️ Limites : repères génériques ; pour le cas précis, la notice PDF fait foi. Aucune réponse client sans vérification de la source.</p></article>`;
+    const secBlock = [
+      fsec("Options", c.options, { tone: "t-neutral" }),
+      fsec("Délais & franchises", c.delais_franchises, { tone: "t-neutral" }),
+      fsec("Cotisations & prix", c.cotisations_prix, { tone: "t-neutral" }),
+      fsec("Fiscalité", c.fiscalite, { tone: "t-neutral" }),
+      enriched.length ? `<details class="fsec t-neutral"><summary class="fsec-h"><span class="fsec-l">Déclencheurs, plafonds &amp; franchises</span><span class="fsec-n">${enriched.length}</span></summary><div class="fsec-body">${enriched.map(f => `<div class="fitem"><div class="fitem-t">${esc(f.titre)}</div>${f.declencheurs.length ? `<p class="fitem-x"><span class="fitem-xl">Déclencheurs</span> ${esc(f.declencheurs.join(" · "))}</p>` : ""}${f.plafonds.length ? `<p class="fitem-x"><span class="fitem-xl">Plafonds</span> ${esc(f.plafonds.join(" · "))}</p>` : ""}${f.franchises.length ? `<p class="fitem-x"><span class="fitem-xl">Franchises</span> ${esc(f.franchises.join(" · "))}</p>` : ""}${sourceLink(f)}</div>`).join("")}</div></details>` : "",
+      d?.definitions?.length ? `<details class="fsec t-neutral"><summary class="fsec-h"><span class="fsec-l">Définitions</span><span class="fsec-n">${d.definitions.length}</span></summary><div class="fsec-body">${d.definitions.map(x => `<div class="fitem"><div class="fitem-t">${esc(x.terme)}</div><p class="fitem-b">${esc(x.definition)}</p>${sourceLink(x)}</div>`).join("")}</div></details>` : "",
+      fsec("Formules", c.formules, { tone: "t-neutral" }),
+      m ? `<details class="fsec t-neutral"><summary class="fsec-h"><span class="fsec-l">Repères conseiller</span><span class="fsec-tag">méthodo · non contractuel</span></summary><div class="fsec-body">
+        <div class="fitem"><div class="fitem-t">Cible</div><p class="fitem-b">${esc(m.cible)}</p></div>
+        <div class="fitem"><div class="fitem-t">Questions à poser</div>${bullets(m.questions)}</div>
+        <div class="fitem"><div class="fitem-t">Cas d'usage</div>${bullets(m.cas_usage)}</div>
+        <div class="fitem"><div class="fitem-t">Erreurs fréquentes</div>${bullets([...m.erreurs, ...ERREURS_TRANSVERSES])}</div></div></details>` : "",
+      conf.length ? `<details class="fsec t-neutral"><summary class="fsec-h"><span class="fsec-l">À ne pas confondre</span><span class="fsec-n">${conf.length}</span></summary><div class="fsec-body"><div class="fitem"><p class="fitem-b">Même famille (${esc(c.famille)}) : ${esc(conf.join(", "))}. Vérifier les garanties/exclusions propres à chacun.</p></div></div></details>` : "",
+      pdfs.length ? `<details class="fsec t-neutral"><summary class="fsec-h"><span class="fsec-l">Documents PDF liés</span><span class="fsec-n">${pdfs.length}</span></summary><div class="fsec-body"><div class="fitem">${bullets(pdfs)}<p class="muted" style="margin-top:6px"><a href="#/pdf">→ ouvrir les notices contractuelles</a></p></div></div></details>` : "",
+    ].filter(Boolean).join("");
+
+    return `<article class="card fiche">
+      <header class="fiche-head">
+        <div class="fiche-id">
+          <h2 class="fiche-name">${esc(c.nom)}</h2>
+          ${c.type_contrat ? `<div class="fiche-type">${esc(c.type_contrat)}</div>` : ""}
+          <div class="fiche-badges">${c.famille ? `<span class="fbadge fam">${esc(c.famille)}</span>` : ""}${c.date_document ? `<span class="fbadge">${esc(c.date_document)}</span>` : ""}</div>
+        </div>
+        <div class="fiche-actions">${mainNotice ? `<a class="btn gold" href="${esc(mainNotice)}" target="_blank" rel="noopener">📄 Notice</a>` : ""}<button class="btn ghost" data-print>Imprimer</button></div>
+      </header>
+      ${c.assureur ? `<div class="fiche-assureur"><span class="fiche-assureur-l">Assureur</span> ${esc(c.assureur)}</div>` : ""}
+      ${c._minimal ? `<div class="warnbox">Données limitées pour ce contrat — se référer à la notice PDF. Fiche minimale.</div>` : ""}
+      ${(r || chips.length) ? `<section class="fiche-retenir"><div class="fiche-retenir-h">À retenir</div>
+        ${chips.length ? `<div class="fiche-chips">${chips.map(ch => `<span class="fchip">${esc(ch)}</span>`).join("")}</div>` : ""}
+        ${r ? (r.length > 320 ? `<details class="fold"><summary class="fiche-resume">${esc(r.slice(0, 320))}…</summary><p class="fiche-resume" style="margin-top:6px">${esc(r.slice(320))}</p></details>` : `<p class="fiche-resume">${esc(r)}</p>`) : ""}</section>` : ""}
+      ${priBlock}
+      ${secBlock ? `<div class="fiche-sep">Détails complémentaires</div>${secBlock}` : ""}
+      <p class="fiche-foot">Repères indicatifs — pour le cas précis, la notice PDF fait foi. Aucune réponse client sans vérifier la source.</p>
+    </article>`;
   };
   function render(q = "") {
     const ql = q.trim().toLowerCase();
