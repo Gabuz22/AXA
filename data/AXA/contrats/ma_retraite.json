@@ -1,0 +1,1485 @@
+{
+  "meta": {
+    "type": "contrat_axa_dedie",
+    "slug": "ma_retraite",
+    "schema_version": "2.0_enrichi",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "source": "data/AXA/base_connaissances_contractuelle/Contrat_ma_retraite_plan_d_epargne_retraite_individuel_per/",
+    "avertissement": "Enrichi depuis l'extraction tracée. La notice PDF fait foi. requires_pdf_check=true => vérifier le tableau/barème en notice.",
+    "genere_le": "2026-06-19",
+    "qa_version": "2.1",
+    "qa_date": "2026-06-19"
+  },
+  "contrat": {
+    "id": "axa_ma_retraite_2026-05",
+    "nom": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "famille": "retraite",
+    "type_contrat": "notice_information_contrat_groupe_PER_individuel",
+    "assureur": "AXA France Vie (garanties en UC) ; AXA France Vie + AXA Assurances Vie Mutuelle en coassurance pour le fonds Croissance. Souscripteur du groupe : ANPERE Retraite (contrat souscrit pour 30 ans, reconductible).",
+    "version": "Notice Ma Retraite / Mai 2026 — régime fiscal au 1er avril 2026 ; table de mortalité TGF05 au 01/04/2026",
+    "date": "2026-05",
+    "resume_neutre": "PER individuel multisupport (fonds Croissance eurocroissance + unités de compte, PAS de fonds en euros classique) : constitution d'un supplément de retraite versé en capital (compartiments 1-2, en une fois ou fractionné) et/ou en rente viagère (compartiment 3 : rente uniquement), avec options de rente (réversion 60/100 %, annuités garanties, réversion temporaire ≥ 10 ans, rente majorée/minorée). Garantie « Protection Retraite » : coefficients de conversion en rente garantis au jour de chaque versement (table TGF05, taux technique nul). Garantie décès plancher « Sérénité » incluse (jusqu'à 80 ans). Déductibilité fiscale des versements volontaires (option), 6 cas de déblocage anticipé + résidence principale. Transfert individuel possible (frais 1 % max avant 5 ans)."
+  },
+  "pdfs": [
+    {
+      "type_document": "notice",
+      "path": "data/AXA/Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "pages": 451
+    },
+    {
+      "type_document": "dic",
+      "path": "data/AXA/Ma retraite/2026-05 Recueil DIC Ma Retraite.pdf",
+      "pages": 451
+    }
+  ],
+  "garanties": [
+    {
+      "id": "ma_retraite.en_cas_de_vie_sortie_en_capital",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "En cas de vie — sortie en capital",
+      "resume_conseiller": "À l'échéance (et sous réserve de liquidation effective de la retraite ou d'atteinte de l'âge légal) : délivrance de tout ou partie des droits des compartiments 1 et 2 en capital, en une fois ou fracti",
+      "texte_metier_exploitable": "À l'échéance (et sous réserve de liquidation effective de la retraite ou d'atteinte de l'âge légal) : délivrance de tout ou partie des droits des compartiments 1 et 2 en capital, en une fois ou fractionné ; versement partiel ≥ 750 €, solde restant > 750 €. Pas de frais de sortie en capital. Interdit si option expresse et irrévocable pour la rente.",
+      "conditions_application": [
+        "échéance + âge légal ou liquidation effective"
+      ],
+      "seuils": [
+        "750 €"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "ma_retraite.indisponibilit_de_l_pargne"
+      ],
+      "points_vigilance": [
+        "min 750 € par versement partiel et solde > 750 €"
+      ],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 10,
+        "section": "5.1.1",
+        "extrait_reference": "En cas de versement partiel, celui-ci doit être d'au minimum 750 euros",
+        "pages": [
+          10
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.en_cas_de_vie_sortie_en_capital",
+      "detail_path": "contrats.ma_retraite.details.en_cas_de_vie_sortie_en_capital",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 10,
+      "source_section": "5.1.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "garantie",
+      "source_pages": [
+        10
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "capital",
+          "sortie",
+          "échéance",
+          "sous",
+          "réserve",
+          "liquidation",
+          "effective",
+          "retraite",
+          "atteinte",
+          "légal",
+          "délivrance",
+          "tout"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "À l'échéance (et sous réserve de liquidation effective de la retraite ou d'atteinte de l'âge légal) : délivrance de tout ou partie des droits des compartiments 1 et 2 en capital, en une fois ou fracti",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.en_cas_de_vie_sortie_en_rente_viag_re",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "En cas de vie — sortie en rente viagère",
+      "resume_conseiller": "Rente trimestrielle à terme échu (effet le 1er jour du mois suivant l'échéance demandée), calculée selon âge, option de rente, âge du réversataire et taux de réversion, frais de service de 1 % par arr",
+      "texte_metier_exploitable": "Rente trimestrielle à terme échu (effet le 1er jour du mois suivant l'échéance demandée), calculée selon âge, option de rente, âge du réversataire et taux de réversion, frais de service de 1 % par arrérage, conditions tarifaires garanties au moment de chaque investissement (Protection Retraite). Options : réversion 60 % ou 100 % ; annuités garanties (versées quoi qu'il arrive sur la période, bénéficiaire désigné irrévocablement) ; réversion temporaire (≥ 10 ans) ; rente majorée ou minorée pendant la première période. Trop-perçu post-décès remboursé. Compartiment 3 : rente obligatoire.",
+      "conditions_application": [
+        "échéance + âge légal ou liquidation effective"
+      ],
+      "seuils": [
+        "1 %",
+        "10 ans",
+        "100 %",
+        "60 %"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "ma_retraite.indisponibilit_de_l_pargne"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 10,
+        "section": "5.1.2",
+        "extrait_reference": "des frais de service des rentes de 1 % sur chaque arrérage",
+        "pages": [
+          10
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.en_cas_de_vie_sortie_en_rente_viag_re",
+      "detail_path": "contrats.ma_retraite.details.en_cas_de_vie_sortie_en_rente_viag_re",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 10,
+      "source_section": "5.1.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "garantie",
+      "source_pages": [
+        10
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "rente",
+          "réversion",
+          "garanties",
+          "période",
+          "sortie",
+          "viagère",
+          "trimestrielle",
+          "terme",
+          "échu",
+          "effet",
+          "jour",
+          "mois"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Rente trimestrielle à terme échu (effet le 1er jour du mois suivant l'échéance demandée), calculée selon âge, option de rente, âge du réversataire et taux de réversion, frais de service de 1 % par arr",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.en_cas_de_d_c_s_avant_liquidation_totale",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "En cas de décès avant liquidation totale",
+      "resume_conseiller": "Prestation aux bénéficiaires en capital ou en rente : capital = épargne (tous supports) ou montant de la garantie « Sérénité ».",
+      "texte_metier_exploitable": "Prestation aux bénéficiaires en capital ou en rente : capital = épargne (tous supports) ou montant de la garantie « Sérénité ». Bénéficiaire majeur : rente viagère ou temporaire ≥ 10 ans ; bénéficiaire mineur : rente temporaire d'éducation jusqu'à 25 ans. Versement sous 1 mois après réception des pièces. Met fin à l'adhésion. Versements réguliers et arbitrages Activ'Retraite arrêtés au traitement de l'acte de décès.",
+      "conditions_application": [
+        "décès de l'assuré avant liquidation totale"
+      ],
+      "seuils": [
+        "10 ans",
+        "25 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "ma_retraite.indisponibilit_de_l_pargne"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 12,
+        "section": "5.2",
+        "extrait_reference": "Pour un bénéficiaire mineur… une rente temporaire d'éducation jusqu'à ses 25 ans",
+        "pages": [
+          12
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.en_cas_de_d_c_s_avant_liquidation_totale",
+      "detail_path": "contrats.ma_retraite.details.en_cas_de_d_c_s_avant_liquidation_totale",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 12,
+      "source_section": "5.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "garantie",
+      "source_pages": [
+        12
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "rente",
+          "décès",
+          "capital",
+          "bénéficiaire",
+          "temporaire",
+          "avant",
+          "liquidation",
+          "totale",
+          "prestation",
+          "bénéficiaires",
+          "épargne",
+          "tous"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Prestation aux bénéficiaires en capital ou en rente : capital = épargne (tous supports) ou montant de la garantie « Sérénité ».",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.garantie_s_r_nit_plancher_d_c_s_incluse",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Garantie « Sérénité » (plancher décès, incluse)",
+      "resume_conseiller": "Si décès avant 80 ans : capital décès (ou capital constitutif de rente) ≥ cumul des versements bruts de frais − rachats (rachats exceptionnels, sorties partielles en capital ou en rente à hauteur du c",
+      "texte_metier_exploitable": "Si décès avant 80 ans : capital décès (ou capital constitutif de rente) ≥ cumul des versements bruts de frais − rachats (rachats exceptionnels, sorties partielles en capital ou en rente à hauteur du capital constitutif). Coût inclus dans les frais de gestion UC, prélevé toute la durée y compris après 80 ans.",
+      "conditions_application": [
+        "incluse automatiquement",
+        "décès avant le 80e anniversaire"
+      ],
+      "seuils": [
+        "80 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "ma_retraite.indisponibilit_de_l_pargne"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 13,
+        "section": "5.2 Garantie « Sérénité »",
+        "extrait_reference": "ne peut être inférieur au montant du cumul des versements bruts de frais, diminué des éventuels rachats effectués",
+        "pages": [
+          13
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.garantie_s_r_nit_plancher_d_c_s_incluse",
+      "detail_path": "contrats.ma_retraite.details.garantie_s_r_nit_plancher_d_c_s_incluse",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 13,
+      "source_section": "5.2 Garantie « Sérénité »",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "garantie",
+      "source_pages": [
+        13
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "capital",
+          "décès",
+          "constitutif",
+          "rente",
+          "frais",
+          "rachats",
+          "garantie",
+          "sérénité",
+          "plancher",
+          "incluse",
+          "avant",
+          "cumul"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Si décès avant 80 ans : capital décès (ou capital constitutif de rente) ≥ cumul des versements bruts de frais − rachats (rachats exceptionnels, sorties partielles en capital ou en rente à hauteur du c",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.garanties_de_fid_lit",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Garanties de fidélité",
+      "resume_conseiller": "Le contrat ne comporte pas de garantie de fidélité (hors offres commerciales ponctuelles).",
+      "texte_metier_exploitable": "Le contrat ne comporte pas de garantie de fidélité (hors offres commerciales ponctuelles).",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "ma_retraite.indisponibilit_de_l_pargne"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 26,
+        "section": "8.3",
+        "extrait_reference": "Le contrat ne comporte pas de garantie de fidélité",
+        "pages": [
+          26
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.garanties_de_fid_lit",
+      "detail_path": "contrats.ma_retraite.details.garanties_de_fid_lit",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 26,
+      "source_section": "8.3",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "garantie",
+      "source_pages": [
+        26
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "fidélité",
+          "garanties",
+          "contrat",
+          "comporte",
+          "garantie",
+          "hors",
+          "offres",
+          "commerciales",
+          "ponctuelles"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Le contrat ne comporte pas de garantie de fidélité (hors offres commerciales ponctuelles).",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "options_mecanismes": [
+    {
+      "id": "ma_retraite.types_de_gestion",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Types de gestion",
+      "resume_conseiller": "Gestion personnelle (choix libre des supports), gestions de la gamme Activ'Retraite Croissance (gestion à horizon de départ en retraite avec fonds Croissance, profils dont « Prudente » ;",
+      "texte_metier_exploitable": "Gestion personnelle (choix libre des supports), gestions de la gamme Activ'Retraite Croissance (gestion à horizon de départ en retraite avec fonds Croissance, profils dont « Prudente » ; réajustements semestriels sans frais entre supports), répartition libre possible à côté. Changement de type de gestion / d'horizon / de supports possible après le délai de renonciation.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 16,
+        "section": "7.1.2 / 7.2",
+        "extrait_reference": "Les supports d'investissement en unités de compte disponibles dans les différents types de gestion",
+        "pages": [
+          16
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.types_de_gestion",
+      "detail_path": "contrats.ma_retraite.details.types_de_gestion",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 16,
+      "source_section": "7.1.2 / 7.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "option",
+      "source_pages": [
+        16
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "gestion",
+          "supports",
+          "libre",
+          "retraite",
+          "croissance",
+          "horizon",
+          "possible",
+          "types",
+          "personnelle",
+          "choix",
+          "gestions",
+          "gamme"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre délai d'attente et franchise"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Gestion personnelle (choix libre des supports), gestions de la gamme Activ'Retraite Croissance (gestion à horizon de départ en retraite avec fonds Croissance, profils dont « Prudente » ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.indexation_des_versements_r_guliers",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Indexation des versements réguliers",
+      "resume_conseiller": "Indexation annuelle (avant le 1er avril) sur la variation du plafond de la Sécurité sociale au 1er janvier ;",
+      "texte_metier_exploitable": "Indexation annuelle (avant le 1er avril) sur la variation du plafond de la Sécurité sociale au 1er janvier ; refus possible avant le 1er mars de chaque année.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 14,
+        "section": "6.1",
+        "extrait_reference": "indexés, à date fixe avant le 1er avril de chaque année, sur la variation annuelle du plafond de la Sécurité sociale",
+        "pages": [
+          14
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.indexation_des_versements_r_guliers",
+      "detail_path": "contrats.ma_retraite.details.indexation_des_versements_r_guliers",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 14,
+      "source_section": "6.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "option",
+      "source_pages": [
+        14
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "indexation",
+          "avant",
+          "versements",
+          "réguliers",
+          "annuelle",
+          "avril",
+          "variation",
+          "plafond",
+          "sécurité",
+          "sociale",
+          "janvier",
+          "refus"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Indexation annuelle (avant le 1er avril) sur la variation du plafond de la Sécurité sociale au 1er janvier ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.versements_pris_en_charge_par_la_soci_t",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Versements pris en charge par la société",
+      "resume_conseiller": "Versements possibles par la société de l'adhérent (dirigeant ou salarié) : avantage en espèces imposable en traitements et salaires pour l'adhérent, droit à déduction comme s'il avait versé lui-même ;",
+      "texte_metier_exploitable": "Versements possibles par la société de l'adhérent (dirigeant ou salarié) : avantage en espèces imposable en traitements et salaires pour l'adhérent, droit à déduction comme s'il avait versé lui-même ; pour la société : cotisations sociales de droit commun + déductibilité du résultat (travail effectif, non excessif). Obligation d'interrompre ces versements à la rupture du contrat de travail / fin du mandat.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 14,
+        "section": "6.",
+        "extrait_reference": "Les versements sur l'adhésion peuvent être pris en charge par la société de l'adhérent",
+        "pages": [
+          14
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.versements_pris_en_charge_par_la_soci_t",
+      "detail_path": "contrats.ma_retraite.details.versements_pris_en_charge_par_la_soci_t",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 14,
+      "source_section": "6.",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "option",
+      "source_pages": [
+        14
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "versements",
+          "société",
+          "adhérent",
+          "droit",
+          "travail",
+          "pris",
+          "charge",
+          "possibles",
+          "dirigeant",
+          "salarié",
+          "avantage",
+          "espèces"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Versements possibles par la société de l'adhérent (dirigeant ou salarié) : avantage en espèces imposable en traitements et salaires pour l'adhérent, droit à déduction comme s'il avait versé lui-même ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.transfert_individuel_sortant",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Transfert individuel sortant",
+      "resume_conseiller": "Vers tout autre PER (loi 2019-486) : demande en LRAR avec certificat + RIB du gestionnaire d'accueil ;",
+      "texte_metier_exploitable": "Vers tout autre PER (loi 2019-486) : demande en LRAR avec certificat + RIB du gestionnaire d'accueil ; valeur de transfert notifiée sous 1 mois ; 15 jours pour y renoncer ; versement au nouveau gestionnaire sous 15 jours après acceptation. Frais : 1 % max avant le 5e anniversaire de l'adhésion, nuls ensuite ou après l'échéance. Transfert = totalité de l'épargne, fin de l'adhésion.",
+      "conditions_application": [],
+      "seuils": [
+        "1 %"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 28,
+        "section": "9.2",
+        "extrait_reference": "Ces frais s'élèvent à 1 % maximum si le transfert a lieu avant le 5e anniversaire",
+        "pages": [
+          28
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.transfert_individuel_sortant",
+      "detail_path": "contrats.ma_retraite.details.transfert_individuel_sortant",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 28,
+      "source_section": "9.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "option",
+      "source_pages": [
+        28
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "transfert",
+          "gestionnaire",
+          "sous",
+          "jours",
+          "après",
+          "adhésion",
+          "individuel",
+          "sortant",
+          "vers",
+          "tout",
+          "autre",
+          "demande"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Vers tout autre PER (loi 2019-486) : demande en LRAR avec certificat + RIB du gestionnaire d'accueil ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "ma_retraite.indisponibilit_de_l_pargne",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Indisponibilité de l'épargne",
+      "resume_conseiller": "Aucun rachat avant l'échéance hors les cas de l'art.",
+      "texte_metier_exploitable": "Aucun rachat avant l'échéance hors les cas de l'art. L224-4 CMF : décès du conjoint/partenaire PACS ; invalidité (2°/3° L341-4 CSS) de l'adhérent, ses enfants, son conjoint/partenaire ; surendettement (L711-1 C. conso) ; expiration des droits au chômage (ou dirigeants non renouvelés sans contrat/mandat depuis ≥ 2 ans) ; liquidation judiciaire de l'activité non salariée (ou décision du président du tribunal de commerce en conciliation) ; affectation à l'acquisition de la RÉSIDENCE PRINCIPALE (sauf compartiment 3). Rachat total = fin de l'adhésion ; versement sous 2 mois ; aucun frais de rachat exceptionnel.",
+      "conditions_application": [],
+      "seuils": [
+        "2 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 27,
+        "section": "9.1",
+        "extrait_reference": "ne comporte pas de possibilité de rachat avant l'échéance de l'adhésion, hormis lorsque se produit le ou les événements suivants prévus à l'article L. 224-4",
+        "pages": [
+          27
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.indisponibilit_de_l_pargne",
+      "detail_path": "contrats.ma_retraite.details.indisponibilit_de_l_pargne",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 27,
+      "source_section": "9.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "exclusion",
+      "source_pages": [
+        27
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "rachat",
+          "aucun",
+          "conjoint/partenaire",
+          "indisponibilité",
+          "épargne",
+          "avant",
+          "échéance",
+          "hors",
+          "décès",
+          "pacs",
+          "invalidité",
+          "adhérent"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Aucun rachat avant l'échéance hors les cas de l'art.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "conditions_souscription": [
+    {
+      "id": "ma_retraite.conditions_souscription_1",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_1",
+      "resume_conseiller": "Adhésion réservée aux adhérents ANPERE Retraite ;",
+      "texte_metier_exploitable": "Adhésion réservée aux adhérents ANPERE Retraite ; prise d'effet à réception du Bulletin signé + 1er versement + contrôle de l'origine des fonds + encaissement. L'âge envisagé de départ détermine l'échéance, la gestion Activ'Retraite Croissance et l'échéance du fonds Croissance (modifiable par avenant).",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 9,
+        "section": "4.",
+        "extrait_reference": "votre adhésion prend effet au jour de la réception de votre 1er versement de prime, du contrôle de l'origine non délictueuse des fonds",
+        "pages": [
+          9
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.conditions_souscription_1",
+      "detail_path": "contrats.ma_retraite.details.conditions_souscription_1",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 9,
+      "source_section": "4.",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "condition",
+      "source_pages": [
+        9
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "retraite",
+          "fonds",
+          "échéance",
+          "croissance",
+          "conditions",
+          "souscription",
+          "adhésion",
+          "réservée",
+          "adhérents",
+          "anpere",
+          "prise",
+          "effet"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Adhésion réservée aux adhérents ANPERE Retraite ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.conditions_souscription_2",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_2",
+      "resume_conseiller": "Versements réguliers : minima 45 €/mois à 600 €/an, plafond 24 000 € par année d'adhésion ;",
+      "texte_metier_exploitable": "Versements réguliers : minima 45 €/mois à 600 €/an, plafond 24 000 € par année d'adhésion ; complémentaires ≥ 500 €.",
+      "conditions_application": [],
+      "seuils": [
+        "24 000 €",
+        "45 €",
+        "500 €",
+        "600 €"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 14,
+        "section": "6.1",
+        "extrait_reference": "Le montant maximal de versement est de 24 000 € entre 2 dates anniversaires d'adhésion au plan",
+        "pages": [
+          14
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.conditions_souscription_2",
+      "detail_path": "contrats.ma_retraite.details.conditions_souscription_2",
+      "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "source_page": 14,
+      "source_section": "6.1",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "condition",
+      "source_pages": [
+        14
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "souscription",
+          "versements",
+          "réguliers",
+          "minima",
+          "/mois",
+          "plafond",
+          "année",
+          "adhésion",
+          "complémentaires"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Versements réguliers : minima 45 €/mois à 600 €/an, plafond 24 000 € par année d'adhésion ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "fiscalite": [
+    {
+      "id": "ma_retraite.valeurs_de_rachat",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "valeurs_de_rachat",
+      "resume_conseiller": "Pas de rachat libre avant l'échéance (épargne indisponible) ;",
+      "texte_metier_exploitable": "Pas de rachat libre avant l'échéance (épargne indisponible) ; rachats exceptionnels L224-4 sans frais, versés sous 2 mois ; après l'échéance, sortie en capital libre (compartiments 1-2).",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "Pas de rachat libre avant l'échéance (épargne indisponible) ; rachats exceptionnels L224-4 sans frais, versés sous 2 mois ; après l'échéance",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.valeurs_de_rachat",
+      "detail_path": "contrats.ma_retraite.details.valeurs_de_rachat",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "rachat",
+          "libre",
+          "échéance",
+          "valeurs",
+          "avant",
+          "épargne",
+          "indisponible",
+          "rachats",
+          "exceptionnels",
+          "frais",
+          "versés",
+          "sous"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Pas de rachat libre avant l'échéance (épargne indisponible) ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.mise_en_reduction",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "mise_en_reduction",
+      "resume_conseiller": "Le contrat ne comporte pas de valeurs de réduction.",
+      "texte_metier_exploitable": "Le contrat ne comporte pas de valeurs de réduction.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "Le contrat ne comporte pas de valeurs de réduction.",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.mise_en_reduction",
+      "detail_path": "contrats.ma_retraite.details.mise_en_reduction",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "mise",
+          "reduction",
+          "contrat",
+          "comporte",
+          "valeurs",
+          "réduction"
+        ],
+        "synonymes": [
+          "mise en réduction",
+          "arrêt de cotisation",
+          "capital réduit"
+        ],
+        "formulations_client_possibles": [
+          "Si j'arrête de payer, que se passe-t-il ?",
+          "C'est quoi la mise en réduction ?"
+        ],
+        "intentions": [
+          "vérifier mise en réduction"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Le contrat ne comporte pas de valeurs de réduction.",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.determination_part_taxable",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "determination_part_taxable",
+      "resume_conseiller": "Versements (compartiment 1, hors transferts) : déductibles dans les limites des art.",
+      "texte_metier_exploitable": "Versements (compartiment 1, hors transferts) : déductibles dans les limites des art. 154 bis / 154 bis-0 A (TNS) et 163 quatervicies CGI ; option de renonciation à la déductibilité au plus tard au jour du versement (change la fiscalité de sortie) ; AUCUNE déductibilité pour les versements à partir du 70e anniversaire. Sortie en rente : imposée en pensions/retraites (158-5a CGI) ou rentes viagères à titre onéreux (158-6) selon le compartiment + PS. Sortie en capital : IR ou exonération selon compartiment, PS sur les produits. Rachats anticipés hors résidence principale : capital EXONÉRÉ d'IR, PS dus ; résidence principale : IR ou exonération selon compartiment, PS sur produits. Décès après 70 ans : droits de succession au-delà de l'abattement de 30 500 € (757 B). Décès avant 70 ans : prélèvement après abattement de 152 500 €/bénéficiaire (990 I). Exonérations : conjoint/PACS/frères-sœurs sous conditions ; rente de réversion en ligne directe ou au conjoint exonérée ; rente au bénéficiaire exonérée de 990 I sous conditions cumulatives dont 15 ans de versements réguliers. IFI : le plan y est soumis dès qu'il devient RACHETABLE (âge légal atteint OU simple existence d'un événement L224-",
+      "conditions_application": [],
+      "seuils": [
+        "15 ans",
+        "152 500 €",
+        "30 500 €",
+        "70 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "Versements (compartiment 1, hors transferts) : déductibles dans les limites des art. 154 bis / 154 bis-0 A (TNS) et 163 quatervicies CGI ; o",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.determination_part_taxable",
+      "detail_path": "contrats.ma_retraite.details.determination_part_taxable",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "compartiment",
+          "versements",
+          "sortie",
+          "rente",
+          "hors",
+          "déductibilité",
+          "capital",
+          "exonération",
+          "produits",
+          "résidence",
+          "principale",
+          "décès"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction",
+          "confondre fiscalité décès assurance vie et succession classique",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Versements (compartiment 1, hors transferts) : déductibles dans les limites des art.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.conditions_de_rachat",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "conditions_de_rachat",
+      "resume_conseiller": "conditions_de_rachat",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.conditions_de_rachat",
+      "detail_path": "contrats.ma_retraite.details.conditions_de_rachat",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "rachat"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "conditions_de_rachat",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_retraite.fiscalit",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "fiscalité",
+      "resume_conseiller": "fiscalité",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_retraite.fiscalit",
+      "detail_path": "contrats.ma_retraite.details.fiscalit",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_retraite",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "fiscalité"
+        ],
+        "synonymes": [
+          "impôt",
+          "990 I",
+          "757 B",
+          "succession",
+          "transmission",
+          "abattement",
+          "Madelin",
+          "déduction"
+        ],
+        "formulations_client_possibles": [
+          "Quelle fiscalité au décès ?",
+          "Est-ce déductible ?",
+          "Comment ça se transmet ?"
+        ],
+        "intentions": [
+          "vérifier fiscalité",
+          "vérifier transmission"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "fiscalité",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "points_vigilance": [
+    "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.",
+    "Compartiment 3 : sortie en rente UNIQUEMENT.",
+    "Option pour la sortie en rente : expresse et IRRÉVOCABLE (interdit ensuite la sortie en capital).",
+    "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.",
+    "Plus de déductibilité fiscale des versements après 70 ans.",
+    "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).",
+    "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégrés.",
+    "Frais de transfert 1 % uniquement les 5 premières années.",
+    "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture)."
+  ],
+  "stats": {
+    "garanties": 5,
+    "options": 4,
+    "exclusions": 1,
+    "fiscalite": 5,
+    "conditions": 2,
+    "objets_requires_pdf_check": 3,
+    "placeholders": 7
+  }
+}

@@ -1,0 +1,1840 @@
+{
+  "meta": {
+    "type": "axa_contrats_unifie_enrichi",
+    "schema_version": "2.0",
+    "json_meres_modifies": false,
+    "genere_le": "2026-06-19",
+    "note": "résumé + objets + detail_id + pointeurs PDF/JSON"
+  },
+  "contrats": [
+    {
+      "slug": "avizen",
+      "id": "axa_avizen_2025-04",
+      "nom": "Avizen",
+      "famille": "prévoyance",
+      "resume_exploitable": "Contrat de prévoyance individuelle (via association ANPERE) garantissant, selon les garanties souscrites : capital ou rente en cas de décès ou d'invalidité permanente totale (toutes causes ou par accident), rente éducation, indemnités journalières en cas d'incapacité temporaire totale de travail, rente ou capital en cas d'invalidité permanente partielle ou totale, exonérations de cotisations, garantie aide à la famille (AJPP), et services d'assistance. Les montants garantis, franchises et durées d'indemnisation sont fixés au certificat d'adhésion.",
+      "json_contrat": "data/AXA/contrats/avizen.json",
+      "pdf": "data/AXA/Avizen/2025-04 Notice d'information Avizen.pdf",
+      "objets_principaux": [
+        {
+          "titre": "Capital décès toutes causes / Capital IPT toutes causes (garantie principale)",
+          "type": "garantie",
+          "resume": "Décès avant la fin de l'année d'assurance des 85 ans : versement du capital garanti aux bénéficiaires (met fin au contrat).",
+          "detail_id": "avizen.capital_d_c_s_toutes_causes_capital_ipt_toutes_c",
+          "source_page": 11,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Capital décès par accident / Capital IPT par accident (garantie principale)",
+          "type": "garantie",
+          "resume": "Décès résultant directement d'un accident et survenant moins de 12 mois après celui-ci (avant fin de l'année d'assurance des 85 ans) : capital aux bénéficiaires.",
+          "detail_id": "avizen.capital_d_c_s_par_accident_capital_ipt_par_accid",
+          "source_page": 11,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+          "type": "garantie",
+          "resume": "Versée aux enfants bénéficiaires fiscalement à charge (y compris nés moins de 300 jours après le décès) jusqu'au 26e anniversaire ;",
+          "detail_id": "avizen.rente_ducation_d_c_s_rente_ducation_ipt_garantie",
+          "source_page": 12,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Rente décès / Rente IPT (garantie principale)",
+          "type": "garantie",
+          "resume": "Décès avant fin de l'année d'assurance des 85 ans : rente viagère au bénéficiaire désigné ;",
+          "detail_id": "avizen.rente_d_c_s_rente_ipt_garantie_principale",
+          "source_page": 13,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Indemnités journalières ITT toutes causes (optionnelle)",
+          "type": "garantie",
+          "resume": "IJ versées par jour d'arrêt de travail médicalement constaté, à terme échu par quinzaine, après franchise du certificat d'adhésion.",
+          "detail_id": "avizen.indemnit_s_journali_res_itt_toutes_causes_option",
+          "source_page": 13,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Indemnités journalières ITT par accident (optionnelle)",
+          "type": "garantie",
+          "resume": "Mêmes modalités que les IJ toutes causes mais limitées aux arrêts par accident ;",
+          "detail_id": "avizen.indemnit_s_journali_res_itt_par_accident_optionn",
+          "source_page": 14,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+          "type": "garantie",
+          "resume": "Rente si invalidité permanente partielle ou totale (maladie ou accident) appréciée par le taux d'invalidité fonctionnelle.",
+          "detail_id": "avizen.rente_invalidit_fonctionnelle_toutes_causes_opti",
+          "source_page": 15,
+          "has_formula": true,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)",
+          "type": "garantie",
+          "resume": "Capital = montant garanti à la consolidation × taux d'indemnisation (n).",
+          "detail_id": "avizen.capital_invalidit_permanente_partielle_ou_totale",
+          "source_page": 16,
+          "has_formula": true,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Rente invalidité permanente partielle ou totale par accident (optionnelle)",
+          "type": "garantie",
+          "resume": "Comme la rente toutes causes mais limitée à l'accident, seuil unique taux ≥ 11 %.",
+          "detail_id": "avizen.rente_invalidit_permanente_partielle_ou_totale_p",
+          "source_page": 16,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+          "type": "garantie",
+          "resume": "Comme le capital toutes causes mais limité à l'accident, seuil taux ≥ 11 % ;",
+          "detail_id": "avizen.capital_invalidit_permanente_partielle_ou_totale",
+          "source_page": 17,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Garantie aide à la famille",
+          "type": "garantie",
+          "resume": "IJ en cas de cessation totale ou partielle d'activité pour accompagner un enfant gravement malade, handicapé ou victime d'un accident grave.",
+          "detail_id": "avizen.garantie_aide_la_famille",
+          "source_page": 18,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Capital décès double garantie",
+          "type": "option",
+          "resume": "Si l'assuré en IPT décède au moins 1 an après la consolidation, capital supplémentaire (égal au capital IPT déjà versé) aux bénéficiaires, si décès avant fin de l'année d'assurance des 85 ans.",
+          "detail_id": "avizen.capital_d_c_s_double_garantie",
+          "source_page": 11,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Exonération des cotisations en cas d'ITT",
+          "type": "option",
+          "resume": "Pendant le versement des IJ, remboursement des cotisations de l'ensemble des garanties en cours à raison de 1/365e de la cotisation annuelle par jour d'arrêt total indemnisé.",
+          "detail_id": "avizen.exon_ration_des_cotisations_en_cas_d_itt",
+          "source_page": 17,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Exonération des cotisations en cas d'invalidité",
+          "type": "option",
+          "resume": "Si invalidité permanente ≥ 66 % (maladie ou accident) déclenchant une indemnisation invalidité : cotisations prises en charge jusqu'au terme de la garantie, tant que l'invalidité reste ≥ 66 %.",
+          "detail_id": "avizen.exon_ration_des_cotisations_en_cas_d_invalidit",
+          "source_page": 18,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Indexation des garanties (option à l'adhésion)",
+          "type": "option",
+          "resume": "Réévaluation annuelle des garanties selon l'évolution du PASS, sans examen médical ;",
+          "detail_id": "avizen.indexation_des_garanties_option_l_adh_sion",
+          "source_page": 8,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Augmentation sans sélection médicale (mariage/naissance/adoption)",
+          "type": "option",
+          "resume": "Augmentation du capital décès/IPT sans sélection médicale, dans la limite de 20 % du montant, en cas de mariage ou PACS, naissance ou adoption, demandée dans les 3 mois suivant l'événement.",
+          "detail_id": "avizen.augmentation_sans_s_lection_m_dicale_mariage_nai",
+          "source_page": 9,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Exclusions communes — activités et sports à risque",
+          "type": "exclusion",
+          "resume": "Sauf acceptation de l'assureur au certificat : essais/tentatives de records, sports de haut niveau, sports professionnels ;",
+          "detail_id": "avizen.exclusions_communes_activit_s_et_sports_risque",
+          "source_page": 25,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Décès/IPT toutes causes — suicide 1re année",
+          "type": "exclusion",
+          "resume": "Suicide et tentative de suicide si le décès/IPT survient au cours de la 1re année d'assurance ;",
+          "detail_id": "avizen.d_c_s_ipt_toutes_causes_suicide_1re_ann_e",
+          "source_page": 26,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire",
+          "type": "exclusion",
+          "resume": "Faits de guerre civile, étrangère, insurrection, opérations de maintien de l'ordre/paix (ONU ou similaire) ;",
+          "detail_id": "avizen.d_c_s_ipt_toutes_causes_guerre_et_meurtre_du_b_n",
+          "source_page": 26,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Décès/IPT par accident — exclusions spécifiques",
+          "type": "exclusion",
+          "resume": "Guerres, insurrection, maintien de l'ordre/paix ;",
+          "detail_id": "avizen.d_c_s_ipt_par_accident_exclusions_sp_cifiques",
+          "source_page": 26,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "ITT/Invalidité — exclusions spécifiques",
+          "type": "exclusion",
+          "resume": "Tentatives de suicide, mutilations, blessures, lésions ou maladies d'un fait volontaire de l'assuré ;",
+          "detail_id": "avizen.itt_invalidit_exclusions_sp_cifiques",
+          "source_page": 27,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "valeurs_de_rachat",
+          "type": "fiscalite",
+          "resume": "valeurs_de_rachat",
+          "detail_id": "avizen.valeurs_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "mise_en_reduction",
+          "type": "fiscalite",
+          "resume": "mise_en_reduction",
+          "detail_id": "avizen.mise_en_reduction",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "determination_part_taxable",
+          "type": "fiscalite",
+          "resume": "determination_part_taxable",
+          "detail_id": "avizen.determination_part_taxable",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "conditions_de_rachat",
+          "type": "fiscalite",
+          "resume": "conditions_de_rachat",
+          "detail_id": "avizen.conditions_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "régle_rachat_reduction",
+          "type": "fiscalite",
+          "resume": "régle_rachat_reduction",
+          "detail_id": "avizen.r_gle_rachat_reduction",
+          "source_page": 29,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "fiscalité",
+          "type": "fiscalite",
+          "resume": "Capital décès soumis aux droits de mutation à titre gratuit (art.",
+          "detail_id": "avizen.fiscalit",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        }
+      ]
+    },
+    {
+      "slug": "avizen_pro",
+      "id": "axa_avizen_pro_2025-04",
+      "nom": "Avizen Pro",
+      "famille": "prévoyance",
+      "resume_exploitable": "Déclinaison professionnelle d'Avizen, orientée travailleurs non salariés et professions libérales : garanties décès/IPT (capital, rente, rente éducation, double effet), ITT (IJ toutes causes ou par accident, IJ complémentaires aux régimes obligatoires 90/365 jours), remboursement des frais professionnels, invalidité permanente partielle ou totale évaluée selon un taux CROISÉ (fonctionnel × professionnel) ou, en option pour 28 professions éligibles, selon le seul taux professionnel (règle n/66), exonérations de cotisations, aide à la famille, et un volet d'assistance professionnelle étendu (prévention burn-out, agression, second avis médical…). Cadre fiscal Madelin possible. Montants, franchises et options au certificat d'adhésion.",
+      "json_contrat": "data/AXA/contrats/avizen_pro.json",
+      "pdf": "data/AXA/Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "objets_principaux": [
+        {
+          "titre": "Capital décès toutes causes / Capital IPT toutes causes + double effet",
+          "type": "garantie",
+          "resume": "Identique au mécanisme Avizen : capital au décès avant fin de l'année d'assurance des 85 ans ;",
+          "detail_id": "avizen_pro.capital_d_c_s_toutes_causes_capital_ipt_toutes_c",
+          "source_page": 11,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Capital décès par accident / IPT par accident",
+          "type": "garantie",
+          "resume": "Décès directement lié à un accident, < 12 mois après ;",
+          "detail_id": "avizen_pro.capital_d_c_s_par_accident_ipt_par_accident",
+          "source_page": 11,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Rente éducation décès / IPT + double effet",
+          "type": "garantie",
+          "resume": "Comme Avizen : enfants fiscalement à charge (et nés < 300 jours après le décès), jusqu'à 26 ans ;",
+          "detail_id": "avizen_pro.rente_ducation_d_c_s_ipt_double_effet",
+          "source_page": 12,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Rente décès / Rente IPT",
+          "type": "garantie",
+          "resume": "Rente viagère au bénéficiaire (décès avant fin année d'assurance des 85 ans) réduite de 50 % à ses 65 ans ;",
+          "detail_id": "avizen_pro.rente_d_c_s_rente_ipt",
+          "source_page": 12,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "IJ ITT toutes causes (optionnelle)",
+          "type": "garantie",
+          "resume": "IJ au montant garanti au 1er jour d'arrêt, par quinzaine à terme échu après franchise (fonction des circonstances : hospitalisation, accident, maladie).",
+          "detail_id": "avizen_pro.ij_itt_toutes_causes_optionnelle",
+          "source_page": 14,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "IJ ITT par accident (optionnelle)",
+          "type": "garantie",
+          "resume": "Comme IJ toutes causes, limitées à l'accident ;",
+          "detail_id": "avizen_pro.ij_itt_par_accident_optionnelle",
+          "source_page": 15,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)",
+          "type": "garantie",
+          "resume": "IJ courtes complémentaires aux IJ des régimes obligatoires : cessent au 90e OU 365e jour d'arrêt (franchise incluse) selon la garantie souscrite au certificat.",
+          "detail_id": "avizen_pro.ij_toutes_causes_compl_mentaires_aux_r_gimes_obl",
+          "source_page": 15,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Indemnités Remboursement des frais professionnels (optionnelle)",
+          "type": "garantie",
+          "resume": "En ITT (maladie ou accident), indemnités versées à l'adhérent : soit équivalent journalier des frais professionnels échus et payés déclarés au fisc, soit équivalent journalier des frais de remplacemen",
+          "detail_id": "avizen_pro.indemnit_s_remboursement_des_frais_professionnel",
+          "source_page": 16,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Rente invalidité permanente partielle ou totale (optionnelle)",
+          "type": "garantie",
+          "resume": "Rente = montant garanti à la consolidation × taux d'indemnisation (n).",
+          "detail_id": "avizen_pro.rente_invalidit_permanente_partielle_ou_totale_o",
+          "source_page": 17,
+          "has_formula": true,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Capital invalidité permanente partielle ou totale (optionnelle)",
+          "type": "garantie",
+          "resume": "Capital = montant du certificat × taux d'indemnisation (croisé ou professionnel selon le choix).",
+          "detail_id": "avizen_pro.capital_invalidit_permanente_partielle_ou_totale",
+          "source_page": 21,
+          "has_formula": true,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Rente invalidité par accident (optionnelle)",
+          "type": "garantie",
+          "resume": "Évaluée sur le seul taux d'invalidité fonctionnelle (tableau spécifique), seuil 11 %.",
+          "detail_id": "avizen_pro.rente_invalidit_par_accident_optionnelle",
+          "source_page": 23,
+          "has_formula": false,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Capital invalidité par accident (optionnelle)",
+          "type": "garantie",
+          "resume": "Capital × taux d'indemnisation fonctionnel ;",
+          "detail_id": "avizen_pro.capital_invalidit_par_accident_optionnelle",
+          "source_page": 24,
+          "has_formula": true,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Garantie aide à la famille",
+          "type": "garantie",
+          "resume": "Comme Avizen (IJ pendant AJPP, enfant < 20 ans, 14 mois/enfant/pathologie renouvelable une fois) — les IJ complémentaires aux régimes obligatoires comptent parmi les garanties IJ éligibles au couplage",
+          "detail_id": "avizen_pro.garantie_aide_la_famille",
+          "source_page": 25,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Capital décès double garantie",
+          "type": "option",
+          "resume": "Capital supplémentaire (égal au capital IPT versé) si décès ≥ 1 an après consolidation IPT, avant fin de l'année d'assurance des 85 ans.",
+          "detail_id": "avizen_pro.capital_d_c_s_double_garantie",
+          "source_page": 11,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Option taux d'invalidité 15 % maladie",
+          "type": "option",
+          "resume": "Abaisse le seuil d'intervention invalidité maladie de 33 % à 15 % (rente et capital).",
+          "detail_id": "avizen_pro.option_taux_d_invalidit_15_maladie",
+          "source_page": 17,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Option taux invalidité professionnelle (barème spécifique)",
+          "type": "option",
+          "resume": "Pour 28 professions éligibles (liste contractuelle p.21), fixation du taux d'invalidité (n) uniquement selon l'invalidité professionnelle, avec barème spécifique remis à l'adhésion (n retenu jamais in",
+          "detail_id": "avizen_pro.option_taux_invalidit_professionnelle_bar_me_sp_",
+          "source_page": 20,
+          "has_formula": true,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Exonération cotisations ITT",
+          "type": "option",
+          "resume": "1/365e de la cotisation annuelle remboursé par jour d'arrêt total indemnisé ;",
+          "detail_id": "avizen_pro.exon_ration_cotisations_itt",
+          "source_page": 24,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Exonération cotisations invalidité",
+          "type": "option",
+          "resume": "Dispense de cotisations si invalidité ≥ 66 % (appréciée selon le taux croisé, professionnel ou fonctionnel suivant la garantie rente détenue) tant qu'elle perdure.",
+          "detail_id": "avizen_pro.exon_ration_cotisations_invalidit",
+          "source_page": 24,
+          "has_formula": true,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Indexation PASS",
+          "type": "option",
+          "resume": "Comme Avizen : réévaluation annuelle garanties+cotisations selon le PASS, sans examen médical, jusqu'à 70 ans ;",
+          "detail_id": "avizen_pro.indexation_pass",
+          "source_page": 8,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)",
+          "type": "option",
+          "resume": "+20 % max du capital décès/IPT sans sélection médicale, dans les 3 mois de l'événement.",
+          "detail_id": "avizen_pro.augmentation_sans_s_lection_m_dicale_mariage_pac",
+          "source_page": 9,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Cadre fiscal Madelin",
+          "type": "option",
+          "resume": "Adhésion possible dans le cadre fiscal Madelin (TNS) : prestations alors imposables ;",
+          "detail_id": "avizen_pro.cadre_fiscal_madelin",
+          "source_page": 4,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Exclusions communes — activités/sports à risque",
+          "type": "exclusion",
+          "resume": "Liste identique à Avizen (sports extrêmes, aériens, mécaniques, montagne > 3 500 m, équestres, nautiques, tauromachie… ;",
+          "detail_id": "avizen_pro.exclusions_communes_activit_s_sports_risque",
+          "source_page": 41,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Décès/IPT toutes causes",
+          "type": "exclusion",
+          "resume": "Suicide/tentative la 1re année (et 1 an sur le supplément en cas d'augmentation) ;",
+          "detail_id": "avizen_pro.d_c_s_ipt_toutes_causes",
+          "source_page": 42,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Décès/IPT par accident",
+          "type": "exclusion",
+          "resume": "Guerres/insurrection/maintien de l'ordre ;",
+          "detail_id": "avizen_pro.d_c_s_ipt_par_accident",
+          "source_page": 42,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "ITT/Invalidité",
+          "type": "exclusion",
+          "resume": "Identiques à Avizen (faits volontaires, guerres/émeutes, antériorités non déclarées, drogues, alcoolisme chronique, alcoolémie, cures et maisons de repos pour l'ITT, chirurgie plastique, nucléaire, re",
+          "detail_id": "avizen_pro.itt_invalidit",
+          "source_page": 43,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "valeurs_de_rachat",
+          "type": "fiscalite",
+          "resume": "valeurs_de_rachat",
+          "detail_id": "avizen_pro.valeurs_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "mise_en_reduction",
+          "type": "fiscalite",
+          "resume": "mise_en_reduction",
+          "detail_id": "avizen_pro.mise_en_reduction",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "determination_part_taxable",
+          "type": "fiscalite",
+          "resume": "determination_part_taxable",
+          "detail_id": "avizen_pro.determination_part_taxable",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "conditions_de_rachat",
+          "type": "fiscalite",
+          "resume": "conditions_de_rachat",
+          "detail_id": "avizen_pro.conditions_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "régle_rachat_reduction",
+          "type": "fiscalite",
+          "resume": "régle_rachat_reduction",
+          "detail_id": "avizen_pro.r_gle_rachat_reduction",
+          "source_page": 45,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        }
+      ]
+    },
+    {
+      "slug": "entourage",
+      "id": "axa_entourage_2025-06",
+      "nom": "Entour'Age",
+      "famille": "prévoyance",
+      "resume_exploitable": "Contrat dépendance : rente viagère mensuelle (montant au choix entre 500 et 3 000 €/mois) versée en cas de dépendance totale — ou 50 % en dépendance partielle si la Formule Dépendance Totale et Partielle est choisie — après reconnaissance par le Médecin Conseil d'AXA et franchise absolue de 3 mois. Options : Capital Premiers Frais (3 500 €), Capital décès (3 500 €) OU Capital décès remboursement des cotisations. Services « ENTREAIDANTS » dès l'adhésion (informations, hospitalisation/immobilisation, aide aux aidants, téléassistance à tarif réduit) et services dédiés en perte d'autonomie. Adhésion viagère, exonération des cotisations pendant le service de la rente, mise en réduction possible après 8 années pleines de cotisation.",
+      "json_contrat": "data/AXA/contrats/entourage.json",
+      "pdf": "data/AXA/EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "objets_principaux": [
+        {
+          "titre": "Rente viagère dépendance (garantie principale obligatoire)",
+          "type": "garantie",
+          "resume": "Rente mensuelle versée tant que dure l'état de dépendance garanti.",
+          "detail_id": "entourage.rente_viag_re_d_pendance_garantie_principale_obl",
+          "source_page": 21,
+          "has_formula": true,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Services dès l'adhésion « ENTREAIDANTS »",
+          "type": "garantie",
+          "resume": "Site entreaidants.fr ;",
+          "detail_id": "entourage.services_d_s_l_adh_sion_entreaidants",
+          "source_page": 15,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Services d'assistance dédiés en perte d'autonomie",
+          "type": "garantie",
+          "resume": "Bilan initial de situation de dépendance à domicile (1 seul par assuré pendant l'adhésion) ;",
+          "detail_id": "entourage.services_d_assistance_d_di_s_en_perte_d_autonomi",
+          "source_page": 23,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Services pour l'aidant de l'assuré",
+          "type": "garantie",
+          "resume": "Informations/conseils identiques à l'assuré ;",
+          "detail_id": "entourage.services_pour_l_aidant_de_l_assur",
+          "source_page": 25,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Formule Dépendance Totale et Partielle",
+          "type": "option",
+          "resume": "Étend la couverture à la dépendance partielle : 50 % de la rente dès reconnaissance de la dépendance partielle ;",
+          "detail_id": "entourage.formule_d_pendance_totale_et_partielle",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Capital Premiers Frais",
+          "type": "option",
+          "resume": "Capital forfaitaire de 3 500 € versé à l'ouverture du droit à prestations pour l'état de dépendance garanti (y compris dépendance LÉGÈRE si l'option est souscrite dans le cadre de la Formule Totale et",
+          "detail_id": "entourage.capital_premiers_frais",
+          "source_page": 6,
+          "has_formula": true,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Capital décès",
+          "type": "option",
+          "resume": "3 500 € versés aux bénéficiaires en cas de décès de l'assuré ;",
+          "detail_id": "entourage.capital_d_c_s",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Capital décès Remboursement des cotisations",
+          "type": "option",
+          "resume": "En cas de décès SANS dépendance préalable avant le 85e anniversaire : remboursement aux bénéficiaires du cumul des cotisations nettes des frais de fractionnement versées depuis la date d'effet de cett",
+          "detail_id": "entourage.capital_d_c_s_remboursement_des_cotisations",
+          "source_page": 27,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Réduction couple",
+          "type": "option",
+          "resume": "Si chaque conjoint adhère individuellement dans un délai maximal de 3 mois entre les deux adhésions : réduction tarifaire permanente de 10 % sur les deux cotisations.",
+          "detail_id": "entourage.r_duction_couple",
+          "source_page": 11,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Exclusions générales (dépendance et décès)",
+          "type": "exclusion",
+          "resume": "Tentative de suicide de l'assuré (le suicide étant également exclu la 1re année pour la garantie Décès) ;",
+          "detail_id": "entourage.exclusions_g_n_rales_d_pendance_et_d_c_s",
+          "source_page": 29,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Dépendance suite à accidents — cas exclus",
+          "type": "exclusion",
+          "resume": "Fait intentionnel de l'assuré ;",
+          "detail_id": "entourage.d_pendance_suite_accidents_cas_exclus",
+          "source_page": 29,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "GIR 5 et 6",
+          "type": "exclusion",
+          "resume": "L'état de dépendance avec classement GIR 5 ou 6 n'est jamais garanti.",
+          "detail_id": "entourage.gir_5_et_6",
+          "source_page": 13,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "valeurs_de_rachat",
+          "type": "fiscalite",
+          "resume": "L'adhésion ne comporte PAS de valeur de rachat.",
+          "detail_id": "entourage.valeurs_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "mise_en_reduction",
+          "type": "fiscalite",
+          "resume": "Après au moins 8 années pleines et consécutives de cotisations, en cas de résiliation : maintien partiel de la rente dépendance et du Capital Premiers Frais (si souscrit) par MISE EN RÉDUCTION, selon ",
+          "detail_id": "entourage.mise_en_reduction",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "determination_part_taxable",
+          "type": "fiscalite",
+          "resume": "determination_part_taxable",
+          "detail_id": "entourage.determination_part_taxable",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "conditions_de_rachat",
+          "type": "fiscalite",
+          "resume": "conditions_de_rachat",
+          "detail_id": "entourage.conditions_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "fiscalité",
+          "type": "fiscalite",
+          "resume": "Rente dépendance non imposable à l'impôt sur le revenu (hors Madelin).",
+          "detail_id": "entourage.fiscalit",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        }
+      ]
+    },
+    {
+      "slug": "essenciel",
+      "id": "axa_essenciel_2025-06",
+      "nom": "Essen'Ciel (assurance obsèques)",
+      "famille": "prévoyance",
+      "resume_exploitable": "Assurance obsèques : capital garanti choisi entre 2 000 et 10 000 €, versé en priorité à la personne ou l'entreprise de pompes funèbres ayant pris en charge les obsèques (sur facture, mise à disposition sous 48 h ouvrées après pièces), le solde éventuel aux bénéficiaires subsidiaires. Revalorisation contractuelle garantie de 1 %/an du capital (sans hausse de cotisation) + participation aux bénéfices éventuelle. Cotisations fixes (10 ans, 20 ans ou viagères). Délai d'attente d'1 an pour le décès non accidentel (remboursement des cotisations nettes de frais sinon). Contrat rachetable après 1 an (pénalité dégressive 10 ans) et réductible. Garanties d'assistance avant/pendant/après le décès (rapatriement, services à la personne, soutien psychologique…).",
+      "json_contrat": "data/AXA/contrats/essenciel.json",
+      "pdf": "data/AXA/EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "objets_principaux": [
+        {
+          "titre": "Garantie décès (capital obsèques)",
+          "type": "garantie",
+          "resume": "Versement du capital garanti (2 000 à 10 000 €, choisi à l'adhésion) : à hauteur des frais d'obsèques à la personne/entreprise de pompes funèbres sur facture (acquittée → remboursement à la personne a",
+          "detail_id": "essenciel.garantie_d_c_s_capital_obs_ques",
+          "source_page": 20,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Revalorisation du capital",
+          "type": "garantie",
+          "resume": "Revalorisation contractuelle GARANTIE de 1 %/an du capital à chaque anniversaire de l'adhésion, sans augmentation de cotisation ;",
+          "detail_id": "essenciel.revalorisation_du_capital",
+          "source_page": 20,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Assistance dès l'adhésion",
+          "type": "garantie",
+          "resume": "Informations et conseils « Obsèques » (8h-20h30, 7j/7) ;",
+          "detail_id": "essenciel.assistance_d_s_l_adh_sion",
+          "source_page": 23,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Assistance au moment du décès",
+          "type": "garantie",
+          "resume": "Rapatriement du corps/cendres jusqu'au lieu d'inhumation en France (frais réels ;",
+          "detail_id": "essenciel.assistance_au_moment_du_d_c_s",
+          "source_page": 24,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Assistance après le décès (proches)",
+          "type": "garantie",
+          "resume": "Soutien psychologique : 6 entretiens max (téléphone et/ou cabinet, remboursement 80 €/séance max en cabinet) pendant 12 mois ;",
+          "detail_id": "essenciel.assistance_apr_s_le_d_c_s_proches",
+          "source_page": 27,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Choix de la durée de cotisation",
+          "type": "option",
+          "resume": "Cotisations temporaires 10 ans ou 20 ans (âge < 90 ans au paiement de la dernière cotisation) ou viagères.",
+          "detail_id": "essenciel.choix_de_la_dur_e_de_cotisation",
+          "source_page": 8,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Réduction adhésion simultanée (couple)",
+          "type": "option",
+          "resume": "Adhésion simultanée de l'adhérent et de son partenaire de vie (époux, PACS, concubin) : réduction permanente de 10 % sur l'ensemble des cotisations des 2 adhésions.",
+          "detail_id": "essenciel.r_duction_adh_sion_simultan_e_couple",
+          "source_page": 17,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Modification du capital garanti",
+          "type": "option",
+          "resume": "Possible après 1 année pleine de cotisation, avant 86 ans, une fois par année d'adhésion.",
+          "detail_id": "essenciel.modification_du_capital_garanti",
+          "source_page": 22,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Décès exclus",
+          "type": "exclusion",
+          "resume": "Suicide ou tentative au cours de la 1re année d'adhésion ;",
+          "detail_id": "essenciel.d_c_s_exclus",
+          "source_page": 30,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Décès accidentel exclu",
+          "type": "exclusion",
+          "resume": "Alcoolémie ≥ limite du Code de la route français ;",
+          "detail_id": "essenciel.d_c_s_accidentel_exclu",
+          "source_page": 30,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Exclusions assistance",
+          "type": "exclusion",
+          "resume": "Excédents de bagages ;",
+          "detail_id": "essenciel.exclusions_assistance",
+          "source_page": 31,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "valeurs_de_rachat",
+          "type": "fiscalite",
+          "resume": "Rachat TOTAL possible après la première année.",
+          "detail_id": "essenciel.valeurs_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "mise_en_reduction",
+          "type": "fiscalite",
+          "resume": "En cas d'arrêt de paiement au-delà de la 1re année : mise en réduction = nouveau capital garanti réduit (fonction âge à l'adhésion, années révolues payées, capital choisi, type/durée de cotisation).",
+          "detail_id": "essenciel.mise_en_reduction",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "determination_part_taxable",
+          "type": "fiscalite",
+          "resume": "Régime fiscal de l'assurance vie (au 01/01/2025) : en cas de RACHAT, les PRODUITS attachés au contrat sont imposables (prélèvement forfaitaire ou, sur option expresse et irrévocable, barème progressif",
+          "detail_id": "essenciel.determination_part_taxable",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "conditions_de_rachat",
+          "type": "fiscalite",
+          "resume": "conditions_de_rachat",
+          "detail_id": "essenciel.conditions_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "fiscalité",
+          "type": "fiscalite",
+          "resume": "Support en euros : promotion de caractéristiques environnementales (SFDR) ;",
+          "detail_id": "essenciel.fiscalit",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": true,
+          "requires_pdf_check": true
+        }
+      ]
+    },
+    {
+      "slug": "essenciel_patrimoine",
+      "id": "axa_essenciel_patrimoine_2023-09",
+      "nom": "Essen'Ciel Patrimoine",
+      "famille": "prévoyance",
+      "resume_exploitable": "Capital décès aux bénéficiaires désignés. L'adhésion NE comporte PAS de garantie en capital au moins égale aux sommes versées nettes de frais. Participation aux bénéfices (Code des assurances, non contractuelle). Faculté de rachat (règlement sous 2 mois) avec tableau des valeurs de rachat au terme des 8 premières années. Mise en réduction possible. Durée viagère ; le décès ou le rachat total met fin à l'adhésion.",
+      "json_contrat": "data/AXA/contrats/essenciel_patrimoine.json",
+      "pdf": "data/AXA/EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "objets_principaux": [
+        {
+          "titre": "Garantie décès — versement d'un capital aux bénéficiaires",
+          "type": "garantie",
+          "resume": "En cas de décès de l'assuré, versement d'un capital au(x) bénéficiaire(s) désigné(s). Cadre fiscal assurance vie.",
+          "detail_id": "essenciel_patrimoine.garantie_deces",
+          "source_page": "2, 4, 16",
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Revalorisation / participation aux bénéfices",
+          "type": "garantie",
+          "resume": "Pas de PB contractuelle, mais participation aux bénéfices selon le Code des assurances ; revalorisation possible du capital décès.",
+          "detail_id": "essenciel_patrimoine.revalorisation",
+          "source_page": "6, 8",
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+          "type": "option",
+          "resume": "Le contrat comporte une faculté de rachat ; règlement sous 2 mois. Un tableau des valeurs de rachat au terme des 8 premières années figure dans la notice (§4.3).",
+          "detail_id": "essenciel_patrimoine.rachat.tableau_valeurs",
+          "source_page": "2, 14, 15",
+          "has_formula": false,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Mise en réduction (valeur de réduction)",
+          "type": "option",
+          "resume": "Si l'adhérent cesse de payer les cotisations, l'adhésion peut être mise en réduction : un nouveau capital garanti (valeur de réduction) est calculé.",
+          "detail_id": "essenciel_patrimoine.mise_en_reduction",
+          "source_page": "13, 14, 15",
+          "has_formula": false,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Réduction tarifaire couple (-10 %)",
+          "type": "option",
+          "resume": "Adhésion simultanée de l'adhérent et de son conjoint (marié/PACS/concubin) : -10 % permanent sur l'ensemble des cotisations.",
+          "detail_id": "essenciel_patrimoine.reduction_conjoint",
+          "source_page": "13",
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Prestations d'assistance (suite au décès)",
+          "type": "option",
+          "resume": "Prestations d'assistance fournies par AXA Assistance (suite au décès de l'assuré).",
+          "detail_id": "essenciel_patrimoine.assistance",
+          "source_page": "7, 9, 10",
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Risques exclus de la garantie décès",
+          "type": "exclusion",
+          "resume": "Décès exclu si : suicide la 1re année, guerre civile/étrangère, et autres cas listés §2.4.",
+          "detail_id": "essenciel_patrimoine.exclusions_deces",
+          "source_page": "6",
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Régime fiscal — assurance vie (transmission)",
+          "type": "fiscalite",
+          "resume": "Régime fiscal de l'assurance vie : transmission via art. 990 I et 757 B du CGI (selon âge des versements). Avantage de transmission hors succession dans les limites légales.",
+          "detail_id": "essenciel_patrimoine.fiscalite",
+          "source_page": "5, 16",
+          "has_formula": false,
+          "has_table": true,
+          "requires_pdf_check": true
+        }
+      ]
+    },
+    {
+      "slug": "excelium",
+      "id": "axa_excelium_vie_2026-05",
+      "nom": "Excelium (assurance vie)",
+      "famille": "épargne",
+      "resume_exploitable": "Assurance vie multisupport : épargne disponible (rachats), capital au terme ou rente viagère sur proposition, capital décès aux bénéficiaires. Trois familles de supports : euros (capital garanti net de frais, PB contractuelle sans minimum garanti), fonds Croissance (garantie de 100 % des sommes nettes de frais à l'échéance — 10 ans prorogeable, participation aux résultats 100 %), unités de compte (capital non garanti). Trois types de gestion : personnelle, par convention, pilotée (sous mandat). Garantie décès plancher « Sérénité » incluse (jusqu'à 80 ans) et garantie « Revalorisée » (Livret A) automatique sous conditions. Frais plafonnés contractuellement (annexe 3). Rachat à tout moment, règlement sous 2 mois.",
+      "json_contrat": "data/AXA/contrats/excelium.json",
+      "pdf": "data/AXA/Excelium/2026-05 Notice Excelium Vie.pdf",
+      "objets_principaux": [
+        {
+          "titre": "Garantie en cas de vie (au terme)",
+          "type": "garantie",
+          "resume": "Capital, ou sur proposition de l'assureur rente viagère (conditions et tarif en vigueur à la demande : frais d'arrérage, taux technique, table de mortalité ;",
+          "detail_id": "excelium.garantie_en_cas_de_vie_au_terme",
+          "source_page": 15,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Garantie en cas de décès",
+          "type": "garantie",
+          "resume": "Capital décès = épargne tous supports confondus, OU montant dû au titre de la garantie « Sérénité », OU montant dû au titre de la garantie « Revalorisée ».",
+          "detail_id": "excelium.garantie_en_cas_de_d_c_s",
+          "source_page": 15,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Garantie « Sérénité » (plancher, incluse)",
+          "type": "garantie",
+          "resume": "Capital décès jamais inférieur aux versements BRUTS de frais diminués des rachats.",
+          "detail_id": "excelium.garantie_s_r_nit_plancher_incluse",
+          "source_page": 15,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Garantie « Revalorisée »",
+          "type": "garantie",
+          "resume": "Souscrite automatiquement et exclusivement si gestion par convention Conviction Fortissimo ou Horizon Actions Fortissimo (sans fonds Croissance) ET âge < 70 ans à l'adhésion.",
+          "detail_id": "excelium.garantie_revaloris_e",
+          "source_page": 16,
+          "has_formula": true,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Types de gestion",
+          "type": "option",
+          "resume": "Gestion personnelle (libre choix des supports) ;",
+          "detail_id": "excelium.types_de_gestion",
+          "source_page": 79,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Rachats partiels programmés",
+          "type": "option",
+          "resume": "Durée max 3 ans, montant en euros (brut ou net de fiscalité), périodicité au choix ;",
+          "detail_id": "excelium.rachats_partiels_programm_s",
+          "source_page": 45,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Prorogation du fonds Croissance",
+          "type": "option",
+          "resume": "Option expresse, sans frais, à tout moment : à l'échéance, la garantie (10 ans) est prorogée ;",
+          "detail_id": "excelium.prorogation_du_fonds_croissance",
+          "source_page": 20,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Exclusions de la garantie « Revalorisée »",
+          "type": "exclusion",
+          "resume": "Suicide/tentative (conscient ou non) ou tout acte volontaire de l'assuré dans l'année suivant la prise d'effet ;",
+          "detail_id": "excelium.exclusions_de_la_garantie_revaloris_e",
+          "source_page": 16,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "valeurs_de_rachat",
+          "type": "fiscalite",
+          "resume": "Faculté de rachat partiel ou total à tout moment ;",
+          "detail_id": "excelium.valeurs_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "mise_en_reduction",
+          "type": "fiscalite",
+          "resume": "mise_en_reduction",
+          "detail_id": "excelium.mise_en_reduction",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "determination_part_taxable",
+          "type": "fiscalite",
+          "resume": "Rachat : seuls les PRODUITS sont imposables.",
+          "detail_id": "excelium.determination_part_taxable",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "conditions_de_rachat",
+          "type": "fiscalite",
+          "resume": "conditions_de_rachat",
+          "detail_id": "excelium.conditions_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "fiscalité",
+          "type": "fiscalite",
+          "resume": "fiscalité",
+          "detail_id": "excelium.fiscalit",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        }
+      ]
+    },
+    {
+      "slug": "masterlife_credit",
+      "id": "axa_masterlife_credit_2024-10",
+      "nom": "Masterlife CREDIT",
+      "famille": "assurance_emprunteur",
+      "resume_exploitable": "Assurance emprunteur couvrant, au titre du prêt mentionné aux conditions particulières et à concurrence de la quotité assurée : décès (capital restant dû), PTIA (capital restant dû à la consolidation, avant 70 ans), incapacité temporaire totale de travail (IJ jusqu'à 1/30e de la mensualité, max 1 095 jours), invalidité totale ou partielle (barème croisé fonctionnel × professionnel, seuil 33 %, plein à 66 %), invalidité spécifique AERAS (sur proposition de l'assureur), garantie aide à la famille (AJPP) et exonération/remboursement des cotisations. Deux tarifications au choix irrévocable : constante ou sur capital restant dû. Bénéficiaire par défaut : l'organisme prêteur à hauteur du capital restant dû.",
+      "json_contrat": "data/AXA/contrats/masterlife_credit.json",
+      "pdf": "data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "objets_principaux": [
+        {
+          "titre": "Décès",
+          "type": "garantie",
+          "resume": "Capital égal au montant restant dû au jour du décès (quelle qu'en soit la cause), à concurrence de la quotité assurée, versé aux bénéficiaires.",
+          "detail_id": "masterlife_credit.d_c_s",
+          "source_page": 12,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "PTIA",
+          "type": "garantie",
+          "resume": "Capital restant dû à la date de consolidation de la PTIA × quotité assurée, si consolidation avant le 70e anniversaire.",
+          "detail_id": "masterlife_credit.ptia",
+          "source_page": 12,
+          "has_formula": true,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Incapacité de travail (IJ)",
+          "type": "garantie",
+          "resume": "IJ aux bénéficiaires × quotité assurée, plafonnées à 1/30e de la mensualité (1/90e trimestrialité, 1/180e semestrialité, 1/365e annuité ;",
+          "detail_id": "masterlife_credit.incapacit_de_travail_ij",
+          "source_page": 13,
+          "has_formula": true,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Invalidité totale ou partielle",
+          "type": "garantie",
+          "resume": "IJ trimestrielles × quotité, pour chaque jour d'invalidité : taux (n) ≥ 66 % → 100 % des IJ plafond (1/30e mensualité…) ;",
+          "detail_id": "masterlife_credit.invalidit_totale_ou_partielle",
+          "source_page": 14,
+          "has_formula": true,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Invalidité spécifique AERAS (GIS)",
+          "type": "garantie",
+          "resume": "Proposée par l'assureur (pas une option à la demande) si incapacité et invalidité refusées pour raisons médicales.",
+          "detail_id": "masterlife_credit.invalidit_sp_cifique_aeras_gis",
+          "source_page": 16,
+          "has_formula": true,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Garantie Aide à la famille",
+          "type": "garantie",
+          "resume": "IJ = 50 % des IJ incapacité, si garantie incapacité souscrite, enfant à charge < 20 ans gravement malade/handicapé/accidenté, AJPP perçue, cessation ponctuelle d'activité, et prêt immobilier ou profes",
+          "detail_id": "masterlife_credit.garantie_aide_la_famille",
+          "source_page": 14,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Exonération du paiement des cotisations",
+          "type": "garantie",
+          "resume": "Incapacité : remboursement de 1/365e de la cotisation annuelle par journée d'incapacité, après déduction d'une FRANCHISE DE 90 JOURS, remboursement en fin de période.",
+          "detail_id": "masterlife_credit.exon_ration_du_paiement_des_cotisations",
+          "source_page": 16,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Option Psy/Dos+",
+          "type": "option",
+          "resume": "Prise en charge des affections psychologiques/asthénie/fibromyalgie SANS condition d'hospitalisation (franchise 90 jours ou franchise du contrat si supérieure ;",
+          "detail_id": "masterlife_credit.option_psy_dos",
+          "source_page": 13,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Tarif constant",
+          "type": "option",
+          "resume": "Cotisation annuelle fixe jusqu'au terme ;",
+          "detail_id": "masterlife_credit.tarif_constant",
+          "source_page": 11,
+          "has_formula": true,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Tarif capital restant dû",
+          "type": "option",
+          "resume": "Cotisation fluctuant selon le capital restant dû et l'âge ;",
+          "detail_id": "masterlife_credit.tarif_capital_restant_d",
+          "source_page": 11,
+          "has_formula": true,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Décès — suicide",
+          "type": "exclusion",
+          "resume": "Suicide exclu la 1re année d'adhésion (et 1 an sur le supplément en cas d'augmentation).",
+          "detail_id": "masterlife_credit.d_c_s_suicide",
+          "source_page": 20,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Décès — guerre/émeutes/crimes",
+          "type": "exclusion",
+          "resume": "Guerres civiles/étrangères, insurrection, opérations de maintien de l'ordre/paix (ONU…) ;",
+          "detail_id": "masterlife_credit.d_c_s_guerre_meutes_crimes",
+          "source_page": 20,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Sports et activités exclus (sauf acceptation)",
+          "type": "exclusion",
+          "resume": "Sports à moteur hors voie ouverte au public ;",
+          "detail_id": "masterlife_credit.sports_et_activit_s_exclus_sauf_acceptation",
+          "source_page": 20,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "PTIA/incapacité/invalidité — exclusions",
+          "type": "exclusion",
+          "resume": "Faits volontaires, tentative de suicide, mutilations volontaires ;",
+          "detail_id": "masterlife_credit.ptia_incapacit_invalidit_exclusions",
+          "source_page": 20,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "États antérieurs",
+          "type": "exclusion",
+          "resume": "Accidents antérieurs à la prise d'effet, maladies à premières manifestations antérieures, malformations congénitales connues : exclus des garanties incapacité/invalidité/GIS.",
+          "detail_id": "masterlife_credit.tats_ant_rieurs",
+          "source_page": 21,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)",
+          "type": "exclusion",
+          "resume": "Exclusion de principe de l'incapacité/invalidité consécutive aux troubles psychologiques (liste large incl.",
+          "detail_id": "masterlife_credit.affections_psychologiques_asth_nie_fibromyalgie_",
+          "source_page": 21,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Cures et esthétique",
+          "type": "exclusion",
+          "resume": "Cures thermales/marines/rajeunissement/amaigrissement/désintoxication et maisons de repos : exclues de l'incapacité (et leurs conséquences).",
+          "detail_id": "masterlife_credit.cures_et_esth_tique",
+          "source_page": 22,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "valeurs_de_rachat",
+          "type": "fiscalite",
+          "resume": "L'adhésion ne comporte ni valeur de rachat, ni valeur de réduction.",
+          "detail_id": "masterlife_credit.valeurs_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "mise_en_reduction",
+          "type": "fiscalite",
+          "resume": "mise_en_reduction",
+          "detail_id": "masterlife_credit.mise_en_reduction",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "determination_part_taxable",
+          "type": "fiscalite",
+          "resume": "determination_part_taxable",
+          "detail_id": "masterlife_credit.determination_part_taxable",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "conditions_de_rachat",
+          "type": "fiscalite",
+          "resume": "conditions_de_rachat",
+          "detail_id": "masterlife_credit.conditions_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "fiscalité",
+          "type": "fiscalite",
+          "resume": "fiscalité",
+          "detail_id": "masterlife_credit.fiscalit",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        }
+      ]
+    },
+    {
+      "slug": "ma_protection_accident",
+      "id": "axa_ma_protection_accident_2024-03",
+      "nom": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "famille": "prévoyance",
+      "resume_exploitable": "Contrat de garantie des accidents de la vie (GAV) indemnisant, selon le droit commun et un barème contractuel AQV, les préjudices consécutifs à un accident de la vie privée (activités courantes, événements exceptionnels, accidents médicaux, certains cas de conduite) entraînant le décès ou un déficit fonctionnel permanent d'au moins 1 %. Services d'assistance inclus même sous le seuil d'intervention. Option « Mes Sports à risque ». Le contrat est constitué des Conditions générales et des Conditions particulières (qui prévalent en cas de contradiction) ; formules, plafonds et cotisations figurent aux Conditions particulières.",
+      "json_contrat": "data/AXA/contrats/ma_protection_accident.json",
+      "pdf": "data/AXA/Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "objets_principaux": [
+        {
+          "titre": "Accidents corporels d'activités courantes",
+          "type": "garantie",
+          "resume": "Accidents survenus lors d'activités domestiques, scolaires et de loisirs pendant la période d'effet ;",
+          "detail_id": "ma_protection_accident.accidents_corporels_d_activit_s_courantes",
+          "source_page": 4,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Accidents corporels lors d'événements exceptionnels",
+          "type": "garantie",
+          "resume": "Catastrophes naturelles, industrielles ou technologiques ;",
+          "detail_id": "ma_protection_accident.accidents_corporels_lors_d_v_nements_exceptionne",
+          "source_page": 4,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Accidents médicaux et infections nosocomiales",
+          "type": "garantie",
+          "resume": "Accidents médicaux dont le fait générateur est postérieur à la prise d'effet, première manifestation dommageable pendant la garantie, avec conséquences anormales au regard de l'état initial du patient",
+          "detail_id": "ma_protection_accident.accidents_m_dicaux_et_infections_nosocomiales",
+          "source_page": 4,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Accidents lors de la conduite d'un véhicule (dérogations)",
+          "type": "garantie",
+          "resume": "Par dérogation à l'exclusion circulation : véhicule 4 roues loué < 3 mois ;",
+          "detail_id": "ma_protection_accident.accidents_lors_de_la_conduite_d_un_v_hicule_d_ro",
+          "source_page": 5,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Indemnisation des préjudices corporels (barème AQV)",
+          "type": "garantie",
+          "resume": "Indemnisation contractuelle des postes DFP (0-100), Préjudice Esthétique Permanent (0-7) et Souffrances Endurées (0-7) selon l'indice AQV (= somme des trois, arrondi à l'entier supérieur) et l'âge à l",
+          "detail_id": "ma_protection_accident.indemnisation_des_pr_judices_corporels_bar_me_aq",
+          "source_page": 7,
+          "has_formula": false,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "Préjudices indemnisés selon droit commun",
+          "type": "garantie",
+          "resume": "Assistance tierce personne (ATP) ;",
+          "detail_id": "ma_protection_accident.pr_judices_indemnis_s_selon_droit_commun",
+          "source_page": 9,
+          "has_formula": false,
+          "has_table": true,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "En cas de décès",
+          "type": "garantie",
+          "resume": "Remboursement des frais d'obsèques (frais réels, limite 5 000 €) à la personne justifiant les avoir réglés ;",
+          "detail_id": "ma_protection_accident.en_cas_de_d_c_s",
+          "source_page": 9,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Mes Sports à risque",
+          "type": "option",
+          "resume": "Couvre les accidents résultant uniquement des sports listés : sports aériens (parachutisme, parapente, deltaplane, parachute ascensionnel, saut à élastique, ULM, autogyre, vol à voile, skydiving, plan",
+          "detail_id": "ma_protection_accident.mes_sports_risque",
+          "source_page": 5,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Affections même consécutives à un accident garanti",
+          "type": "exclusion",
+          "resume": "Affections cardio-vasculaires et vasculaires cérébrales ;",
+          "detail_id": "ma_protection_accident.affections_m_me_cons_cutives_un_accident_garanti",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Maladies cause ou révélées par l'accident",
+          "type": "exclusion",
+          "resume": "Maladies connues ou inconnues de l'assuré qui sont la cause de l'accident ;",
+          "detail_id": "ma_protection_accident.maladies_cause_ou_r_v_l_es_par_l_accident",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Expérimentations biomédicales",
+          "type": "exclusion",
+          "resume": "Accidents et traitements médicaux résultant d'expérimentations biomédicales.",
+          "detail_id": "ma_protection_accident.exp_rimentations_biom_dicales",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Sports professionnels, rémunérés, à risques, extrêmes",
+          "type": "exclusion",
+          "resume": "Sports exercés à titre professionnel ;",
+          "detail_id": "ma_protection_accident.sports_professionnels_r_mun_r_s_risques_extr_mes",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Accidents de la circulation (VTM soumis à obligation d'assurance)",
+          "type": "exclusion",
+          "resume": "Accidents de la circulation en France métropolitaine, DROM/COM, Monaco, Andorre, UE et États Carte Verte non rayés, impliquant un véhicule terrestre à moteur soumis à obligation d'assurance, ses remor",
+          "detail_id": "ma_protection_accident.accidents_de_la_circulation_vtm_soumis_obligatio",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Non-respect de réglementation (véhicules motorisés)",
+          "type": "exclusion",
+          "resume": "Accidents causés par l'assuré ne respectant pas la réglementation impérative en cas d'utilisation de véhicules motorisés aériens, nautiques, aquatiques, fluviaux, maritimes et lacustres.",
+          "detail_id": "ma_protection_accident.non_respect_de_r_glementation_v_hicules_motoris_",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Alcool, médicaments, stupéfiants",
+          "type": "exclusion",
+          "resume": "Faits accidentels et/ou dommages consécutifs à une consommation d'alcool ≥ 0,5 g/l de sang ;",
+          "detail_id": "ma_protection_accident.alcool_m_dicaments_stup_fiants",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Accidents du travail et activités électives/syndicales",
+          "type": "exclusion",
+          "resume": "Accidents du travail, incluant les accidents de trajet ;",
+          "detail_id": "ma_protection_accident.accidents_du_travail_et_activit_s_lectives_syndi",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Faits intentionnels, suicide",
+          "type": "exclusion",
+          "resume": "Dommages corporels que l'assuré s'est causés intentionnellement ;",
+          "detail_id": "ma_protection_accident.faits_intentionnels_suicide",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Guerre, nucléaire",
+          "type": "exclusion",
+          "resume": "Dommages corporels ou aggravations survenant dans le cadre d'une guerre civile ou étrangère ;",
+          "detail_id": "ma_protection_accident.guerre_nucl_aire",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Délit intentionnel ou crime",
+          "type": "exclusion",
+          "resume": "Accidents résultant de poursuite pénale de l'assuré liée à un délit intentionnel (art.",
+          "detail_id": "ma_protection_accident.d_lit_intentionnel_ou_crime",
+          "source_page": 6,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "valeurs_de_rachat",
+          "type": "fiscalite",
+          "resume": "valeurs_de_rachat",
+          "detail_id": "ma_protection_accident.valeurs_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "mise_en_reduction",
+          "type": "fiscalite",
+          "resume": "mise_en_reduction",
+          "detail_id": "ma_protection_accident.mise_en_reduction",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "determination_part_taxable",
+          "type": "fiscalite",
+          "resume": "determination_part_taxable",
+          "detail_id": "ma_protection_accident.determination_part_taxable",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "conditions_de_rachat",
+          "type": "fiscalite",
+          "resume": "conditions_de_rachat",
+          "detail_id": "ma_protection_accident.conditions_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "fiscalité",
+          "type": "fiscalite",
+          "resume": "fiscalité",
+          "detail_id": "ma_protection_accident.fiscalit",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "note",
+          "type": "fiscalite",
+          "resume": "note",
+          "detail_id": "ma_protection_accident.note",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        }
+      ]
+    },
+    {
+      "slug": "ma_retraite",
+      "id": "axa_ma_retraite_2026-05",
+      "nom": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "famille": "retraite",
+      "resume_exploitable": "PER individuel multisupport (fonds Croissance eurocroissance + unités de compte, PAS de fonds en euros classique) : constitution d'un supplément de retraite versé en capital (compartiments 1-2, en une fois ou fractionné) et/ou en rente viagère (compartiment 3 : rente uniquement), avec options de rente (réversion 60/100 %, annuités garanties, réversion temporaire ≥ 10 ans, rente majorée/minorée). Garantie « Protection Retraite » : coefficients de conversion en rente garantis au jour de chaque versement (table TGF05, taux technique nul). Garantie décès plancher « Sérénité » incluse (jusqu'à 80 ans). Déductibilité fiscale des versements volontaires (option), 6 cas de déblocage anticipé + résidence principale. Transfert individuel possible (frais 1 % max avant 5 ans).",
+      "json_contrat": "data/AXA/contrats/ma_retraite.json",
+      "pdf": "data/AXA/Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "objets_principaux": [
+        {
+          "titre": "En cas de vie — sortie en capital",
+          "type": "garantie",
+          "resume": "À l'échéance (et sous réserve de liquidation effective de la retraite ou d'atteinte de l'âge légal) : délivrance de tout ou partie des droits des compartiments 1 et 2 en capital, en une fois ou fracti",
+          "detail_id": "ma_retraite.en_cas_de_vie_sortie_en_capital",
+          "source_page": 10,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "En cas de vie — sortie en rente viagère",
+          "type": "garantie",
+          "resume": "Rente trimestrielle à terme échu (effet le 1er jour du mois suivant l'échéance demandée), calculée selon âge, option de rente, âge du réversataire et taux de réversion, frais de service de 1 % par arr",
+          "detail_id": "ma_retraite.en_cas_de_vie_sortie_en_rente_viag_re",
+          "source_page": 10,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "En cas de décès avant liquidation totale",
+          "type": "garantie",
+          "resume": "Prestation aux bénéficiaires en capital ou en rente : capital = épargne (tous supports) ou montant de la garantie « Sérénité ».",
+          "detail_id": "ma_retraite.en_cas_de_d_c_s_avant_liquidation_totale",
+          "source_page": 12,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Garantie « Sérénité » (plancher décès, incluse)",
+          "type": "garantie",
+          "resume": "Si décès avant 80 ans : capital décès (ou capital constitutif de rente) ≥ cumul des versements bruts de frais − rachats (rachats exceptionnels, sorties partielles en capital ou en rente à hauteur du c",
+          "detail_id": "ma_retraite.garantie_s_r_nit_plancher_d_c_s_incluse",
+          "source_page": 13,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Garanties de fidélité",
+          "type": "garantie",
+          "resume": "Le contrat ne comporte pas de garantie de fidélité (hors offres commerciales ponctuelles).",
+          "detail_id": "ma_retraite.garanties_de_fid_lit",
+          "source_page": 26,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Types de gestion",
+          "type": "option",
+          "resume": "Gestion personnelle (choix libre des supports), gestions de la gamme Activ'Retraite Croissance (gestion à horizon de départ en retraite avec fonds Croissance, profils dont « Prudente » ;",
+          "detail_id": "ma_retraite.types_de_gestion",
+          "source_page": 16,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Indexation des versements réguliers",
+          "type": "option",
+          "resume": "Indexation annuelle (avant le 1er avril) sur la variation du plafond de la Sécurité sociale au 1er janvier ;",
+          "detail_id": "ma_retraite.indexation_des_versements_r_guliers",
+          "source_page": 14,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Versements pris en charge par la société",
+          "type": "option",
+          "resume": "Versements possibles par la société de l'adhérent (dirigeant ou salarié) : avantage en espèces imposable en traitements et salaires pour l'adhérent, droit à déduction comme s'il avait versé lui-même ;",
+          "detail_id": "ma_retraite.versements_pris_en_charge_par_la_soci_t",
+          "source_page": 14,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Transfert individuel sortant",
+          "type": "option",
+          "resume": "Vers tout autre PER (loi 2019-486) : demande en LRAR avec certificat + RIB du gestionnaire d'accueil ;",
+          "detail_id": "ma_retraite.transfert_individuel_sortant",
+          "source_page": 28,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "Indisponibilité de l'épargne",
+          "type": "exclusion",
+          "resume": "Aucun rachat avant l'échéance hors les cas de l'art.",
+          "detail_id": "ma_retraite.indisponibilit_de_l_pargne",
+          "source_page": 27,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "valeurs_de_rachat",
+          "type": "fiscalite",
+          "resume": "Pas de rachat libre avant l'échéance (épargne indisponible) ;",
+          "detail_id": "ma_retraite.valeurs_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "mise_en_reduction",
+          "type": "fiscalite",
+          "resume": "Le contrat ne comporte pas de valeurs de réduction.",
+          "detail_id": "ma_retraite.mise_en_reduction",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "determination_part_taxable",
+          "type": "fiscalite",
+          "resume": "Versements (compartiment 1, hors transferts) : déductibles dans les limites des art.",
+          "detail_id": "ma_retraite.determination_part_taxable",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": false
+        },
+        {
+          "titre": "conditions_de_rachat",
+          "type": "fiscalite",
+          "resume": "conditions_de_rachat",
+          "detail_id": "ma_retraite.conditions_de_rachat",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        },
+        {
+          "titre": "fiscalité",
+          "type": "fiscalite",
+          "resume": "fiscalité",
+          "detail_id": "ma_retraite.fiscalit",
+          "source_page": null,
+          "has_formula": false,
+          "has_table": false,
+          "requires_pdf_check": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3013 @@
+{
+  "meta": {
+    "type": "contrat_axa_dedie",
+    "slug": "avizen_pro",
+    "schema_version": "2.0_enrichi",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "source": "data/AXA/base_connaissances_contractuelle/Contrat_avizen_pro/",
+    "avertissement": "Enrichi depuis l'extraction tracée. La notice PDF fait foi. requires_pdf_check=true => vérifier le tableau/barème en notice.",
+    "genere_le": "2026-06-19",
+    "qa_version": "2.1",
+    "qa_date": "2026-06-19"
+  },
+  "contrat": {
+    "id": "axa_avizen_pro_2025-04",
+    "nom": "Avizen Pro",
+    "famille": "prévoyance",
+    "type_contrat": "notice_information_contrat_groupe_adhesion_facultative",
+    "assureur": "AXA France Vie ou AXA Assurances Vie Mutuelle (précisé au certificat) ; souscripteur du contrat de groupe : ANPERE ; assistance assurée et mise en œuvre par Inter Partner Assistance",
+    "version": "Réf. 964714 04 2025 - N° IDU : FR232655_01GSTX",
+    "date": "2025-04",
+    "resume_neutre": "Déclinaison professionnelle d'Avizen, orientée travailleurs non salariés et professions libérales : garanties décès/IPT (capital, rente, rente éducation, double effet), ITT (IJ toutes causes ou par accident, IJ complémentaires aux régimes obligatoires 90/365 jours), remboursement des frais professionnels, invalidité permanente partielle ou totale évaluée selon un taux CROISÉ (fonctionnel × professionnel) ou, en option pour 28 professions éligibles, selon le seul taux professionnel (règle n/66), exonérations de cotisations, aide à la famille, et un volet d'assistance professionnelle étendu (prévention burn-out, agression, second avis médical…). Cadre fiscal Madelin possible. Montants, franchises et options au certificat d'adhésion."
+  },
+  "pdfs": [
+    {
+      "type_document": "notice",
+      "path": "data/AXA/Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "pages": 56
+    }
+  ],
+  "garanties": [
+    {
+      "id": "avizen_pro.capital_d_c_s_toutes_causes_capital_ipt_toutes_c",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Capital décès toutes causes / Capital IPT toutes causes + double effet",
+      "resume_conseiller": "Identique au mécanisme Avizen : capital au décès avant fin de l'année d'assurance des 85 ans ;",
+      "texte_metier_exploitable": "Identique au mécanisme Avizen : capital au décès avant fin de l'année d'assurance des 85 ans ; versement anticipé en IPT (fin : liquidation retraite ou 67 ans) ; double effet conjoint/partenaire/concubin décédant simultanément ou sous 12 mois avec enfant fiscalement à charge (capital supplémentaire égal, partagé par parts égales).",
+      "conditions_application": [
+        "décès avant fin de l'année d'assurance des 85 ans"
+      ],
+      "seuils": [
+        "67 ans",
+        "85 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [
+        "montants au certificat"
+      ],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 11,
+        "section": "2.1.1",
+        "extrait_reference": "l'assureur verse le montant du capital garanti à la date du décès",
+        "pages": [
+          11
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.capital_d_c_s_toutes_causes_capital_ipt_toutes_c",
+      "detail_path": "contrats.avizen_pro.details.capital_d_c_s_toutes_causes_capital_ipt_toutes_c",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 11,
+      "source_section": "2.1.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        11
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "capital",
+          "décès",
+          "toutes",
+          "causes",
+          "double",
+          "effet",
+          "identique",
+          "mécanisme",
+          "avizen",
+          "avant",
+          "année",
+          "assurance"
+        ],
+        "synonymes": [
+          "impôt",
+          "990 I",
+          "757 B",
+          "succession",
+          "transmission",
+          "abattement",
+          "Madelin",
+          "déduction"
+        ],
+        "formulations_client_possibles": [
+          "Quelle fiscalité au décès ?",
+          "Est-ce déductible ?",
+          "Comment ça se transmet ?"
+        ],
+        "intentions": [
+          "vérifier fiscalité",
+          "vérifier transmission"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Identique au mécanisme Avizen : capital au décès avant fin de l'année d'assurance des 85 ans ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.capital_d_c_s_par_accident_ipt_par_accident",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Capital décès par accident / IPT par accident",
+      "resume_conseiller": "Décès directement lié à un accident, < 12 mois après ;",
+      "texte_metier_exploitable": "Décès directement lié à un accident, < 12 mois après ; IPT par accident < 24 mois après l'accident ; versement anticipé à la consolidation.",
+      "conditions_application": [
+        "décès < 12 mois / IPT < 24 mois après l'accident"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 11,
+        "section": "2.1.2",
+        "extrait_reference": "résultant directement d'un accident et survenant moins de 12 mois après",
+        "pages": [
+          11
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.capital_d_c_s_par_accident_ipt_par_accident",
+      "detail_path": "contrats.avizen_pro.details.capital_d_c_s_par_accident_ipt_par_accident",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 11,
+      "source_section": "2.1.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        11
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "accident",
+          "décès",
+          "mois",
+          "après",
+          "capital",
+          "directement",
+          "versement",
+          "anticipé",
+          "consolidation"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Décès directement lié à un accident, < 12 mois après ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.rente_ducation_d_c_s_ipt_double_effet",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Rente éducation décès / IPT + double effet",
+      "resume_conseiller": "Comme Avizen : enfants fiscalement à charge (et nés < 300 jours après le décès), jusqu'à 26 ans ;",
+      "texte_metier_exploitable": "Comme Avizen : enfants fiscalement à charge (et nés < 300 jours après le décès), jusqu'à 26 ans ; viagère si allocation handicapé attribuée avant 21 ans et garantie souscrite avant les 16 ans de l'enfant ; paliers 100 % (0-11 ans), 125 % (12-17), 150 % (18-26) ; rente doublée en double effet.",
+      "conditions_application": [
+        "enfant fiscalement à charge au décès"
+      ],
+      "seuils": [
+        "100 %",
+        "11 ans",
+        "125 %",
+        "150 %",
+        "16 ans",
+        "21 ans",
+        "26 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [
+        "paliers 100/125/150 %"
+      ],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 12,
+        "section": "2.1.4",
+        "extrait_reference": "1er palier : 100 % du montant souscrit",
+        "pages": [
+          12
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.rente_ducation_d_c_s_ipt_double_effet",
+      "detail_path": "contrats.avizen_pro.details.rente_ducation_d_c_s_ipt_double_effet",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 12,
+      "source_section": "2.1.4",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        12
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "rente",
+          "décès",
+          "double",
+          "effet",
+          "avant",
+          "éducation",
+          "comme",
+          "avizen",
+          "enfants",
+          "fiscalement",
+          "charge",
+          "jours"
+        ],
+        "synonymes": [
+          "impôt",
+          "990 I",
+          "757 B",
+          "succession",
+          "transmission",
+          "abattement",
+          "Madelin",
+          "déduction"
+        ],
+        "formulations_client_possibles": [
+          "Quelle fiscalité au décès ?",
+          "Est-ce déductible ?",
+          "Comment ça se transmet ?"
+        ],
+        "intentions": [
+          "vérifier fiscalité",
+          "vérifier transmission"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Comme Avizen : enfants fiscalement à charge (et nés < 300 jours après le décès), jusqu'à 26 ans ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.rente_d_c_s_rente_ipt",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Rente décès / Rente IPT",
+      "resume_conseiller": "Rente viagère au bénéficiaire (décès avant fin année d'assurance des 85 ans) réduite de 50 % à ses 65 ans ;",
+      "texte_metier_exploitable": "Rente viagère au bénéficiaire (décès avant fin année d'assurance des 85 ans) réduite de 50 % à ses 65 ans ; en IPT versée à l'assuré à la consolidation.",
+      "conditions_application": [],
+      "seuils": [
+        "50 %",
+        "65 ans",
+        "85 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [
+        "-50 % à 65 ans du bénéficiaire"
+      ],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 12,
+        "section": "2.1.5",
+        "extrait_reference": "à compter de ses 65 ans, le montant de la rente est réduit de 50 %",
+        "pages": [
+          12
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.rente_d_c_s_rente_ipt",
+      "detail_path": "contrats.avizen_pro.details.rente_d_c_s_rente_ipt",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 12,
+      "source_section": "2.1.5",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        12
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "rente",
+          "décès",
+          "viagère",
+          "bénéficiaire",
+          "avant",
+          "année",
+          "assurance",
+          "réduite",
+          "versée",
+          "assuré",
+          "consolidation"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Rente viagère au bénéficiaire (décès avant fin année d'assurance des 85 ans) réduite de 50 % à ses 65 ans ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.ij_itt_toutes_causes_optionnelle",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "IJ ITT toutes causes (optionnelle)",
+      "resume_conseiller": "IJ au montant garanti au 1er jour d'arrêt, par quinzaine à terme échu après franchise (fonction des circonstances : hospitalisation, accident, maladie).",
+      "texte_metier_exploitable": "IJ au montant garanti au 1er jour d'arrêt, par quinzaine à terme échu après franchise (fonction des circonstances : hospitalisation, accident, maladie). Cesse : reprise totale, consolidation invalidité, 365e ou 1095e jour (franchise incluse, selon certificat), 67 ans, liquidation retraite. Reprise partielle = -50 %. Rechute ≤ 90 jours mêmes causes : pas de nouvelle franchise (sauf colonne vertébrale). Reconstruction mammaire après cancer du sein déjà indemnisé : pas de nouvelles franchises.",
+      "conditions_application": [
+        "couplage obligatoire avec une garantie décès à l'adhésion",
+        "activité professionnelle à la survenance"
+      ],
+      "seuils": [
+        "50 %",
+        "67 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [
+        "365 ou 1095 jours"
+      ],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 14,
+        "section": "2.2 / 2.2.1",
+        "extrait_reference": "Ces garanties sont accordées uniquement en cas de couplage avec une garantie décès à l'adhésion",
+        "pages": [
+          14
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.ij_itt_toutes_causes_optionnelle",
+      "detail_path": "contrats.avizen_pro.details.ij_itt_toutes_causes_optionnelle",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 14,
+      "source_section": "2.2 / 2.2.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        14
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "franchise",
+          "causes",
+          "jour",
+          "après",
+          "reprise",
+          "toutes",
+          "optionnelle",
+          "montant",
+          "garanti",
+          "arrêt",
+          "quinzaine",
+          "terme"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "IJ au montant garanti au 1er jour d'arrêt, par quinzaine à terme échu après franchise (fonction des circonstances : hospitalisation, accident, maladie).",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.ij_itt_par_accident_optionnelle",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "IJ ITT par accident (optionnelle)",
+      "resume_conseiller": "Comme IJ toutes causes, limitées à l'accident ;",
+      "texte_metier_exploitable": "Comme IJ toutes causes, limitées à l'accident ; plafond 1 095 jours. Non cumulable avec IJ toutes causes.",
+      "conditions_application": [
+        "activité professionnelle à la survenance"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [
+        "1 095 jours"
+      ],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 15,
+        "section": "2.2.2",
+        "extrait_reference": "au 1 095e jour d'arrêt de travail",
+        "pages": [
+          15
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.ij_itt_par_accident_optionnelle",
+      "detail_path": "contrats.avizen_pro.details.ij_itt_par_accident_optionnelle",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 15,
+      "source_section": "2.2.2",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        15
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "accident",
+          "toutes",
+          "causes",
+          "optionnelle",
+          "comme",
+          "limitées",
+          "plafond",
+          "jours",
+          "cumulable"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Comme IJ toutes causes, limitées à l'accident ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.ij_toutes_causes_compl_mentaires_aux_r_gimes_obl",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)",
+      "resume_conseiller": "IJ courtes complémentaires aux IJ des régimes obligatoires : cessent au 90e OU 365e jour d'arrêt (franchise incluse) selon la garantie souscrite au certificat.",
+      "texte_metier_exploitable": "IJ courtes complémentaires aux IJ des régimes obligatoires : cessent au 90e OU 365e jour d'arrêt (franchise incluse) selon la garantie souscrite au certificat. Mêmes règles de rechute, reconstruction mammaire sans nouvelle franchise. Non cumulable avec IJ ITT par accident.",
+      "conditions_application": [
+        "activité professionnelle à la survenance"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [
+        "90 ou 365 jours selon certificat"
+      ],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 15,
+        "section": "2.2.3",
+        "extrait_reference": "au 90e ou 365e jour d'arrêt de travail (ce délai incluant la période de franchise) selon la garantie souscrite",
+        "pages": [
+          15
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.ij_toutes_causes_compl_mentaires_aux_r_gimes_obl",
+      "detail_path": "contrats.avizen_pro.details.ij_toutes_causes_compl_mentaires_aux_r_gimes_obl",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 15,
+      "source_section": "2.2.3",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        15
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "complémentaires",
+          "régimes",
+          "obligatoires",
+          "franchise",
+          "toutes",
+          "causes",
+          "optionnelle",
+          "courtes",
+          "cessent",
+          "jour",
+          "arrêt",
+          "incluse"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "IJ courtes complémentaires aux IJ des régimes obligatoires : cessent au 90e OU 365e jour d'arrêt (franchise incluse) selon la garantie souscrite au certificat.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.indemnit_s_remboursement_des_frais_professionnel",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Indemnités Remboursement des frais professionnels (optionnelle)",
+      "resume_conseiller": "En ITT (maladie ou accident), indemnités versées à l'adhérent : soit équivalent journalier des frais professionnels échus et payés déclarés au fisc, soit équivalent journalier des frais de remplacemen",
+      "texte_metier_exploitable": "En ITT (maladie ou accident), indemnités versées à l'adhérent : soit équivalent journalier des frais professionnels échus et payés déclarés au fisc, soit équivalent journalier des frais de remplacement de l'assuré — plafonné au plafond journalier garanti au 1er jour d'arrêt. Si cessation définitive d'activité : reliquat des frais engagés avant cessation pris en charge. Frais couverts (fixes et permanents, nets des ressources de remplacement) : salaires nets et avantages en nature des collaborateurs ; charges sociales sur salaires des collaborateurs ; taxes sur la valeur ajoutée et professionnelle ; autres impôts ; contribution sociale généralisée déductible ; loyer et charges locatives ; location de matériel et de mobilier ; entretiens et réparations ; frais de chauffage, eau, gaz, électricité ; honoraires ne constituant pas de rétrocessions ; primes d'assurance ; charges sociales personnelles ; fournitures de bureau, documentation et affranchissement ; frais d'actes et de contentieux ; cotisations syndicales et professionnelles ; mensualités de prêt professionnel (si non remboursées par une autre assurance) ; frais de leasing. Si remplaçant : seul son coût réel (hors rétrocessions",
+      "conditions_application": [
+        "activité professionnelle à la survenance",
+        "mêmes modalités de service que 2.2.1"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [
+        "plafond journalier garanti au certificat"
+      ],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 16,
+        "section": "2.2.4",
+        "extrait_reference": "soit à l'équivalent journalier des frais professionnels échus et payés, déclarés à l'administration fiscale",
+        "pages": [
+          16
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.indemnit_s_remboursement_des_frais_professionnel",
+      "detail_path": "contrats.avizen_pro.details.indemnit_s_remboursement_des_frais_professionnel",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 16,
+      "source_section": "2.2.4",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        16
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "frais",
+          "journalier",
+          "charges",
+          "indemnités",
+          "professionnels",
+          "soit",
+          "équivalent",
+          "remplacement",
+          "cessation",
+          "nets",
+          "salaires",
+          "collaborateurs"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "En ITT (maladie ou accident), indemnités versées à l'adhérent : soit équivalent journalier des frais professionnels échus et payés déclarés au fisc, soit équivalent journalier des frais de remplacemen",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.rente_invalidit_permanente_partielle_ou_totale_o",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Rente invalidité permanente partielle ou totale (optionnelle)",
+      "resume_conseiller": "Rente = montant garanti à la consolidation × taux d'indemnisation (n).",
+      "texte_metier_exploitable": "Rente = montant garanti à la consolidation × taux d'indemnisation (n). Invalidité appréciée selon le choix à l'adhésion : taux croisé (fonctionnel × professionnel, tableaux contractuels) ou option taux d'invalidité professionnelle (professions éligibles, règle n/66). Versée par trimestre civil tant que taux ≥ 11 % (accident) / 33 % (maladie) ou 15 % maladie si option. Taux révisable pendant la garantie. Changement de profession non signalé = suspension automatique de la garantie. Justificatif d'existence annuel possible, sinon suspension (arrérages versés rétroactivement à réception).",
+      "conditions_application": [
+        "consolidation pendant la garantie",
+        "activité professionnelle au fait générateur",
+        "taux ≥ 11 % accident / 33 % maladie (ou 15 % maladie en option)"
+      ],
+      "seuils": [
+        "11 %",
+        "15 %",
+        "33 %",
+        "n/66"
+      ],
+      "formules": [
+        "Rente invalidité permanente partielle ou totale (optionnelle)"
+      ],
+      "tableaux": [
+        "voir notice (tableau/barème) — page 17"
+      ],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [
+        "indemnisation 100 % si taux ≥ 66 %"
+      ],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 17,
+        "section": "2.2.5",
+        "extrait_reference": "soit par rapport au taux d'invalidité croisé… soit par rapport au taux d'invalidité professionnelle",
+        "pages": [
+          17
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "avizen_pro.rente_invalidit_permanente_partielle_ou_totale_o",
+      "detail_path": "contrats.avizen_pro.details.rente_invalidit_permanente_partielle_ou_totale_o",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 17,
+      "source_section": "2.2.5",
+      "has_full_clause_text": true,
+      "has_formula": true,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        17
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "taux",
+          "invalidité",
+          "rente",
+          "option",
+          "maladie",
+          "garantie",
+          "suspension",
+          "permanente",
+          "partielle",
+          "totale",
+          "optionnelle",
+          "montant"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Rente = montant garanti à la consolidation × taux d'indemnisation (n).",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.17 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    },
+    {
+      "id": "avizen_pro.capital_invalidit_permanente_partielle_ou_totale",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Capital invalidité permanente partielle ou totale (optionnelle)",
+      "resume_conseiller": "Capital = montant du certificat × taux d'indemnisation (croisé ou professionnel selon le choix).",
+      "texte_metier_exploitable": "Capital = montant du certificat × taux d'indemnisation (croisé ou professionnel selon le choix). Taux fixé définitivement à la consolidation, sans révision ; versement met fin à la garantie. Distincte de l'extension IPT de la garantie décès.",
+      "conditions_application": [
+        "taux ≥ 11 % accident / 33 % maladie (15 % en option)"
+      ],
+      "seuils": [],
+      "formules": [
+        "Capital invalidité permanente partielle ou totale (optionnelle)"
+      ],
+      "tableaux": [],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 21,
+        "section": "2.2.6",
+        "extrait_reference": "Le taux d'indemnisation est définitivement fixé à la date de consolidation",
+        "pages": [
+          21
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.capital_invalidit_permanente_partielle_ou_totale",
+      "detail_path": "contrats.avizen_pro.details.capital_invalidit_permanente_partielle_ou_totale",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 21,
+      "source_section": "2.2.6",
+      "has_full_clause_text": true,
+      "has_formula": true,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        21
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "capital",
+          "taux",
+          "garantie",
+          "invalidité",
+          "permanente",
+          "partielle",
+          "totale",
+          "optionnelle",
+          "montant",
+          "certificat",
+          "indemnisation",
+          "croisé"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Capital = montant du certificat × taux d'indemnisation (croisé ou professionnel selon le choix).",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.rente_invalidit_par_accident_optionnelle",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Rente invalidité par accident (optionnelle)",
+      "resume_conseiller": "Évaluée sur le seul taux d'invalidité fonctionnelle (tableau spécifique), seuil 11 %.",
+      "texte_metier_exploitable": "Évaluée sur le seul taux d'invalidité fonctionnelle (tableau spécifique), seuil 11 %. Médecin conseil de l'assureur indépendant des décisions Sécurité sociale.",
+      "conditions_application": [
+        "taux fonctionnel ≥ 11 %"
+      ],
+      "seuils": [
+        "11 %"
+      ],
+      "formules": [],
+      "tableaux": [
+        "voir notice (tableau/barème) — page 23"
+      ],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 23,
+        "section": "2.2.7",
+        "extrait_reference": "par rapport à son taux d'invalidité fonctionnelle",
+        "pages": [
+          23
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "avizen_pro.rente_invalidit_par_accident_optionnelle",
+      "detail_path": "contrats.avizen_pro.details.rente_invalidit_par_accident_optionnelle",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 23,
+      "source_section": "2.2.7",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        23
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "invalidité",
+          "rente",
+          "accident",
+          "optionnelle",
+          "évaluée",
+          "seul",
+          "taux",
+          "fonctionnelle",
+          "tableau",
+          "spécifique",
+          "seuil",
+          "médecin"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Évaluée sur le seul taux d'invalidité fonctionnelle (tableau spécifique), seuil 11 %.",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.23 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    },
+    {
+      "id": "avizen_pro.capital_invalidit_par_accident_optionnelle",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Capital invalidité par accident (optionnelle)",
+      "resume_conseiller": "Capital × taux d'indemnisation fonctionnel ;",
+      "texte_metier_exploitable": "Capital × taux d'indemnisation fonctionnel ; taux définitif à la consolidation ; versement met fin à la garantie.",
+      "conditions_application": [
+        "taux fonctionnel ≥ 11 %"
+      ],
+      "seuils": [],
+      "formules": [
+        "Capital invalidité par accident (optionnelle)"
+      ],
+      "tableaux": [],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 24,
+        "section": "2.2.8",
+        "extrait_reference": "multiplié par le taux d'indemnisation (n) résultant du taux d'invalidité fonctionnelle",
+        "pages": [
+          24
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.capital_invalidit_par_accident_optionnelle",
+      "detail_path": "contrats.avizen_pro.details.capital_invalidit_par_accident_optionnelle",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 24,
+      "source_section": "2.2.8",
+      "has_full_clause_text": false,
+      "has_formula": true,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        24
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "capital",
+          "taux",
+          "invalidité",
+          "accident",
+          "optionnelle",
+          "indemnisation",
+          "fonctionnel",
+          "définitif",
+          "consolidation",
+          "versement",
+          "garantie"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Capital × taux d'indemnisation fonctionnel ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.garantie_aide_la_famille",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Garantie aide à la famille",
+      "resume_conseiller": "Comme Avizen (IJ pendant AJPP, enfant < 20 ans, 14 mois/enfant/pathologie renouvelable une fois) — les IJ complémentaires aux régimes obligatoires comptent parmi les garanties IJ éligibles au couplage",
+      "texte_metier_exploitable": "Comme Avizen (IJ pendant AJPP, enfant < 20 ans, 14 mois/enfant/pathologie renouvelable une fois) — les IJ complémentaires aux régimes obligatoires comptent parmi les garanties IJ éligibles au couplage.",
+      "conditions_application": [
+        "garantie IJ (ITT TC, accident ou complémentaires) ET rente éducation",
+        "AJPP perçue"
+      ],
+      "seuils": [
+        "20 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "avizen_pro.exclusions_communes_activit_s_sports_risque",
+        "avizen_pro.d_c_s_ipt_toutes_causes",
+        "avizen_pro.d_c_s_ipt_par_accident",
+        "avizen_pro.itt_invalidit"
+      ],
+      "points_vigilance": [
+        "14 mois par enfant et pathologie, renouvelable une fois"
+      ],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 25,
+        "section": "2.3",
+        "extrait_reference": "ou Indemnités Journalières toutes causes complémentaires aux régimes obligatoires",
+        "pages": [
+          25
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.garantie_aide_la_famille",
+      "detail_path": "contrats.avizen_pro.details.garantie_aide_la_famille",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 25,
+      "source_section": "2.3",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "garantie",
+      "source_pages": [
+        25
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "garantie",
+          "aide",
+          "famille",
+          "comme",
+          "avizen",
+          "pendant",
+          "ajpp",
+          "enfant",
+          "mois/enfant/pathologie",
+          "renouvelable",
+          "fois",
+          "complémentaires"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Comme Avizen (IJ pendant AJPP, enfant < 20 ans, 14 mois/enfant/pathologie renouvelable une fois) — les IJ complémentaires aux régimes obligatoires comptent parmi les garanties IJ éligibles au couplage",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "options_mecanismes": [
+    {
+      "id": "avizen_pro.capital_d_c_s_double_garantie",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Capital décès double garantie",
+      "resume_conseiller": "Capital supplémentaire (égal au capital IPT versé) si décès ≥ 1 an après consolidation IPT, avant fin de l'année d'assurance des 85 ans.",
+      "texte_metier_exploitable": "Capital supplémentaire (égal au capital IPT versé) si décès ≥ 1 an après consolidation IPT, avant fin de l'année d'assurance des 85 ans.",
+      "conditions_application": [
+        "avec Capital décès/IPT toutes causes uniquement"
+      ],
+      "seuils": [
+        "85 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 11,
+        "section": "2.1.3",
+        "extrait_reference": "décède au moins 1 an après la consolidation",
+        "pages": [
+          11
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.capital_d_c_s_double_garantie",
+      "detail_path": "contrats.avizen_pro.details.capital_d_c_s_double_garantie",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 11,
+      "source_section": "2.1.3",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "option",
+      "source_pages": [
+        11
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "capital",
+          "décès",
+          "double",
+          "garantie",
+          "supplémentaire",
+          "égal",
+          "versé",
+          "après",
+          "consolidation",
+          "avant",
+          "année",
+          "assurance"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Capital supplémentaire (égal au capital IPT versé) si décès ≥ 1 an après consolidation IPT, avant fin de l'année d'assurance des 85 ans.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.option_taux_d_invalidit_15_maladie",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Option taux d'invalidité 15 % maladie",
+      "resume_conseiller": "Abaisse le seuil d'intervention invalidité maladie de 33 % à 15 % (rente et capital).",
+      "texte_metier_exploitable": "Abaisse le seuil d'intervention invalidité maladie de 33 % à 15 % (rente et capital). Acquise seulement si mentionnée au certificat.",
+      "conditions_application": [
+        "mention au certificat d'adhésion"
+      ],
+      "seuils": [
+        "15 %",
+        "33 %"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 17,
+        "section": "2.2.5 b)",
+        "extrait_reference": "dès lors que le taux d'invalidité est supérieur ou égal à 11 % en cas d'accident ou 15 % en cas de maladie",
+        "pages": [
+          17
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.option_taux_d_invalidit_15_maladie",
+      "detail_path": "contrats.avizen_pro.details.option_taux_d_invalidit_15_maladie",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 17,
+      "source_section": "2.2.5 b)",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "option",
+      "source_pages": [
+        17
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "invalidité",
+          "maladie",
+          "option",
+          "taux",
+          "abaisse",
+          "seuil",
+          "intervention",
+          "rente",
+          "capital",
+          "acquise",
+          "seulement",
+          "mentionnée"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Abaisse le seuil d'intervention invalidité maladie de 33 % à 15 % (rente et capital).",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.option_taux_invalidit_professionnelle_bar_me_sp_",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Option taux invalidité professionnelle (barème spécifique)",
+      "resume_conseiller": "Pour 28 professions éligibles (liste contractuelle p.21), fixation du taux d'invalidité (n) uniquement selon l'invalidité professionnelle, avec barème spécifique remis à l'adhésion (n retenu jamais in",
+      "texte_metier_exploitable": "Pour 28 professions éligibles (liste contractuelle p.21), fixation du taux d'invalidité (n) uniquement selon l'invalidité professionnelle, avec barème spécifique remis à l'adhésion (n retenu jamais inférieur au barème de la profession). Indemnisation : n/66 si n < 66 %, 100 % si n ≥ 66 %. Exemple contractuel : n = 50 % → 75,76 % de la rente.",
+      "conditions_application": [
+        "profession éligible",
+        "mention au certificat"
+      ],
+      "seuils": [
+        "100 %",
+        "50 %",
+        "66 %",
+        "76 %",
+        "n/66"
+      ],
+      "formules": [
+        "Option taux invalidité professionnelle (barème spécifique)"
+      ],
+      "tableaux": [
+        "voir notice (tableau/barème) — page 20"
+      ],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 20,
+        "section": "2.2.5 c)2",
+        "extrait_reference": "le taux d'indemnisation est égal à n/66",
+        "pages": [
+          20
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "avizen_pro.option_taux_invalidit_professionnelle_bar_me_sp_",
+      "detail_path": "contrats.avizen_pro.details.option_taux_invalidit_professionnelle_bar_me_sp_",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 20,
+      "source_section": "2.2.5 c)2",
+      "has_full_clause_text": true,
+      "has_formula": true,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "option",
+      "source_pages": [
+        20
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "invalidité",
+          "barème",
+          "taux",
+          "professionnelle",
+          "spécifique",
+          "option",
+          "professions",
+          "éligibles",
+          "liste",
+          "contractuelle",
+          "fixation",
+          "uniquement"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Pour 28 professions éligibles (liste contractuelle p.21), fixation du taux d'invalidité (n) uniquement selon l'invalidité professionnelle, avec barème spécifique remis à l'adhésion (n retenu jamais in",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.20 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    },
+    {
+      "id": "avizen_pro.exon_ration_cotisations_itt",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Exonération cotisations ITT",
+      "resume_conseiller": "1/365e de la cotisation annuelle remboursé par jour d'arrêt total indemnisé ;",
+      "texte_metier_exploitable": "1/365e de la cotisation annuelle remboursé par jour d'arrêt total indemnisé ; garanties maintenues, pas d'augmentation possible.",
+      "conditions_application": [
+        "avec une garantie ITT"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 24,
+        "section": "2.2.9",
+        "extrait_reference": "à raison de 1/365e de la cotisation annuelle",
+        "pages": [
+          24
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.exon_ration_cotisations_itt",
+      "detail_path": "contrats.avizen_pro.details.exon_ration_cotisations_itt",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 24,
+      "source_section": "2.2.9",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "option",
+      "source_pages": [
+        24
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "exonération",
+          "cotisations",
+          "cotisation",
+          "annuelle",
+          "remboursé",
+          "jour",
+          "arrêt",
+          "total",
+          "indemnisé",
+          "garanties",
+          "maintenues",
+          "augmentation"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "1/365e de la cotisation annuelle remboursé par jour d'arrêt total indemnisé ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.exon_ration_cotisations_invalidit",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Exonération cotisations invalidité",
+      "resume_conseiller": "Dispense de cotisations si invalidité ≥ 66 % (appréciée selon le taux croisé, professionnel ou fonctionnel suivant la garantie rente détenue) tant qu'elle perdure.",
+      "texte_metier_exploitable": "Dispense de cotisations si invalidité ≥ 66 % (appréciée selon le taux croisé, professionnel ou fonctionnel suivant la garantie rente détenue) tant qu'elle perdure.",
+      "conditions_application": [
+        "avec une garantie rente invalidité"
+      ],
+      "seuils": [
+        "66 %"
+      ],
+      "formules": [
+        "Exonération cotisations invalidité"
+      ],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 24,
+        "section": "2.2.10",
+        "extrait_reference": "En cas d'invalidité permanente de l'assuré supérieure ou égale à 66 %",
+        "pages": [
+          24
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.exon_ration_cotisations_invalidit",
+      "detail_path": "contrats.avizen_pro.details.exon_ration_cotisations_invalidit",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 24,
+      "source_section": "2.2.10",
+      "has_full_clause_text": true,
+      "has_formula": true,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "option",
+      "source_pages": [
+        24
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "cotisations",
+          "invalidité",
+          "exonération",
+          "dispense",
+          "appréciée",
+          "taux",
+          "croisé",
+          "professionnel",
+          "fonctionnel",
+          "suivant",
+          "garantie",
+          "rente"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Dispense de cotisations si invalidité ≥ 66 % (appréciée selon le taux croisé, professionnel ou fonctionnel suivant la garantie rente détenue) tant qu'elle perdure.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.indexation_pass",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Indexation PASS",
+      "resume_conseiller": "Comme Avizen : réévaluation annuelle garanties+cotisations selon le PASS, sans examen médical, jusqu'à 70 ans ;",
+      "texte_metier_exploitable": "Comme Avizen : réévaluation annuelle garanties+cotisations selon le PASS, sans examen médical, jusqu'à 70 ans ; refus définitif possible 1 mois avant la date anniversaire.",
+      "conditions_application": [
+        "avoir opté pour l'indexation"
+      ],
+      "seuils": [
+        "70 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 8,
+        "section": "1.2.3 a)",
+        "extrait_reference": "réévaluation des garanties en fonction de l'évolution du plafond annuel de la Sécurité sociale",
+        "pages": [
+          8
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.indexation_pass",
+      "detail_path": "contrats.avizen_pro.details.indexation_pass",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 8,
+      "source_section": "1.2.3 a)",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "option",
+      "source_pages": [
+        8
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "pass",
+          "indexation",
+          "comme",
+          "avizen",
+          "réévaluation",
+          "annuelle",
+          "garanties",
+          "cotisations",
+          "examen",
+          "médical",
+          "jusqu",
+          "refus"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Comme Avizen : réévaluation annuelle garanties+cotisations selon le PASS, sans examen médical, jusqu'à 70 ans ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.augmentation_sans_s_lection_m_dicale_mariage_pac",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)",
+      "resume_conseiller": "+20 % max du capital décès/IPT sans sélection médicale, dans les 3 mois de l'événement.",
+      "texte_metier_exploitable": "+20 % max du capital décès/IPT sans sélection médicale, dans les 3 mois de l'événement.",
+      "conditions_application": [
+        "3 mois suivant l'événement"
+      ],
+      "seuils": [
+        "20 %"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 9,
+        "section": "1.2.3 b)",
+        "extrait_reference": "sans sélection médicale dans une limite de 20 % de son montant",
+        "pages": [
+          9
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.augmentation_sans_s_lection_m_dicale_mariage_pac",
+      "detail_path": "contrats.avizen_pro.details.augmentation_sans_s_lection_m_dicale_mariage_pac",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 9,
+      "source_section": "1.2.3 b)",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "option",
+      "source_pages": [
+        9
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "sélection",
+          "médicale",
+          "augmentation",
+          "mariage/pacs/naissance/adoption",
+          "capital",
+          "décès/ipt",
+          "mois",
+          "événement"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "+20 % max du capital décès/IPT sans sélection médicale, dans les 3 mois de l'événement.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.cadre_fiscal_madelin",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Cadre fiscal Madelin",
+      "resume_conseiller": "Adhésion possible dans le cadre fiscal Madelin (TNS) : prestations alors imposables ;",
+      "texte_metier_exploitable": "Adhésion possible dans le cadre fiscal Madelin (TNS) : prestations alors imposables ; obligation de justifier chaque année (et à l'adhésion) être à jour des cotisations maladie et vieillesse obligatoires (attestations des caisses).",
+      "conditions_application": [
+        "statut TNS",
+        "attestations annuelles des caisses obligatoires"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 4,
+        "section": "1.1.4",
+        "extrait_reference": "Dans le cas d'une adhésion dans le cadre fiscal « Madelin », l'adhérent TNS… doit justifier… être à jour du paiement des cotisations",
+        "pages": [
+          4
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.cadre_fiscal_madelin",
+      "detail_path": "contrats.avizen_pro.details.cadre_fiscal_madelin",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 4,
+      "source_section": "1.1.4",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "option",
+      "source_pages": [
+        4
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "cadre",
+          "fiscal",
+          "madelin",
+          "adhésion",
+          "possible",
+          "prestations",
+          "alors",
+          "imposables",
+          "obligation",
+          "justifier",
+          "chaque",
+          "année"
+        ],
+        "synonymes": [
+          "impôt",
+          "990 I",
+          "757 B",
+          "succession",
+          "transmission",
+          "abattement",
+          "Madelin",
+          "déduction"
+        ],
+        "formulations_client_possibles": [
+          "Quelle fiscalité au décès ?",
+          "Est-ce déductible ?",
+          "Comment ça se transmet ?"
+        ],
+        "intentions": [
+          "vérifier fiscalité",
+          "vérifier transmission"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Adhésion possible dans le cadre fiscal Madelin (TNS) : prestations alors imposables ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "avizen_pro.exclusions_communes_activit_s_sports_risque",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Exclusions communes — activités/sports à risque",
+      "resume_conseiller": "Liste identique à Avizen (sports extrêmes, aériens, mécaniques, montagne > 3 500 m, équestres, nautiques, tauromachie… ;",
+      "texte_metier_exploitable": "Liste identique à Avizen (sports extrêmes, aériens, mécaniques, montagne > 3 500 m, équestres, nautiques, tauromachie… ; métiers à risque : armée-aviation, police, journalistes, pétrole/gaz, pompiers, plongée pro, mer ; déplacements pays sensibles ou > 60 jours), sauf acceptation au certificat. Baptêmes encadrés par professionnel diplômé d'État couverts sauf sports extrêmes.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 41,
+        "section": "4.1.1",
+        "extrait_reference": "activités et sports et loisirs à risque suivants (y compris pratique occasionnelle)",
+        "pages": [
+          41
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.exclusions_communes_activit_s_sports_risque",
+      "detail_path": "contrats.avizen_pro.details.exclusions_communes_activit_s_sports_risque",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 41,
+      "source_section": "4.1.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "exclusion",
+      "source_pages": [
+        41
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "risque",
+          "sports",
+          "extrêmes",
+          "sauf",
+          "exclusions",
+          "communes",
+          "activités/sports",
+          "liste",
+          "identique",
+          "avizen",
+          "aériens",
+          "mécaniques"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre exclusion et condition de garantie"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Liste identique à Avizen (sports extrêmes, aériens, mécaniques, montagne > 3 500 m, équestres, nautiques, tauromachie… ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.d_c_s_ipt_toutes_causes",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Décès/IPT toutes causes",
+      "resume_conseiller": "Suicide/tentative la 1re année (et 1 an sur le supplément en cas d'augmentation) ;",
+      "texte_metier_exploitable": "Suicide/tentative la 1re année (et 1 an sur le supplément en cas d'augmentation) ; guerre, insurrection, opérations de maintien de l'ordre/paix ; meurtre de l'assuré par le bénéficiaire.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 42,
+        "section": "4.1.2",
+        "extrait_reference": "le suicide et la tentative de suicide si le décès… au cours de la 1re année d'assurance",
+        "pages": [
+          42
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.d_c_s_ipt_toutes_causes",
+      "detail_path": "contrats.avizen_pro.details.d_c_s_ipt_toutes_causes",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 42,
+      "source_section": "4.1.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "exclusion",
+      "source_pages": [
+        42
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "décès/ipt",
+          "toutes",
+          "causes",
+          "suicide/tentative",
+          "année",
+          "supplément",
+          "augmentation",
+          "guerre",
+          "insurrection",
+          "opérations",
+          "maintien",
+          "ordre/paix"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Suicide/tentative la 1re année (et 1 an sur le supplément en cas d'augmentation) ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.d_c_s_ipt_par_accident",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Décès/IPT par accident",
+      "resume_conseiller": "Guerres/insurrection/maintien de l'ordre ;",
+      "texte_metier_exploitable": "Guerres/insurrection/maintien de l'ordre ; participation active à émeutes, terrorisme, sabotage, crimes/délits intentionnels, rixes (sauf légitime défense/devoir professionnel) ; nucléaire (mention spécifique « sinistres résultant directement ou indirectement de la désintégration du noyau de l'atome ») ; accident antérieur à l'adhésion non déclaré ; drogues/médicaments hors prescription ; ALCOOLISME CHRONIQUE (présent ici contrairement à Avizen) ; alcoolémie ≥ taux légal du pays ; chirurgie plastique non consécutive à accident garanti, malformations congénitales ; refus volontaire de traitements ; attentats NRBC, agents biologiques ; meurtre par le bénéficiaire.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 42,
+        "section": "4.1.3",
+        "extrait_reference": "les conséquences de l'alcoolisme chronique de l'assuré",
+        "pages": [
+          42
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.d_c_s_ipt_par_accident",
+      "detail_path": "contrats.avizen_pro.details.d_c_s_ipt_par_accident",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 42,
+      "source_section": "4.1.3",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "exclusion",
+      "source_pages": [
+        42
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "accident",
+          "décès/ipt",
+          "guerres/insurrection/maintien",
+          "ordre",
+          "participation",
+          "active",
+          "émeutes",
+          "terrorisme",
+          "sabotage",
+          "crimes/délits",
+          "intentionnels",
+          "rixes"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Guerres/insurrection/maintien de l'ordre ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.itt_invalidit",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "ITT/Invalidité",
+      "resume_conseiller": "Identiques à Avizen (faits volontaires, guerres/émeutes, antériorités non déclarées, drogues, alcoolisme chronique, alcoolémie, cures et maisons de repos pour l'ITT, chirurgie plastique, nucléaire, re",
+      "texte_metier_exploitable": "Identiques à Avizen (faits volontaires, guerres/émeutes, antériorités non déclarées, drogues, alcoolisme chronique, alcoolémie, cures et maisons de repos pour l'ITT, chirurgie plastique, nucléaire, refus de traitements) + exclusion explicite de « toute affection ou maladie dont la première constatation médicale survient pendant le délai d'attente ainsi que ses conséquences ».",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 43,
+        "section": "4.1.4",
+        "extrait_reference": "toute affection ou maladie, dont la date de première constatation médicale survient pendant le délai d'attente",
+        "pages": [
+          43
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.itt_invalidit",
+      "detail_path": "contrats.avizen_pro.details.itt_invalidit",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 43,
+      "source_section": "4.1.4",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "exclusion",
+      "source_pages": [
+        43
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "itt/invalidité",
+          "identiques",
+          "avizen",
+          "faits",
+          "volontaires",
+          "guerres/émeutes",
+          "antériorités",
+          "déclarées",
+          "drogues",
+          "alcoolisme",
+          "chronique",
+          "alcoolémie"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "confondre exclusion et condition de garantie",
+          "confondre délai d'attente et franchise"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Identiques à Avizen (faits volontaires, guerres/émeutes, antériorités non déclarées, drogues, alcoolisme chronique, alcoolémie, cures et maisons de repos pour l'ITT, chirurgie plastique, nucléaire, re",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "conditions_souscription": [
+    {
+      "id": "avizen_pro.conditions_souscription_1",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_1",
+      "resume_conseiller": "Membres ANPERE ;",
+      "texte_metier_exploitable": "Membres ANPERE ; résidence France métropolitaine ou DROM ; acceptation médicale ; couplage obligatoire des garanties ITT/invalidité avec une garantie décès.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 14,
+        "section": "2.2",
+        "extrait_reference": "Ces garanties sont accordées uniquement en cas de couplage avec une garantie décès à l'adhésion",
+        "pages": [
+          14
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.conditions_souscription_1",
+      "detail_path": "contrats.avizen_pro.details.conditions_souscription_1",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 14,
+      "source_section": "2.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "condition",
+      "source_pages": [
+        14
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "souscription",
+          "membres",
+          "anpere",
+          "résidence",
+          "france",
+          "métropolitaine",
+          "drom",
+          "acceptation",
+          "médicale",
+          "couplage",
+          "obligatoire"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Membres ANPERE ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.conditions_souscription_2",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_2",
+      "resume_conseiller": "Cadre Madelin : justification annuelle d'être à jour des cotisations maladie/vieillesse obligatoires.",
+      "texte_metier_exploitable": "Cadre Madelin : justification annuelle d'être à jour des cotisations maladie/vieillesse obligatoires.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 4,
+        "section": "1.1.4",
+        "extrait_reference": "être à jour du paiement des cotisations dues au titre des régimes obligatoires",
+        "pages": [
+          4
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.conditions_souscription_2",
+      "detail_path": "contrats.avizen_pro.details.conditions_souscription_2",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 4,
+      "source_section": "1.1.4",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "condition",
+      "source_pages": [
+        4
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "souscription",
+          "cadre",
+          "madelin",
+          "justification",
+          "annuelle",
+          "être",
+          "jour",
+          "cotisations",
+          "maladie/vieillesse",
+          "obligatoires"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Cadre Madelin : justification annuelle d'être à jour des cotisations maladie/vieillesse obligatoires.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.conditions_souscription_3",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_3",
+      "resume_conseiller": "Modification des garanties jusqu'aux 75 ans de l'assuré (préavis 2 mois avant date anniversaire).",
+      "texte_metier_exploitable": "Modification des garanties jusqu'aux 75 ans de l'assuré (préavis 2 mois avant date anniversaire).",
+      "conditions_application": [],
+      "seuils": [
+        "75 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 7,
+        "section": "1.1.8",
+        "extrait_reference": "Jusqu'au 75e anniversaire de l'assuré",
+        "pages": [
+          7
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.conditions_souscription_3",
+      "detail_path": "contrats.avizen_pro.details.conditions_souscription_3",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 7,
+      "source_section": "1.1.8",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "condition",
+      "source_pages": [
+        7
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "souscription",
+          "modification",
+          "garanties",
+          "jusqu",
+          "assuré",
+          "préavis",
+          "mois",
+          "avant",
+          "date",
+          "anniversaire"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Modification des garanties jusqu'aux 75 ans de l'assuré (préavis 2 mois avant date anniversaire).",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "fiscalite": [
+    {
+      "id": "avizen_pro.valeurs_de_rachat",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "valeurs_de_rachat",
+      "resume_conseiller": "valeurs_de_rachat",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.valeurs_de_rachat",
+      "detail_path": "contrats.avizen_pro.details.valeurs_de_rachat",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "valeurs",
+          "rachat"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "valeurs_de_rachat",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.mise_en_reduction",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "mise_en_reduction",
+      "resume_conseiller": "mise_en_reduction",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.mise_en_reduction",
+      "detail_path": "contrats.avizen_pro.details.mise_en_reduction",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "mise",
+          "reduction"
+        ],
+        "synonymes": [
+          "mise en réduction",
+          "arrêt de cotisation",
+          "capital réduit"
+        ],
+        "formulations_client_possibles": [
+          "Si j'arrête de payer, que se passe-t-il ?",
+          "C'est quoi la mise en réduction ?"
+        ],
+        "intentions": [
+          "vérifier mise en réduction"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "mise_en_reduction",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.determination_part_taxable",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "determination_part_taxable",
+      "resume_conseiller": "determination_part_taxable",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.determination_part_taxable",
+      "detail_path": "contrats.avizen_pro.details.determination_part_taxable",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "moyenne",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "determination",
+          "part",
+          "taxable"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "moyenne"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "determination_part_taxable",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.conditions_de_rachat",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "conditions_de_rachat",
+      "resume_conseiller": "conditions_de_rachat",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.conditions_de_rachat",
+      "detail_path": "contrats.avizen_pro.details.conditions_de_rachat",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "rachat"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "conditions_de_rachat",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.r_gle_rachat_reduction",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "régle_rachat_reduction",
+      "resume_conseiller": "régle_rachat_reduction",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 45,
+        "section": "4.4",
+        "extrait_reference": "ni valeur de rachat, ni valeur de réduction",
+        "pages": [
+          45
+        ],
+        "qualite_extraction": "partielle"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.r_gle_rachat_reduction",
+      "detail_path": "contrats.avizen_pro.details.r_gle_rachat_reduction",
+      "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "source_page": 45,
+      "source_section": "4.4",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "fiscalite",
+      "source_pages": [
+        45
+      ],
+      "requires_pdf_check_reason": "clause_incomplete",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "régle",
+          "rachat",
+          "reduction"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "régle_rachat_reduction",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.45 (clause_incomplete)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "avizen_pro.fiscalit",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "fiscalité",
+      "resume_conseiller": "Capital décès : droits de mutation 757 B CGI et/ou taxation 990 I CGI ;",
+      "texte_metier_exploitable": "Capital décès : droits de mutation 757 B CGI et/ou taxation 990 I CGI ; exonération totale conjoint/PACS et, sous conditions 796-0 ter, frère/sœur. Régime au 01/01/2025. Prestations en cas de vie non imposables SI aucun avantage fiscal à l'adhésion ; imposables sinon (dispositif Madelin notamment).",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "Capital décès : droits de mutation 757 B CGI et/ou taxation 990 I CGI ; exonération totale conjoint/PACS et, sous conditions 796-0 ter, frèr",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "avizen_pro.fiscalit",
+      "detail_path": "contrats.avizen_pro.details.fiscalit",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "avizen_pro",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "imposables",
+          "fiscalité",
+          "capital",
+          "décès",
+          "droits",
+          "mutation",
+          "et/ou",
+          "taxation",
+          "exonération",
+          "totale",
+          "conjoint/pacs",
+          "sous"
+        ],
+        "synonymes": [
+          "impôt",
+          "990 I",
+          "757 B",
+          "succession",
+          "transmission",
+          "abattement",
+          "Madelin",
+          "déduction"
+        ],
+        "formulations_client_possibles": [
+          "Quelle fiscalité au décès ?",
+          "Est-ce déductible ?",
+          "Comment ça se transmet ?"
+        ],
+        "intentions": [
+          "vérifier fiscalité",
+          "vérifier transmission"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Capital décès : droits de mutation 757 B CGI et/ou taxation 990 I CGI ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "points_vigilance": [
+    "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+    "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — vérifier le choix au certificat.",
+    "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
+    "Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.",
+    "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
+    "Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.",
+    "Aucun montant garanti dans la notice — tout est au certificat d'adhésion."
+  ],
+  "stats": {
+    "garanties": 13,
+    "options": 8,
+    "exclusions": 4,
+    "fiscalite": 6,
+    "conditions": 3,
+    "objets_requires_pdf_check": 8,
+    "placeholders": 9
+  }
+}

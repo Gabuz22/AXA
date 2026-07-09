@@ -1,0 +1,2807 @@
+{
+ "meta": {
+  "schema": "1.1",
+  "type": "fiches_conseiller_derivees",
+  "genere_depuis": "AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+  "genere_le": "2026-07-08",
+  "regenerable": true,
+  "note": "Dérivé de Pack A contrats_axa (non autoritaire). La notice PDF fait foi. Masters non modifiés. glossaire = agrégation transversale des définitions, sourcée."
+ },
+ "contrats": [
+  {
+   "id": "avizen",
+   "nom": "Avizen",
+   "aliases": [
+    "Avizen",
+    "avizen"
+   ],
+   "domaines": [
+    "prévoyance"
+   ],
+   "definitions": [
+    {
+     "terme": "Accident",
+     "definition": "Atteinte corporelle non intentionnelle provenant directement de l'action soudaine et imprévisible d'une cause extérieure. NE SONT PAS des accidents : atteintes musculaires/tendineuses/ligamentaires et affections du rachis liées à une altération de santé préexistante ; ruptures du tendon d'Achille et fractures de fatigue ; pathologies cardiaques et affections vasculaires ; chocs émotifs et états dépressifs même consécutifs à un accident. La prise en charge en accident du travail par le régime obligatoire ne prévaut pas sur cette définition.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 34,
+      "section": "6. Définitions - Accident"
+     }
+    },
+    {
+     "terme": "Invalidité Permanente Totale (IPT)",
+     "definition": "Taux d'invalidité fonctionnelle égal à 100 % (barème accidents du travail de la Sécurité sociale) ET reconnaissance définitive d'incapacité à se livrer à la moindre activité professionnelle procurant gain ou profit. Le classement en 2e catégorie Sécurité sociale ne suffit pas à lui seul.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 36,
+      "section": "6. Définitions - IPT"
+     }
+    },
+    {
+     "terme": "Incapacité temporaire totale de travail (ITT)",
+     "definition": "État de santé médicalement constaté obligeant à arrêter totalement et temporairement l'activité professionnelle (maladie ou accident). La période de droit aux IJ maternité du régime obligatoire n'est pas de l'ITT, même en cas de renonciation à ce droit.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 35,
+      "section": "6. Définitions - ITT toutes causes"
+     }
+    },
+    {
+     "terme": "Invalidité fonctionnelle",
+     "definition": "Établie d'après le barème des accidents du travail de la Sécurité sociale, sans tenir compte de l'incidence professionnelle.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 35,
+      "section": "6. Définitions"
+     }
+    },
+    {
+     "terme": "Franchise",
+     "definition": "Période entre la survenance de l'événement ouvrant droit à indemnisation et le début de l'indemnisation. Plusieurs niveaux disponibles ; choix précisé au certificat d'adhésion. Ne concerne que les IJ d'ITT et l'exonération en cas d'ITT.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 35,
+      "section": "6. Définitions - Franchise"
+     }
+    },
+    {
+     "terme": "Délai d'attente",
+     "definition": "Période pendant laquelle les garanties ne s'appliquent pas, malgré la prise d'effet de l'adhésion ou de l'avenant d'augmentation.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 35,
+      "section": "6. Définitions"
+     }
+    },
+    {
+     "terme": "Non-fumeur",
+     "definition": "Personne n'ayant pas fumé (cigarettes, e-cigarettes, cigares, pipes) au cours des 24 derniers mois et non dépendante d'un traitement de sevrage tabagique sur cette période. Abattement tarifaire sur capital décès/IPT toutes causes, rente éducation et rente décès/IPT.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 36,
+      "section": "6. Définitions - Non-fumeur"
+     }
+    },
+    {
+     "terme": "Consolidation",
+     "definition": "Stabilisation d'un état de santé après accident ou maladie, laissant subsister des séquelles et n'étant plus susceptible d'aggravation ou d'évolution notable.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 34,
+      "section": "6. Définitions"
+     }
+    },
+    {
+     "terme": "Pays sensibles",
+     "definition": "Pays comportant des zones « formellement déconseillées ou déconseillées sauf raison impérative » par le ministère français des Affaires étrangères.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 36,
+      "section": "6. Définitions"
+     }
+    },
+    {
+     "terme": "Pratique occasionnelle",
+     "definition": "Pratique non régulière, exercée ne serait-ce qu'une fois dans l'année (hors baptêmes).",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 36,
+      "section": "6. Définitions"
+     }
+    }
+   ],
+   "conditions_souscription": [
+    {
+     "texte": "Adhésion réservée aux membres de l'association ANPERE ; adhérent et assuré résidents en France métropolitaine ou DROM.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 4,
+      "section": "1.1.2 / 1.1.3"
+     }
+    },
+    {
+     "texte": "Prise d'effet sous réserve : paiement effectif de la 1re cotisation, signature du certificat/bulletin par toutes les parties, acceptation des risques par l'assureur (avec ou sans surprime/exclusion).",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 7,
+      "section": "1.1.7"
+     }
+    },
+    {
+     "texte": "Modification des garanties possible jusqu'au 75e anniversaire de l'assuré, demande au moins 2 mois avant la date anniversaire, sous réserve d'acceptation et nouvelle tarification possible.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 7,
+      "section": "1.1.8"
+     }
+    },
+    {
+     "texte": "Déplacements : questionnaire « Résidences et Voyages » préalable obligatoire pour déplacements professionnels en pays sensibles, ou personnels en pays sensibles ou > 60 jours/an hors UE, Royaume-Uni, Australie, Canada, Japon, Suisse, États-Unis.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 6,
+      "section": "1.1.6 L'étendue territoriale"
+     }
+    }
+   ],
+   "faits": [
+    {
+     "categorie": "garantie",
+     "titre": "Capital décès toutes causes / Capital IPT toutes causes (garantie principale)",
+     "description": "Décès avant la fin de l'année d'assurance des 85 ans : versement du capital garanti aux bénéficiaires (met fin au contrat). IPT : versement anticipé du capital décès à la consolidation (met fin au contrat) ; garantie IPT cesse à la liquidation de la retraite obligatoire ou à la fin de l'année d'assurance des 67 ans. Garantie double effet incluse : si le conjoint/partenaire/concubin décède simultanément ou dans les 12 mois suivant le décès de l'assuré et qu'il existe au moins un enfant fiscalement à charge, capital supplémentaire égal au capital déjà versé, partagé entre enfants à charge par parts égales.",
+     "declencheurs": [
+      "décès avant fin de l'année d'assurance des 85 ans",
+      "IPT : consolidation pendant que la garantie est en cours"
+     ],
+     "plafonds": [
+      "montants au certificat d'adhésion"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 11,
+      "section": "2.1.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Capital décès par accident / Capital IPT par accident (garantie principale)",
+     "description": "Décès résultant directement d'un accident et survenant moins de 12 mois après celui-ci (avant fin de l'année d'assurance des 85 ans) : capital aux bénéficiaires. IPT par accident moins de 24 mois après l'accident : versement anticipé du capital à la consolidation. Fin de la garantie IPT : liquidation retraite ou fin de l'année d'assurance des 67 ans.",
+     "declencheurs": [
+      "lien direct accident-décès",
+      "décès < 12 mois après l'accident",
+      "IPT < 24 mois après l'accident"
+     ],
+     "plafonds": [
+      "montants au certificat d'adhésion"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 11,
+      "section": "2.1.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+     "description": "Versée aux enfants bénéficiaires fiscalement à charge (y compris nés moins de 300 jours après le décès) jusqu'au 26e anniversaire ; viagère au-delà si l'enfant perçoit une allocation handicapés (loi 30/06/1975) attribuée avant ses 21 ans et garantie souscrite avant ses 16 ans. Montant par paliers : 100 % du montant souscrit de 0-11 ans, 125 % de 12-17 ans, 150 % de 18-26 ans. Double effet : rente doublée en cas de décès simultané ou postérieur du conjoint/partenaire/concubin avec enfant à charge. En IPT : versée à l'assuré dans les mêmes conditions.",
+     "declencheurs": [
+      "décès avant fin de l'année d'assurance des 85 ans",
+      "enfant fiscalement à charge à la date du décès"
+     ],
+     "plafonds": [
+      "paliers 100/125/150 % du montant souscrit"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 12,
+      "section": "2.1.4"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Rente décès / Rente IPT (garantie principale)",
+     "description": "Décès avant fin de l'année d'assurance des 85 ans : rente viagère au bénéficiaire désigné ; à compter des 65 ans du bénéficiaire, montant réduit de 50 %. IPT : rente versée à l'assuré à la consolidation ; garantie cesse à la liquidation retraite ou fin d'année d'assurance des 67 ans.",
+     "declencheurs": [],
+     "plafonds": [
+      "réduction de 50 % de la rente à partir des 65 ans du bénéficiaire"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 13,
+      "section": "2.1.5"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Indemnités journalières ITT toutes causes (optionnelle)",
+     "description": "IJ versées par jour d'arrêt de travail médicalement constaté, à terme échu par quinzaine, après franchise du certificat d'adhésion. Cessent à la reprise totale d'activité, à la consolidation d'une invalidité, au 365e ou 1095e jour d'arrêt (franchise incluse, selon durée d'indemnisation au certificat), à la fin de l'année d'assurance des 67 ans ou à la liquidation retraite. Reprise partielle possible = réduction de 50 % des prestations. Rechute ≤ 90 jours (mêmes causes) : reprise sans nouvelle franchise (sauf affections de la colonne vertébrale, toujours refranchisées).",
+     "declencheurs": [
+      "arrêt avant la retraite et avant fin de l'année d'assurance des 67 ans",
+      "exercer une activité professionnelle à la survenance (exclu si chômage, retraite, cessation d'activité)"
+     ],
+     "plafonds": [
+      "365 ou 1095 jours selon certificat"
+     ],
+     "franchises": [
+      "franchise au certificat d'adhésion"
+     ],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 13,
+      "section": "2.2.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Indemnités journalières ITT par accident (optionnelle)",
+     "description": "Mêmes modalités que les IJ toutes causes mais limitées aux arrêts par accident ; cessation au plus tard au 1 095e jour d'arrêt (franchise incluse). Non cumulable avec les IJ toutes causes.",
+     "declencheurs": [
+      "activité professionnelle à la survenance"
+     ],
+     "plafonds": [
+      "1 095 jours"
+     ],
+     "franchises": [
+      "franchise au certificat d'adhésion"
+     ],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 14,
+      "section": "2.2.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+     "description": "Rente si invalidité permanente partielle ou totale (maladie ou accident) appréciée par le taux d'invalidité fonctionnelle. Montant = montant garanti à la consolidation × taux d'indemnisation (n) du tableau contractuel. Versée par trimestre civil à terme échu, tant que le taux ≥ 11 % (accident) ou ≥ 33 % (maladie). Taux révisable à la hausse comme à la baisse pendant la garantie.",
+     "declencheurs": [
+      "consolidation pendant la garantie (avant retraite et fin d'année d'assurance des 67 ans)",
+      "activité professionnelle au fait générateur",
+      "taux d'invalidité fonctionnelle ≥ 11 % (accident) ou ≥ 33 % (maladie)"
+     ],
+     "plafonds": [
+      "taux d'indemnisation max 100 % (taux ≥ 66 %)"
+     ],
+     "franchises": [
+      "délai d'attente 90 jours (maladie) / 365 jours (troubles psychiques)"
+     ],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 15,
+      "section": "2.2.3"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)",
+     "description": "Capital = montant garanti à la consolidation × taux d'indemnisation (n). Taux définitivement fixé à la consolidation, sans révision. Le versement met fin à la garantie quel que soit le taux retenu. Non cumulable avec le capital par accident.",
+     "declencheurs": [
+      "mêmes conditions que la rente toutes causes (taux ≥ 11 % accident / 33 % maladie)"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 16,
+      "section": "2.2.4"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Rente invalidité permanente partielle ou totale par accident (optionnelle)",
+     "description": "Comme la rente toutes causes mais limitée à l'accident, seuil unique taux ≥ 11 %. Non cumulable avec la rente toutes causes.",
+     "declencheurs": [
+      "taux d'invalidité fonctionnelle ≥ 11 %"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 16,
+      "section": "2.2.5"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+     "description": "Comme le capital toutes causes mais limité à l'accident, seuil taux ≥ 11 % ; taux fixé définitivement à la consolidation.",
+     "declencheurs": [
+      "taux ≥ 11 %"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 17,
+      "section": "2.2.6"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Garantie aide à la famille",
+     "description": "IJ en cas de cessation totale ou partielle d'activité pour accompagner un enfant gravement malade, handicapé ou victime d'un accident grave. Versées dès le 1er jour d'attribution de l'AJPP, à terme échu par quinzaine. Limite : 14 mois par enfant à charge et par pathologie, renouvelable une fois. Cesse si fin d'AJPP, reprise totale d'activité, 67 ans, liquidation retraite, ou versement de prestations ITT/invalidité.",
+     "declencheurs": [
+      "avoir souscrit une garantie IJ ITT ET une garantie rente éducation",
+      "enfant à charge < 20 ans nécessitant la présence de l'assuré",
+      "percevoir l'AJPP (art. L544-1 CSS)",
+      "suspension temporaire d'activité"
+     ],
+     "plafonds": [
+      "14 mois par enfant et par pathologie, renouvelable une fois"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 18,
+      "section": "2.3 Garantie aide à la famille"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Exclusions communes - activités et sports à risque",
+     "description": "Sauf acceptation de l'assureur au certificat : essais/tentatives de records, sports de haut niveau, sports professionnels ; sports et loisirs à risque y compris pratique occasionnelle : sports extrêmes (base jump, wingsuit, speed riding, saut à l'élastique, parkour, luge de rue, caisse à savon, mountainboard, highline, zorbing, freeride, sports non fédérés en France), raids/expéditions, activités aériennes (hors passager/PNC de lignes régulières), sports mécaniques, randonnée/trekking > 3 500 m, alpinisme, escalade, varappe, spéléologie, sports d'hiver hors ski alpin/fond/snowboard/monoski/raquettes amateur, arts martiaux (hors judo amateur et escrime) et sports de combat, larges listes équestres, canyoning, rafting, nage en eaux vives, ski nautique, kitesurf, plongeon de haut vol, voile > 25 milles des côtes, plongée en apnée/bouteille > 40 m/solitaire/sans brevet/épaves, tauromachie, concours d'ingestion de nourriture ; activités à risque : métiers de l'armée aviation, dirigeable, montgolfière, cascadeur, gendarme, police nationale, journaliste/caméraman/reporter/photographe, pétrole et gaz, pompier, secouriste, sécurité civile, plongée professionnelle, métiers de la mer, déplacements professionnels en pays sensibles, déplacements personnels en pays sensibles ou > 60 jours.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 25,
+      "section": "4.1.1 Exclusions communes"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Décès/IPT toutes causes - suicide 1re année",
+     "description": "Suicide et tentative de suicide si le décès/IPT survient au cours de la 1re année d'assurance ; en cas d'augmentation de garanties, exclusion du supplément pendant 1 an après la prise d'effet de l'augmentation.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 26,
+      "section": "4.1.2"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Décès/IPT toutes causes - guerre et meurtre du bénéficiaire",
+     "description": "Faits de guerre civile, étrangère, insurrection, opérations de maintien de l'ordre/paix (ONU ou similaire) ; exclusion du bénéfice pour toute personne ayant causé volontairement le décès ou l'IPT de l'assuré.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 26,
+      "section": "4.1.2"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Décès/IPT par accident - exclusions spécifiques",
+     "description": "Guerres, insurrection, maintien de l'ordre/paix ; participation active à émeutes, terrorisme, sabotage, crimes ou délits intentionnels, rixes (sauf légitime défense ou devoir professionnel) ; accident antérieur à la prise d'effet (sauf antériorités déclarées non exclues) ; usage de drogues/stupéfiants/médicaments hors prescription ; alcoolémie ≥ taux légal de circulation du pays de survenance ; chirurgie plastique non consécutive à un accident garanti et malformations congénitales ; refus volontaire de traitements ; désintégration du noyau atomique ; attentats/terrorisme par armes ou matières radioactives, chimiques, bactériologiques ou virales ; action de tout agent biologique ; meurtre de l'assuré par le bénéficiaire.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 26,
+      "section": "4.1.3"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "ITT/Invalidité - exclusions spécifiques",
+     "description": "Tentatives de suicide, mutilations, blessures, lésions ou maladies d'un fait volontaire de l'assuré ; guerres et participation active à émeutes/terrorisme/crimes/rixes (sauf légitime défense/devoir professionnel) ; accident, maladie ou malformation congénitale dont la première constatation médicale est antérieure à la prise d'effet (sauf antériorités déclarées non exclues) ; drogues/stupéfiants hors prescription ; alcoolisme chronique ; alcoolémie ≥ taux légal ; cures thermales, marines, de rajeunissement, d'amaigrissement, de désintoxication et séjours en maison de repos (pour l'ITT) ; chirurgie plastique non consécutive à un accident garanti, malformations congénitales ; nucléaire ; refus volontaire de traitements.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 27,
+      "section": "4.1.4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "avizen_pro",
+   "nom": "Avizen Pro",
+   "aliases": [
+    "Avizen Pro",
+    "avizen_pro"
+   ],
+   "domaines": [
+    "prévoyance"
+   ],
+   "definitions": [
+    {
+     "terme": "Accident",
+     "definition": "Identique à Avizen : atteinte corporelle non intentionnelle d'une cause extérieure soudaine et imprévisible ; exclusions de qualification (rachis, tendons, tendon d'Achille, fractures de fatigue, pathologies cardiaques/vasculaires, chocs émotifs/dépression) ; la qualification AT du régime obligatoire ne prévaut pas.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 50,
+      "section": "6. Définitions"
+     }
+    },
+    {
+     "terme": "Invalidité professionnelle",
+     "definition": "Définie par expertise amiable, appréciée de 0 à 100 % d'après la nature de l'invalidité par rapport à la profession indiquée au certificat ET toujours exercée au moment du sinistre ; tient compte de l'exercice antérieur, des conditions normales d'exercice, des capacités restantes, des possibilités d'adaptation et des répercussions sur les revenus. Charge de la preuve sur l'assuré.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 18,
+      "section": "2.2.5 c)1 - Invalidité professionnelle"
+     }
+    },
+    {
+     "terme": "Taux d'invalidité croisé",
+     "definition": "Combine l'invalidité fonctionnelle (barème AT Sécurité sociale, sans incidence professionnelle) et l'invalidité professionnelle, selon le tableau croisé contractuel.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 19,
+      "section": "2.2.5 c)1"
+     }
+    },
+    {
+     "terme": "IPT",
+     "definition": "Taux d'invalidité fonctionnelle = 100 % + incapacité définitive à toute activité professionnelle rémunératrice ; le classement 2e catégorie Sécurité sociale ne suffit pas (chapitre Définitions).",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 52,
+      "section": "6. Définitions - IPT"
+     }
+    },
+    {
+     "terme": "Hospitalisation (assistance)",
+     "definition": "Hospitalisation imprévue > 24 h, ou < 24 h incluant chirurgie de la hanche/bras/jambe/pied/main entraînant invalidité temporaire, ou traitement de chimiothérapie/radiothérapie.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 31,
+      "section": "3.1 Définitions spécifiques"
+     }
+    },
+    {
+     "terme": "Maladie grave (assistance)",
+     "definition": "Cancer, infarctus du myocarde, Parkinson, sclérose en plaques, maladies coronariennes, AVC, insuffisance rénale, greffe d'organe, SLA - premier diagnostic par spécialiste inscrit à l'Ordre, distinct du bénéficiaire et de sa famille directe.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 31,
+      "section": "3.1"
+     }
+    }
+   ],
+   "conditions_souscription": [
+    {
+     "texte": "Membres ANPERE ; résidence France métropolitaine ou DROM ; acceptation médicale ; couplage obligatoire des garanties ITT/invalidité avec une garantie décès.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 14,
+      "section": "2.2"
+     }
+    },
+    {
+     "texte": "Cadre Madelin : justification annuelle d'être à jour des cotisations maladie/vieillesse obligatoires.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 4,
+      "section": "1.1.4"
+     }
+    },
+    {
+     "texte": "Modification des garanties jusqu'aux 75 ans de l'assuré (préavis 2 mois avant date anniversaire).",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 7,
+      "section": "1.1.8"
+     }
+    }
+   ],
+   "faits": [
+    {
+     "categorie": "garantie",
+     "titre": "Capital décès toutes causes / Capital IPT toutes causes + double effet",
+     "description": "Identique au mécanisme Avizen : capital au décès avant fin de l'année d'assurance des 85 ans ; versement anticipé en IPT (fin : liquidation retraite ou 67 ans) ; double effet conjoint/partenaire/concubin décédant simultanément ou sous 12 mois avec enfant fiscalement à charge (capital supplémentaire égal, partagé par parts égales).",
+     "declencheurs": [
+      "décès avant fin de l'année d'assurance des 85 ans"
+     ],
+     "plafonds": [
+      "montants au certificat"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 11,
+      "section": "2.1.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Capital décès par accident / IPT par accident",
+     "description": "Décès directement lié à un accident, < 12 mois après ; IPT par accident < 24 mois après l'accident ; versement anticipé à la consolidation.",
+     "declencheurs": [
+      "décès < 12 mois / IPT < 24 mois après l'accident"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 11,
+      "section": "2.1.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Rente éducation décès / IPT + double effet",
+     "description": "Comme Avizen : enfants fiscalement à charge (et nés < 300 jours après le décès), jusqu'à 26 ans ; viagère si allocation handicapé attribuée avant 21 ans et garantie souscrite avant les 16 ans de l'enfant ; paliers 100 % (0-11 ans), 125 % (12-17), 150 % (18-26) ; rente doublée en double effet.",
+     "declencheurs": [
+      "enfant fiscalement à charge au décès"
+     ],
+     "plafonds": [
+      "paliers 100/125/150 %"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 12,
+      "section": "2.1.4"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Rente décès / Rente IPT",
+     "description": "Rente viagère au bénéficiaire (décès avant fin année d'assurance des 85 ans) réduite de 50 % à ses 65 ans ; en IPT versée à l'assuré à la consolidation.",
+     "declencheurs": [],
+     "plafonds": [
+      "-50 % à 65 ans du bénéficiaire"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 12,
+      "section": "2.1.5"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "IJ ITT toutes causes (optionnelle)",
+     "description": "IJ au montant garanti au 1er jour d'arrêt, par quinzaine à terme échu après franchise (fonction des circonstances : hospitalisation, accident, maladie). Cesse : reprise totale, consolidation invalidité, 365e ou 1095e jour (franchise incluse, selon certificat), 67 ans, liquidation retraite. Reprise partielle = -50 %. Rechute ≤ 90 jours mêmes causes : pas de nouvelle franchise (sauf colonne vertébrale). Reconstruction mammaire après cancer du sein déjà indemnisé : pas de nouvelles franchises.",
+     "declencheurs": [
+      "couplage obligatoire avec une garantie décès à l'adhésion",
+      "activité professionnelle à la survenance"
+     ],
+     "plafonds": [
+      "365 ou 1095 jours"
+     ],
+     "franchises": [
+      "franchise au certificat"
+     ],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 14,
+      "section": "2.2 / 2.2.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "IJ ITT par accident (optionnelle)",
+     "description": "Comme IJ toutes causes, limitées à l'accident ; plafond 1 095 jours. Non cumulable avec IJ toutes causes.",
+     "declencheurs": [
+      "activité professionnelle à la survenance"
+     ],
+     "plafonds": [
+      "1 095 jours"
+     ],
+     "franchises": [
+      "franchise au certificat"
+     ],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 15,
+      "section": "2.2.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)",
+     "description": "IJ courtes complémentaires aux IJ des régimes obligatoires : cessent au 90e OU 365e jour d'arrêt (franchise incluse) selon la garantie souscrite au certificat. Mêmes règles de rechute, reconstruction mammaire sans nouvelle franchise. Non cumulable avec IJ ITT par accident.",
+     "declencheurs": [
+      "activité professionnelle à la survenance"
+     ],
+     "plafonds": [
+      "90 ou 365 jours selon certificat"
+     ],
+     "franchises": [
+      "franchise au certificat"
+     ],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 15,
+      "section": "2.2.3"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Indemnités Remboursement des frais professionnels (optionnelle)",
+     "description": "En ITT (maladie ou accident), indemnités versées à l'adhérent : soit équivalent journalier des frais professionnels échus et payés déclarés au fisc, soit équivalent journalier des frais de remplacement de l'assuré - plafonné au plafond journalier garanti au 1er jour d'arrêt. Si cessation définitive d'activité : reliquat des frais engagés avant cessation pris en charge. Frais couverts (fixes et permanents, nets des ressources de remplacement) : salaires nets et avantages en nature des collaborateurs ; charges sociales sur salaires des collaborateurs ; taxes sur la valeur ajoutée et professionnelle ; autres impôts ; contribution sociale généralisée déductible ; loyer et charges locatives ; location de matériel et de mobilier ; entretiens et réparations ; frais de chauffage, eau, gaz, électricité ; honoraires ne constituant pas de rétrocessions ; primes d'assurance ; charges sociales personnelles ; fournitures de bureau, documentation et affranchissement ; frais d'actes et de contentieux ; cotisations syndicales et professionnelles ; mensualités de prêt professionnel (si non remboursées par une autre assurance) ; frais de leasing. Si remplaçant : seul son coût réel (hors rétrocessions) est pris en charge.",
+     "declencheurs": [
+      "activité professionnelle à la survenance",
+      "mêmes modalités de service que 2.2.1"
+     ],
+     "plafonds": [
+      "plafond journalier garanti au certificat"
+     ],
+     "franchises": [
+      "franchise au certificat"
+     ],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 16,
+      "section": "2.2.4"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Rente invalidité permanente partielle ou totale (optionnelle)",
+     "description": "Rente = montant garanti à la consolidation × taux d'indemnisation (n). Invalidité appréciée selon le choix à l'adhésion : taux croisé (fonctionnel × professionnel, tableaux contractuels) ou option taux d'invalidité professionnelle (professions éligibles, règle n/66). Versée par trimestre civil tant que taux ≥ 11 % (accident) / 33 % (maladie) ou 15 % maladie si option. Taux révisable pendant la garantie. Changement de profession non signalé = suspension automatique de la garantie. Justificatif d'existence annuel possible, sinon suspension (arrérages versés rétroactivement à réception).",
+     "declencheurs": [
+      "consolidation pendant la garantie",
+      "activité professionnelle au fait générateur",
+      "taux ≥ 11 % accident / 33 % maladie (ou 15 % maladie en option)"
+     ],
+     "plafonds": [
+      "indemnisation 100 % si taux ≥ 66 %"
+     ],
+     "franchises": [
+      "délai d'attente 90 j maladie / 365 j troubles psychiques"
+     ],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 17,
+      "section": "2.2.5"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Capital invalidité permanente partielle ou totale (optionnelle)",
+     "description": "Capital = montant du certificat × taux d'indemnisation (croisé ou professionnel selon le choix). Taux fixé définitivement à la consolidation, sans révision ; versement met fin à la garantie. Distincte de l'extension IPT de la garantie décès.",
+     "declencheurs": [
+      "taux ≥ 11 % accident / 33 % maladie (15 % en option)"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 21,
+      "section": "2.2.6"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Rente invalidité par accident (optionnelle)",
+     "description": "Évaluée sur le seul taux d'invalidité fonctionnelle (tableau spécifique), seuil 11 %. Médecin conseil de l'assureur indépendant des décisions Sécurité sociale.",
+     "declencheurs": [
+      "taux fonctionnel ≥ 11 %"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 23,
+      "section": "2.2.7"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Capital invalidité par accident (optionnelle)",
+     "description": "Capital × taux d'indemnisation fonctionnel ; taux définitif à la consolidation ; versement met fin à la garantie.",
+     "declencheurs": [
+      "taux fonctionnel ≥ 11 %"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 24,
+      "section": "2.2.8"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Garantie aide à la famille",
+     "description": "Comme Avizen (IJ pendant AJPP, enfant < 20 ans, 14 mois/enfant/pathologie renouvelable une fois) - les IJ complémentaires aux régimes obligatoires comptent parmi les garanties IJ éligibles au couplage.",
+     "declencheurs": [
+      "garantie IJ (ITT TC, accident ou complémentaires) ET rente éducation",
+      "AJPP perçue"
+     ],
+     "plafonds": [
+      "14 mois par enfant et pathologie, renouvelable une fois"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 25,
+      "section": "2.3"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Exclusions communes - activités/sports à risque",
+     "description": "Liste identique à Avizen (sports extrêmes, aériens, mécaniques, montagne > 3 500 m, équestres, nautiques, tauromachie… ; métiers à risque : armée-aviation, police, journalistes, pétrole/gaz, pompiers, plongée pro, mer ; déplacements pays sensibles ou > 60 jours), sauf acceptation au certificat. Baptêmes encadrés par professionnel diplômé d'État couverts sauf sports extrêmes.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 41,
+      "section": "4.1.1"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Décès/IPT toutes causes",
+     "description": "Suicide/tentative la 1re année (et 1 an sur le supplément en cas d'augmentation) ; guerre, insurrection, opérations de maintien de l'ordre/paix ; meurtre de l'assuré par le bénéficiaire.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 42,
+      "section": "4.1.2"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Décès/IPT par accident",
+     "description": "Guerres/insurrection/maintien de l'ordre ; participation active à émeutes, terrorisme, sabotage, crimes/délits intentionnels, rixes (sauf légitime défense/devoir professionnel) ; nucléaire (mention spécifique « sinistres résultant directement ou indirectement de la désintégration du noyau de l'atome ») ; accident antérieur à l'adhésion non déclaré ; drogues/médicaments hors prescription ; ALCOOLISME CHRONIQUE (présent ici contrairement à Avizen) ; alcoolémie ≥ taux légal du pays ; chirurgie plastique non consécutive à accident garanti, malformations congénitales ; refus volontaire de traitements ; attentats NRBC, agents biologiques ; meurtre par le bénéficiaire.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 42,
+      "section": "4.1.3"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "ITT/Invalidité",
+     "description": "Identiques à Avizen (faits volontaires, guerres/émeutes, antériorités non déclarées, drogues, alcoolisme chronique, alcoolémie, cures et maisons de repos pour l'ITT, chirurgie plastique, nucléaire, refus de traitements) + exclusion explicite de « toute affection ou maladie dont la première constatation médicale survient pendant le délai d'attente ainsi que ses conséquences ».",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 43,
+      "section": "4.1.4"
+     }
+    }
+   ]
+  },
+  {
+   "id": "excelium",
+   "nom": "Excelium",
+   "aliases": [
+    "Excelium",
+    "Excelium (assurance vie)",
+    "excelium_assurance_vie",
+    "excelium"
+   ],
+   "domaines": [],
+   "definitions": [
+    {
+     "terme": "Fonds Croissance",
+     "definition": "Engagements donnant lieu à constitution d'une provision de diversification : garantie en capital à l'ÉCHÉANCE égale à 100 % des sommes versées nettes de frais sur versements ; valeur de part fluctuante entre-temps ; durée initiale de garantie 10 ans, prorogeable (l'assureur peut refuser la prorogation jusqu'à 3 mois avant l'échéance).",
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 2,
+      "section": "Encadré + 5.2"
+     }
+    },
+    {
+     "terme": "Capital sous risque (garantie Revalorisée)",
+     "definition": "Différence positive entre le montant garanti et la valeur de l'épargne au dernier jour du mois.",
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 17,
+      "section": "4.2.2"
+     }
+    },
+    {
+     "terme": "Versements nets",
+     "definition": "Versements bruts moins droits d'adhésion, frais de dossier et frais sur versements.",
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "section": "4.2.2 note (1)"
+     }
+    }
+   ],
+   "conditions_souscription": [
+    {
+     "texte": "Adhésion ANPERE ; versement initial minimum 300 € (5 000 € en gestion pilotée) ; choix du type de gestion et de la répartition.",
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 79,
+      "section": "Annexe 3"
+     }
+    },
+    {
+     "texte": "Garantie Revalorisée : réservée aux conventions Fortissimo sans fonds Croissance et aux adhérents < 70 ans.",
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "section": "4.2.2"
+     }
+    }
+   ],
+   "faits": [
+    {
+     "categorie": "garantie",
+     "titre": "Garantie en cas de vie (au terme)",
+     "description": "Capital, ou sur proposition de l'assureur rente viagère (conditions et tarif en vigueur à la demande : frais d'arrérage, taux technique, table de mortalité ; trop-perçus post-décès remboursés par les héritiers). Le règlement met fin à l'adhésion.",
+     "declencheurs": [
+      "vie de l'assuré au terme",
+      "demande de l'adhérent"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "section": "4.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Garantie en cas de décès",
+     "description": "Capital décès = épargne tous supports confondus, OU montant dû au titre de la garantie « Sérénité », OU montant dû au titre de la garantie « Revalorisée ». Le versement met fin à l'adhésion.",
+     "declencheurs": [
+      "décès de l'assuré avant le terme"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "section": "4.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Garantie « Sérénité » (plancher, incluse)",
+     "description": "Capital décès jamais inférieur aux versements BRUTS de frais diminués des rachats. Cesse au 80e anniversaire (coût inclus dans les frais de gestion des UC, prélevé toute la durée y compris après 80 ans). Fonds Croissance : si décès entre 80 et 90 ans avant l'échéance, minimum = montant garanti du fonds Croissance, sans frais. Cesse en cas de renonciation ou rachat total.",
+     "declencheurs": [
+      "incluse automatiquement"
+     ],
+     "plafonds": [
+      "plancher = versements bruts − rachats",
+      "jusqu'à 80 ans (90 ans pour le volet fonds Croissance)"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "section": "4.2.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Garantie « Revalorisée »",
+     "description": "Souscrite automatiquement et exclusivement si gestion par convention Conviction Fortissimo ou Horizon Actions Fortissimo (sans fonds Croissance) ET âge < 70 ans à l'adhésion. Capital décès minimum = cumul des versements NETS revalorisés au taux mensuel du Livret A (du 1er jour du mois suivant l'encaissement au dernier jour du mois précédant le décès), minorés proportionnellement à chaque rachat partiel. Effet à la fin du délai de renonciation ; cesse en cas de changement de gestion/convention avec fonds Croissance, rachat total, renonciation, ou au 1er jour du mois suivant le 80e anniversaire. Tarifée mensuellement sur le capital sous risque (tableau par âge) ; prime prélevée sur l'épargne au prorata ; résiliation définitive de la garantie à défaut de paiement 40 jours après LR. Capital sous risque plafonné à 1 200 000 € par assuré.",
+     "declencheurs": [
+      "convention Fortissimo sans fonds Croissance",
+      "< 70 ans à l'adhésion"
+     ],
+     "plafonds": [
+      "capital sous risque max 1 200 000 €/assuré"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "section": "4.2.2"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Exclusions de la garantie « Revalorisée »",
+     "description": "Suicide/tentative (conscient ou non) ou tout acte volontaire de l'assuré dans l'année suivant la prise d'effet ; guerre civile/étrangère/insurrection, opérations de maintien de l'ordre/paix ; accident en conduite d'engin à moteur avec alcoolémie ≥ taux légal du pays ou sous toxiques/stupéfiants/médicaments non prescrits ; accident antérieur à la prise d'effet ou maladie à premières manifestations antérieures, sauf acceptation expresse d'AXA.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "section": "4.2.2 Exclusions"
+     }
+    }
+   ]
+  },
+  {
+   "id": "essenciel",
+   "nom": "EssenCiel",
+   "aliases": [
+    "EssenCiel",
+    "Essen'Ciel",
+    "Essenciel",
+    "Essen'Ciel (assurance obsèques)",
+    "essen_ciel_assurance_obs_ques",
+    "essenciel"
+   ],
+   "domaines": [],
+   "definitions": [
+    {
+     "terme": "Accident",
+     "definition": "Atteinte corporelle non intentionnelle provenant de l'action soudaine, violente et imprévisible d'une cause extérieure. Les affections de la colonne vertébrale, pathologies cardiaques (avec ou sans coronaropathies), chocs émotifs et états dépressifs sont considérés comme des MALADIES.",
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 47,
+      "section": "13. Définitions - Accident"
+     }
+    },
+    {
+     "terme": "Bénéficiaires",
+     "definition": "(1) à hauteur des frais d'obsèques : la personne physique ou l'entreprise de pompes funèbres ayant pris en charge les obsèques, sur factures ; (2) à défaut ou pour le solde : bénéficiaires subsidiaires désignés par l'adhérent.",
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 47,
+      "section": "13. Définitions - Bénéficiaires"
+     }
+    },
+    {
+     "terme": "Membre de la famille",
+     "definition": "Conjoint ou partenaire PACS de l'assuré ; leurs enfants et ascendants jusqu'au 2e degré.",
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 48,
+      "section": "13. Définitions"
+     }
+    },
+    {
+     "terme": "France",
+     "definition": "France métropolitaine + DROM (Guadeloupe, Guyane, Martinique, Mayotte, La Réunion).",
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 48,
+      "section": "13. Définitions - France"
+     }
+    }
+   ],
+   "conditions_souscription": [
+    {
+     "texte": "Conditions cumulatives : résident fiscal français ; adhérent ANPERE (droits d'adhésion) ; âge entre 50 et 85 ans inclus à la signature (différence de millésimes). Pas de formalité médicale mentionnée dans la notice.",
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 16,
+      "section": "3.6"
+     }
+    },
+    {
+     "texte": "Cotisations temporaires : âge < 90 ans au paiement de la dernière cotisation.",
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 17,
+      "section": "4.3"
+     }
+    }
+   ],
+   "faits": [
+    {
+     "categorie": "garantie",
+     "titre": "Garantie décès (capital obsèques)",
+     "description": "Versement du capital garanti (2 000 à 10 000 €, choisi à l'adhésion) : à hauteur des frais d'obsèques à la personne/entreprise de pompes funèbres sur facture (acquittée → remboursement à la personne ayant avancé ; non acquittée → versement direct aux pompes funèbres) ; solde éventuel aux bénéficiaires subsidiaires. Le capital doit obligatoirement être affecté au financement des obsèques à concurrence de leur coût. Mise à disposition sous 48 h (ouvrées) après réception des pièces. Couverture monde entier. Le contrat n'organise PAS les obsèques.",
+     "declencheurs": [
+      "décès de l'assuré",
+      "décès accidentel : dès la prise d'effet ; décès non accidentel : après 1 an (sinon remboursement des cotisations nettes de frais à la succession)"
+     ],
+     "plafonds": [
+      "capital 2 000 - 10 000 €",
+      "le capital peut être insuffisant pour couvrir les frais réels (reliquat à charge des proches)"
+     ],
+     "franchises": [
+      "délai d'attente 1 an pour le décès non accidentel"
+     ],
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 20,
+      "section": "5.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Revalorisation du capital",
+     "description": "Revalorisation contractuelle GARANTIE de 1 %/an du capital à chaque anniversaire de l'adhésion, sans augmentation de cotisation ; + participation aux résultats techniques et financiers (taux annuel décidé par AXA, attribution au plus tard le 1er avril à effet du 31/12 précédent). La revalorisation est étendue post-mortem jusqu'à réception complète des pièces (L132-5).",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 20,
+      "section": "5.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Assistance dès l'adhésion",
+     "description": "Informations et conseils « Obsèques » (8h-20h30, 7j/7) ; informations juridiques « Obsèques » (succession, fiscalité, juridictions…).",
+     "declencheurs": [
+      "dès l'adhésion"
+     ],
+     "plafonds": [
+      "renseignements d'ordre documentaire"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 23,
+      "section": "6.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Assistance au moment du décès",
+     "description": "Rapatriement du corps/cendres jusqu'au lieu d'inhumation en France (frais réels ; cercueil lié au transport : 800 € TTC max ; frais d'obsèques/cérémonie/convois/inhumation à charge de la famille ; rapatriement vers l'étranger possible mais tous frais à charge) ; retour des membres de la famille voyageant avec l'assuré (aller simple) ; présence d'un membre de la famille (A/R + hôtel 3 nuits max à 80 €/nuit, si l'assuré était seul sur place) - PLAFOND GLOBAL de ces 3 garanties : 3 600 € TTC ; monde entier si décès à plus de 30 km du domicile, séjours étranger < 90 jours. Et pour les proches en France : garde des enfants/petits-enfants < 15 ans (jour des obsèques ou préparation), garde/transfert des animaux (2 max, dans le mois suivant, rayon 50 km), aide-ménagère au domicile du défunt (min 2 h consécutives, dans le mois) - PLAFOND GLOBAL de ces 3 prestations : 750 € TTC.",
+     "declencheurs": [
+      "décès à plus de 30 km du domicile pour le volet rapatriement",
+      "appel préalable obligatoire à AXA Assistance avant toute dépense"
+     ],
+     "plafonds": [
+      "3 600 € TTC (rapatriement+retour+présence)",
+      "cercueil 800 € TTC",
+      "hôtel 80 €/nuit ×3",
+      "750 € TTC (garde enfants+animaux+aide-ménagère)"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 24,
+      "section": "6.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Assistance après le décès (proches)",
+     "description": "Soutien psychologique : 6 entretiens max (téléphone et/ou cabinet, remboursement 80 €/séance max en cabinet) pendant 12 mois ; accompagnement social : jusqu'à 3 évaluations téléphoniques par assistant(e) social(e) pendant 3 mois ; plateforme digitale de démarches post-décès (courriers types, 1 an d'accès) ; aide à la mobilité pour personnes seules (accompagnateur taxi/VTC, rayon 50 km, limite 160 € TTC, pendant 3 mois) ; mise en relation entretien/fleurissement de sépulture ; organisation de services à la personne (devis, avantages CESU/fiscaux - coût à charge du demandeur ; accessible 3 mois).",
+     "declencheurs": [
+      "demande d'un membre de la famille"
+     ],
+     "plafonds": [
+      "6 entretiens psy / 80 €/séance",
+      "aide mobilité 160 € TTC",
+      "3 évaluations sociales"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 27,
+      "section": "6.3"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Décès exclus",
+     "description": "Suicide ou tentative au cours de la 1re année d'adhésion ; guerre civile ou étrangère, invasions, agressions étrangères, hostilités ; participation active à une guerre où la France ne participe pas, rébellion, révolution, insurrection, prise de pouvoir, mouvement populaire, émeute, terrorisme (légitime défense, assistance à personne en danger et devoir professionnel garantis).",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 30,
+      "section": "7.1"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Décès accidentel exclu",
+     "description": "Alcoolémie ≥ limite du Code de la route français ; emprise de stupéfiants ou substances médicamenteuses hors prescription ; attentats/actes terroristes par armes ou matières radioactives, chimiques, bactériologiques ou virales ; action directe ou indirecte de tout agent biologique.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 30,
+      "section": "7.1"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Exclusions assistance",
+     "description": "Excédents de bagages ; frais non justifiés par documents originaux ; frais de documents officiels ; coût des services à la personne organisés mais non pris en charge (Â§6.2.7) ; interventions étatiques/inter-étatiques. Limites de responsabilité : secours primaires non remboursés ; force majeure, guerre, grèves, cataclysmes, radioactivité, épidémies, risques infectieux/chimiques ; clause sanctions/embargo ONU/UE/UK/USA.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 31,
+      "section": "7.2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ma_protection_accident",
+   "nom": "Ma Protection Accident",
+   "aliases": [
+    "Ma Protection Accident",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "ma_protection_accident_garantie_des_accidents_de_la_vie",
+    "ma_protection_accident"
+   ],
+   "domaines": [
+    "accident"
+   ],
+   "definitions": [
+    {
+     "terme": "Accident",
+     "definition": "Toute atteinte corporelle non intentionnelle de la part de l'assuré, provenant de l'action soudaine, violente et imprévisible d'une cause extérieure qui cause des lésions corporelles ou le décès.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 25,
+      "section": "7. Définitions"
+     }
+    },
+    {
+     "terme": "Accident médical",
+     "definition": "Acte ou ensemble d'actes de caractère médical ayant eu sur l'assuré des conséquences dommageables pour sa santé, pratiqué par des médecins/auxiliaires médicaux ou praticiens autorisés.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 25,
+      "section": "7. Définitions"
+     }
+    },
+    {
+     "terme": "Date de consolidation",
+     "definition": "Date à laquelle les dommages corporels ont médicalement acquis un caractère permanent tel qu'un traitement n'est plus nécessaire si ce n'est pour éviter une aggravation, et qu'il devient possible de déterminer les séquelles.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 26,
+      "section": "7. Définitions"
+     }
+    },
+    {
+     "terme": "Déficit fonctionnel permanent (DFP)",
+     "definition": "Séquelles permanentes gardées à la suite de l'accident : réduction définitive du potentiel physique, psycho-sensoriel ou intellectuel, douleurs pérennes et répercussions psychologiques liées.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 26,
+      "section": "7. Définitions"
+     }
+    },
+    {
+     "terme": "Seuil d'intervention",
+     "definition": "Taux de déficit fonctionnel permanent en deçà duquel l'assureur n'intervient pas, pour quelque préjudice que ce soit. Il s'élève à 1 %.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 26,
+      "section": "7. Définitions + 1.1"
+     }
+    },
+    {
+     "terme": "Conjoint",
+     "definition": "Conjoint non séparé de corps ou concubin (Pacs ou non) du souscripteur, résidant sous son toit à l'adresse des Conditions particulières.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 26,
+      "section": "7. Définitions"
+     }
+    },
+    {
+     "terme": "Enfants",
+     "definition": "Enfants du souscripteur/conjoint résidant sous son toit ; enfants mineurs même hors du toit ; enfants majeurs célibataires de moins de 26 ans poursuivant leurs études.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 26,
+      "section": "7. Définitions"
+     }
+    },
+    {
+     "terme": "Bénéficiaire",
+     "definition": "En cas de DFP : l'assuré victime lui-même. En cas de décès : enfant, conjoint ou membres de la famille couverts par le même contrat justifiant un préjudice direct, à l'exception des personnes ayant causé volontairement les dommages.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 25,
+      "section": "7. Définitions"
+     }
+    },
+    {
+     "terme": "Souscripteur",
+     "definition": "Personne désignée aux Conditions particulières ; doit avoir plus de 18 ans et résidence principale + foyer fiscal en France métropolitaine, Guadeloupe, Guyane, Réunion, Mayotte ou Martinique pendant toute la vie du contrat.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 27,
+      "section": "7. Définitions"
+     }
+    }
+   ],
+   "conditions_souscription": [
+    {
+     "texte": "Souscripteur : plus de 18 ans ; résidence principale et foyer fiscal en France métropolitaine, Guadeloupe, Guyane, Réunion, Mayotte ou Martinique pendant toute la vie du contrat.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 27,
+      "section": "7. Définitions - Souscripteur"
+     }
+    },
+    {
+     "texte": "Garanties acquises seulement si résidence principale + foyer fiscal sur le territoire français à la survenance du sinistre ; déménagement à l'étranger à déclarer sous 15 jours.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 22,
+      "section": "6.6 Limites de garantie"
+     }
+    }
+   ],
+   "faits": [
+    {
+     "categorie": "garantie",
+     "titre": "Accidents corporels d'activités courantes",
+     "description": "Accidents survenus lors d'activités domestiques, scolaires et de loisirs pendant la période d'effet ; activités sportives en baptême ou initiation encadrée par personnes qualifiées d'une structure habilitée.",
+     "declencheurs": [
+      "pendant la période d'effet des garanties",
+      "conditions de territorialité (art. 1.4)",
+      "hors exclusions (art. 2)"
+     ],
+     "plafonds": [
+      "limites fixées aux Conditions particulières"
+     ],
+     "franchises": [
+      "seuil d'intervention : DFP ≥ 1 % pour l'indemnisation"
+     ],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "section": "1.2 Les accidents de la vie pris en compte"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Accidents corporels lors d'événements exceptionnels",
+     "description": "Catastrophes naturelles, industrielles ou technologiques ; agressions, vandalisme ; terrorisme, attentats, infractions des articles 706-3 et suivants du Code de procédure pénale ; mouvements populaires et rassemblements sur la voie publique.",
+     "declencheurs": [
+      "pendant la période d'effet des garanties"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "section": "1.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Accidents médicaux et infections nosocomiales",
+     "description": "Accidents médicaux dont le fait générateur est postérieur à la prise d'effet, première manifestation dommageable pendant la garantie, avec conséquences anormales au regard de l'état initial du patient et de son évolution prévisible.",
+     "declencheurs": [
+      "fait générateur postérieur à la prise d'effet",
+      "condition d'anormalité remplie",
+      "dommages EN DESSOUS des critères de gravité ouvrant droit à indemnisation par l'ONIAM"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "section": "1.2 Les accidents médicaux"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Accidents lors de la conduite d'un véhicule (dérogations)",
+     "description": "Par dérogation à l'exclusion circulation : véhicule 4 roues loué < 3 mois ; engin de jardinage autoporteur ou fauteuil roulant ; enfant < 12 ans conduisant un véhicule à moteur pour enfant ; victime impliquant son propre véhicule alors qu'elle n'avait plus/pas encore la qualité de conducteur.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 5,
+      "section": "1.2 conduite d'un véhicule"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Indemnisation des préjudices corporels (barème AQV)",
+     "description": "Indemnisation contractuelle des postes DFP (0-100), Préjudice Esthétique Permanent (0-7) et Souffrances Endurées (0-7) selon l'indice AQV (= somme des trois, arrondi à l'entier supérieur) et l'âge à la consolidation, suivant le tableau contractuel.",
+     "declencheurs": [
+      "DFP imputable à l'accident ≥ 1 %"
+     ],
+     "plafonds": [
+      "maximum 600 000 € (AQV ≥ 100, tranche 0-19 ans)",
+      "plafond de garantie indiqué aux Conditions particulières (cumul aggravations)"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 7,
+      "section": "3.2.1 En cas de dommages corporels"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Préjudices indemnisés selon droit commun",
+     "description": "Assistance tierce personne (ATP) ; frais de logement adapté (FLA) ; frais de véhicule adapté (FVA) ; pertes de gains professionnels actuels (PGPA) ; pertes de gains professionnels futurs (PGPF, capitalisation au barème des organismes sociaux R376-1/R454-1 CSS).",
+     "declencheurs": [
+      "accident garanti avec DFP ≥ 1 %"
+     ],
+     "plafonds": [
+      "ATP : 10 €/h si DFP ≤ 30 %, 14 €/h si DFP > 30 %",
+      "PGPA plafonné à 50 000 €"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 9,
+      "section": "3.2.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "En cas de décès",
+     "description": "Remboursement des frais d'obsèques (frais réels, limite 5 000 €) à la personne justifiant les avoir réglés ; si conjoint/enfant/famille couverts : préjudice d'affection (PAF), frais divers (FD), pertes de revenus des proches (PR, capitalisées).",
+     "declencheurs": [
+      "décès exclusivement lié à l'accident garanti"
+     ],
+     "plafonds": [
+      "frais d'obsèques : 5 000 €"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 9,
+      "section": "3.2.2 En cas de décès"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Affections même consécutives à un accident garanti",
+     "description": "Affections cardio-vasculaires et vasculaires cérébrales ; affections virales, parasitaires, mycosiques ; affections musculaires, articulaires, tendineuses et discales sans cause extérieure (pathologies disco-vertébrales, rhumatismales, hernies de la paroi abdominale) ; fibromyalgie.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "section": "2. Les exclusions communes"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Maladies cause ou révélées par l'accident",
+     "description": "Maladies connues ou inconnues de l'assuré qui sont la cause de l'accident ; maladies révélées par l'accident ; pandémies et épidémies cause de l'accident.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "section": "2."
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Expérimentations biomédicales",
+     "description": "Accidents et traitements médicaux résultant d'expérimentations biomédicales.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "section": "2."
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Sports professionnels, rémunérés, à risques, extrêmes",
+     "description": "Sports exercés à titre professionnel ; sports rémunérés (y compris primes de match) ; sports à risques ; sports extrêmes (base jump, wingsuit, MMA) ; sports non autorisés en France ; tentatives de records ou exploits.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "section": "2."
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Accidents de la circulation (VTM soumis à obligation d'assurance)",
+     "description": "Accidents de la circulation en France métropolitaine, DROM/COM, Monaco, Andorre, UE et États Carte Verte non rayés, impliquant un véhicule terrestre à moteur soumis à obligation d'assurance, ses remorques ou semi-remorques.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "section": "2."
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Non-respect de réglementation (véhicules motorisés)",
+     "description": "Accidents causés par l'assuré ne respectant pas la réglementation impérative en cas d'utilisation de véhicules motorisés aériens, nautiques, aquatiques, fluviaux, maritimes et lacustres.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "section": "2."
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Alcool, médicaments, stupéfiants",
+     "description": "Faits accidentels et/ou dommages consécutifs à une consommation d'alcool ≥ 0,5 g/l de sang ; à l'absorption de médicaments, drogues ou substances stupéfiantes à un dosage non prescrit médicalement.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "section": "2."
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Accidents du travail et activités électives/syndicales",
+     "description": "Accidents du travail, incluant les accidents de trajet ; accidents survenant dans le cadre d'activités électives ou syndicales.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "section": "2."
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Faits intentionnels, suicide",
+     "description": "Dommages corporels que l'assuré s'est causés intentionnellement ; conséquences du suicide ou d'une tentative de suicide.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "section": "2."
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Guerre, nucléaire",
+     "description": "Dommages corporels ou aggravations survenant dans le cadre d'une guerre civile ou étrangère ; causés par toute source d'origine nucléaire (explosion, dégagement de chaleur, irradiation, radioactivité, radiation par accélération artificielle de particules).",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "section": "2."
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Délit intentionnel ou crime",
+     "description": "Accidents résultant de poursuite pénale de l'assuré liée à un délit intentionnel (art. 121-3 Code pénal) ou à un crime.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "section": "2."
+     }
+    }
+   ]
+  },
+  {
+   "id": "masterlife_credit",
+   "nom": "MasterLife Credit",
+   "aliases": [
+    "MasterLife Credit",
+    "MasterLife Crédit",
+    "Masterlife Credit",
+    "masterlife_credit"
+   ],
+   "domaines": [
+    "assurance emprunteur",
+    "assurance_emprunteur"
+   ],
+   "definitions": [
+    {
+     "terme": "Accident",
+     "definition": "Atteinte corporelle non intentionnelle provenant directement de l'action soudaine et imprévisible d'une cause extérieure. L'infarctus du myocarde, les affections coronariennes, affections soudaines, affections dues à un choc émotif ou à un surmenage et les dépressions sont des MALADIES, pas des accidents.",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 4,
+      "section": "Définitions - Accident"
+     }
+    },
+    {
+     "terme": "PTIA",
+     "definition": "Reconnu avant le 70e anniversaire définitivement incapable de toute occupation/travail rémunérateur + taux d'invalidité fonctionnelle = 100 % (barème AT SS). Tierce personne exigée entre 60 et 70 ans ; non exigée avant 60 ans.",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 5,
+      "section": "Définitions - PTIA"
+     }
+    },
+    {
+     "terme": "Incapacité temporaire totale de travail",
+     "definition": "Arrêt total et temporaire de la profession (maladie/accident), médicalement constaté. Chômeur ou sans activité non retraité : incapacité totale d'effectuer ses activités habituelles NON professionnelles. Congé légal de maternité exclu de la notion.",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 5,
+      "section": "Définitions"
+     }
+    },
+    {
+     "terme": "Invalidité professionnelle",
+     "definition": "Définie par expertise, 0-100 %, par rapport à la profession exercée ; indépendante de la position de la Sécurité sociale (la reconnaissance par un organisme ne s'impose pas à l'assureur).",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 5,
+      "section": "Définitions"
+     }
+    },
+    {
+     "terme": "Franchise",
+     "definition": "Période entre l'événement et le début de l'indemnisation ; plusieurs niveaux, choix aux conditions particulières ; ne concerne que l'incapacité de travail.",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 4,
+      "section": "Définitions - Franchise"
+     }
+    }
+   ],
+   "conditions_souscription": [
+    {
+     "texte": "Membre ANPERE ; assuré personne physique résidant en France ; questionnaires (médical/financier/sportif) sauf dispense Lemoine : prêt L313-1 1° C. conso (immobilier habitation/mixte, travaux, terrains…), part assurée sur encours cumulé ≤ 200 000 € (exemples en annexe p.27), échéance du prêt avant le 60e anniversaire - 3 conditions cumulatives.",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 8,
+      "section": "Article 1.4 a)"
+     }
+    },
+    {
+     "texte": "Modification des garanties possible jusqu'au 75e anniversaire, accord du prêteur le cas échéant ; augmentation soumise à acceptation ADIS et éventuelle sélection médicale.",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 9,
+      "section": "Article 1.7"
+     }
+    },
+    {
+     "texte": "Convention AERAS : examen 2e et 3e niveaux en cas de refus, écrêtement des surprimes pour les éligibles, GIS possible.",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 23,
+      "section": "Article 10"
+     }
+    }
+   ],
+   "faits": [
+    {
+     "categorie": "garantie",
+     "titre": "Décès",
+     "description": "Capital égal au montant restant dû au jour du décès (quelle qu'en soit la cause), à concurrence de la quotité assurée, versé aux bénéficiaires. Échéances impayées antérieures au décès exclues. Co-emprunteurs décédés simultanément : versement total plafonné au restant dû du prêt. Règlement sous 10 jours après pièces (avec accord de prise en charge ADIS).",
+     "declencheurs": [
+      "décès avant le 85e anniversaire (âge limite de la garantie)"
+     ],
+     "plafonds": [
+      "capital restant dû × quotité assurée"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 12,
+      "section": "Article 3.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "PTIA",
+     "description": "Capital restant dû à la date de consolidation de la PTIA × quotité assurée, si consolidation avant le 70e anniversaire. Le versement met fin à l'adhésion.",
+     "declencheurs": [
+      "consolidation avant 70 ans",
+      "critères PTIA (définition)"
+     ],
+     "plafonds": [
+      "capital restant dû × quotité"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 12,
+      "section": "Article 3.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Incapacité de travail (IJ)",
+     "description": "IJ aux bénéficiaires × quotité assurée, plafonnées à 1/30e de la mensualité (1/90e trimestrialité, 1/180e semestrialité, 1/365e annuité ; prêt in fine : 1/365e des intérêts annuels - capital final toujours exclu). Cessent : fin d'incapacité ou consolidation, 1 095e jour (franchise incluse), 70 ans, fin/remboursement du prêt, liquidation retraite (y compris inaptitude L351-7). Mi-temps thérapeutique : 50 % maintenus 90 jours max. Rechute ≤ 90 jours (même affection) : reprise immédiate sans franchise ; > 90 jours : nouvelle franchise, et si même affection déjà indemnisée, durée cumulée plafonnée à 5 ANS. Ablation de matériel d'ostéosynthèse : pas de nouvelle franchise. Affections disco-vertébrales : toute rechute refranchisée 30 jours min. Couplage obligatoire avec décès/PTIA. Franchises 15 ou 30 jours non proposées en cas de dispense Lemoine de questionnaire.",
+     "declencheurs": [
+      "couplage avec décès ou PTIA",
+      "arrêt avant 70 ans"
+     ],
+     "plafonds": [
+      "1 095 jours",
+      "échéance du prêt (co-emprunteurs : total ≤ échéance)",
+      "5 ans cumulés pour rechutes d'une même affection au-delà de 90 jours"
+     ],
+     "franchises": [
+      "franchise au choix aux conditions particulières"
+     ],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 13,
+      "section": "Article 4.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Invalidité totale ou partielle",
+     "description": "IJ trimestrielles × quotité, pour chaque jour d'invalidité : taux (n) ≥ 66 % → 100 % des IJ plafond (1/30e mensualité…) ; 33 % ≤ n < 66 % → IJ × taux d'indemnisation(n) ; n < 33 % → rien. Taux croisé fonctionnel × professionnel (tableau) pour les actifs ; fonctionnel seul pour chômeurs/inactifs. Taux révisable. Non cumulable avec l'incapacité. Si n ≥ 66 % et prêt amortissable à échéances constantes : ADIS peut verser le capital restant dû (met fin à l'adhésion).",
+     "declencheurs": [
+      "consolidation avant la retraite et avant 70 ans",
+      "taux ≥ 33 %"
+     ],
+     "plafonds": [
+      "plafond IJ identique incapacité"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 14,
+      "section": "Article 4.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Invalidité spécifique AERAS (GIS)",
+     "description": "Proposée par l'assureur (pas une option à la demande) si incapacité et invalidité refusées pour raisons médicales. IJ trimestrielles × quotité si incapacité professionnelle TOTALE (titre de pension 2e/3e catégorie SS, congé longue maladie fonctionnaires, ou notification d'inaptitude totale non-salariés) ET incapacité fonctionnelle ≥ 70 % (barème du Code des pensions civiles). Cessent sous 70 %. Faculté de verser le capital restant dû (fin d'adhésion). Prestations en cours maintenues même si la convention ANPERE/AXA est résiliée.",
+     "declencheurs": [
+      "mention aux conditions particulières",
+      "incapacité professionnelle totale + fonctionnelle ≥ 70 %"
+     ],
+     "plafonds": [
+      "jusqu'au terme du prêt, max 70 ans"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 16,
+      "section": "Article 4.3"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Garantie Aide à la famille",
+     "description": "IJ = 50 % des IJ incapacité, si garantie incapacité souscrite, enfant à charge < 20 ans gravement malade/handicapé/accidenté, AJPP perçue, cessation ponctuelle d'activité, et prêt immobilier ou professionnel. Versées dès le 1er jour d'AJPP. Max 14 mois par enfant et pathologie, renouvelable une fois. Plafond GLOBAL avec l'exonération : 4 000 €/mois/assuré.",
+     "declencheurs": [
+      "garantie incapacité souscrite",
+      "AJPP",
+      "prêt immobilier ou professionnel"
+     ],
+     "plafonds": [
+      "50 % des IJ incapacité",
+      "4 000 €/mois/assuré (IJ + exonération)",
+      "14 mois renouvelable 1 fois"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 14,
+      "section": "Article 4.1.d"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Exonération du paiement des cotisations",
+     "description": "Incapacité : remboursement de 1/365e de la cotisation annuelle par journée d'incapacité, après déduction d'une FRANCHISE DE 90 JOURS, remboursement en fin de période. Aide à la famille : remboursement 1/365e par jour indemnisé (plafond global 4 000 €/mois). Invalidité totale ou GIS : exonération des cotisations à échoir jusqu'à 70 ans max, garanties intégralement maintenues sans modification possible.",
+     "declencheurs": [
+      "selon le cas : versement d'IJ incapacité, AJPP, ou invalidité totale/GIS"
+     ],
+     "plafonds": [],
+     "franchises": [
+      "franchise 90 jours pour le volet incapacité"
+     ],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 17,
+      "section": "Article 4.4"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Décès - suicide",
+     "description": "Suicide exclu la 1re année d'adhésion (et 1 an sur le supplément en cas d'augmentation). EXCEPTION : prêts immobiliers finançant l'acquisition du logement principal → suicide couvert dès la date d'effet dans la limite de l'art. R132-5 (120 000 € au 15/08/2024).",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "section": "Article 7.1"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Décès - guerre/émeutes/crimes",
+     "description": "Guerres civiles/étrangères, insurrection, opérations de maintien de l'ordre/paix (ONU…) ; participation active à émeutes, terrorisme, sabotage, crimes ou délits intentionnels, rixes (sauf légitime défense/devoir professionnel).",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "section": "Article 7.1"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Sports et activités exclus (sauf acceptation)",
+     "description": "Sports à moteur hors voie ouverte au public ; plongée > 20 m sans bouteille / > 40 m avec ; navigation > 40 milles ; alpinisme et randonnée > 4 000 m, escalade (hors salle) ; speed riding, ski artistique/acrobatique/héliporté, paraski, char à glace, kilomètre lancé, combiné nordique ; spéléologie, canyoning, rafting, kitesurf ; sports de combat (hors escrime) ; longue liste équestre ; saut à l'élastique, base jump, wingsuit ; sports aériens motorisés et non motorisés ; ULM, parapente, deltaplane, parachutisme ; tout sport non représenté par une fédération française.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "section": "Article 7.1"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "PTIA/incapacité/invalidité - exclusions",
+     "description": "Faits volontaires, tentative de suicide, mutilations volontaires ; stupéfiants/tranquillisants hors prescription ; refus volontaire de soins ; désintégration du noyau atomique ; sportifs professionnels et amateurs de haut niveau (sauf acceptation) ; arrêts liés au traitement de la stérilité (incapacité).",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "section": "Article 7.2"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "États antérieurs",
+     "description": "Accidents antérieurs à la prise d'effet, maladies à premières manifestations antérieures, malformations congénitales connues : exclus des garanties incapacité/invalidité/GIS. EXCEPTIONS : droit à l'oubli ; assurés dispensés d'acceptation médicale (Lemoine) ; antériorités déclarées et non exclues aux conditions particulières.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 21,
+      "section": "Article 7.2 État antérieurs"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)",
+     "description": "Exclusion de principe de l'incapacité/invalidité consécutive aux troubles psychologiques (liste large incl. burn/bore/brown out, dépression post-partum), asthénie/fibromyalgie, et affections disco-vertébrales (hernie discale, discopathie, lombalgie, sciatique…, sauf fracture sans pathologie osseuse). RACHATS sans option : psy et asthénie/fibromyalgie indemnisées si hospitalisation continue ≥ 30 jours en établissement spécialisé (hors cure de repos), franchise 90 jours dès le 1er jour d'hospitalisation ; disco-vertébrales si hospitalisation continue ≥ 15 jours (hors centre de rééducation), franchise 30 jours. Avec OPTION Psy/Dos+ : prise en charge sans condition d'hospitalisation (psy : franchise 90 jours ; dos : franchise 30 jours - ou franchise du contrat si supérieure).",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 21,
+      "section": "Article 7.2 Affections psychologiques"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Cures et esthétique",
+     "description": "Cures thermales/marines/rajeunissement/amaigrissement/désintoxication et maisons de repos : exclues de l'incapacité (et leurs conséquences). Traitements esthétiques, chirurgie esthétique, malformations constitutionnelles : exclus incapacité/invalidité/PTIA (et conséquences).",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 22,
+      "section": "Article 7.2 Cures"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ma_retraite",
+   "nom": "Ma Retraite",
+   "aliases": [
+    "Ma Retraite",
+    "Ma retraite",
+    "PER Ma Retraite",
+    "Ma Retraite (plan d'épargne retraite individuel - PER)",
+    "ma_retraite_plan_d_pargne_retraite_individuel_per",
+    "ma_retraite"
+   ],
+   "domaines": [
+    "retraite"
+   ],
+   "definitions": [
+    {
+     "terme": "Compartiments 1/2/3",
+     "definition": "1 : versements volontaires et transferts de contrats individuels ; 2 : épargne salariale transférée (participation, intéressement, PPV, CET…) ; 3 : versements obligatoires transférés (sortie en rente uniquement).",
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 6,
+      "section": "3.4"
+     }
+    },
+    {
+     "terme": "Fonds Croissance",
+     "definition": "Support eurocroissance en coassurance AXA France Vie / AXA Assurances Vie Mutuelle (provision de diversification), garanti à l'échéance ; risque de perte en capital avant l'échéance ; participation aux résultats 100 % du solde du compte (hebdomadaire), attributions de parts possibles ; provision collective de diversification différée à affecter sous 15 ans (réglementation au 01/04/2026) ; en cas de baisse de l'épargne en gestion personnelle à l'échéance, arbitrage sans frais vers un support défini par A134-6 ; en gestion Activ'Retraite Croissance, prorogation de 5 ans de la garantie (100 % du net investi).",
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 24,
+      "section": "8.1"
+     }
+    },
+    {
+     "terme": "Garantie Protection Retraite",
+     "definition": "Chaque versement acquiert une fraction de rente calculée sur la table de mortalité en vigueur À LA DATE DU VERSEMENT (taux technique nul) - les fractions acquises ne sont pas affectées par un changement ultérieur de table. Ne s'applique qu'à la rente versée à l'adhérent (pas au réversataire).",
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 11,
+      "section": "5.1.3"
+     }
+    }
+   ],
+   "conditions_souscription": [
+    {
+     "texte": "Adhésion réservée aux adhérents ANPERE Retraite ; prise d'effet à réception du Bulletin signé + 1er versement + contrôle de l'origine des fonds + encaissement. L'âge envisagé de départ détermine l'échéance, la gestion Activ'Retraite Croissance et l'échéance du fonds Croissance (modifiable par avenant).",
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 9,
+      "section": "4."
+     }
+    },
+    {
+     "texte": "Versements réguliers : minima 45 €/mois à 600 €/an, plafond 24 000 € par année d'adhésion ; complémentaires ≥ 500 €.",
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 14,
+      "section": "6.1"
+     }
+    }
+   ],
+   "faits": [
+    {
+     "categorie": "garantie",
+     "titre": "En cas de vie - sortie en capital",
+     "description": "À l'échéance (et sous réserve de liquidation effective de la retraite ou d'atteinte de l'âge légal) : délivrance de tout ou partie des droits des compartiments 1 et 2 en capital, en une fois ou fractionné ; versement partiel ≥ 750 €, solde restant > 750 €. Pas de frais de sortie en capital. Interdit si option expresse et irrévocable pour la rente.",
+     "declencheurs": [
+      "échéance + âge légal ou liquidation effective"
+     ],
+     "plafonds": [
+      "min 750 € par versement partiel et solde > 750 €"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 10,
+      "section": "5.1.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "En cas de vie - sortie en rente viagère",
+     "description": "Rente trimestrielle à terme échu (effet le 1er jour du mois suivant l'échéance demandée), calculée selon âge, option de rente, âge du réversataire et taux de réversion, frais de service de 1 % par arrérage, conditions tarifaires garanties au moment de chaque investissement (Protection Retraite). Options : réversion 60 % ou 100 % ; annuités garanties (versées quoi qu'il arrive sur la période, bénéficiaire désigné irrévocablement) ; réversion temporaire (≥ 10 ans) ; rente majorée ou minorée pendant la première période. Trop-perçu post-décès remboursé. Compartiment 3 : rente obligatoire.",
+     "declencheurs": [
+      "échéance + âge légal ou liquidation effective"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 10,
+      "section": "5.1.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "En cas de décès avant liquidation totale",
+     "description": "Prestation aux bénéficiaires en capital ou en rente : capital = épargne (tous supports) ou montant de la garantie « Sérénité ». Bénéficiaire majeur : rente viagère ou temporaire ≥ 10 ans ; bénéficiaire mineur : rente temporaire d'éducation jusqu'à 25 ans. Versement sous 1 mois après réception des pièces. Met fin à l'adhésion. Versements réguliers et arbitrages Activ'Retraite arrêtés au traitement de l'acte de décès.",
+     "declencheurs": [
+      "décès de l'assuré avant liquidation totale"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 12,
+      "section": "5.2"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Garantie « Sérénité » (plancher décès, incluse)",
+     "description": "Si décès avant 80 ans : capital décès (ou capital constitutif de rente) ≥ cumul des versements bruts de frais − rachats (rachats exceptionnels, sorties partielles en capital ou en rente à hauteur du capital constitutif). Coût inclus dans les frais de gestion UC, prélevé toute la durée y compris après 80 ans.",
+     "declencheurs": [
+      "incluse automatiquement",
+      "décès avant le 80e anniversaire"
+     ],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 13,
+      "section": "5.2 Garantie « Sérénité »"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Garanties de fidélité",
+     "description": "Le contrat ne comporte pas de garantie de fidélité (hors offres commerciales ponctuelles).",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 26,
+      "section": "8.3"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Indisponibilité de l'épargne",
+     "description": "Aucun rachat avant l'échéance hors les cas de l'art. L224-4 CMF : décès du conjoint/partenaire PACS ; invalidité (2°/3° L341-4 CSS) de l'adhérent, ses enfants, son conjoint/partenaire ; surendettement (L711-1 C. conso) ; expiration des droits au chômage (ou dirigeants non renouvelés sans contrat/mandat depuis ≥ 2 ans) ; liquidation judiciaire de l'activité non salariée (ou décision du président du tribunal de commerce en conciliation) ; affectation à l'acquisition de la RÉSIDENCE PRINCIPALE (sauf compartiment 3). Rachat total = fin de l'adhésion ; versement sous 2 mois ; aucun frais de rachat exceptionnel.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 27,
+      "section": "9.1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "entour_age",
+   "nom": "Entour'Age",
+   "aliases": [
+    "Entour'Age",
+    "EntourAge",
+    "Entourage",
+    "entourage",
+    "entour_age"
+   ],
+   "domaines": [
+    "prévoyance"
+   ],
+   "definitions": [
+    {
+     "terme": "Actes de la Vie Quotidienne (AVQ)",
+     "definition": "5 actes de référence : transfert (debout/assis/couché dans les 2 sens), déplacement à l'intérieur, alimentation (manger des aliments préalablement servis et coupés, boire), toilette (corps + hygiène de l'élimination), habillage.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 12,
+      "section": "2.1.1"
+     }
+    },
+    {
+     "terme": "Grille AGGIR / GIR 1-6",
+     "definition": "Outil national d'évaluation de la dépendance (GIR 1 = dépendance la plus lourde, GIR 6 = autonomie). L'état de dépendance classé GIR 5 ou 6 n'est JAMAIS garanti par AXA.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "section": "2.1.2 / 2.2"
+     }
+    },
+    {
+     "terme": "Test Folstein",
+     "definition": "Test d'évaluation de la dépendance psychique, réalisé par le neurologue ou psychiatre traitant ; disponible sur demande auprès d'AXA Assistance.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 12,
+      "section": "2.1.3"
+     }
+    },
+    {
+     "terme": "Dépendance Totale",
+     "definition": "2 conditions cumulatives : (1) état de santé justifiant définitivement l'assistance d'une tierce personne ; (2) selon la nature : physique = incapacité d'exercer seule ≥ 4 des 5 AVQ ; psychique = démence diagnostiquée avec Folstein ≤ 10 ET incitation nécessaire pour ≥ 2 AVQ ; mixte = démence avec Folstein ≤ 15 ET incapacité pour ≥ 3 AVQ. État consolidé, permanent, reconnu par le Médecin Conseil d'AXA.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "section": "2.2.1"
+     }
+    },
+    {
+     "terme": "Dépendance Partielle",
+     "definition": "2 conditions cumulatives : (1) GIR 1, 2 ou 3 ; (2) physique = incapacité pour ≥ 3 des 5 AVQ, ou psychique = démence diagnostiquée avec Folstein < 15.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "section": "2.2.2"
+     }
+    },
+    {
+     "terme": "Dépendance Légère",
+     "definition": "(Pour le Capital Premiers Frais en Formule Totale et Partielle) : GIR 1-4 ET physique = incapacité pour ≥ 2 des 5 AVQ ou psychique = démence avec Folstein < 18. Score évalué par le Médecin Conseil d'AXA.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "section": "2.2.3"
+     }
+    }
+   ],
+   "conditions_souscription": [
+    {
+     "texte": "Conditions cumulatives : résider en France métropolitaine, à Monaco ou dans un DOM ; être ou devenir membre ANPERE (droits d'adhésion) ; se soumettre aux formalités médicales demandées ; avoir entre 40 et 75 ans inclus à la signature (âge par différence de millésimes).",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 6,
+      "section": "1.1.2.1 Admissibilité"
+     }
+    },
+    {
+     "texte": "Rente à choisir entre 500 et 3 000 €/mois ; choix de formule (Totale seule ou Totale et Partielle) ; tarification particulière possible pour risque aggravé.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 6,
+      "section": "1.1.2.2 a)"
+     }
+    },
+    {
+     "texte": "Modifications en cours d'adhésion : possibles à partir de la 3e année pleine, à jour des cotisations, assuré non dépendant ; amélioration de garanties : assuré ≤ 75 ans, acceptation d'AXA, nouveau délai d'attente sur les garanties supplémentaires.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 8,
+      "section": "1.1.3"
+     }
+    }
+   ],
+   "faits": [
+    {
+     "categorie": "garantie",
+     "titre": "Rente viagère dépendance (garantie principale obligatoire)",
+     "description": "Rente mensuelle versée tant que dure l'état de dépendance garanti. Montant en dépendance totale = montant souscrit (500 à 3 000 €/mois) × taux de revalorisation depuis l'adhésion × le cas échéant coefficient de réduction (si résiliation après ≥ 8 ans). En Formule Totale et Partielle : 50 % du montant en dépendance partielle ; la rente totale se substitue intégralement à la rente partielle si l'état s'aggrave (nouveau dossier requis). Versée mensuellement à terme échu, après franchise absolue de 3 mois (à compter du 91e jour suivant la reconnaissance). Cesse au décès ou en cas de sortie de l'état de dépendance garanti. Justificatif d'existence annuel possible. Revalorisation annuelle des rentes en service (au plus tard au 1er avril, décision du comité paritaire).",
+     "declencheurs": [
+      "reconnaissance de l'état de dépendance par le Médecin Conseil d'AXA",
+      "expiration du délai d'attente (sauf origine accidentelle)",
+      "franchise absolue de 3 mois"
+     ],
+     "plafonds": [
+      "rente choisie entre 500 et 3 000 €/mois",
+      "GIR 5/6 jamais garanti"
+     ],
+     "franchises": [
+      "franchise absolue 3 mois (91e jour)",
+      "délai d'attente 1 an (maladie) / 3 ans (maladies neurologiques, neurodégénératives ou psychiatriques) / aucun si dépendance d'origine accidentelle postérieure à l'adhésion"
+     ],
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 21,
+      "section": "4.3.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Services dès l'adhésion « ENTREAIDANTS »",
+     "description": "Site entreaidants.fr ; renseignements téléphoniques personnalisés 24/7 (prévention, santé, juridique, démarches dépendance « Mon assistante dédiée », aide à la constitution de dossiers APA etc.) ; garanties hospitalisation (> 24 h, ou < 24 h avec chirurgie hanche/bras/jambe/pied/main, ou chimio/radiothérapie) ou immobilisation > 4 jours : aide-ménagère/garde-malade 20 h max (min 2 h consécutives) plafonnée à 500 € TTC (demande sous 8 jours), garde/transfert animaux (2 max, 250 € TTC), visite d'un proche (transport A/R + hôtel 50 €/nuit max 250 € si aucun proche à moins de 50 km), livraison de médicaments (coût des médicaments à charge), livraison de repas (7 jours max, 1 repas/jour, demande sous 30 jours) - limite : 1 intervention par année civile ; aide aux aidants si parent/conjoint en GIR 1-4 percevant l'APA (ou < 60 ans : invalidité 2e/3e catégorie, majoration tierce personne AT, AAH avec IP ≥ 80 %) ; téléassistance : contrat séparé avec -15 % sur le tarif public et frais d'installation offerts.",
+     "declencheurs": [
+      "dès la prise d'effet de l'adhésion"
+     ],
+     "plafonds": [
+      "voir détail par prestation"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 16,
+      "section": "3.3.1"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Services d'assistance dédiés en perte d'autonomie",
+     "description": "Bilan initial de situation de dépendance à domicile (1 seul par assuré pendant l'adhésion) ; « projet de vie personnalisé » ; bilan d'adaptation du domicile par ergothérapeute/professionnel du bâtiment pris en charge jusqu'à 500 € TTC ; suivi de la qualité de vie.",
+     "declencheurs": [
+      "état de dépendance reconnu"
+     ],
+     "plafonds": [
+      "bilan d'adaptation du domicile : 500 € TTC",
+      "1 bilan initial par adhésion"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 23,
+      "section": "4.4.3"
+     }
+    },
+    {
+     "categorie": "garantie",
+     "titre": "Services pour l'aidant de l'assuré",
+     "description": "Informations/conseils identiques à l'assuré ; organisation de services à la personne et recherche de fournisseurs (coûts non pris en charge) ; hospitalisation imprévue > 24 h de l'aidant : aide-ménagère/auxiliaire de vie 20 h max plafonnée à 500 € TTC, 1 intervention/année civile, demande sous 8 jours ; besoin de répit de l'aidant : auxiliaire de vie (7 jours/an max, 6 h/jour max) et/ou hébergement temporaire (7 jours/an, transport 100 €/an) dans la limite GLOBALE de 1 000 € TTC/an ; aide à l'hébergement en établissement (recherche 3 établissements, 2 visites prises en charge max 200 € au total, aide au déménagement - coût non pris en charge) ; soutien psychologique de l'aidant : 3 entretiens téléphoniques/an.",
+     "declencheurs": [
+      "selon prestation : dépendance de l'assuré reconnue, ou rôle d'aidant"
+     ],
+     "plafonds": [
+      "répit : 1 000 € TTC/an ; visites d'établissements : 200 € ; transport hébergement temporaire : 100 €/an"
+     ],
+     "franchises": [],
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 25,
+      "section": "5.2.4"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Exclusions générales (dépendance et décès)",
+     "description": "Tentative de suicide de l'assuré (le suicide étant également exclu la 1re année pour la garantie Décès) ; guerres civiles en France ou guerres étrangères auxquelles la France participe, invasions, agressions étrangères, hostilités contre la France ; participation active à guerre civile, guerre sans la France, rébellion, révolution, insurrection, prise de pouvoir, mouvement populaire, émeute, terrorisme - légitime défense, assistance à personne en danger et accomplissement du devoir professionnel restant garantis.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 29,
+      "section": "7.1 Exclusions"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "Dépendance suite à accidents - cas exclus",
+     "description": "Fait intentionnel de l'assuré ; activité sportive non représentée par une fédération, sans respect des règles élémentaires de sécurité, ou à titre professionnel ; navigation aérienne (appareil sans certificat de navigabilité valable ou pilote non breveté/licence périmée ; parachute, deltaplane, parapente, ULM ou assimilé ; meeting, raid sportif, vol acrobatique, tentative de record, essais, saut en parachute non motivé par la sécurité) ; conséquences directes ou indirectes d'une transmutation de noyaux d'atomes ou de la radioactivité. La charge de la preuve des exclusions incombe à l'assureur.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 29,
+      "section": "7.1"
+     }
+    },
+    {
+     "categorie": "exclusion",
+     "titre": "GIR 5 et 6",
+     "description": "L'état de dépendance avec classement GIR 5 ou 6 n'est jamais garanti.",
+     "declencheurs": [],
+     "plafonds": [],
+     "franchises": [],
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "section": "2.2"
+     }
+    }
+   ]
+  },
+  {
+   "id": "essen_ciel_patrimoine",
+   "nom": "Essen'Ciel Patrimoine",
+   "aliases": [
+    "Essen'Ciel Patrimoine",
+    "EssenCiel Patrimoine",
+    "Essenciel Patrimoine",
+    "essenciel_patrimoine",
+    "essen_ciel_patrimoine"
+   ],
+   "domaines": [
+    "prévoyance"
+   ],
+   "definitions": [],
+   "conditions_souscription": [],
+   "faits": []
+  }
+ ],
+ "glossaire": [
+  {
+   "terme": "Accident",
+   "entrees": [
+    {
+     "contrat": "Avizen",
+     "definition": "Atteinte corporelle non intentionnelle provenant directement de l'action soudaine et imprévisible d'une cause extérieure. NE SONT PAS des accidents : atteintes musculaires/tendineuses/ligamentaires et affections du rachis liées à une altération de santé préexistante ; ruptures du tendon d'Achille et fractures de fatigue ; pathologies cardiaques et affections vasculaires ; chocs émotifs et états dépressifs même consécutifs à un accident. La prise en charge en accident du travail par le régime obligatoire ne prévaut pas sur cette définition.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 34,
+      "section": "6. Définitions - Accident"
+     }
+    },
+    {
+     "contrat": "Avizen Pro",
+     "definition": "Identique à Avizen : atteinte corporelle non intentionnelle d'une cause extérieure soudaine et imprévisible ; exclusions de qualification (rachis, tendons, tendon d'Achille, fractures de fatigue, pathologies cardiaques/vasculaires, chocs émotifs/dépression) ; la qualification AT du régime obligatoire ne prévaut pas.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 50,
+      "section": "6. Définitions"
+     }
+    },
+    {
+     "contrat": "EssenCiel",
+     "definition": "Atteinte corporelle non intentionnelle provenant de l'action soudaine, violente et imprévisible d'une cause extérieure. Les affections de la colonne vertébrale, pathologies cardiaques (avec ou sans coronaropathies), chocs émotifs et états dépressifs sont considérés comme des MALADIES.",
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 47,
+      "section": "13. Définitions - Accident"
+     }
+    },
+    {
+     "contrat": "Ma Protection Accident",
+     "definition": "Toute atteinte corporelle non intentionnelle de la part de l'assuré, provenant de l'action soudaine, violente et imprévisible d'une cause extérieure qui cause des lésions corporelles ou le décès.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 25,
+      "section": "7. Définitions"
+     }
+    },
+    {
+     "contrat": "MasterLife Credit",
+     "definition": "Atteinte corporelle non intentionnelle provenant directement de l'action soudaine et imprévisible d'une cause extérieure. L'infarctus du myocarde, les affections coronariennes, affections soudaines, affections dues à un choc émotif ou à un surmenage et les dépressions sont des MALADIES, pas des accidents.",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 4,
+      "section": "Définitions - Accident"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Accident médical",
+   "entrees": [
+    {
+     "contrat": "Ma Protection Accident",
+     "definition": "Acte ou ensemble d'actes de caractère médical ayant eu sur l'assuré des conséquences dommageables pour sa santé, pratiqué par des médecins/auxiliaires médicaux ou praticiens autorisés.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 25,
+      "section": "7. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Actes de la Vie Quotidienne (AVQ)",
+   "entrees": [
+    {
+     "contrat": "Entour'Age",
+     "definition": "5 actes de référence : transfert (debout/assis/couché dans les 2 sens), déplacement à l'intérieur, alimentation (manger des aliments préalablement servis et coupés, boire), toilette (corps + hygiène de l'élimination), habillage.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 12,
+      "section": "2.1.1"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Bénéficiaire",
+   "entrees": [
+    {
+     "contrat": "Ma Protection Accident",
+     "definition": "En cas de DFP : l'assuré victime lui-même. En cas de décès : enfant, conjoint ou membres de la famille couverts par le même contrat justifiant un préjudice direct, à l'exception des personnes ayant causé volontairement les dommages.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 25,
+      "section": "7. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Bénéficiaires",
+   "entrees": [
+    {
+     "contrat": "EssenCiel",
+     "definition": "(1) à hauteur des frais d'obsèques : la personne physique ou l'entreprise de pompes funèbres ayant pris en charge les obsèques, sur factures ; (2) à défaut ou pour le solde : bénéficiaires subsidiaires désignés par l'adhérent.",
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 47,
+      "section": "13. Définitions - Bénéficiaires"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Capital sous risque (garantie Revalorisée)",
+   "entrees": [
+    {
+     "contrat": "Excelium",
+     "definition": "Différence positive entre le montant garanti et la valeur de l'épargne au dernier jour du mois.",
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 17,
+      "section": "4.2.2"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Compartiments 1/2/3",
+   "entrees": [
+    {
+     "contrat": "Ma Retraite",
+     "definition": "1 : versements volontaires et transferts de contrats individuels ; 2 : épargne salariale transférée (participation, intéressement, PPV, CET…) ; 3 : versements obligatoires transférés (sortie en rente uniquement).",
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 6,
+      "section": "3.4"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Conjoint",
+   "entrees": [
+    {
+     "contrat": "Ma Protection Accident",
+     "definition": "Conjoint non séparé de corps ou concubin (Pacs ou non) du souscripteur, résidant sous son toit à l'adresse des Conditions particulières.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 26,
+      "section": "7. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Consolidation",
+   "entrees": [
+    {
+     "contrat": "Avizen",
+     "definition": "Stabilisation d'un état de santé après accident ou maladie, laissant subsister des séquelles et n'étant plus susceptible d'aggravation ou d'évolution notable.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 34,
+      "section": "6. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Date de consolidation",
+   "entrees": [
+    {
+     "contrat": "Ma Protection Accident",
+     "definition": "Date à laquelle les dommages corporels ont médicalement acquis un caractère permanent tel qu'un traitement n'est plus nécessaire si ce n'est pour éviter une aggravation, et qu'il devient possible de déterminer les séquelles.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 26,
+      "section": "7. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Déficit fonctionnel permanent (DFP)",
+   "entrees": [
+    {
+     "contrat": "Ma Protection Accident",
+     "definition": "Séquelles permanentes gardées à la suite de l'accident : réduction définitive du potentiel physique, psycho-sensoriel ou intellectuel, douleurs pérennes et répercussions psychologiques liées.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 26,
+      "section": "7. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Délai d'attente",
+   "entrees": [
+    {
+     "contrat": "Avizen",
+     "definition": "Période pendant laquelle les garanties ne s'appliquent pas, malgré la prise d'effet de l'adhésion ou de l'avenant d'augmentation.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 35,
+      "section": "6. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Dépendance Légère",
+   "entrees": [
+    {
+     "contrat": "Entour'Age",
+     "definition": "(Pour le Capital Premiers Frais en Formule Totale et Partielle) : GIR 1-4 ET physique = incapacité pour ≥ 2 des 5 AVQ ou psychique = démence avec Folstein < 18. Score évalué par le Médecin Conseil d'AXA.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "section": "2.2.3"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Dépendance Partielle",
+   "entrees": [
+    {
+     "contrat": "Entour'Age",
+     "definition": "2 conditions cumulatives : (1) GIR 1, 2 ou 3 ; (2) physique = incapacité pour ≥ 3 des 5 AVQ, ou psychique = démence diagnostiquée avec Folstein < 15.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "section": "2.2.2"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Dépendance Totale",
+   "entrees": [
+    {
+     "contrat": "Entour'Age",
+     "definition": "2 conditions cumulatives : (1) état de santé justifiant définitivement l'assistance d'une tierce personne ; (2) selon la nature : physique = incapacité d'exercer seule ≥ 4 des 5 AVQ ; psychique = démence diagnostiquée avec Folstein ≤ 10 ET incitation nécessaire pour ≥ 2 AVQ ; mixte = démence avec Folstein ≤ 15 ET incapacité pour ≥ 3 AVQ. État consolidé, permanent, reconnu par le Médecin Conseil d'AXA.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "section": "2.2.1"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Enfants",
+   "entrees": [
+    {
+     "contrat": "Ma Protection Accident",
+     "definition": "Enfants du souscripteur/conjoint résidant sous son toit ; enfants mineurs même hors du toit ; enfants majeurs célibataires de moins de 26 ans poursuivant leurs études.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 26,
+      "section": "7. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Fonds Croissance",
+   "entrees": [
+    {
+     "contrat": "Excelium",
+     "definition": "Engagements donnant lieu à constitution d'une provision de diversification : garantie en capital à l'ÉCHÉANCE égale à 100 % des sommes versées nettes de frais sur versements ; valeur de part fluctuante entre-temps ; durée initiale de garantie 10 ans, prorogeable (l'assureur peut refuser la prorogation jusqu'à 3 mois avant l'échéance).",
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 2,
+      "section": "Encadré + 5.2"
+     }
+    },
+    {
+     "contrat": "Ma Retraite",
+     "definition": "Support eurocroissance en coassurance AXA France Vie / AXA Assurances Vie Mutuelle (provision de diversification), garanti à l'échéance ; risque de perte en capital avant l'échéance ; participation aux résultats 100 % du solde du compte (hebdomadaire), attributions de parts possibles ; provision collective de diversification différée à affecter sous 15 ans (réglementation au 01/04/2026) ; en cas de baisse de l'épargne en gestion personnelle à l'échéance, arbitrage sans frais vers un support défini par A134-6 ; en gestion Activ'Retraite Croissance, prorogation de 5 ans de la garantie (100 % du net investi).",
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 24,
+      "section": "8.1"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "France",
+   "entrees": [
+    {
+     "contrat": "EssenCiel",
+     "definition": "France métropolitaine + DROM (Guadeloupe, Guyane, Martinique, Mayotte, La Réunion).",
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 48,
+      "section": "13. Définitions - France"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Franchise",
+   "entrees": [
+    {
+     "contrat": "Avizen",
+     "definition": "Période entre la survenance de l'événement ouvrant droit à indemnisation et le début de l'indemnisation. Plusieurs niveaux disponibles ; choix précisé au certificat d'adhésion. Ne concerne que les IJ d'ITT et l'exonération en cas d'ITT.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 35,
+      "section": "6. Définitions - Franchise"
+     }
+    },
+    {
+     "contrat": "MasterLife Credit",
+     "definition": "Période entre l'événement et le début de l'indemnisation ; plusieurs niveaux, choix aux conditions particulières ; ne concerne que l'incapacité de travail.",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 4,
+      "section": "Définitions - Franchise"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Garantie Protection Retraite",
+   "entrees": [
+    {
+     "contrat": "Ma Retraite",
+     "definition": "Chaque versement acquiert une fraction de rente calculée sur la table de mortalité en vigueur À LA DATE DU VERSEMENT (taux technique nul) - les fractions acquises ne sont pas affectées par un changement ultérieur de table. Ne s'applique qu'à la rente versée à l'adhérent (pas au réversataire).",
+     "source": {
+      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 11,
+      "section": "5.1.3"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Grille AGGIR / GIR 1-6",
+   "entrees": [
+    {
+     "contrat": "Entour'Age",
+     "definition": "Outil national d'évaluation de la dépendance (GIR 1 = dépendance la plus lourde, GIR 6 = autonomie). L'état de dépendance classé GIR 5 ou 6 n'est JAMAIS garanti par AXA.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "section": "2.1.2 / 2.2"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Hospitalisation (assistance)",
+   "entrees": [
+    {
+     "contrat": "Avizen Pro",
+     "definition": "Hospitalisation imprévue > 24 h, ou < 24 h incluant chirurgie de la hanche/bras/jambe/pied/main entraînant invalidité temporaire, ou traitement de chimiothérapie/radiothérapie.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 31,
+      "section": "3.1 Définitions spécifiques"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Incapacité temporaire totale de travail",
+   "entrees": [
+    {
+     "contrat": "MasterLife Credit",
+     "definition": "Arrêt total et temporaire de la profession (maladie/accident), médicalement constaté. Chômeur ou sans activité non retraité : incapacité totale d'effectuer ses activités habituelles NON professionnelles. Congé légal de maternité exclu de la notion.",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 5,
+      "section": "Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Incapacité temporaire totale de travail (ITT)",
+   "entrees": [
+    {
+     "contrat": "Avizen",
+     "definition": "État de santé médicalement constaté obligeant à arrêter totalement et temporairement l'activité professionnelle (maladie ou accident). La période de droit aux IJ maternité du régime obligatoire n'est pas de l'ITT, même en cas de renonciation à ce droit.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 35,
+      "section": "6. Définitions - ITT toutes causes"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Invalidité fonctionnelle",
+   "entrees": [
+    {
+     "contrat": "Avizen",
+     "definition": "Établie d'après le barème des accidents du travail de la Sécurité sociale, sans tenir compte de l'incidence professionnelle.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 35,
+      "section": "6. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Invalidité Permanente Totale (IPT)",
+   "entrees": [
+    {
+     "contrat": "Avizen",
+     "definition": "Taux d'invalidité fonctionnelle égal à 100 % (barème accidents du travail de la Sécurité sociale) ET reconnaissance définitive d'incapacité à se livrer à la moindre activité professionnelle procurant gain ou profit. Le classement en 2e catégorie Sécurité sociale ne suffit pas à lui seul.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 36,
+      "section": "6. Définitions - IPT"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Invalidité professionnelle",
+   "entrees": [
+    {
+     "contrat": "Avizen Pro",
+     "definition": "Définie par expertise amiable, appréciée de 0 à 100 % d'après la nature de l'invalidité par rapport à la profession indiquée au certificat ET toujours exercée au moment du sinistre ; tient compte de l'exercice antérieur, des conditions normales d'exercice, des capacités restantes, des possibilités d'adaptation et des répercussions sur les revenus. Charge de la preuve sur l'assuré.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 18,
+      "section": "2.2.5 c)1 - Invalidité professionnelle"
+     }
+    },
+    {
+     "contrat": "MasterLife Credit",
+     "definition": "Définie par expertise, 0-100 %, par rapport à la profession exercée ; indépendante de la position de la Sécurité sociale (la reconnaissance par un organisme ne s'impose pas à l'assureur).",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 5,
+      "section": "Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "IPT",
+   "entrees": [
+    {
+     "contrat": "Avizen Pro",
+     "definition": "Taux d'invalidité fonctionnelle = 100 % + incapacité définitive à toute activité professionnelle rémunératrice ; le classement 2e catégorie Sécurité sociale ne suffit pas (chapitre Définitions).",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 52,
+      "section": "6. Définitions - IPT"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Maladie grave (assistance)",
+   "entrees": [
+    {
+     "contrat": "Avizen Pro",
+     "definition": "Cancer, infarctus du myocarde, Parkinson, sclérose en plaques, maladies coronariennes, AVC, insuffisance rénale, greffe d'organe, SLA - premier diagnostic par spécialiste inscrit à l'Ordre, distinct du bénéficiaire et de sa famille directe.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 31,
+      "section": "3.1"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Membre de la famille",
+   "entrees": [
+    {
+     "contrat": "EssenCiel",
+     "definition": "Conjoint ou partenaire PACS de l'assuré ; leurs enfants et ascendants jusqu'au 2e degré.",
+     "source": {
+      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 48,
+      "section": "13. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Non-fumeur",
+   "entrees": [
+    {
+     "contrat": "Avizen",
+     "definition": "Personne n'ayant pas fumé (cigarettes, e-cigarettes, cigares, pipes) au cours des 24 derniers mois et non dépendante d'un traitement de sevrage tabagique sur cette période. Abattement tarifaire sur capital décès/IPT toutes causes, rente éducation et rente décès/IPT.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 36,
+      "section": "6. Définitions - Non-fumeur"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Pays sensibles",
+   "entrees": [
+    {
+     "contrat": "Avizen",
+     "definition": "Pays comportant des zones « formellement déconseillées ou déconseillées sauf raison impérative » par le ministère français des Affaires étrangères.",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 36,
+      "section": "6. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Pratique occasionnelle",
+   "entrees": [
+    {
+     "contrat": "Avizen",
+     "definition": "Pratique non régulière, exercée ne serait-ce qu'une fois dans l'année (hors baptêmes).",
+     "source": {
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 36,
+      "section": "6. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "PTIA",
+   "entrees": [
+    {
+     "contrat": "MasterLife Credit",
+     "definition": "Reconnu avant le 70e anniversaire définitivement incapable de toute occupation/travail rémunérateur + taux d'invalidité fonctionnelle = 100 % (barème AT SS). Tierce personne exigée entre 60 et 70 ans ; non exigée avant 60 ans.",
+     "source": {
+      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 5,
+      "section": "Définitions - PTIA"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Seuil d'intervention",
+   "entrees": [
+    {
+     "contrat": "Ma Protection Accident",
+     "definition": "Taux de déficit fonctionnel permanent en deçà duquel l'assureur n'intervient pas, pour quelque préjudice que ce soit. Il s'élève à 1 %.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 26,
+      "section": "7. Définitions + 1.1"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Souscripteur",
+   "entrees": [
+    {
+     "contrat": "Ma Protection Accident",
+     "definition": "Personne désignée aux Conditions particulières ; doit avoir plus de 18 ans et résidence principale + foyer fiscal en France métropolitaine, Guadeloupe, Guyane, Réunion, Mayotte ou Martinique pendant toute la vie du contrat.",
+     "source": {
+      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 27,
+      "section": "7. Définitions"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Taux d'invalidité croisé",
+   "entrees": [
+    {
+     "contrat": "Avizen Pro",
+     "definition": "Combine l'invalidité fonctionnelle (barème AT Sécurité sociale, sans incidence professionnelle) et l'invalidité professionnelle, selon le tableau croisé contractuel.",
+     "source": {
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 19,
+      "section": "2.2.5 c)1"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Test Folstein",
+   "entrees": [
+    {
+     "contrat": "Entour'Age",
+     "definition": "Test d'évaluation de la dépendance psychique, réalisé par le neurologue ou psychiatre traitant ; disponible sur demande auprès d'AXA Assistance.",
+     "source": {
+      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 12,
+      "section": "2.1.3"
+     }
+    }
+   ]
+  },
+  {
+   "terme": "Versements nets",
+   "entrees": [
+    {
+     "contrat": "Excelium",
+     "definition": "Versements bruts moins droits d'adhésion, frais de dossier et frais sur versements.",
+     "source": {
+      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "section": "4.2.2 note (1)"
+     }
+    }
+   ]
+  }
+ ]
+}

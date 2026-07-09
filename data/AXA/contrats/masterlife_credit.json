@@ -1,0 +1,2267 @@
+{
+  "meta": {
+    "type": "contrat_axa_dedie",
+    "slug": "masterlife_credit",
+    "schema_version": "2.0_enrichi",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "source": "data/AXA/base_connaissances_contractuelle/Contrat_masterlife_credit/",
+    "avertissement": "Enrichi depuis l'extraction tracée. La notice PDF fait foi. requires_pdf_check=true => vérifier le tableau/barème en notice.",
+    "genere_le": "2026-06-19",
+    "qa_version": "2.1",
+    "qa_date": "2026-06-19"
+  },
+  "contrat": {
+    "id": "axa_masterlife_credit_2024-10",
+    "nom": "Masterlife CREDIT",
+    "famille": "assurance_emprunteur",
+    "type_contrat": "notice_information_convention_groupe_adhesion_facultative",
+    "assureur": "AXA France Vie ou AXA Assurances Vie Mutuelle ; souscripteur du groupe : ANPERE ; gestion déléguée : ADIS (SA de courtage, filiale 100 % AXA France Vie, 12 av. Pierre Mendès France, CS 10144, 67312 Schiltigheim Cedex)",
+    "version": "Octobre 2024 — convention références 5514-13, 5514-14",
+    "date": "2024-10",
+    "resume_neutre": "Assurance emprunteur couvrant, au titre du prêt mentionné aux conditions particulières et à concurrence de la quotité assurée : décès (capital restant dû), PTIA (capital restant dû à la consolidation, avant 70 ans), incapacité temporaire totale de travail (IJ jusqu'à 1/30e de la mensualité, max 1 095 jours), invalidité totale ou partielle (barème croisé fonctionnel × professionnel, seuil 33 %, plein à 66 %), invalidité spécifique AERAS (sur proposition de l'assureur), garantie aide à la famille (AJPP) et exonération/remboursement des cotisations. Deux tarifications au choix irrévocable : constante ou sur capital restant dû. Bénéficiaire par défaut : l'organisme prêteur à hauteur du capital restant dû."
+  },
+  "pdfs": [
+    {
+      "type_document": "notice",
+      "path": "data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "pages": 29
+    }
+  ],
+  "garanties": [
+    {
+      "id": "masterlife_credit.d_c_s",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Décès",
+      "resume_conseiller": "Capital égal au montant restant dû au jour du décès (quelle qu'en soit la cause), à concurrence de la quotité assurée, versé aux bénéficiaires.",
+      "texte_metier_exploitable": "Capital égal au montant restant dû au jour du décès (quelle qu'en soit la cause), à concurrence de la quotité assurée, versé aux bénéficiaires. Échéances impayées antérieures au décès exclues. Co-emprunteurs décédés simultanément : versement total plafonné au restant dû du prêt. Règlement sous 10 jours après pièces (avec accord de prise en charge ADIS).",
+      "conditions_application": [
+        "décès avant le 85e anniversaire (âge limite de la garantie)"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "masterlife_credit.d_c_s_suicide",
+        "masterlife_credit.d_c_s_guerre_meutes_crimes",
+        "masterlife_credit.sports_et_activit_s_exclus_sauf_acceptation",
+        "masterlife_credit.ptia_incapacit_invalidit_exclusions",
+        "masterlife_credit.tats_ant_rieurs",
+        "masterlife_credit.affections_psychologiques_asth_nie_fibromyalgie_",
+        "masterlife_credit.cures_et_esth_tique"
+      ],
+      "points_vigilance": [
+        "capital restant dû × quotité assurée"
+      ],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 12,
+        "section": "Article 3.1",
+        "extrait_reference": "Un capital égal au montant restant dû le jour du décès",
+        "pages": [
+          12
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.d_c_s",
+      "detail_path": "contrats.masterlife_credit.details.d_c_s",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 12,
+      "source_section": "Article 3.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "garantie",
+      "source_pages": [
+        12
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "décès",
+          "restant",
+          "capital",
+          "égal",
+          "montant",
+          "jour",
+          "quelle",
+          "soit",
+          "cause",
+          "concurrence",
+          "quotité",
+          "assurée"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre exclusion et condition de garantie"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Capital égal au montant restant dû au jour du décès (quelle qu'en soit la cause), à concurrence de la quotité assurée, versé aux bénéficiaires.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.ptia",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "PTIA",
+      "resume_conseiller": "Capital restant dû à la date de consolidation de la PTIA × quotité assurée, si consolidation avant le 70e anniversaire.",
+      "texte_metier_exploitable": "Capital restant dû à la date de consolidation de la PTIA × quotité assurée, si consolidation avant le 70e anniversaire. Le versement met fin à l'adhésion.",
+      "conditions_application": [
+        "consolidation avant 70 ans",
+        "critères PTIA (définition)"
+      ],
+      "seuils": [],
+      "formules": [
+        "PTIA"
+      ],
+      "tableaux": [],
+      "exclusions_liees": [
+        "masterlife_credit.d_c_s_suicide",
+        "masterlife_credit.d_c_s_guerre_meutes_crimes",
+        "masterlife_credit.sports_et_activit_s_exclus_sauf_acceptation",
+        "masterlife_credit.ptia_incapacit_invalidit_exclusions",
+        "masterlife_credit.tats_ant_rieurs",
+        "masterlife_credit.affections_psychologiques_asth_nie_fibromyalgie_",
+        "masterlife_credit.cures_et_esth_tique"
+      ],
+      "points_vigilance": [
+        "capital restant dû × quotité"
+      ],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 12,
+        "section": "Article 3.2",
+        "extrait_reference": "Ce versement sera accordé si la consolidation survient avant le 70ème anniversaire",
+        "pages": [
+          12
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.ptia",
+      "detail_path": "contrats.masterlife_credit.details.ptia",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 12,
+      "source_section": "Article 3.2",
+      "has_full_clause_text": true,
+      "has_formula": true,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "garantie",
+      "source_pages": [
+        12
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "ptia",
+          "consolidation",
+          "capital",
+          "restant",
+          "date",
+          "quotité",
+          "assurée",
+          "avant",
+          "anniversaire",
+          "versement",
+          "adhésion"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Capital restant dû à la date de consolidation de la PTIA × quotité assurée, si consolidation avant le 70e anniversaire.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.incapacit_de_travail_ij",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Incapacité de travail (IJ)",
+      "resume_conseiller": "IJ aux bénéficiaires × quotité assurée, plafonnées à 1/30e de la mensualité (1/90e trimestrialité, 1/180e semestrialité, 1/365e annuité ;",
+      "texte_metier_exploitable": "IJ aux bénéficiaires × quotité assurée, plafonnées à 1/30e de la mensualité (1/90e trimestrialité, 1/180e semestrialité, 1/365e annuité ; prêt in fine : 1/365e des intérêts annuels — capital final toujours exclu). Cessent : fin d'incapacité ou consolidation, 1 095e jour (franchise incluse), 70 ans, fin/remboursement du prêt, liquidation retraite (y compris inaptitude L351-7). Mi-temps thérapeutique : 50 % maintenus 90 jours max. Rechute ≤ 90 jours (même affection) : reprise immédiate sans franchise ; > 90 jours : nouvelle franchise, et si même affection déjà indemnisée, durée cumulée plafonnée à 5 ANS. Ablation de matériel d'ostéosynthèse : pas de nouvelle franchise. Affections disco-vertébrales : toute rechute refranchisée 30 jours min. Couplage obligatoire avec décès/PTIA. Franchises 15 ou 30 jours non proposées en cas de dispense Lemoine de questionnaire.",
+      "conditions_application": [
+        "couplage avec décès ou PTIA",
+        "arrêt avant 70 ans"
+      ],
+      "seuils": [
+        "50 %",
+        "70 ans"
+      ],
+      "formules": [
+        "Incapacité de travail (IJ)"
+      ],
+      "tableaux": [],
+      "exclusions_liees": [
+        "masterlife_credit.d_c_s_suicide",
+        "masterlife_credit.d_c_s_guerre_meutes_crimes",
+        "masterlife_credit.sports_et_activit_s_exclus_sauf_acceptation",
+        "masterlife_credit.ptia_incapacit_invalidit_exclusions",
+        "masterlife_credit.tats_ant_rieurs",
+        "masterlife_credit.affections_psychologiques_asth_nie_fibromyalgie_",
+        "masterlife_credit.cures_et_esth_tique"
+      ],
+      "points_vigilance": [
+        "1 095 jours",
+        "échéance du prêt (co-emprunteurs : total ≤ échéance)",
+        "5 ans cumulés pour rechutes d'une même affection au-delà de 90 jours"
+      ],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 13,
+        "section": "Article 4.1",
+        "extrait_reference": "au 1095ème jour d'arrêt de travail (ce délai incluant la période de franchise)",
+        "pages": [
+          13
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.incapacit_de_travail_ij",
+      "detail_path": "contrats.masterlife_credit.details.incapacit_de_travail_ij",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 13,
+      "source_section": "Article 4.1",
+      "has_full_clause_text": true,
+      "has_formula": true,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "garantie",
+      "source_pages": [
+        13
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "jours",
+          "franchise",
+          "incapacité",
+          "prêt",
+          "rechute",
+          "même",
+          "affection",
+          "nouvelle",
+          "travail",
+          "bénéficiaires",
+          "quotité",
+          "assurée"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre exclusion et condition de garantie"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "IJ aux bénéficiaires × quotité assurée, plafonnées à 1/30e de la mensualité (1/90e trimestrialité, 1/180e semestrialité, 1/365e annuité ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.invalidit_totale_ou_partielle",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Invalidité totale ou partielle",
+      "resume_conseiller": "IJ trimestrielles × quotité, pour chaque jour d'invalidité : taux (n) ≥ 66 % → 100 % des IJ plafond (1/30e mensualité…) ;",
+      "texte_metier_exploitable": "IJ trimestrielles × quotité, pour chaque jour d'invalidité : taux (n) ≥ 66 % → 100 % des IJ plafond (1/30e mensualité…) ; 33 % ≤ n < 66 % → IJ × taux d'indemnisation(n) ; n < 33 % → rien. Taux croisé fonctionnel × professionnel (tableau) pour les actifs ; fonctionnel seul pour chômeurs/inactifs. Taux révisable. Non cumulable avec l'incapacité. Si n ≥ 66 % et prêt amortissable à échéances constantes : ADIS peut verser le capital restant dû (met fin à l'adhésion).",
+      "conditions_application": [
+        "consolidation avant la retraite et avant 70 ans",
+        "taux ≥ 33 %"
+      ],
+      "seuils": [
+        "100 %",
+        "33 %",
+        "66 %"
+      ],
+      "formules": [
+        "Invalidité totale ou partielle"
+      ],
+      "tableaux": [
+        "voir notice (tableau/barème) — page 14"
+      ],
+      "exclusions_liees": [
+        "masterlife_credit.d_c_s_suicide",
+        "masterlife_credit.d_c_s_guerre_meutes_crimes",
+        "masterlife_credit.sports_et_activit_s_exclus_sauf_acceptation",
+        "masterlife_credit.ptia_incapacit_invalidit_exclusions",
+        "masterlife_credit.tats_ant_rieurs",
+        "masterlife_credit.affections_psychologiques_asth_nie_fibromyalgie_",
+        "masterlife_credit.cures_et_esth_tique"
+      ],
+      "points_vigilance": [
+        "plafond IJ identique incapacité"
+      ],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 14,
+        "section": "Article 4.2",
+        "extrait_reference": "Lorsque le taux d'invalidité (n) est inférieur à 66 % mais supérieur ou égal à 33 %",
+        "pages": [
+          14
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "masterlife_credit.invalidit_totale_ou_partielle",
+      "detail_path": "contrats.masterlife_credit.details.invalidit_totale_ou_partielle",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 14,
+      "source_section": "Article 4.2",
+      "has_full_clause_text": true,
+      "has_formula": true,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "garantie",
+      "source_pages": [
+        14
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "taux",
+          "invalidité",
+          "fonctionnel",
+          "totale",
+          "partielle",
+          "trimestrielles",
+          "quotité",
+          "chaque",
+          "jour",
+          "plafond",
+          "mensualité",
+          "indemnisation"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "IJ trimestrielles × quotité, pour chaque jour d'invalidité : taux (n) ≥ 66 % → 100 % des IJ plafond (1/30e mensualité…) ;",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.14 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    },
+    {
+      "id": "masterlife_credit.invalidit_sp_cifique_aeras_gis",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Invalidité spécifique AERAS (GIS)",
+      "resume_conseiller": "Proposée par l'assureur (pas une option à la demande) si incapacité et invalidité refusées pour raisons médicales.",
+      "texte_metier_exploitable": "Proposée par l'assureur (pas une option à la demande) si incapacité et invalidité refusées pour raisons médicales. IJ trimestrielles × quotité si incapacité professionnelle TOTALE (titre de pension 2e/3e catégorie SS, congé longue maladie fonctionnaires, ou notification d'inaptitude totale non-salariés) ET incapacité fonctionnelle ≥ 70 % (barème du Code des pensions civiles). Cessent sous 70 %. Faculté de verser le capital restant dû (fin d'adhésion). Prestations en cours maintenues même si la convention ANPERE/AXA est résiliée.",
+      "conditions_application": [
+        "mention aux conditions particulières",
+        "incapacité professionnelle totale + fonctionnelle ≥ 70 %"
+      ],
+      "seuils": [
+        "70 %"
+      ],
+      "formules": [
+        "Invalidité spécifique AERAS (GIS)"
+      ],
+      "tableaux": [
+        "voir notice (tableau/barème) — page 16"
+      ],
+      "exclusions_liees": [
+        "masterlife_credit.d_c_s_suicide",
+        "masterlife_credit.d_c_s_guerre_meutes_crimes",
+        "masterlife_credit.sports_et_activit_s_exclus_sauf_acceptation",
+        "masterlife_credit.ptia_incapacit_invalidit_exclusions",
+        "masterlife_credit.tats_ant_rieurs",
+        "masterlife_credit.affections_psychologiques_asth_nie_fibromyalgie_",
+        "masterlife_credit.cures_et_esth_tique"
+      ],
+      "points_vigilance": [
+        "jusqu'au terme du prêt, max 70 ans"
+      ],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 16,
+        "section": "Article 4.3",
+        "extrait_reference": "incapacité professionnelle totale et une incapacité fonctionnelle d'un taux au moins égal à 70 %",
+        "pages": [
+          16
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "masterlife_credit.invalidit_sp_cifique_aeras_gis",
+      "detail_path": "contrats.masterlife_credit.details.invalidit_sp_cifique_aeras_gis",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 16,
+      "source_section": "Article 4.3",
+      "has_full_clause_text": true,
+      "has_formula": true,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "garantie",
+      "source_pages": [
+        16
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "incapacité",
+          "invalidité",
+          "totale",
+          "spécifique",
+          "aeras",
+          "proposée",
+          "assureur",
+          "option",
+          "demande",
+          "refusées",
+          "raisons",
+          "médicales"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Proposée par l'assureur (pas une option à la demande) si incapacité et invalidité refusées pour raisons médicales.",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.16 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    },
+    {
+      "id": "masterlife_credit.garantie_aide_la_famille",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Garantie Aide à la famille",
+      "resume_conseiller": "IJ = 50 % des IJ incapacité, si garantie incapacité souscrite, enfant à charge < 20 ans gravement malade/handicapé/accidenté, AJPP perçue, cessation ponctuelle d'activité, et prêt immobilier ou profes",
+      "texte_metier_exploitable": "IJ = 50 % des IJ incapacité, si garantie incapacité souscrite, enfant à charge < 20 ans gravement malade/handicapé/accidenté, AJPP perçue, cessation ponctuelle d'activité, et prêt immobilier ou professionnel. Versées dès le 1er jour d'AJPP. Max 14 mois par enfant et pathologie, renouvelable une fois. Plafond GLOBAL avec l'exonération : 4 000 €/mois/assuré.",
+      "conditions_application": [
+        "garantie incapacité souscrite",
+        "AJPP",
+        "prêt immobilier ou professionnel"
+      ],
+      "seuils": [
+        "20 ans",
+        "4 000 €",
+        "50 %"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "masterlife_credit.d_c_s_suicide",
+        "masterlife_credit.d_c_s_guerre_meutes_crimes",
+        "masterlife_credit.sports_et_activit_s_exclus_sauf_acceptation",
+        "masterlife_credit.ptia_incapacit_invalidit_exclusions",
+        "masterlife_credit.tats_ant_rieurs",
+        "masterlife_credit.affections_psychologiques_asth_nie_fibromyalgie_",
+        "masterlife_credit.cures_et_esth_tique"
+      ],
+      "points_vigilance": [
+        "50 % des IJ incapacité",
+        "4 000 €/mois/assuré (IJ + exonération)",
+        "14 mois renouvelable 1 fois"
+      ],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 14,
+        "section": "Article 4.1.d",
+        "extrait_reference": "Le versement des indemnités journalières et de l'exonération du paiement des cotisations… ne pourra dépasser un total de 4 000 euros par mois",
+        "pages": [
+          14
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.garantie_aide_la_famille",
+      "detail_path": "contrats.masterlife_credit.details.garantie_aide_la_famille",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 14,
+      "source_section": "Article 4.1.d",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "garantie",
+      "source_pages": [
+        14
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "garantie",
+          "incapacité",
+          "enfant",
+          "ajpp",
+          "aide",
+          "famille",
+          "souscrite",
+          "charge",
+          "gravement",
+          "malade/handicapé/accidenté",
+          "perçue",
+          "cessation"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "IJ = 50 % des IJ incapacité, si garantie incapacité souscrite, enfant à charge < 20 ans gravement malade/handicapé/accidenté, AJPP perçue, cessation ponctuelle d'activité, et prêt immobilier ou profes",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.exon_ration_du_paiement_des_cotisations",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Exonération du paiement des cotisations",
+      "resume_conseiller": "Incapacité : remboursement de 1/365e de la cotisation annuelle par journée d'incapacité, après déduction d'une FRANCHISE DE 90 JOURS, remboursement en fin de période.",
+      "texte_metier_exploitable": "Incapacité : remboursement de 1/365e de la cotisation annuelle par journée d'incapacité, après déduction d'une FRANCHISE DE 90 JOURS, remboursement en fin de période. Aide à la famille : remboursement 1/365e par jour indemnisé (plafond global 4 000 €/mois). Invalidité totale ou GIS : exonération des cotisations à échoir jusqu'à 70 ans max, garanties intégralement maintenues sans modification possible.",
+      "conditions_application": [
+        "selon le cas : versement d'IJ incapacité, AJPP, ou invalidité totale/GIS"
+      ],
+      "seuils": [
+        "4 000 €",
+        "70 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "masterlife_credit.d_c_s_suicide",
+        "masterlife_credit.d_c_s_guerre_meutes_crimes",
+        "masterlife_credit.sports_et_activit_s_exclus_sauf_acceptation",
+        "masterlife_credit.ptia_incapacit_invalidit_exclusions",
+        "masterlife_credit.tats_ant_rieurs",
+        "masterlife_credit.affections_psychologiques_asth_nie_fibromyalgie_",
+        "masterlife_credit.cures_et_esth_tique"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 16,
+        "section": "Article 4.4",
+        "extrait_reference": "Il sera fait déduction d'une franchise de 90 jours",
+        "pages": [
+          16
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.exon_ration_du_paiement_des_cotisations",
+      "detail_path": "contrats.masterlife_credit.details.exon_ration_du_paiement_des_cotisations",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 16,
+      "source_section": "Article 4.4",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "garantie",
+      "source_pages": [
+        16
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "remboursement",
+          "exonération",
+          "cotisations",
+          "incapacité",
+          "paiement",
+          "cotisation",
+          "annuelle",
+          "journée",
+          "après",
+          "déduction",
+          "franchise",
+          "jours"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Incapacité : remboursement de 1/365e de la cotisation annuelle par journée d'incapacité, après déduction d'une FRANCHISE DE 90 JOURS, remboursement en fin de période.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "options_mecanismes": [
+    {
+      "id": "masterlife_credit.option_psy_dos",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Option Psy/Dos+",
+      "resume_conseiller": "Prise en charge des affections psychologiques/asthénie/fibromyalgie SANS condition d'hospitalisation (franchise 90 jours ou franchise du contrat si supérieure ;",
+      "texte_metier_exploitable": "Prise en charge des affections psychologiques/asthénie/fibromyalgie SANS condition d'hospitalisation (franchise 90 jours ou franchise du contrat si supérieure ; si franchise souscrite < 90 jours et hospitalisation continue en établissement spécialisé > franchise : franchise du contrat dès le 1er jour d'hospitalisation, prise en charge au plus tard 90 jours après le début de l'arrêt) et des affections disco-vertébrales SANS condition d'hospitalisation (franchise 30 jours ou supérieure du contrat). Vaut pour l'incapacité ET l'invalidité.",
+      "conditions_application": [
+        "mention aux conditions particulières"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 13,
+        "section": "Article 4.1.c",
+        "extrait_reference": "L'option Psy/Dos+ permet la prise en charge de toute incapacité de travail",
+        "pages": [
+          13
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.option_psy_dos",
+      "detail_path": "contrats.masterlife_credit.details.option_psy_dos",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 13,
+      "source_section": "Article 4.1.c",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "option",
+      "source_pages": [
+        13
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "franchise",
+          "hospitalisation",
+          "jours",
+          "contrat",
+          "prise",
+          "charge",
+          "affections",
+          "condition",
+          "supérieure",
+          "option",
+          "psy/dos",
+          "psychologiques/asthénie/fibromyalgie"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Prise en charge des affections psychologiques/asthénie/fibromyalgie SANS condition d'hospitalisation (franchise 90 jours ou franchise du contrat si supérieure ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.tarif_constant",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Tarif constant",
+      "resume_conseiller": "Cotisation annuelle fixe jusqu'au terme ;",
+      "texte_metier_exploitable": "Cotisation annuelle fixe jusqu'au terme ; assiette = montant emprunté × quotité. NON proposée en cas de dispense Lemoine de questionnaire médical. Choix irrévocable.",
+      "conditions_application": [
+        "mention aux conditions particulières"
+      ],
+      "seuils": [],
+      "formules": [
+        "Tarif constant"
+      ],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 11,
+        "section": "Article 2.1",
+        "extrait_reference": "L'option du tarif constant n'est pas proposée lorsque l'assuré n'est pas tenu de répondre aux questions relatives à son état de santé",
+        "pages": [
+          11
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.tarif_constant",
+      "detail_path": "contrats.masterlife_credit.details.tarif_constant",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 11,
+      "source_section": "Article 2.1",
+      "has_full_clause_text": true,
+      "has_formula": true,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "option",
+      "source_pages": [
+        11
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "tarif",
+          "constant",
+          "cotisation",
+          "annuelle",
+          "fixe",
+          "jusqu",
+          "terme",
+          "assiette",
+          "montant",
+          "emprunté",
+          "quotité",
+          "proposée"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Cotisation annuelle fixe jusqu'au terme ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.tarif_capital_restant_d",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Tarif capital restant dû",
+      "resume_conseiller": "Cotisation fluctuant selon le capital restant dû et l'âge ;",
+      "texte_metier_exploitable": "Cotisation fluctuant selon le capital restant dû et l'âge ; assiette = capital restant dû × quotité. Choix irrévocable.",
+      "conditions_application": [
+        "mention aux conditions particulières"
+      ],
+      "seuils": [],
+      "formules": [
+        "Tarif capital restant dû"
+      ],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 11,
+        "section": "Article 2.1",
+        "extrait_reference": "le montant de votre cotisation annuelle fluctue en fonction de l'évolution du capital restant dû",
+        "pages": [
+          11
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.tarif_capital_restant_d",
+      "detail_path": "contrats.masterlife_credit.details.tarif_capital_restant_d",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 11,
+      "source_section": "Article 2.1",
+      "has_full_clause_text": false,
+      "has_formula": true,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "option",
+      "source_pages": [
+        11
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "capital",
+          "restant",
+          "tarif",
+          "cotisation",
+          "fluctuant",
+          "assiette",
+          "quotité",
+          "choix",
+          "irrévocable"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Cotisation fluctuant selon le capital restant dû et l'âge ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "masterlife_credit.d_c_s_suicide",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Décès — suicide",
+      "resume_conseiller": "Suicide exclu la 1re année d'adhésion (et 1 an sur le supplément en cas d'augmentation).",
+      "texte_metier_exploitable": "Suicide exclu la 1re année d'adhésion (et 1 an sur le supplément en cas d'augmentation). EXCEPTION : prêts immobiliers finançant l'acquisition du logement principal → suicide couvert dès la date d'effet dans la limite de l'art. R132-5 (120 000 € au 15/08/2024).",
+      "conditions_application": [],
+      "seuils": [
+        "120 000 €"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 20,
+        "section": "Article 7.1",
+        "extrait_reference": "le suicide est couvert dès la date d'effet de l'adhésion dans la limite du montant mentionné à l'article R 132-5 du Code des assurances (120 000 € au 15 août 2024)",
+        "pages": [
+          20
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.d_c_s_suicide",
+      "detail_path": "contrats.masterlife_credit.details.d_c_s_suicide",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 20,
+      "source_section": "Article 7.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "exclusion",
+      "source_pages": [
+        20
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "suicide",
+          "décès",
+          "exclu",
+          "année",
+          "adhésion",
+          "supplément",
+          "augmentation",
+          "exception",
+          "prêts",
+          "immobiliers",
+          "finançant",
+          "acquisition"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre exclusion et condition de garantie"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Suicide exclu la 1re année d'adhésion (et 1 an sur le supplément en cas d'augmentation).",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.d_c_s_guerre_meutes_crimes",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Décès — guerre/émeutes/crimes",
+      "resume_conseiller": "Guerres civiles/étrangères, insurrection, opérations de maintien de l'ordre/paix (ONU…) ;",
+      "texte_metier_exploitable": "Guerres civiles/étrangères, insurrection, opérations de maintien de l'ordre/paix (ONU…) ; participation active à émeutes, terrorisme, sabotage, crimes ou délits intentionnels, rixes (sauf légitime défense/devoir professionnel).",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 20,
+        "section": "Article 7.1",
+        "extrait_reference": "rixes sauf en cas de légitime défense ou d'accomplissement du devoir professionnel",
+        "pages": [
+          20
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.d_c_s_guerre_meutes_crimes",
+      "detail_path": "contrats.masterlife_credit.details.d_c_s_guerre_meutes_crimes",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 20,
+      "source_section": "Article 7.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "exclusion",
+      "source_pages": [
+        20
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "décès",
+          "guerre/émeutes/crimes",
+          "guerres",
+          "civiles/étrangères",
+          "insurrection",
+          "opérations",
+          "maintien",
+          "ordre/paix",
+          "participation",
+          "active",
+          "émeutes",
+          "terrorisme"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Guerres civiles/étrangères, insurrection, opérations de maintien de l'ordre/paix (ONU…) ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.sports_et_activit_s_exclus_sauf_acceptation",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Sports et activités exclus (sauf acceptation)",
+      "resume_conseiller": "Sports à moteur hors voie ouverte au public ;",
+      "texte_metier_exploitable": "Sports à moteur hors voie ouverte au public ; plongée > 20 m sans bouteille / > 40 m avec ; navigation > 40 milles ; alpinisme et randonnée > 4 000 m, escalade (hors salle) ; speed riding, ski artistique/acrobatique/héliporté, paraski, char à glace, kilomètre lancé, combiné nordique ; spéléologie, canyoning, rafting, kitesurf ; sports de combat (hors escrime) ; longue liste équestre ; saut à l'élastique, base jump, wingsuit ; sports aériens motorisés et non motorisés ; ULM, parapente, deltaplane, parachutisme ; tout sport non représenté par une fédération française.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 20,
+        "section": "Article 7.1",
+        "extrait_reference": "sauf acceptation mentionnée sur les conditions particulières d'adhésion",
+        "pages": [
+          20
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.sports_et_activit_s_exclus_sauf_acceptation",
+      "detail_path": "contrats.masterlife_credit.details.sports_et_activit_s_exclus_sauf_acceptation",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 20,
+      "source_section": "Article 7.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "exclusion",
+      "source_pages": [
+        20
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "sports",
+          "hors",
+          "motorisés",
+          "activités",
+          "exclus",
+          "sauf",
+          "acceptation",
+          "moteur",
+          "voie",
+          "ouverte",
+          "public",
+          "plongée"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre exclusion et condition de garantie"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Sports à moteur hors voie ouverte au public ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.ptia_incapacit_invalidit_exclusions",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "PTIA/incapacité/invalidité — exclusions",
+      "resume_conseiller": "Faits volontaires, tentative de suicide, mutilations volontaires ;",
+      "texte_metier_exploitable": "Faits volontaires, tentative de suicide, mutilations volontaires ; stupéfiants/tranquillisants hors prescription ; refus volontaire de soins ; désintégration du noyau atomique ; sportifs professionnels et amateurs de haut niveau (sauf acceptation) ; arrêts liés au traitement de la stérilité (incapacité).",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 20,
+        "section": "Article 7.2",
+        "extrait_reference": "tout arrêt de travail et toute hospitalisation en relation avec un traitement de la stérilité",
+        "pages": [
+          20
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.ptia_incapacit_invalidit_exclusions",
+      "detail_path": "contrats.masterlife_credit.details.ptia_incapacit_invalidit_exclusions",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 20,
+      "source_section": "Article 7.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "exclusion",
+      "source_pages": [
+        20
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "volontaires",
+          "ptia/incapacité/invalidité",
+          "exclusions",
+          "faits",
+          "tentative",
+          "suicide",
+          "mutilations",
+          "stupéfiants/tranquillisants",
+          "hors",
+          "prescription",
+          "refus",
+          "volontaire"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "confondre exclusion et condition de garantie"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Faits volontaires, tentative de suicide, mutilations volontaires ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.tats_ant_rieurs",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "États antérieurs",
+      "resume_conseiller": "Accidents antérieurs à la prise d'effet, maladies à premières manifestations antérieures, malformations congénitales connues : exclus des garanties incapacité/invalidité/GIS.",
+      "texte_metier_exploitable": "Accidents antérieurs à la prise d'effet, maladies à premières manifestations antérieures, malformations congénitales connues : exclus des garanties incapacité/invalidité/GIS. EXCEPTIONS : droit à l'oubli ; assurés dispensés d'acceptation médicale (Lemoine) ; antériorités déclarées et non exclues aux conditions particulières.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 21,
+        "section": "Article 7.2 État antérieurs",
+        "extrait_reference": "si elles relèvent du droit à l'oubli",
+        "pages": [
+          21
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.tats_ant_rieurs",
+      "detail_path": "contrats.masterlife_credit.details.tats_ant_rieurs",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 21,
+      "source_section": "Article 7.2 État antérieurs",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "exclusion",
+      "source_pages": [
+        21
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "antérieurs",
+          "états",
+          "accidents",
+          "prise",
+          "effet",
+          "maladies",
+          "premières",
+          "manifestations",
+          "antérieures",
+          "malformations",
+          "congénitales",
+          "connues"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "confondre exclusion et condition de garantie"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Accidents antérieurs à la prise d'effet, maladies à premières manifestations antérieures, malformations congénitales connues : exclus des garanties incapacité/invalidité/GIS.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.affections_psychologiques_asth_nie_fibromyalgie_",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)",
+      "resume_conseiller": "Exclusion de principe de l'incapacité/invalidité consécutive aux troubles psychologiques (liste large incl.",
+      "texte_metier_exploitable": "Exclusion de principe de l'incapacité/invalidité consécutive aux troubles psychologiques (liste large incl. burn/bore/brown out, dépression post-partum), asthénie/fibromyalgie, et affections disco-vertébrales (hernie discale, discopathie, lombalgie, sciatique…, sauf fracture sans pathologie osseuse). RACHATS sans option : psy et asthénie/fibromyalgie indemnisées si hospitalisation continue ≥ 30 jours en établissement spécialisé (hors cure de repos), franchise 90 jours dès le 1er jour d'hospitalisation ; disco-vertébrales si hospitalisation continue ≥ 15 jours (hors centre de rééducation), franchise 30 jours. Avec OPTION Psy/Dos+ : prise en charge sans condition d'hospitalisation (psy : franchise 90 jours ; dos : franchise 30 jours — ou franchise du contrat si supérieure).",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 21,
+        "section": "Article 7.2 Affections psychologiques",
+        "extrait_reference": "si l'affection psychologique nécessite une hospitalisation continue de 30 jours dans un établissement spécialisé",
+        "pages": [
+          21
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.affections_psychologiques_asth_nie_fibromyalgie_",
+      "detail_path": "contrats.masterlife_credit.details.affections_psychologiques_asth_nie_fibromyalgie_",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 21,
+      "source_section": "Article 7.2 Affections psychologiques",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "exclusion",
+      "source_pages": [
+        21
+      ],
+      "applicabilite": "non_applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "jours",
+          "franchise",
+          "hospitalisation",
+          "disco",
+          "vertébrales",
+          "affections",
+          "psychologiques",
+          "exclusion",
+          "principe",
+          "rachats",
+          "asthénie/fibromyalgie",
+          "option"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "confondre rachat et mise en réduction",
+          "confondre exclusion et condition de garantie",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Exclusion de principe de l'incapacité/invalidité consécutive aux troubles psychologiques (liste large incl.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.cures_et_esth_tique",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Cures et esthétique",
+      "resume_conseiller": "Cures thermales/marines/rajeunissement/amaigrissement/désintoxication et maisons de repos : exclues de l'incapacité (et leurs conséquences).",
+      "texte_metier_exploitable": "Cures thermales/marines/rajeunissement/amaigrissement/désintoxication et maisons de repos : exclues de l'incapacité (et leurs conséquences). Traitements esthétiques, chirurgie esthétique, malformations constitutionnelles : exclus incapacité/invalidité/PTIA (et conséquences).",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 22,
+        "section": "Article 7.2 Cures",
+        "extrait_reference": "sont exclus des garanties applicables en cas d'incapacité de travail",
+        "pages": [
+          22
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.cures_et_esth_tique",
+      "detail_path": "contrats.masterlife_credit.details.cures_et_esth_tique",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 22,
+      "source_section": "Article 7.2 Cures",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "exclusion",
+      "source_pages": [
+        22
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "cures",
+          "esthétique",
+          "conséquences",
+          "thermales/marines/rajeunissement/amaigrissement/désintoxication",
+          "maisons",
+          "repos",
+          "exclues",
+          "incapacité",
+          "leurs",
+          "traitements",
+          "esthétiques",
+          "chirurgie"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre taux fonctionnel et taux professionnel",
+          "appliquer un barème sans vérifier le tableau",
+          "confondre exclusion et condition de garantie"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Cures thermales/marines/rajeunissement/amaigrissement/désintoxication et maisons de repos : exclues de l'incapacité (et leurs conséquences).",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "conditions_souscription": [
+    {
+      "id": "masterlife_credit.conditions_souscription_1",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_1",
+      "resume_conseiller": "Membre ANPERE ;",
+      "texte_metier_exploitable": "Membre ANPERE ; assuré personne physique résidant en France ; questionnaires (médical/financier/sportif) sauf dispense Lemoine : prêt L313-1 1° C. conso (immobilier habitation/mixte, travaux, terrains…), part assurée sur encours cumulé ≤ 200 000 € (exemples en annexe p.27), échéance du prêt avant le 60e anniversaire — 3 conditions cumulatives.",
+      "conditions_application": [],
+      "seuils": [
+        "200 000 €"
+      ],
+      "formules": [],
+      "tableaux": [
+        "voir notice (tableau/barème) — page 8"
+      ],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 8,
+        "section": "Article 1.4 a)",
+        "extrait_reference": "la part assurée sur l'encours cumulé des contrats de crédits n'excède pas 200 000 €",
+        "pages": [
+          8
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "masterlife_credit.conditions_souscription_1",
+      "detail_path": "contrats.masterlife_credit.details.conditions_souscription_1",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 8,
+      "source_section": "Article 1.4 a)",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "condition",
+      "source_pages": [
+        8
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "prêt",
+          "souscription",
+          "membre",
+          "anpere",
+          "assuré",
+          "personne",
+          "physique",
+          "résidant",
+          "france",
+          "questionnaires",
+          "médical/financier/sportif"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Membre ANPERE ;",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.8 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    },
+    {
+      "id": "masterlife_credit.conditions_souscription_2",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_2",
+      "resume_conseiller": "Modification des garanties possible jusqu'au 75e anniversaire, accord du prêteur le cas échéant ;",
+      "texte_metier_exploitable": "Modification des garanties possible jusqu'au 75e anniversaire, accord du prêteur le cas échéant ; augmentation soumise à acceptation ADIS et éventuelle sélection médicale.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 8,
+        "section": "Article 1.7",
+        "extrait_reference": "Jusqu'à votre 75ème anniversaire, vous pouvez si vous le souhaitez modifier les garanties",
+        "pages": [
+          8
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.conditions_souscription_2",
+      "detail_path": "contrats.masterlife_credit.details.conditions_souscription_2",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 8,
+      "source_section": "Article 1.7",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "condition",
+      "source_pages": [
+        8
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "souscription",
+          "modification",
+          "garanties",
+          "possible",
+          "jusqu",
+          "anniversaire",
+          "accord",
+          "prêteur",
+          "échéant",
+          "augmentation",
+          "soumise"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Modification des garanties possible jusqu'au 75e anniversaire, accord du prêteur le cas échéant ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.conditions_souscription_3",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_3",
+      "resume_conseiller": "Convention AERAS : examen 2e et 3e niveaux en cas de refus, écrêtement des surprimes pour les éligibles, GIS possible.",
+      "texte_metier_exploitable": "Convention AERAS : examen 2e et 3e niveaux en cas de refus, écrêtement des surprimes pour les éligibles, GIS possible.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 23,
+        "section": "Article 10",
+        "extrait_reference": "à écrêter les cotisations en cas de surprimes",
+        "pages": [
+          23
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.conditions_souscription_3",
+      "detail_path": "contrats.masterlife_credit.details.conditions_souscription_3",
+      "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "source_page": 23,
+      "source_section": "Article 10",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "condition",
+      "source_pages": [
+        23
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "souscription",
+          "convention",
+          "aeras",
+          "examen",
+          "niveaux",
+          "refus",
+          "écrêtement",
+          "surprimes",
+          "éligibles",
+          "possible"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Convention AERAS : examen 2e et 3e niveaux en cas de refus, écrêtement des surprimes pour les éligibles, GIS possible.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "fiscalite": [
+    {
+      "id": "masterlife_credit.valeurs_de_rachat",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "valeurs_de_rachat",
+      "resume_conseiller": "L'adhésion ne comporte ni valeur de rachat, ni valeur de réduction.",
+      "texte_metier_exploitable": "L'adhésion ne comporte ni valeur de rachat, ni valeur de réduction.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "L'adhésion ne comporte ni valeur de rachat, ni valeur de réduction.",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.valeurs_de_rachat",
+      "detail_path": "contrats.masterlife_credit.details.valeurs_de_rachat",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "applicabilite": "non_applicable",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "rachat",
+          "valeur",
+          "valeurs",
+          "adhésion",
+          "comporte",
+          "réduction"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "L'adhésion ne comporte ni valeur de rachat, ni valeur de réduction.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.mise_en_reduction",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "mise_en_reduction",
+      "resume_conseiller": "mise_en_reduction",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.mise_en_reduction",
+      "detail_path": "contrats.masterlife_credit.details.mise_en_reduction",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "mise",
+          "reduction"
+        ],
+        "synonymes": [
+          "mise en réduction",
+          "arrêt de cotisation",
+          "capital réduit"
+        ],
+        "formulations_client_possibles": [
+          "Si j'arrête de payer, que se passe-t-il ?",
+          "C'est quoi la mise en réduction ?"
+        ],
+        "intentions": [
+          "vérifier mise en réduction"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "mise_en_reduction",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.determination_part_taxable",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "determination_part_taxable",
+      "resume_conseiller": "determination_part_taxable",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.determination_part_taxable",
+      "detail_path": "contrats.masterlife_credit.details.determination_part_taxable",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "moyenne",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "determination",
+          "part",
+          "taxable"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "moyenne"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "determination_part_taxable",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.conditions_de_rachat",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "conditions_de_rachat",
+      "resume_conseiller": "conditions_de_rachat",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.conditions_de_rachat",
+      "detail_path": "contrats.masterlife_credit.details.conditions_de_rachat",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "non_applicable",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "rachat"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "conditions_de_rachat",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "masterlife_credit.fiscalit",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "fiscalité",
+      "resume_conseiller": "fiscalité",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "masterlife_credit.fiscalit",
+      "detail_path": "contrats.masterlife_credit.details.fiscalit",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "masterlife_credit",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "fiscalité"
+        ],
+        "synonymes": [
+          "impôt",
+          "990 I",
+          "757 B",
+          "succession",
+          "transmission",
+          "abattement",
+          "Madelin",
+          "déduction"
+        ],
+        "formulations_client_possibles": [
+          "Quelle fiscalité au décès ?",
+          "Est-ce déductible ?",
+          "Comment ça se transmet ?"
+        ],
+        "intentions": [
+          "vérifier fiscalité",
+          "vérifier transmission"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "fiscalité",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "points_vigilance": [
+    "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
+    "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.",
+    "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
+    "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
+    "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+    "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).",
+    "Pas de valeur de rachat ni de réduction."
+  ],
+  "stats": {
+    "garanties": 7,
+    "options": 3,
+    "exclusions": 7,
+    "fiscalite": 5,
+    "conditions": 3,
+    "objets_requires_pdf_check": 7,
+    "placeholders": 8
+  }
+}

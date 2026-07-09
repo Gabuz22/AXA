@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "type": "manifest_workspace_axa",
+    "description": "Manifeste du module AXA Conseiller : déclare les sources de connaissances par RÔLE. Pour brancher une nouvelle version d'un fichier, il suffit de mettre à jour le chemin ici — le module s'adapte sans changement de code. Un rôle absent = section dégradée proprement, jamais d'erreur.",
+    "date_creation": "2026-07-06",
+    "date_derniere_modification": "2026-07-06"
+  },
+  "sources": {
+    "master_pack_a": { "path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json", "description": "MASTER STABLE — référence de vérité contractuelle (contrats, arbres de décision, sources officielles, garde-fous)", "lourd": true },
+    "master_pack_b": { "path": "AXA_MASTER_DONNEES_PACK_B_MATRICES_EXPERIMENTAL.json", "description": "MASTER EXPÉRIMENTAL — même contenu + matrices de raisonnement inter-contrats (jamais une preuve seul)", "lourd": true },
+    "mode_emploi_ia": { "path": "AXA_MODE_EMPLOI_IA_DOUBLE_MASTER.md", "format": "markdown", "description": "Mode d'emploi IA : routage Pack A / Pack B et règles de réponse" },
+    "index_global": { "path": "ia/axa_index_global.json", "description": "Index léger : statistiques, contrats, catégories de faits" },
+    "contrats_resume_humain": { "path": "vue_humaine/axa_contrats_resume_humain.json", "description": "Résumé humain par contrat (vue conseiller)" },
+    "fiches_conseiller": { "path": "derived/fiches_conseiller.json", "description": "Index dérivé de Pack A contrats_axa : définitions, conditions de souscription, déclencheurs/plafonds/franchises par fait (généré par scripts/build_axa_fiches.py)" },
+    "garanties_exclusions": { "path": "vue_humaine/synthese_garanties_exclusions.json", "description": "Synthèse garanties/exclusions par contrat" },
+    "comparatif": { "path": "vue_humaine/tableau_comparatif.json", "description": "Tableau comparatif inter-contrats" },
+    "contrats_index": { "path": "contrats/contrats_index.json", "description": "Index des JSON enrichis (1 contrat = 1 fichier)" },
+    "pdf_index": { "path": "ia/axa_pdf_index.json", "description": "Index des PDF contractuels (notices, CG)" },
+    "formules": { "path": "ia/axa_formules_index.json", "description": "Index des formules et calculs contractuels" },
+    "moteur_recommandation": { "path": "ia/axa_moteur_recommandation.json", "description": "Matrice de raisonnement besoins → dimensions de contrats" },
+    "formulaires_schema": { "path": "ia/axa_formulaires_schema.json", "description": "Schémas des formulaires client" },
+    "knowledge_graph": { "path": "ia/axa_knowledge_graph.json", "description": "Graphe de connaissances (relations entre faits)" },
+    "prompt_conseiller": { "path": "00_PACKAGE_ACTIF/PROMPT_CONSEILLER_AXA_FINAL.md", "format": "markdown", "description": "Mode d'emploi IA : prompt conseiller officiel" }
+  },
+  "pdf_path_rewrites": [
+    { "from": "data/AXA/", "to": "data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/", "note": "L'index PDF référence l'ancienne arborescence plate ; les PDF vivent dans le package actif." }
+  ],
+  "formulaires_pages": [
+    { "label": "Formulaire rapide", "path": "pages/axa/formulaire_rapide.html" },
+    { "label": "Formulaire essentiel", "path": "pages/axa/formulaire_essentiel.html" },
+    { "label": "Formulaire complet", "path": "pages/axa/formulaire_complet.html" },
+    { "label": "Recherche personnalisée", "path": "pages/axa/recherche_personnalisee.html" }
+  ]
+}

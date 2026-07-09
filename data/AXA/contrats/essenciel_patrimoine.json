@@ -1,0 +1,1073 @@
+{
+  "meta": {
+    "type": "contrat_axa_dedie",
+    "slug": "essenciel_patrimoine",
+    "schema_version": "2.0_enrichi",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "source_pdf": "data/AXA/EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+    "date_document": "2023-09",
+    "avertissement": "Contenu extrait de la notice (pdftotext) avec références de page. Aucune clause inventée. La notice PDF fait foi. Les tableaux chiffrés (valeurs de rachat/réduction) doivent être vérifiés dans la notice (requires_pdf_check).",
+    "distinct_de": "essenciel (Essen'Ciel obsèques) — NE PAS confondre",
+    "qa_version": "2.1",
+    "qa_date": "2026-06-19"
+  },
+  "contrat": {
+    "id": "axa_essenciel_patrimoine_2023-09",
+    "nom": "Essen'Ciel Patrimoine",
+    "famille": "prévoyance",
+    "sous_famille": "assurance vie / capital décès (transmission)",
+    "cible": "Particulier 18–65 ans souhaitant transmettre un capital à des bénéficiaires désignés, avec une dimension patrimoniale (faculté de rachat) et des prestations d'assistance.",
+    "finalite": "Garantir le versement d'un capital au(x) bénéficiaire(s) en cas de décès de l'assuré (cadre fiscal de l'assurance vie), avec faculté de rachat et de mise en réduction.",
+    "type_contrat": "contrat d'assurance de groupe sur la vie à adhésion facultative",
+    "assureur": "AXA France Vie (souscripteur association : ANPERE) ; assistance : INTER PARTNER ASSISTANCE (AXA Assistance)",
+    "version": "Notice Essen'Ciel Patrimoine / Septembre 2023 ; régime fiscal de l'assurance vie indiqué au 1er janvier 2018 (sous réserve d'évolutions)",
+    "cadre_juridique": "Adhésion facultative à un contrat groupe ANPERE/AXA France Vie, modifiable par avenants avec information préalable de l'adhérent. Gestion paritaire ANPERE/AXA.",
+    "resume_neutre": "Capital décès aux bénéficiaires désignés. L'adhésion NE comporte PAS de garantie en capital au moins égale aux sommes versées nettes de frais. Participation aux bénéfices (Code des assurances, non contractuelle). Faculté de rachat (règlement sous 2 mois) avec tableau des valeurs de rachat au terme des 8 premières années. Mise en réduction possible. Durée viagère ; le décès ou le rachat total met fin à l'adhésion."
+  },
+  "pdfs": [
+    {
+      "type_document": "notice",
+      "path": "data/AXA/EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "nom_fichier": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "pages": 36
+    }
+  ],
+  "difference_avec_essenciel_classique": {
+    "resume_conseiller": "Essen'Ciel (classique) = assurance OBSÈQUES (financer/organiser les obsèques). Essen'Ciel PATRIMOINE = capital décès de TRANSMISSION au cadre fiscal de l'ASSURANCE VIE (990 I / 757 B CGI), avec faculté de rachat et mise en réduction. Le mot 'Patrimoine' = dimension transmission/épargne, pas seulement obsèques.",
+    "points_cles": [
+      "Patrimoine : cadre fiscal assurance vie (art. 990 I et 757 B du CGI).",
+      "Patrimoine : faculté de rachat + tableau des valeurs de rachat (8 premières années).",
+      "Patrimoine : mise en réduction (valeur de réduction).",
+      "Patrimoine : pas de garantie en capital ≥ sommes versées nettes de frais.",
+      "Bénéficiaires désignés librement (logique transmission)."
+    ],
+    "source": {
+      "pdf": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "2, 5, 14-16",
+      "section": "Encadré, 1.x, 4.3",
+      "extrait_reference": "régime fiscal de l'assurance vie ; faculté de rachat ; tableau des valeurs de rachat au terme des 8 premières années"
+    },
+    "niveau_confiance": 0.9,
+    "requires_pdf_check": false
+  },
+  "garanties": [
+    {
+      "id": "essenciel_patrimoine.garantie_deces",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Garantie décès — versement d'un capital aux bénéficiaires",
+      "resume_conseiller": "En cas de décès de l'assuré, versement d'un capital au(x) bénéficiaire(s) désigné(s). Cadre fiscal assurance vie.",
+      "texte_metier_exploitable": "ESSEN'CIEL PATRIMOINE a pour objet de garantir, en cas de décès de l'assuré, le versement d'un capital au(x) bénéficiaire(s) désigné(s) par l'adhérent. Le contrat prévoit également des prestations d'assistance. L'adhésion ne comporte pas de garantie en capital au moins égale aux sommes versées, nettes de frais. Délai de règlement du capital : 48 heures ouvrées après réception de toutes les pièces.",
+      "conditions_application": [
+        "décès de l'assuré",
+        "bénéficiaire(s) désigné(s)",
+        "réception des pièces justificatives"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "essenciel_patrimoine.exclusions_deces"
+      ],
+      "points_vigilance": [
+        "Pas de garantie plancher égale aux versements nets de frais (≠ épargne garantie)."
+      ],
+      "source": {
+        "pdf": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+        "page": "2, 4, 16",
+        "section": "1.1, 2.1",
+        "extrait_reference": "le versement d'un capital au(x) bénéficiaire(s) désigné(s), en cas de décès",
+        "pages": [
+          2,
+          4,
+          16
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.92,
+      "retour_notice_recommande": false,
+      "detail_id": "essenciel_patrimoine.garantie_deces",
+      "detail_path": "contrats.essenciel_patrimoine.details.garantie_deces",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [
+        "essenciel_patrimoine.rachat",
+        "essenciel_patrimoine.fiscalite"
+      ],
+      "contract_slug": "essenciel_patrimoine",
+      "source_pages": [
+        2,
+        4,
+        16
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "capital",
+          "garantie",
+          "décès",
+          "versement",
+          "bénéficiaires",
+          "essen",
+          "ciel",
+          "patrimoine",
+          "objet",
+          "garantir",
+          "assuré",
+          "bénéficiaire"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [
+          "essenciel_patrimoine.rachat",
+          "essenciel_patrimoine.fiscalite"
+        ],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre EssenCiel (obsèques) et EssenCiel Patrimoine (assurance vie transmission)",
+          "confondre délai d'attente et franchise"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "En cas de décès de l'assuré, versement d'un capital au(x) bénéficiaire(s) désigné(s). Cadre fiscal assurance vie.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "essenciel_patrimoine.revalorisation",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Revalorisation / participation aux bénéfices",
+      "resume_conseiller": "Pas de PB contractuelle, mais participation aux bénéfices selon le Code des assurances ; revalorisation possible du capital décès.",
+      "texte_metier_exploitable": "Le contrat ne comporte pas de participation aux bénéfices contractuelle, mais la participation aux bénéfices dans les conditions prévues par le Code des assurances (art. A 331-4). Le taux annuel, permettant l'augmentation des garanties, résulte du montant affecté par AXA ; attribution au plus tard le 1er avril, à effet du 31 décembre précédent.",
+      "conditions_application": [
+        "adhésion en cours à la date d'attribution"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [
+        "PB non garantie contractuellement (dépend des résultats de l'assureur)."
+      ],
+      "source": {
+        "pdf": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+        "page": "6, 8",
+        "section": "2.3",
+        "extrait_reference": "participation aux bénéfices dans les conditions prévues par le Code des assurances",
+        "pages": [
+          6,
+          8
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.88,
+      "retour_notice_recommande": false,
+      "detail_id": "essenciel_patrimoine.revalorisation",
+      "detail_path": "contrats.essenciel_patrimoine.details.revalorisation",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "essenciel_patrimoine",
+      "source_pages": [
+        6,
+        8
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "participation",
+          "bénéfices",
+          "revalorisation",
+          "contrat",
+          "comporte",
+          "contractuelle",
+          "mais",
+          "conditions",
+          "prévues",
+          "code",
+          "assurances",
+          "taux"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre EssenCiel (obsèques) et EssenCiel Patrimoine (assurance vie transmission)"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Pas de PB contractuelle, mais participation aux bénéfices selon le Code des assurances ; revalorisation possible du capital décès.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "options_mecanismes": [
+    {
+      "id": "essenciel_patrimoine.rachat",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+      "resume_conseiller": "Le contrat comporte une faculté de rachat ; règlement sous 2 mois. Un tableau des valeurs de rachat au terme des 8 premières années figure dans la notice (§4.3).",
+      "texte_metier_exploitable": "Le contrat comporte une faculté de rachat. Les sommes sont versées par l'assureur dans un délai de 2 mois. Les modalités de rachat et le tableau des valeurs de rachat au terme des 8 premières années sont indiqués au §4.3. Le rachat total met fin à l'adhésion.",
+      "conditions_application": [
+        "demande de l'adhérent"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [
+        "Tableau des valeurs de rachat et de réduction au terme des 8 premières années (exemples par âge et capital choisi) — voir notice §4.3, p.14-15"
+      ],
+      "exclusions_liees": [],
+      "points_vigilance": [
+        "Valeurs de rachat des 1res années faibles (frais) ; hors prélèvements sociaux et fiscaux dans les exemples."
+      ],
+      "source": {
+        "pdf": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+        "page": "2, 14, 15",
+        "section": "4.3",
+        "extrait_reference": "le tableau des valeurs de rachat au terme des 8 premières années",
+        "pages": [
+          2,
+          14,
+          15
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.9,
+      "retour_notice_recommande": true,
+      "detail_id": "essenciel_patrimoine.rachat.tableau_valeurs",
+      "detail_path": "contrats.essenciel_patrimoine.details.rachat.tableau_valeurs",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "source_page": "14-15",
+      "related_objects": [
+        "essenciel_patrimoine.mise_en_reduction"
+      ],
+      "contract_slug": "essenciel_patrimoine",
+      "source_pages": [
+        2,
+        14,
+        15
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "rachat",
+          "faculté",
+          "total",
+          "tableau",
+          "valeurs",
+          "partiel",
+          "contrat",
+          "comporte",
+          "sommes",
+          "versées",
+          "assureur",
+          "délai"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [
+          "essenciel_patrimoine.mise_en_reduction"
+        ],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre EssenCiel (obsèques) et EssenCiel Patrimoine (assurance vie transmission)",
+          "confondre rachat et mise en réduction",
+          "confondre délai d'attente et franchise"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Le contrat comporte une faculté de rachat ; règlement sous 2 mois. Un tableau des valeurs de rachat au terme des 8 premières années figure dans la notice (§4.3).",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.2,14,15 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    },
+    {
+      "id": "essenciel_patrimoine.mise_en_reduction",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Mise en réduction (valeur de réduction)",
+      "resume_conseiller": "Si l'adhérent cesse de payer les cotisations, l'adhésion peut être mise en réduction : un nouveau capital garanti (valeur de réduction) est calculé.",
+      "texte_metier_exploitable": "La valeur de réduction à une date t correspond au nouveau capital garanti en cas de décès si l'assuré cesse de payer les cotisations à cette date. Elle est calculée en fonction de l'âge de l'assuré à l'adhésion, du nombre d'années courues de paiement, du capital décès choisi, ainsi que du type et de la durée de cotisation choisis.",
+      "conditions_application": [
+        "arrêt du paiement des cotisations"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [
+        "Tableau des valeurs de réduction (8 premières années) — notice §4.3"
+      ],
+      "exclusions_liees": [],
+      "points_vigilance": [
+        "La réduction diminue le capital garanti ; fin de la réduction tarifaire conjoint (10 %)."
+      ],
+      "source": {
+        "pdf": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+        "page": "13, 14, 15",
+        "section": "4.3",
+        "extrait_reference": "Valeur de réduction… le nouveau capital garanti en cas de décès… si l'assuré cesse de payer les cotisations",
+        "pages": [
+          13,
+          14,
+          15
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.9,
+      "retour_notice_recommande": true,
+      "detail_id": "essenciel_patrimoine.mise_en_reduction",
+      "detail_path": "contrats.essenciel_patrimoine.details.mise_en_reduction",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "source_page": "15",
+      "related_objects": [
+        "essenciel_patrimoine.rachat"
+      ],
+      "contract_slug": "essenciel_patrimoine",
+      "source_pages": [
+        13,
+        14,
+        15
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "réduction",
+          "valeur",
+          "date",
+          "capital",
+          "décès",
+          "assuré",
+          "mise",
+          "correspond",
+          "nouveau",
+          "garanti",
+          "cesse",
+          "payer"
+        ],
+        "synonymes": [
+          "mise en réduction",
+          "arrêt de cotisation",
+          "capital réduit"
+        ],
+        "formulations_client_possibles": [
+          "Si j'arrête de payer, que se passe-t-il ?",
+          "C'est quoi la mise en réduction ?"
+        ],
+        "intentions": [
+          "vérifier mise en réduction"
+        ],
+        "concepts_lies": [
+          "essenciel_patrimoine.rachat"
+        ],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre EssenCiel (obsèques) et EssenCiel Patrimoine (assurance vie transmission)"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Si l'adhérent cesse de payer les cotisations, l'adhésion peut être mise en réduction : un nouveau capital garanti (valeur de réduction) est calculé.",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.13,14,15 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    },
+    {
+      "id": "essenciel_patrimoine.reduction_conjoint",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Réduction tarifaire couple (-10 %)",
+      "resume_conseiller": "Adhésion simultanée de l'adhérent et de son conjoint (marié/PACS/concubin) : -10 % permanent sur l'ensemble des cotisations.",
+      "texte_metier_exploitable": "En cas d'adhésion simultanée par l'adhérent et son conjoint (marié, partenaire de PACS ou concubin), les 2 adhésions bénéficient d'une réduction permanente de 10 % sur l'ensemble des cotisations. Cette réduction prend fin en cas de rachat ou de mise en réduction de l'une des adhésions.",
+      "conditions_application": [
+        "adhésion simultanée des deux conjoints"
+      ],
+      "seuils": [
+        "-10 % sur les cotisations"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [
+        "La réduction cesse si l'un rachète ou met en réduction."
+      ],
+      "source": {
+        "pdf": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+        "page": "13",
+        "section": "4.1",
+        "extrait_reference": "une réduction permanente de 10 % sur l'ensemble des cotisations",
+        "pages": [
+          13
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.92,
+      "retour_notice_recommande": false,
+      "detail_id": "essenciel_patrimoine.reduction_conjoint",
+      "detail_path": "contrats.essenciel_patrimoine.details.reduction_conjoint",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "essenciel_patrimoine",
+      "source_pages": [
+        13
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "réduction",
+          "adhésions",
+          "tarifaire",
+          "couple",
+          "adhésion",
+          "simultanée",
+          "adhérent",
+          "conjoint",
+          "marié",
+          "partenaire",
+          "pacs",
+          "concubin"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre EssenCiel (obsèques) et EssenCiel Patrimoine (assurance vie transmission)",
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Adhésion simultanée de l'adhérent et de son conjoint (marié/PACS/concubin) : -10 % permanent sur l'ensemble des cotisations.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "essenciel_patrimoine.assistance",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Prestations d'assistance (suite au décès)",
+      "resume_conseiller": "Prestations d'assistance fournies par AXA Assistance (suite au décès de l'assuré).",
+      "texte_metier_exploitable": "Le contrat prévoit des prestations d'assistance (INTER PARTNER ASSISTANCE / AXA Assistance), notamment suite au décès de l'assuré. Détail au Chapitre 3 de la notice.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "essenciel_patrimoine.exclusions_assistance"
+      ],
+      "points_vigilance": [
+        "Territorialité assistance limitée (voir territorialité)."
+      ],
+      "source": {
+        "pdf": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+        "page": "7, 9, 10",
+        "section": "3.x",
+        "extrait_reference": "Les prestations d'assistance suite au décès de l'assuré",
+        "pages": [
+          7,
+          9,
+          10
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "essenciel_patrimoine.assistance",
+      "detail_path": "contrats.essenciel_patrimoine.details.assistance",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "source_page": "9-12",
+      "related_objects": [],
+      "contract_slug": "essenciel_patrimoine",
+      "source_pages": [
+        7,
+        9,
+        10
+      ],
+      "requires_pdf_check_reason": "a_verifier",
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "assistance",
+          "prestations",
+          "suite",
+          "décès",
+          "contrat",
+          "prévoit",
+          "inter",
+          "partner",
+          "notamment",
+          "assuré",
+          "détail",
+          "chapitre"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre EssenCiel (obsèques) et EssenCiel Patrimoine (assurance vie transmission)"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Prestations d'assistance fournies par AXA Assistance (suite au décès de l'assuré).",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.7,9,10 (a_verifier)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "essenciel_patrimoine.exclusions_deces",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Risques exclus de la garantie décès",
+      "resume_conseiller": "Décès exclu si : suicide la 1re année, guerre civile/étrangère, et autres cas listés §2.4.",
+      "texte_metier_exploitable": "EST EXCLU LE DÉCÈS RÉSULTANT : d'un suicide ou tentative de suicide de l'adhérent au cours de la 1re année d'adhésion ; d'une guerre civile ou étrangère, invasions, agressions étrangères, hostilités (que la guerre soit déclarée ou non) ; de la participation active de l'assuré à une guerre. (Liste complète : notice §2.4.)",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [
+        "Délai de carence suicide : 1re année. Vérifier la liste complète des exclusions en notice §2.4 (p.6)."
+      ],
+      "source": {
+        "pdf": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+        "page": "6",
+        "section": "2.4",
+        "extrait_reference": "EST EXCLU LE DÉCÈS RÉSULTANT : d'un suicide ou tentative de suicide… au cours de la 1re année d'adhésion ; d'une guerre civile ou étrangère…",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.9,
+      "retour_notice_recommande": true,
+      "detail_id": "essenciel_patrimoine.exclusions_deces",
+      "detail_path": "contrats.essenciel_patrimoine.details.exclusions_deces",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "source_page": "6",
+      "related_objects": [
+        "essenciel_patrimoine.garantie_deces"
+      ],
+      "contract_slug": "essenciel_patrimoine",
+      "source_pages": [
+        6
+      ],
+      "requires_pdf_check_reason": "a_verifier",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "guerre",
+          "décès",
+          "suicide",
+          "risques",
+          "exclus",
+          "garantie",
+          "exclu",
+          "résultant",
+          "tentative",
+          "adhérent",
+          "cours",
+          "année"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [
+          "essenciel_patrimoine.garantie_deces"
+        ],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre EssenCiel (obsèques) et EssenCiel Patrimoine (assurance vie transmission)",
+          "confondre exclusion et condition de garantie"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Décès exclu si : suicide la 1re année, guerre civile/étrangère, et autres cas listés §2.4.",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.6 (a_verifier)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "conditions_souscription": [
+    {
+      "id": "essenciel_patrimoine.conditions_adhesion",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "Conditions et limites d'âge à l'adhésion",
+      "resume_conseiller": "Âge à l'adhésion 18–65 ans inclus ; éventuelles formalités médicales ; durée viagère.",
+      "texte_metier_exploitable": "Pour être assuré : se soumettre aux éventuelles formalités médicales demandées par AXA ; avoir, à la date de signature du Bulletin/Certificat d'adhésion, un âge compris entre 18 ans et 65 ans inclus (âge calculé par différence de millésimes). Durée de l'adhésion viagère, sous réserve du paiement des cotisations. Le décès ou le rachat total met fin à l'adhésion.",
+      "conditions_application": [
+        "18–65 ans inclus",
+        "formalités médicales éventuelles",
+        "paiement 1re cotisation"
+      ],
+      "seuils": [
+        "18 ans",
+        "65 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [
+        "Questionnaires médical/financier/sportif possibles à l'adhésion."
+      ],
+      "source": {
+        "pdf": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+        "page": "6",
+        "section": "1.4, 1.5",
+        "extrait_reference": "un âge compris entre 18 ans et 65 ans inclus ; La durée de l'adhésion est viagère",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.92,
+      "retour_notice_recommande": false,
+      "detail_id": "essenciel_patrimoine.conditions_adhesion",
+      "detail_path": "contrats.essenciel_patrimoine.details.conditions_adhesion",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "essenciel_patrimoine",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "adhésion",
+          "conditions",
+          "limites",
+          "être",
+          "assuré",
+          "soumettre",
+          "éventuelles",
+          "formalités",
+          "médicales",
+          "demandées",
+          "avoir",
+          "date"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre EssenCiel (obsèques) et EssenCiel Patrimoine (assurance vie transmission)",
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Âge à l'adhésion 18–65 ans inclus ; éventuelles formalités médicales ; durée viagère.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "essenciel_patrimoine.territorialite",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "Clause de territorialité",
+      "resume_conseiller": "Risque décès couvert dans le monde entier ; assistance limitée à France métropolitaine, DOM et Monaco.",
+      "texte_metier_exploitable": "Le risque décès est couvert dans le monde entier. Les prestations d'assistance s'exercent en France métropolitaine, dans les DOM et dans la Principauté de Monaco.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [
+        "Pour un assuré à l'étranger : décès couvert mondialement, mais assistance non."
+      ],
+      "source": {
+        "pdf": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+        "page": "6",
+        "section": "1.6",
+        "extrait_reference": "Le risque décès est couvert dans le monde entier. Les prestations d'assistance s'exercent en France métropolitaine, dans les DOM et dans la Principauté de Monaco.",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.93,
+      "retour_notice_recommande": false,
+      "detail_id": "essenciel_patrimoine.territorialite",
+      "detail_path": "contrats.essenciel_patrimoine.details.territorialite",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "essenciel_patrimoine",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "clause",
+          "territorialité",
+          "risque",
+          "décès",
+          "couvert",
+          "monde",
+          "entier",
+          "prestations",
+          "assistance",
+          "exercent",
+          "france",
+          "métropolitaine"
+        ],
+        "synonymes": [
+          "étranger",
+          "séjour",
+          "monde entier",
+          "90 jours",
+          "résidence fiscale",
+          "expatriation",
+          "étudiant"
+        ],
+        "formulations_client_possibles": [
+          "Je pars étudier à l'étranger, suis-je couvert ?",
+          "Je quitte la France plus de 3 mois, ça marche ?",
+          "Je suis étudiant hors de France, ça fonctionne ?"
+        ],
+        "intentions": [
+          "vérifier territorialité",
+          "vérifier durée de séjour",
+          "vérifier condition résidence France"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre EssenCiel (obsèques) et EssenCiel Patrimoine (assurance vie transmission)",
+          "croire qu'un séjour à l'étranger > 90 jours est automatiquement couvert"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Risque décès couvert dans le monde entier ; assistance limitée à France métropolitaine, DOM et Monaco.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "fiscalite": [
+    {
+      "id": "essenciel_patrimoine.fiscalite",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "Régime fiscal — assurance vie (transmission)",
+      "resume_conseiller": "Régime fiscal de l'assurance vie : transmission via art. 990 I et 757 B du CGI (selon âge des versements). Avantage de transmission hors succession dans les limites légales.",
+      "texte_metier_exploitable": "Le régime fiscal applicable est celui de l'assurance vie (indiqué dans la notice au 1er janvier 2018, sous réserve d'évolutions). Pièces possibles au dénouement : attestation sur l'honneur des bénéficiaires (art. 990 I du CGI) et/ou justificatifs liés à l'art. 757 B du CGI.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [
+        "Barèmes 990 I / 757 B — selon réglementation fiscale en vigueur (vérifier dates)"
+      ],
+      "exclusions_liees": [],
+      "points_vigilance": [
+        "Annexe fiscale datée (2018) ; vérifier la fiscalité EN VIGUEUR au moment du conseil. Distinguer 990 I (versements avant 70 ans) et 757 B (après 70 ans)."
+      ],
+      "source": {
+        "pdf": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+        "page": "5, 16",
+        "section": "Régime fiscal",
+        "extrait_reference": "Le régime fiscal applicable… est celui de l'assurance vie ; article 990 I… et/ou… article 757 B du CGI",
+        "pages": [
+          5,
+          16
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "essenciel_patrimoine.fiscalite",
+      "detail_path": "contrats.essenciel_patrimoine.details.fiscalite",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "source_page": "5, 23, 31",
+      "related_objects": [
+        "essenciel_patrimoine.garantie_deces"
+      ],
+      "contract_slug": "essenciel_patrimoine",
+      "source_pages": [
+        5,
+        16
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "régime",
+          "fiscal",
+          "assurance",
+          "transmission",
+          "applicable",
+          "celui",
+          "indiqué",
+          "notice",
+          "janvier",
+          "sous",
+          "réserve",
+          "évolutions"
+        ],
+        "synonymes": [
+          "impôt",
+          "990 I",
+          "757 B",
+          "succession",
+          "transmission",
+          "abattement",
+          "Madelin",
+          "déduction"
+        ],
+        "formulations_client_possibles": [
+          "Quelle fiscalité au décès ?",
+          "Est-ce déductible ?",
+          "Comment ça se transmet ?"
+        ],
+        "intentions": [
+          "vérifier fiscalité",
+          "vérifier transmission"
+        ],
+        "concepts_lies": [
+          "essenciel_patrimoine.garantie_deces"
+        ],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre EssenCiel (obsèques) et EssenCiel Patrimoine (assurance vie transmission)",
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Régime fiscal de l'assurance vie : transmission via art. 990 I et 757 B du CGI (selon âge des versements). Avantage de transmission hors succession dans les limites légales.",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.5,16 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    }
+  ],
+  "points_vigilance": [
+    "NE PAS confondre avec Essen'Ciel (obsèques) : Patrimoine = transmission, cadre assurance vie, faculté de rachat.",
+    "Pas de garantie en capital ≥ versements nets de frais (ce n'est pas une épargne garantie).",
+    "Valeurs de rachat/réduction faibles les 1res années ; tableau à vérifier en notice (§4.3).",
+    "Âge à l'adhésion 18–65 ans ; formalités médicales possibles.",
+    "Fiscalité datée dans la notice (2018) → vérifier la fiscalité en vigueur.",
+    "Assistance limitée (France/DOM/Monaco) alors que le décès est couvert mondialement."
+  ],
+  "usages_commerciaux": [
+    "Transmettre un capital à un bénéficiaire désigné dans un cadre fiscal d'assurance vie.",
+    "Compléter une assurance obsèques par une logique de transmission patrimoniale.",
+    "Proposer une solution avec faculté de rachat (souplesse) vs Essen'Ciel obsèques (dédié funéraire).",
+    "Cibler les couples (réduction -10 % en adhésion simultanée)."
+  ],
+  "stats": {
+    "garanties": 2,
+    "options": 4,
+    "exclusions": 1,
+    "conditions": 2,
+    "fiscalite": 1,
+    "points_vigilance": 6,
+    "pdfs": 1,
+    "placeholders": 0
+  }
+}

@@ -1,0 +1,1397 @@
+{
+  "meta": {
+    "type": "contrat_axa_dedie",
+    "slug": "excelium",
+    "schema_version": "2.0_enrichi",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "source": "data/AXA/base_connaissances_contractuelle/Contrat_excelium_assurance_vie/",
+    "avertissement": "Enrichi depuis l'extraction tracée. La notice PDF fait foi. requires_pdf_check=true => vérifier le tableau/barème en notice.",
+    "genere_le": "2026-06-19",
+    "qa_version": "2.1",
+    "qa_date": "2026-06-19"
+  },
+  "contrat": {
+    "id": "axa_excelium_vie_2026-05",
+    "nom": "Excelium (assurance vie)",
+    "famille": "épargne",
+    "type_contrat": "notice_information_contrat_groupe_assurance_vie_multisupport",
+    "assureur": "AXA France Vie et AXA Assurances Vie Mutuelle ; souscripteur du groupe : ANPERE",
+    "version": "Notice Excelium / Mai 2026 — minima et frais en vigueur au 20 mai 2026 (annexe 3), tarifs garantie Revalorisée au 25 février 2026, annexe fiscale au 1er janvier 2026",
+    "date": "2026-05",
+    "resume_neutre": "Assurance vie multisupport : épargne disponible (rachats), capital au terme ou rente viagère sur proposition, capital décès aux bénéficiaires. Trois familles de supports : euros (capital garanti net de frais, PB contractuelle sans minimum garanti), fonds Croissance (garantie de 100 % des sommes nettes de frais à l'échéance — 10 ans prorogeable, participation aux résultats 100 %), unités de compte (capital non garanti). Trois types de gestion : personnelle, par convention, pilotée (sous mandat). Garantie décès plancher « Sérénité » incluse (jusqu'à 80 ans) et garantie « Revalorisée » (Livret A) automatique sous conditions. Frais plafonnés contractuellement (annexe 3). Rachat à tout moment, règlement sous 2 mois."
+  },
+  "pdfs": [
+    {
+      "type_document": "notice",
+      "path": "data/AXA/Excelium/2026-05 Notice Excelium Vie.pdf",
+      "pages": 247
+    },
+    {
+      "type_document": "dic",
+      "path": "data/AXA/Excelium/2026-05 Recueil des DIC Excelium.pdf",
+      "pages": 247
+    }
+  ],
+  "garanties": [
+    {
+      "id": "excelium.garantie_en_cas_de_vie_au_terme",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Garantie en cas de vie (au terme)",
+      "resume_conseiller": "Capital, ou sur proposition de l'assureur rente viagère (conditions et tarif en vigueur à la demande : frais d'arrérage, taux technique, table de mortalité ;",
+      "texte_metier_exploitable": "Capital, ou sur proposition de l'assureur rente viagère (conditions et tarif en vigueur à la demande : frais d'arrérage, taux technique, table de mortalité ; trop-perçus post-décès remboursés par les héritiers). Le règlement met fin à l'adhésion.",
+      "conditions_application": [
+        "vie de l'assuré au terme",
+        "demande de l'adhérent"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "excelium.exclusions_de_la_garantie_revaloris_e"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 15,
+        "section": "4.1",
+        "extrait_reference": "sous forme d'un capital ; ou, éventuellement et sur notre proposition, sous forme de rente viagère",
+        "pages": [
+          15
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.garantie_en_cas_de_vie_au_terme",
+      "detail_path": "contrats.excelium.details.garantie_en_cas_de_vie_au_terme",
+      "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "source_page": 15,
+      "source_section": "4.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "garantie",
+      "source_pages": [
+        15
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "garantie",
+          "terme",
+          "capital",
+          "proposition",
+          "assureur",
+          "rente",
+          "viagère",
+          "conditions",
+          "tarif",
+          "vigueur",
+          "demande",
+          "frais"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Capital, ou sur proposition de l'assureur rente viagère (conditions et tarif en vigueur à la demande : frais d'arrérage, taux technique, table de mortalité ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "excelium.garantie_en_cas_de_d_c_s",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Garantie en cas de décès",
+      "resume_conseiller": "Capital décès = épargne tous supports confondus, OU montant dû au titre de la garantie « Sérénité », OU montant dû au titre de la garantie « Revalorisée ».",
+      "texte_metier_exploitable": "Capital décès = épargne tous supports confondus, OU montant dû au titre de la garantie « Sérénité », OU montant dû au titre de la garantie « Revalorisée ». Le versement met fin à l'adhésion.",
+      "conditions_application": [
+        "décès de l'assuré avant le terme"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "excelium.exclusions_de_la_garantie_revaloris_e"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 15,
+        "section": "4.2",
+        "extrait_reference": "un capital décès correspondant, selon le cas",
+        "pages": [
+          15
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.garantie_en_cas_de_d_c_s",
+      "detail_path": "contrats.excelium.details.garantie_en_cas_de_d_c_s",
+      "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "source_page": 15,
+      "source_section": "4.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "garantie",
+      "source_pages": [
+        15
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "garantie",
+          "décès",
+          "montant",
+          "titre",
+          "capital",
+          "épargne",
+          "tous",
+          "supports",
+          "confondus",
+          "sérénité",
+          "revalorisée",
+          "versement"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Capital décès = épargne tous supports confondus, OU montant dû au titre de la garantie « Sérénité », OU montant dû au titre de la garantie « Revalorisée ».",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "excelium.garantie_s_r_nit_plancher_incluse",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Garantie « Sérénité » (plancher, incluse)",
+      "resume_conseiller": "Capital décès jamais inférieur aux versements BRUTS de frais diminués des rachats.",
+      "texte_metier_exploitable": "Capital décès jamais inférieur aux versements BRUTS de frais diminués des rachats. Cesse au 80e anniversaire (coût inclus dans les frais de gestion des UC, prélevé toute la durée y compris après 80 ans). Fonds Croissance : si décès entre 80 et 90 ans avant l'échéance, minimum = montant garanti du fonds Croissance, sans frais. Cesse en cas de renonciation ou rachat total.",
+      "conditions_application": [
+        "incluse automatiquement"
+      ],
+      "seuils": [
+        "80 ans",
+        "90 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "excelium.exclusions_de_la_garantie_revaloris_e"
+      ],
+      "points_vigilance": [
+        "plancher = versements bruts − rachats",
+        "jusqu'à 80 ans (90 ans pour le volet fonds Croissance)"
+      ],
+      "source": {
+        "pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 15,
+        "section": "4.2.1",
+        "extrait_reference": "le montant du capital décès ne peut pas être inférieur au montant des versements bruts de frais, diminué des éventuels rachats",
+        "pages": [
+          15
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.garantie_s_r_nit_plancher_incluse",
+      "detail_path": "contrats.excelium.details.garantie_s_r_nit_plancher_incluse",
+      "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "source_page": 15,
+      "source_section": "4.2.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "garantie",
+      "source_pages": [
+        15
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "frais",
+          "décès",
+          "cesse",
+          "fonds",
+          "croissance",
+          "garantie",
+          "sérénité",
+          "plancher",
+          "incluse",
+          "capital",
+          "jamais",
+          "inférieur"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Capital décès jamais inférieur aux versements BRUTS de frais diminués des rachats.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "excelium.garantie_revaloris_e",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Garantie « Revalorisée »",
+      "resume_conseiller": "Souscrite automatiquement et exclusivement si gestion par convention Conviction Fortissimo ou Horizon Actions Fortissimo (sans fonds Croissance) ET âge < 70 ans à l'adhésion.",
+      "texte_metier_exploitable": "Souscrite automatiquement et exclusivement si gestion par convention Conviction Fortissimo ou Horizon Actions Fortissimo (sans fonds Croissance) ET âge < 70 ans à l'adhésion. Capital décès minimum = cumul des versements NETS revalorisés au taux mensuel du Livret A (du 1er jour du mois suivant l'encaissement au dernier jour du mois précédant le décès), minorés proportionnellement à chaque rachat partiel. Effet à la fin du délai de renonciation ; cesse en cas de changement de gestion/convention avec fonds Croissance, rachat total, renonciation, ou au 1er jour du mois suivant le 80e anniversaire. Tarifée mensuellement sur le capital sous risque (tableau par âge) ; prime prélevée sur l'épargne au prorata ; résiliation définitive de la garantie à défaut de paiement 40 jours après LR. Capital sous risque plafonné à 1 200 000 € par assuré.",
+      "conditions_application": [
+        "convention Fortissimo sans fonds Croissance",
+        "< 70 ans à l'adhésion"
+      ],
+      "seuils": [
+        "1 200 000 €",
+        "70 ans"
+      ],
+      "formules": [
+        "Garantie « Revalorisée »"
+      ],
+      "tableaux": [
+        "voir notice (tableau/barème) — page 16"
+      ],
+      "exclusions_liees": [
+        "excelium.exclusions_de_la_garantie_revaloris_e"
+      ],
+      "points_vigilance": [
+        "capital sous risque max 1 200 000 €/assuré"
+      ],
+      "source": {
+        "pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 16,
+        "section": "4.2.2",
+        "extrait_reference": "nous garantissons le versement d'un capital minimum égal au cumul des versements nets… revalorisés… par le taux mensuel du Livret A",
+        "pages": [
+          16
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "excelium.garantie_revaloris_e",
+      "detail_path": "contrats.excelium.details.garantie_revaloris_e",
+      "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "source_page": 16,
+      "source_section": "4.2.2",
+      "has_full_clause_text": true,
+      "has_formula": true,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "garantie",
+      "source_pages": [
+        16
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "capital",
+          "jour",
+          "mois",
+          "garantie",
+          "fortissimo",
+          "fonds",
+          "croissance",
+          "décès",
+          "suivant",
+          "rachat",
+          "renonciation",
+          "sous"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction",
+          "confondre exclusion et condition de garantie",
+          "confondre délai d'attente et franchise"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Souscrite automatiquement et exclusivement si gestion par convention Conviction Fortissimo ou Horizon Actions Fortissimo (sans fonds Croissance) ET âge < 70 ans à l'adhésion.",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.16 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    }
+  ],
+  "options_mecanismes": [
+    {
+      "id": "excelium.types_de_gestion",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Types de gestion",
+      "resume_conseiller": "Gestion personnelle (libre choix des supports) ;",
+      "texte_metier_exploitable": "Gestion personnelle (libre choix des supports) ; gestion par convention (profils, dont conventions Conviction/Horizon, avec ou sans fonds Croissance, équilibrages automatiques) ; gestion pilotée / sous mandat (profils d'allocation, frais de mandat +0,25 %/an sur UC). Options d'arbitrage automatique en gestion personnelle : investissement progressif (0 %), sécurisation des performances (0,80 %), stop loss (0 %).",
+      "conditions_application": [
+        "minima de versement différents (300 € / 5 000 € en pilotée / 10 000 € avec investissement progressif en pilotée)"
+      ],
+      "seuils": [
+        "0 %",
+        "25 %",
+        "80 %"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 79,
+        "section": "Annexe 3",
+        "extrait_reference": "Versement initial en gestion pilotée 5 000 €",
+        "pages": [
+          79
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.types_de_gestion",
+      "detail_path": "contrats.excelium.details.types_de_gestion",
+      "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "source_page": 79,
+      "source_section": "Annexe 3",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "option",
+      "source_pages": [
+        79
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "gestion",
+          "personnelle",
+          "profils",
+          "mandat",
+          "types",
+          "libre",
+          "choix",
+          "supports",
+          "convention",
+          "dont",
+          "conventions",
+          "conviction/horizon"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Gestion personnelle (libre choix des supports) ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "excelium.rachats_partiels_programm_s",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Rachats partiels programmés",
+      "resume_conseiller": "Durée max 3 ans, montant en euros (brut ou net de fiscalité), périodicité au choix ;",
+      "texte_metier_exploitable": "Durée max 3 ans, montant en euros (brut ou net de fiscalité), périodicité au choix ; min 150 €/rachat, valeur de rachat restante ≥ 750 € ; incompatible avec versements programmés et options d'arbitrage automatique ; modifications avec préavis 1 mois ; une seule suspension/reprise ; l'assureur peut arrêter l'option.",
+      "conditions_application": [
+        "après le délai de renonciation",
+        "acceptation de l'assureur"
+      ],
+      "seuils": [
+        "150 €",
+        "3 ans",
+        "750 €"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 45,
+        "section": "7.1.2",
+        "extrait_reference": "la durée des rachats partiels, qui ne peut excéder 3 ans",
+        "pages": [
+          45
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.rachats_partiels_programm_s",
+      "detail_path": "contrats.excelium.details.rachats_partiels_programm_s",
+      "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "source_page": 45,
+      "source_section": "7.1.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "option",
+      "source_pages": [
+        45
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "programmés",
+          "rachats",
+          "partiels",
+          "durée",
+          "montant",
+          "euros",
+          "brut",
+          "fiscalité",
+          "périodicité",
+          "choix",
+          "/rachat",
+          "valeur"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction",
+          "confondre fiscalité décès assurance vie et succession classique",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Durée max 3 ans, montant en euros (brut ou net de fiscalité), périodicité au choix ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "excelium.prorogation_du_fonds_croissance",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Prorogation du fonds Croissance",
+      "resume_conseiller": "Option expresse, sans frais, à tout moment : à l'échéance, la garantie (10 ans) est prorogée ;",
+      "texte_metier_exploitable": "Option expresse, sans frais, à tout moment : à l'échéance, la garantie (10 ans) est prorogée ; renonciation possible par lettre simple ; l'assureur peut refuser jusqu'à 3 mois avant l'échéance. Les prélèvements sociaux du fonds Croissance sont reportés à la nouvelle échéance.",
+      "conditions_application": [],
+      "seuils": [
+        "10 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 20,
+        "section": "5.2",
+        "extrait_reference": "Vous pouvez à tout moment opter expressément pour la prorogation, sans frais, de l'échéance de la garantie",
+        "pages": [
+          20
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.prorogation_du_fonds_croissance",
+      "detail_path": "contrats.excelium.details.prorogation_du_fonds_croissance",
+      "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "source_page": 20,
+      "source_section": "5.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "option",
+      "source_pages": [
+        20
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "échéance",
+          "fonds",
+          "croissance",
+          "prorogation",
+          "option",
+          "expresse",
+          "frais",
+          "tout",
+          "moment",
+          "garantie",
+          "prorogée",
+          "renonciation"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Option expresse, sans frais, à tout moment : à l'échéance, la garantie (10 ans) est prorogée ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "excelium.exclusions_de_la_garantie_revaloris_e",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Exclusions de la garantie « Revalorisée »",
+      "resume_conseiller": "Suicide/tentative (conscient ou non) ou tout acte volontaire de l'assuré dans l'année suivant la prise d'effet ;",
+      "texte_metier_exploitable": "Suicide/tentative (conscient ou non) ou tout acte volontaire de l'assuré dans l'année suivant la prise d'effet ; guerre civile/étrangère/insurrection, opérations de maintien de l'ordre/paix ; accident en conduite d'engin à moteur avec alcoolémie ≥ taux légal du pays ou sous toxiques/stupéfiants/médicaments non prescrits ; accident antérieur à la prise d'effet ou maladie à premières manifestations antérieures, sauf acceptation expresse d'AXA.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 16,
+        "section": "4.2.2 Exclusions",
+        "extrait_reference": "le suicide, ou tentative de suicide, conscient ou inconscient… dans l'année qui suit la prise d'effet",
+        "pages": [
+          16
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.exclusions_de_la_garantie_revaloris_e",
+      "detail_path": "contrats.excelium.details.exclusions_de_la_garantie_revaloris_e",
+      "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "source_page": 16,
+      "source_section": "4.2.2 Exclusions",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "exclusion",
+      "source_pages": [
+        16
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "prise",
+          "effet",
+          "accident",
+          "exclusions",
+          "garantie",
+          "revalorisée",
+          "suicide/tentative",
+          "conscient",
+          "tout",
+          "acte",
+          "volontaire",
+          "assuré"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre exclusion et condition de garantie"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Suicide/tentative (conscient ou non) ou tout acte volontaire de l'assuré dans l'année suivant la prise d'effet ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "conditions_souscription": [
+    {
+      "id": "excelium.conditions_souscription_1",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_1",
+      "resume_conseiller": "Adhésion ANPERE ;",
+      "texte_metier_exploitable": "Adhésion ANPERE ; versement initial minimum 300 € (5 000 € en gestion pilotée) ; choix du type de gestion et de la répartition.",
+      "conditions_application": [],
+      "seuils": [
+        "300 €",
+        "5 000 €"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 79,
+        "section": "Annexe 3",
+        "extrait_reference": "Versement initial – hors gestion pilotée 300 €",
+        "pages": [
+          79
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.conditions_souscription_1",
+      "detail_path": "contrats.excelium.details.conditions_souscription_1",
+      "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "source_page": 79,
+      "source_section": "Annexe 3",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "condition",
+      "source_pages": [
+        79
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "gestion",
+          "conditions",
+          "souscription",
+          "adhésion",
+          "anpere",
+          "versement",
+          "initial",
+          "minimum",
+          "pilotée",
+          "choix",
+          "type",
+          "répartition"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Adhésion ANPERE ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "excelium.conditions_souscription_2",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_2",
+      "resume_conseiller": "Garantie Revalorisée : réservée aux conventions Fortissimo sans fonds Croissance et aux adhérents < 70 ans.",
+      "texte_metier_exploitable": "Garantie Revalorisée : réservée aux conventions Fortissimo sans fonds Croissance et aux adhérents < 70 ans.",
+      "conditions_application": [],
+      "seuils": [
+        "70 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 16,
+        "section": "4.2.2",
+        "extrait_reference": "vous êtes âgé de moins de 70 ans à l'adhésion",
+        "pages": [
+          16
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.conditions_souscription_2",
+      "detail_path": "contrats.excelium.details.conditions_souscription_2",
+      "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "source_page": 16,
+      "source_section": "4.2.2",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "condition",
+      "source_pages": [
+        16
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "souscription",
+          "garantie",
+          "revalorisée",
+          "réservée",
+          "conventions",
+          "fortissimo",
+          "fonds",
+          "croissance",
+          "adhérents"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Garantie Revalorisée : réservée aux conventions Fortissimo sans fonds Croissance et aux adhérents < 70 ans.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "fiscalite": [
+    {
+      "id": "excelium.valeurs_de_rachat",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "valeurs_de_rachat",
+      "resume_conseiller": "Faculté de rachat partiel ou total à tout moment ;",
+      "texte_metier_exploitable": "Faculté de rachat partiel ou total à tout moment ; valeur de rachat = somme des valeurs sur Global Euro + fonds Croissance + UC ; UC/parts converties en euros à la date de valeur applicable. Versement sous 2 mois max après demande complète ; délai possible > 3 semaines pour AXA Immo Avenir, AXA Avenir Infrastructure, AXA Avenir Entrepreneurs. Minima : rachat partiel 750 € (programmé 150 €), solde restant ≥ 750 €. Rachat total = fin de l'adhésion ; accord du bénéficiaire acceptant requis.",
+      "conditions_application": [],
+      "seuils": [
+        "150 €",
+        "750 €"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "Faculté de rachat partiel ou total à tout moment ; valeur de rachat = somme des valeurs sur Global Euro + fonds Croissance + UC ; UC/parts c",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.valeurs_de_rachat",
+      "detail_path": "contrats.excelium.details.valeurs_de_rachat",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "rachat",
+          "avenir",
+          "valeurs",
+          "partiel",
+          "total",
+          "valeur",
+          "faculté",
+          "tout",
+          "moment",
+          "somme",
+          "global",
+          "euro"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction",
+          "confondre délai d'attente et franchise"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Faculté de rachat partiel ou total à tout moment ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "excelium.mise_en_reduction",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "mise_en_reduction",
+      "resume_conseiller": "mise_en_reduction",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.mise_en_reduction",
+      "detail_path": "contrats.excelium.details.mise_en_reduction",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "mise",
+          "reduction"
+        ],
+        "synonymes": [
+          "mise en réduction",
+          "arrêt de cotisation",
+          "capital réduit"
+        ],
+        "formulations_client_possibles": [
+          "Si j'arrête de payer, que se passe-t-il ?",
+          "C'est quoi la mise en réduction ?"
+        ],
+        "intentions": [
+          "vérifier mise en réduction"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "mise_en_reduction",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "excelium.determination_part_taxable",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "determination_part_taxable",
+      "resume_conseiller": "Rachat : seuls les PRODUITS sont imposables.",
+      "texte_metier_exploitable": "Rachat : seuls les PRODUITS sont imposables. Versements avant le 27/09/2017 : IR par défaut, option PFL irrévocable (7,5 % à 8 ans+, tous ces versements ayant plus de 8 ans au 01/01/2026). Versements depuis le 27/09/2017 : PFU par défaut — 12,8 % avant 8 ans ; après 8 ans : 7,5 % pour les produits issus de versements ≤ 150 000 € (primes nettes au 31/12 N-1, tous contrats) et 12,8 % au-delà ; option globale possible pour le barème progressif. Abattement annuel après 8 ans : 4 600 € (seul) / 9 200 € (couple). Prélèvements sociaux 17,2 % (produits depuis 1997) : au fil de l'eau sur le support euros, à l'échéance pour le fonds Croissance, régularisation au dénouement. Décès : exonération totale si bénéficiaire = conjoint/PACS ou frère/sœur (3 conditions). Sinon : primes versées avant 70 ans (contrats souscrits après le 20/11/1991, primes après le 13/10/1998) → abattement 152 500 €/bénéficiaire puis 20 % jusqu'à 852 500 € de part nette taxable et 31,25 % au-delà (990 I CGI) ; primes versées après 70 ans → droits de succession sur la fraction des primes > 30 500 € (abattement global, 757 B CGI). Prélèvements sociaux dus sur le capital transmis. Rente viagère : fraction imposable forfaita",
+      "conditions_application": [],
+      "seuils": [
+        "1 525 €",
+        "150 000 €",
+        "150 €",
+        "152 500 €",
+        "2 %",
+        "20 %",
+        "25 %",
+        "30 %",
+        "30 500 €",
+        "300 €",
+        "4 600 €",
+        "5 %"
+      ],
+      "formules": [],
+      "tableaux": [
+        "voir notice (tableau/barème) — page None"
+      ],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "Rachat : seuls les PRODUITS sont imposables. Versements avant le 27/09/2017 : IR par défaut, option PFL irrévocable (7,5 % à 8 ans+, tous ce",
+        "pages": [],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "excelium.determination_part_taxable",
+      "detail_path": "contrats.excelium.details.determination_part_taxable",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "après",
+          "primes",
+          "versements",
+          "produits",
+          "avant",
+          "abattement",
+          "part",
+          "taxable",
+          "défaut",
+          "option",
+          "tous",
+          "depuis"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction",
+          "croire qu'une garantie optionnelle est incluse"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Rachat : seuls les PRODUITS sont imposables.",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    },
+    {
+      "id": "excelium.conditions_de_rachat",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "conditions_de_rachat",
+      "resume_conseiller": "conditions_de_rachat",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.conditions_de_rachat",
+      "detail_path": "contrats.excelium.details.conditions_de_rachat",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "rachat"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "conditions_de_rachat",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "excelium.fiscalit",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "fiscalité",
+      "resume_conseiller": "fiscalité",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "excelium.fiscalit",
+      "detail_path": "contrats.excelium.details.fiscalit",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "excelium",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "fiscalité"
+        ],
+        "synonymes": [
+          "impôt",
+          "990 I",
+          "757 B",
+          "succession",
+          "transmission",
+          "abattement",
+          "Madelin",
+          "déduction"
+        ],
+        "formulations_client_possibles": [
+          "Quelle fiscalité au décès ?",
+          "Est-ce déductible ?",
+          "Comment ça se transmet ?"
+        ],
+        "intentions": [
+          "vérifier fiscalité",
+          "vérifier transmission"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "fiscalité",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "points_vigilance": [
+    "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+    "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.",
+    "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+    "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
+    "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+    "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+    "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans."
+  ],
+  "stats": {
+    "garanties": 4,
+    "options": 3,
+    "exclusions": 1,
+    "fiscalite": 5,
+    "conditions": 2,
+    "objets_requires_pdf_check": 5,
+    "placeholders": 7
+  }
+}

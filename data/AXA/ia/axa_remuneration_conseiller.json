@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "version_schema": "1.0",
+    "generated_at": "2026-06-12T18:33:41.014Z",
+    "language": "fr",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "stockage_recommande": "export_json_local_separe",
+    "stockage_local_automatique": false,
+    "avertissement": "Cette couche ne doit jamais primer sur l'intérêt client.",
+    "objectif": "Suivi de la rémunération conseiller / UP par produit et cotisation",
+    "isolated_from_recommendation_engine": true,
+    "status": "structure_a_completer"
+  },
+  "produits": [
+    {
+      "contrat_id": "axa_ma_protection_accident_2024-03",
+      "nom_contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "famille": "prévoyance",
+      "type_cotisation": null,
+      "cotisation_client": null,
+      "up_initiales": null,
+      "up_recurrentes": null,
+      "commission_estimee": null,
+      "regle_calcul": "",
+      "source": "",
+      "niveau_confiance": null,
+      "commentaire": ""
+    },
+    {
+      "contrat_id": "axa_avizen_2025-04",
+      "nom_contrat": "Avizen",
+      "famille": "prévoyance",
+      "type_cotisation": null,
+      "cotisation_client": null,
+      "up_initiales": null,
+      "up_recurrentes": null,
+      "commission_estimee": null,
+      "regle_calcul": "",
+      "source": "",
+      "niveau_confiance": null,
+      "commentaire": ""
+    },
+    {
+      "contrat_id": "axa_avizen_pro_2025-04",
+      "nom_contrat": "Avizen Pro",
+      "famille": "prévoyance",
+      "type_cotisation": null,
+      "cotisation_client": null,
+      "up_initiales": null,
+      "up_recurrentes": null,
+      "commission_estimee": null,
+      "regle_calcul": "",
+      "source": "",
+      "niveau_confiance": null,
+      "commentaire": ""
+    },
+    {
+      "contrat_id": "axa_entourage_2025-06",
+      "nom_contrat": "Entour'Age",
+      "famille": "prévoyance",
+      "type_cotisation": null,
+      "cotisation_client": null,
+      "up_initiales": null,
+      "up_recurrentes": null,
+      "commission_estimee": null,
+      "regle_calcul": "",
+      "source": "",
+      "niveau_confiance": null,
+      "commentaire": ""
+    },
+    {
+      "contrat_id": "axa_essenciel_2025-06",
+      "nom_contrat": "Essen'Ciel (assurance obsèques)",
+      "famille": "prévoyance",
+      "type_cotisation": null,
+      "cotisation_client": null,
+      "up_initiales": null,
+      "up_recurrentes": null,
+      "commission_estimee": null,
+      "regle_calcul": "",
+      "source": "",
+      "niveau_confiance": null,
+      "commentaire": ""
+    },
+    {
+      "contrat_id": "axa_masterlife_credit_2024-10",
+      "nom_contrat": "Masterlife CREDIT",
+      "famille": "assurance_emprunteur",
+      "type_cotisation": null,
+      "cotisation_client": null,
+      "up_initiales": null,
+      "up_recurrentes": null,
+      "commission_estimee": null,
+      "regle_calcul": "",
+      "source": "",
+      "niveau_confiance": null,
+      "commentaire": ""
+    },
+    {
+      "contrat_id": "axa_excelium_vie_2026-05",
+      "nom_contrat": "Excelium (assurance vie)",
+      "famille": "épargne",
+      "type_cotisation": null,
+      "cotisation_client": null,
+      "up_initiales": null,
+      "up_recurrentes": null,
+      "commission_estimee": null,
+      "regle_calcul": "",
+      "source": "",
+      "niveau_confiance": null,
+      "commentaire": ""
+    },
+    {
+      "contrat_id": "axa_ma_retraite_2026-05",
+      "nom_contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "famille": "retraite",
+      "type_cotisation": null,
+      "cotisation_client": null,
+      "up_initiales": null,
+      "up_recurrentes": null,
+      "commission_estimee": null,
+      "regle_calcul": "",
+      "source": "",
+      "niveau_confiance": null,
+      "commentaire": ""
+    }
+  ],
+  "regles_generales": [
+    "Ne jamais utiliser la rémunération comme critère de présélection client.",
+    "Exiger une source et un niveau de confiance pour toute valeur renseignée.",
+    "Conserver les calculs et hypothèses séparés des données contractuelles."
+  ],
+  "zones_a_completer": [
+    "barèmes UP",
+    "règles par type de cotisation",
+    "sources officielles",
+    "dates de validité"
+  ]
+}

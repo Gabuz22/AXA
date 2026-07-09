@@ -1,0 +1,2420 @@
+{
+  "meta": {
+    "type": "contrat_axa_dedie",
+    "slug": "ma_protection_accident",
+    "schema_version": "2.0_enrichi",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "source": "data/AXA/base_connaissances_contractuelle/Contrat_ma_protection_accident_garantie_des_accidents_de_la_vie/",
+    "avertissement": "Enrichi depuis l'extraction tracée. La notice PDF fait foi. requires_pdf_check=true => vérifier le tableau/barème en notice.",
+    "genere_le": "2026-06-19",
+    "qa_version": "2.1",
+    "qa_date": "2026-06-19"
+  },
+  "contrat": {
+    "id": "axa_ma_protection_accident_2024-03",
+    "nom": "Ma Protection Accident (Garantie des accidents de la vie)",
+    "famille": "prévoyance",
+    "type_contrat": "conditions_generales",
+    "assureur": "AXA France Vie / AXA Assurances Vie Mutuelle ; assistance par Inter Partner Assistance (AXA Assistance)",
+    "version": "Réf. 975938 03 2024 - N° IDU : FR232655_01GSTX",
+    "date": "2024-03",
+    "resume_neutre": "Contrat de garantie des accidents de la vie (GAV) indemnisant, selon le droit commun et un barème contractuel AQV, les préjudices consécutifs à un accident de la vie privée (activités courantes, événements exceptionnels, accidents médicaux, certains cas de conduite) entraînant le décès ou un déficit fonctionnel permanent d'au moins 1 %. Services d'assistance inclus même sous le seuil d'intervention. Option « Mes Sports à risque ». Le contrat est constitué des Conditions générales et des Conditions particulières (qui prévalent en cas de contradiction) ; formules, plafonds et cotisations figurent aux Conditions particulières."
+  },
+  "pdfs": [
+    {
+      "type_document": "conditions_generales",
+      "path": "data/AXA/Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "pages": 28
+    }
+  ],
+  "garanties": [
+    {
+      "id": "ma_protection_accident.accidents_corporels_d_activit_s_courantes",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Accidents corporels d'activités courantes",
+      "resume_conseiller": "Accidents survenus lors d'activités domestiques, scolaires et de loisirs pendant la période d'effet ;",
+      "texte_metier_exploitable": "Accidents survenus lors d'activités domestiques, scolaires et de loisirs pendant la période d'effet ; activités sportives en baptême ou initiation encadrée par personnes qualifiées d'une structure habilitée.",
+      "conditions_application": [
+        "pendant la période d'effet des garanties",
+        "conditions de territorialité (art. 1.4)",
+        "hors exclusions (art. 2)"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "ma_protection_accident.affections_m_me_cons_cutives_un_accident_garanti",
+        "ma_protection_accident.maladies_cause_ou_r_v_l_es_par_l_accident",
+        "ma_protection_accident.exp_rimentations_biom_dicales",
+        "ma_protection_accident.sports_professionnels_r_mun_r_s_risques_extr_mes",
+        "ma_protection_accident.accidents_de_la_circulation_vtm_soumis_obligatio",
+        "ma_protection_accident.non_respect_de_r_glementation_v_hicules_motoris_",
+        "ma_protection_accident.alcool_m_dicaments_stup_fiants",
+        "ma_protection_accident.accidents_du_travail_et_activit_s_lectives_syndi",
+        "ma_protection_accident.faits_intentionnels_suicide",
+        "ma_protection_accident.guerre_nucl_aire",
+        "ma_protection_accident.d_lit_intentionnel_ou_crime"
+      ],
+      "points_vigilance": [
+        "limites fixées aux Conditions particulières"
+      ],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 4,
+        "section": "1.2 Les accidents de la vie pris en compte",
+        "extrait_reference": "accidents survenus lors d'activités domestiques, scolaires et de loisirs",
+        "pages": [
+          4
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.accidents_corporels_d_activit_s_courantes",
+      "detail_path": "contrats.ma_protection_accident.details.accidents_corporels_d_activit_s_courantes",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 4,
+      "source_section": "1.2 Les accidents de la vie pris en compte",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "garantie",
+      "source_pages": [
+        4
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "activités",
+          "accidents",
+          "corporels",
+          "courantes",
+          "survenus",
+          "lors",
+          "domestiques",
+          "scolaires",
+          "loisirs",
+          "pendant",
+          "période",
+          "effet"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Accidents survenus lors d'activités domestiques, scolaires et de loisirs pendant la période d'effet ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.accidents_corporels_lors_d_v_nements_exceptionne",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Accidents corporels lors d'événements exceptionnels",
+      "resume_conseiller": "Catastrophes naturelles, industrielles ou technologiques ;",
+      "texte_metier_exploitable": "Catastrophes naturelles, industrielles ou technologiques ; agressions, vandalisme ; terrorisme, attentats, infractions des articles 706-3 et suivants du Code de procédure pénale ; mouvements populaires et rassemblements sur la voie publique.",
+      "conditions_application": [
+        "pendant la période d'effet des garanties"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "ma_protection_accident.affections_m_me_cons_cutives_un_accident_garanti",
+        "ma_protection_accident.maladies_cause_ou_r_v_l_es_par_l_accident",
+        "ma_protection_accident.exp_rimentations_biom_dicales",
+        "ma_protection_accident.sports_professionnels_r_mun_r_s_risques_extr_mes",
+        "ma_protection_accident.accidents_de_la_circulation_vtm_soumis_obligatio",
+        "ma_protection_accident.non_respect_de_r_glementation_v_hicules_motoris_",
+        "ma_protection_accident.alcool_m_dicaments_stup_fiants",
+        "ma_protection_accident.accidents_du_travail_et_activit_s_lectives_syndi",
+        "ma_protection_accident.faits_intentionnels_suicide",
+        "ma_protection_accident.guerre_nucl_aire",
+        "ma_protection_accident.d_lit_intentionnel_ou_crime"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 4,
+        "section": "1.2",
+        "extrait_reference": "catastrophes naturelles, industrielles ou technologiques, les agressions",
+        "pages": [
+          4
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.accidents_corporels_lors_d_v_nements_exceptionne",
+      "detail_path": "contrats.ma_protection_accident.details.accidents_corporels_lors_d_v_nements_exceptionne",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 4,
+      "source_section": "1.2",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "garantie",
+      "source_pages": [
+        4
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "accidents",
+          "corporels",
+          "lors",
+          "événements",
+          "exceptionnels",
+          "catastrophes",
+          "naturelles",
+          "industrielles",
+          "technologiques",
+          "agressions",
+          "vandalisme",
+          "terrorisme"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Catastrophes naturelles, industrielles ou technologiques ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.accidents_m_dicaux_et_infections_nosocomiales",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Accidents médicaux et infections nosocomiales",
+      "resume_conseiller": "Accidents médicaux dont le fait générateur est postérieur à la prise d'effet, première manifestation dommageable pendant la garantie, avec conséquences anormales au regard de l'état initial du patient",
+      "texte_metier_exploitable": "Accidents médicaux dont le fait générateur est postérieur à la prise d'effet, première manifestation dommageable pendant la garantie, avec conséquences anormales au regard de l'état initial du patient et de son évolution prévisible.",
+      "conditions_application": [
+        "fait générateur postérieur à la prise d'effet",
+        "condition d'anormalité remplie",
+        "dommages EN DESSOUS des critères de gravité ouvrant droit à indemnisation par l'ONIAM"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "ma_protection_accident.affections_m_me_cons_cutives_un_accident_garanti",
+        "ma_protection_accident.maladies_cause_ou_r_v_l_es_par_l_accident",
+        "ma_protection_accident.exp_rimentations_biom_dicales",
+        "ma_protection_accident.sports_professionnels_r_mun_r_s_risques_extr_mes",
+        "ma_protection_accident.accidents_de_la_circulation_vtm_soumis_obligatio",
+        "ma_protection_accident.non_respect_de_r_glementation_v_hicules_motoris_",
+        "ma_protection_accident.alcool_m_dicaments_stup_fiants",
+        "ma_protection_accident.accidents_du_travail_et_activit_s_lectives_syndi",
+        "ma_protection_accident.faits_intentionnels_suicide",
+        "ma_protection_accident.guerre_nucl_aire",
+        "ma_protection_accident.d_lit_intentionnel_ou_crime"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 4,
+        "section": "1.2 Les accidents médicaux",
+        "extrait_reference": "dommages corporels doivent être en dessous des critères de gravité ouvrant droit à indemnisation par l'ONIAM",
+        "pages": [
+          4
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.accidents_m_dicaux_et_infections_nosocomiales",
+      "detail_path": "contrats.ma_protection_accident.details.accidents_m_dicaux_et_infections_nosocomiales",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 4,
+      "source_section": "1.2 Les accidents médicaux",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "garantie",
+      "source_pages": [
+        4
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "accidents",
+          "médicaux",
+          "infections",
+          "nosocomiales",
+          "dont",
+          "fait",
+          "générateur",
+          "postérieur",
+          "prise",
+          "effet",
+          "première",
+          "manifestation"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Accidents médicaux dont le fait générateur est postérieur à la prise d'effet, première manifestation dommageable pendant la garantie, avec conséquences anormales au regard de l'état initial du patient",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.accidents_lors_de_la_conduite_d_un_v_hicule_d_ro",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Accidents lors de la conduite d'un véhicule (dérogations)",
+      "resume_conseiller": "Par dérogation à l'exclusion circulation : véhicule 4 roues loué < 3 mois ;",
+      "texte_metier_exploitable": "Par dérogation à l'exclusion circulation : véhicule 4 roues loué < 3 mois ; engin de jardinage autoporteur ou fauteuil roulant ; enfant < 12 ans conduisant un véhicule à moteur pour enfant ; victime impliquant son propre véhicule alors qu'elle n'avait plus/pas encore la qualité de conducteur.",
+      "conditions_application": [],
+      "seuils": [
+        "12 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "ma_protection_accident.affections_m_me_cons_cutives_un_accident_garanti",
+        "ma_protection_accident.maladies_cause_ou_r_v_l_es_par_l_accident",
+        "ma_protection_accident.exp_rimentations_biom_dicales",
+        "ma_protection_accident.sports_professionnels_r_mun_r_s_risques_extr_mes",
+        "ma_protection_accident.accidents_de_la_circulation_vtm_soumis_obligatio",
+        "ma_protection_accident.non_respect_de_r_glementation_v_hicules_motoris_",
+        "ma_protection_accident.alcool_m_dicaments_stup_fiants",
+        "ma_protection_accident.accidents_du_travail_et_activit_s_lectives_syndi",
+        "ma_protection_accident.faits_intentionnels_suicide",
+        "ma_protection_accident.guerre_nucl_aire",
+        "ma_protection_accident.d_lit_intentionnel_ou_crime"
+      ],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 5,
+        "section": "1.2 conduite d'un véhicule",
+        "extrait_reference": "Par dérogation à l'exclusion des accidents de la circulation",
+        "pages": [
+          5
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.accidents_lors_de_la_conduite_d_un_v_hicule_d_ro",
+      "detail_path": "contrats.ma_protection_accident.details.accidents_lors_de_la_conduite_d_un_v_hicule_d_ro",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 5,
+      "source_section": "1.2 conduite d'un véhicule",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "garantie",
+      "source_pages": [
+        5
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "véhicule",
+          "enfant",
+          "accidents",
+          "lors",
+          "conduite",
+          "dérogations",
+          "dérogation",
+          "exclusion",
+          "circulation",
+          "roues",
+          "loué",
+          "mois"
+        ],
+        "synonymes": [
+          "exclusion",
+          "non couvert",
+          "sport",
+          "guerre",
+          "suicide"
+        ],
+        "formulations_client_possibles": [
+          "Qu'est-ce qui n'est pas couvert ?",
+          "Le sport est-il exclu ?"
+        ],
+        "intentions": [
+          "vérifier exclusions"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre exclusion et condition de garantie"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Par dérogation à l'exclusion circulation : véhicule 4 roues loué < 3 mois ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.indemnisation_des_pr_judices_corporels_bar_me_aq",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Indemnisation des préjudices corporels (barème AQV)",
+      "resume_conseiller": "Indemnisation contractuelle des postes DFP (0-100), Préjudice Esthétique Permanent (0-7) et Souffrances Endurées (0-7) selon l'indice AQV (= somme des trois, arrondi à l'entier supérieur) et l'âge à l",
+      "texte_metier_exploitable": "Indemnisation contractuelle des postes DFP (0-100), Préjudice Esthétique Permanent (0-7) et Souffrances Endurées (0-7) selon l'indice AQV (= somme des trois, arrondi à l'entier supérieur) et l'âge à la consolidation, suivant le tableau contractuel.",
+      "conditions_application": [
+        "DFP imputable à l'accident ≥ 1 %"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [
+        "voir notice (tableau/barème) — page 7"
+      ],
+      "exclusions_liees": [
+        "ma_protection_accident.affections_m_me_cons_cutives_un_accident_garanti",
+        "ma_protection_accident.maladies_cause_ou_r_v_l_es_par_l_accident",
+        "ma_protection_accident.exp_rimentations_biom_dicales",
+        "ma_protection_accident.sports_professionnels_r_mun_r_s_risques_extr_mes",
+        "ma_protection_accident.accidents_de_la_circulation_vtm_soumis_obligatio",
+        "ma_protection_accident.non_respect_de_r_glementation_v_hicules_motoris_",
+        "ma_protection_accident.alcool_m_dicaments_stup_fiants",
+        "ma_protection_accident.accidents_du_travail_et_activit_s_lectives_syndi",
+        "ma_protection_accident.faits_intentionnels_suicide",
+        "ma_protection_accident.guerre_nucl_aire",
+        "ma_protection_accident.d_lit_intentionnel_ou_crime"
+      ],
+      "points_vigilance": [
+        "maximum 600 000 € (AQV ≥ 100, tranche 0-19 ans)",
+        "plafond de garantie indiqué aux Conditions particulières (cumul aggravations)"
+      ],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 7,
+        "section": "3.2.1 En cas de dommages corporels",
+        "extrait_reference": "fixé contractuellement en fonction de l'indice AQV obtenu et de l'âge de la victime",
+        "pages": [
+          7
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "ma_protection_accident.indemnisation_des_pr_judices_corporels_bar_me_aq",
+      "detail_path": "contrats.ma_protection_accident.details.indemnisation_des_pr_judices_corporels_bar_me_aq",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 7,
+      "source_section": "3.2.1 En cas de dommages corporels",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "garantie",
+      "source_pages": [
+        7
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "indemnisation",
+          "préjudices",
+          "corporels",
+          "barème",
+          "contractuelle",
+          "postes",
+          "préjudice",
+          "esthétique",
+          "permanent",
+          "souffrances",
+          "endurées",
+          "indice"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Indemnisation contractuelle des postes DFP (0-100), Préjudice Esthétique Permanent (0-7) et Souffrances Endurées (0-7) selon l'indice AQV (= somme des trois, arrondi à l'entier supérieur) et l'âge à l",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.7 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    },
+    {
+      "id": "ma_protection_accident.pr_judices_indemnis_s_selon_droit_commun",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "Préjudices indemnisés selon droit commun",
+      "resume_conseiller": "Assistance tierce personne (ATP) ;",
+      "texte_metier_exploitable": "Assistance tierce personne (ATP) ; frais de logement adapté (FLA) ; frais de véhicule adapté (FVA) ; pertes de gains professionnels actuels (PGPA) ; pertes de gains professionnels futurs (PGPF, capitalisation au barème des organismes sociaux R376-1/R454-1 CSS).",
+      "conditions_application": [
+        "accident garanti avec DFP ≥ 1 %"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [
+        "voir notice (tableau/barème) — page 9"
+      ],
+      "exclusions_liees": [
+        "ma_protection_accident.affections_m_me_cons_cutives_un_accident_garanti",
+        "ma_protection_accident.maladies_cause_ou_r_v_l_es_par_l_accident",
+        "ma_protection_accident.exp_rimentations_biom_dicales",
+        "ma_protection_accident.sports_professionnels_r_mun_r_s_risques_extr_mes",
+        "ma_protection_accident.accidents_de_la_circulation_vtm_soumis_obligatio",
+        "ma_protection_accident.non_respect_de_r_glementation_v_hicules_motoris_",
+        "ma_protection_accident.alcool_m_dicaments_stup_fiants",
+        "ma_protection_accident.accidents_du_travail_et_activit_s_lectives_syndi",
+        "ma_protection_accident.faits_intentionnels_suicide",
+        "ma_protection_accident.guerre_nucl_aire",
+        "ma_protection_accident.d_lit_intentionnel_ou_crime"
+      ],
+      "points_vigilance": [
+        "ATP : 10 €/h si DFP ≤ 30 %, 14 €/h si DFP > 30 %",
+        "PGPA plafonné à 50 000 €"
+      ],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 9,
+        "section": "3.2.1",
+        "extrait_reference": "L'indemnisation au titre des Pertes de gains professionnels actuels est plafonnée à 50 000 €",
+        "pages": [
+          9
+        ],
+        "qualite_extraction": "tableau_non_extrait"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": true,
+      "detail_id": "ma_protection_accident.pr_judices_indemnis_s_selon_droit_commun",
+      "detail_path": "contrats.ma_protection_accident.details.pr_judices_indemnis_s_selon_droit_commun",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 9,
+      "source_section": "3.2.1",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": true,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "garantie",
+      "source_pages": [
+        9
+      ],
+      "requires_pdf_check_reason": "tableau_chiffre_non_extrait",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "frais",
+          "adapté",
+          "pertes",
+          "gains",
+          "professionnels",
+          "préjudices",
+          "indemnisés",
+          "droit",
+          "commun",
+          "assistance",
+          "tierce",
+          "personne"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "complexe",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Assistance tierce personne (ATP) ;",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.9 (tableau_chiffre_non_extrait)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": [
+          "chiffre/tableau exact demandé"
+        ]
+      }
+    },
+    {
+      "id": "ma_protection_accident.en_cas_de_d_c_s",
+      "object_type": "garantie",
+      "type": "garantie",
+      "titre": "En cas de décès",
+      "resume_conseiller": "Remboursement des frais d'obsèques (frais réels, limite 5 000 €) à la personne justifiant les avoir réglés ;",
+      "texte_metier_exploitable": "Remboursement des frais d'obsèques (frais réels, limite 5 000 €) à la personne justifiant les avoir réglés ; si conjoint/enfant/famille couverts : préjudice d'affection (PAF), frais divers (FD), pertes de revenus des proches (PR, capitalisées).",
+      "conditions_application": [
+        "décès exclusivement lié à l'accident garanti"
+      ],
+      "seuils": [
+        "5 000 €"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [
+        "ma_protection_accident.affections_m_me_cons_cutives_un_accident_garanti",
+        "ma_protection_accident.maladies_cause_ou_r_v_l_es_par_l_accident",
+        "ma_protection_accident.exp_rimentations_biom_dicales",
+        "ma_protection_accident.sports_professionnels_r_mun_r_s_risques_extr_mes",
+        "ma_protection_accident.accidents_de_la_circulation_vtm_soumis_obligatio",
+        "ma_protection_accident.non_respect_de_r_glementation_v_hicules_motoris_",
+        "ma_protection_accident.alcool_m_dicaments_stup_fiants",
+        "ma_protection_accident.accidents_du_travail_et_activit_s_lectives_syndi",
+        "ma_protection_accident.faits_intentionnels_suicide",
+        "ma_protection_accident.guerre_nucl_aire",
+        "ma_protection_accident.d_lit_intentionnel_ou_crime"
+      ],
+      "points_vigilance": [
+        "frais d'obsèques : 5 000 €"
+      ],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 9,
+        "section": "3.2.2 En cas de décès",
+        "extrait_reference": "frais d'obsèques, en fonction des frais réels déboursés et dans la limite de 5 000 €",
+        "pages": [
+          9
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.en_cas_de_d_c_s",
+      "detail_path": "contrats.ma_protection_accident.details.en_cas_de_d_c_s",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 9,
+      "source_section": "3.2.2 En cas de décès",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "garantie",
+      "source_pages": [
+        9
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "frais",
+          "décès",
+          "remboursement",
+          "obsèques",
+          "réels",
+          "limite",
+          "personne",
+          "justifiant",
+          "avoir",
+          "réglés",
+          "conjoint/enfant/famille",
+          "couverts"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Remboursement des frais d'obsèques (frais réels, limite 5 000 €) à la personne justifiant les avoir réglés ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "options_mecanismes": [
+    {
+      "id": "ma_protection_accident.mes_sports_risque",
+      "object_type": "option",
+      "type": "option",
+      "titre": "Mes Sports à risque",
+      "resume_conseiller": "Couvre les accidents résultant uniquement des sports listés : sports aériens (parachutisme, parapente, deltaplane, parachute ascensionnel, saut à élastique, ULM, autogyre, vol à voile, skydiving, plan",
+      "texte_metier_exploitable": "Couvre les accidents résultant uniquement des sports listés : sports aériens (parachutisme, parapente, deltaplane, parachute ascensionnel, saut à élastique, ULM, autogyre, vol à voile, skydiving, planeur) ; aquatiques/nautiques (kitesurf, plongeon, hydrospeed, rafting, canyoning, plongée sous-marine et souterraine, apnée, aéroglisseur, wakeboard, scooter des mers) ; montagne (alpinisme, VTT de descente, escalade hors support artificiel sécurisé, raids et expéditions, ski hors-piste, spéléologie, motoneige) ; sports avec armes à feu ou à air comprimé. Inclut des services dédiés de reprise du sport : coaching capital confiance (3 entretiens d'1 h max) et coaching activité sportive (3 séances).",
+      "conditions_application": [
+        "souscription expresse mentionnée aux Conditions particulières",
+        "pour les coachings : autorisation médicale de reprise"
+      ],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 5,
+        "section": "1.3 + 4.5",
+        "extrait_reference": "La garantie suivante est souscrite s'il en est fait expressément mention aux Conditions particulières",
+        "pages": [
+          5
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.mes_sports_risque",
+      "detail_path": "contrats.ma_protection_accident.details.mes_sports_risque",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 5,
+      "source_section": "1.3 + 4.5",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "option",
+      "source_pages": [
+        5
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "haute",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "sports",
+          "hors",
+          "coaching",
+          "risque",
+          "couvre",
+          "accidents",
+          "résultant",
+          "uniquement",
+          "listés",
+          "aériens",
+          "parachutisme",
+          "parapente"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "haute"
+      },
+      "reponse_conseiller": {
+        "version_courte": "Couvre les accidents résultant uniquement des sports listés : sports aériens (parachutisme, parapente, deltaplane, parachute ascensionnel, saut à élastique, ULM, autogyre, vol à voile, skydiving, plan",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "ma_protection_accident.affections_m_me_cons_cutives_un_accident_garanti",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Affections même consécutives à un accident garanti",
+      "resume_conseiller": "Affections cardio-vasculaires et vasculaires cérébrales ;",
+      "texte_metier_exploitable": "Affections cardio-vasculaires et vasculaires cérébrales ; affections virales, parasitaires, mycosiques ; affections musculaires, articulaires, tendineuses et discales sans cause extérieure (pathologies disco-vertébrales, rhumatismales, hernies de la paroi abdominale) ; fibromyalgie.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2. Les exclusions communes",
+        "extrait_reference": "même si ces affections résultent d'un accident garanti",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.affections_m_me_cons_cutives_un_accident_garanti",
+      "detail_path": "contrats.ma_protection_accident.details.affections_m_me_cons_cutives_un_accident_garanti",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 6,
+      "source_section": "2. Les exclusions communes",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "exclusion",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "affections",
+          "vasculaires",
+          "même",
+          "consécutives",
+          "accident",
+          "garanti",
+          "cardio",
+          "cérébrales",
+          "virales",
+          "parasitaires",
+          "mycosiques",
+          "musculaires"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Affections cardio-vasculaires et vasculaires cérébrales ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.maladies_cause_ou_r_v_l_es_par_l_accident",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Maladies cause ou révélées par l'accident",
+      "resume_conseiller": "Maladies connues ou inconnues de l'assuré qui sont la cause de l'accident ;",
+      "texte_metier_exploitable": "Maladies connues ou inconnues de l'assuré qui sont la cause de l'accident ; maladies révélées par l'accident ; pandémies et épidémies cause de l'accident.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "extrait_reference": "les maladies connues ou inconnues de l'assuré qui sont la cause de l'accident",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.maladies_cause_ou_r_v_l_es_par_l_accident",
+      "detail_path": "contrats.ma_protection_accident.details.maladies_cause_ou_r_v_l_es_par_l_accident",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 6,
+      "source_section": "2.",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "exclusion",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "accident",
+          "maladies",
+          "cause",
+          "révélées",
+          "connues",
+          "inconnues",
+          "assuré",
+          "pandémies",
+          "épidémies"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Maladies connues ou inconnues de l'assuré qui sont la cause de l'accident ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.exp_rimentations_biom_dicales",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Expérimentations biomédicales",
+      "resume_conseiller": "Accidents et traitements médicaux résultant d'expérimentations biomédicales.",
+      "texte_metier_exploitable": "Accidents et traitements médicaux résultant d'expérimentations biomédicales.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "extrait_reference": "résultant d'expérimentations biomédicales",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.exp_rimentations_biom_dicales",
+      "detail_path": "contrats.ma_protection_accident.details.exp_rimentations_biom_dicales",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 6,
+      "source_section": "2.",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "exclusion",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "expérimentations",
+          "biomédicales",
+          "accidents",
+          "traitements",
+          "médicaux",
+          "résultant"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Accidents et traitements médicaux résultant d'expérimentations biomédicales.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.sports_professionnels_r_mun_r_s_risques_extr_mes",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Sports professionnels, rémunérés, à risques, extrêmes",
+      "resume_conseiller": "Sports exercés à titre professionnel ;",
+      "texte_metier_exploitable": "Sports exercés à titre professionnel ; sports rémunérés (y compris primes de match) ; sports à risques ; sports extrêmes (base jump, wingsuit, MMA) ; sports non autorisés en France ; tentatives de records ou exploits.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "extrait_reference": "sports à risques exceptés si l'option « Mes Sports à risque » est souscrite",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.sports_professionnels_r_mun_r_s_risques_extr_mes",
+      "detail_path": "contrats.ma_protection_accident.details.sports_professionnels_r_mun_r_s_risques_extr_mes",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 6,
+      "source_section": "2.",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "exclusion",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "sports",
+          "rémunérés",
+          "risques",
+          "extrêmes",
+          "professionnels",
+          "exercés",
+          "titre",
+          "professionnel",
+          "compris",
+          "primes",
+          "match",
+          "base"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Sports exercés à titre professionnel ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.accidents_de_la_circulation_vtm_soumis_obligatio",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Accidents de la circulation (VTM soumis à obligation d'assurance)",
+      "resume_conseiller": "Accidents de la circulation en France métropolitaine, DROM/COM, Monaco, Andorre, UE et États Carte Verte non rayés, impliquant un véhicule terrestre à moteur soumis à obligation d'assurance, ses remor",
+      "texte_metier_exploitable": "Accidents de la circulation en France métropolitaine, DROM/COM, Monaco, Andorre, UE et États Carte Verte non rayés, impliquant un véhicule terrestre à moteur soumis à obligation d'assurance, ses remorques ou semi-remorques.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "extrait_reference": "lorsque ces accidents impliquent un véhicule terrestre à moteur soumis à l'obligation d'assurance",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.accidents_de_la_circulation_vtm_soumis_obligatio",
+      "detail_path": "contrats.ma_protection_accident.details.accidents_de_la_circulation_vtm_soumis_obligatio",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 6,
+      "source_section": "2.",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "exclusion",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "accidents",
+          "circulation",
+          "soumis",
+          "obligation",
+          "assurance",
+          "remorques",
+          "france",
+          "métropolitaine",
+          "drom/com",
+          "monaco",
+          "andorre",
+          "états"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Accidents de la circulation en France métropolitaine, DROM/COM, Monaco, Andorre, UE et États Carte Verte non rayés, impliquant un véhicule terrestre à moteur soumis à obligation d'assurance, ses remor",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.non_respect_de_r_glementation_v_hicules_motoris_",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Non-respect de réglementation (véhicules motorisés)",
+      "resume_conseiller": "Accidents causés par l'assuré ne respectant pas la réglementation impérative en cas d'utilisation de véhicules motorisés aériens, nautiques, aquatiques, fluviaux, maritimes et lacustres.",
+      "texte_metier_exploitable": "Accidents causés par l'assuré ne respectant pas la réglementation impérative en cas d'utilisation de véhicules motorisés aériens, nautiques, aquatiques, fluviaux, maritimes et lacustres.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "extrait_reference": "ne respecte pas la réglementation impérative",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.non_respect_de_r_glementation_v_hicules_motoris_",
+      "detail_path": "contrats.ma_protection_accident.details.non_respect_de_r_glementation_v_hicules_motoris_",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 6,
+      "source_section": "2.",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "exclusion",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "réglementation",
+          "véhicules",
+          "motorisés",
+          "respect",
+          "accidents",
+          "causés",
+          "assuré",
+          "respectant",
+          "impérative",
+          "utilisation",
+          "aériens",
+          "nautiques"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Accidents causés par l'assuré ne respectant pas la réglementation impérative en cas d'utilisation de véhicules motorisés aériens, nautiques, aquatiques, fluviaux, maritimes et lacustres.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.alcool_m_dicaments_stup_fiants",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Alcool, médicaments, stupéfiants",
+      "resume_conseiller": "Faits accidentels et/ou dommages consécutifs à une consommation d'alcool ≥ 0,5 g/l de sang ;",
+      "texte_metier_exploitable": "Faits accidentels et/ou dommages consécutifs à une consommation d'alcool ≥ 0,5 g/l de sang ; à l'absorption de médicaments, drogues ou substances stupéfiantes à un dosage non prescrit médicalement.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "extrait_reference": "consommation d'alcool égale ou supérieure à 0,5 g / l de sang",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.alcool_m_dicaments_stup_fiants",
+      "detail_path": "contrats.ma_protection_accident.details.alcool_m_dicaments_stup_fiants",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 6,
+      "source_section": "2.",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "exclusion",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "alcool",
+          "médicaments",
+          "stupéfiants",
+          "faits",
+          "accidentels",
+          "et/ou",
+          "dommages",
+          "consécutifs",
+          "consommation",
+          "sang",
+          "absorption",
+          "drogues"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Faits accidentels et/ou dommages consécutifs à une consommation d'alcool ≥ 0,5 g/l de sang ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.accidents_du_travail_et_activit_s_lectives_syndi",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Accidents du travail et activités électives/syndicales",
+      "resume_conseiller": "Accidents du travail, incluant les accidents de trajet ;",
+      "texte_metier_exploitable": "Accidents du travail, incluant les accidents de trajet ; accidents survenant dans le cadre d'activités électives ou syndicales.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "extrait_reference": "les accidents du travail, incluant les accidents de trajet",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.accidents_du_travail_et_activit_s_lectives_syndi",
+      "detail_path": "contrats.ma_protection_accident.details.accidents_du_travail_et_activit_s_lectives_syndi",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 6,
+      "source_section": "2.",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "exclusion",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "accidents",
+          "travail",
+          "activités",
+          "électives/syndicales",
+          "incluant",
+          "trajet",
+          "survenant",
+          "cadre",
+          "électives",
+          "syndicales"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Accidents du travail, incluant les accidents de trajet ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.faits_intentionnels_suicide",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Faits intentionnels, suicide",
+      "resume_conseiller": "Dommages corporels que l'assuré s'est causés intentionnellement ;",
+      "texte_metier_exploitable": "Dommages corporels que l'assuré s'est causés intentionnellement ; conséquences du suicide ou d'une tentative de suicide.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "extrait_reference": "les conséquences du suicide ou d'une tentative de suicide",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.faits_intentionnels_suicide",
+      "detail_path": "contrats.ma_protection_accident.details.faits_intentionnels_suicide",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 6,
+      "source_section": "2.",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "exclusion",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "suicide",
+          "faits",
+          "intentionnels",
+          "dommages",
+          "corporels",
+          "assuré",
+          "causés",
+          "intentionnellement",
+          "conséquences",
+          "tentative"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Dommages corporels que l'assuré s'est causés intentionnellement ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.guerre_nucl_aire",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Guerre, nucléaire",
+      "resume_conseiller": "Dommages corporels ou aggravations survenant dans le cadre d'une guerre civile ou étrangère ;",
+      "texte_metier_exploitable": "Dommages corporels ou aggravations survenant dans le cadre d'une guerre civile ou étrangère ; causés par toute source d'origine nucléaire (explosion, dégagement de chaleur, irradiation, radioactivité, radiation par accélération artificielle de particules).",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "extrait_reference": "guerre civile ou étrangère",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.guerre_nucl_aire",
+      "detail_path": "contrats.ma_protection_accident.details.guerre_nucl_aire",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 6,
+      "source_section": "2.",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "exclusion",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "guerre",
+          "nucléaire",
+          "dommages",
+          "corporels",
+          "aggravations",
+          "survenant",
+          "cadre",
+          "civile",
+          "étrangère",
+          "causés",
+          "toute",
+          "source"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Dommages corporels ou aggravations survenant dans le cadre d'une guerre civile ou étrangère ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.d_lit_intentionnel_ou_crime",
+      "object_type": "exclusion",
+      "type": "exclusion",
+      "titre": "Délit intentionnel ou crime",
+      "resume_conseiller": "Accidents résultant de poursuite pénale de l'assuré liée à un délit intentionnel (art.",
+      "texte_metier_exploitable": "Accidents résultant de poursuite pénale de l'assuré liée à un délit intentionnel (art. 121-3 Code pénal) ou à un crime.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "extrait_reference": "sauf cas de légitime défense ou d'assistance de personne en danger",
+        "pages": [
+          6
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.d_lit_intentionnel_ou_crime",
+      "detail_path": "contrats.ma_protection_accident.details.d_lit_intentionnel_ou_crime",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 6,
+      "source_section": "2.",
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "exclusion",
+      "source_pages": [
+        6
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "délit",
+          "intentionnel",
+          "crime",
+          "accidents",
+          "résultant",
+          "poursuite",
+          "pénale",
+          "assuré",
+          "liée",
+          "code",
+          "pénal"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "critique",
+        "raisons": [],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Accidents résultant de poursuite pénale de l'assuré liée à un délit intentionnel (art.",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "conditions_souscription": [
+    {
+      "id": "ma_protection_accident.conditions_souscription_1",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_1",
+      "resume_conseiller": "Souscripteur : plus de 18 ans ;",
+      "texte_metier_exploitable": "Souscripteur : plus de 18 ans ; résidence principale et foyer fiscal en France métropolitaine, Guadeloupe, Guyane, Réunion, Mayotte ou Martinique pendant toute la vie du contrat.",
+      "conditions_application": [],
+      "seuils": [
+        "18 ans"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 27,
+        "section": "7. Définitions — Souscripteur",
+        "extrait_reference": "avoir plus de 18 ans",
+        "pages": [
+          27
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.conditions_souscription_1",
+      "detail_path": "contrats.ma_protection_accident.details.conditions_souscription_1",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 27,
+      "source_section": "7. Définitions — Souscripteur",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "condition",
+      "source_pages": [
+        27
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "souscription",
+          "souscripteur",
+          "plus",
+          "résidence",
+          "principale",
+          "foyer",
+          "fiscal",
+          "france",
+          "métropolitaine",
+          "guadeloupe",
+          "guyane"
+        ],
+        "synonymes": [
+          "impôt",
+          "990 I",
+          "757 B",
+          "succession",
+          "transmission",
+          "abattement",
+          "Madelin",
+          "déduction"
+        ],
+        "formulations_client_possibles": [
+          "Quelle fiscalité au décès ?",
+          "Est-ce déductible ?",
+          "Comment ça se transmet ?"
+        ],
+        "intentions": [
+          "vérifier fiscalité",
+          "vérifier transmission"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Souscripteur : plus de 18 ans ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.conditions_souscription_2",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "conditions_souscription_2",
+      "resume_conseiller": "Garanties acquises seulement si résidence principale + foyer fiscal sur le territoire français à la survenance du sinistre ;",
+      "texte_metier_exploitable": "Garanties acquises seulement si résidence principale + foyer fiscal sur le territoire français à la survenance du sinistre ; déménagement à l'étranger à déclarer sous 15 jours.",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 22,
+        "section": "6.6 Limites de garantie",
+        "extrait_reference": "résidence principale et habituelle ainsi que son foyer fiscal sur le territoire français",
+        "pages": [
+          22
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.85,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.conditions_souscription_2",
+      "detail_path": "contrats.ma_protection_accident.details.conditions_souscription_2",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": 22,
+      "source_section": "6.6 Limites de garantie",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": false,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "condition",
+      "source_pages": [
+        22
+      ],
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "souscription",
+          "garanties",
+          "acquises",
+          "seulement",
+          "résidence",
+          "principale",
+          "foyer",
+          "fiscal",
+          "territoire",
+          "français",
+          "survenance"
+        ],
+        "synonymes": [
+          "impôt",
+          "990 I",
+          "757 B",
+          "succession",
+          "transmission",
+          "abattement",
+          "Madelin",
+          "déduction"
+        ],
+        "formulations_client_possibles": [
+          "Quelle fiscalité au décès ?",
+          "Est-ce déductible ?",
+          "Comment ça se transmet ?"
+        ],
+        "intentions": [
+          "vérifier fiscalité",
+          "vérifier transmission"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [],
+        "erreurs_frequentes": [
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": false
+      },
+      "reponse_conseiller": {
+        "version_courte": "Garanties acquises seulement si résidence principale + foyer fiscal sur le territoire français à la survenance du sinistre ;",
+        "a_verifier_avant_reponse": [],
+        "niveau_de_certitude": "fort",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.territorialite_etranger",
+      "object_type": "condition",
+      "type": "condition",
+      "titre": "Territorialité — séjours à l'étranger (règle des 90 jours)",
+      "resume_conseiller": "Garanties accordées dans le monde entier pour des séjours de MOINS DE 90 JOURS ; au-delà (ex. études >3 mois), couverture non acquise sans disposition particulière. Nécessite résidence principale + foyer fiscal en France.",
+      "texte_metier_exploitable": "Ces garanties sont accordées dans le monde entier, pour des séjours de moins de quatre-vingt-dix (90) jours (p.11). Les garanties ne sont acquises que si la résidence principale et le foyer fiscal sont sur le territoire français à la survenance du sinistre ; tout déménagement à l'étranger doit être déclaré (résiliation possible) (p.21-22). Les prestations d'assistance immédiate et en cas de décès s'exercent dans le monde entier pour les voyages (p.10).",
+      "conditions_application": [
+        "séjour < 90 jours pour la couverture mondiale",
+        "résidence principale + foyer fiscal en France"
+      ],
+      "seuils": [
+        "90 jours",
+        "3 mois"
+      ],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [
+        "Étudiant partant >3 mois (>90 jours) à l'étranger : couverture NON acquise au-delà de 90 jours sans disposition particulière → revenir à la notice §1.4 (p.5/11) et vérifier le cas expatriation/études."
+      ],
+      "source": {
+        "pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": "5, 11, 21-22",
+        "section": "1.4",
+        "extrait_reference": "Ces garanties sont accordées dans le monde entier, pour des séjours de moins de quatre-vingt-dix (90) jours",
+        "pages": [
+          5,
+          11,
+          21,
+          22
+        ],
+        "qualite_extraction": "complete"
+      },
+      "niveau_confiance": 0.9,
+      "retour_notice_recommande": true,
+      "detail_id": "ma_protection_accident.territorialite_etranger",
+      "detail_path": "contrats.ma_protection_accident.details.territorialite_etranger",
+      "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "source_page": "5, 11, 21-22",
+      "source_section": "1.4",
+      "has_full_clause_text": true,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "source_pages": [
+        5,
+        11,
+        21,
+        22
+      ],
+      "requires_pdf_check_reason": "a_verifier",
+      "applicabilite": "applicable",
+      "importance_metier": "critique",
+      "est_placeholder": false,
+      "ia_retrieval": {
+        "mots_cles": [
+          "séjours",
+          "étranger",
+          "jours",
+          "garanties",
+          "monde",
+          "entier",
+          "territorialité",
+          "règle",
+          "accordées",
+          "moins",
+          "quatre",
+          "vingt"
+        ],
+        "synonymes": [
+          "étranger",
+          "séjour",
+          "monde entier",
+          "90 jours",
+          "résidence fiscale",
+          "expatriation",
+          "étudiant"
+        ],
+        "formulations_client_possibles": [
+          "Je pars étudier à l'étranger, suis-je couvert ?",
+          "Je quitte la France plus de 3 mois, ça marche ?",
+          "Je suis étudiant hors de France, ça fonctionne ?"
+        ],
+        "intentions": [
+          "vérifier territorialité",
+          "vérifier durée de séjour",
+          "vérifier condition résidence France"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "moyen",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "croire qu'un séjour à l'étranger > 90 jours est automatiquement couvert",
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "Garanties accordées dans le monde entier pour des séjours de MOINS DE 90 JOURS ; au-delà (ex. études >3 mois), couverture non acquise sans disposition particulière. Nécessite résidence principale + foyer fiscal en France",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p.5,11,21,22 (a_verifier)"
+        ],
+        "niveau_de_certitude": "moyen",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "fiscalite": [
+    {
+      "id": "ma_protection_accident.valeurs_de_rachat",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "valeurs_de_rachat",
+      "resume_conseiller": "valeurs_de_rachat",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.valeurs_de_rachat",
+      "detail_path": "contrats.ma_protection_accident.details.valeurs_de_rachat",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "valeurs",
+          "rachat"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "valeurs_de_rachat",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.mise_en_reduction",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "mise_en_reduction",
+      "resume_conseiller": "mise_en_reduction",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.mise_en_reduction",
+      "detail_path": "contrats.ma_protection_accident.details.mise_en_reduction",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "mise",
+          "reduction"
+        ],
+        "synonymes": [
+          "mise en réduction",
+          "arrêt de cotisation",
+          "capital réduit"
+        ],
+        "formulations_client_possibles": [
+          "Si j'arrête de payer, que se passe-t-il ?",
+          "C'est quoi la mise en réduction ?"
+        ],
+        "intentions": [
+          "vérifier mise en réduction"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "mise_en_reduction",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.determination_part_taxable",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "determination_part_taxable",
+      "resume_conseiller": "determination_part_taxable",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.determination_part_taxable",
+      "detail_path": "contrats.ma_protection_accident.details.determination_part_taxable",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "moyenne",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "determination",
+          "part",
+          "taxable"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "moyenne"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "determination_part_taxable",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.conditions_de_rachat",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "conditions_de_rachat",
+      "resume_conseiller": "conditions_de_rachat",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.conditions_de_rachat",
+      "detail_path": "contrats.ma_protection_accident.details.conditions_de_rachat",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "conditions",
+          "rachat"
+        ],
+        "synonymes": [
+          "récupérer",
+          "retirer",
+          "valeur de rachat",
+          "disponibilité"
+        ],
+        "formulations_client_possibles": [
+          "Puis-je récupérer mon argent ?",
+          "Quelle est la valeur de rachat ?",
+          "Comment arrêter et récupérer ?"
+        ],
+        "intentions": [
+          "vérifier faculté de rachat",
+          "vérifier valeur de rachat"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre rachat et mise en réduction"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "conditions_de_rachat",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.fiscalit",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "fiscalité",
+      "resume_conseiller": "fiscalité",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.fiscalit",
+      "detail_path": "contrats.ma_protection_accident.details.fiscalit",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "critique",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "fiscalité"
+        ],
+        "synonymes": [
+          "impôt",
+          "990 I",
+          "757 B",
+          "succession",
+          "transmission",
+          "abattement",
+          "Madelin",
+          "déduction"
+        ],
+        "formulations_client_possibles": [
+          "Quelle fiscalité au décès ?",
+          "Est-ce déductible ?",
+          "Comment ça se transmet ?"
+        ],
+        "intentions": [
+          "vérifier fiscalité",
+          "vérifier transmission"
+        ],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "critique"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [
+          "confondre fiscalité décès assurance vie et succession classique"
+        ],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "fiscalité",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    },
+    {
+      "id": "ma_protection_accident.note",
+      "object_type": "fiscalite",
+      "type": "fiscalite",
+      "titre": "note",
+      "resume_conseiller": "note",
+      "texte_metier_exploitable": "",
+      "conditions_application": [],
+      "seuils": [],
+      "formules": [],
+      "tableaux": [],
+      "exclusions_liees": [],
+      "points_vigilance": [],
+      "source": {
+        "pdf": "",
+        "page": null,
+        "section": null,
+        "extrait_reference": "",
+        "pages": [],
+        "qualite_extraction": "a_verifier"
+      },
+      "niveau_confiance": 0.5,
+      "retour_notice_recommande": false,
+      "detail_id": "ma_protection_accident.note",
+      "detail_path": "contrats.ma_protection_accident.details.note",
+      "source_pdf": "",
+      "source_page": null,
+      "source_section": null,
+      "has_full_clause_text": false,
+      "has_formula": false,
+      "has_table": false,
+      "requires_pdf_check": true,
+      "related_objects": [],
+      "contract_slug": "ma_protection_accident",
+      "object_type2": "fiscalite",
+      "source_pages": [],
+      "requires_pdf_check_reason": "source_page_inconnue",
+      "applicabilite": "a_verifier",
+      "importance_metier": "moyenne",
+      "est_placeholder": true,
+      "ia_retrieval": {
+        "mots_cles": [
+          "note"
+        ],
+        "synonymes": [],
+        "formulations_client_possibles": [],
+        "intentions": [],
+        "concepts_lies": [],
+        "niveau_complexite": "sensible",
+        "priorite_conseiller": "moyenne"
+      },
+      "risque_erreur": {
+        "niveau": "moyen",
+        "raisons": [
+          "tableau/seuil à vérifier"
+        ],
+        "erreurs_frequentes": [],
+        "necessite_validation_notice": true
+      },
+      "reponse_conseiller": {
+        "version_courte": "note",
+        "a_verifier_avant_reponse": [
+          "ouvrir la notice p. (source_page_inconnue)"
+        ],
+        "niveau_de_certitude": "faible",
+        "pdf_a_ouvrir_si": []
+      }
+    }
+  ],
+  "points_vigilance": [
+    "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (art. 6.5, 6.6).",
+    "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+    "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
+    "Subrogation de l'assureur contre le tiers responsable (6.7).",
+    "Assistance après accident et handicap : France métropolitaine uniquement (p.10)."
+  ],
+  "stats": {
+    "garanties": 7,
+    "options": 1,
+    "exclusions": 11,
+    "fiscalite": 6,
+    "conditions": 3,
+    "objets_requires_pdf_check": 8,
+    "placeholders": 8
+  }
+}

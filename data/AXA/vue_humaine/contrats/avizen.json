@@ -1,0 +1,1425 @@
+{
+  "meta": {
+    "version_schema": "1.0",
+    "generated_at": "2026-06-12T18:33:41.014Z",
+    "language": "fr",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "stockage_recommande": "export_json_local_separe",
+    "stockage_local_automatique": false,
+    "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+    "type": "vue_humaine_contrat"
+  },
+  "contrat": {
+    "id": "axa_avizen_2025-04",
+    "nom": "Avizen",
+    "famille": "prévoyance",
+    "nombre_faits": 78
+  },
+  "categories": {
+    "garantie": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_garanties_a8f766e437aa_knowledge_8b1c6b2e4eb7",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 11,
+          "section": "2.1.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_garanties_f08626ba809d_knowledge_a0c8863e7342",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 11,
+          "section": "2.1.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_garanties_338c6fd6176a_knowledge_8938e101c7dc",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 12,
+          "section": "2.1.4",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_garanties_98f17fc52b5b_knowledge_3693707791fb",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 13,
+          "section": "2.1.5",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 13,
+          "section": "2.2.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_garanties_298583bbdc55_knowledge_6df41afcc8cc",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 14,
+          "section": "2.2.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_garanties_4273eec96de1_knowledge_d37557b53e34",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 15,
+          "section": "2.2.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_garanties_1f8e343ca6c1_knowledge_5a79ea84fd80",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 16,
+          "section": "2.2.4",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_garanties_1aaadbb8226d_knowledge_89bf645880bb",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 16,
+          "section": "2.2.5",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_garanties_2bf2b4989e80_knowledge_8e3e075241c0",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 17,
+          "section": "2.2.6",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_garanties_4e17c4643abb_knowledge_de5880e82d5e",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 18,
+          "section": "2.3 Garantie aide à la famille",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_exclusions_88f149ec8926_knowledge_9ff89417a1a5",
+        "titre": "toutes les garanties du chapitre 2, monde entier",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 25,
+          "section": "4.1.1 Exclusions communes",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_exclusions_88792af8010e_knowledge_7a2869e7f5a6",
+        "titre": "garanties décès/IPT toutes causes",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 26,
+          "section": "4.1.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_exclusions_2e814add9402_knowledge_a66ece2859b1",
+        "titre": "garanties décès/IPT toutes causes",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 26,
+          "section": "4.1.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_exclusions_896982b4e3b0_knowledge_584c5c70a769",
+        "titre": "garanties décès/IPT par accident",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 26,
+          "section": "4.1.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_exclusions_2bc5e30f05f7_knowledge_31ea614f0cd8",
+        "titre": "garanties ITT et invalidité permanente (toutes causes et par accident)",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 27,
+          "section": "4.1.4",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "option": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_options_9f4385ee345a_knowledge_219241330066",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 11,
+          "section": "2.1.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_options_6a1ed3c8d2d1_knowledge_bf648561fef8",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 17,
+          "section": "2.2.7",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_options_9548821c6b3a_knowledge_3c980033add3",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 18,
+          "section": "2.2.8",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_options_8f4ee5536c39_knowledge_566df5b56ec5",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 8,
+          "section": "1.2.3 a) Indexation",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_options_e060ef8374fa_knowledge_97cb97064d66",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 9,
+          "section": "1.2.3 b)",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "fiscalite": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_906eb3ee9913_knowledge_306ed551c6e9",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_d15d09b28f2a_knowledge_f7005bf2d30b",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_23f113174dd4_knowledge_0ecf20a9cf62",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 29,
+          "section": "4.4 Rachat et réduction",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "tableau": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_tableaux_contractuels_5d89ba804c16_knowledge_d101c290be12",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 16,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_tableaux_contractuels_a31559d83374_knowledge_7ebc42a1bb3a",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 12,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "calcul": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_formules_estimees_3af44192df85_knowledge_819fc47a027f",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_formules_estimees_616e98b0d7d6_knowledge_2f285403974b",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_formules_estimees_f518f920a161_knowledge_836183c7e7ba",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "definition": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_definitions_cb17e180c36c_knowledge_47579c23a0b6",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 34,
+          "section": "6. Définitions — Accident",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_definitions_56a9f8bc1cc0_knowledge_861731ab009d",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 36,
+          "section": "6. Définitions — IPT",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_definitions_2ca43e87a39d_knowledge_c954c1fc0652",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 35,
+          "section": "6. Définitions — ITT toutes causes",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_definitions_947665e0887d_knowledge_10abcab0e557",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 35,
+          "section": "6. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_definitions_73b0136ea532_knowledge_aa812e8facd9",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 35,
+          "section": "6. Définitions — Franchise",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_definitions_7f74f8b0d597_knowledge_807a23e17372",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 35,
+          "section": "6. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_definitions_3df00bfaaa76_knowledge_ab5df062d901",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 36,
+          "section": "6. Définitions — Non-fumeur",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_definitions_2d89abbca8e2_knowledge_a4b23657526c",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 34,
+          "section": "6. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_definitions_1b713bd6e3db_knowledge_6624bbcd85b3",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 36,
+          "section": "6. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_definitions_00406d82e15f_knowledge_4889aa07c84c",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 36,
+          "section": "6. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "condition_souscription": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_conditions_souscription_8dccdbbdf618_knowledge_7530c616c176",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 4,
+          "section": "1.1.2 / 1.1.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_conditions_souscription_53fe35370907_knowledge_4916a9487b2a",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 7,
+          "section": "1.1.7",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_conditions_souscription_03af6e010ff2_knowledge_bed58167bd5a",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 7,
+          "section": "1.1.8",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_conditions_souscription_d7d4994b3d7d_knowledge_592b311df998",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 6,
+          "section": "1.1.6 L'étendue territoriale",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "formalite_medicale": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_formalites_medicales_3247e48eaccb_knowledge_de2786a94ab2",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 5,
+          "section": "1.1.5 a)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_formalites_medicales_133ec049d066_knowledge_51a340899db6",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 6,
+          "section": "1.1.5 b)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_formalites_medicales_f368d02fdc4c_knowledge_c24475044f55",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 20,
+          "section": "2.4.2 Contrôle médical",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_formalites_medicales_7e8e3cf9292c_knowledge_adb79c89aace",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 6,
+          "section": "1.1.6",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "delai": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_delais_carences_franchises_1eb7c3b6656b_knowledge_d1cae11fe382",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 27,
+          "section": "4.1.5 Limitation de garanties",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_delais_carences_franchises_4dcefc2d1cb7_knowledge_705134a3703d",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 27,
+          "section": "4.1.5",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_delais_carences_franchises_7353dbad0140_knowledge_359a591302ec",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 28,
+          "section": "4.1.5 Affections psychiatriques",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_delais_carences_franchises_8cffe28be8f9_knowledge_799a20a8bb52",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 28,
+          "section": "4.1.5 Affections du rachis",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_delais_carences_franchises_0ecfc14749f3_knowledge_02dcffe3db8b",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 28,
+          "section": "4.1.5 Fibromyalgie",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_delais_carences_franchises_7ea4e3d72762_knowledge_3c7b7304c016",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "fichier_json": "connaissances_metier.json",
+          "page": 28,
+          "section": "4.1.5 Rugby et football",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_delais_carences_franchises_848a468470d5_knowledge_44d4257a68c3",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 20,
+          "section": "2.4.1 b)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_delais_carences_franchises_064d54938164_knowledge_e46b76d2bea0",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 29,
+          "section": "4.6 Prescription",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "cotisation_prix": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_abc3375d4853_knowledge_811b06665e8e",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_2ca4d97bb9ae_knowledge_6ed9ced498a7",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_7f531ad19cd0_knowledge_0d72b99a5472",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_b516c9e6cfb0_knowledge_09a0e053a243",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 8,
+          "section": "1.2.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "assistance": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_assistance_c8bac869ce3f_knowledge_5da8e7405874",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 22,
+          "section": "3.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_assistance_3e8e2f5eb271_knowledge_1de40c4df42a",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 23,
+          "section": "3.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "resiliation_renonciation": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_resiliation_renonciation_1b2b6d05e663_knowledge_80db90a4e835",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 29,
+          "section": "4.5 Modalités de renonciation",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_resiliation_renonciation_f3fdcc0efa16_knowledge_cf586c725cea",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 7,
+          "section": "1.1.9",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_resiliation_renonciation_cf129ca629a7_knowledge_df01ba4c569f",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 7,
+          "section": "1.1.9",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_resiliation_renonciation_3f357cb41973_knowledge_3cb425303e27",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 9,
+          "section": "1.2.3 e)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_resiliation_renonciation_caabcfaec517_knowledge_b5df6ea210e8",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 33,
+          "section": "5.2 / 5.3",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "beneficiaire": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_beneficiaires_bc9b2995f6bb_knowledge_2963fe84d705",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": 21,
+          "section": "2.5 Désignation et acceptation des bénéficiaires",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "point_vigilance": [
+      {
+        "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_7fcd9a720eb6_knowledge_0576f001d0e2",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_35a954074956_knowledge_5c564f1268c0",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_7bce30284464_knowledge_2cd764868136",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_cc15c2c82089_knowledge_a0dae9627c20",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_4be05876c398_knowledge_c48f67d5f295",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_0fe3eed1b758_knowledge_70e30390986f",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_avizen_2025-04",
+          "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ]
+  },
+  "points_de_vigilance": [
+    {
+      "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_7fcd9a720eb6_knowledge_0576f001d0e2",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_35a954074956_knowledge_5c564f1268c0",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_7bce30284464_knowledge_2cd764868136",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_cc15c2c82089_knowledge_a0dae9627c20",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_4be05876c398_knowledge_c48f67d5f295",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_0fe3eed1b758_knowledge_70e30390986f",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "axa_axa_axa_avizen_2025_04_exclusions_88f149ec8926_knowledge_9ff89417a1a5",
+      "titre": "toutes les garanties du chapitre 2, monde entier",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 25,
+        "section": "4.1.1 Exclusions communes",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_exclusions_88792af8010e_knowledge_7a2869e7f5a6",
+      "titre": "garanties décès/IPT toutes causes",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 26,
+        "section": "4.1.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_exclusions_2e814add9402_knowledge_a66ece2859b1",
+      "titre": "garanties décès/IPT toutes causes",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 26,
+        "section": "4.1.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_exclusions_896982b4e3b0_knowledge_584c5c70a769",
+      "titre": "garanties décès/IPT par accident",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 26,
+        "section": "4.1.3",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_exclusions_2bc5e30f05f7_knowledge_31ea614f0cd8",
+      "titre": "garanties ITT et invalidité permanente (toutes causes et par accident)",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 27,
+        "section": "4.1.4",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "garanties": [
+    {
+      "id": "axa_axa_axa_avizen_2025_04_garanties_a8f766e437aa_knowledge_8b1c6b2e4eb7",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 11,
+        "section": "2.1.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_garanties_f08626ba809d_knowledge_a0c8863e7342",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 11,
+        "section": "2.1.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_garanties_338c6fd6176a_knowledge_8938e101c7dc",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 12,
+        "section": "2.1.4",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_garanties_98f17fc52b5b_knowledge_3693707791fb",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 13,
+        "section": "2.1.5",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 13,
+        "section": "2.2.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_garanties_298583bbdc55_knowledge_6df41afcc8cc",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 14,
+        "section": "2.2.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_garanties_4273eec96de1_knowledge_d37557b53e34",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 15,
+        "section": "2.2.3",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_garanties_1f8e343ca6c1_knowledge_5a79ea84fd80",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 16,
+        "section": "2.2.4",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_garanties_1aaadbb8226d_knowledge_89bf645880bb",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 16,
+        "section": "2.2.5",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_garanties_2bf2b4989e80_knowledge_8e3e075241c0",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 17,
+        "section": "2.2.6",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_garanties_4e17c4643abb_knowledge_de5880e82d5e",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 18,
+        "section": "2.3 Garantie aide à la famille",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "options": [
+    {
+      "id": "axa_axa_axa_avizen_2025_04_options_9f4385ee345a_knowledge_219241330066",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 11,
+        "section": "2.1.3",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_options_6a1ed3c8d2d1_knowledge_bf648561fef8",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 17,
+        "section": "2.2.7",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_options_9548821c6b3a_knowledge_3c980033add3",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 18,
+        "section": "2.2.8",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_options_8f4ee5536c39_knowledge_566df5b56ec5",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 8,
+        "section": "1.2.3 a) Indexation",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_avizen_2025_04_options_e060ef8374fa_knowledge_97cb97064d66",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_avizen_2025-04",
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 9,
+        "section": "1.2.3 b)",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "limites": "Vue documentaire synthétique. Consulter le JSON unifié et les documents contractuels avant toute utilisation client."
+}

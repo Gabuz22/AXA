@@ -1,0 +1,1035 @@
+{
+  "meta": {
+    "version_schema": "1.0",
+    "generated_at": "2026-06-12T18:33:41.014Z",
+    "language": "fr",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "stockage_recommande": "export_json_local_separe",
+    "stockage_local_automatique": false,
+    "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+    "type": "vue_humaine_contrat"
+  },
+  "contrat": {
+    "id": "axa_essenciel_2025-06",
+    "nom": "Essen'Ciel (assurance obsèques)",
+    "famille": "prévoyance",
+    "nombre_faits": 57
+  },
+  "categories": {
+    "garantie": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 20,
+          "section": "5.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_garanties_9ebc6fa82294_knowledge_6e72c2b48f79",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 20,
+          "section": "5.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_garanties_c0b7532da10b_knowledge_580dd13f2d14",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 23,
+          "section": "6.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_garanties_e42b591edf9f_knowledge_8cbfa291bbd8",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 24,
+          "section": "6.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_garanties_e659d22109db_knowledge_887ac2922e7f",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 27,
+          "section": "6.3",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_exclusions_e72bdb32890b_knowledge_17f7b1238668",
+        "titre": "garantie décès",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 30,
+          "section": "7.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
+        "titre": "garantie décès (volet accidentel)",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 30,
+          "section": "7.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_exclusions_5b2186ce331c_knowledge_29657214c9c8",
+        "titre": "garanties d'assistance",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 31,
+          "section": "7.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "option": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_options_e59c0ac74c82_knowledge_786fe21d3933",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 8,
+          "section": "1. exemple",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_options_de0a3dff8347_knowledge_6e47ac594507",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 17,
+          "section": "4.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 22,
+          "section": "5.5",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "fiscalite": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_10b11fed39d8_knowledge_81a9d27bb02d",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_94c8368f6856_knowledge_d80119f3d2ae",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_622c88ea9f4b_knowledge_9e5bc789bca2",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_6b52755aa9bc_knowledge_bf8cc347b759",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "tableau": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_tableaux_contractuels_695be00d6c64_knowledge_4798d2eb0848",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 18,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_tableaux_contractuels_960567442008_knowledge_8728decfd08e",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 19,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_tableaux_contractuels_8844d0670aa9_knowledge_fccf986b0bc0",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 19,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_tableaux_contractuels_dba42c4faaa4_knowledge_c490ff91475f",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 34,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_tableaux_contractuels_0b8e46195a77_knowledge_568908d8c3f1",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 34,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_tableaux_contractuels_78b98833ca97_knowledge_10d05bf856cb",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 34,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_tableaux_contractuels_bf3ed72c76c8_knowledge_ed3468c960c4",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 35,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "calcul": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_formules_estimees_cf84510e2771_knowledge_25c6064940bb",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_formules_estimees_b6fc087af15d_knowledge_a458ac174f42",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_formules_estimees_3c48350b8bee_knowledge_1a51f2d478c3",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "definition": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_definitions_e49b8e2901a6_knowledge_e52eaf67941e",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 47,
+          "section": "13. Définitions — Accident",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_definitions_f944b49a8227_knowledge_f913a80a1af7",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 47,
+          "section": "13. Définitions — Bénéficiaires",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_definitions_1d7a7d65a7d6_knowledge_0aac5b225933",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 48,
+          "section": "13. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_definitions_299f5ea2a7b8_knowledge_31d7a7597266",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 48,
+          "section": "13. Définitions — France",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "condition_souscription": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_conditions_souscription_8e688ae67555_knowledge_c16625fa80a1",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 16,
+          "section": "3.6",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_conditions_souscription_9edfa9f49b9b_knowledge_47fd223f8edf",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 17,
+          "section": "4.3",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "formalite_medicale": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_formalites_medicales_768fa947265c_knowledge_c0a9c7a95b49",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 36,
+          "section": "9.3",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "delai": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 32,
+          "section": "8.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_21965f763a67_knowledge_c36b182e6cb5",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 38,
+          "section": "10.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_57a01f7012c4_knowledge_8336ecd3eb5c",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 35,
+          "section": "8.3 Modalités de paiement",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_03376793904c_knowledge_ed2b1ff2548f",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 33,
+          "section": "8.3 Par renonciation",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_721dff430cbb_knowledge_f273b2650a93",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 41,
+          "section": "11.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_d1a4a99c46a0_knowledge_d17b80e56b2c",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 39,
+          "section": "10.3",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "cotisation_prix": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d5f8f13b0b5c_knowledge_a95f12312a57",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d54c486f45e6_knowledge_9b690d586091",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0d109ff2f1ce_knowledge_b64c3388e76a",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d352dd9df6b0_knowledge_a18b90c925a0",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0fdc19816413_knowledge_010612cb7537",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 18,
+          "section": "4.4",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "assistance": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_assistance_6a88c658b1b2_knowledge_1ad68fa3643e",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 28,
+          "section": "6.6",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "resiliation_renonciation": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_resiliation_renonciation_5caa8126d28c_knowledge_6932d8318b86",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 33,
+          "section": "8.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_resiliation_renonciation_f25b543ffffa_knowledge_59f2f29a6c35",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 32,
+          "section": "8.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_resiliation_renonciation_b31a4070f143_knowledge_a7e3934c21a5",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 16,
+          "section": "3.5",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "beneficiaire": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_beneficiaires_0f1e6389e1d1_knowledge_ba595b4b2a70",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": 21,
+          "section": "5.4",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "point_vigilance": [
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_aeb56e7d32c3_knowledge_2c080b3d95be",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_e2fddb92cc3a_knowledge_194eb1adda54",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_62de1e7dadfb_knowledge_09e6e3b5f2e2",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_d5ec81079541_knowledge_86cdae42467c",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_0a61c726cd35_knowledge_4ebecf35bc1c",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_essenciel_2025-06",
+          "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ]
+  },
+  "points_de_vigilance": [
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_aeb56e7d32c3_knowledge_2c080b3d95be",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_e2fddb92cc3a_knowledge_194eb1adda54",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_62de1e7dadfb_knowledge_09e6e3b5f2e2",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_d5ec81079541_knowledge_86cdae42467c",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_0a61c726cd35_knowledge_4ebecf35bc1c",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_exclusions_e72bdb32890b_knowledge_17f7b1238668",
+      "titre": "garantie décès",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 30,
+        "section": "7.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
+      "titre": "garantie décès (volet accidentel)",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 30,
+        "section": "7.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_exclusions_5b2186ce331c_knowledge_29657214c9c8",
+      "titre": "garanties d'assistance",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 31,
+        "section": "7.2",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "garanties": [
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 20,
+        "section": "5.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_garanties_9ebc6fa82294_knowledge_6e72c2b48f79",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 20,
+        "section": "5.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_garanties_c0b7532da10b_knowledge_580dd13f2d14",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 23,
+        "section": "6.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_garanties_e42b591edf9f_knowledge_8cbfa291bbd8",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 24,
+        "section": "6.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_garanties_e659d22109db_knowledge_887ac2922e7f",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 27,
+        "section": "6.3",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "options": [
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_options_e59c0ac74c82_knowledge_786fe21d3933",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 8,
+        "section": "1. exemple",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_options_de0a3dff8347_knowledge_6e47ac594507",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 17,
+        "section": "4.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_essenciel_2025-06",
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 22,
+        "section": "5.5",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "limites": "Vue documentaire synthétique. Consulter le JSON unifié et les documents contractuels avant toute utilisation client."
+}

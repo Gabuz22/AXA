@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gabriel AXA</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="./assets/app.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <button id="burger" aria-label="menu">☰</button>
+    <div class="brand">Gabriel&nbsp;AXA <small>assistant conseiller</small></div>
+    <input id="globalSearch" placeholder="🔎 Rechercher une garantie, une exclusion… (Entrée)">
+    <button id="helpBtn" class="help-btn" aria-label="Aide sur cette page" title="Aide sur cette page">?</button>
+    <button id="themeBtn" class="help-btn" aria-label="Changer de thème" title="Changer de thème">◐</button>
+  </header>
+  <nav id="nav" class="sidebar"></nav>
+  <main id="view" class="main"></main>
+  <div id="helpDrawer" class="help-drawer" hidden>
+    <div class="help-backdrop" data-help-close></div>
+    <aside class="help-panel" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+      <div class="help-head"><h2 id="helpTitle"></h2><button class="help-x" data-help-close aria-label="Fermer">✕</button></div>
+      <div id="helpBody" class="help-body"></div>
+    </aside>
+  </div>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

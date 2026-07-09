@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "version_schema": "1.0",
+    "generated_at": "2026-06-12T18:33:41.014Z",
+    "language": "fr",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "stockage_recommande": "export_json_local_separe",
+    "stockage_local_automatique": false,
+    "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+    "type": "tableau_comparatif_documentaire"
+  },
+  "colonnes": [
+    "contrat",
+    "famille",
+    "garanties",
+    "exclusions",
+    "options",
+    "cotisation_prix",
+    "fiscalite",
+    "delais",
+    "formalites_medicales",
+    "points_de_vigilance"
+  ],
+  "lignes": [
+    {
+      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "famille": "prévoyance",
+      "garanties": 7,
+      "exclusions": 11,
+      "options": 1,
+      "cotisation_prix": 6,
+      "fiscalite": 6,
+      "delais": 6,
+      "formalites_medicales": 1,
+      "points_de_vigilance": 5
+    },
+    {
+      "contrat": "Avizen",
+      "famille": "prévoyance",
+      "garanties": 11,
+      "exclusions": 5,
+      "options": 5,
+      "cotisation_prix": 6,
+      "fiscalite": 6,
+      "delais": 8,
+      "formalites_medicales": 4,
+      "points_de_vigilance": 6
+    },
+    {
+      "contrat": "Avizen Pro",
+      "famille": "prévoyance",
+      "garanties": 13,
+      "exclusions": 4,
+      "options": 8,
+      "cotisation_prix": 6,
+      "fiscalite": 6,
+      "delais": 7,
+      "formalites_medicales": 3,
+      "points_de_vigilance": 7
+    },
+    {
+      "contrat": "Entour'Age",
+      "famille": "prévoyance",
+      "garanties": 4,
+      "exclusions": 3,
+      "options": 5,
+      "cotisation_prix": 7,
+      "fiscalite": 5,
+      "delais": 5,
+      "formalites_medicales": 3,
+      "points_de_vigilance": 8
+    },
+    {
+      "contrat": "Essen'Ciel (assurance obsèques)",
+      "famille": "prévoyance",
+      "garanties": 5,
+      "exclusions": 3,
+      "options": 3,
+      "cotisation_prix": 6,
+      "fiscalite": 5,
+      "delais": 6,
+      "formalites_medicales": 1,
+      "points_de_vigilance": 7
+    },
+    {
+      "contrat": "Masterlife CREDIT",
+      "famille": "assurance_emprunteur",
+      "garanties": 7,
+      "exclusions": 7,
+      "options": 3,
+      "cotisation_prix": 6,
+      "fiscalite": 5,
+      "delais": 6,
+      "formalites_medicales": 2,
+      "points_de_vigilance": 7
+    },
+    {
+      "contrat": "Excelium (assurance vie)",
+      "famille": "épargne",
+      "garanties": 4,
+      "exclusions": 1,
+      "options": 3,
+      "cotisation_prix": 5,
+      "fiscalite": 5,
+      "delais": 3,
+      "formalites_medicales": 1,
+      "points_de_vigilance": 7
+    },
+    {
+      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "famille": "retraite",
+      "garanties": 5,
+      "exclusions": 1,
+      "options": 4,
+      "cotisation_prix": 5,
+      "fiscalite": 5,
+      "delais": 5,
+      "formalites_medicales": 1,
+      "points_de_vigilance": 9
+    }
+  ]
+}

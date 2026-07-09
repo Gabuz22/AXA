@@ -1,0 +1,1176 @@
+{
+  "meta": {
+    "version_schema": "1.0",
+    "generated_at": "2026-06-12T18:33:41.014Z",
+    "language": "fr",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "stockage_recommande": "export_json_local_separe",
+    "stockage_local_automatique": false,
+    "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+    "type": "vue_humaine_contrat"
+  },
+  "contrat": {
+    "id": "axa_masterlife_credit_2024-10",
+    "nom": "Masterlife CREDIT",
+    "famille": "assurance_emprunteur",
+    "nombre_faits": 62
+  },
+  "categories": {
+    "garantie": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_f9f69ff37530_knowledge_4f246d649228",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 12,
+          "section": "Article 3.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_d491c9d8dfde_knowledge_32a7d6cd89bf",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 12,
+          "section": "Article 3.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_7fecd8ae9f79_knowledge_d0af30a9aaf6",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 13,
+          "section": "Article 4.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_93963eb93de3_knowledge_9f59cb6de90f",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 14,
+          "section": "Article 4.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_adf30e38133e_knowledge_9073a4080125",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 16,
+          "section": "Article 4.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_e995610a6cfc_knowledge_bb8b7f487fe1",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 14,
+          "section": "Article 4.1.d",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_9542660c76a0_knowledge_3dd8f3ed7869",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 16,
+          "section": "Article 4.4",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_84dc965c3cbd_knowledge_e316f16d3470",
+        "titre": "décès",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 20,
+          "section": "Article 7.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_7d71c356f084_knowledge_8c611c90bc41",
+        "titre": "décès (et étendue aux autres garanties via 7.2)",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 20,
+          "section": "Article 7.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_673c6f1fa5a9_knowledge_9ae21104adca",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 20,
+          "section": "Article 7.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_3388797f1d90_knowledge_3dcf66148710",
+        "titre": "PTIA, incapacité, invalidité, GIS",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 20,
+          "section": "Article 7.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_1d2b077cf406_knowledge_ceaaab562fc8",
+        "titre": "incapacité, invalidité, GIS",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 21,
+          "section": "Article 7.2 État antérieurs",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_2bcaeda3d931_knowledge_1b55e7e978ee",
+        "titre": "incapacité et invalidité",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 21,
+          "section": "Article 7.2 Affections psychologiques",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_888092d99f15_knowledge_15c6a7500dd4",
+        "titre": "incapacité, invalidité, PTIA",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 22,
+          "section": "Article 7.2 Cures",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "option": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_options_bb2687eed056_knowledge_8805759d2325",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 13,
+          "section": "Article 4.1.c",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_options_cd4d91e29f75_knowledge_d0c39ab9e6b2",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 11,
+          "section": "Article 2.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_options_edabb5425d62_knowledge_f2d4e1a2a65c",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 11,
+          "section": "Article 2.1",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "fiscalite": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_965709e14702_knowledge_59bba4ded7e7",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6184af0ed0bb_knowledge_d2b949a61e4b",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6557ee3b82de_knowledge_bcf56946772e",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_8d6684edc0fe_knowledge_549556fde47d",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_a579030f51e4_knowledge_6b6563df11b1",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "tableau": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_tableaux_contractuels_311bd8c3b514_knowledge_9432c719f5d1",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 15,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_tableaux_contractuels_556db67aa04e_knowledge_1de8f9e21e66",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 15,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_tableaux_contractuels_74ec716a83d1_knowledge_8f8a1a20e887",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 9,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "calcul": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_formules_estimees_8234a3265169_knowledge_16706d6ac35a",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_formules_estimees_28f227b6efc1_knowledge_a87dcbf61cdc",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_formules_estimees_63aca6747fa5_knowledge_80aae339b584",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "definition": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_definitions_7a295b524f93_knowledge_285039b28fb3",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 4,
+          "section": "Définitions — Accident",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_definitions_0c0b3950c5e5_knowledge_ebdccd388bfd",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 5,
+          "section": "Définitions — PTIA",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_definitions_8e0bc6d31bb3_knowledge_9258b2154730",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 5,
+          "section": "Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_definitions_8e9edb36e76b_knowledge_a48bf32664de",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 5,
+          "section": "Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_definitions_4b2f15e7d694_knowledge_6ccf6e521da0",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 4,
+          "section": "Définitions — Franchise",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "condition_souscription": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_conditions_souscription_ee76ed2b93ae_knowledge_769d59825cbe",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 8,
+          "section": "Article 1.4 a)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_conditions_souscription_a3b3c36084fc_knowledge_ab461c69b4ec",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 8,
+          "section": "Article 1.7",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_conditions_souscription_d6f41751289a_knowledge_194a7460b63f",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 23,
+          "section": "Article 10",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "formalite_medicale": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_formalites_medicales_519f4ad4395b_knowledge_a277fe57da99",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 8,
+          "section": "Article 1.4",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_formalites_medicales_391c86d5f79e_knowledge_6e9641cf645e",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 17,
+          "section": "Article 5",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "delai": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_43661b0990e6_knowledge_804dcccb9054",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 13,
+          "section": "4.1.b / 7.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_27779267fdf7_knowledge_2a150183bfff",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 18,
+          "section": "Article 5.1.b",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_5c99bb1c3721_knowledge_80b877f736b9",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 18,
+          "section": "5.2 / 5.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_bee2e6c68d66_knowledge_327cbd2a76fe",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 12,
+          "section": "3. Le règlement des prestations",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_126e25f4e036_knowledge_a77c08f89bb7",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 8,
+          "section": "1.8",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_88bd824e4adb_knowledge_64636cd533fc",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 23,
+          "section": "Article 11",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "cotisation_prix": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_317921e2cd84_knowledge_8dcd710beb80",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_f904852eb47e_knowledge_1f5ef94b1625",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_a8de7fb08bee_knowledge_fc624b04e8d5",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_8936eebaa5cc_knowledge_85eab19f89d6",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_fcc33a37f235_knowledge_bdaff89df963",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 11,
+          "section": "Article 2.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "resiliation_renonciation": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_resiliation_renonciation_961c3eecadc3_knowledge_d9f2c9f40b88",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 23,
+          "section": "Article 9",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_resiliation_renonciation_638bfbb52633_knowledge_4f4a1994251c",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 9,
+          "section": "Article 1.9",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_resiliation_renonciation_d6b4ea013990_knowledge_aae7499de4e0",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 10,
+          "section": "Article 1.9",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_resiliation_renonciation_5ddac14ee5c3_knowledge_ce81cb8ec688",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 10,
+          "section": "Article 1.10",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "beneficiaire": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_beneficiaires_3c3fc6bb65cc_knowledge_5c1173983e91",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": 19,
+          "section": "Article 6",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "point_vigilance": [
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_6acaf82de4d0_knowledge_c33f87b96f7d",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_c3162986a52f_knowledge_df9e127805c0",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_484c871eb4bf_knowledge_7b643e57951b",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_5f5655d49ac6_knowledge_91b5fa511851",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_173b632105ef_knowledge_af69875b3299",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_b54b61128019_knowledge_405b144e09ef",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_14236254decd_knowledge_8c4dc54fa7d1",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_masterlife_credit_2024-10",
+          "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ]
+  },
+  "points_de_vigilance": [
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_6acaf82de4d0_knowledge_c33f87b96f7d",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_c3162986a52f_knowledge_df9e127805c0",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_484c871eb4bf_knowledge_7b643e57951b",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_5f5655d49ac6_knowledge_91b5fa511851",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_173b632105ef_knowledge_af69875b3299",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_b54b61128019_knowledge_405b144e09ef",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_14236254decd_knowledge_8c4dc54fa7d1",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_84dc965c3cbd_knowledge_e316f16d3470",
+      "titre": "décès",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 20,
+        "section": "Article 7.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_7d71c356f084_knowledge_8c611c90bc41",
+      "titre": "décès (et étendue aux autres garanties via 7.2)",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 20,
+        "section": "Article 7.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_673c6f1fa5a9_knowledge_9ae21104adca",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 20,
+        "section": "Article 7.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_3388797f1d90_knowledge_3dcf66148710",
+      "titre": "PTIA, incapacité, invalidité, GIS",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 20,
+        "section": "Article 7.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_1d2b077cf406_knowledge_ceaaab562fc8",
+      "titre": "incapacité, invalidité, GIS",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 21,
+        "section": "Article 7.2 État antérieurs",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_2bcaeda3d931_knowledge_1b55e7e978ee",
+      "titre": "incapacité et invalidité",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 21,
+        "section": "Article 7.2 Affections psychologiques",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_exclusions_888092d99f15_knowledge_15c6a7500dd4",
+      "titre": "incapacité, invalidité, PTIA",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 22,
+        "section": "Article 7.2 Cures",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "garanties": [
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_f9f69ff37530_knowledge_4f246d649228",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 12,
+        "section": "Article 3.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_d491c9d8dfde_knowledge_32a7d6cd89bf",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 12,
+        "section": "Article 3.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_7fecd8ae9f79_knowledge_d0af30a9aaf6",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 13,
+        "section": "Article 4.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_93963eb93de3_knowledge_9f59cb6de90f",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 14,
+        "section": "Article 4.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_adf30e38133e_knowledge_9073a4080125",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 16,
+        "section": "Article 4.3",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_e995610a6cfc_knowledge_bb8b7f487fe1",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 14,
+        "section": "Article 4.1.d",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_garanties_9542660c76a0_knowledge_3dd8f3ed7869",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 16,
+        "section": "Article 4.4",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "options": [
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_options_bb2687eed056_knowledge_8805759d2325",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 13,
+        "section": "Article 4.1.c",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_options_cd4d91e29f75_knowledge_d0c39ab9e6b2",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 11,
+        "section": "Article 2.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_masterlife_credit_2024_10_options_edabb5425d62_knowledge_f2d4e1a2a65c",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_masterlife_credit_2024-10",
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 11,
+        "section": "Article 2.1",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "limites": "Vue documentaire synthétique. Consulter le JSON unifié et les documents contractuels avant toute utilisation client."
+}

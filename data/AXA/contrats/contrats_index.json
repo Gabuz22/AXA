@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "type": "index_contrats_axa",
+    "schema_version": "2.0_enrichi",
+    "json_meres_modifies": false,
+    "note": "1 contrat = 1 JSON enrichi. La notice PDF fait foi.",
+    "genere_le": "2026-06-19"
+  },
+  "contrats": [
+    {
+      "slug": "avizen",
+      "id": "axa_avizen_2025-04",
+      "nom": "Avizen",
+      "famille": "prévoyance",
+      "json": "data/AXA/contrats/avizen.json",
+      "pdf_principal": "data/AXA/Avizen/2025-04 Notice d'information Avizen.pdf",
+      "presentation_pptx": "exports/axa_presentations/avizen_presentation.pptx",
+      "stats": {
+        "garanties": 11,
+        "options": 5,
+        "exclusions": 5,
+        "fiscalite": 6,
+        "conditions": 4,
+        "objets_requires_pdf_check": 6
+      }
+    },
+    {
+      "slug": "avizen_pro",
+      "id": "axa_avizen_pro_2025-04",
+      "nom": "Avizen Pro",
+      "famille": "prévoyance",
+      "json": "data/AXA/contrats/avizen_pro.json",
+      "pdf_principal": "data/AXA/Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "presentation_pptx": "exports/axa_presentations/avizen_pro_presentation.pptx",
+      "stats": {
+        "garanties": 13,
+        "options": 8,
+        "exclusions": 4,
+        "fiscalite": 6,
+        "conditions": 3,
+        "objets_requires_pdf_check": 8
+      }
+    },
+    {
+      "slug": "entourage",
+      "id": "axa_entourage_2025-06",
+      "nom": "Entour'Age",
+      "famille": "prévoyance",
+      "json": "data/AXA/contrats/entourage.json",
+      "pdf_principal": "data/AXA/EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "presentation_pptx": "exports/axa_presentations/entourage_presentation.pptx",
+      "stats": {
+        "garanties": 4,
+        "options": 5,
+        "exclusions": 3,
+        "fiscalite": 5,
+        "conditions": 3,
+        "objets_requires_pdf_check": 4
+      }
+    },
+    {
+      "slug": "essenciel",
+      "id": "axa_essenciel_2025-06",
+      "nom": "Essen'Ciel (assurance obsèques)",
+      "famille": "prévoyance",
+      "json": "data/AXA/contrats/essenciel.json",
+      "pdf_principal": "data/AXA/EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "presentation_pptx": "exports/axa_presentations/essenciel_presentation.pptx",
+      "stats": {
+        "garanties": 5,
+        "options": 3,
+        "exclusions": 3,
+        "fiscalite": 5,
+        "conditions": 2,
+        "objets_requires_pdf_check": 4
+      }
+    },
+    {
+      "slug": "excelium",
+      "id": "axa_excelium_vie_2026-05",
+      "nom": "Excelium (assurance vie)",
+      "famille": "épargne",
+      "json": "data/AXA/contrats/excelium.json",
+      "pdf_principal": "data/AXA/Excelium/2026-05 Notice Excelium Vie.pdf",
+      "presentation_pptx": "exports/axa_presentations/excelium_presentation.pptx",
+      "stats": {
+        "garanties": 4,
+        "options": 3,
+        "exclusions": 1,
+        "fiscalite": 5,
+        "conditions": 2,
+        "objets_requires_pdf_check": 5
+      }
+    },
+    {
+      "slug": "ma_protection_accident",
+      "id": "axa_ma_protection_accident_2024-03",
+      "nom": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "famille": "prévoyance",
+      "json": "data/AXA/contrats/ma_protection_accident.json",
+      "pdf_principal": "data/AXA/Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "presentation_pptx": "exports/axa_presentations/ma_protection_accident_presentation.pptx",
+      "stats": {
+        "garanties": 7,
+        "options": 1,
+        "exclusions": 11,
+        "fiscalite": 6,
+        "conditions": 2,
+        "objets_requires_pdf_check": 8
+      }
+    },
+    {
+      "slug": "ma_retraite",
+      "id": "axa_ma_retraite_2026-05",
+      "nom": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "famille": "retraite",
+      "json": "data/AXA/contrats/ma_retraite.json",
+      "pdf_principal": "data/AXA/Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "presentation_pptx": "exports/axa_presentations/ma_retraite_presentation.pptx",
+      "stats": {
+        "garanties": 5,
+        "options": 4,
+        "exclusions": 1,
+        "fiscalite": 5,
+        "conditions": 2,
+        "objets_requires_pdf_check": 3
+      }
+    },
+    {
+      "slug": "masterlife_credit",
+      "id": "axa_masterlife_credit_2024-10",
+      "nom": "Masterlife CREDIT",
+      "famille": "assurance_emprunteur",
+      "json": "data/AXA/contrats/masterlife_credit.json",
+      "pdf_principal": "data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "presentation_pptx": "exports/axa_presentations/masterlife_credit_presentation.pptx",
+      "stats": {
+        "garanties": 7,
+        "options": 3,
+        "exclusions": 7,
+        "fiscalite": 5,
+        "conditions": 3,
+        "objets_requires_pdf_check": 7
+      }
+    },
+    {
+      "slug": "essenciel_patrimoine",
+      "id": "axa_essenciel_patrimoine_2023-09",
+      "nom": "Essen'Ciel Patrimoine",
+      "famille": "prévoyance",
+      "json": "data/AXA/contrats/essenciel_patrimoine.json",
+      "pdf_principal": "data/AXA/EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "presentation_pptx": "exports/axa_presentations/essenciel_patrimoine_presentation.pptx",
+      "stats": {
+        "garanties": 2,
+        "options": 4,
+        "exclusions": 1,
+        "conditions": 2,
+        "fiscalite": 1,
+        "points_vigilance": 6,
+        "pdfs": 1
+      }
+    }
+  ]
+}

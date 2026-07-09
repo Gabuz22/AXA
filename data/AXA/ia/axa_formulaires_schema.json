@@ -1,0 +1,1822 @@
+{
+  "meta": {
+    "version_schema": "1.0",
+    "generated_at": "2026-06-12T18:33:41.014Z",
+    "language": "fr",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "stockage_recommande": "export_json_local_separe",
+    "stockage_local_automatique": false,
+    "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+    "type": "registre_formulaires_clients_AXA"
+  },
+  "formulaires": {
+    "complet": {
+      "meta": {
+        "version_schema": "1.0",
+        "generated_at": "2026-06-12T18:33:41.014Z",
+        "language": "fr",
+        "json_meres_modifies": false,
+        "validation_humaine_requise": true,
+        "stockage_recommande": "export_json_local_separe",
+        "stockage_local_automatique": false,
+        "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+        "type": "formulaire_client_complet",
+        "title": "Formulaire client complet",
+        "purpose": "Entretien approfondi, bilan patrimonial et social.",
+        "duration": "45 à 90 minutes",
+        "importance_scale": {
+          "min": 0,
+          "max": 5,
+          "labels": [
+            "non concerné",
+            "faible",
+            "modérée",
+            "forte",
+            "majeure",
+            "critique"
+          ]
+        }
+      },
+      "sections": [
+        {
+          "id": "meta",
+          "title": "Cadre de l'entretien",
+          "fields": [
+            {
+              "id": "date_entretien",
+              "label": "Date de l'entretien",
+              "type": "date",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "conseiller",
+              "label": "Conseiller",
+              "type": "text",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "origine_contact",
+              "label": "Origine du contact",
+              "type": "text",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "niveau_certitude_client",
+              "label": "Niveau de certitude du client",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "niveau_emotion_inquietude",
+              "label": "Niveau d'émotion ou d'inquiétude",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "horizon_temporel_global",
+              "label": "Horizon temporel global",
+              "type": "select",
+              "required": false,
+              "sensitive": false,
+              "options": [
+                "immédiat",
+                "moins de 2 ans",
+                "2 à 5 ans",
+                "5 à 10 ans",
+                "plus de 10 ans"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "client",
+          "title": "Identité",
+          "fields": [
+            {
+              "id": "nom",
+              "label": "Nom",
+              "type": "text",
+              "required": false,
+              "sensitive": true
+            },
+            {
+              "id": "prenom",
+              "label": "Prénom",
+              "type": "text",
+              "required": false,
+              "sensitive": true
+            },
+            {
+              "id": "age",
+              "label": "Âge",
+              "type": "number",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "date_naissance",
+              "label": "Date de naissance",
+              "type": "date",
+              "required": false,
+              "sensitive": true
+            },
+            {
+              "id": "situation_familiale",
+              "label": "Situation familiale",
+              "type": "select",
+              "required": false,
+              "sensitive": false,
+              "options": [
+                "célibataire",
+                "en couple",
+                "marié",
+                "pacsé",
+                "séparé",
+                "divorcé",
+                "veuf",
+                "autre"
+              ]
+            },
+            {
+              "id": "nombre_enfants",
+              "label": "Nombre d'enfants",
+              "type": "number",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "personnes_charge",
+              "label": "Personnes à charge",
+              "type": "number",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "regime_matrimonial",
+              "label": "Régime matrimonial",
+              "type": "text",
+              "required": false,
+              "sensitive": true
+            },
+            {
+              "id": "residence_fiscale",
+              "label": "Résidence fiscale",
+              "type": "text",
+              "required": false,
+              "sensitive": true
+            },
+            {
+              "id": "telephone",
+              "label": "Téléphone",
+              "type": "text",
+              "required": false,
+              "sensitive": true
+            },
+            {
+              "id": "email",
+              "label": "Email",
+              "type": "email",
+              "required": false,
+              "sensitive": true
+            }
+          ]
+        },
+        {
+          "id": "situation_professionnelle",
+          "title": "Situation professionnelle",
+          "fields": [
+            {
+              "id": "statut",
+              "label": "Statut",
+              "type": "select",
+              "required": false,
+              "sensitive": false,
+              "options": [
+                "salarié",
+                "TNS",
+                "dirigeant",
+                "profession libérale",
+                "retraité",
+                "étudiant",
+                "sans activité",
+                "autre"
+              ]
+            },
+            {
+              "id": "profession_exacte",
+              "label": "Profession exacte",
+              "type": "text",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "anciennete",
+              "label": "Ancienneté",
+              "type": "text",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "revenus_nets_mensuels",
+              "label": "Revenus nets mensuels",
+              "type": "currency",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "revenus_variables",
+              "label": "Revenus variables annuels",
+              "type": "currency",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "regimes_obligatoires",
+              "label": "Régimes obligatoires",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "prevoyance_collective",
+              "label": "Prévoyance collective",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "mutuelle",
+              "label": "Mutuelle actuelle",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "retraite_supplementaire",
+              "label": "Retraite supplémentaire",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "risques_professionnels",
+              "label": "Risques professionnels spécifiques",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "deplacements_professionnels",
+              "label": "Déplacements professionnels",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "sports_activites_risque",
+              "label": "Sports ou activités à risque",
+              "type": "textarea",
+              "required": false,
+              "sensitive": true
+            }
+          ]
+        },
+        {
+          "id": "situation_patrimoniale",
+          "title": "Situation patrimoniale",
+          "fields": [
+            {
+              "id": "epargne_disponible",
+              "label": "Épargne disponible",
+              "type": "currency",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "assurance_vie_existante",
+              "label": "Assurance-vie existante",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "per_existant",
+              "label": "PER existant",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "immobilier",
+              "label": "Patrimoine immobilier",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "credits",
+              "label": "Crédits",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "charges_mensuelles",
+              "label": "Charges mensuelles",
+              "type": "currency",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "capacite_epargne_mensuelle",
+              "label": "Capacité d'épargne mensuelle",
+              "type": "currency",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "horizon_placement",
+              "label": "Horizon de placement",
+              "type": "select",
+              "required": false,
+              "sensitive": false,
+              "options": [
+                "moins de 2 ans",
+                "2 à 5 ans",
+                "5 à 10 ans",
+                "plus de 10 ans"
+              ]
+            },
+            {
+              "id": "tolerance_risque",
+              "label": "Tolérance au risque",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "besoin_liquidite",
+              "label": "Besoin de liquidité",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            }
+          ]
+        },
+        {
+          "id": "protection_familiale",
+          "title": "Protection familiale",
+          "fields": [
+            {
+              "id": "proteger_conjoint",
+              "label": "Protéger le conjoint",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "proteger_enfants",
+              "label": "Protéger les enfants",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "capital_deces",
+              "label": "Capital décès",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "rente_education",
+              "label": "Rente éducation",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "maintien_niveau_vie",
+              "label": "Maintien du niveau de vie",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "transmission",
+              "label": "Transmission",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "beneficiaires",
+              "label": "Bénéficiaires envisagés",
+              "type": "textarea",
+              "required": false,
+              "sensitive": true
+            }
+          ]
+        },
+        {
+          "id": "prevoyance",
+          "title": "Prévoyance",
+          "fields": [
+            {
+              "id": "arret_travail",
+              "label": "Arrêt de travail",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "invalidite",
+              "label": "Invalidité",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "incapacite",
+              "label": "Incapacité",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "deces",
+              "label": "Décès",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "frais_professionnels",
+              "label": "Frais professionnels",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "dependance",
+              "label": "Dépendance",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "accident_vie",
+              "label": "Accident de la vie",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "obseques",
+              "label": "Obsèques",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            }
+          ]
+        },
+        {
+          "id": "sante",
+          "title": "Santé",
+          "fields": [
+            {
+              "id": "mutuelle",
+              "label": "Mutuelle",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "hospitalisation",
+              "label": "Hospitalisation",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "optique",
+              "label": "Optique",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "dentaire",
+              "label": "Dentaire",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "medecine_douce",
+              "label": "Médecine douce",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "depassements_honoraires",
+              "label": "Dépassements d'honoraires",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "informations_sante_utiles",
+              "label": "Informations de santé utiles",
+              "type": "textarea",
+              "required": false,
+              "sensitive": true
+            }
+          ]
+        },
+        {
+          "id": "retraite",
+          "title": "Retraite",
+          "fields": [
+            {
+              "id": "perte_revenus_anticipee",
+              "label": "Perte de revenus anticipée",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "per",
+              "label": "PER",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "rente",
+              "label": "Sortie en rente",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "capital",
+              "label": "Sortie en capital",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "fiscalite",
+              "label": "Fiscalité",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "horizon_retraite",
+              "label": "Horizon retraite",
+              "type": "text",
+              "required": false,
+              "sensitive": false
+            }
+          ]
+        },
+        {
+          "id": "epargne",
+          "title": "Épargne",
+          "fields": [
+            {
+              "id": "projet_court_terme",
+              "label": "Projet court terme",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "projet_moyen_terme",
+              "label": "Projet moyen terme",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "projet_long_terme",
+              "label": "Projet long terme",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "assurance_vie",
+              "label": "Assurance-vie",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "disponibilite",
+              "label": "Disponibilité",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "rendement_espere",
+              "label": "Rendement espéré",
+              "type": "text",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "risque_accepte",
+              "label": "Risque accepté",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            }
+          ]
+        },
+        {
+          "id": "assurance_emprunteur",
+          "title": "Assurance emprunteur",
+          "fields": [
+            {
+              "id": "besoin_assurance_emprunteur",
+              "label": "Importance de l'assurance emprunteur",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "credit_immobilier",
+              "label": "Crédit immobilier",
+              "type": "boolean",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "capital_restant_du",
+              "label": "Capital restant dû",
+              "type": "currency",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "quotite",
+              "label": "Quotité",
+              "type": "percent",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "garanties_exigees",
+              "label": "Garanties exigées",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "etat_sante",
+              "label": "État de santé à déclarer",
+              "type": "textarea",
+              "required": false,
+              "sensitive": true
+            },
+            {
+              "id": "changement_assurance",
+              "label": "Changement d'assurance envisagé",
+              "type": "boolean",
+              "required": false,
+              "sensitive": false
+            }
+          ]
+        },
+        {
+          "id": "contrats_existants",
+          "title": "Contrats et couverture actuels",
+          "fields": [
+            {
+              "id": "contrats_existants",
+              "label": "Contrats déjà détenus",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "couverture_actuelle",
+              "label": "Couverture actuelle connue",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "lacunes_percues",
+              "label": "Lacunes perçues",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            }
+          ]
+        },
+        {
+          "id": "besoins_objectifs",
+          "title": "Besoins et objectifs",
+          "fields": [
+            {
+              "id": "besoins_exprimes",
+              "label": "Besoins explicitement exprimés",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "besoins_implicites_detectes",
+              "label": "Besoins implicites à vérifier",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "objectifs",
+              "label": "Objectifs du client",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "questions_client",
+              "label": "Questions du client",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            }
+          ]
+        },
+        {
+          "id": "contraintes",
+          "title": "Contraintes, objections et refus",
+          "fields": [
+            {
+              "id": "budget_max_mensuel",
+              "label": "Budget maximal mensuel",
+              "type": "currency",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "refus_produits",
+              "label": "Produits refusés",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "aversion_formalites_medicales",
+              "label": "Aversion aux formalités médicales",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "besoin_simplicite",
+              "label": "Besoin de simplicité",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "besoin_garanties_fortes",
+              "label": "Besoin de garanties fortes",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "urgence_mise_en_place",
+              "label": "Urgence de mise en place",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "sensibilite_prix",
+              "label": "Sensibilité au prix",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "sensibilite_fiscale",
+              "label": "Sensibilité fiscale",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "objections",
+              "label": "Objections",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "contraintes_autres",
+              "label": "Autres contraintes",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "refus_explicites",
+              "label": "Refus explicites",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            }
+          ]
+        },
+        {
+          "id": "verification_consentement",
+          "title": "Vérification et consentement",
+          "fields": [
+            {
+              "id": "donnees_manquantes",
+              "label": "Données manquantes",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "zones_a_verifier",
+              "label": "Zones à vérifier",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "consentement_donnees_sensibles",
+              "label": "Consentement au traitement des données sensibles",
+              "type": "boolean",
+              "required": true,
+              "sensitive": true
+            },
+            {
+              "id": "date_consentement",
+              "label": "Date du consentement",
+              "type": "date",
+              "required": false,
+              "sensitive": true
+            }
+          ]
+        }
+      ],
+      "output_contract": {
+        "meta": {},
+        "client": {},
+        "situation_familiale": {},
+        "situation_professionnelle": {},
+        "situation_patrimoniale": {},
+        "besoins_notes": {},
+        "contrats_existants": {},
+        "contraintes": {},
+        "objectifs": {},
+        "donnees_sensibles": {
+          "consentement": false,
+          "champs_collectes": []
+        },
+        "zones_a_verifier": []
+      }
+    },
+    "essentiel": {
+      "meta": {
+        "version_schema": "1.0",
+        "generated_at": "2026-06-12T18:33:41.014Z",
+        "language": "fr",
+        "json_meres_modifies": false,
+        "validation_humaine_requise": true,
+        "stockage_recommande": "export_json_local_separe",
+        "stockage_local_automatique": false,
+        "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+        "type": "formulaire_client_essentiel",
+        "title": "Formulaire client essentiel",
+        "purpose": "Comprendre les grands besoins lors d'un rendez-vous classique.",
+        "duration": "10 à 15 minutes",
+        "importance_scale": {
+          "min": 0,
+          "max": 5,
+          "labels": [
+            "non concerné",
+            "faible",
+            "modérée",
+            "forte",
+            "majeure",
+            "critique"
+          ]
+        }
+      },
+      "sections": [
+        {
+          "id": "client",
+          "title": "Profil essentiel",
+          "fields": [
+            {
+              "id": "age",
+              "label": "Âge",
+              "type": "number",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "situation_familiale",
+              "label": "Situation familiale",
+              "type": "text",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "profession_statut",
+              "label": "Profession / statut",
+              "type": "text",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "revenus_approximatifs",
+              "label": "Revenus approximatifs",
+              "type": "currency",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "personnes_charge",
+              "label": "Personnes à charge",
+              "type": "number",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "contrats_detenus",
+              "label": "Contrats déjà détenus",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            }
+          ]
+        },
+        {
+          "id": "besoins",
+          "title": "Besoins",
+          "fields": [
+            {
+              "id": "besoin_principal",
+              "label": "Besoin principal exprimé",
+              "type": "textarea",
+              "required": true,
+              "sensitive": false
+            },
+            {
+              "id": "besoins_secondaires",
+              "label": "Besoins secondaires",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "prevoyance",
+              "label": "Prévoyance",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "deces",
+              "label": "Décès",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "arret_travail",
+              "label": "Arrêt de travail",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "invalidite",
+              "label": "Invalidité",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "sante",
+              "label": "Santé",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "retraite",
+              "label": "Retraite",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "epargne",
+              "label": "Épargne",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "transmission",
+              "label": "Transmission",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "assurance_emprunteur",
+              "label": "Assurance emprunteur",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "protection_professionnelle",
+              "label": "Protection professionnelle",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cadre",
+          "title": "Cadre de la solution",
+          "fields": [
+            {
+              "id": "budget_mensuel",
+              "label": "Budget mensuel acceptable",
+              "type": "currency",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "horizon",
+              "label": "Horizon",
+              "type": "text",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "objections",
+              "label": "Objections",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "urgence",
+              "label": "Urgence",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "niveau_certitude_client",
+              "label": "Niveau de certitude",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "niveau_emotion_inquietude",
+              "label": "Niveau d'émotion ou d'inquiétude",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "notes_libres",
+              "label": "Notes libres",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "donnees_manquantes",
+              "label": "Données manquantes",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "consentement_donnees_sensibles",
+              "label": "Consentement données sensibles",
+              "type": "boolean",
+              "required": false,
+              "sensitive": true
+            }
+          ]
+        }
+      ],
+      "output_contract": {
+        "meta": {},
+        "client": {},
+        "situation_familiale": {},
+        "situation_professionnelle": {},
+        "situation_patrimoniale": {},
+        "besoins_notes": {},
+        "contrats_existants": {},
+        "contraintes": {},
+        "objectifs": {},
+        "donnees_sensibles": {
+          "consentement": false,
+          "champs_collectes": []
+        },
+        "zones_a_verifier": []
+      }
+    },
+    "rapide": {
+      "meta": {
+        "version_schema": "1.0",
+        "generated_at": "2026-06-12T18:33:41.014Z",
+        "language": "fr",
+        "json_meres_modifies": false,
+        "validation_humaine_requise": true,
+        "stockage_recommande": "export_json_local_separe",
+        "stockage_local_automatique": false,
+        "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+        "type": "formulaire_client_rapide",
+        "title": "Formulaire client rapide",
+        "purpose": "Premier tri lors d'une prospection, d'un appel court ou d'un échange écrit.",
+        "duration": "2 à 5 minutes",
+        "importance_scale": {
+          "min": 0,
+          "max": 5,
+          "labels": [
+            "non concerné",
+            "faible",
+            "modérée",
+            "forte",
+            "majeure",
+            "critique"
+          ]
+        }
+      },
+      "sections": [
+        {
+          "id": "contact",
+          "title": "Premier échange",
+          "fields": [
+            {
+              "id": "nom",
+              "label": "Nom",
+              "type": "text",
+              "required": false,
+              "sensitive": true
+            },
+            {
+              "id": "age_approximatif",
+              "label": "Âge approximatif",
+              "type": "number",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "statut",
+              "label": "Statut professionnel",
+              "type": "text",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "situation_familiale",
+              "label": "Situation familiale",
+              "type": "text",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "sujet_principal",
+              "label": "Sujet principal",
+              "type": "textarea",
+              "required": true,
+              "sensitive": false
+            },
+            {
+              "id": "inquietude_principale",
+              "label": "Inquiétude principale",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "budget_approximatif",
+              "label": "Budget approximatif",
+              "type": "currency",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "urgence",
+              "label": "Urgence",
+              "type": "scale_0_5",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "protection_famille",
+              "label": "Protection de la famille",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "revenus",
+              "label": "Protection des revenus",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "sante",
+              "label": "Santé",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "retraite",
+              "label": "Retraite",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "epargne",
+              "label": "Épargne",
+              "type": "importance_0_5",
+              "required": false,
+              "sensitive": false,
+              "min": 0,
+              "max": 5,
+              "default": 0,
+              "scale": {
+                "0": "non concerné",
+                "1": "faible importance",
+                "2": "importance modérée",
+                "3": "importance forte",
+                "4": "priorité majeure",
+                "5": "urgence / sujet critique"
+              }
+            },
+            {
+              "id": "prochain_rendez_vous",
+              "label": "Prochain rendez-vous souhaité",
+              "type": "date",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "note_libre",
+              "label": "Note libre",
+              "type": "textarea",
+              "required": false,
+              "sensitive": false
+            },
+            {
+              "id": "consentement_donnees_sensibles",
+              "label": "Consentement données sensibles",
+              "type": "boolean",
+              "required": false,
+              "sensitive": true
+            }
+          ]
+        }
+      ],
+      "output_contract": {
+        "meta": {},
+        "client": {},
+        "situation_familiale": {},
+        "situation_professionnelle": {},
+        "situation_patrimoniale": {},
+        "besoins_notes": {},
+        "contrats_existants": {},
+        "contraintes": {},
+        "objectifs": {},
+        "donnees_sensibles": {
+          "consentement": false,
+          "champs_collectes": []
+        },
+        "zones_a_verifier": []
+      }
+    }
+  }
+}

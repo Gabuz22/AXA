@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "version_schema": "1.0",
+    "generated_at": "2026-06-12T18:33:41.014Z",
+    "language": "fr",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "stockage_recommande": "export_json_local_separe",
+    "stockage_local_automatique": false,
+    "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+    "type": "moteur_presélection_documentaire",
+    "status": "configuration_seule_non_active",
+    "automatic_recommendation_allowed": false,
+    "client_interest_priority": true
+  },
+  "inputs": [
+    "besoins_notes",
+    "importance",
+    "situation_familiale",
+    "situation_professionnelle",
+    "budget",
+    "horizon",
+    "contraintes",
+    "contrats_existants"
+  ],
+  "contract_dimensions": [
+    "garanties",
+    "options",
+    "exclusions",
+    "cotisation_prix",
+    "fiscalite",
+    "delais_franchises_carences",
+    "formalites_medicales",
+    "points_de_vigilance",
+    "qualite_sources"
+  ],
+  "scoring": {
+    "scale": {
+      "min": 0,
+      "max": 100
+    },
+    "weights": {
+      "besoins_prioritaires_couverts": 35,
+      "adequation_situation_client": 20,
+      "respect_budget": 15,
+      "respect_horizon": 10,
+      "contraintes_et_refus": 10,
+      "qualite_sources": 10
+    },
+    "penalties": {
+      "exclusion_pertinente": -30,
+      "besoin_critique_non_couvert": -25,
+      "budget_non_documente": -10,
+      "formalite_non_acceptee": -15,
+      "source_incomplete": -10
+    },
+    "rules": [
+      "Le score mesure une pertinence documentaire, pas l'adéquation réglementaire définitive.",
+      "Une donnée absente ne vaut jamais zéro ni faux : elle doit être signalée comme inconnue.",
+      "La rémunération conseiller est exclue du score client.",
+      "Toute solution exige validation humaine et vérification des documents contractuels à jour."
+    ]
+  },
+  "output_schema": {
+    "solutions_possibles": [
+      {
+        "contrat": "",
+        "pertinence": 0,
+        "niveau_confiance": 0,
+        "besoins_couverts": [],
+        "besoins_non_couverts": [],
+        "garanties_utiles": [],
+        "options_a_considerer": [],
+        "points_de_vigilance": [],
+        "questions_a_poser": [],
+        "justification": "",
+        "sources": []
+      }
+    ],
+    "questions_complementaires": [],
+    "alertes": [],
+    "synthese_conseiller": "",
+    "synthese_client": ""
+  }
+}

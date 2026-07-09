@@ -1,0 +1,838 @@
+{
+  "meta": {
+    "version_schema": "1.0",
+    "generated_at": "2026-06-12T18:33:41.014Z",
+    "language": "fr",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "stockage_recommande": "export_json_local_separe",
+    "stockage_local_automatique": false,
+    "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+    "type": "vue_humaine_contrat"
+  },
+  "contrat": {
+    "id": "axa_excelium_vie_2026-05",
+    "nom": "Excelium (assurance vie)",
+    "famille": "épargne",
+    "nombre_faits": 45
+  },
+  "categories": {
+    "garantie": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_garanties_d4df6041404f_knowledge_6cd775321f12",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 15,
+          "section": "4.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_garanties_646ff8db73da_knowledge_44cff956d072",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 15,
+          "section": "4.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_garanties_c32aff3d329b_knowledge_f37b388cf816",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 15,
+          "section": "4.2.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_garanties_74ce8a266629_knowledge_ea183a5624f4",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 16,
+          "section": "4.2.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_exclusions_54ca499b394e_knowledge_1e79d12cb875",
+        "titre": "garantie Revalorisée uniquement",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 16,
+          "section": "4.2.2 Exclusions",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "option": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_options_6daa8e90677e_knowledge_74b7d68ed563",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 79,
+          "section": "Annexe 3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_options_a2272a8885f5_knowledge_cdbcbea03f9e",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 45,
+          "section": "7.1.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_options_1cdccb5c2dfd_knowledge_e2f08d8f4d98",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 20,
+          "section": "5.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "fiscalite": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_ee50e7e2015b_knowledge_076ec1b062c1",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_3dfb729787c5_knowledge_8280ed50233d",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_c0f287ca10a5_knowledge_4b1481c5d49d",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_85bea04ba9d3_knowledge_ad9b384335e5",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "tableau": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_tableaux_contractuels_49bb2780e8d8_knowledge_010183f296c7",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 17,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_tableaux_contractuels_c777597e7c73_knowledge_d221db485665",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 46,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_tableaux_contractuels_cc561717ce9f_knowledge_648de82a1966",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 81,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_tableaux_contractuels_9605b8cc318f_knowledge_2342fd63308c",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 75,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "calcul": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_formules_estimees_ee1ba2a6ce0d_knowledge_054d6e6c994b",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_formules_estimees_786f6e8834c0_knowledge_4d1296348802",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_formules_estimees_0945426259eb_knowledge_3d06f4a2695e",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_formules_estimees_890f175f1fbf_knowledge_0aa2cb5a2cae",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "definition": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_definitions_eb50de25b67a_knowledge_716a729f354e",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 2,
+          "section": "Encadré + 5.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_definitions_f62d1035af4b_knowledge_63e06da29d46",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 17,
+          "section": "4.2.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_definitions_d0f9e351217f_knowledge_6805999ee29e",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 16,
+          "section": "4.2.2 note (1)",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "condition_souscription": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_conditions_souscription_1d42b09ad1bc_knowledge_9ac0f44213a3",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 79,
+          "section": "Annexe 3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_conditions_souscription_f66f82894fe9_knowledge_c653e228d1f2",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 16,
+          "section": "4.2.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "formalite_medicale": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_formalites_medicales_de4b7530e75e_knowledge_d840dfc9eb4d",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 16,
+          "section": "4.2.2 Exclusions",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "delai": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_delais_carences_franchises_f53d6c273460_knowledge_c3f8fe42d976",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 60,
+          "section": "8.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_delais_carences_franchises_7cd811231573_knowledge_14d553d90326",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 44,
+          "section": "7.1.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_delais_carences_franchises_263e9fdfb993_knowledge_59f8e985663a",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 17,
+          "section": "4.2.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "cotisation_prix": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_171c5a3a4b19_knowledge_833f37b8be6f",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_297d8ca1d613_knowledge_5d36dfd4585a",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_58fc69bea0e9_knowledge_6dce3bffa380",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_4f3778d27635_knowledge_d5c460f0fa07",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "resiliation_renonciation": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_resiliation_renonciation_6d7e834b7fb3_knowledge_e531a56f876b",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 60,
+          "section": "8.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_resiliation_renonciation_7a22d1a9de1e_knowledge_9fd5a80a6574",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 15,
+          "section": "4.1/4.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "beneficiaire": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_beneficiaires_db3a20c5ea60_knowledge_3cda2986c0bf",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": 2,
+          "section": "Encadré pt 7",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "point_vigilance": [
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_6dbdc19c69e0_knowledge_ab0f944dd026",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_c375b97eae3b_knowledge_7109df78eb58",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_0aa645be29d8_knowledge_2075dc1b8feb",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_73a0c3f0cb6e_knowledge_63403609a675",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_218bb9d14039_knowledge_adbe0d8ec182",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_ad67ed6a280f_knowledge_c720aef2dd6c",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_33113b1f8da2_knowledge_5731bc2dd8df",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_excelium_vie_2026-05",
+          "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ]
+  },
+  "points_de_vigilance": [
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_6dbdc19c69e0_knowledge_ab0f944dd026",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_c375b97eae3b_knowledge_7109df78eb58",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_0aa645be29d8_knowledge_2075dc1b8feb",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_73a0c3f0cb6e_knowledge_63403609a675",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_218bb9d14039_knowledge_adbe0d8ec182",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_ad67ed6a280f_knowledge_c720aef2dd6c",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_33113b1f8da2_knowledge_5731bc2dd8df",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_exclusions_54ca499b394e_knowledge_1e79d12cb875",
+      "titre": "garantie Revalorisée uniquement",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 16,
+        "section": "4.2.2 Exclusions",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "garanties": [
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_garanties_d4df6041404f_knowledge_6cd775321f12",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 15,
+        "section": "4.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_garanties_646ff8db73da_knowledge_44cff956d072",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 15,
+        "section": "4.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_garanties_c32aff3d329b_knowledge_f37b388cf816",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 15,
+        "section": "4.2.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_garanties_74ce8a266629_knowledge_ea183a5624f4",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 16,
+        "section": "4.2.2",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "options": [
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_options_6daa8e90677e_knowledge_74b7d68ed563",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 79,
+        "section": "Annexe 3",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_options_a2272a8885f5_knowledge_cdbcbea03f9e",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 45,
+        "section": "7.1.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_excelium_vie_2026_05_options_1cdccb5c2dfd_knowledge_e2f08d8f4d98",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_excelium_vie_2026-05",
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 20,
+        "section": "5.2",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "limites": "Vue documentaire synthétique. Consulter le JSON unifié et les documents contractuels avant toute utilisation client."
+}

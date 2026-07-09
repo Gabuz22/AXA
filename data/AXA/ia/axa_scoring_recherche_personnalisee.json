@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "version": "1.0",
+    "version_cockpit": "2.8",
+    "generated_at": "2026-06-12",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "recommandation_definitive": false,
+    "remuneration_incluse_dans_scoring": false,
+    "orientation_obligatoire": "Orientation préparatoire à vérifier avant conseil et validation humaine."
+  },
+  "budget": {
+    "marge_pourcentage_defaut": 10,
+    "statuts": ["dans budget", "dans marge", "hors budget", "tarif à vérifier"]
+  },
+  "display": {
+    "max_results_default": 5,
+    "score_minimum": 45
+  },
+  "weights": {
+    "eligibilite": 0.25,
+    "besoins_couverts": 0.30,
+    "importance_besoins": 0.20,
+    "budget": 0.15,
+    "confiance": 0.10
+  },
+  "eligibilite": {
+    "probable": 95,
+    "a_verifier": 65,
+    "incertaine": 40,
+    "exclue": 0
+  },
+  "budget_scores": {
+    "dans_budget": 100,
+    "dans_marge": 80,
+    "hors_budget": 20,
+    "tarif_a_verifier": 55
+  },
+  "need_keywords": {
+    "proteger_famille": ["famille", "conjoint", "enfant", "rente éducation", "capital décès", "décès"],
+    "proteger_revenus": ["revenu", "indemnité journalière", "maintien", "incapacité", "arrêt de travail"],
+    "arret_travail": ["arrêt de travail", "incapacité temporaire", "itt", "indemnité journalière", "franchise"],
+    "invalidite": ["invalidité", "incapacité permanente", "ipt", "ipp", "déficit fonctionnel"],
+    "retraite": ["retraite", "per", "rente", "épargne retraite"],
+    "fiscalite": ["fiscalité", "déduction fiscale", "impôt", "avantage fiscal"],
+    "protection_professionnelle": ["professionnel", "tns", "dirigeant", "frais professionnels", "activité professionnelle"],
+    "mutuelle": ["mutuelle", "santé", "hospitalisation", "optique", "dentaire"],
+    "assurance_emprunteur": ["emprunteur", "crédit", "prêt", "quotité", "capital restant dû"],
+    "expatriation": ["expatriation", "étranger", "hors de france", "rapatriement"],
+    "transmission": ["transmission", "succession", "bénéficiaire", "assurance vie"],
+    "volontes_deces": ["volontés", "décès", "bénéficiaire", "capital décès", "succession"],
+    "obseques_rapatriement": ["obsèques", "inhumation", "rapatriement", "funéraire", "décès"]
+  },
+  "confidence": {
+    "source_complete": 100,
+    "source_partielle": 65,
+    "source_incomplete": 35,
+    "tarif_inconnu_penalite": 10,
+    "eligibilite_inconnue_penalite": 10
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "version_schema": "1.0",
+    "generated_at": "2026-06-12T18:33:41.014Z",
+    "language": "fr",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "stockage_recommande": "export_json_local_separe",
+    "stockage_local_automatique": false,
+    "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+    "type": "synthese_humaine_contrats"
+  },
+  "contrats": [
+    {
+      "id": "axa_ma_protection_accident_2024-03",
+      "nom": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "famille": "prévoyance",
+      "nombre_faits": 67,
+      "garanties": 7,
+      "exclusions": 11,
+      "options": 1,
+      "points_de_vigilance": 5
+    },
+    {
+      "id": "axa_avizen_2025-04",
+      "nom": "Avizen",
+      "famille": "prévoyance",
+      "nombre_faits": 78,
+      "garanties": 11,
+      "exclusions": 5,
+      "options": 5,
+      "points_de_vigilance": 6
+    },
+    {
+      "id": "axa_avizen_pro_2025-04",
+      "nom": "Avizen Pro",
+      "famille": "prévoyance",
+      "nombre_faits": 77,
+      "garanties": 13,
+      "exclusions": 4,
+      "options": 8,
+      "points_de_vigilance": 7
+    },
+    {
+      "id": "axa_entourage_2025-06",
+      "nom": "Entour'Age",
+      "famille": "prévoyance",
+      "nombre_faits": 59,
+      "garanties": 4,
+      "exclusions": 3,
+      "options": 5,
+      "points_de_vigilance": 8
+    },
+    {
+      "id": "axa_essenciel_2025-06",
+      "nom": "Essen'Ciel (assurance obsèques)",
+      "famille": "prévoyance",
+      "nombre_faits": 57,
+      "garanties": 5,
+      "exclusions": 3,
+      "options": 3,
+      "points_de_vigilance": 7
+    },
+    {
+      "id": "axa_masterlife_credit_2024-10",
+      "nom": "Masterlife CREDIT",
+      "famille": "assurance_emprunteur",
+      "nombre_faits": 62,
+      "garanties": 7,
+      "exclusions": 7,
+      "options": 3,
+      "points_de_vigilance": 7
+    },
+    {
+      "id": "axa_excelium_vie_2026-05",
+      "nom": "Excelium (assurance vie)",
+      "famille": "épargne",
+      "nombre_faits": 45,
+      "garanties": 4,
+      "exclusions": 1,
+      "options": 3,
+      "points_de_vigilance": 7
+    },
+    {
+      "id": "axa_ma_retraite_2026-05",
+      "nom": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "famille": "retraite",
+      "nombre_faits": 48,
+      "garanties": 5,
+      "exclusions": 1,
+      "options": 4,
+      "points_de_vigilance": 9
+    }
+  ]
+}

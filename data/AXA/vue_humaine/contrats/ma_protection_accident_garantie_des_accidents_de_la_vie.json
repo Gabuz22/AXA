@@ -1,0 +1,1243 @@
+{
+  "meta": {
+    "version_schema": "1.0",
+    "generated_at": "2026-06-12T18:33:41.014Z",
+    "language": "fr",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "stockage_recommande": "export_json_local_separe",
+    "stockage_local_automatique": false,
+    "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+    "type": "vue_humaine_contrat"
+  },
+  "contrat": {
+    "id": "axa_ma_protection_accident_2024-03",
+    "nom": "Ma Protection Accident (Garantie des accidents de la vie)",
+    "famille": "prévoyance",
+    "nombre_faits": 67
+  },
+  "categories": {
+    "garantie": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_e1f5f51c7ef1_knowledge_b9e1422d7074",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 4,
+          "section": "1.2 Les accidents de la vie pris en compte",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_f523b50de602_knowledge_daf339abe06e",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 4,
+          "section": "1.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_72021e69b219_knowledge_0bef033c84e0",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 4,
+          "section": "1.2 Les accidents médicaux",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_26e5f14dc994_knowledge_debe9a9a0e38",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 5,
+          "section": "1.2 conduite d'un véhicule",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_9f89adc0658d_knowledge_de02ca1df5b3",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 7,
+          "section": "3.2.1 En cas de dommages corporels",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_8b91476378b2_knowledge_266f5c0542dc",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 9,
+          "section": "3.2.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_ab5b155c98dd_knowledge_f44230ee79a8",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 9,
+          "section": "3.2.2 En cas de décès",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_22210ec1a6d2_knowledge_47d6f96ffc4b",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 6,
+          "section": "2. Les exclusions communes",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_be1272249c25_knowledge_de1618197468",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 6,
+          "section": "2.",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_6e33a15dbb6d_knowledge_ed5c9a10fa14",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 6,
+          "section": "2.",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_3dffca697908_knowledge_bd6c83fedadb",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 6,
+          "section": "2.",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_cbd361953f74_knowledge_6bb3809b6ecd",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 6,
+          "section": "2.",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_5992ad6bba77_knowledge_4ad819df3f8c",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 6,
+          "section": "2.",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_30878c977dde_knowledge_bd99bda85a24",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 6,
+          "section": "2.",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_2bbf501d56a0_knowledge_9283aa6a94cd",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 6,
+          "section": "2.",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_056b97629881_knowledge_04ae4fbde1d2",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 6,
+          "section": "2.",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_df8b1171500c_knowledge_848b9db79d77",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 6,
+          "section": "2.",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_2ac1c308b745_knowledge_ddebe98b7f99",
+        "titre": "toutes garanties",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 6,
+          "section": "2.",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "option": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_options_becda5d4fd28_knowledge_111a93605f95",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 5,
+          "section": "1.3 + 4.5",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "fiscalite": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_23df485b165e_knowledge_a358e165a171",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_d7a8988e5d19_knowledge_70abebba0cab",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_7a8987e8b1f5_knowledge_ddb46c1a8ae9",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_72c35224482f_knowledge_a9a24a4c6a38",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_12a04ea57d41_knowledge_347f5f4fe5ab",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_243bf8cd8a2e_knowledge_fd2afdcc6a20",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "tableau": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_tableaux_contractuels_82e7926f8b50_knowledge_51d88a4f9757",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 8,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "calcul": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_formules_estimees_0ecde17ff45a_knowledge_4cf6c98958b1",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_formules_estimees_b9d7c16e8ca6_knowledge_10326ec1c1c2",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "definition": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_definitions_0a7860ac43e3_knowledge_2afe23850937",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 25,
+          "section": "7. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_definitions_3021b0a7ffcf_knowledge_a45c8f1402c7",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 25,
+          "section": "7. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_definitions_b205a9648966_knowledge_223d5c6f5671",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 26,
+          "section": "7. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_definitions_8715e2660a8c_knowledge_e95bd34ec354",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 26,
+          "section": "7. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_definitions_677ed97b6c11_knowledge_5d71fb0d27a8",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 26,
+          "section": "7. Définitions + 1.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_definitions_28b26afba5e7_knowledge_42137222c3fd",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 26,
+          "section": "7. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_definitions_1c78a2ba12bc_knowledge_b6d5385828cf",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 26,
+          "section": "7. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_definitions_cb3520b3a72e_knowledge_a2e4968bf3b0",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 25,
+          "section": "7. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_definitions_74dcb2206696_knowledge_349fe88445cb",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 27,
+          "section": "7. Définitions",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "condition_souscription": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_conditions_souscription_ce950a52b684_knowledge_c7bd49078af3",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 27,
+          "section": "7. Définitions — Souscripteur",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_conditions_souscription_472c2d09e30e_knowledge_e20d2515df0f",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 22,
+          "section": "6.6 Limites de garantie",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "formalite_medicale": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_formalites_medicales_8dc75bebf4b9_knowledge_556631c0a834",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 16,
+          "section": "5.1 + 5.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "delai": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_562da122974e_knowledge_309553eac304",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 4,
+          "section": "1.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_4869f9742f94_knowledge_59e389e27578",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 16,
+          "section": "5.1 Comment déclarer l'accident",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_37393853f687_knowledge_961d22bd6d10",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 17,
+          "section": "5.2 Les délais d'indemnisation",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_74eaaff81bd2_knowledge_6ec0d7dce9da",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 17,
+          "section": "5.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_cb11d4b6fb46_knowledge_3a65dec67694",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 11,
+          "section": "4.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_53a94ed30feb_knowledge_86f7a15c46f1",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 20,
+          "section": "6.2 Prescription",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "cotisation_prix": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_0abf98aa5778_knowledge_445e279cef50",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_9a686a6a2b25_knowledge_23fb738e71fb",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_c22a5aa37858_knowledge_579359b13918",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_8e0714ae258e_knowledge_4063da2b858c",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 22,
+          "section": "6.5 Cotisations",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "assistance": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_assistance_a5ca5c5fe32b_knowledge_afa21bed07ab",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 10,
+          "section": "4.1 Les services d'assistance immédiate",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_assistance_928cc071ea33_knowledge_3ae862979727",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 12,
+          "section": "4.2 Les services d'assistance après l'accident",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_assistance_a31663cb9018_knowledge_0d998c8ee33f",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 14,
+          "section": "4.3 Les services d'assistance aux handicapés",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_assistance_d97cb23f6bd7_knowledge_bdaea048122d",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 15,
+          "section": "4.4 + page 15",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "resiliation_renonciation": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_resiliation_renonciation_0f125ea9bddb_knowledge_d53cd48404c4",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 19,
+          "section": "6.1 Fourniture à distance",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_resiliation_renonciation_c1262471bb37_knowledge_ee5c8d657373",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 20,
+          "section": "6.1 Souscription par voie de démarchage",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_resiliation_renonciation_6f3fbbf57b6d_knowledge_26a047b098e2",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 21,
+          "section": "6.3 Résiliation du contrat",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_resiliation_renonciation_e9a5d7b9f0cb_knowledge_9a1a6ee21f30",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 21,
+          "section": "6.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_resiliation_renonciation_e99fc948a1b8_knowledge_9632088b51fb",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 22,
+          "section": "6.3 De plein droit",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "beneficiaire": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_beneficiaires_4fdcaa65fd3c_knowledge_86f0ad121c93",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": 25,
+          "section": "7. Définitions — Bénéficiaire + 3.2.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "point_vigilance": [
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_b635c47c8e25_knowledge_40c607965a24",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4fe1d6193758_knowledge_5b9c5fea95b4",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_5256a4785e84_knowledge_c7303cf5027d",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_e3bb18915674_knowledge_4d9eb5b02c92",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4bcd5a5c99f0_knowledge_9e023765fd47",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_ma_protection_accident_2024-03",
+          "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ]
+  },
+  "points_de_vigilance": [
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_b635c47c8e25_knowledge_40c607965a24",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4fe1d6193758_knowledge_5b9c5fea95b4",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_5256a4785e84_knowledge_c7303cf5027d",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_e3bb18915674_knowledge_4d9eb5b02c92",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4bcd5a5c99f0_knowledge_9e023765fd47",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_22210ec1a6d2_knowledge_47d6f96ffc4b",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2. Les exclusions communes",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_be1272249c25_knowledge_de1618197468",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_6e33a15dbb6d_knowledge_ed5c9a10fa14",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_3dffca697908_knowledge_bd6c83fedadb",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_cbd361953f74_knowledge_6bb3809b6ecd",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_5992ad6bba77_knowledge_4ad819df3f8c",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_30878c977dde_knowledge_bd99bda85a24",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_2bbf501d56a0_knowledge_9283aa6a94cd",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_056b97629881_knowledge_04ae4fbde1d2",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_df8b1171500c_knowledge_848b9db79d77",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_exclusions_2ac1c308b745_knowledge_ddebe98b7f99",
+      "titre": "toutes garanties",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 6,
+        "section": "2.",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "garanties": [
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_e1f5f51c7ef1_knowledge_b9e1422d7074",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 4,
+        "section": "1.2 Les accidents de la vie pris en compte",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_f523b50de602_knowledge_daf339abe06e",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 4,
+        "section": "1.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_72021e69b219_knowledge_0bef033c84e0",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 4,
+        "section": "1.2 Les accidents médicaux",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_26e5f14dc994_knowledge_debe9a9a0e38",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 5,
+        "section": "1.2 conduite d'un véhicule",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_9f89adc0658d_knowledge_de02ca1df5b3",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 7,
+        "section": "3.2.1 En cas de dommages corporels",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_8b91476378b2_knowledge_266f5c0542dc",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 9,
+        "section": "3.2.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_garanties_ab5b155c98dd_knowledge_f44230ee79a8",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 9,
+        "section": "3.2.2 En cas de décès",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "options": [
+    {
+      "id": "axa_axa_axa_ma_protection_accident_2024_03_options_becda5d4fd28_knowledge_111a93605f95",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_ma_protection_accident_2024-03",
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 5,
+        "section": "1.3 + 4.5",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "limites": "Vue documentaire synthétique. Consulter le JSON unifié et les documents contractuels avant toute utilisation client."
+}

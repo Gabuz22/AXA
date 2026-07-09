@@ -1,0 +1,1087 @@
+{
+  "meta": {
+    "version_schema": "1.0",
+    "generated_at": "2026-06-12T18:33:41.014Z",
+    "language": "fr",
+    "json_meres_modifies": false,
+    "validation_humaine_requise": true,
+    "stockage_recommande": "export_json_local_separe",
+    "stockage_local_automatique": false,
+    "avertissement": "Les données sensibles ne doivent être collectées qu'avec consentement et ne sont jamais incorporées au HTML.",
+    "type": "vue_humaine_contrat"
+  },
+  "contrat": {
+    "id": "axa_entourage_2025-06",
+    "nom": "Entour'Age",
+    "famille": "prévoyance",
+    "nombre_faits": 59
+  },
+  "categories": {
+    "garantie": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_garanties_d34d924c6410_knowledge_ac2f1209e317",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 21,
+          "section": "4.3.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_garanties_7df9dcef291e_knowledge_8602bccd2ff7",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 15,
+          "section": "3.3.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_garanties_ef6ab638bf32_knowledge_7c02f4cdceb0",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 23,
+          "section": "4.4.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_garanties_23a00d124ec2_knowledge_1b9ff505ee1c",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 25,
+          "section": "5.2.4",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "exclusion": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_exclusions_edcf6ad19ae4_knowledge_404409f6a74a",
+        "titre": "dépendance et décès",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 29,
+          "section": "7.1 Exclusions",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_exclusions_e6da0a9fdb2b_knowledge_39cbc1ab1739",
+        "titre": "dépendance d'origine accidentelle",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 29,
+          "section": "7.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_exclusions_248d286c2d2a_knowledge_d91f646bf234",
+        "titre": "toutes garanties dépendance",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 13,
+          "section": "2.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "option": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_options_9d4ceb1307a5_knowledge_4719bd564d23",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 6,
+          "section": "1.1.2.2 b)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_options_a965668d36e4_knowledge_28f942a2bdaa",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 6,
+          "section": "1.1.2.2 c) i)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_options_c09b72c9c8a5_knowledge_4cd76c6d196f",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 6,
+          "section": "1.1.2.2 c) ii)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_options_adbaa1191be7_knowledge_35cafcbd6d53",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 27,
+          "section": "6.2.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_options_1e769dd60f47_knowledge_1f9477b5236e",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 11,
+          "section": "1.2.6 Réduction couple",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "fiscalite": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_6e3dedbb6c6b_knowledge_e47bdf2e7075",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_933bb6edae6e_knowledge_55a3c4fbd645",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "tableau": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_tableaux_contractuels_8225f05dc1d9_knowledge_ff210f82eec9",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 13,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "calcul": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_formules_estimees_052479c458dc_knowledge_17f5010ecf51",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_formules_estimees_8f457e05fbe4_knowledge_7c3a12490f94",
+        "titre": "_collection_source",
+        "valorisation": "positive",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ],
+    "definition": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_definitions_73589910d95e_knowledge_7ee38cca0a87",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 12,
+          "section": "2.1.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_definitions_34f5d6752f3f_knowledge_2aa355413759",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 13,
+          "section": "2.1.2 / 2.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_definitions_3a7a1f0bbf8a_knowledge_c512c9a69d23",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 12,
+          "section": "2.1.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_definitions_af88c3e0eb1d_knowledge_aea3dc0fdf27",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 13,
+          "section": "2.2.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_definitions_03b3d4f1b9ce_knowledge_5698c704ab4b",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 13,
+          "section": "2.2.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_definitions_3ecf23ed8d73_knowledge_4683f60db1b5",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 13,
+          "section": "2.2.3",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "condition_souscription": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_conditions_souscription_ada416ac067c_knowledge_6e181be1e9ea",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 6,
+          "section": "1.1.2.1 Admissibilité",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_conditions_souscription_6bf53fa62e1d_knowledge_b29b453eccb8",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 6,
+          "section": "1.1.2.2 a)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_conditions_souscription_20250f05b244_knowledge_98d3e94d8a4c",
+        "titre": "_collection_source",
+        "valorisation": "neutre",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 8,
+          "section": "1.1.3",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "formalite_medicale": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_formalites_medicales_adff64f41900_knowledge_156c1c2a958d",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 7,
+          "section": "1.1.2.3",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_formalites_medicales_e41700051c4d_knowledge_e532a9ac63ae",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 20,
+          "section": "4.1",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_formalites_medicales_66bbd38137f9_knowledge_c048e873fb36",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 21,
+          "section": "4.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "delai": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_delais_carences_franchises_ad16ac0bce02_knowledge_035d6a65dfdf",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 9,
+          "section": "1.1.5",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_delais_carences_franchises_ac7f227d66d5_knowledge_7ffb7027b5a8",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 8,
+          "section": "1.1.4.2 c)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_delais_carences_franchises_06b4f991951a_knowledge_def70d3ad12d",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 21,
+          "section": "4.3.1.2",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_delais_carences_franchises_32265caaab76_knowledge_3f10706bcc2b",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 28,
+          "section": "6.4",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_delais_carences_franchises_1c5ace0d0983_knowledge_9039b861f674",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 31,
+          "section": "7.7",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "cotisation_prix": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b71f718b3818_knowledge_2ceb18ba5d21",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_df0f22fdd097_knowledge_21a4375ed5e3",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_bda7c72e6e68_knowledge_c08c819e085e",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_e4d3550ca172_knowledge_4e2e3f2d5105",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 10,
+          "section": "1.2.4",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_d8f6e55152e0_knowledge_4ce4ee258710",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 11,
+          "section": "1.2.5",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "assistance": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_assistance_414e6c128088_knowledge_5384c991a0a2",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 29,
+          "section": "7.2",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "resiliation_renonciation": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_resiliation_renonciation_30c0f7efa896_knowledge_62073c851c1c",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 30,
+          "section": "7.6",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_resiliation_renonciation_d96ba75ee799_knowledge_b1434086fcbf",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 8,
+          "section": "1.1.4.2 a)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_resiliation_renonciation_ea89467b5400_knowledge_bbcc475da20d",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 8,
+          "section": "1.1.4.2 b)",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_resiliation_renonciation_20ab6dc88b4c_knowledge_f0f4597d348f",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 8,
+          "section": "1.1.4",
+          "statut_tracabilite": "complete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_resiliation_renonciation_a66eeed3a835_knowledge_5c4c675f2dc9",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 35,
+          "section": "8.2 / 8.3",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "beneficiaire": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_beneficiaires_c23d1787ab0f_knowledge_547d3db84362",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": 27,
+          "section": "6.3",
+          "statut_tracabilite": "complete"
+        }
+      }
+    ],
+    "point_vigilance": [
+      {
+        "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_39e9899bad5a_knowledge_38c24a8b1762",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_8eb68cebc424_knowledge_c2ef0572d645",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_6a2656a952a6_knowledge_d8ab8642609e",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_6f230082ba39_knowledge_79617a24203d",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_acdb551cb108_knowledge_8417d05b72d9",
+        "titre": "_collection_source",
+        "valorisation": "negative",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_e441d358bb4c_knowledge_b70fb02a5650",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_16c84e8a15cc_knowledge_00dcf84ccfed",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      },
+      {
+        "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119",
+        "titre": "_collection_source",
+        "valorisation": "non_renseignee",
+        "source": {
+          "fichier_json": "connaissances_metier.json",
+          "contrat_id": "axa_entourage_2025-06",
+          "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+          "page": null,
+          "section": null,
+          "statut_tracabilite": "incomplete"
+        }
+      }
+    ]
+  },
+  "points_de_vigilance": [
+    {
+      "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_39e9899bad5a_knowledge_38c24a8b1762",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_8eb68cebc424_knowledge_c2ef0572d645",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_6a2656a952a6_knowledge_d8ab8642609e",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_6f230082ba39_knowledge_79617a24203d",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_acdb551cb108_knowledge_8417d05b72d9",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_e441d358bb4c_knowledge_b70fb02a5650",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_16c84e8a15cc_knowledge_00dcf84ccfed",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119",
+      "titre": "_collection_source",
+      "valorisation": "non_renseignee",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": null,
+        "section": null,
+        "statut_tracabilite": "incomplete"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "axa_axa_axa_entourage_2025_06_exclusions_edcf6ad19ae4_knowledge_404409f6a74a",
+      "titre": "dépendance et décès",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 29,
+        "section": "7.1 Exclusions",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_exclusions_e6da0a9fdb2b_knowledge_39cbc1ab1739",
+      "titre": "dépendance d'origine accidentelle",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 29,
+        "section": "7.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_exclusions_248d286c2d2a_knowledge_d91f646bf234",
+      "titre": "toutes garanties dépendance",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 13,
+        "section": "2.2",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "garanties": [
+    {
+      "id": "axa_axa_axa_entourage_2025_06_garanties_d34d924c6410_knowledge_ac2f1209e317",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 21,
+        "section": "4.3.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_garanties_7df9dcef291e_knowledge_8602bccd2ff7",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 15,
+        "section": "3.3.1",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_garanties_ef6ab638bf32_knowledge_7c02f4cdceb0",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 23,
+        "section": "4.4.3",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_garanties_23a00d124ec2_knowledge_1b9ff505ee1c",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 25,
+        "section": "5.2.4",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "options": [
+    {
+      "id": "axa_axa_axa_entourage_2025_06_options_9d4ceb1307a5_knowledge_4719bd564d23",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 6,
+        "section": "1.1.2.2 b)",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_options_a965668d36e4_knowledge_28f942a2bdaa",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 6,
+        "section": "1.1.2.2 c) i)",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_options_c09b72c9c8a5_knowledge_4cd76c6d196f",
+      "titre": "_collection_source",
+      "valorisation": "positive",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 6,
+        "section": "1.1.2.2 c) ii)",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_options_adbaa1191be7_knowledge_35cafcbd6d53",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 27,
+        "section": "6.2.2",
+        "statut_tracabilite": "complete"
+      }
+    },
+    {
+      "id": "axa_axa_axa_entourage_2025_06_options_1e769dd60f47_knowledge_1f9477b5236e",
+      "titre": "_collection_source",
+      "valorisation": "negative",
+      "source": {
+        "fichier_json": "connaissances_metier.json",
+        "contrat_id": "axa_entourage_2025-06",
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 11,
+        "section": "1.2.6 Réduction couple",
+        "statut_tracabilite": "complete"
+      }
+    }
+  ],
+  "limites": "Vue documentaire synthétique. Consulter le JSON unifié et les documents contractuels avant toute utilisation client."
+}
