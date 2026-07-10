@@ -44,7 +44,7 @@ export async function mount(el, ctx) {
   const human = true;
   el.innerHTML = `<div class="view-body">Chargement…</div>`;
   const body = el.querySelector(".view-body");
-  const render = { accueil, premiers_pas, copilote, contrat, recherche, glossaire, assistant, assistants, confiance, comparateur, besoins, rdv, animateur, formulaires, sources, pdf, historique, parametres }[section] || accueil;
+  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistant, assistants, confiance, comparateur, besoins, rdv, animateur, formulaires, sources, pdf, historique, parametres }[section] || accueil;
   try { await render(body, human); }
   catch (e) { body.innerHTML = `<p class="warn">Erreur de la section (${esc(e.message)}).</p>`; }
 }
@@ -67,15 +67,16 @@ async function accueil(body) {
         <button class="btn gold" id="acc_go">Rechercher</button></div>
       <div class="filters" id="acc_ex"><span class="muted" style="align-self:center;font-size:12px;margin-right:2px">Exemples :</span>
         ${EXEMPLES.map(x => `<button class="chip" data-ex="${esc(x)}">${esc(x)}</button>`).join("")}</div>
+      <p class="hero-new">Nouveau ici ? <a href="#/decouvrir">✨ Découvrir Gabriel AXA en 2 minutes</a> · <a href="#/cas_usage">🎯 Que puis-je faire ?</a></p>
     </section>
     <h3 class="day-h">Accès rapides</h3>
     <div class="grid">
-      ${tile("🧠", "Copilote de réponse", "#/copilote", "preuve (Pack A) + raisonnement (Pack B)")}
-      ${tile("📑", "Contrats", "#/contrat", `${stats?.contrats ?? 9} fiches, A→Z`)}
+      ${tile("📑", "Contrats", "#/contrat", `${stats?.contrats ?? 9} fiches contractuelles, A→Z`)}
       ${tile("⚖️", "Comparateur", "#/comparateur", "deux contrats côte à côte")}
+      ${tile("📖", "Glossaire", "#/glossaire", "les termes AXA définis, sourcés")}
+      ${tile("🧠", "Copilote de réponse", "#/copilote", "preuve + raisonnement, sourcé")}
+      ${tile("🤖", "Utiliser avec une IA", "#/assistants", "colle l'adresse à ChatGPT · Claude · Gemini")}
       ${tile("📄", "Notices PDF", "#/pdf", "la source qui fait foi")}
-      ${tile("🤖", "Utiliser avec une IA", "#/assistants", "Pack A / Pack B pour ChatGPT · Claude")}
-      ${tile("🧭", "Premiers pas", "#/premiers_pas", "prise en main en 2 minutes")}
     </div>
     ${stats ? `<h3 class="day-h">Base de connaissances</h3>
     <div class="grid kpis">
@@ -174,61 +175,146 @@ async function confiance(body) {
       <div class="btns"><a class="btn gold" href="#/recherche">🔎 Essayer une recherche</a><a class="btn ghost" href="#/pdf">📄 Voir les notices</a></div></div>`;
 }
 
-/* ---------- Utiliser AXA avec ChatGPT / Claude (prompts copiables) ---------- */
+/* ---------- Utiliser avec une IA (coller l'adresse de la Vue IA) ---------- */
+const IA_URL = "https://gabuz22.github.io/AXA/ia/";
+const IA_PROMPTS = [
+  ["Question simple, sourcée",
+    `Tu es un assistant pour un conseiller AXA. Utilise UNIQUEMENT la base documentaire publique ici : ${IA_URL} (pages lisibles sans exécuter de code). Réponds en citant la notice et la page. N'invente rien ; si l'information est absente, dis-le. La notice PDF fait foi.\n\nMa question : `],
+  ["Comparaison entre contrats",
+    `À partir de la base ${IA_URL} — compare les contrats que je nomme sur le sujet indiqué. Pour chaque contrat : définition, garantie, exclusions, conditions, source (notice + page). Signale les données absentes. Ne conclus pas au-delà des sources.\n\nContrats et sujet : `],
+  ["Question réglementaire",
+    `À partir de ${IA_URL} — distingue ce qui vient du contrat (sourcé notice) et ce qui relève d'une réglementation évolutive. Si c'est réglementaire (fiscalité, retraite, succession…), signale-le et renvoie aux sources officielles listées ; ne donne aucun chiffre non vérifié.\n\nMa question : `],
+];
 async function assistants(body) {
-  const manifest = await kb.manifest();
-  const masters = ["master_pack_a", "master_pack_b", "mode_emploi_ia"].filter(r => manifest.sources?.[r]);
   body.innerHTML = `
-    <p class="lead">Gabriel AXA ne branche aucune IA. Pour vous faire assister, vous fournissez la base de
-    connaissances à <b>ChatGPT ou Claude</b>, puis un prompt cadré. La preuve reste le contrat / la notice PDF.</p>
+    <p class="lead">Gabriel AXA ne branche aucune IA. Mais tu peux donner <b>toute sa base documentaire</b> à ton assistant
+    (ChatGPT, Claude, Gemini…) en <b>collant une seule adresse</b>. Plus besoin de télécharger de fichiers.</p>
 
-    <div class="card"><h3 style="margin:0 0 8px">Quand utiliser quoi</h3>
-      <div class="grid">
-        <div class="tile"><span class="tile-l">🔎 L'application</span><span class="tile-s">retrouver vite un fait précis (garantie, exclusion, condition), sourcé à la notice. Le réflexe quotidien.</span></div>
-        <div class="tile"><span class="tile-l">🤖 Une IA</span><span class="tile-s">reformuler pour un client, croiser plusieurs contrats, préparer un argumentaire — à partir des packs.</span></div>
-        <div class="tile"><span class="tile-l">🔁 Les deux</span><span class="tile-s">chercher le fait dans l'app (preuve + page), puis demander à l'IA de le mettre en forme. Recommandé.</span></div>
-      </div></div>
+    <div class="card">
+      <div class="fiche-retenir-h">L'adresse à coller à ton IA</div>
+      <div class="btns" style="align-items:center">
+        <code style="font-size:14px;padding:5px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)">${IA_URL}</code>
+        <button class="btn gold" id="ia_copy">📋 Copier l'adresse</button>
+        <a class="btn ghost" href="${IA_URL}" target="_blank" rel="noopener">↗ Ouvrir</a>
+      </div>
+      <p class="muted" style="margin-top:8px">Colle cette adresse dans ta conversation, puis pose ta question. L'IA y trouve
+      les contrats, garanties, exclusions, définitions, sources et une méthode pour répondre sans inventer.</p>
+    </div>
 
-    <div class="card"><h3 style="margin:0 0 8px">Workflow recommandé</h3>
-      <ol class="hlist">
-        <li>Cherchez le fait dans l'app → notez le contrat, la <b>notice et la page</b>.</li>
-        <li>Fournissez à l'IA le <b>Pack A</b> (ou l'extrait utile) + un prompt cadré ci-dessous.</li>
-        <li>Exigez une réponse <b>sourcée</b> ; refusez toute affirmation sans source.</li>
-        <li><b>Vérifiez la notice</b> avant de répondre au client.</li>
-      </ol>
-      <div class="btns"><a class="btn gold" href="#/ia">📖 Ouvrir la vue IA (restitution complète)</a></div></div>
+    <h3 class="day-h">Démarrer en moins de 2 minutes</h3>
+    <div class="grid kpis">
+      <div class="tile"><span class="tile-l">1 · Ouvre ton IA</span><span class="tile-s">ChatGPT, Claude, Gemini, Mistral, Copilot… une IA capable de lire une page web.</span></div>
+      <div class="tile"><span class="tile-l">2 · Colle l'adresse</span><span class="tile-s">${IA_URL}</span></div>
+      <div class="tile"><span class="tile-l">3 · Pose ta question</span><span class="tile-s">« Compare l'invalidité entre Avizen Pro et MasterLife, avec les sources. »</span></div>
+    </div>
 
-    <div class="card"><h3 style="margin:0 0 8px">Fichiers à fournir à l'assistant</h3>
-      <ul class="hlist">
-        <li><b>Pack A stable</b> — la référence contractuelle (fait foi).</li>
-        <li><b>Pack B matrices</b> — uniquement pour le raisonnement complexe (jamais une preuve).</li>
-        <li><b>Mode d'emploi IA</b> — explique le routage Pack A / Pack B.</li>
-      </ul>
-      <div class="btns">${masters.map(r => `<a class="btn ghost" href="${esc(kb.fileUrl(manifest.sources[r].path))}" target="_blank" rel="noopener" download>⬇ ${esc(r.replace(/_/g, " "))}</a>`).join("")}
-        <a class="btn" href="#/ia">📖 Vue IA & téléchargements</a></div>
-      <p class="muted">Astuce : pour une question ciblée, un extrait de la fiche contrat suffit souvent (plus léger qu'un master entier).</p></div>
+    <h3 class="day-h">Pourquoi c'est mieux que télécharger des fichiers</h3>
+    <ul class="hlist">
+      <li><b>Toujours à jour</b> : l'IA lit la version en ligne, jamais un fichier périmé.</li>
+      <li><b>Rien à gérer</b> : aucune pièce jointe, aucun JSON, aucune clé.</li>
+      <li><b>Déjà structuré</b> : contrats, catégories, concepts, sources, méthode — pensés pour une IA.</li>
+      <li><b>Sourcé</b> : chaque élément renvoie à sa notice et sa page.</li>
+    </ul>
 
-    <div class="card"><h3 style="margin:0 0 8px">2. Comment poser une question (méthode)</h3>
-      <ul class="hlist">
-        <li>Colle d'abord le <b>prompt de base</b> (ci-dessous), puis pose ta question.</li>
-        <li>Demande toujours une <b>réponse sourcée</b> (« cite la notice PDF et la page »).</li>
-        <li>Pour comparer : demande de <b>séparer Pack A (preuve) et Pack B (raisonnement)</b>.</li>
-        <li><b>Refuse</b> toute réponse sans source, tout calcul fiscal définitif, toute matrice présentée comme preuve.</li>
-        <li>Ne <b>sur-interprète pas Pack B</b> : c'est une aide au raisonnement, pas une garantie contractuelle.</li>
-      </ul></div>
+    <h3 class="day-h">Prompts prêts à copier</h3>
+    ${IA_PROMPTS.map((p, i) => `<article class="card"><div class="card-h"><strong>${esc(p[0])}</strong>
+      <button class="btn ghost" data-p="${i}" style="min-height:30px;padding:0 10px;margin-left:auto">📋 Copier</button></div>
+      <pre class="prompt" style="white-space:pre-wrap;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:10px;font-size:12.5px">${esc(p[1])}</pre></article>`).join("")}
 
-    <h3 class="day-h">3. Prompts prêts à copier</h3>
-    <div class="btns"><button class="btn" id="pr_all">📋 Copier les 7 prompts</button><span class="muted" id="pr_allst"></span></div>
-    ${PROMPTS.map(p => `<article class="card">
-      <div class="card-h"><strong>${esc(p.titre)}</strong><span class="muted">${esc(p.description)}</span>
-        <button class="btn ghost" data-copy="${esc(p.id)}" style="min-height:30px;padding:0 10px">📋 Copier</button></div>
-      <pre class="prompt" style="white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;font-size:12.5px">${esc(p.texte)}</pre>
-    </article>`).join("")}
-    <p class="muted">Rappels : Pack A = preuve · Pack B = raisonnement, jamais une preuve · réponse client =
-    contrat / PDF / source officielle · aucun conseil définitif automatisé.</p>`;
+    <div class="warnbox">⚠ Limites : une IA peut se tromper — <b>vérifie toujours la notice PDF</b> (elle fait foi). Pour une matière
+    réglementaire (fiscalité, retraite, succession), l'IA renvoie aux sources officielles ; ne reprends pas un chiffre non vérifié.</div>`;
+  bindCopy(body.querySelector("#ia_copy"), () => IA_URL, "✓ Adresse copiée");
+  IA_PROMPTS.forEach((p, i) => bindCopy(body.querySelector(`[data-p="${i}"]`), () => p[1]));
+}
 
-  PROMPTS.forEach(p => bindCopy(body.querySelector(`[data-copy="${p.id}"]`), () => p.texte));
-  bindCopy(body.querySelector("#pr_all"), () => PROMPTS.map(p => `### ${p.titre}\n${p.texte}`).join("\n\n"), "✓ 7 prompts copiés");
+/* ---------- Découvrir Gabriel AXA (onboarding) ---------- */
+async function decouvrir(body) {
+  body.innerHTML = `
+    <p class="lead">Gabriel AXA, c'est <b>la base contractuelle AXA — sourcée — que tu interroges en langage naturel</b>.
+    Retrouve en quelques secondes une garantie, une exclusion, une condition ou une définition, avec la notice qui fait foi.</p>
+    <div class="grid">
+      ${tile("⏱", "Pourquoi ça existe", "#/recherche", "gagner du temps : ne plus feuilleter les notices pour un détail")}
+      ${tile("👥", "À qui c'est destiné", "#/cas_usage", "conseillers épargne/protection, débutants ou expérimentés, animateurs")}
+      ${tile("📄", "Sur quoi c'est fondé", "#/confiance", "documents publics uniquement (notices, CG). Aucune donnée client.")}
+    </div>
+    <h3 class="day-h">Ce que ça remplace… et ce que ça ne remplace pas</h3>
+    <div class="grid">
+      <div class="card"><div class="fiche-retenir-h" style="color:var(--ok)">Ça remplace</div>
+        <ul class="hlist"><li>la recherche manuelle dans les PDF</li><li>« quel contrat couvre déjà ça ? »</li><li>retrouver une exclusion ou un délai précis</li></ul></div>
+      <div class="card"><div class="fiche-retenir-h" style="color:var(--warn)">Ça ne remplace pas</div>
+        <ul class="hlist"><li>la <b>notice PDF</b>, qui fait foi</li><li>ton conseil et ta relation client</li><li>une vérification réglementaire officielle</li></ul></div>
+    </div>
+    <h3 class="day-h">Essayer maintenant</h3>
+    <div class="btns"><a class="btn gold" href="#/recherche">🔎 Lancer une recherche</a>
+      <a class="btn" href="#/cas_usage">🎯 Voir des exemples</a>
+      <a class="btn ghost" href="#/assistants">🤖 Utiliser avec une IA</a></div>`;
+}
+
+/* ---------- Que puis-je faire ? (cas d'usage cliquables) ---------- */
+async function cas_usage(body) {
+  const CU = [
+    ["🔎", "Retrouver une clause", "recherche", "capital décès MasterLife"],
+    ["🚫", "Vérifier une exclusion", "recherche", "exclusions garantie décès"],
+    ["⏳", "Trouver un délai de carence", "recherche", "délai de carence"],
+    ["📖", "Comprendre une définition", "glossaire", ""],
+    ["⚖️", "Comparer deux contrats", "comparateur", ""],
+    ["🧠", "Construire un premier raisonnement", "copilote", ""],
+    ["🤖", "Analyse multi-contrats (IA)", "assistants", ""],
+    ["🗓", "Préparer un rendez-vous", "rdv", ""],
+  ];
+  body.innerHTML = `<p class="lead">Des exemples concrets de ce que tu peux faire aujourd'hui. <b>Clique pour l'essayer tout de suite.</b></p>
+    <div class="grid" id="cu">${CU.map(([ic, t, r, q]) => `<a class="tile" href="#/${r}" data-route="${r}" data-q="${esc(q)}"><span class="tile-i">${ic}</span><span class="tile-l">${esc(t)}</span><span class="tile-s">${q ? esc("« " + q + " »") : "ouvrir →"}</span></a>`).join("")}</div>
+    <p class="muted" style="margin-top:14px">Chaque réponse renvoie à sa <b>notice PDF</b> (la source qui fait foi).</p>`;
+  body.querySelector("#cu").addEventListener("click", e => {
+    const a = e.target.closest("[data-route]"); if (!a) return; e.preventDefault();
+    if (a.dataset.q) set({ axaQuery: a.dataset.q });
+    location.hash = "#/" + a.dataset.route;
+  });
+}
+
+/* ---------- Portail Vue IA (valoriser la couche IA) ---------- */
+async function portail_ia(body) {
+  const P = [
+    ["🧭", "Guide IA", "guide-ia.html", "comment une IA doit répondre : citer, ne pas inventer, arbitrer"],
+    ["🕸️", "Concepts", "concepts.html", "synonymes métier reliés aux contrats (IPT, PTIA…)"],
+    ["🚦", "Routage", "routage.html", "décomposer une question, choisir les bons contrats"],
+    ["⚖️", "Comparateur", "comparateur.html", "un sujet, tous les contrats côte à côte"],
+    ["🧪", "Méthode", "methode-question-complexe.html", "les parcours pour une question complexe"],
+    ["✅", "Qualité", "qualite-routage.html", "mesures de précision du moteur"],
+    ["🧾", "Tests", "tests.html", "questions de contrôle et parcours attendus"],
+    ["🔢", "Matrices", "matrices.html", "contrats × catégories, concepts × contrats"],
+    ["📚", "Sources", "sources-officielles.html", "autorités officielles par thème"],
+    ["🧰", "Outils", "outils.html", "tous les outils de circulation"],
+  ];
+  body.innerHTML = `<p class="lead">La <b>Vue IA</b> est l'espace conçu pour les intelligences artificielles : une projection
+    complète et sourcée de la base, lisible sans exécuter de code. Parcours-la, ou <b>copie son adresse pour ton IA</b>.</p>
+    <div class="btns"><a class="btn gold" href="${IA_URL}" target="_blank" rel="noopener">↗ Ouvrir la Vue IA</a>
+      <button class="btn" id="pia_copy">📋 Copier l'adresse</button>
+      <a class="btn ghost" href="#/assistants">🤖 Comment l'utiliser</a></div>
+    <h3 class="day-h">Ce qu'elle contient</h3>
+    <div class="grid">${P.map(([ic, t, f, d]) => `<a class="tile" href="${IA_URL}${f}" target="_blank" rel="noopener"><span class="tile-i">${ic}</span><span class="tile-l">${esc(t)} ↗</span><span class="tile-s">${esc(d)}</span></a>`).join("")}</div>`;
+  bindCopy(body.querySelector("#pia_copy"), () => IA_URL, "✓ Adresse copiée");
+}
+
+/* ---------- Tester Gabriel AXA (phase de test conseillers) ---------- */
+async function tester(body) {
+  body.innerHTML = `<p class="lead">Gabriel AXA est en <b>phase de test</b>. Ton retour construit la prochaine version.
+    Utilise-le comme dans ta pratique réelle, puis dis-nous ce qui marche et ce qui manque.</p>
+    <h3 class="day-h">Ce qu'on attend de toi</h3>
+    <ul class="hlist">
+      <li><b>Signale les erreurs</b> : une réponse fausse, une source qui ne correspond pas.</li>
+      <li><b>Propose des recherches réelles</b> : les questions que tu poses vraiment en rendez-vous.</li>
+      <li><b>Compare avec ta pratique</b> : est-ce plus rapide, plus fiable ?</li>
+      <li><b>Dis-nous ce qui manque</b> : un contrat, une garantie, une catégorie.</li>
+      <li><b>Note les cas</b> où une IA se trompe ou n'aboutit pas.</li>
+    </ul>
+    <div class="warnbox">Rappel : la <b>notice PDF fait foi</b>. Pendant le test, vérifie toujours avant d'utiliser une réponse avec un client.</div>
+    <h3 class="day-h">Par où commencer</h3>
+    <div class="grid">
+      ${tile("🔎", "Une vraie recherche", "#/recherche", "teste une question de RDV")}
+      ${tile("⚖️", "Une comparaison", "#/comparateur", "deux contrats que tu proposes")}
+      ${tile("🤖", "Avec ton IA", "#/assistants", "colle l'adresse et interroge")}
+    </div>`;
 }
 
 /* ---------- Fiche contrat (écran métier conseiller) ---------- */
@@ -800,21 +886,43 @@ async function formulaires(body) {
     })()}`;
 }
 
-/* ---------- Sources officielles ---------- */
+/* ---------- Sources officielles (quand contrat / notice / réglementation) ---------- */
+const AUTORITES = [
+  ["Légifrance", "https://www.legifrance.gouv.fr", "Textes de loi et codes (assurances, sécurité sociale, CGI)."],
+  ["BOFiP-Impôts", "https://bofip.impots.gouv.fr", "Doctrine fiscale de l'administration."],
+  ["impots.gouv.fr", "https://www.impots.gouv.fr", "Fiscalité des particuliers."],
+  ["Service-Public.fr", "https://www.service-public.fr", "Information administrative de référence."],
+  ["Ameli", "https://www.ameli.fr", "Santé, maladie, invalidité (régime général)."],
+  ["L'Assurance retraite (CNAV)", "https://www.lassuranceretraite.fr", "Retraite du régime général."],
+  ["ACPR", "https://acpr.banque-france.fr", "Contrôle prudentiel assurances & banques."],
+  ["AMF", "https://www.amf-france.org", "Marchés financiers, épargne."],
+  ["URSSAF", "https://www.urssaf.fr", "Cotisations sociales."],
+  ["CNIL", "https://www.cnil.fr", "Données personnelles."],
+];
 async function sources(body) {
-  const m = await kb.manifest();
-  const entries = Object.entries(m.sources || {});
-  const checks = await Promise.all(entries.map(async ([role]) => [role, (await kb.source(role)) != null]));
-  const ok = Object.fromEntries(checks);
   body.innerHTML = `
-    <p class="lead">Manifeste des masters de connaissances (<code>data/AXA/workspace_manifest.json</code>) :
-    pour brancher une nouvelle version, il suffit d'y changer un chemin — le module s'adapte.</p>
-    <div class="tblwrap"><table class="tbl"><thead><tr><th>Rôle</th><th>Fichier</th><th>Description</th><th>État</th></tr></thead><tbody>
-      ${entries.map(([role, d]) => `<tr><td style="text-align:left"><code>${esc(role)}</code></td>
-        <td style="text-align:left"><code>${esc(d.path)}</code></td>
-        <td style="text-align:left;white-space:normal">${esc(d.description || "")}</td>
-        <td>${ok[role] ? '<span class="up">✓ chargé</span>' : '<span class="down">absent</span>'}</td></tr>`).join("")}
-    </tbody></table></div>`;
+    <p class="lead">Gabriel AXA s'appuie sur des <b>documents publics AXA</b>. Pour une matière <b>réglementaire</b>
+    (fiscalité, retraite, succession, protection sociale…), la référence n'est pas le contrat mais une <b>autorité officielle</b>.
+    Voici quand consulter quoi.</p>
+
+    <h3 class="day-h">Quelle source, quand ?</h3>
+    <div class="grid">
+      <div class="card"><div class="fiche-retenir-h">1 · Le contrat / la fiche</div><p class="card-b">Pour une <b>garantie, exclusion, condition, définition, barème contractuel</b> : commence par la fiche contrat (Gabriel AXA).</p></div>
+      <div class="card"><div class="fiche-retenir-h">2 · La notice PDF</div><p class="card-b">Avant toute réponse client : <b>vérifie la notice</b> à la bonne page. <b>Elle fait foi.</b></p></div>
+      <div class="card"><div class="fiche-retenir-h">3 · La source officielle</div><p class="card-b">Pour une <b>règle susceptible d'évoluer</b> (fiscalité, âge légal, plafond légal, succession, régime social) : consulte l'autorité compétente ci-dessous.</p></div>
+    </div>
+
+    <h3 class="day-h">Pourquoi une vérification réglementaire ?</h3>
+    <div class="card"><p class="card-b">La réglementation <b>change</b> (barèmes fiscaux, âges de retraite, abattements). La base Gabriel AXA
+    <b>ne stocke aucune règle réglementaire</b> et n'en invente pas : quand une question en dépend, elle vous <b>oriente vers la source officielle</b>
+    plutôt que de risquer un chiffre périmé.</p></div>
+
+    <h3 class="day-h">Autorités de référence</h3>
+    <div class="grid">
+      ${AUTORITES.map(([n, u, d]) => `<a class="tile" href="${u}" target="_blank" rel="noopener"><span class="tile-l">${esc(n)} ↗</span><span class="tile-s">${esc(d)}</span></a>`).join("")}
+    </div>
+    <p class="muted" style="margin-top:14px">Ces liens renvoient à des <b>autorités publiques</b> ; ils n'apportent aucune donnée dans Gabriel AXA.
+    <a href="${IA_URL}sources-officielles.html" target="_blank" rel="noopener">↗ Détail par thème (Vue IA)</a></p>`;
 }
 
 /* ---------- PDF contractuels ---------- */

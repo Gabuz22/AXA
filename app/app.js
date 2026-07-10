@@ -5,29 +5,33 @@ import { get, set } from "./state/store.js";
 
 // Navigation validée (sitemap). id = clé de section du module axa.js.
 const NAV = [
-  { group: "Essentiel", items: [
+  { group: "Démarrer", items: [
     { id: "accueil", label: "Accueil", icon: "🏠" },
-    { id: "recherche", label: "Recherche", icon: "🔎" },
-    { id: "contrat", label: "Contrats", icon: "📑" },
-    { id: "copilote", label: "Copilote", icon: "🧠" },
-    { id: "comparateur", label: "Comparateur", icon: "⚖️" },
-    { id: "glossaire", label: "Glossaire", icon: "📖" },
-    { id: "pdf", label: "Notices PDF", icon: "📄" },
-  ]},
-  { group: "Ressources", items: [
-    { id: "assistants", label: "Utiliser avec une IA", icon: "🤝" },
-    { id: "ia", label: "Vue IA (pour les modèles)", icon: "🤖", href: "../ia/index.html", external: true },
-    { id: "confiance", label: "Pourquoi faire confiance", icon: "🔒" },
-    { id: "sources", label: "Sources officielles", icon: "📚" },
-  ]},
-  { group: "Aide", items: [
+    { id: "decouvrir", label: "Découvrir Gabriel AXA", icon: "✨" },
+    { id: "cas_usage", label: "Que puis-je faire ?", icon: "🎯" },
     { id: "premiers_pas", label: "Premiers pas & FAQ", icon: "🧭" },
   ]},
-  { group: "Outils conseiller", items: [
-    { id: "besoins", label: "Analyse des besoins", icon: "🎯", beta: true },
+  { group: "Utiliser", items: [
+    { id: "recherche", label: "Recherche", icon: "🔎" },
+    { id: "contrat", label: "Contrats", icon: "📑" },
+    { id: "comparateur", label: "Comparateur", icon: "⚖️" },
+    { id: "glossaire", label: "Glossaire", icon: "📖" },
+    { id: "copilote", label: "Copilote de réponse", icon: "🧠" },
+    { id: "pdf", label: "Notices PDF", icon: "📄" },
+  ]},
+  { group: "Avec une IA", items: [
+    { id: "assistants", label: "Utiliser avec une IA", icon: "🤖" },
+    { id: "portail_ia", label: "Vue IA (portail)", icon: "🌐" },
+  ]},
+  { group: "Confiance", items: [
+    { id: "sources", label: "Sources officielles", icon: "📚" },
+    { id: "confiance", label: "Pourquoi faire confiance", icon: "🔒" },
+    { id: "tester", label: "Tester Gabriel AXA", icon: "🧪" },
+  ]},
+  { group: "Outils conseiller (bêta)", items: [
+    { id: "besoins", label: "Analyse des besoins", icon: "🧩", beta: true },
     { id: "rdv", label: "Préparation RDV", icon: "🗓", beta: true },
     { id: "animateur", label: "Animateur", icon: "🎓", beta: true },
-    { id: "formulaires", label: "Formulaires", icon: "📝", beta: true },
   ]},
 ];
 const INDEX = {}; NAV.forEach(g => g.items.forEach(it => INDEX[it.id] = it));
@@ -41,10 +45,13 @@ const HELP = {
   comparateur: { what: "Deux contrats côte à côte pour choisir.", how: ["Sélectionne deux contrats à comparer."] },
   glossaire: { what: "Les termes définis dans les notices AXA, regroupés et sourcés.", how: ["Filtre un terme pour voir ses définitions par contrat."] },
   pdf: { what: "Les notices contractuelles — la source qui fait foi.", how: ["Ouvre une notice, si possible à la bonne page."] },
-  assistants: { what: "Comment utiliser Gabriel AXA avec ChatGPT ou Claude : quand l'app, quand l'IA, quand les deux.", how: ["Suis le workflow recommandé.", "Copie un prompt prêt à l'emploi.", "Pack A = preuve, Pack B = raisonnement."] },
-  ia: { what: "Une vue conçue pour les modèles d'IA : restitution propre, complète et sourcée à faire lire à ChatGPT ou Claude.", how: ["Ouvre Pack A / Pack B / Glossaire / Contrats.", "Télécharge les fichiers bruts pour les fournir à un modèle."] },
+  decouvrir: { what: "Ce qu'est Gabriel AXA, à qui il s'adresse et ce qu'il change — en moins de 5 minutes.", how: ["Lis la promesse et les exemples.", "Puis lance une recherche."] },
+  cas_usage: { what: "Des exemples concrets et cliquables de ce que tu peux faire aujourd'hui.", how: ["Clique un exemple pour l'essayer directement."] },
+  assistants: { what: "Utiliser Gabriel AXA avec une IA (ChatGPT, Claude, Gemini) : il suffit de coller l'adresse de la Vue IA.", how: ["Copie l'URL de la Vue IA.", "Colle-la dans ton assistant, puis pose ta question."] },
+  portail_ia: { what: "Le portail de la Vue IA : tout ce qu'une IA peut exploiter (guide, concepts, routage, méthode, sources…).", how: ["Ouvre une brique pour comprendre à quoi elle sert.", "Copie l'URL pour la donner à une IA."] },
   confiance: { what: "D'où viennent les données et pourquoi s'y fier : documents publics, traçabilité, notice qui fait foi.", how: ["Chaque information renvoie à sa notice PDF.", "Rien n'est inventé."] },
-  sources: { what: "Les sources officielles et règles publiques référencées.", how: ["Consulte les références ; la notice reste la preuve."] },
+  tester: { what: "La phase de test : ce qu'on attend de toi pour construire la prochaine version.", how: ["Note les erreurs et les manques.", "Compare avec ta pratique."] },
+  sources: { what: "Quand s'appuyer sur le contrat, la notice, ou une source officielle externe.", how: ["Le contrat/notice fait foi ; les sources officielles pour la réglementation évolutive."] },
   besoins: { what: "Un questionnaire guidé pour cadrer le besoin du client.", how: ["Réponds aux questions ; oriente vers les contrats pertinents."] },
   rdv: { what: "Une trame pour préparer un rendez-vous client.", how: ["Suis la trame ; imprime si besoin."] },
   animateur: { what: "Mode formation / réunion d'équipe.", how: ["Utilise les repères pour animer une session."] },

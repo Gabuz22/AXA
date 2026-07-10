@@ -1,7 +1,7 @@
 {
   "produit": "Gabriel AXA",
-  "version": "1.5.0",
-  "nom": "Vue IA — précision du routage : détection d'entités, verrouillage du contrat explicite, pertinence pondérée (0-5), routage par type de question, déclenchement strict des sources officielles, statuts de conclusion, 76 tests de qualité + métriques de précision",
+  "version": "2.0.0",
+  "nom": "Produit distribuable pour conseillers : onboarding (Découvrir, Que puis-je faire), « Utiliser avec une IA » réécrit (coller l'adresse de la Vue IA), portail Vue IA, Sources officielles, page Tester, navigation regroupée, accueil-promesse",
   "date": "2026-07-09",
-  "note": "Projection dérivée des JSON. Aucun master modifié. Le moteur distingue contrat explicite / transversale / comparaison / réglementaire, pondère la pertinence concept×contrat d'après les preuves, ne déclenche les sources officielles qu'au niveau question, et refuse de conclure quand la couverture est insuffisante. Précision contrats 100 %, 0 faux positif sur 76 tests. La notice PDF fait foi."
+  "note": "Application métier autonome, prête à être testée par des conseillers AXA. Documents de sources publiques, aucune donnée client, données dérivées, masters jamais modifiés. La Vue IA (/ia) s'utilise en collant son adresse à une IA. La notice PDF fait toujours foi."
 }
