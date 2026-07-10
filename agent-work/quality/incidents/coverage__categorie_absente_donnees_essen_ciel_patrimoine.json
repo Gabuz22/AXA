@@ -1,0 +1,49 @@
+{
+  "proposal_id": "coverage__categorie_absente_donnees_essen_ciel_patrimoine",
+  "agent_id": "coverage-gaps",
+  "run_id": "run_coverage-gaps_20260710_205840",
+  "created_at": "2026-07-10T20:58:40Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "ia/matrices/couverture.json",
+    "section": "categorie_absente_donnees"
+  },
+  "source": {
+    "type": "derived",
+    "document": "ia/matrices/couverture.json + ia/concepts.json",
+    "excerpt": "Contrat « Essen'Ciel Patrimoine » : catégorie(s) definitions, conditions, declencheurs absente(s) des données structurées."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "categorie_absente_donnees",
+      "subject": "Essen'Ciel Patrimoine",
+      "contrat": "Essen'Ciel Patrimoine",
+      "categories_absentes": [
+        "definitions",
+        "conditions",
+        "declencheurs"
+      ]
+    }
+  },
+  "reasoning_summary": "Contrat « Essen'Ciel Patrimoine » : catégorie(s) definitions, conditions, declencheurs absente(s) des données structurées. — Constat sur DONNÉES STRUCTURÉES uniquement (pas d'interprétation de la notice). Vérification documentaire humaine nécessaire.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "ne signifie pas que la donnée manque dans le contrat : seulement absente des données structurées / de la Vue IA"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

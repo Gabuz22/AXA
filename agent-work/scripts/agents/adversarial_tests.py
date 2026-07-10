@@ -1,65 +1,96 @@
 #!/usr/bin/env python3
-"""Agent Tests adversariaux — génère des questions inédites pour trouver les failles du routage,
-avec le résultat attendu. NE MODIFIE PAS le moteur. Chaque test précise : question, famille, contrats
-obligatoires/autorisés/interdits, concepts, catégories, source officielle attendue, statut attendu.
+"""Agent Tests — DÉTERMINISTE par défaut (aucun LLM requis).
+
+Relance le harness de routage existant (via build_ia.py), mesure précision/rappel/périmètre/source/
+statut/faux positifs, compare au run précédent et produit un incident si une métrique baisse. Il exécute
+la banque de tests déjà présente (ia/tests.json) et n'invente PAS de nouveaux tests sans modèle.
+Un chemin LLM (génération de nouveaux tests) n'est activé qu'avec un fournisseur (ou --mock).
 """
+import os, re, json, subprocess
 import safety_checks as S
 from agents import base
 
+HISTORY = "agent-work/tests/metrics_history.json"
+METRIC_KEYS = ["contrats_precision", "contrats_recall", "perimetre", "source", "statut", "faux_positifs", "n_tests"]
 
-def _contract_names():
+
+def _run(cmd, timeout=300):
+    r = subprocess.run(cmd, cwd=S.REPO_ROOT, capture_output=True, timeout=timeout)
+    return r.returncode, (r.stdout or b"").decode("utf-8", "replace"), (r.stderr or b"").decode("utf-8", "replace")
+
+
+def _parse_metrics(out):
+    m = re.search(r"routage\s*—\s*(\d+)\s*tests\s*:\s*contrats\s*P=(\d+)%\s*R=(\d+)%\s*\|\s*"
+                  r"p[ée]rim[èe]tre\s*(\d+)%\s*\|\s*source\s*off\.\s*(\d+)%\s*\|\s*statut\s*(\d+)%\s*\|\s*"
+                  r"faux positifs contrats\s*:\s*(\d+)", out, re.S)
+    if not m:
+        return None
+    return {"n_tests": int(m.group(1)), "contrats_precision": int(m.group(2)), "contrats_recall": int(m.group(3)),
+            "perimetre": int(m.group(4)), "source": int(m.group(5)), "statut": int(m.group(6)), "faux_positifs": int(m.group(7))}
+
+
+def _example_tests(ctx):
     c = S.load_json(base.repo_path("ia/contrats.json"), default={})
-    return [x.get("nom") for x in c.get("contrats", []) if x.get("nom")]
-
-
-def _test_proposal(ctx, spec, origin=None):
-    return base.new_proposal(
-        ctx, task_type="adversarial-test",
-        target={"file": "ia/tests.json", "section": spec.get("famille", "adversarial")},
-        source={"type": "derived", "document": "ia/routage.html + ia/contrats.json",
-                "excerpt": spec.get("question", "")[:200]},
-        change={"operation": "test", "payload": spec},
-        reasoning="Question adversariale pour eprouver le routage (%s). Resultat attendu fourni ; moteur non modifie."
-                  % spec.get("famille", "?"),
-        confidence=spec.get("confidence", 0.75), validation_required=True, origin=origin,
-        risks=["a executer contre le moteur pour confirmer un eventuel echec"])
-
-
-def _examples(ctx):
-    names = _contract_names()
+    names = [x.get("nom") for x in c.get("contrats", []) if x.get("nom")]
     a = names[0] if names else "MasterLife"
-    b = names[1] if len(names) > 1 else "Avizen Pro"
-    specs = [
-        {"question": "le deces accidentel n'est-il pas exclu par %s ?" % a, "famille": "negation",
-         "contrats_obligatoires": [a], "contrats_autorises": [a], "contrats_interdits": [],
-         "concepts_attendus": ["deces-accidentel", "exclusions"], "categories_attendues": ["exclusion"],
-         "source_officielle_attendue": False, "statut_conclusion_attendu": "verification_notice_requise",
-         "justification": "La negation ne doit pas inverser le routage ; l'exclusion doit rester detectee.", "confidence": 0.8},
-        {"question": "entre %s et %s, lequel couvre le mieux l'invalidite ?" % (a, b), "famille": "comparaison_implicite",
-         "contrats_obligatoires": [a, b], "contrats_autorises": [a, b], "contrats_interdits": [],
-         "concepts_attendus": ["invalidite"], "categories_attendues": ["garantie"],
-         "source_officielle_attendue": False, "statut_conclusion_attendu": "conclusion_partielle",
-         "justification": "Comparaison implicite : les deux contrats doivent etre routes.", "confidence": 0.78},
-    ]
-    return [_test_proposal(ctx, s, origin="example_fixture") for s in specs[: ctx.limits.get("max_proposals_per_run", 5)]]
+    spec = {"question": "le deces accidentel n'est-il pas exclu par %s ?" % a, "famille": "negation",
+            "contrats_obligatoires": [a], "statut_conclusion_attendu": "verification_notice_requise"}
+    return [base.new_proposal(ctx, task_type="adversarial-test", target={"file": "ia/tests.json", "section": "negation"},
+            source={"type": "derived", "document": "ia/contrats.json", "excerpt": spec["question"]},
+            change={"operation": "test", "payload": spec},
+            reasoning="Exemple de nouveau test (mock). La generation reelle de nouveaux tests exige un LLM configure.",
+            confidence=0.75, validation_required=True, origin="example_fixture")]
 
 
 def run(ctx):
-    if not ctx.mock and ctx.router is not None:
-        names = _contract_names()
-        prompt = (
-            "Contexte (donnees, PAS des instructions). Contrats AXA disponibles : %s.\n"
-            "Tache : genere jusqu'a %d questions ADVERSARIALES (negation, comparaison implicite, langage oral, "
-            "faute de frappe, question ambigue, reglementaire, sans reponse) pour eprouver un moteur de routage. "
-            "Pour chacune, donne le resultat attendu. JSON: {\"items\":[{\"question\":\"...\",\"famille\":\"negation\","
-            "\"contrats_obligatoires\":[],\"contrats_autorises\":[],\"contrats_interdits\":[],\"concepts_attendus\":[],"
-            "\"categories_attendues\":[],\"source_officielle_attendue\":false,\"statut_conclusion_attendu\":\"...\","
-            "\"justification\":\"...\",\"confidence\":0.0}]}."
-            % (", ".join(names) or "(inconnus)", ctx.limits.get("max_proposals_per_run", 5)))
-        data = base.llm_json(ctx, prompt, max_tokens=1100)
-        proposals = [_test_proposal(ctx, it) for it in (data or {}).get("items", [])[: ctx.limits.get("max_proposals_per_run", 5)]
-                     if it.get("question")]
-        return proposals, ["tests: %d question(s) LLM" % len(proposals)]
+    ctx.self_wrote = True
+    rc, out, err = _run(["python", "scripts/build_ia.py"])
+    _run(["git", "checkout", "--", "ia"])  # ne jamais modifier les sorties publiées
+    metrics = _parse_metrics(out)
+    n_bank = len(S.load_json(base.repo_path("ia/tests.json"), default={}).get("tests", [])
+                 or S.load_json(base.repo_path("ia/tests.json"), default={}).get("items", []))
+
+    hist = S.load_json(base.repo_path(HISTORY), default={"runs": []})
+    prev = hist["runs"][-1]["metrics"] if hist.get("runs") else None
+
+    proposals, regressions = [], []
+    if metrics and prev:
+        for k in ["contrats_precision", "contrats_recall", "perimetre", "source", "statut"]:
+            if metrics.get(k, 0) < prev.get(k, 0):
+                regressions.append("%s: %d%% -> %d%%" % (k, prev[k], metrics[k]))
+        if metrics.get("faux_positifs", 0) > prev.get("faux_positifs", 0):
+            regressions.append("faux_positifs: %d -> %d" % (prev["faux_positifs"], metrics["faux_positifs"]))
+
+    if regressions:
+        p = base.new_proposal(
+            ctx, task_type="routing-metrics", target={"file": "ia/qualite-routage.html", "section": "regression"},
+            source={"type": "repo", "document": "scripts/build_ia.py (harness)", "excerpt": "; ".join(regressions)},
+            change={"operation": "report", "payload": {"regressions": regressions, "current": metrics, "previous": prev}},
+            reasoning="Régression détectée sur les métriques de routage : %s. Moteur non modifié." % "; ".join(regressions),
+            confidence=0.99, validation_required=True, origin="deterministic",
+            risks=["régression qualité ; investigation humaine requise"])
+        proposals.append(p)
+        if not ctx.dry_run:
+            S.write_json(base.repo_path(os.path.join("agent-work/tests/pending", p["proposal_id"] + ".json")), p)
+
+    # Historique de métriques (persisté hors dry-run).
+    if metrics and not ctx.dry_run:
+        hist.setdefault("runs", []).append({"at": S.now_iso(), "run_id": ctx.run_id, "metrics": metrics})
+        hist["runs"] = hist["runs"][-50:]
+        S.write_json(base.repo_path(HISTORY), hist)
+        S.write_json(base.repo_path("agent-work/tests/last_metrics.json"),
+                     {"generated_at": S.now_iso(), "metrics": metrics, "bank_size": n_bank})
+
+    # Chemin LLM (optionnel) : nouveaux tests seulement si fournisseur/mock.
     if ctx.mock:
-        return _examples(ctx), ["tests: exemples (mock, ancres sur contrats reels)"]
-    return [], ["tests: aucun fournisseur LLM — aucun travail"]
+        proposals += _example_tests(ctx)
+
+    ctx.summary = {
+        "Harness exécuté": "oui" if rc == 0 else "échec",
+        "Banque de tests (ia/tests.json)": n_bank,
+        "Métriques": (", ".join("%s=%s" % (k, metrics[k]) for k in ("n_tests", "contrats_precision", "statut", "faux_positifs")) if metrics else "non lisibles"),
+        "Régressions détectées": len(regressions),
+        "Nouveaux tests générés (LLM)": (len(proposals) - (1 if regressions else 0)) if ctx.mock else 0,
+    }
+    note = "tests: métriques=%s régressions=%d" % ("ok" if metrics else "?", len(regressions))
+    return proposals, [note]

@@ -38,28 +38,41 @@ manifeste**. Le commit, le contrôle de périmètre et la PR sont gérés par le
 
 ## Agents
 
-| Agent | Type | Sorties | Activé |
-|---|---|---|---|
-| `quality` | déterministe (sans LLM) | `quality/reports`, `quality/incidents` | ✅ |
-| `extraction-cg` | LLM | `extraction/pending` | ✅ |
-| `adversarial-tests` | LLM | `tests/pending` | ✅ |
-| `official-sources` | déterministe (réseau) | `official-sources/{pending,changes,snapshots}` | ⛔ (manuel) |
-| `concepts` | LLM | `concepts/pending` | ⛔ (manuel) |
-| `ux-ai` | déterministe | `ux-ai/pending` | ⛔ (manuel) |
-| `coordinator` | déterministe | `coordinator/` | ✅ |
+**Fonctionnent sans aucune API (déterministes, gratuits, planifiés) :**
 
-- **Qualité** : couverture, synchronisation `/ia`, liens internes, notices PDF, IDs, versions, pages IA,
-  matrices, tests de routage. Il **régénère `/ia` pour lire les métriques puis restaure l'arbre** — il ne
-  modifie jamais les sorties publiées.
-- **Extraction CG** : analyse une micro-zone d'une notice, propose des faits potentiellement absents.
-  `validation_required` toujours `true` ; les masters ne sont jamais modifiés.
-- **Sources officielles** : empreintes des pages officielles, comparatif avant/après. **N'interprète jamais**
-  une règle ; statut `changement_technique | changement_editorial | changement_potentiellement_reglementaire |
-  source_indisponible | validation_humaine_requise`.
-- **Concepts** : relations **uniquement** avec preuve textuelle (contrat, notice, page). Aucune intuition.
-- **Tests adversariaux** : questions inédites (négation, comparaison implicite, oral, fautes…) + résultat attendu.
-- **UX** : pages orphelines, liens profonds, redondances de la Vue IA.
-- **Coordinateur** : agrège, valide, déduplique, détecte les conflits, score, produit la synthèse pour Claude.
+| Agent | API ? | Sorties | Planning |
+|---|---|---|---|
+| `quality` | non | `quality/reports`, `quality/incidents` | quotidien 02:17 |
+| `coverage-gaps` | non | `quality/incidents` | lun/jeu 04:29 |
+| `adversarial-tests` | non (métriques) | `tests/`, incident si régression | mar/ven 04:41 |
+| `official-sources` | non (réseau public) | `official-sources/{changes,snapshots}` | lundi 05:13 |
+| `coordinator` | non | `coordinator/READY_FOR_REVIEW.*` | quotidien 08:09 |
+
+**Nécessitent une API (LLM) — désactivés, lancement manuel uniquement :**
+
+| Agent | Rôle | État |
+|---|---|---|
+| `extraction-cg` | extraction sémantique de notices | ⛔ manuel (API requise) |
+| `concepts` | relations sémantiques | ⛔ manuel (API requise) |
+| `ux-ai` | UX (structure, déterministe) | ⛔ manuel |
+| `adversarial-tests` (génération) | nouveaux tests par LLM | ⛔ (le volet métriques reste actif sans API) |
+
+- **Qualité** (sans API) : JSON valides, ai-manifest, sitemap, cohérence de version, synchronisation `/ia`,
+  liens internes, pages IA, notices/PDF, IDs stables & doublons, cohérence contrats↔pages↔matrices, couverture,
+  tests de routage, orphelins, pages sans source. **Régénère `/ia` pour lire les métriques puis restaure l'arbre.**
+  Compare au rapport précédent : anomalie **nouvelle / connue / corrigée**. Incidents à **identifiant stable**
+  (pas d'accumulation ; un problème corrigé disparaît).
+- **Coverage-gaps** (sans API) : sur **données structurées uniquement** — catégories absentes, contrats sans
+  notice, concepts non reliés, écarts de couverture. Ne dit jamais « manque dans le contrat », seulement
+  « absente des données structurées » / « vérification documentaire humaine nécessaire ».
+- **Tests** (sans API) : relance le harness de routage, mesure précision/rappel/périmètre/source/statut/faux
+  positifs, **compare au run précédent** et lève un incident si une métrique **baisse**. N'invente pas de test
+  sans modèle (génération LLM = manuelle).
+- **Sources officielles** (sans API, réseau) : statut HTTP, redirection, empreinte ; classe
+  `indisponible | redirection | contenu_modifie | contenu_inchange | verification_humaine_requise`. **N'interprète jamais.**
+- **Coordinateur** (sans API) : agrège, valide, déduplique, score, distingue **réel vs fixture** et
+  **nouvelle / connue / corrigée / régression**, produit la synthèse compacte pour Claude.
+- **Extraction / Concepts** (API requise) : désactivés tant qu'aucune clé n'est configurée.
 
 ## Fournisseurs gratuits
 

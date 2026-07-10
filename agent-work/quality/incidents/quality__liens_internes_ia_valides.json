@@ -1,8 +1,8 @@
 {
-  "proposal_id": "quality_20260710_194449_001",
+  "proposal_id": "quality__liens_internes_ia_valides",
   "agent_id": "quality",
-  "run_id": "run_quality_20260710_194445",
-  "created_at": "2026-07-10T19:44:49Z",
+  "run_id": "run_quality_20260710_205933",
+  "created_at": "2026-07-10T20:59:36Z",
   "status": "pending_review",
   "origin": "deterministic",
   "task": {
@@ -24,10 +24,11 @@
     "payload": {
       "check": "liens internes /ia valides",
       "detail": "cassés: 19 ['glossaire.html -> contrat/essenciel.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/essenciel.html']",
-      "severity": "high"
+      "severity": "high",
+      "state": "connue"
     }
   },
-  "reasoning_summary": "Contrôle qualité déterministe en échec : liens internes /ia valides — cassés: 19 ['glossaire.html -> contrat/essenciel.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/essenciel.html']",
+  "reasoning_summary": "Contrôle qualité déterministe en échec (connue) : liens internes /ia valides — cassés: 19 ['glossaire.html -> contrat/essenciel.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/essenciel.html']",
   "confidence": 0.99,
   "ambiguities": [],
   "risks": [

@@ -1,10 +1,11 @@
 name: agents-extraction
 
-# Agent Extraction CG (LLM, quota gratuit). 3x/semaine, horaire décalé. Nécessite un secret fournisseur ;
-# sinon l'agent s'arrête proprement (aucune proposition). Planifié seulement si AGENTS_ENABLED == 'true'.
+# Agent Extraction CG (LLM). DÉSACTIVÉ par défaut (nécessite une API) : lancement manuel uniquement.
+# Sans secret fournisseur, l'agent s'arrête proprement. Pour l'activer en planifié : décommenter le
+# bloc schedule ET configurer un secret fournisseur ET mettre AGENTS_ENABLED='true'.
 on:
-  schedule:
-    - cron: "23 3 * * 1,3,5"
+  # schedule:
+  #   - cron: "23 3 * * 1,3,5"
   workflow_dispatch:
     inputs:
       force_dry_run:

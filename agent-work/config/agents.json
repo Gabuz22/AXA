@@ -14,12 +14,22 @@
       "description": "Vérifie couverture, liens morts, notices, IDs, versions, pages IA, matrices, tests de routage. Ne corrige jamais l'application."
     },
     {
+      "id": "coverage-gaps",
+      "name": "Agent Couverture documentaire",
+      "kind": "deterministic",
+      "uses_llm": false,
+      "output_dir": "agent-work/quality/incidents",
+      "enabled": true,
+      "priority_default": 3,
+      "description": "Repère, sur DONNÉES STRUCTURÉES uniquement, les trous : catégories absentes, contrats sans notice, concepts non reliés, écarts de couverture. N'affirme jamais qu'une donnée manque dans le contrat."
+    },
+    {
       "id": "extraction-cg",
       "name": "Agent Extraction CG",
       "kind": "llm",
       "uses_llm": true,
       "output_dir": "agent-work/extraction/pending",
-      "enabled": true,
+      "enabled": false,
       "priority_default": 4,
       "max_pages_per_run": 5,
       "max_proposals_per_run": 5,
@@ -33,9 +43,9 @@
       "output_dir": "agent-work/official-sources/pending",
       "changes_dir": "agent-work/official-sources/changes",
       "snapshots_dir": "agent-work/official-sources/snapshots",
-      "enabled": false,
+      "enabled": true,
       "priority_default": 3,
-      "description": "Verifie les liens officiels, detecte les changements (empreintes), sans jamais interpreter une regle juridique."
+      "description": "Surveillance TECHNIQUE des sources officielles (statut HTTP, redirection, empreinte), sans API et sans jamais interpreter une regle juridique."
     },
     {
       "id": "concepts",

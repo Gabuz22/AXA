@@ -1,42 +1,47 @@
 # Prêt pour examen
 
-_Généré le 2026-07-10T19:56:14Z par le coordinateur. Lire CE fichier d'abord ; n'examiner que les éléments ci-dessous._
+_Généré le 2026-07-10T21:04:24Z. Lire CE fichier d'abord ; n'examiner que les éléments ci-dessous._
 
-**En attente : 8 proposition(s).** 8 micro-zones déjà transformées en propositions sourcées et structurées : Claude examine ces 5 éléments prioritaires au lieu de refaire l'analyse préparatoire.
+**Réel en attente : 7.** 7 contrôle(s)/trou(s) déjà transformé(s) en incidents structurés et sourcés : Claude examine les 5 éléments prioritaires (~21 min économisées) au lieu de refaire l'analyse.
 
-## Haute priorité
-1. **official-source** — official_sources_20260710_194415_001 (score 0.93, confiance 0.9)
-   - fichier proposition : `agent-work/official-sources/pending/official_sources_20260710_194415_001.json`
-   - cible : `ia/sources-officielles.json` · **réglementaire → validation humaine**
-   - Exemple de detection de changement d'empreinte (aucun reseau). Aucune interpretation reglementaire.
-2. **quality** — quality_20260710_194449_001 (score 0.78, confiance 0.99)
-   - fichier proposition : `agent-work/quality/incidents/quality_20260710_194449_001.json`
-   - cible : `ia/`
-   - Contrôle qualité déterministe en échec : liens internes /ia valides — cassés: 19 ['glossaire.html -> contrat/essenciel.html', 'glossaire.html -> contrat/ma-prot
-3. **quality** — quality_20260710_194449_002 (score 0.78, confiance 0.99)
-   - fichier proposition : `agent-work/quality/incidents/quality_20260710_194449_002.json`
-   - cible : `ia/`
-   - Contrôle qualité déterministe en échec : notices PDF résolues sur disque — 0/11 notices résolues
-4. **adversarial-test** — adversarial_tests_20260710_194416_001 (score 0.68, confiance 0.8)
-   - fichier proposition : `agent-work/tests/pending/adversarial_tests_20260710_194416_001.json`
-   - cible : `ia/tests.json`
-   - Question adversariale pour eprouver le routage (negation). Resultat attendu fourni ; moteur non modifie.
-5. **adversarial-test** — adversarial_tests_20260710_194416_002 (score 0.67, confiance 0.78)
-   - fichier proposition : `agent-work/tests/pending/adversarial_tests_20260710_194416_002.json`
-   - cible : `ia/tests.json`
-   - Question adversariale pour eprouver le routage (comparaison_implicite). Resultat attendu fourni ; moteur non modifie.
+## Haute priorité (résultats réels)
+1. **quality** — quality__liens_internes_ia_valides (score 0.78)
+   - fichier : `agent-work/quality/incidents/quality__liens_internes_ia_valides.json` · cible : `ia/`
+   - risque : signal de qualité ; aucune correction appliquée automatiquement · action : vérification documentaire / correction manuelle
+   - Contrôle qualité déterministe en échec (connue) : liens internes /ia valides — cassés: 19 ['glossaire.html -> contrat/essenciel.html', 'glossaire.html
+2. **quality** — quality__notices_pdf_r_solues_sur_disque (score 0.78)
+   - fichier : `agent-work/quality/incidents/quality__notices_pdf_r_solues_sur_disque.json` · cible : `ia/`
+   - risque : signal de qualité ; aucune correction appliquée automatiquement · action : vérification documentaire / correction manuelle
+   - Contrôle qualité déterministe en échec (connue) : notices PDF résolues sur disque — 0/11 résolues
+3. **quality** — quality__preuves_avec_source_document_notice (score 0.78)
+   - fichier : `agent-work/quality/incidents/quality__preuves_avec_source_document_notice.json` · cible : `ia/`
+   - risque : signal de qualité ; aucune correction appliquée automatiquement · action : vérification documentaire / correction manuelle
+   - Contrôle qualité déterministe en échec (connue) : preuves avec source (document/notice) — sans source: 6 /616
+4. **coverage** — coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques (score 0.73)
+   - fichier : `agent-work/quality/incidents/coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques.json` · cible : `ia/matrices/couverture.json`
+   - risque : ne signifie pas que la donnée manque dans le contrat : seulement absen · action : vérification documentaire humaine (donnée structurée manquante)
+   - Contrat « Essen'Ciel (assurance obsèques) » : catégorie(s) definitions, conditions, declencheurs absente(s) des données structurées. — Constat sur DON
+5. **coverage** — coverage__categorie_absente_donnees_essen_ciel_patrimoine (score 0.73)
+   - fichier : `agent-work/quality/incidents/coverage__categorie_absente_donnees_essen_ciel_patrimoine.json` · cible : `ia/matrices/couverture.json`
+   - risque : ne signifie pas que la donnée manque dans le contrat : seulement absen · action : vérification documentaire humaine (donnée structurée manquante)
+   - Contrat « Essen'Ciel Patrimoine » : catégorie(s) definitions, conditions, declencheurs absente(s) des données structurées. — Constat sur DONNÉES STRUC
 
-## Tests nouveaux (à exécuter contre le moteur)
-- 2 proposition(s) de test ; familles : comparaison_implicite, negation
+## Anomalies qualité
+- **Nouvelles** : aucune
+- **Connues** : liens internes /ia valides, notices PDF résolues sur disque, preuves avec source (document/notice)
+- **Corrigées** : aucune
+
+## Régressions (tests de routage)
+- aucune
 
 ## Changements de sources officielles
-- official_sources_20260710_194415_001 — statut `changement_technique` — https://www.service-public.fr/ (interprétation NON effectuée)
+- aucun
 
 ## Conflits
-- _(aucun)_
+- aucun
 
 ## Ordre recommandé
-official_sources_20260710_194415_001, quality_20260710_194449_001, quality_20260710_194449_002, adversarial_tests_20260710_194416_001, adversarial_tests_20260710_194416_002
+quality__liens_internes_ia_valides, quality__notices_pdf_r_solues_sur_disque, quality__preuves_avec_source_document_notice, coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques, coverage__categorie_absente_donnees_essen_ciel_patrimoine
 
 ---
-Protocole de reprise : voir `agent-work/README.md` § « Reprise du projet avec Claude ». Ne jamais demander à Claude de relire tous les logs.
+Reprise : voir `agent-work/README.md` § « Reprise avec Claude ». Ne jamais relire tous les logs.

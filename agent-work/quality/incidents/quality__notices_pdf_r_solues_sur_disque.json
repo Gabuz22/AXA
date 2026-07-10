@@ -1,8 +1,8 @@
 {
-  "proposal_id": "quality_20260710_194449_002",
+  "proposal_id": "quality__notices_pdf_r_solues_sur_disque",
   "agent_id": "quality",
-  "run_id": "run_quality_20260710_194445",
-  "created_at": "2026-07-10T19:44:49Z",
+  "run_id": "run_quality_20260710_205933",
+  "created_at": "2026-07-10T20:59:36Z",
   "status": "pending_review",
   "origin": "deterministic",
   "task": {
@@ -17,17 +17,18 @@
   "source": {
     "type": "repo",
     "document": "scripts/build_ia.py + ia/",
-    "excerpt": "0/11 notices résolues"
+    "excerpt": "0/11 résolues"
   },
   "proposed_change": {
     "operation": "report",
     "payload": {
       "check": "notices PDF résolues sur disque",
-      "detail": "0/11 notices résolues",
-      "severity": "warn"
+      "detail": "0/11 résolues",
+      "severity": "warn",
+      "state": "connue"
     }
   },
-  "reasoning_summary": "Contrôle qualité déterministe en échec : notices PDF résolues sur disque — 0/11 notices résolues",
+  "reasoning_summary": "Contrôle qualité déterministe en échec (connue) : notices PDF résolues sur disque — 0/11 résolues",
   "confidence": 0.99,
   "ambiguities": [],
   "risks": [

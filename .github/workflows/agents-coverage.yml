@@ -1,11 +1,10 @@
-name: agents-sources
+name: agents-coverage
 
-# Agent Sources officielles (déterministe, réseau public gratuit, aucune API). Hebdomadaire.
-# Surveillance TECHNIQUE uniquement (statut HTTP, redirection, empreinte) ; aucune interprétation.
+# Agent Couverture documentaire (déterministe, sans API). 2x/semaine, horaire décalé.
 # Planifié seulement si AGENTS_ENABLED == 'true'.
 on:
   schedule:
-    - cron: "13 5 * * 1"
+    - cron: "29 4 * * 1,4"
   workflow_dispatch:
     inputs:
       force_dry_run:
@@ -14,9 +13,9 @@ on:
         default: true
 
 jobs:
-  sources:
+  coverage:
     uses: ./.github/workflows/_agents-run.yml
     with:
-      agent: official-sources
+      agent: coverage-gaps
       force_dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.force_dry_run || false }}
     secrets: inherit

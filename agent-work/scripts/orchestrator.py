@@ -19,6 +19,7 @@ import validate_proposal as VP
 
 AGENT_MODULES = {
     "quality": "agents.quality",
+    "coverage-gaps": "agents.coverage_gaps",
     "extraction-cg": "agents.extraction_cg",
     "official-sources": "agents.official_sources",
     "concepts": "agents.concepts",
@@ -33,6 +34,7 @@ class Ctx:
         self.provider_used = None
         self.model_used = None
         self.self_wrote = False
+        self.summary = {}
 
     def seq_next(self):
         self._seq += 1
@@ -127,7 +129,8 @@ def main():
         d = os.path.join(os.path.dirname(out_dir.rstrip("/")), sub)
         if os.path.isdir(d):
             dedup_dirs.append(d)
-    existing = DD.existing_fingerprints(dedup_dirs)
+    # Les agents self_wrote gèrent leurs propres fichiers à identifiant stable (dédup intrinsèque).
+    existing = {} if ctx.self_wrote else DD.existing_fingerprints(dedup_dirs)
 
     written = deduped = rejected = 0
     for p in proposals:
@@ -164,7 +167,23 @@ def main():
     _finish(manifest, log_lines, args.dry_run)
     logf("[orch] terminé: écrites=%d dédupliquées=%d rejetées=%d status=%s" %
          (written, deduped, rejected, manifest["status"]))
+    _emit_summary(args.agent, ctx, manifest, written, deduped, rejected)
     return 0
+
+
+def _emit_summary(agent, ctx, manifest, written, deduped, rejected):
+    """Résumé lisible sur la page du run GitHub Actions (aucun secret)."""
+    mode = "dry-run" if manifest["dry_run"] else "live"
+    lines = ["", "### Agent %s — résumé" % agent, "", "```text", "Mode : %s" % mode]
+    for k, v in (ctx.summary or {}).items():
+        lines.append("%s : %s" % (k, v))
+    lines += [
+        "Propositions générées : %d" % manifest["counters"]["proposals_generated"],
+        "Propositions retenues : %d" % written,
+        "Dédupliquées : %d   Rejetées (auto) : %d" % (deduped, rejected),
+        "Statut du run : %s" % manifest["status"],
+        "```", ""]
+    S.github_summary("\n".join(lines))
 
 
 def _finish(manifest, log_lines, dry_run):

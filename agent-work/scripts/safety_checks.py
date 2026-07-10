@@ -192,6 +192,18 @@ def content_hash(text):
     return hashlib.sha256((text or "").encode("utf-8")).hexdigest()
 
 
+def github_summary(text):
+    """Écrit un résumé lisible : sur stdout ET dans $GITHUB_STEP_SUMMARY si présent (page du run)."""
+    print(text)
+    path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if path:
+        try:
+            with open(path, "a", encoding="utf-8") as f:
+                f.write(text + "\n")
+        except Exception:
+            pass
+
+
 def redact_secrets(text, providers_cfg):
     """Ne jamais afficher un secret : masque les valeurs des variables d'env référencées par les providers."""
     if not text:
