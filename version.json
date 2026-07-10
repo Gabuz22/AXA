@@ -1,7 +1,7 @@
 {
   "produit": "Gabriel AXA",
-  "version": "1.2.0",
-  "nom": "Vue IA exhaustive : projection statique complète des JSON (contrats, catégories, thèmes, glossaire, notices, sources, index, guide, manifeste) — .html + .md sans JavaScript, IDs stables, couverture 100 %",
+  "version": "1.3.0",
+  "nom": "Vue IA — outils de circulation : planificateur de recherche, index conceptuel, détecteur de couverture, comparateur thématique, graphe de preuves, méthode question complexe, jeux de tests (tous dérivés, sourcés, sans LLM)",
   "date": "2026-07-09",
-  "note": "La Vue IA est une PROJECTION des JSON (source de vérité), générée par scripts/build_ia.py. Aucun master modifié, aucune duplication manuelle. La notice PDF fait toujours foi."
+  "note": "La Vue IA est une PROJECTION des JSON (source de vérité), générée par scripts/build_ia.py. Aucun master modifié, aucune donnée inventée. Outils dérivés pour décomposer une question, parcourir, vérifier la couverture, comparer, prouver et assembler une réponse sourcée. La notice PDF fait foi."
 }

@@ -1,0 +1,1283 @@
+{
+ "meta": {
+  "version": "1.2.0",
+  "genere_le": "2026-07-10",
+  "note": "Concepts dérivés : synonymes + éléments liés (ids), vérifiables. Aucune relation inventée."
+ },
+ "concepts": {
+  "invalidite": {
+   "nom": "Invalidité",
+   "synonymes": [
+    "invalidit",
+    "ipt",
+    "ipp",
+    "ptia",
+    "incapacit"
+   ],
+   "facettes": [
+    "taux",
+    "bareme",
+    "barème",
+    "prestation",
+    "seuil",
+    "definition",
+    "exclusion",
+    "fin de garantie"
+   ],
+   "categories": {
+    "garanties": [
+     "axa_axa_axa_avizen_2025_04_garanties_1aaadbb8226d_knowledge_89bf645880bb",
+     "axa_axa_axa_avizen_2025_04_garanties_1f8e343ca6c1_knowledge_5a79ea84fd80",
+     "axa_axa_axa_avizen_2025_04_garanties_2bf2b4989e80_knowledge_8e3e075241c0",
+     "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+     "axa_axa_axa_avizen_2025_04_garanties_338c6fd6176a_knowledge_8938e101c7dc",
+     "axa_axa_axa_avizen_2025_04_garanties_4273eec96de1_knowledge_d37557b53e34",
+     "axa_axa_axa_avizen_2025_04_garanties_4e17c4643abb_knowledge_de5880e82d5e",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_42d478ba7b57_knowledge_6a98e41528ba",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_466534853a69_knowledge_ee3565d5451c",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_5aa626eed35e_knowledge_7d96fb0fa4eb",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_77887a191541_knowledge_14a294237c21",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_8c3742b8bbe7_knowledge_18dcafdf9510",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_7fecd8ae9f79_knowledge_d0af30a9aaf6",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_93963eb93de3_knowledge_9f59cb6de90f",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_9542660c76a0_knowledge_3dd8f3ed7869",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_adf30e38133e_knowledge_9073a4080125",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_d491c9d8dfde_knowledge_32a7d6cd89bf",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_e995610a6cfc_knowledge_bb8b7f487fe1"
+    ],
+    "exclusions": [
+     "axa_axa_axa_avizen_2025_04_exclusions_2bc5e30f05f7_knowledge_31ea614f0cd8",
+     "axa_axa_axa_avizen_2025_04_exclusions_2e814add9402_knowledge_a66ece2859b1",
+     "axa_axa_axa_avizen_2025_04_exclusions_88792af8010e_knowledge_7a2869e7f5a6",
+     "axa_axa_axa_avizen_2025_04_exclusions_896982b4e3b0_knowledge_584c5c70a769",
+     "axa_axa_axa_avizen_pro_2025_04_exclusions_2aef8f17ca9c_knowledge_1c8e77582d69",
+     "axa_axa_axa_avizen_pro_2025_04_exclusions_d519dc75ce41_knowledge_62b80b2e93fe",
+     "axa_axa_axa_avizen_pro_2025_04_exclusions_d5d0437a216c_knowledge_7f1038606936",
+     "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
+     "axa_axa_axa_ma_retraite_2026_05_exclusions_e6de09eaf132_knowledge_bb7640d6ac46",
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_1d2b077cf406_knowledge_ceaaab562fc8",
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_2bcaeda3d931_knowledge_1b55e7e978ee",
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_3388797f1d90_knowledge_3dcf66148710",
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_888092d99f15_knowledge_15c6a7500dd4"
+    ],
+    "definitions": [
+     "avizen:def:2ca20f13b2",
+     "avizen:def:26ab92ad8c",
+     "avizen:def:af457b706f",
+     "avizen:def:714f512e9e",
+     "avizen-pro:def:9351ac94d0",
+     "avizen-pro:def:87c86c546e",
+     "avizen-pro:def:bc84b7162c",
+     "avizen-pro:def:4ce8507e31",
+     "entour-age:def:81f0a11726",
+     "entour-age:def:8934291cab",
+     "entour-age:def:dd8cd4544e",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:def:65b635209b",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:def:45633cfa34",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:def:890b9fbc67",
+     "masterlife-credit:def:4c35567e6e",
+     "masterlife-credit:def:79f88b32e2",
+     "masterlife-credit:def:9351ac94d0",
+     "masterlife-credit:def:5f15e6a842"
+    ],
+    "conditions": [
+     "avizen-pro:cond:7f172f0e1e",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:cond:88e167c83f"
+    ],
+    "declencheurs": [
+     "avizen:fait:2cbcc3adad:declencheur:0",
+     "avizen:fait:2cbcc3adad:declencheur:1",
+     "avizen:fait:d2f8ad4663:declencheur:0",
+     "avizen:fait:d2f8ad4663:declencheur:1",
+     "avizen:fait:d2f8ad4663:declencheur:2",
+     "avizen:fait:9893112dc5:declencheur:0",
+     "avizen:fait:9893112dc5:declencheur:1",
+     "avizen:fait:3d298b99e0:declencheur:0",
+     "avizen:fait:3d298b99e0:declencheur:1",
+     "avizen:fait:3d298b99e0:declencheur:2",
+     "avizen:fait:741ff49939:declencheur:0",
+     "avizen:fait:3bae81cb83:declencheur:0",
+     "avizen:fait:15b390b722:declencheur:0",
+     "avizen-pro:fait:e6e92c4b61:declencheur:0",
+     "avizen-pro:fait:cfb98375a0:declencheur:0",
+     "avizen-pro:fait:6354ec813b:declencheur:0",
+     "avizen-pro:fait:45763a5331:declencheur:0",
+     "avizen-pro:fait:45763a5331:declencheur:1",
+     "avizen-pro:fait:45763a5331:declencheur:2",
+     "avizen-pro:fait:f8c491157d:declencheur:0",
+     "avizen-pro:fait:0ec85aa140:declencheur:0",
+     "avizen-pro:fait:300c94bbd6:declencheur:0",
+     "masterlife-credit:fait:a1b706a42f:declencheur:0",
+     "masterlife-credit:fait:a1b706a42f:declencheur:1",
+     "masterlife-credit:fait:fbdb2c83d4:declencheur:0",
+     "masterlife-credit:fait:fbdb2c83d4:declencheur:1",
+     "masterlife-credit:fait:de1ea1338f:declencheur:0",
+     "masterlife-credit:fait:de1ea1338f:declencheur:1",
+     "masterlife-credit:fait:48d0f52caf:declencheur:0",
+     "masterlife-credit:fait:48d0f52caf:declencheur:1",
+     "masterlife-credit:fait:ba0803b83f:declencheur:0",
+     "masterlife-credit:fait:46a66d4346:declencheur:0"
+    ],
+    "plafonds": [
+     "avizen:fait:2cbcc3adad:plafond:0",
+     "avizen:fait:d2f8ad4663:plafond:0",
+     "avizen:fait:9893112dc5:plafond:0",
+     "avizen:fait:a1589f2d75:plafond:0",
+     "avizen:fait:3d298b99e0:plafond:0",
+     "avizen-pro:fait:e6e92c4b61:plafond:0",
+     "avizen-pro:fait:6354ec813b:plafond:0",
+     "avizen-pro:fait:cf7576de07:plafond:0",
+     "avizen-pro:fait:45763a5331:plafond:0",
+     "masterlife-credit:fait:a1b706a42f:plafond:0",
+     "masterlife-credit:fait:fbdb2c83d4:plafond:0",
+     "masterlife-credit:fait:fbdb2c83d4:plafond:1",
+     "masterlife-credit:fait:fbdb2c83d4:plafond:2",
+     "masterlife-credit:fait:de1ea1338f:plafond:0",
+     "masterlife-credit:fait:48d0f52caf:plafond:0",
+     "masterlife-credit:fait:ba0803b83f:plafond:0"
+    ],
+    "franchises": [
+     "avizen:fait:3d298b99e0:franchise:0",
+     "avizen-pro:fait:45763a5331:franchise:0",
+     "masterlife-credit:fait:fbdb2c83d4:franchise:0",
+     "masterlife-credit:fait:46a66d4346:franchise:0"
+    ],
+    "options": [
+     "axa_axa_axa_avizen_2025_04_options_9548821c6b3a_knowledge_3c980033add3",
+     "axa_axa_axa_avizen_2025_04_options_9f4385ee345a_knowledge_219241330066",
+     "axa_axa_axa_avizen_2025_04_options_e060ef8374fa_knowledge_97cb97064d66",
+     "axa_axa_axa_avizen_pro_2025_04_options_30d31b0bdbeb_knowledge_6abd3591ed08",
+     "axa_axa_axa_avizen_pro_2025_04_options_58815b57aa2b_knowledge_3b485dc6b94c",
+     "axa_axa_axa_avizen_pro_2025_04_options_66925aa55f52_knowledge_685604acb028",
+     "axa_axa_axa_avizen_pro_2025_04_options_cd5baa4496f8_knowledge_48ad072d3fa9",
+     "axa_axa_axa_avizen_pro_2025_04_options_d2d83a481f1d_knowledge_4f580b86f787",
+     "axa_axa_axa_masterlife_credit_2024_10_options_bb2687eed056_knowledge_8805759d2325"
+    ],
+    "cotisations": [
+     "axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db",
+     "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
+     "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_819a475f3f85_knowledge_f28130b0ac7c",
+     "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b"
+    ],
+    "delais": [
+     "axa_axa_axa_avizen_2025_04_delais_carences_franchises_8cffe28be8f9_knowledge_799a20a8bb52",
+     "axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_32baffb6fabd_knowledge_480adab7336d"
+    ],
+    "fiscalite": [
+     "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5"
+    ],
+    "points-vigilance": [
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_26fde9bd19a5_knowledge_77e0f0881c3c",
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_b3c4d3f2b5e8_knowledge_7db2ae0bff95",
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_f99ef92bee2b_knowledge_314b37ae71ff",
+     "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_484c871eb4bf_knowledge_7b643e57951b",
+     "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_5f5655d49ac6_knowledge_91b5fa511851",
+     "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_6acaf82de4d0_knowledge_c33f87b96f7d"
+    ],
+    "formules": [
+     "axa_avizen_2025-04_formule_01",
+     "axa_avizen_pro_2025-04_formule_01",
+     "axa_avizen_pro_2025-04_formule_02",
+     "axa_excelium_vie_2026-05_formule_04",
+     "axa_masterlife_credit_2024-10_formule_01",
+     "axa_masterlife_credit_2024-10_formule_02",
+     "axa_masterlife_credit_2024-10_formule_03"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-invalidite"
+  },
+  "deces": {
+   "nom": "Décès",
+   "synonymes": [
+    "deces",
+    "décès",
+    "mortalit",
+    "capital deces"
+   ],
+   "facettes": [
+    "capital",
+    "beneficiaire",
+    "accidentel",
+    "exclusion"
+   ],
+   "categories": {
+    "garanties": [
+     "axa_axa_axa_avizen_2025_04_garanties_338c6fd6176a_knowledge_8938e101c7dc",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_466534853a69_knowledge_ee3565d5451c",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_5aa626eed35e_knowledge_7d96fb0fa4eb",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_77887a191541_knowledge_14a294237c21",
+     "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb",
+     "axa_axa_axa_essenciel_2025_06_garanties_e42b591edf9f_knowledge_8cbfa291bbd8",
+     "axa_axa_axa_essenciel_2025_06_garanties_e659d22109db_knowledge_887ac2922e7f",
+     "axa_essenciel_patrimoine_2023-09_garantie_e7d9ed7ecece",
+     "axa_essenciel_patrimoine_2023-09_garantie_382e69377b50",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_646ff8db73da_knowledge_44cff956d072",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_74ce8a266629_knowledge_ea183a5624f4",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_c32aff3d329b_knowledge_f37b388cf816",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_d4df6041404f_knowledge_6cd775321f12",
+     "axa_axa_axa_ma_protection_accident_2024_03_garanties_ab5b155c98dd_knowledge_f44230ee79a8",
+     "axa_axa_axa_ma_retraite_2026_05_garanties_2a82507190c0_knowledge_a3e9a5052e25",
+     "axa_axa_axa_ma_retraite_2026_05_garanties_2f0464c0cd48_knowledge_500bf61880f1",
+     "axa_axa_axa_ma_retraite_2026_05_garanties_dd10b98b0d62_knowledge_5506ae497daf",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_f9f69ff37530_knowledge_4f246d649228"
+    ],
+    "exclusions": [
+     "axa_axa_axa_avizen_2025_04_exclusions_2e814add9402_knowledge_a66ece2859b1",
+     "axa_axa_axa_avizen_2025_04_exclusions_88792af8010e_knowledge_7a2869e7f5a6",
+     "axa_axa_axa_avizen_2025_04_exclusions_896982b4e3b0_knowledge_584c5c70a769",
+     "axa_axa_axa_avizen_pro_2025_04_exclusions_2aef8f17ca9c_knowledge_1c8e77582d69",
+     "axa_axa_axa_avizen_pro_2025_04_exclusions_d5d0437a216c_knowledge_7f1038606936",
+     "axa_axa_axa_entourage_2025_06_exclusions_edcf6ad19ae4_knowledge_404409f6a74a",
+     "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
+     "axa_axa_axa_essenciel_2025_06_exclusions_e72bdb32890b_knowledge_17f7b1238668",
+     "axa_essenciel_patrimoine_2023-09_exclusion_90a4216e1cb7",
+     "axa_axa_axa_ma_retraite_2026_05_exclusions_e6de09eaf132_knowledge_bb7640d6ac46",
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_7d71c356f084_knowledge_8c611c90bc41",
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_84dc965c3cbd_knowledge_e316f16d3470"
+    ],
+    "definitions": [
+     "avizen:def:714f512e9e",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:def:bc84b360bb",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:def:11cbeb7842",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per:def:ac7dc65e58"
+    ],
+    "conditions": [
+     "avizen-pro:cond:7f172f0e1e"
+    ],
+    "declencheurs": [
+     "avizen:fait:2cbcc3adad:declencheur:0",
+     "avizen:fait:2cbcc3adad:declencheur:1",
+     "avizen:fait:d2f8ad4663:declencheur:0",
+     "avizen:fait:d2f8ad4663:declencheur:1",
+     "avizen:fait:d2f8ad4663:declencheur:2",
+     "avizen:fait:9893112dc5:declencheur:0",
+     "avizen:fait:9893112dc5:declencheur:1",
+     "avizen-pro:fait:e6e92c4b61:declencheur:0",
+     "avizen-pro:fait:cfb98375a0:declencheur:0",
+     "avizen-pro:fait:6354ec813b:declencheur:0",
+     "avizen-pro:fait:e4f8ae15eb:declencheur:0",
+     "excelium-assurance-vie:fait:48e4ad06df:declencheur:0",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:2bd15a813d:declencheur:0",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:2aa29d9978:declencheur:0",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:75fb2b014a:declencheur:0",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:75fb2b014a:declencheur:1",
+     "masterlife-credit:fait:d958e52a0c:declencheur:0",
+     "masterlife-credit:fait:fbdb2c83d4:declencheur:0"
+    ],
+    "plafonds": [
+     "avizen:fait:2cbcc3adad:plafond:0",
+     "avizen:fait:d2f8ad4663:plafond:0",
+     "avizen:fait:9893112dc5:plafond:0",
+     "avizen:fait:a1589f2d75:plafond:0",
+     "avizen-pro:fait:e6e92c4b61:plafond:0",
+     "avizen-pro:fait:6354ec813b:plafond:0",
+     "avizen-pro:fait:cf7576de07:plafond:0",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:2bd15a813d:plafond:0",
+     "masterlife-credit:fait:d958e52a0c:plafond:0"
+    ],
+    "options": [
+     "axa_axa_axa_avizen_2025_04_options_8f4ee5536c39_knowledge_566df5b56ec5",
+     "axa_axa_axa_avizen_2025_04_options_9f4385ee345a_knowledge_219241330066",
+     "axa_axa_axa_avizen_2025_04_options_e060ef8374fa_knowledge_97cb97064d66",
+     "axa_axa_axa_avizen_pro_2025_04_options_58815b57aa2b_knowledge_3b485dc6b94c",
+     "axa_axa_axa_avizen_pro_2025_04_options_66925aa55f52_knowledge_685604acb028",
+     "axa_axa_axa_entourage_2025_06_options_adbaa1191be7_knowledge_35cafcbd6d53",
+     "axa_axa_axa_entourage_2025_06_options_c09b72c9c8a5_knowledge_4cd76c6d196f",
+     "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+     "axa_essenciel_patrimoine_2023-09_option_1c3ca5ad4e41"
+    ],
+    "cotisations": [
+     "axa_axa_axa_avizen_2025_04_cotisations_et_prix_abc3375d4853_knowledge_811b06665e8e",
+     "axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db",
+     "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_819a475f3f85_knowledge_f28130b0ac7c",
+     "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
+     "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b71f718b3818_knowledge_2ceb18ba5d21",
+     "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8",
+     "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d54c486f45e6_knowledge_9b690d586091"
+    ],
+    "delais": [
+     "axa_axa_axa_avizen_2025_04_delais_carences_franchises_064d54938164_knowledge_e46b76d2bea0",
+     "axa_axa_axa_entourage_2025_06_delais_carences_franchises_1c5ace0d0983_knowledge_9039b861f674",
+     "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73",
+     "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_d1a4a99c46a0_knowledge_d17b80e56b2c",
+     "axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_37393853f687_knowledge_961d22bd6d10"
+    ],
+    "fiscalite": [
+     "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5",
+     "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_a9a1ff6e4623_knowledge_b16b93a33ab5",
+     "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641"
+    ],
+    "points-vigilance": [
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_26fde9bd19a5_knowledge_77e0f0881c3c",
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
+     "axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119",
+     "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174",
+     "axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c",
+     "axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0"
+    ],
+    "formules": [
+     "axa_entourage_2025-06_formule_02",
+     "axa_excelium_vie_2026-05_formule_04"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-deces"
+  },
+  "deces-accidentel": {
+   "nom": "Décès accidentel",
+   "synonymes": [
+    "accidentel"
+   ],
+   "facettes": [
+    "doublement",
+    "capital",
+    "definition accident"
+   ],
+   "categories": {
+    "exclusions": [
+     "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
+     "axa_axa_axa_ma_protection_accident_2024_03_exclusions_30878c977dde_knowledge_bd99bda85a24"
+    ],
+    "declencheurs": [
+     "entour-age:fait:52eb8f16a6:declencheur:1"
+    ],
+    "franchises": [
+     "entour-age:fait:52eb8f16a6:franchise:1"
+    ],
+    "options": [
+     "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad"
+    ],
+    "delais": [
+     "axa_axa_axa_entourage_2025_06_delais_carences_franchises_ad16ac0bce02_knowledge_035d6a65dfdf",
+     "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73"
+    ],
+    "points-vigilance": [
+     "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174"
+    ]
+   },
+   "contrats": [
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Ma Protection Accident (Garantie des accidents de la vie)"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-deces-accidentel"
+  },
+  "accident": {
+   "nom": "Accident",
+   "synonymes": [
+    "accident"
+   ],
+   "facettes": [
+    "definition",
+    "garantie",
+    "exclusion"
+   ],
+   "categories": {
+    "garanties": [
+     "axa_axa_axa_avizen_2025_04_garanties_1aaadbb8226d_knowledge_89bf645880bb",
+     "axa_axa_axa_avizen_2025_04_garanties_1f8e343ca6c1_knowledge_5a79ea84fd80",
+     "axa_axa_axa_avizen_2025_04_garanties_298583bbdc55_knowledge_6df41afcc8cc",
+     "axa_axa_axa_avizen_2025_04_garanties_2bf2b4989e80_knowledge_8e3e075241c0",
+     "axa_axa_axa_avizen_2025_04_garanties_4273eec96de1_knowledge_d37557b53e34",
+     "axa_axa_axa_avizen_2025_04_garanties_4e17c4643abb_knowledge_de5880e82d5e",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_036eb3e36d25_knowledge_8069455b86f2",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_42d478ba7b57_knowledge_6a98e41528ba",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_77887a191541_knowledge_14a294237c21",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_80c6d0464d00_knowledge_c65eda8b8ce7",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_80ee94d21420_knowledge_bea1d352bf2a",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_8c3742b8bbe7_knowledge_18dcafdf9510",
+     "axa_axa_axa_ma_protection_accident_2024_03_garanties_26e5f14dc994_knowledge_debe9a9a0e38",
+     "axa_axa_axa_ma_protection_accident_2024_03_garanties_72021e69b219_knowledge_0bef033c84e0",
+     "axa_axa_axa_ma_protection_accident_2024_03_garanties_e1f5f51c7ef1_knowledge_b9e1422d7074",
+     "axa_axa_axa_ma_protection_accident_2024_03_garanties_f523b50de602_knowledge_daf339abe06e",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_e995610a6cfc_knowledge_bb8b7f487fe1"
+    ],
+    "exclusions": [
+     "axa_axa_axa_avizen_2025_04_exclusions_2bc5e30f05f7_knowledge_31ea614f0cd8",
+     "axa_axa_axa_avizen_2025_04_exclusions_896982b4e3b0_knowledge_584c5c70a769",
+     "axa_axa_axa_avizen_pro_2025_04_exclusions_d5d0437a216c_knowledge_7f1038606936",
+     "axa_axa_axa_entourage_2025_06_exclusions_e6da0a9fdb2b_knowledge_39cbc1ab1739",
+     "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
+     "axa_axa_axa_excelium_vie_2026_05_exclusions_54ca499b394e_knowledge_1e79d12cb875",
+     "axa_axa_axa_ma_protection_accident_2024_03_exclusions_22210ec1a6d2_knowledge_47d6f96ffc4b",
+     "axa_axa_axa_ma_protection_accident_2024_03_exclusions_2ac1c308b745_knowledge_ddebe98b7f99",
+     "axa_axa_axa_ma_protection_accident_2024_03_exclusions_2bbf501d56a0_knowledge_9283aa6a94cd",
+     "axa_axa_axa_ma_protection_accident_2024_03_exclusions_30878c977dde_knowledge_bd99bda85a24",
+     "axa_axa_axa_ma_protection_accident_2024_03_exclusions_5992ad6bba77_knowledge_4ad819df3f8c",
+     "axa_axa_axa_ma_protection_accident_2024_03_exclusions_6e33a15dbb6d_knowledge_ed5c9a10fa14",
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_1d2b077cf406_knowledge_ceaaab562fc8"
+    ],
+    "definitions": [
+     "avizen:def:bc84b360bb",
+     "avizen:def:2ca20f13b2",
+     "avizen:def:26ab92ad8c",
+     "avizen:def:af457b706f",
+     "avizen:def:4289ad5c61",
+     "avizen-pro:def:bc84b360bb",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:def:bc84b360bb",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:def:a7ab0cecc7",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:def:4aa801f469",
+     "masterlife-credit:def:bc84b360bb",
+     "masterlife-credit:def:79f88b32e2"
+    ],
+    "declencheurs": [
+     "avizen:fait:d2f8ad4663:declencheur:0",
+     "avizen:fait:d2f8ad4663:declencheur:1",
+     "avizen:fait:d2f8ad4663:declencheur:2",
+     "avizen:fait:819383df2a:declencheur:0",
+     "avizen:fait:3d298b99e0:declencheur:2",
+     "avizen:fait:741ff49939:declencheur:0",
+     "avizen:fait:3bae81cb83:declencheur:0",
+     "avizen:fait:15b390b722:declencheur:0",
+     "avizen-pro:fait:cfb98375a0:declencheur:0",
+     "avizen-pro:fait:b98f6e974d:declencheur:0",
+     "avizen-pro:fait:45763a5331:declencheur:2",
+     "avizen-pro:fait:f8c491157d:declencheur:0",
+     "avizen-pro:fait:0ec85aa140:declencheur:0",
+     "avizen-pro:fait:300c94bbd6:declencheur:0",
+     "avizen-pro:fait:e381236ba4:declencheur:0",
+     "entour-age:fait:52eb8f16a6:declencheur:1",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:declencheur:0",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:declencheur:1",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:declencheur:2",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:b8adb5c5cb:declencheur:0",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:efc65e79f2:declencheur:0",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:efc65e79f2:declencheur:1",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:efc65e79f2:declencheur:2",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:9347c06b89:declencheur:0",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:4c55c61a58:declencheur:0",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:2bd15a813d:declencheur:0"
+    ],
+    "plafonds": [
+     "avizen:fait:d2f8ad4663:plafond:0",
+     "avizen:fait:819383df2a:plafond:0",
+     "avizen-pro:fait:b98f6e974d:plafond:0",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:plafond:0"
+    ],
+    "franchises": [
+     "avizen:fait:819383df2a:franchise:0",
+     "avizen-pro:fait:b98f6e974d:franchise:0",
+     "entour-age:fait:52eb8f16a6:franchise:1",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:franchise:0"
+    ],
+    "options": [
+     "axa_axa_axa_avizen_2025_04_options_9548821c6b3a_knowledge_3c980033add3",
+     "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+     "axa_axa_axa_ma_protection_accident_2024_03_options_becda5d4fd28_knowledge_111a93605f95"
+    ],
+    "delais": [
+     "axa_axa_axa_avizen_2025_04_delais_carences_franchises_064d54938164_knowledge_e46b76d2bea0",
+     "axa_axa_axa_entourage_2025_06_delais_carences_franchises_1c5ace0d0983_knowledge_9039b861f674",
+     "axa_axa_axa_entourage_2025_06_delais_carences_franchises_ad16ac0bce02_knowledge_035d6a65dfdf",
+     "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73"
+    ],
+    "points-vigilance": [
+     "axa_axa_axa_avizen_2025_04_points_de_vigilance_7bce30284464_knowledge_2cd764868136",
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_26fde9bd19a5_knowledge_77e0f0881c3c",
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_b3c4d3f2b5e8_knowledge_7db2ae0bff95",
+     "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174",
+     "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4bcd5a5c99f0_knowledge_9e023765fd47"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-accident"
+  },
+  "hospitalisation": {
+   "nom": "Hospitalisation",
+   "synonymes": [
+    "hospitalis"
+   ],
+   "facettes": [
+    "indemnite",
+    "forfait",
+    "franchise"
+   ],
+   "categories": {
+    "garanties": [
+     "axa_axa_axa_entourage_2025_06_garanties_23a00d124ec2_knowledge_1b9ff505ee1c",
+     "axa_axa_axa_entourage_2025_06_garanties_7df9dcef291e_knowledge_8602bccd2ff7"
+    ],
+    "exclusions": [
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_2bcaeda3d931_knowledge_1b55e7e978ee"
+    ],
+    "definitions": [
+     "avizen-pro:def:4ce8507e31"
+    ],
+    "options": [
+     "axa_axa_axa_masterlife_credit_2024_10_options_bb2687eed056_knowledge_8805759d2325"
+    ],
+    "delais": [
+     "axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_467720c3c6b2_knowledge_992f5f813b44"
+    ],
+    "points-vigilance": [
+     "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_c3162986a52f_knowledge_df9e127805c0"
+    ]
+   },
+   "contrats": [
+    "Avizen Pro",
+    "Entour'Age",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-hospitalisation"
+  },
+  "incapacite-temporaire": {
+   "nom": "Incapacité temporaire",
+   "synonymes": [
+    "incapacite temporaire",
+    "itt",
+    "indemnite journaliere",
+    "indemnités journalières"
+   ],
+   "facettes": [
+    "franchise",
+    "delai"
+   ],
+   "categories": {
+    "garanties": [
+     "axa_axa_axa_avizen_2025_04_garanties_298583bbdc55_knowledge_6df41afcc8cc",
+     "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+     "axa_axa_axa_avizen_2025_04_garanties_4e17c4643abb_knowledge_de5880e82d5e",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_036eb3e36d25_knowledge_8069455b86f2",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_80c6d0464d00_knowledge_c65eda8b8ce7",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_80ee94d21420_knowledge_bea1d352bf2a",
+     "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb"
+    ],
+    "exclusions": [
+     "axa_axa_axa_avizen_2025_04_exclusions_2bc5e30f05f7_knowledge_31ea614f0cd8",
+     "axa_axa_axa_avizen_pro_2025_04_exclusions_d519dc75ce41_knowledge_62b80b2e93fe"
+    ],
+    "definitions": [
+     "avizen:def:26ab92ad8c",
+     "avizen:def:5f15e6a842",
+     "masterlife-credit:def:79f88b32e2"
+    ],
+    "conditions": [
+     "avizen-pro:cond:7f172f0e1e"
+    ],
+    "declencheurs": [
+     "avizen:fait:89a1ca75b5:declencheur:0",
+     "avizen:fait:89a1ca75b5:declencheur:1",
+     "avizen:fait:819383df2a:declencheur:0",
+     "avizen:fait:e73c1c5a47:declencheur:0",
+     "avizen-pro:fait:e4f8ae15eb:declencheur:0",
+     "avizen-pro:fait:e4f8ae15eb:declencheur:1",
+     "avizen-pro:fait:b98f6e974d:declencheur:0",
+     "avizen-pro:fait:e381236ba4:declencheur:0"
+    ],
+    "plafonds": [
+     "avizen:fait:89a1ca75b5:plafond:0",
+     "avizen:fait:819383df2a:plafond:0",
+     "avizen-pro:fait:e4f8ae15eb:plafond:0",
+     "avizen-pro:fait:b98f6e974d:plafond:0"
+    ],
+    "franchises": [
+     "avizen:fait:89a1ca75b5:franchise:0",
+     "avizen:fait:819383df2a:franchise:0",
+     "avizen-pro:fait:e4f8ae15eb:franchise:0",
+     "avizen-pro:fait:b98f6e974d:franchise:0"
+    ],
+    "options": [
+     "axa_axa_axa_avizen_2025_04_options_6a1ed3c8d2d1_knowledge_bf648561fef8",
+     "axa_axa_axa_avizen_pro_2025_04_options_600b2b2533a5_knowledge_9af710c106d5"
+    ],
+    "delais": [
+     "axa_axa_axa_avizen_2025_04_delais_carences_franchises_0ecfc14749f3_knowledge_02dcffe3db8b",
+     "axa_axa_axa_avizen_2025_04_delais_carences_franchises_7353dbad0140_knowledge_359a591302ec",
+     "axa_axa_axa_avizen_2025_04_delais_carences_franchises_8cffe28be8f9_knowledge_799a20a8bb52",
+     "axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_32baffb6fabd_knowledge_480adab7336d",
+     "axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_4c3eda7401a0_knowledge_41719d2a39ff"
+    ],
+    "points-vigilance": [
+     "axa_axa_axa_avizen_2025_04_points_de_vigilance_35a954074956_knowledge_5c564f1268c0",
+     "axa_axa_axa_avizen_2025_04_points_de_vigilance_4be05876c398_knowledge_c48f67d5f295",
+     "axa_axa_axa_avizen_2025_04_points_de_vigilance_cc15c2c82089_knowledge_a0dae9627c20",
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_26fde9bd19a5_knowledge_77e0f0881c3c",
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291"
+    ],
+    "formules": [
+     "axa_avizen_2025-04_formule_02",
+     "axa_avizen_pro_2025-04_formule_03",
+     "axa_entourage_2025-06_formule_02",
+     "axa_essenciel_2025-06_formule_01",
+     "axa_excelium_vie_2026-05_formule_04"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Excelium (assurance vie)",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-incapacite-temporaire"
+  },
+  "carence": {
+   "nom": "Carence / délai d'attente",
+   "synonymes": [
+    "carence",
+    "delai d attente",
+    "delai de carence",
+    "attente"
+   ],
+   "facettes": [
+    "mois",
+    "annee",
+    "delai"
+   ],
+   "categories": {
+    "exclusions": [
+     "axa_axa_axa_avizen_pro_2025_04_exclusions_d519dc75ce41_knowledge_62b80b2e93fe"
+    ],
+    "definitions": [
+     "avizen:def:216df9ed2f"
+    ],
+    "conditions": [
+     "entour-age:cond:2a7fe9c4fc"
+    ],
+    "declencheurs": [
+     "entour-age:fait:52eb8f16a6:declencheur:1"
+    ],
+    "franchises": [
+     "avizen:fait:3d298b99e0:franchise:0",
+     "avizen-pro:fait:45763a5331:franchise:0",
+     "entour-age:fait:52eb8f16a6:franchise:1"
+    ],
+    "options": [
+     "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad"
+    ],
+    "points-vigilance": [
+     "axa_axa_axa_entourage_2025_06_points_de_vigilance_8eb68cebc424_knowledge_c2ef0572d645",
+     "axa_axa_axa_entourage_2025_06_points_de_vigilance_e441d358bb4c_knowledge_b70fb02a5650"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-carence"
+  },
+  "rachat": {
+   "nom": "Rachat",
+   "synonymes": [
+    "rachat",
+    "valeur de rachat",
+    "mise en reduction",
+    "reduction"
+   ],
+   "facettes": [
+    "tableau",
+    "delai",
+    "penalite"
+   ],
+   "categories": {
+    "garanties": [
+     "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+     "axa_axa_axa_entourage_2025_06_garanties_d34d924c6410_knowledge_ac2f1209e317",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_74ce8a266629_knowledge_ea183a5624f4",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_c32aff3d329b_knowledge_f37b388cf816",
+     "axa_axa_axa_ma_retraite_2026_05_garanties_2a82507190c0_knowledge_a3e9a5052e25"
+    ],
+    "exclusions": [
+     "axa_axa_axa_ma_retraite_2026_05_exclusions_e6de09eaf132_knowledge_bb7640d6ac46",
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_2bcaeda3d931_knowledge_1b55e7e978ee"
+    ],
+    "definitions": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:def:4aa801f469"
+    ],
+    "plafonds": [
+     "avizen:fait:a1589f2d75:plafond:0",
+     "excelium-assurance-vie:fait:62d6fd5c2d:plafond:0"
+    ],
+    "options": [
+     "axa_axa_axa_entourage_2025_06_options_1e769dd60f47_knowledge_1f9477b5236e",
+     "axa_axa_axa_entourage_2025_06_options_a965668d36e4_knowledge_28f942a2bdaa",
+     "axa_axa_axa_essenciel_2025_06_options_de0a3dff8347_knowledge_6e47ac594507",
+     "axa_essenciel_patrimoine_2023-09_option_d5aed7e8f30b",
+     "axa_essenciel_patrimoine_2023-09_option_4c8a4bdf86b1",
+     "axa_essenciel_patrimoine_2023-09_option_133833a39642",
+     "axa_axa_axa_excelium_vie_2026_05_options_a2272a8885f5_knowledge_cdbcbea03f9e"
+    ],
+    "cotisations": [
+     "axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db",
+     "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
+     "axa_axa_axa_entourage_2025_06_cotisations_et_prix_df0f22fdd097_knowledge_21a4375ed5e3",
+     "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0d109ff2f1ce_knowledge_b64c3388e76a",
+     "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0fdc19816413_knowledge_010612cb7537",
+     "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8",
+     "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_171c5a3a4b19_knowledge_833f37b8be6f",
+     "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674",
+     "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
+     "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_9ba03053e69a_knowledge_d8f10c7d1ce0",
+     "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_8936eebaa5cc_knowledge_85eab19f89d6"
+    ],
+    "delais": [
+     "axa_axa_axa_ma_retraite_2026_05_delais_carences_franchises_de86b07410c8_knowledge_9957db1025ba"
+    ],
+    "fiscalite": [
+     "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09",
+     "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_23f113174dd4_knowledge_0ecf20a9cf62",
+     "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_906eb3ee9913_knowledge_306ed551c6e9",
+     "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_d15d09b28f2a_knowledge_f7005bf2d30b",
+     "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2b1334381d5d_knowledge_1ed566556524",
+     "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2db09360e436_knowledge_a3a809ae7819",
+     "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_43a1be7843ad_knowledge_c5adf18d1814",
+     "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_98ed4e335a5b_knowledge_6bb9408ea279",
+     "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_6e3dedbb6c6b_knowledge_e47bdf2e7075",
+     "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_933bb6edae6e_knowledge_55a3c4fbd645",
+     "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_10b11fed39d8_knowledge_81a9d27bb02d",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_622c88ea9f4b_knowledge_9e5bc789bca2",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_94c8368f6856_knowledge_d80119f3d2ae",
+     "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_3dfb729787c5_knowledge_8280ed50233d",
+     "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_85bea04ba9d3_knowledge_ad9b384335e5",
+     "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_c0f287ca10a5_knowledge_4b1481c5d49d",
+     "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_ee50e7e2015b_knowledge_076ec1b062c1",
+     "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_23df485b165e_knowledge_a358e165a171",
+     "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_243bf8cd8a2e_knowledge_fd2afdcc6a20",
+     "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_72c35224482f_knowledge_a9a24a4c6a38",
+     "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_d7a8988e5d19_knowledge_70abebba0cab",
+     "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1c74300ec161_knowledge_7796cf78275b",
+     "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_30d289ee955a_knowledge_7c124417b8b5",
+     "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_58efaba51d48_knowledge_4b450012844f",
+     "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_78d2a3fea36c_knowledge_b714c809e8b8",
+     "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6184af0ed0bb_knowledge_d2b949a61e4b",
+     "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_8d6684edc0fe_knowledge_549556fde47d",
+     "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_965709e14702_knowledge_59bba4ded7e7"
+    ],
+    "points-vigilance": [
+     "axa_axa_axa_entourage_2025_06_points_de_vigilance_6f230082ba39_knowledge_79617a24203d",
+     "axa_axa_axa_entourage_2025_06_points_de_vigilance_acdb551cb108_knowledge_8417d05b72d9",
+     "axa_axa_axa_essenciel_2025_06_points_de_vigilance_62de1e7dadfb_knowledge_09e6e3b5f2e2",
+     "axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c",
+     "axa_axa_axa_essenciel_2025_06_points_de_vigilance_e2fddb92cc3a_knowledge_194eb1adda54",
+     "axa_essenciel_patrimoine_2023-09_point_vigilance_09cc2c565c43",
+     "axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c",
+     "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_0aa645be29d8_knowledge_2075dc1b8feb",
+     "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_14236254decd_knowledge_8c4dc54fa7d1"
+    ],
+    "formules": [
+     "axa_entourage_2025-06_formule_01",
+     "axa_essenciel_2025-06_formule_02",
+     "axa_essenciel_2025-06_formule_03",
+     "axa_excelium_vie_2026-05_formule_01",
+     "axa_excelium_vie_2026-05_formule_02",
+     "axa_excelium_vie_2026-05_formule_04"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-rachat"
+  },
+  "souscription": {
+   "nom": "Souscription & adhésion",
+   "synonymes": [
+    "souscription",
+    "adhesion",
+    "adherer",
+    "formalite",
+    "questionnaire"
+   ],
+   "facettes": [
+    "age",
+    "medical",
+    "certificat"
+   ],
+   "categories": {
+    "garanties": [
+     "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+     "axa_axa_axa_entourage_2025_06_garanties_7df9dcef291e_knowledge_8602bccd2ff7",
+     "axa_axa_axa_entourage_2025_06_garanties_d34d924c6410_knowledge_ac2f1209e317",
+     "axa_axa_axa_entourage_2025_06_garanties_ef6ab638bf32_knowledge_7c02f4cdceb0",
+     "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb",
+     "axa_axa_axa_essenciel_2025_06_garanties_9ebc6fa82294_knowledge_6e72c2b48f79",
+     "axa_axa_axa_essenciel_2025_06_garanties_c0b7532da10b_knowledge_580dd13f2d14",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_646ff8db73da_knowledge_44cff956d072",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_74ce8a266629_knowledge_ea183a5624f4",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_d4df6041404f_knowledge_6cd775321f12",
+     "axa_axa_axa_ma_retraite_2026_05_garanties_2f0464c0cd48_knowledge_500bf61880f1",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_93963eb93de3_knowledge_9f59cb6de90f",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_adf30e38133e_knowledge_9073a4080125",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_d491c9d8dfde_knowledge_32a7d6cd89bf"
+    ],
+    "exclusions": [
+     "axa_axa_axa_avizen_pro_2025_04_exclusions_d5d0437a216c_knowledge_7f1038606936",
+     "axa_axa_axa_essenciel_2025_06_exclusions_e72bdb32890b_knowledge_17f7b1238668",
+     "axa_axa_axa_ma_retraite_2026_05_exclusions_e6de09eaf132_knowledge_bb7640d6ac46",
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_84dc965c3cbd_knowledge_e316f16d3470"
+    ],
+    "definitions": [
+     "avizen:def:5f15e6a842",
+     "avizen:def:216df9ed2f",
+     "excelium-assurance-vie:def:260046ebea"
+    ],
+    "conditions": [
+     "avizen:cond:94ec71256c",
+     "avizen:cond:df91ea5e02",
+     "entour-age:cond:0757925f45",
+     "entour-age:cond:2a7fe9c4fc",
+     "excelium-assurance-vie:cond:04d661bd25",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per:cond:c956e63a5d",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per:cond:e8e8e580d8",
+     "masterlife-credit:cond:1ed4ab0baf"
+    ],
+    "declencheurs": [
+     "avizen-pro:fait:e4f8ae15eb:declencheur:0",
+     "entour-age:fait:2a25013e7a:declencheur:0",
+     "excelium-assurance-vie:fait:0b27383ed4:declencheur:1"
+    ],
+    "plafonds": [
+     "avizen:fait:2cbcc3adad:plafond:0",
+     "avizen:fait:d2f8ad4663:plafond:0",
+     "entour-age:fait:2a25013e7a:plafond:0",
+     "entour-age:fait:2094e3a95e:plafond:1"
+    ],
+    "franchises": [
+     "avizen:fait:89a1ca75b5:franchise:0",
+     "avizen:fait:819383df2a:franchise:0",
+     "entour-age:fait:52eb8f16a6:franchise:1"
+    ],
+    "options": [
+     "axa_axa_axa_avizen_2025_04_options_8f4ee5536c39_knowledge_566df5b56ec5",
+     "axa_axa_axa_avizen_pro_2025_04_options_30367f970ec3_knowledge_9b700659935b",
+     "axa_axa_axa_avizen_pro_2025_04_options_cd5baa4496f8_knowledge_48ad072d3fa9",
+     "axa_axa_axa_entourage_2025_06_options_1e769dd60f47_knowledge_1f9477b5236e",
+     "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+     "axa_axa_axa_essenciel_2025_06_options_de0a3dff8347_knowledge_6e47ac594507",
+     "axa_essenciel_patrimoine_2023-09_option_4c8a4bdf86b1",
+     "axa_essenciel_patrimoine_2023-09_option_133833a39642",
+     "axa_axa_axa_ma_retraite_2026_05_options_eeb5b0c6e766_knowledge_6af0d458d009",
+     "axa_axa_axa_masterlife_credit_2024_10_options_cd4d91e29f75_knowledge_d0c39ab9e6b2"
+    ],
+    "cotisations": [
+     "axa_axa_axa_avizen_2025_04_cotisations_et_prix_abc3375d4853_knowledge_811b06665e8e",
+     "axa_axa_axa_avizen_2025_04_cotisations_et_prix_b516c9e6cfb0_knowledge_09a0e053a243",
+     "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_759b89f27c1f_knowledge_d18add8ca1f6",
+     "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d",
+     "axa_axa_axa_entourage_2025_06_cotisations_et_prix_bda7c72e6e68_knowledge_c08c819e085e",
+     "axa_axa_axa_entourage_2025_06_cotisations_et_prix_d8f6e55152e0_knowledge_4ce4ee258710",
+     "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0fdc19816413_knowledge_010612cb7537",
+     "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8",
+     "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d5f8f13b0b5c_knowledge_a95f12312a57",
+     "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_58fc69bea0e9_knowledge_6dce3bffa380",
+     "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_0d373eee8846_knowledge_4a70ecf97022",
+     "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_949c0d6b1fe0_knowledge_868134057060",
+     "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_317921e2cd84_knowledge_8dcd710beb80"
+    ],
+    "delais": [
+     "axa_axa_axa_avizen_2025_04_delais_carences_franchises_0ecfc14749f3_knowledge_02dcffe3db8b",
+     "axa_axa_axa_avizen_2025_04_delais_carences_franchises_7353dbad0140_knowledge_359a591302ec",
+     "axa_axa_axa_avizen_2025_04_delais_carences_franchises_8cffe28be8f9_knowledge_799a20a8bb52",
+     "axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_32baffb6fabd_knowledge_480adab7336d",
+     "axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_4c3eda7401a0_knowledge_41719d2a39ff",
+     "axa_axa_axa_entourage_2025_06_delais_carences_franchises_ac7f227d66d5_knowledge_7ffb7027b5a8",
+     "axa_axa_axa_entourage_2025_06_delais_carences_franchises_ad16ac0bce02_knowledge_035d6a65dfdf"
+    ],
+    "fiscalite": [
+     "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5",
+     "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_23f113174dd4_knowledge_0ecf20a9cf62",
+     "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_a9a1ff6e4623_knowledge_b16b93a33ab5",
+     "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_6e3dedbb6c6b_knowledge_e47bdf2e7075",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_10b11fed39d8_knowledge_81a9d27bb02d",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_622c88ea9f4b_knowledge_9e5bc789bca2",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_94c8368f6856_knowledge_d80119f3d2ae",
+     "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_ee50e7e2015b_knowledge_076ec1b062c1",
+     "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_965709e14702_knowledge_59bba4ded7e7"
+    ],
+    "points-vigilance": [
+     "axa_axa_axa_avizen_2025_04_points_de_vigilance_7fcd9a720eb6_knowledge_0576f001d0e2",
+     "axa_axa_axa_avizen_2025_04_points_de_vigilance_cc15c2c82089_knowledge_a0dae9627c20",
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
+     "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_bb01f772b8f5_knowledge_b348f1b96a11",
+     "axa_axa_axa_entourage_2025_06_points_de_vigilance_e441d358bb4c_knowledge_b70fb02a5650",
+     "axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f",
+     "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_db274a95a51e_knowledge_af2979bd8634"
+    ],
+    "formules": [
+     "axa_entourage_2025-06_formule_01"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-souscription"
+  },
+  "age": {
+   "nom": "Âge",
+   "synonymes": [
+    "age a l adhesion",
+    "age maximal",
+    "age minimal",
+    "ans inclus",
+    "annee de naissance"
+   ],
+   "facettes": [
+    "18",
+    "65",
+    "limite"
+   ],
+   "categories": {
+    "conditions": [
+     "entour-age:cond:0757925f45"
+    ],
+    "cotisations": [
+     "axa_axa_axa_avizen_2025_04_cotisations_et_prix_abc3375d4853_knowledge_811b06665e8e"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Entour'Age"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-age"
+  },
+  "suicide": {
+   "nom": "Suicide",
+   "synonymes": [
+    "suicide"
+   ],
+   "facettes": [
+    "premiere annee",
+    "exclusion",
+    "delai"
+   ],
+   "categories": {
+    "exclusions": [
+     "axa_axa_axa_avizen_2025_04_exclusions_2bc5e30f05f7_knowledge_31ea614f0cd8",
+     "axa_axa_axa_avizen_2025_04_exclusions_88792af8010e_knowledge_7a2869e7f5a6",
+     "axa_axa_axa_avizen_pro_2025_04_exclusions_2aef8f17ca9c_knowledge_1c8e77582d69",
+     "axa_axa_axa_entourage_2025_06_exclusions_edcf6ad19ae4_knowledge_404409f6a74a",
+     "axa_axa_axa_essenciel_2025_06_exclusions_e72bdb32890b_knowledge_17f7b1238668",
+     "axa_essenciel_patrimoine_2023-09_exclusion_90a4216e1cb7",
+     "axa_axa_axa_excelium_vie_2026_05_exclusions_54ca499b394e_knowledge_1e79d12cb875",
+     "axa_axa_axa_ma_protection_accident_2024_03_exclusions_056b97629881_knowledge_04ae4fbde1d2",
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_3388797f1d90_knowledge_3dcf66148710",
+     "axa_axa_axa_masterlife_credit_2024_10_exclusions_84dc965c3cbd_knowledge_e316f16d3470"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-suicide"
+  },
+  "beneficiaire": {
+   "nom": "Bénéficiaire",
+   "synonymes": [
+    "beneficiaire",
+    "clause beneficiaire"
+   ],
+   "facettes": [
+    "designation",
+    "reversion"
+   ],
+   "categories": {
+    "garanties": [
+     "axa_axa_axa_avizen_2025_04_garanties_338c6fd6176a_knowledge_8938e101c7dc",
+     "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb",
+     "axa_essenciel_patrimoine_2023-09_garantie_e7d9ed7ecece",
+     "axa_axa_axa_ma_retraite_2026_05_garanties_2f0464c0cd48_knowledge_500bf61880f1",
+     "axa_axa_axa_ma_retraite_2026_05_garanties_dd10b98b0d62_knowledge_5506ae497daf",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_7fecd8ae9f79_knowledge_d0af30a9aaf6",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_f9f69ff37530_knowledge_4f246d649228"
+    ],
+    "exclusions": [
+     "axa_axa_axa_avizen_2025_04_exclusions_2e814add9402_knowledge_a66ece2859b1",
+     "axa_axa_axa_avizen_pro_2025_04_exclusions_2aef8f17ca9c_knowledge_1c8e77582d69"
+    ],
+    "definitions": [
+     "avizen-pro:def:095b5fb514",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:def:11cbeb7842"
+    ],
+    "plafonds": [
+     "avizen:fait:a1589f2d75:plafond:0",
+     "avizen-pro:fait:cf7576de07:plafond:0"
+    ],
+    "options": [
+     "axa_axa_axa_avizen_2025_04_options_9f4385ee345a_knowledge_219241330066",
+     "axa_axa_axa_entourage_2025_06_options_adbaa1191be7_knowledge_35cafcbd6d53",
+     "axa_axa_axa_entourage_2025_06_options_c09b72c9c8a5_knowledge_4cd76c6d196f"
+    ],
+    "delais": [
+     "axa_axa_axa_avizen_2025_04_delais_carences_franchises_064d54938164_knowledge_e46b76d2bea0",
+     "axa_axa_axa_entourage_2025_06_delais_carences_franchises_1c5ace0d0983_knowledge_9039b861f674",
+     "axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_53a94ed30feb_knowledge_86f7a15c46f1"
+    ],
+    "fiscalite": [
+     "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5",
+     "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_10b11fed39d8_knowledge_81a9d27bb02d",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_622c88ea9f4b_knowledge_9e5bc789bca2",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641",
+     "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_85bea04ba9d3_knowledge_ad9b384335e5",
+     "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_ee50e7e2015b_knowledge_076ec1b062c1"
+    ],
+    "points-vigilance": [
+     "axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-beneficiaire"
+  },
+  "fiscalite": {
+   "nom": "Fiscalité",
+   "synonymes": [
+    "fiscal",
+    "990",
+    "757",
+    "impot",
+    "succession",
+    "abattement",
+    "cgi"
+   ],
+   "facettes": [
+    "transmission",
+    "bareme"
+   ],
+   "categories": {
+    "garanties": [
+     "axa_axa_axa_avizen_2025_04_garanties_338c6fd6176a_knowledge_8938e101c7dc",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_5aa626eed35e_knowledge_7d96fb0fa4eb",
+     "axa_axa_axa_essenciel_2025_06_garanties_c0b7532da10b_knowledge_580dd13f2d14",
+     "axa_essenciel_patrimoine_2023-09_garantie_e7d9ed7ecece"
+    ],
+    "definitions": [
+     "avizen:def:714f512e9e",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:def:890b9fbc67"
+    ],
+    "conditions": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:cond:88e167c83f",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie:cond:1158f219d0"
+    ],
+    "declencheurs": [
+     "avizen:fait:9893112dc5:declencheur:1",
+     "avizen-pro:fait:6354ec813b:declencheur:0"
+    ],
+    "options": [
+     "axa_axa_axa_avizen_pro_2025_04_options_30367f970ec3_knowledge_9b700659935b",
+     "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+     "axa_axa_axa_excelium_vie_2026_05_options_a2272a8885f5_knowledge_cdbcbea03f9e"
+    ],
+    "cotisations": [
+     "axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db",
+     "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
+     "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_5f78886419a6_knowledge_e1c82020b80b"
+    ],
+    "delais": [
+     "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73"
+    ],
+    "fiscalite": [
+     "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5",
+     "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_a9a1ff6e4623_knowledge_b16b93a33ab5",
+     "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_6b52755aa9bc_knowledge_bf8cc347b759",
+     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641",
+     "axa_essenciel_patrimoine_2023-09_fiscalite_d81aa98e400a",
+     "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba",
+     "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_c0f287ca10a5_knowledge_4b1481c5d49d",
+     "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_12a04ea57d41_knowledge_347f5f4fe5ab",
+     "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779",
+     "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_78d2a3fea36c_knowledge_b714c809e8b8",
+     "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_a579030f51e4_knowledge_6b6563df11b1"
+    ],
+    "points-vigilance": [
+     "axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753",
+     "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_33113b1f8da2_knowledge_5731bc2dd8df",
+     "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_4638a08834d5_knowledge_0ba923dcc369"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-fiscalite"
+  },
+  "fin-garantie": {
+   "nom": "Fin de garantie",
+   "synonymes": [
+    "fin de garantie",
+    "cesse",
+    "terme",
+    "expiration",
+    "resiliation"
+   ],
+   "facettes": [
+    "age",
+    "deces"
+   ],
+   "categories": {
+    "garanties": [
+     "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+     "axa_axa_axa_avizen_2025_04_garanties_4273eec96de1_knowledge_d37557b53e34",
+     "axa_axa_axa_avizen_2025_04_garanties_4e17c4643abb_knowledge_de5880e82d5e",
+     "axa_axa_axa_avizen_pro_2025_04_garanties_036eb3e36d25_knowledge_8069455b86f2",
+     "axa_axa_axa_entourage_2025_06_garanties_d34d924c6410_knowledge_ac2f1209e317",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_74ce8a266629_knowledge_ea183a5624f4",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_c32aff3d329b_knowledge_f37b388cf816",
+     "axa_axa_axa_excelium_vie_2026_05_garanties_d4df6041404f_knowledge_6cd775321f12",
+     "axa_axa_axa_ma_retraite_2026_05_garanties_dd10b98b0d62_knowledge_5506ae497daf",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_7fecd8ae9f79_knowledge_d0af30a9aaf6",
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_adf30e38133e_knowledge_9073a4080125"
+    ],
+    "exclusions": [
+     "axa_axa_axa_ma_retraite_2026_05_exclusions_e6de09eaf132_knowledge_bb7640d6ac46"
+    ],
+    "declencheurs": [
+     "entour-age:fait:52eb8f16a6:declencheur:1",
+     "excelium-assurance-vie:fait:4475e2a358:declencheur:0",
+     "excelium-assurance-vie:fait:4475e2a358:declencheur:1",
+     "excelium-assurance-vie:fait:48e4ad06df:declencheur:0"
+    ],
+    "plafonds": [
+     "masterlife-credit:fait:48d0f52caf:plafond:0"
+    ],
+    "options": [
+     "axa_axa_axa_avizen_2025_04_options_8f4ee5536c39_knowledge_566df5b56ec5",
+     "axa_axa_axa_avizen_2025_04_options_9548821c6b3a_knowledge_3c980033add3",
+     "axa_axa_axa_entourage_2025_06_options_c09b72c9c8a5_knowledge_4cd76c6d196f",
+     "axa_axa_axa_essenciel_2025_06_options_de0a3dff8347_knowledge_6e47ac594507",
+     "axa_essenciel_patrimoine_2023-09_option_d5aed7e8f30b",
+     "axa_essenciel_patrimoine_2023-09_option_4c8a4bdf86b1",
+     "axa_axa_axa_masterlife_credit_2024_10_options_cd4d91e29f75_knowledge_d0c39ab9e6b2"
+    ],
+    "cotisations": [
+     "axa_axa_axa_avizen_2025_04_cotisations_et_prix_b516c9e6cfb0_knowledge_09a0e053a243",
+     "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_759b89f27c1f_knowledge_d18add8ca1f6",
+     "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d",
+     "axa_axa_axa_entourage_2025_06_cotisations_et_prix_d8f6e55152e0_knowledge_4ce4ee258710",
+     "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_0abf98aa5778_knowledge_445e279cef50",
+     "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_fcc33a37f235_knowledge_bdaff89df963"
+    ],
+    "delais": [
+     "axa_axa_axa_avizen_2025_04_delais_carences_franchises_848a468470d5_knowledge_44d4257a68c3",
+     "axa_axa_axa_excelium_vie_2026_05_delais_carences_franchises_263e9fdfb993_knowledge_59f8e985663a"
+    ],
+    "fiscalite": [
+     "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_933bb6edae6e_knowledge_55a3c4fbd645"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-fin-garantie"
+  },
+  "association": {
+   "nom": "Association / ANPERE",
+   "synonymes": [
+    "anpere",
+    "association",
+    "gestion paritaire"
+   ],
+   "facettes": [
+    "adherent",
+    "groupe"
+   ],
+   "categories": {
+    "garanties": [
+     "axa_axa_axa_masterlife_credit_2024_10_garanties_adf30e38133e_knowledge_9073a4080125"
+    ],
+    "conditions": [
+     "avizen:cond:94ec71256c",
+     "avizen-pro:cond:7f172f0e1e",
+     "entour-age:cond:0757925f45",
+     "excelium-assurance-vie:cond:04d661bd25",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per:cond:c956e63a5d",
+     "masterlife-credit:cond:1ed4ab0baf"
+    ],
+    "cotisations": [
+     "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d",
+     "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_58fc69bea0e9_knowledge_6dce3bffa380",
+     "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_949c0d6b1fe0_knowledge_868134057060"
+    ]
+   },
+   "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Excelium (assurance vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-association"
+  }
+ }
+}

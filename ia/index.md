@@ -11,7 +11,12 @@
 
 ## Commencer (pour une IA)
 - **[Guide IA](guide-ia.html)** — comment utiliser Gabriel AXA (règles, arbitrage, absence, liens).
+- **[Outils IA](outils.html)** — planificateur, concepts, couverture, comparateur, preuves, méthode.
 - **[Manifeste IA](manifeste.html)** — organisation, citation, hiérarchie, autorité.
+
+## Outils de circulation & recherche
+- [Planificateur](planificateur.html) (question → plan) · [Concepts](concepts.html) · [Détecteur de couverture](couverture-recherche.html)
+- [Comparateur thématique](comparateur.html) · [Graphe de preuves](preuves.html) · [Méthode question complexe](methode-question-complexe.html) · [Tests](tests.html)
 
 ## Données
 - [Contrats](contrats.html) (9) · [Pack A](pack-a.html) · [Pack B](pack-b.html)

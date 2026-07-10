@@ -1,0 +1,949 @@
+{
+ "meta": {
+  "version": "1.2.0",
+  "genere_le": "2026-07-10",
+  "usage": "Mapper une question -> concept(s) via synonymes, obtenir contrats candidats + catégories à consulter + notices. Ne répond pas ; prépare le parcours."
+ },
+ "plans": {
+  "invalidite": {
+   "concept": "Invalidité",
+   "synonymes": [
+    "invalidit",
+    "ipt",
+    "ipp",
+    "ptia",
+    "incapacit"
+   ],
+   "categories_a_consulter": [
+    "garanties",
+    "exclusions",
+    "definitions",
+    "conditions",
+    "declencheurs",
+    "plafonds",
+    "franchises",
+    "options",
+    "cotisations",
+    "delais",
+    "fiscalite",
+    "points-vigilance",
+    "formules"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+    },
+    {
+     "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+    },
+    {
+     "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "deces": {
+   "concept": "Décès",
+   "synonymes": [
+    "deces",
+    "décès",
+    "mortalit",
+    "capital deces"
+   ],
+   "categories_a_consulter": [
+    "garanties",
+    "exclusions",
+    "definitions",
+    "conditions",
+    "declencheurs",
+    "plafonds",
+    "options",
+    "cotisations",
+    "delais",
+    "fiscalite",
+    "points-vigilance",
+    "formules"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel Patrimoine",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+    },
+    {
+     "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+    },
+    {
+     "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "deces-accidentel": {
+   "concept": "Décès accidentel",
+   "synonymes": [
+    "accidentel"
+   ],
+   "categories_a_consulter": [
+    "exclusions",
+    "declencheurs",
+    "franchises",
+    "options",
+    "delais",
+    "points-vigilance"
+   ],
+   "contrats_candidats": [
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Ma Protection Accident (Garantie des accidents de la vie)"
+   ],
+   "notices": [
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    },
+    {
+     "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "accident": {
+   "concept": "Accident",
+   "synonymes": [
+    "accident"
+   ],
+   "categories_a_consulter": [
+    "garanties",
+    "exclusions",
+    "definitions",
+    "declencheurs",
+    "plafonds",
+    "franchises",
+    "options",
+    "delais",
+    "points-vigilance"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+    },
+    {
+     "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "hospitalisation": {
+   "concept": "Hospitalisation",
+   "synonymes": [
+    "hospitalis"
+   ],
+   "categories_a_consulter": [
+    "garanties",
+    "exclusions",
+    "definitions",
+    "options",
+    "delais",
+    "points-vigilance"
+   ],
+   "contrats_candidats": [
+    "Avizen Pro",
+    "Entour'Age",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "incapacite-temporaire": {
+   "concept": "Incapacité temporaire",
+   "synonymes": [
+    "incapacite temporaire",
+    "itt",
+    "indemnite journaliere",
+    "indemnités journalières"
+   ],
+   "categories_a_consulter": [
+    "garanties",
+    "exclusions",
+    "definitions",
+    "conditions",
+    "declencheurs",
+    "plafonds",
+    "franchises",
+    "options",
+    "delais",
+    "points-vigilance",
+    "formules"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Excelium (assurance vie)",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "carence": {
+   "concept": "Carence / délai d'attente",
+   "synonymes": [
+    "carence",
+    "delai d attente",
+    "delai de carence",
+    "attente"
+   ],
+   "categories_a_consulter": [
+    "exclusions",
+    "definitions",
+    "conditions",
+    "declencheurs",
+    "franchises",
+    "options",
+    "points-vigilance"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "rachat": {
+   "concept": "Rachat",
+   "synonymes": [
+    "rachat",
+    "valeur de rachat",
+    "mise en reduction",
+    "reduction"
+   ],
+   "categories_a_consulter": [
+    "garanties",
+    "exclusions",
+    "definitions",
+    "plafonds",
+    "options",
+    "cotisations",
+    "delais",
+    "fiscalite",
+    "points-vigilance",
+    "formules"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel Patrimoine",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+    },
+    {
+     "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+    },
+    {
+     "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "souscription": {
+   "concept": "Souscription & adhésion",
+   "synonymes": [
+    "souscription",
+    "adhesion",
+    "adherer",
+    "formalite",
+    "questionnaire"
+   ],
+   "categories_a_consulter": [
+    "garanties",
+    "exclusions",
+    "definitions",
+    "conditions",
+    "declencheurs",
+    "plafonds",
+    "franchises",
+    "options",
+    "cotisations",
+    "delais",
+    "fiscalite",
+    "points-vigilance",
+    "formules"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel Patrimoine",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+    },
+    {
+     "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "age": {
+   "concept": "Âge",
+   "synonymes": [
+    "age a l adhesion",
+    "age maximal",
+    "age minimal",
+    "ans inclus",
+    "annee de naissance"
+   ],
+   "categories_a_consulter": [
+    "conditions",
+    "cotisations"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Entour'Age"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "suicide": {
+   "concept": "Suicide",
+   "synonymes": [
+    "suicide"
+   ],
+   "categories_a_consulter": [
+    "exclusions"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel Patrimoine",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+    },
+    {
+     "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "beneficiaire": {
+   "concept": "Bénéficiaire",
+   "synonymes": [
+    "beneficiaire",
+    "clause beneficiaire"
+   ],
+   "categories_a_consulter": [
+    "garanties",
+    "exclusions",
+    "definitions",
+    "plafonds",
+    "options",
+    "delais",
+    "fiscalite",
+    "points-vigilance"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel Patrimoine",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+    },
+    {
+     "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+    },
+    {
+     "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "fiscalite": {
+   "concept": "Fiscalité",
+   "synonymes": [
+    "fiscal",
+    "990",
+    "757",
+    "impot",
+    "succession",
+    "abattement",
+    "cgi"
+   ],
+   "categories_a_consulter": [
+    "garanties",
+    "definitions",
+    "conditions",
+    "declencheurs",
+    "options",
+    "cotisations",
+    "delais",
+    "fiscalite",
+    "points-vigilance"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel Patrimoine",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+    },
+    {
+     "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+    },
+    {
+     "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "fin-garantie": {
+   "concept": "Fin de garantie",
+   "synonymes": [
+    "fin de garantie",
+    "cesse",
+    "terme",
+    "expiration",
+    "resiliation"
+   ],
+   "categories_a_consulter": [
+    "garanties",
+    "exclusions",
+    "declencheurs",
+    "plafonds",
+    "options",
+    "cotisations",
+    "delais",
+    "fiscalite"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel Patrimoine",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+    },
+    {
+     "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+    },
+    {
+     "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  },
+  "association": {
+   "concept": "Association / ANPERE",
+   "synonymes": [
+    "anpere",
+    "association",
+    "gestion paritaire"
+   ],
+   "categories_a_consulter": [
+    "garanties",
+    "conditions",
+    "cotisations"
+   ],
+   "contrats_candidats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Excelium (assurance vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "notices": [
+    {
+     "contrat": "Avizen",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+    },
+    {
+     "contrat": "Avizen Pro",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+    },
+    {
+     "contrat": "Entour'Age",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+    },
+    {
+     "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+    }
+   ],
+   "criteres_completude": [
+    "au moins une définition",
+    "au moins une garantie ou un déclencheur",
+    "vérifier exclusions",
+    "vérifier conditions/limites"
+   ],
+   "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."
+  }
+ }
+}

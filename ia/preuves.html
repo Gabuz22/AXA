@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Preuves — Gabriel AXA (Vue IA)</title><meta name="description" content="Vue IA de Gabriel AXA — projection statique, sourcée, lisible sans JavaScript."><link rel="canonical" href="https://gabuz22.github.io/AXA/ia/preuves.html"><link rel="stylesheet" href="ia.css"></head>
+<body>
+<nav class="ianav"><a href="index.html">Index</a> · <a href="guide-ia.html">Guide IA</a> · <a href="outils.html">Outils</a> · <a href="contrats.html">Contrats</a> · <a href="garanties.html">Garanties</a> · <a href="exclusions.html">Exclusions</a> · <a href="definitions.html">Définitions</a> · <a href="conditions.html">Conditions</a> · <a href="declencheurs.html">Déclencheurs</a> · <a href="plafonds.html">Plafonds</a> · <a href="franchises.html">Franchises</a> · <a href="glossaire.html">Glossaire</a> · <a href="concepts.html">Concepts</a> · <a href="themes.html">Thèmes</a> · <a href="comparateur.html">Comparateur</a> · <a href="notices.html">Notices</a> · <a href="sources.html">Sources</a> · <a href="pack-a.html">Pack A</a> · <a href="pack-b.html">Pack B</a> · <a href="couverture.html">Couverture</a></nav>
+<main>
+<h1>Graphe de preuves</h1>
+
+<blockquote><strong>Vue IA de Gabriel AXA</strong> — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v1.2.0).</blockquote>
+<blockquote>Masters non modifiés ; données de sources publiques ; <strong>la notice PDF fait foi.</strong></blockquote>
+
+<p><strong>Objectif.</strong> Chaque élément citable comme preuve, avec id stable, contrat, type, texte, source PDF + page, liens et concepts. Une conclusion doit reposer sur des ids précis.</p>
+
+<p><strong>Règles.</strong> Pack A = preuve contractuelle. Pack B = raisonnement (jamais une preuve seule). Toujours citer la source (notice, page). Ne jamais inventer ; si une information est absente, le dire. La notice PDF fait foi.</p>
+
+<p><strong>Limites.</strong> Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.</p>
+
+<h2>Principe</h2>
+<p>Toute conclusion se reconstruit depuis des <strong>preuves identifiées</strong> : « cette conclusion repose sur les éléments <code>#id1</code>, <code>#id2</code>, <code>#id3</code> ».</p>
+<p>Chaque preuve porte : contrat · type · texte · <strong>source PDF + page</strong> · lien contrat · lien notice · concepts liés.</p>
+
+<h2>Format machine</h2>
+<ul>
+<li><a href="preuves.json">preuves.json</a> — 616 éléments. Relations dérivées (même contrat, concepts partagés) ; aucune relation inventée.</li>
+</ul>
+
+<h2>Comment citer une preuve</h2>
+<p><code>[Notice : &lt;fichier&gt;, p.&lt;page&gt;]</code> + l&#x27;<code>#id</code> de l&#x27;élément (réutilisable, stable).</p>
+
+</main>
+<footer><p>Gabriel AXA — Vue IA v1.2.0 (2026-07-10). Projection des JSON (source de vérité) ; masters non modifiés ; données de sources publiques. La notice PDF fait foi. <a href="../">← Application</a></p></footer>
+</body></html>

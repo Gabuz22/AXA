@@ -1,0 +1,311 @@
+{
+ "meta": {
+  "version": "1.2.0",
+  "genere_le": "2026-07-10",
+  "note": "Parcours attendus calculés déterministe­ment (planificateur+couverture). Vérifie : contrats retrouvés, catégories, éléments manquants, capacité à ne pas conclure."
+ },
+ "tests": [
+  {
+   "type": "simple",
+   "question": "Quel est le barème d'invalidité d'Avizen Pro ?",
+   "concepts": [
+    "invalidite"
+   ],
+   "contrats_retrouves": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "categories_consultees": {
+    "garanties": 18,
+    "exclusions": 13,
+    "definitions": 18,
+    "conditions": 2,
+    "declencheurs": 32,
+    "plafonds": 16,
+    "franchises": 4,
+    "options": 9,
+    "cotisations": 4,
+    "delais": 2,
+    "fiscalite": 1,
+    "points-vigilance": 7,
+    "formules": 7
+   },
+   "elements_manquants_dans_la_base": [],
+   "peut_conclure": true,
+   "sinon": "renvoyer à la notice / certificat ; ne pas inventer"
+  },
+  {
+   "type": "simple",
+   "question": "Quelle est la définition d'un accident dans Ma Protection Accident ?",
+   "concepts": [
+    "accident"
+   ],
+   "contrats_retrouves": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Masterlife CREDIT"
+   ],
+   "categories_consultees": {
+    "garanties": 17,
+    "exclusions": 13,
+    "definitions": 11,
+    "declencheurs": 26,
+    "plafonds": 4,
+    "franchises": 4,
+    "options": 3,
+    "delais": 4,
+    "points-vigilance": 5
+   },
+   "elements_manquants_dans_la_base": [
+    "conditions"
+   ],
+   "peut_conclure": true,
+   "sinon": "renvoyer à la notice / certificat ; ne pas inventer"
+  },
+  {
+   "type": "simple",
+   "question": "Quel est l'âge maximal de souscription ?",
+   "concepts": [
+    "age",
+    "souscription"
+   ],
+   "contrats_retrouves": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "categories_consultees": {
+    "conditions": 9,
+    "cotisations": 14,
+    "garanties": 14,
+    "exclusions": 4,
+    "definitions": 3,
+    "declencheurs": 3,
+    "plafonds": 4,
+    "franchises": 3,
+    "options": 10,
+    "delais": 7,
+    "fiscalite": 9,
+    "points-vigilance": 7,
+    "formules": 1
+   },
+   "elements_manquants_dans_la_base": [],
+   "peut_conclure": true,
+   "sinon": "renvoyer à la notice / certificat ; ne pas inventer"
+  },
+  {
+   "type": "transversale",
+   "question": "Quels contrats parlent d'invalidité ?",
+   "concepts": [
+    "invalidite"
+   ],
+   "contrats_retrouves": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "categories_consultees": {
+    "garanties": 18,
+    "exclusions": 13,
+    "definitions": 18,
+    "conditions": 2,
+    "declencheurs": 32,
+    "plafonds": 16,
+    "franchises": 4,
+    "options": 9,
+    "cotisations": 4,
+    "delais": 2,
+    "fiscalite": 1,
+    "points-vigilance": 7,
+    "formules": 7
+   },
+   "elements_manquants_dans_la_base": [],
+   "peut_conclure": true,
+   "sinon": "renvoyer à la notice / certificat ; ne pas inventer"
+  },
+  {
+   "type": "transversale",
+   "question": "Quels contrats contiennent une exclusion liée au suicide ?",
+   "concepts": [
+    "suicide"
+   ],
+   "contrats_retrouves": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Masterlife CREDIT"
+   ],
+   "categories_consultees": {
+    "exclusions": 10
+   },
+   "elements_manquants_dans_la_base": [
+    "conditions",
+    "declencheurs",
+    "definitions",
+    "garanties"
+   ],
+   "peut_conclure": false,
+   "sinon": "renvoyer à la notice / certificat ; ne pas inventer"
+  },
+  {
+   "type": "transversale",
+   "question": "Où trouve-t-on une carence ?",
+   "concepts": [
+    "carence"
+   ],
+   "contrats_retrouves": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)"
+   ],
+   "categories_consultees": {
+    "exclusions": 1,
+    "definitions": 1,
+    "conditions": 1,
+    "declencheurs": 1,
+    "franchises": 3,
+    "options": 1,
+    "points-vigilance": 2
+   },
+   "elements_manquants_dans_la_base": [
+    "garanties"
+   ],
+   "peut_conclure": true,
+   "sinon": "renvoyer à la notice / certificat ; ne pas inventer"
+  },
+  {
+   "type": "complexe",
+   "question": "Dans quels contrats une invalidité peut-elle déclencher une prestation, selon quelles définitions et avec quelles exclusions ?",
+   "concepts": [
+    "invalidite"
+   ],
+   "contrats_retrouves": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "categories_consultees": {
+    "garanties": 18,
+    "exclusions": 13,
+    "definitions": 18,
+    "conditions": 2,
+    "declencheurs": 32,
+    "plafonds": 16,
+    "franchises": 4,
+    "options": 9,
+    "cotisations": 4,
+    "delais": 2,
+    "fiscalite": 1,
+    "points-vigilance": 7,
+    "formules": 7
+   },
+   "elements_manquants_dans_la_base": [],
+   "peut_conclure": true,
+   "sinon": "renvoyer à la notice / certificat ; ne pas inventer"
+  },
+  {
+   "type": "complexe",
+   "question": "Compare les conditions d'adhésion et limites d'âge des contrats concernés.",
+   "concepts": [
+    "souscription",
+    "age"
+   ],
+   "contrats_retrouves": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "categories_consultees": {
+    "garanties": 14,
+    "exclusions": 4,
+    "definitions": 3,
+    "conditions": 9,
+    "declencheurs": 3,
+    "plafonds": 4,
+    "franchises": 3,
+    "options": 10,
+    "cotisations": 14,
+    "delais": 7,
+    "fiscalite": 9,
+    "points-vigilance": 7,
+    "formules": 1
+   },
+   "elements_manquants_dans_la_base": [],
+   "peut_conclure": true,
+   "sinon": "renvoyer à la notice / certificat ; ne pas inventer"
+  },
+  {
+   "type": "complexe",
+   "question": "Quels éléments nécessitent encore une vérification dans la notice ou le certificat d'adhésion ?",
+   "concepts": [
+    "souscription",
+    "rachat",
+    "fiscalite"
+   ],
+   "contrats_retrouves": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+   ],
+   "categories_consultees": {
+    "garanties": 23,
+    "exclusions": 6,
+    "definitions": 6,
+    "conditions": 10,
+    "declencheurs": 5,
+    "plafonds": 6,
+    "franchises": 3,
+    "options": 20,
+    "cotisations": 27,
+    "delais": 9,
+    "fiscalite": 51,
+    "points-vigilance": 19,
+    "formules": 7
+   },
+   "elements_manquants_dans_la_base": [],
+   "peut_conclure": true,
+   "sinon": "renvoyer à la notice / certificat ; ne pas inventer"
+  }
+ ]
+}

@@ -150,11 +150,11 @@ for g in GLOSSAIRE:
     for en in (g.get("entrees") or []): add_src(en.get("source"), (en.get("contrat"), "definition"))
 
 # ------------------------------------------------------------------ gabarit HTML / MD
-CATS_NAV = [("index", "Index"), ("guide-ia", "Guide IA"), ("contrats", "Contrats"), ("garanties", "Garanties"),
+CATS_NAV = [("index", "Index"), ("guide-ia", "Guide IA"), ("outils", "Outils"), ("contrats", "Contrats"), ("garanties", "Garanties"),
             ("exclusions", "Exclusions"), ("definitions", "Définitions"), ("conditions", "Conditions"),
             ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
-            ("glossaire", "Glossaire"), ("themes", "Thèmes"), ("notices", "Notices"), ("sources", "Sources"),
-            ("pack-a", "Pack A"), ("pack-b", "Pack B"), ("couverture", "Couverture")]
+            ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"),
+            ("notices", "Notices"), ("sources", "Sources"), ("pack-a", "Pack A"), ("pack-b", "Pack B"), ("couverture", "Couverture")]
 def nav_html(depth):
     ip = int_pref(depth)
     return '<nav class="ianav">' + " · ".join('<a href="%s%s.html">%s</a>' % (ip, k, l) for k, l in CATS_NAV) + '</nav>'
@@ -463,9 +463,11 @@ def build_static_pages(theme_counts):
     write("guide-ia.md", GUIDE_MD)
     write("guide-ia.html", page_html("Guide IA", renderish(GUIDE_MD), depth, SITE + "/ia/guide-ia.html"))
     # Manifeste lisible + ai-manifest.json
-    pages = ["index", "guide-ia", "manifeste", "pack-a", "pack-b", "contrats", "garanties", "exclusions", "options",
-             "cotisations", "delais", "fiscalite", "points-vigilance", "formules", "definitions", "conditions",
-             "declencheurs", "plafonds", "franchises", "glossaire", "notices", "sources", "recherches", "themes", "couverture"]
+    pages = ["index", "guide-ia", "manifeste", "outils", "planificateur", "concepts", "couverture-recherche",
+             "comparateur", "preuves", "methode-question-complexe", "tests", "pack-a", "pack-b", "contrats",
+             "garanties", "exclusions", "options", "cotisations", "delais", "fiscalite", "points-vigilance",
+             "formules", "definitions", "conditions", "declencheurs", "plafonds", "franchises", "glossaire",
+             "notices", "sources", "recherches", "themes", "couverture"]
     manifest = {
         "name": "Gabriel AXA — Vue IA", "version": VERSION, "generated": DATE, "base_url": SITE + "/ia/",
         "authority": "La notice PDF fait foi. Ordre : notice PDF > Pack A > glossaire > Pack B.",
@@ -519,7 +521,9 @@ Index → (Contrat | Catégorie | Thème) → Élément `#id` → Notice → Pag
     urls = [SITE + "/ia/%s.html" % p for p in pages] + [SITE + "/ia/%s.md" % p for p in pages if p != "manifeste"]
     urls += [SITE + "/ia/contrat/%s.html" % cm["slug"] for cm in CONTRACT_META] + [SITE + "/ia/contrat/%s.md" % cm["slug"] for cm in CONTRACT_META]
     urls += [SITE + "/ia/themes/%s.html" % tk for tk, _, _ in THEMES]
-    urls += [SITE + "/ia/ai-manifest.json", SITE + "/ia/contrats.json", SITE + "/ia/glossaire.json"]
+    urls += [SITE + "/ia/ai-manifest.json", SITE + "/ia/contrats.json", SITE + "/ia/glossaire.json",
+             SITE + "/ia/concepts.json", SITE + "/ia/planificateur.json", SITE + "/ia/couverture-recherche.json",
+             SITE + "/ia/preuves.json", SITE + "/ia/tests.json"]
     write("sitemap-ia.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           "".join("<url><loc>%s</loc><lastmod>%s</lastmod></url>\n" % (html.escape(u), DATE) for u in urls) + "</urlset>\n")
     write("robots.txt", "User-agent: *\nAllow: /\nSitemap: %s/ia/sitemap-ia.xml\n" % SITE)
@@ -527,7 +531,12 @@ Index → (Contrat | Catégorie | Thème) → Élément `#id` → Notice → Pag
     idx_md = md_hdr("Gabriel AXA — Vue IA", "Point d'entrée de la couche IA : commencer ici, puis naviguer.") + """
 ## Commencer (pour une IA)
 - **[Guide IA](guide-ia.html)** — comment utiliser Gabriel AXA (règles, arbitrage, absence, liens).
+- **[Outils IA](outils.html)** — planificateur, concepts, couverture, comparateur, preuves, méthode.
 - **[Manifeste IA](manifeste.html)** — organisation, citation, hiérarchie, autorité.
+
+## Outils de circulation & recherche
+- [Planificateur](planificateur.html) (question → plan) · [Concepts](concepts.html) · [Détecteur de couverture](couverture-recherche.html)
+- [Comparateur thématique](comparateur.html) · [Graphe de preuves](preuves.html) · [Méthode question complexe](methode-question-complexe.html) · [Tests](tests.html)
 
 ## Données
 - [Contrats](contrats.html) (%(nc)d) · [Pack A](pack-a.html) · [Pack B](pack-b.html)
@@ -637,6 +646,289 @@ def renderish(md):
     if in_ul: out.append("</ul>")
     return "\n".join(out)
 
+# ==================================================================================================
+# OUTILS DE CIRCULATION (dérivés) — concepts, planificateur, couverture, comparateur, preuves, méthode
+# Aucune donnée inventée : tout provient de ELEMENTS / GLOSSAIRE / SOURCES (projection). Sans LLM.
+# ==================================================================================================
+CONCEPTS = [
+    ("invalidite", "Invalidité", ["invalidit", "ipt", "ipp", "ptia", "incapacit"], ["taux", "bareme", "barème", "prestation", "seuil", "definition", "exclusion", "fin de garantie"]),
+    ("deces", "Décès", ["deces", "décès", "mortalit", "capital deces"], ["capital", "beneficiaire", "accidentel", "exclusion"]),
+    ("deces-accidentel", "Décès accidentel", ["accidentel"], ["doublement", "capital", "definition accident"]),
+    ("accident", "Accident", ["accident"], ["definition", "garantie", "exclusion"]),
+    ("hospitalisation", "Hospitalisation", ["hospitalis"], ["indemnite", "forfait", "franchise"]),
+    ("incapacite-temporaire", "Incapacité temporaire", ["incapacite temporaire", "itt", "indemnite journaliere", "indemnités journalières"], ["franchise", "delai"]),
+    ("carence", "Carence / délai d'attente", ["carence", "delai d attente", "delai de carence", "attente"], ["mois", "annee", "delai"]),
+    ("rachat", "Rachat", ["rachat", "valeur de rachat", "mise en reduction", "reduction"], ["tableau", "delai", "penalite"]),
+    ("souscription", "Souscription & adhésion", ["souscription", "adhesion", "adherer", "formalite", "questionnaire"], ["age", "medical", "certificat"]),
+    ("age", "Âge", ["age a l adhesion", "age maximal", "age minimal", "ans inclus", "annee de naissance"], ["18", "65", "limite"]),
+    ("suicide", "Suicide", ["suicide"], ["premiere annee", "exclusion", "delai"]),
+    ("beneficiaire", "Bénéficiaire", ["beneficiaire", "clause beneficiaire"], ["designation", "reversion"]),
+    ("fiscalite", "Fiscalité", ["fiscal", "990", "757", "impot", "succession", "abattement", "cgi"], ["transmission", "bareme"]),
+    ("fin-garantie", "Fin de garantie", ["fin de garantie", "cesse", "terme", "expiration", "resiliation"], ["age", "deces"]),
+    ("association", "Association / ANPERE", ["anpere", "association", "gestion paritaire"], ["adherent", "groupe"]),
+]
+CONCEPT_ORDER = ["garanties", "exclusions", "definitions", "conditions", "declencheurs", "plafonds", "franchises", "options", "cotisations", "delais", "fiscalite", "points-vigilance", "formules"]
+
+def concept_hits(kws):
+    hits = {}
+    for cat in CONCEPT_ORDER:
+        for e in ELEMENTS.get(cat, []):
+            hay = norm((e.get("titre") or "") + " " + (e.get("texte") or ""))
+            if any(w in hay for w in kws): hits.setdefault(cat, []).append(e)
+    gl = []
+    for g in GLOSSAIRE:
+        if any(w in norm(g.get("terme", "")) for w in kws): gl.append(g)
+    return hits, gl
+
+def el_concepts(e):
+    hay = norm((e.get("titre") or "") + " " + (e.get("texte") or ""))
+    return [sg for sg, _, kws, _ in CONCEPTS if any(w in hay for w in kws)]
+
+def contract_notice_map(depth):
+    return {cm["slug"]: notice_href_for(cm["slug"], depth) for cm in CONTRACT_META}
+
+def build_concepts():
+    depth = 0; data = {}
+    md = [md_hdr("Index conceptuel transversal", "Concepts métier reliant automatiquement synonymes, contrats, catégories et sources. Aucune relation inventée : tout est dérivé du contenu.")]
+    hb = ['<h1>Index conceptuel transversal</h1><p>Chaque concept relie synonymes, contrats, garanties, exclusions, définitions, conditions, déclencheurs et sources — dérivés du contenu, vérifiables.</p>']
+    for sg, nom, kws, facets in CONCEPTS:
+        hits, gl = concept_hits(kws)
+        contrats = sorted({e["contrat"] for cat in hits for e in hits[cat]}, key=norm)
+        srcs = {}
+        for cat in hits:
+            for e in hits[cat]: add_src(e.get("src"), (e["contrat"], cat)) if False else None
+        data[sg] = {"nom": nom, "synonymes": kws, "facettes": facets,
+                    "categories": {cat: [e["id"] for e in hits[cat]] for cat in hits},
+                    "contrats": contrats,
+                    "url": SITE + "/ia/concepts.html#c-" + sg}
+        md += ["", "## %s" % nom, "", "- **Synonymes** : %s" % ", ".join(kws), "- **Contrats concernés** : %s" % (", ".join(contrats) or "—")]
+        for cat in CONCEPT_ORDER:
+            if hits.get(cat): md.append("- **%s** (%d) : %s" % (cat, len(hits[cat]), " · ".join("[%s](%s.md#%s)" % ((e.get("titre") or e["texte"])[:40], cat, e["id"]) for e in hits[cat][:12])))
+        if gl: md.append("- **Glossaire** : %s" % ", ".join(g.get("terme") for g in gl))
+        hb.append('<h2 id="c-%s">%s</h2><p class="meta">Synonymes : %s</p><ul>' % (sg, html.escape(nom), html.escape(", ".join(kws))))
+        hb.append("<li><strong>Contrats concernés</strong> : %s</li>" % (", ".join('<a href="contrat/%s.html">%s</a>' % (slug(c), html.escape(c)) for c in contrats) or "—"))
+        for cat in CONCEPT_ORDER:
+            if hits.get(cat):
+                hb.append('<li><strong>%s</strong> (%d) : %s</li>' % (cat, len(hits[cat]), " · ".join('<a href="%s.html#%s">%s</a>' % (cat, e["id"], html.escape((e.get("titre") or e["texte"])[:40])) for e in hits[cat][:12])))
+        if gl: hb.append("<li><strong>Glossaire</strong> : %s</li>" % ", ".join(html.escape(g.get("terme")) for g in gl))
+        hb.append("</ul>")
+    write("concepts.md", "\n".join(md)); write("concepts.html", page_html("Concepts", "".join(hb), depth, SITE + "/ia/concepts.html"))
+    write("concepts.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "note": "Concepts dérivés : synonymes + éléments liés (ids), vérifiables. Aucune relation inventée."}, "concepts": data}, ensure_ascii=False, indent=1))
+    return data
+
+def build_planificateur(concepts):
+    depth = 0; nm = contract_notice_map(depth); plans = {}
+    for sg, nom, kws, facets in CONCEPTS:
+        c = concepts[sg]
+        cats = [cat for cat in CONCEPT_ORDER if c["categories"].get(cat)]
+        plans[sg] = {"concept": nom, "synonymes": kws,
+                     "categories_a_consulter": cats,
+                     "contrats_candidats": c["contrats"],
+                     "notices": [{"contrat": ct, "url": (SITE + "/ia/" + nm[slug(ct)][3:]) if nm.get(slug(ct)) else None} for ct in c["contrats"]],
+                     "criteres_completude": ["au moins une définition", "au moins une garantie ou un déclencheur", "vérifier exclusions", "vérifier conditions/limites"],
+                     "si_absent": "dire « non présent dans la base Gabriel AXA » et renvoyer à la notice / au certificat d'adhésion ; ne pas inventer."}
+    write("planificateur.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "usage": "Mapper une question -> concept(s) via synonymes, obtenir contrats candidats + catégories à consulter + notices. Ne répond pas ; prépare le parcours."}, "plans": plans}, ensure_ascii=False, indent=1))
+    md = [md_hdr("Planificateur de recherche", "Transforme une question en plan de recherche (sans y répondre) : concept, synonymes, catégories, contrats candidats, notices, critères de complétude."), """
+## Comment l'utiliser (sans LLM)
+1. Repérer dans la question un ou plusieurs **concepts** via leurs **synonymes** (voir [concepts](concepts.md) / [planificateur.json](planificateur.json)).
+2. Récupérer le **plan** du concept : contrats candidats + catégories à consulter + notices.
+3. Consulter les pages catégorie et fiches contrat listées ; collecter les éléments **avec leur source**.
+4. Vérifier la **complétude** ([couverture-recherche](couverture-recherche.md)).
+5. Assembler une réponse **sourcée** ([méthode](methode-question-complexe.md)). En cas d'absence : le dire, ne pas inventer.
+
+## Plans par concept
+"""]
+    hb = ['<h1>Planificateur de recherche</h1><p>Transforme une question en plan (ne répond pas). Format machine : <a href="planificateur.json">planificateur.json</a>.</p>']
+    for sg, nom, kws, facets in CONCEPTS:
+        p = plans[sg]
+        md += ["### %s" % nom, "- Synonymes : %s" % ", ".join(kws),
+               "- Catégories à consulter : %s" % (", ".join(p["categories_a_consulter"]) or "—"),
+               "- Contrats candidats : %s" % (", ".join(p["contrats_candidats"]) or "—"), ""]
+        hb.append('<h2>%s</h2><ul><li>Synonymes : <code>%s</code></li><li>Catégories : %s</li><li>Contrats candidats : %s</li></ul>' % (
+            html.escape(nom), html.escape(", ".join(kws)),
+            " · ".join('<a href="%s.html">%s</a>' % (cat, cat) for cat in p["categories_a_consulter"]) or "—",
+            " · ".join('<a href="contrat/%s.html">%s</a>' % (slug(ct), html.escape(ct)) for ct in p["contrats_candidats"]) or "—"))
+    write("planificateur.md", "\n".join(md)); write("planificateur.html", page_html("Planificateur", "".join(hb), depth, SITE + "/ia/planificateur.html"))
+    return plans
+
+def build_couverture_recherche(concepts):
+    depth = 0; matrix = {}
+    md = [md_hdr("Détecteur de couverture de recherche", "Pour chaque concept : quelles catégories sont présentes/absentes, par contrat. Empêche de confondre absence dans la base et absence de clause.")]
+    hb = ['<h1>Détecteur de couverture de recherche</h1><p>Distingue : présent · absent de la base · à vérifier en notice/certificat. Aucune conclusion : uniquement l\'état de la recherche.</p>']
+    cats_show = ["definitions", "garanties", "declencheurs", "exclusions", "conditions", "plafonds", "franchises"]
+    for sg, nom, kws, facets in CONCEPTS:
+        c = concepts[sg]; matrix[sg] = {}
+        present = {cat: len(c["categories"].get(cat, [])) for cat in cats_show}
+        absent = [cat for cat in cats_show if not present[cat]]
+        matrix[sg] = {"present": present, "absent_de_la_base": absent, "contrats": c["contrats"]}
+        md += ["", "## %s" % nom,
+               "- Trouvé : %s" % (", ".join("%d %s" % (present[cat], cat) for cat in cats_show if present[cat]) or "rien"),
+               "- Absent de la base (à vérifier en **notice / certificat d'adhésion**) : %s" % (", ".join(absent) or "—")]
+        hb.append('<h2>%s</h2><ul><li><strong>Trouvé</strong> : %s</li><li><strong>Absent de la base</strong> (vérifier notice/certificat) : %s</li></ul>' % (
+            html.escape(nom), html.escape(", ".join("%d %s" % (present[cat], cat) for cat in cats_show if present[cat]) or "rien"), html.escape(", ".join(absent) or "—")))
+    write("couverture-recherche.md", "\n".join(md)); write("couverture-recherche.html", page_html("Couverture recherche", "".join(hb), depth, SITE + "/ia/couverture-recherche.html"))
+    write("couverture-recherche.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "legende": {"present": "présent dans la base dérivée", "absent_de_la_base": "non présent dans la base -> vérifier notice/certificat d'adhésion, ne pas inventer"}}, "concepts": matrix}, ensure_ascii=False, indent=1))
+
+COMPARE_SUBJECTS = ["invalidite", "deces", "carence", "age", "rachat", "suicide", "hospitalisation", "souscription"]
+def build_comparateur(concepts):
+    depth = 0
+    md = [md_hdr("Comparateur thématique", "Compare un même sujet entre contrats : définition, garantie, conditions, exclusions, déclencheurs, limites, source, absences. Aucune conclusion commerciale.")]
+    hb = ['<h1>Comparateur thématique</h1><p>Un sujet, tous les contrats côte à côte. Sourcé. Aucune conclusion automatique.</p>']
+    cmap = {sg: (nom, kws) for sg, nom, kws, _ in CONCEPTS}
+    for sg in COMPARE_SUBJECTS:
+        nom, kws = cmap[sg]; hits, gl = concept_hits(kws)
+        contrats = sorted({e["contrat"] for cat in hits for e in hits[cat]}, key=norm)
+        md += ["", "## %s" % nom, ""]
+        hb.append('<h2 id="s-%s">%s</h2>' % (sg, html.escape(nom)))
+        for ct in contrats:
+            cslug = slug(ct)
+            by = {cat: [e for e in hits.get(cat, []) if e["cslug"] == cslug] for cat in ["definitions", "garanties", "conditions", "exclusions", "declencheurs", "plafonds", "franchises"]}
+            md.append("### %s" % ct)
+            hb.append('<h3><a href="contrat/%s.html">%s</a></h3><ul>' % (cslug, html.escape(ct)))
+            for cat, lbl in [("definitions", "Définition"), ("garanties", "Garantie"), ("conditions", "Conditions"), ("exclusions", "Exclusions"), ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises")]:
+                if by[cat]:
+                    md.append("- **%s** : %s" % (lbl, " · ".join((e.get("titre") or e["texte"])[:60] + cite_md(e.get("src"), depth) for e in by[cat][:4])))
+                    hb.append("<li><strong>%s</strong> : %s</li>" % (lbl, " · ".join(html.escape((e.get("titre") or e["texte"])[:60]) + cite_html(e.get("src"), depth) for e in by[cat][:4])))
+                else:
+                    md.append("- **%s** : _absent de la base_" % lbl); hb.append('<li><strong>%s</strong> : <em>absent de la base</em></li>' % lbl)
+            hb.append("</ul>")
+    write("comparateur.md", "\n".join(md)); write("comparateur.html", page_html("Comparateur", "".join(hb), depth, SITE + "/ia/comparateur.html"))
+
+def build_preuves():
+    depth = 0; nodes = []
+    for cat in CONCEPT_ORDER + ["faits"]:
+        for e in ELEMENTS.get(cat, []):
+            s = e.get("src") or {}
+            nodes.append({"id": e["id"], "contrat": e.get("contrat"), "contrat_slug": e.get("cslug"),
+                          "type": cat, "titre": e.get("titre") or "", "texte": e.get("texte") or "",
+                          "source_pdf": s.get("document_source"), "page": s.get("page"),
+                          "lien_contrat": SITE + "/ia/contrat/%s.html#%s" % (e.get("cslug"), e["id"]),
+                          "lien_notice": (SITE + "/" + quote("data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/" + str(s["document_source"])) + ("#page=" + str(s["page"]).split(",")[0].strip() if s.get("page") else "")) if s.get("document_source") else None,
+                          "concepts": el_concepts(e)})
+    write("preuves.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "elements": len(nodes),
+        "usage": "Graphe de preuves : chaque conclusion doit citer des ids d'éléments. relations = même contrat + concepts partagés (dérivés, vérifiables).",
+        "champs": ["id", "contrat", "type", "titre", "texte", "source_pdf", "page", "lien_contrat", "lien_notice", "concepts"]}, "elements": nodes}, ensure_ascii=False, indent=1))
+    md = md_hdr("Graphe de preuves", "Chaque élément citable comme preuve, avec id stable, contrat, type, texte, source PDF + page, liens et concepts. Une conclusion doit reposer sur des ids précis.") + """
+## Principe
+Toute conclusion se reconstruit depuis des **preuves identifiées** : « cette conclusion repose sur les éléments `#id1`, `#id2`, `#id3` ».
+Chaque preuve porte : contrat · type · texte · **source PDF + page** · lien contrat · lien notice · concepts liés.
+
+## Format machine
+- [preuves.json](preuves.json) — %d éléments. Relations dérivées (même contrat, concepts partagés) ; aucune relation inventée.
+
+## Comment citer une preuve
+`[Notice : <fichier>, p.<page>]` + l'`#id` de l'élément (réutilisable, stable).
+""" % len([1 for cat in CONCEPT_ORDER + ["faits"] for _ in ELEMENTS.get(cat, [])])
+    write("preuves.md", md); write("preuves.html", page_html("Preuves", renderish(md), depth, SITE + "/ia/preuves.html"))
+
+METHODE_MD = """# Méthode — résoudre une question (simple ou complexe)
+
+> Parcours standardisés pour une IA. Objectif : réponse **fiable, traçable, sourcée**, sans invention.
+
+## Les 5 parcours
+
+### 1. Question simple sur un contrat
+« Quel est le plafond de cette garantie ? »
+1. Ouvrir `/ia/contrat/<slug>.html`. 2. Repérer la garantie / le plafond. 3. Citer la notice + page.
+**Complétude** : l'élément est présent et sourcé. Sinon → notice.
+
+### 2. Question transversale
+« Quels contrats traitent de l'invalidité ? »
+1. `/ia/concepts.html#c-invalidite` (synonymes IPT/IPP/PTIA/incapacité). 2. Lister les **contrats concernés**.
+3. Vérifier chaque contrat via `/ia/invalidite`… **Format** : liste des contrats + source par contrat.
+
+### 3. Comparaison ciblée
+« Compare les exclusions liées au suicide. »
+1. `/ia/comparateur.html#s-suicide`. 2. Lire par contrat : exclusion + source + *absent de la base* le cas échéant.
+**Ne pas** produire de conclusion commerciale. Toujours citer.
+
+### 4. Question complexe avec conditions
+« Dans quels cas l'invalidité déclenche-t-elle une prestation, avec quelles limites et exclusions ? »
+1. **Planifier** : `/ia/planificateur.html` → concept invalidité → catégories (définitions, garanties, déclencheurs, exclusions, conditions) + contrats candidats.
+2. **Collecter** les éléments par catégorie (avec sources).
+3. **Vérifier la couverture** : `/ia/couverture-recherche.html#…` (qu'est-ce qui est absent ?).
+4. **Assembler** (structure ci-dessous). 5. **Citer** chaque affirmation.
+
+### 5. Information absente ou ambiguë
+Si un élément est marqué *absent de la base* : dire **« non présent dans la base Gabriel AXA — à vérifier dans la notice / le certificat d'adhésion »**. **Ne jamais combler.** Distinguer : absent de la base ≠ absent du contrat ≠ renvoyé au certificat.
+
+## Assembleur de réponse (structure obligatoire)
+1. **Réponse courte** (sourcée).
+2. **Conditions** (conditions de souscription / d'application).
+3. **Exceptions / exclusions**.
+4. **Limites** (plafonds, franchises, délais).
+5. **Éléments non trouvés** (voir détecteur de couverture).
+6. **Sources** (notice + page pour chaque affirmation, + `#id` des preuves).
+7. **Niveau de certitude documentaire** : élevé (élément sourcé) · moyen (donnée à vérifier en notice) · faible (absent de la base).
+
+## Règle d'or
+Pack A = preuve · Pack B = raisonnement (jamais une preuve seule) · **la notice PDF fait foi** · ne jamais inventer.
+"""
+def build_methode():
+    depth = 0
+    write("methode-question-complexe.md", METHODE_MD)
+    write("methode-question-complexe.html", page_html("Méthode question complexe", renderish(METHODE_MD), depth, SITE + "/ia/methode-question-complexe.html"))
+
+def build_outils():
+    depth = 0
+    items = [("planificateur", "Planificateur de recherche", "question → plan (concept, synonymes, contrats, catégories, notices)"),
+             ("concepts", "Index conceptuel", "concepts métier reliant synonymes, contrats, catégories, sources"),
+             ("couverture-recherche", "Détecteur de couverture", "présent / absent de la base / à vérifier en notice"),
+             ("comparateur", "Comparateur thématique", "un sujet, tous les contrats côte à côte, sourcé"),
+             ("preuves", "Graphe de preuves", "chaque élément citable (id, source, page, concepts)"),
+             ("methode-question-complexe", "Méthode & assembleur", "5 parcours + structure de réponse sécurisée"),
+             ("tests", "Jeux de tests", "questions de contrôle + parcours attendus")]
+    md = [md_hdr("Outils IA — circulation & recherche", "Outils dérivés pour aider une IA à décomposer une question, parcourir les bons contrats, vérifier sa couverture et assembler une réponse sourcée."), ""]
+    hb = ['<h1>Outils IA — circulation & recherche</h1><p>Décomposer · parcourir · vérifier · comparer · prouver · assembler. Tout est dérivé et sourcé.</p><ul>']
+    for k, t, d in items:
+        md.append("- **[%s](%s.html)** — %s" % (t, k, d)); hb.append('<li><a href="%s.html"><strong>%s</strong></a> — %s (aussi <a href="%s.md">.md</a>)</li>' % (k, html.escape(t), html.escape(d), k))
+    md += ["", "## Formats machine", "- [concepts.json](concepts.json) · [planificateur.json](planificateur.json) · [couverture-recherche.json](couverture-recherche.json) · [preuves.json](preuves.json) · [tests.json](tests.json)"]
+    hb.append('</ul><h2>Formats machine</h2><p><a href="concepts.json">concepts.json</a> · <a href="planificateur.json">planificateur.json</a> · <a href="couverture-recherche.json">couverture-recherche.json</a> · <a href="preuves.json">preuves.json</a> · <a href="tests.json">tests.json</a></p>')
+    write("outils.md", "\n".join(md)); write("outils.html", page_html("Outils IA", "".join(hb), depth, SITE + "/ia/outils.html"))
+
+TEST_QUESTIONS = [
+    ("simple", "Quel est le barème d'invalidité d'Avizen Pro ?", ["invalidite"]),
+    ("simple", "Quelle est la définition d'un accident dans Ma Protection Accident ?", ["accident"]),
+    ("simple", "Quel est l'âge maximal de souscription ?", ["age", "souscription"]),
+    ("transversale", "Quels contrats parlent d'invalidité ?", ["invalidite"]),
+    ("transversale", "Quels contrats contiennent une exclusion liée au suicide ?", ["suicide"]),
+    ("transversale", "Où trouve-t-on une carence ?", ["carence"]),
+    ("complexe", "Dans quels contrats une invalidité peut-elle déclencher une prestation, selon quelles définitions et avec quelles exclusions ?", ["invalidite"]),
+    ("complexe", "Compare les conditions d'adhésion et limites d'âge des contrats concernés.", ["souscription", "age"]),
+    ("complexe", "Quels éléments nécessitent encore une vérification dans la notice ou le certificat d'adhésion ?", ["souscription", "rachat", "fiscalite"]),
+]
+def build_tests(concepts):
+    depth = 0; results = []
+    for typ, q, cs in TEST_QUESTIONS:
+        merged_cats, contrats, srccount, missing = {}, set(), 0, set()
+        for sg in cs:
+            c = concepts.get(sg, {})
+            for cat, ids in (c.get("categories") or {}).items(): merged_cats[cat] = merged_cats.get(cat, 0) + len(ids)
+            for ct in c.get("contrats", []): contrats.add(ct)
+        for cat in ["definitions", "garanties", "declencheurs", "exclusions", "conditions"]:
+            if not merged_cats.get(cat): missing.add(cat)
+        can = bool(merged_cats.get("garanties") or merged_cats.get("definitions"))
+        results.append({"type": typ, "question": q, "concepts": cs, "contrats_retrouves": sorted(contrats, key=norm),
+                        "categories_consultees": merged_cats, "elements_manquants_dans_la_base": sorted(missing),
+                        "peut_conclure": can, "sinon": "renvoyer à la notice / certificat ; ne pas inventer"})
+    write("tests.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "note": "Parcours attendus calculés déterministe­ment (planificateur+couverture). Vérifie : contrats retrouvés, catégories, éléments manquants, capacité à ne pas conclure."}, "tests": results}, ensure_ascii=False, indent=1))
+    md = [md_hdr("Jeux de tests", "Questions de contrôle (simples, transversales, complexes) et parcours attendus, calculés automatiquement.")]
+    hb = ['<h1>Jeux de tests</h1><p>Parcours attendus calculés automatiquement (planificateur + couverture). Format machine : <a href="tests.json">tests.json</a>.</p>']
+    for r in results:
+        md += ["", "## [%s] %s" % (r["type"], r["question"]),
+               "- Concepts : %s" % ", ".join(r["concepts"]),
+               "- Contrats retrouvés : %s" % (", ".join(r["contrats_retrouves"]) or "—"),
+               "- Catégories : %s" % (", ".join("%s(%d)" % (k, v) for k, v in r["categories_consultees"].items()) or "—"),
+               "- Manquants dans la base : %s" % (", ".join(r["elements_manquants_dans_la_base"]) or "—"),
+               "- Peut conclure : %s" % ("oui" if r["peut_conclure"] else "NON → notice/certificat")]
+        hb.append('<h2>[%s] %s</h2><ul><li>Concepts : %s</li><li>Contrats : %s</li><li>Catégories : %s</li><li>Manquants (base) : %s</li><li>Peut conclure : <strong>%s</strong></li></ul>' % (
+            html.escape(r["type"]), html.escape(r["question"]), html.escape(", ".join(r["concepts"])),
+            " · ".join('<a href="contrat/%s.html">%s</a>' % (slug(c), html.escape(c)) for c in r["contrats_retrouves"]) or "—",
+            html.escape(", ".join("%s(%d)" % (k, v) for k, v in r["categories_consultees"].items()) or "—"),
+            html.escape(", ".join(r["elements_manquants_dans_la_base"]) or "—"), "oui" if r["peut_conclure"] else "NON → notice/certificat"))
+    write("tests.md", "\n".join(md)); write("tests.html", page_html("Tests", "".join(hb), depth, SITE + "/ia/tests.html"))
+    return results
+
 def build():
     os.makedirs(IA, exist_ok=True)
     build_contrats_list()
@@ -654,6 +946,15 @@ def build():
         build_category(k, LABELS[k], CATOBJ[k])
     build_glossaire(); build_notices(); build_sources(); build_recherches(); build_packs()
     tc = build_themes()
+    # Outils de circulation (dérivés) — concepts, planificateur, couverture, comparateur, preuves, méthode, tests.
+    concepts = build_concepts()
+    build_planificateur(concepts)
+    build_couverture_recherche(concepts)
+    build_comparateur(concepts)
+    build_preuves()
+    build_methode()
+    build_tests(concepts)
+    build_outils()
     build_static_pages(tc)
     rows, allok = build_coverage(coverage())
     nfiles = sum(len(fs) for _, _, fs in os.walk(IA))
