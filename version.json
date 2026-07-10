@@ -1,7 +1,7 @@
 {
   "produit": "Gabriel AXA",
-  "version": "1.3.0",
-  "nom": "Vue IA — outils de circulation : planificateur de recherche, index conceptuel, détecteur de couverture, comparateur thématique, graphe de preuves, méthode question complexe, jeux de tests (tous dérivés, sourcés, sans LLM)",
+  "version": "1.4.0",
+  "nom": "Vue IA — infrastructure de raisonnement documentaire : hiérarchie documentaire, sources officielles (autorités publiques par concept), détecteur de réglementation, surveillance (jamais auto), connaissances dynamiques (chaîne prête), matrices (HTML/MD/JSON/CSV), graphe documentaire, moteur de choix des sources, 51 tests, maturité",
   "date": "2026-07-09",
-  "note": "La Vue IA est une PROJECTION des JSON (source de vérité), générée par scripts/build_ia.py. Aucun master modifié, aucune donnée inventée. Outils dérivés pour décomposer une question, parcourir, vérifier la couverture, comparer, prouver et assembler une réponse sourcée. La notice PDF fait foi."
+  "note": "La Vue IA est une PROJECTION des JSON (source de vérité), générée par scripts/build_ia.py. Aucun master modifié, aucune donnée réglementaire inventée : les sources officielles sont des POINTEURS de navigation vers des autorités publiques (à valider). La surveillance ne met jamais à jour automatiquement. La notice PDF fait foi."
 }

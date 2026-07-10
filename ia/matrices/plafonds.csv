@@ -1,0 +1,44 @@
+id,contrat,titre,texte,notice,page
+avizen:fait:2cbcc3adad:plafond:0,Avizen,Capital décès toutes causes / Capital IPT toutes causes (garantie principale),montants au certificat d'adhésion,2025-04 Notice d'information Avizen.pdf,11
+avizen:fait:d2f8ad4663:plafond:0,Avizen,Capital décès par accident / Capital IPT par accident (garantie principale),montants au certificat d'adhésion,2025-04 Notice d'information Avizen.pdf,11
+avizen:fait:9893112dc5:plafond:0,Avizen,Rente éducation décès / Rente éducation IPT (garantie principale),paliers 100/125/150 % du montant souscrit,2025-04 Notice d'information Avizen.pdf,12
+avizen:fait:a1589f2d75:plafond:0,Avizen,Rente décès / Rente IPT (garantie principale),réduction de 50 % de la rente à partir des 65 ans du bénéficiaire,2025-04 Notice d'information Avizen.pdf,13
+avizen:fait:89a1ca75b5:plafond:0,Avizen,Indemnités journalières ITT toutes causes (optionnelle),365 ou 1095 jours selon certificat,2025-04 Notice d'information Avizen.pdf,13
+avizen:fait:819383df2a:plafond:0,Avizen,Indemnités journalières ITT par accident (optionnelle),1 095 jours,2025-04 Notice d'information Avizen.pdf,14
+avizen:fait:3d298b99e0:plafond:0,Avizen,Rente invalidité fonctionnelle toutes causes (optionnelle),taux d'indemnisation max 100 % (taux ≥ 66 %),2025-04 Notice d'information Avizen.pdf,15
+avizen:fait:e73c1c5a47:plafond:0,Avizen,Garantie aide à la famille,"14 mois par enfant et par pathologie, renouvelable une fois",2025-04 Notice d'information Avizen.pdf,18
+avizen-pro:fait:e6e92c4b61:plafond:0,Avizen Pro,Capital décès toutes causes / Capital IPT toutes causes + double effet,montants au certificat,2025-04 Notice d'information Avizen Pro (AEP).pdf,11
+avizen-pro:fait:6354ec813b:plafond:0,Avizen Pro,Rente éducation décès / IPT + double effet,paliers 100/125/150 %,2025-04 Notice d'information Avizen Pro (AEP).pdf,12
+avizen-pro:fait:cf7576de07:plafond:0,Avizen Pro,Rente décès / Rente IPT,-50 % à 65 ans du bénéficiaire,2025-04 Notice d'information Avizen Pro (AEP).pdf,12
+avizen-pro:fait:e4f8ae15eb:plafond:0,Avizen Pro,IJ ITT toutes causes (optionnelle),365 ou 1095 jours,2025-04 Notice d'information Avizen Pro (AEP).pdf,14
+avizen-pro:fait:b98f6e974d:plafond:0,Avizen Pro,IJ ITT par accident (optionnelle),1 095 jours,2025-04 Notice d'information Avizen Pro (AEP).pdf,15
+avizen-pro:fait:299920232f:plafond:0,Avizen Pro,IJ toutes causes complémentaires aux régimes obligatoires (optionnelle),90 ou 365 jours selon certificat,2025-04 Notice d'information Avizen Pro (AEP).pdf,15
+avizen-pro:fait:59e1287b10:plafond:0,Avizen Pro,Indemnités Remboursement des frais professionnels (optionnelle),plafond journalier garanti au certificat,2025-04 Notice d'information Avizen Pro (AEP).pdf,16
+avizen-pro:fait:45763a5331:plafond:0,Avizen Pro,Rente invalidité permanente partielle ou totale (optionnelle),indemnisation 100 % si taux ≥ 66 %,2025-04 Notice d'information Avizen Pro (AEP).pdf,17
+avizen-pro:fait:e381236ba4:plafond:0,Avizen Pro,Garantie aide à la famille,"14 mois par enfant et pathologie, renouvelable une fois",2025-04 Notice d'information Avizen Pro (AEP).pdf,25
+entour-age:fait:52eb8f16a6:plafond:0,Entour'Age,Rente viagère dépendance (garantie principale obligatoire),rente choisie entre 500 et 3 000 €/mois,2025-06 Notice d'Information Entour'Age.pdf,21
+entour-age:fait:52eb8f16a6:plafond:1,Entour'Age,Rente viagère dépendance (garantie principale obligatoire),GIR 5/6 jamais garanti,2025-06 Notice d'Information Entour'Age.pdf,21
+entour-age:fait:2a25013e7a:plafond:0,Entour'Age,Services dès l'adhésion « ENTREAIDANTS »,voir détail par prestation,2025-06 Notice d'Information Entour'Age.pdf,16
+entour-age:fait:2094e3a95e:plafond:0,Entour'Age,Services d'assistance dédiés en perte d'autonomie,bilan d'adaptation du domicile : 500 € TTC,2025-06 Notice d'Information Entour'Age.pdf,23
+entour-age:fait:2094e3a95e:plafond:1,Entour'Age,Services d'assistance dédiés en perte d'autonomie,1 bilan initial par adhésion,2025-06 Notice d'Information Entour'Age.pdf,23
+entour-age:fait:dcbc36cf9a:plafond:0,Entour'Age,Services pour l'aidant de l'assuré,"répit : 1 000 € TTC/an ; visites d'établissements : 200 € ; transport hébergement temporaire : 100 €/an",2025-06 Notice d'Information Entour'Age.pdf,25
+excelium-assurance-vie:fait:62d6fd5c2d:plafond:0,Excelium (assurance vie),"Garantie « Sérénité » (plancher, incluse)",plancher = versements bruts − rachats,2026-05 Notice Excelium Vie.pdf,15
+excelium-assurance-vie:fait:62d6fd5c2d:plafond:1,Excelium (assurance vie),"Garantie « Sérénité » (plancher, incluse)",jusqu'à 80 ans (90 ans pour le volet fonds Croissance),2026-05 Notice Excelium Vie.pdf,15
+excelium-assurance-vie:fait:0b27383ed4:plafond:0,Excelium (assurance vie),Garantie « Revalorisée »,capital sous risque max 1 200 000 €/assuré,2026-05 Notice Excelium Vie.pdf,16
+ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:plafond:0,Ma Protection Accident (Garantie des accidents de la vie),Accidents corporels d'activités courantes,limites fixées aux Conditions particulières,2024-03 CG Ma Protection Accident (AGA-AEP).pdf,4
+ma-protection-accident-garantie-des-accidents-de-la-vie:fait:9347c06b89:plafond:0,Ma Protection Accident (Garantie des accidents de la vie),Indemnisation des préjudices corporels (barème AQV),"maximum 600 000 € (AQV ≥ 100, tranche 0-19 ans)",2024-03 CG Ma Protection Accident (AGA-AEP).pdf,7
+ma-protection-accident-garantie-des-accidents-de-la-vie:fait:9347c06b89:plafond:1,Ma Protection Accident (Garantie des accidents de la vie),Indemnisation des préjudices corporels (barème AQV),plafond de garantie indiqué aux Conditions particulières (cumul aggravations),2024-03 CG Ma Protection Accident (AGA-AEP).pdf,7
+ma-protection-accident-garantie-des-accidents-de-la-vie:fait:4c55c61a58:plafond:0,Ma Protection Accident (Garantie des accidents de la vie),Préjudices indemnisés selon droit commun,"ATP : 10 €/h si DFP ≤ 30 %, 14 €/h si DFP > 30 %",2024-03 CG Ma Protection Accident (AGA-AEP).pdf,9
+ma-protection-accident-garantie-des-accidents-de-la-vie:fait:4c55c61a58:plafond:1,Ma Protection Accident (Garantie des accidents de la vie),Préjudices indemnisés selon droit commun,PGPA plafonné à 50 000 €,2024-03 CG Ma Protection Accident (AGA-AEP).pdf,9
+ma-protection-accident-garantie-des-accidents-de-la-vie:fait:2bd15a813d:plafond:0,Ma Protection Accident (Garantie des accidents de la vie),En cas de décès,frais d'obsèques : 5 000 €,2024-03 CG Ma Protection Accident (AGA-AEP).pdf,9
+ma-retraite-plan-d-epargne-retraite-individuel-per:fait:5373d2e9a3:plafond:0,Ma Retraite (plan d'épargne retraite individuel — PER),En cas de vie - sortie en capital,min 750 € par versement partiel et solde > 750 €,2026-05 Notice Ma Retraite.pdf,10
+masterlife-credit:fait:d958e52a0c:plafond:0,Masterlife CREDIT,Décès,capital restant dû × quotité assurée,Notice-Masterlife-Credit-202410.pdf,12
+masterlife-credit:fait:a1b706a42f:plafond:0,Masterlife CREDIT,PTIA,capital restant dû × quotité,Notice-Masterlife-Credit-202410.pdf,12
+masterlife-credit:fait:fbdb2c83d4:plafond:0,Masterlife CREDIT,Incapacité de travail (IJ),1 095 jours,Notice-Masterlife-Credit-202410.pdf,13
+masterlife-credit:fait:fbdb2c83d4:plafond:1,Masterlife CREDIT,Incapacité de travail (IJ),échéance du prêt (co-emprunteurs : total ≤ échéance),Notice-Masterlife-Credit-202410.pdf,13
+masterlife-credit:fait:fbdb2c83d4:plafond:2,Masterlife CREDIT,Incapacité de travail (IJ),5 ans cumulés pour rechutes d'une même affection au-delà de 90 jours,Notice-Masterlife-Credit-202410.pdf,13
+masterlife-credit:fait:de1ea1338f:plafond:0,Masterlife CREDIT,Invalidité totale ou partielle,plafond IJ identique incapacité,Notice-Masterlife-Credit-202410.pdf,14
+masterlife-credit:fait:48d0f52caf:plafond:0,Masterlife CREDIT,Invalidité spécifique AERAS (GIS),"jusqu'au terme du prêt, max 70 ans",Notice-Masterlife-Credit-202410.pdf,16
+masterlife-credit:fait:ba0803b83f:plafond:0,Masterlife CREDIT,Garantie Aide à la famille,50 % des IJ incapacité,Notice-Masterlife-Credit-202410.pdf,14
+masterlife-credit:fait:ba0803b83f:plafond:1,Masterlife CREDIT,Garantie Aide à la famille,4 000 €/mois/assuré (IJ + exonération),Notice-Masterlife-Credit-202410.pdf,14
+masterlife-credit:fait:ba0803b83f:plafond:2,Masterlife CREDIT,Garantie Aide à la famille,14 mois renouvelable 1 fois,Notice-Masterlife-Credit-202410.pdf,14

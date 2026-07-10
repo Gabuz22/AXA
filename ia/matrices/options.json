@@ -1,0 +1,297 @@
+{
+ "meta": {
+  "categorie": "options",
+  "version": "1.2.0",
+  "total": 36
+ },
+ "elements": [
+  {
+   "id": "axa_axa_axa_avizen_2025_04_options_6a1ed3c8d2d1_knowledge_bf648561fef8",
+   "contrat": "Avizen",
+   "titre": "Exonération des cotisations en cas d'ITT",
+   "texte": "Pendant le versement des IJ, remboursement des cotisations de l'ensemble des garanties en cours à raison de 1/365e de la cotisation annuelle par jour d'arrêt total indemnisé. Garanties maintenues mais aucune augmentation possible pendant l'exonération.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 17
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_options_8f4ee5536c39_knowledge_566df5b56ec5",
+   "contrat": "Avizen",
+   "titre": "Indexation des garanties (option à l'adhésion)",
+   "texte": "Réévaluation annuelle des garanties selon l'évolution du PASS, sans examen médical ; cotisation évolue du même pourcentage. Cesse au plus tard à la date anniversaire de l'année des 70 ans ou au décès. Refus définitif possible par lettre au moins 1 mois avant la date anniversaire.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 8
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_options_9548821c6b3a_knowledge_3c980033add3",
+   "contrat": "Avizen",
+   "titre": "Exonération des cotisations en cas d'invalidité",
+   "texte": "Si invalidité permanente ≥ 66 % (maladie ou accident) déclenchant une indemnisation invalidité : cotisations prises en charge jusqu'au terme de la garantie, tant que l'invalidité reste ≥ 66 %.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 18
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_options_9f4385ee345a_knowledge_219241330066",
+   "contrat": "Avizen",
+   "titre": "Capital décès double garantie",
+   "texte": "Si l'assuré en IPT décède au moins 1 an après la consolidation, capital supplémentaire (égal au capital IPT déjà versé) aux bénéficiaires, si décès avant fin de l'année d'assurance des 85 ans.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 11
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_options_e060ef8374fa_knowledge_97cb97064d66",
+   "contrat": "Avizen",
+   "titre": "Augmentation sans sélection médicale (mariage/naissance/adoption)",
+   "texte": "Augmentation du capital décès/IPT sans sélection médicale, dans la limite de 20 % du montant, en cas de mariage ou PACS, naissance ou adoption, demandée dans les 3 mois suivant l'événement.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 9
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_options_30367f970ec3_knowledge_9b700659935b",
+   "contrat": "Avizen Pro",
+   "titre": "Cadre fiscal Madelin",
+   "texte": "Adhésion possible dans le cadre fiscal Madelin (TNS) : prestations alors imposables ; obligation de justifier chaque année (et à l'adhésion) être à jour des cotisations maladie et vieillesse obligatoires (attestations des caisses).",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 4
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_options_30d31b0bdbeb_knowledge_6abd3591ed08",
+   "contrat": "Avizen Pro",
+   "titre": "Exonération cotisations invalidité",
+   "texte": "Dispense de cotisations si invalidité ≥ 66 % (appréciée selon le taux croisé, professionnel ou fonctionnel suivant la garantie rente détenue) tant qu'elle perdure.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 24
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_options_58815b57aa2b_knowledge_3b485dc6b94c",
+   "contrat": "Avizen Pro",
+   "titre": "Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)",
+   "texte": "+20 % max du capital décès/IPT sans sélection médicale, dans les 3 mois de l'événement.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 9
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_options_59ba50240db5_knowledge_cbb3ace5d17d",
+   "contrat": "Avizen Pro",
+   "titre": "Indexation PASS",
+   "texte": "Comme Avizen : réévaluation annuelle garanties+cotisations selon le PASS, sans examen médical, jusqu'à 70 ans ; refus définitif possible 1 mois avant la date anniversaire.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 8
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_options_600b2b2533a5_knowledge_9af710c106d5",
+   "contrat": "Avizen Pro",
+   "titre": "Exonération cotisations ITT",
+   "texte": "1/365e de la cotisation annuelle remboursé par jour d'arrêt total indemnisé ; garanties maintenues, pas d'augmentation possible.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 24
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_options_66925aa55f52_knowledge_685604acb028",
+   "contrat": "Avizen Pro",
+   "titre": "Capital décès double garantie",
+   "texte": "Capital supplémentaire (égal au capital IPT versé) si décès ≥ 1 an après consolidation IPT, avant fin de l'année d'assurance des 85 ans.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 11
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_options_cd5baa4496f8_knowledge_48ad072d3fa9",
+   "contrat": "Avizen Pro",
+   "titre": "Option taux invalidité professionnelle (barème spécifique)",
+   "texte": "Pour 28 professions éligibles (liste contractuelle p.21), fixation du taux d'invalidité (n) uniquement selon l'invalidité professionnelle, avec barème spécifique remis à l'adhésion (n retenu jamais inférieur au barème de la profession). Indemnisation : n/66 si n < 66 %, 100 % si n ≥ 66 %. Exemple contractuel : n = 50 % → 75,76 % de la rente.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 20
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_options_d2d83a481f1d_knowledge_4f580b86f787",
+   "contrat": "Avizen Pro",
+   "titre": "Option taux d'invalidité 15 % maladie",
+   "texte": "Abaisse le seuil d'intervention invalidité maladie de 33 % à 15 % (rente et capital). Acquise seulement si mentionnée au certificat.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 17
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_options_1e769dd60f47_knowledge_1f9477b5236e",
+   "contrat": "Entour'Age",
+   "titre": "Réduction couple",
+   "texte": "Si chaque conjoint adhère individuellement dans un délai maximal de 3 mois entre les deux adhésions : réduction tarifaire permanente de 10 % sur les deux cotisations. Prend fin si l'un des contrats est résilié ou mis en réduction.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 11
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_options_9d4ceb1307a5_knowledge_4719bd564d23",
+   "contrat": "Entour'Age",
+   "titre": "Formule Dépendance Totale et Partielle",
+   "texte": "Étend la couverture à la dépendance partielle : 50 % de la rente dès reconnaissance de la dépendance partielle ; substitution intégrale par la rente totale en cas d'aggravation reconnue.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 6
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_options_a965668d36e4_knowledge_28f942a2bdaa",
+   "contrat": "Entour'Age",
+   "titre": "Capital Premiers Frais",
+   "texte": "Capital forfaitaire de 3 500 € versé à l'ouverture du droit à prestations pour l'état de dépendance garanti (y compris dépendance LÉGÈRE si l'option est souscrite dans le cadre de la Formule Totale et Partielle). Montant = montant souscrit × revalorisation × coefficient de réduction éventuel. Versement unique mettant fin à la garantie ; libre utilisation.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 6
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_options_adbaa1191be7_knowledge_35cafcbd6d53",
+   "contrat": "Entour'Age",
+   "titre": "Capital décès Remboursement des cotisations",
+   "texte": "En cas de décès SANS dépendance préalable avant le 85e anniversaire : remboursement aux bénéficiaires du cumul des cotisations nettes des frais de fractionnement versées depuis la date d'effet de cette garantie. Non cumulable avec le Capital décès.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 27
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_options_c09b72c9c8a5_knowledge_4cd76c6d196f",
+   "contrat": "Entour'Age",
+   "titre": "Capital décès",
+   "texte": "3 500 € versés aux bénéficiaires en cas de décès de l'assuré ; le versement met fin à toutes les garanties. Cesse à la fin de l'année d'assurance des 85 ans. Non cumulable avec Capital décès remboursement des cotisations.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 6
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Modification du capital garanti",
+   "texte": "Possible après 1 année pleine de cotisation, avant 86 ans, une fois par année d'adhésion. Augmentation : complément de cotisation (âge + tarif en vigueur + montant) et nouveau délai d'attente d'1 an sur la fraction nouvelle (décès accidentel seul couvert pendant ce délai ; si décès par maladie : capital initial versé + cotisations complémentaires nettes de frais remboursées à la succession). Diminution : recalcul des cotisations.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 22
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_options_de0a3dff8347_knowledge_6e47ac594507",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Réduction adhésion simultanée (couple)",
+   "texte": "Adhésion simultanée de l'adhérent et de son partenaire de vie (époux, PACS, concubin) : réduction permanente de 10 % sur l'ensemble des cotisations des 2 adhésions. Prend fin en cas de rachat, résiliation ou mise en réduction de l'une des adhésions.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 17
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_options_e59c0ac74c82_knowledge_786fe21d3933",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Choix de la durée de cotisation",
+   "texte": "Cotisations temporaires 10 ans ou 20 ans (âge < 90 ans au paiement de la dernière cotisation) ou viagères. Cotisation viagère mensuelle plus faible, mais le cumul versé peut dépasser le capital garanti dans tous les cas.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 8
+  },
+  {
+   "id": "axa_essenciel_patrimoine_2023-09_option_d5aed7e8f30b",
+   "contrat": "Essen'Ciel Patrimoine",
+   "titre": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+   "texte": "Le contrat comporte une faculté de rachat ; règlement sous 2 mois. Un tableau des valeurs de rachat au terme des 8 premières années figure dans la notice (§4.3).",
+   "notice": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+   "page": "2, 14, 15"
+  },
+  {
+   "id": "axa_essenciel_patrimoine_2023-09_option_4c8a4bdf86b1",
+   "contrat": "Essen'Ciel Patrimoine",
+   "titre": "Mise en réduction (valeur de réduction)",
+   "texte": "Si l'adhérent cesse de payer les cotisations, l'adhésion peut être mise en réduction : un nouveau capital garanti (valeur de réduction) est calculé.",
+   "notice": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+   "page": "13, 14, 15"
+  },
+  {
+   "id": "axa_essenciel_patrimoine_2023-09_option_133833a39642",
+   "contrat": "Essen'Ciel Patrimoine",
+   "titre": "Réduction tarifaire couple (-10 %)",
+   "texte": "Adhésion simultanée de l'adhérent et de son conjoint (marié/PACS/concubin) : -10 % permanent sur l'ensemble des cotisations.",
+   "notice": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+   "page": "13"
+  },
+  {
+   "id": "axa_essenciel_patrimoine_2023-09_option_1c3ca5ad4e41",
+   "contrat": "Essen'Ciel Patrimoine",
+   "titre": "Prestations d'assistance (suite au décès)",
+   "texte": "Prestations d'assistance fournies par AXA Assistance (suite au décès de l'assuré).",
+   "notice": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+   "page": "7, 9, 10"
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_options_1cdccb5c2dfd_knowledge_e2f08d8f4d98",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Prorogation du fonds Croissance",
+   "texte": "Option expresse, sans frais, à tout moment : à l'échéance, la garantie (10 ans) est prorogée ; renonciation possible par lettre simple ; l'assureur peut refuser jusqu'à 3 mois avant l'échéance. Les prélèvements sociaux du fonds Croissance sont reportés à la nouvelle échéance.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 20
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_options_6daa8e90677e_knowledge_74b7d68ed563",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Types de gestion",
+   "texte": "Gestion personnelle (libre choix des supports) ; gestion par convention (profils, dont conventions Conviction/Horizon, avec ou sans fonds Croissance, équilibrages automatiques) ; gestion pilotée / sous mandat (profils d'allocation, frais de mandat +0,25 %/an sur UC). Options d'arbitrage automatique en gestion personnelle : investissement progressif (0 %), sécurisation des performances (0,80 %), stop loss (0 %).",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 79
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_options_a2272a8885f5_knowledge_cdbcbea03f9e",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Rachats partiels programmés",
+   "texte": "Durée max 3 ans, montant en euros (brut ou net de fiscalité), périodicité au choix ; min 150 €/rachat, valeur de rachat restante ≥ 750 € ; incompatible avec versements programmés et options d'arbitrage automatique ; modifications avec préavis 1 mois ; une seule suspension/reprise ; l'assureur peut arrêter l'option.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 45
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_options_becda5d4fd28_knowledge_111a93605f95",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Mes Sports à risque",
+   "texte": "Couvre les accidents résultant uniquement des sports listés : sports aériens (parachutisme, parapente, deltaplane, parachute ascensionnel, saut à élastique, ULM, autogyre, vol à voile, skydiving, planeur) ; aquatiques/nautiques (kitesurf, plongeon, hydrospeed, rafting, canyoning, plongée sous-marine et souterraine, apnée, aéroglisseur, wakeboard, scooter des mers) ; montagne (alpinisme, VTT de descente, escalade hors support artificiel sécurisé, raids et expéditions, ski hors-piste, spéléologie, motoneige) ; sports avec armes à feu ou à air comprimé. In…",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 5
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_options_03060a22d564_knowledge_46aead17e71e",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Types de gestion",
+   "texte": "Gestion personnelle (choix libre des supports), gestions de la gamme Activ'Retraite Croissance (gestion à horizon de départ en retraite avec fonds Croissance, profils dont « Prudente » ; réajustements semestriels sans frais entre supports), répartition libre possible à côté. Changement de type de gestion / d'horizon / de supports possible après le délai de renonciation.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 16
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_options_1a4d11b3967f_knowledge_d7b3d80bd8ba",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Indexation des versements réguliers",
+   "texte": "Indexation annuelle (avant le 1er avril) sur la variation du plafond de la Sécurité sociale au 1er janvier ; refus possible avant le 1er mars de chaque année.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 14
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_options_cf50f22c7839_knowledge_63ffd274ad71",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Versements pris en charge par la société",
+   "texte": "Versements possibles par la société de l'adhérent (dirigeant ou salarié) : avantage en espèces imposable en traitements et salaires pour l'adhérent, droit à déduction comme s'il avait versé lui-même ; pour la société : cotisations sociales de droit commun + déductibilité du résultat (travail effectif, non excessif). Obligation d'interrompre ces versements à la rupture du contrat de travail / fin du mandat.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 14
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_options_eeb5b0c6e766_knowledge_6af0d458d009",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Transfert individuel sortant",
+   "texte": "Vers tout autre PER (loi 2019-486) : demande en LRAR avec certificat + RIB du gestionnaire d'accueil ; valeur de transfert notifiée sous 1 mois ; 15 jours pour y renoncer ; versement au nouveau gestionnaire sous 15 jours après acceptation. Frais : 1 % max avant le 5e anniversaire de l'adhésion, nuls ensuite ou après l'échéance. Transfert = totalité de l'épargne, fin de l'adhésion.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 28
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_options_bb2687eed056_knowledge_8805759d2325",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Option Psy/Dos+",
+   "texte": "Prise en charge des affections psychologiques/asthénie/fibromyalgie SANS condition d'hospitalisation (franchise 90 jours ou franchise du contrat si supérieure ; si franchise souscrite < 90 jours et hospitalisation continue en établissement spécialisé > franchise : franchise du contrat dès le 1er jour d'hospitalisation, prise en charge au plus tard 90 jours après le début de l'arrêt) et des affections disco-vertébrales SANS condition d'hospitalisation (franchise 30 jours ou supérieure du contrat). Vaut pour l'incapacité ET l'invalidité.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 13
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_options_cd4d91e29f75_knowledge_d0c39ab9e6b2",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Tarif constant",
+   "texte": "Cotisation annuelle fixe jusqu'au terme ; assiette = montant emprunté × quotité. NON proposée en cas de dispense Lemoine de questionnaire médical. Choix irrévocable.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 11
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_options_edabb5425d62_knowledge_f2d4e1a2a65c",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Tarif capital restant dû",
+   "texte": "Cotisation fluctuant selon le capital restant dû et l'âge ; assiette = capital restant dû × quotité. Choix irrévocable.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 11
+  }
+ ]
+}

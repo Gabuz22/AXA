@@ -1,0 +1,353 @@
+{
+ "meta": {
+  "categorie": "plafonds",
+  "version": "1.2.0",
+  "total": 43
+ },
+ "elements": [
+  {
+   "id": "avizen:fait:2cbcc3adad:plafond:0",
+   "contrat": "Avizen",
+   "titre": "Capital décès toutes causes / Capital IPT toutes causes (garantie principale)",
+   "texte": "montants au certificat d'adhésion",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 11
+  },
+  {
+   "id": "avizen:fait:d2f8ad4663:plafond:0",
+   "contrat": "Avizen",
+   "titre": "Capital décès par accident / Capital IPT par accident (garantie principale)",
+   "texte": "montants au certificat d'adhésion",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 11
+  },
+  {
+   "id": "avizen:fait:9893112dc5:plafond:0",
+   "contrat": "Avizen",
+   "titre": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+   "texte": "paliers 100/125/150 % du montant souscrit",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 12
+  },
+  {
+   "id": "avizen:fait:a1589f2d75:plafond:0",
+   "contrat": "Avizen",
+   "titre": "Rente décès / Rente IPT (garantie principale)",
+   "texte": "réduction de 50 % de la rente à partir des 65 ans du bénéficiaire",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 13
+  },
+  {
+   "id": "avizen:fait:89a1ca75b5:plafond:0",
+   "contrat": "Avizen",
+   "titre": "Indemnités journalières ITT toutes causes (optionnelle)",
+   "texte": "365 ou 1095 jours selon certificat",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 13
+  },
+  {
+   "id": "avizen:fait:819383df2a:plafond:0",
+   "contrat": "Avizen",
+   "titre": "Indemnités journalières ITT par accident (optionnelle)",
+   "texte": "1 095 jours",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 14
+  },
+  {
+   "id": "avizen:fait:3d298b99e0:plafond:0",
+   "contrat": "Avizen",
+   "titre": "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+   "texte": "taux d'indemnisation max 100 % (taux ≥ 66 %)",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 15
+  },
+  {
+   "id": "avizen:fait:e73c1c5a47:plafond:0",
+   "contrat": "Avizen",
+   "titre": "Garantie aide à la famille",
+   "texte": "14 mois par enfant et par pathologie, renouvelable une fois",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 18
+  },
+  {
+   "id": "avizen-pro:fait:e6e92c4b61:plafond:0",
+   "contrat": "Avizen Pro",
+   "titre": "Capital décès toutes causes / Capital IPT toutes causes + double effet",
+   "texte": "montants au certificat",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 11
+  },
+  {
+   "id": "avizen-pro:fait:6354ec813b:plafond:0",
+   "contrat": "Avizen Pro",
+   "titre": "Rente éducation décès / IPT + double effet",
+   "texte": "paliers 100/125/150 %",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 12
+  },
+  {
+   "id": "avizen-pro:fait:cf7576de07:plafond:0",
+   "contrat": "Avizen Pro",
+   "titre": "Rente décès / Rente IPT",
+   "texte": "-50 % à 65 ans du bénéficiaire",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 12
+  },
+  {
+   "id": "avizen-pro:fait:e4f8ae15eb:plafond:0",
+   "contrat": "Avizen Pro",
+   "titre": "IJ ITT toutes causes (optionnelle)",
+   "texte": "365 ou 1095 jours",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 14
+  },
+  {
+   "id": "avizen-pro:fait:b98f6e974d:plafond:0",
+   "contrat": "Avizen Pro",
+   "titre": "IJ ITT par accident (optionnelle)",
+   "texte": "1 095 jours",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 15
+  },
+  {
+   "id": "avizen-pro:fait:299920232f:plafond:0",
+   "contrat": "Avizen Pro",
+   "titre": "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)",
+   "texte": "90 ou 365 jours selon certificat",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 15
+  },
+  {
+   "id": "avizen-pro:fait:59e1287b10:plafond:0",
+   "contrat": "Avizen Pro",
+   "titre": "Indemnités Remboursement des frais professionnels (optionnelle)",
+   "texte": "plafond journalier garanti au certificat",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 16
+  },
+  {
+   "id": "avizen-pro:fait:45763a5331:plafond:0",
+   "contrat": "Avizen Pro",
+   "titre": "Rente invalidité permanente partielle ou totale (optionnelle)",
+   "texte": "indemnisation 100 % si taux ≥ 66 %",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 17
+  },
+  {
+   "id": "avizen-pro:fait:e381236ba4:plafond:0",
+   "contrat": "Avizen Pro",
+   "titre": "Garantie aide à la famille",
+   "texte": "14 mois par enfant et pathologie, renouvelable une fois",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 25
+  },
+  {
+   "id": "entour-age:fait:52eb8f16a6:plafond:0",
+   "contrat": "Entour'Age",
+   "titre": "Rente viagère dépendance (garantie principale obligatoire)",
+   "texte": "rente choisie entre 500 et 3 000 €/mois",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 21
+  },
+  {
+   "id": "entour-age:fait:52eb8f16a6:plafond:1",
+   "contrat": "Entour'Age",
+   "titre": "Rente viagère dépendance (garantie principale obligatoire)",
+   "texte": "GIR 5/6 jamais garanti",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 21
+  },
+  {
+   "id": "entour-age:fait:2a25013e7a:plafond:0",
+   "contrat": "Entour'Age",
+   "titre": "Services dès l'adhésion « ENTREAIDANTS »",
+   "texte": "voir détail par prestation",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 16
+  },
+  {
+   "id": "entour-age:fait:2094e3a95e:plafond:0",
+   "contrat": "Entour'Age",
+   "titre": "Services d'assistance dédiés en perte d'autonomie",
+   "texte": "bilan d'adaptation du domicile : 500 € TTC",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 23
+  },
+  {
+   "id": "entour-age:fait:2094e3a95e:plafond:1",
+   "contrat": "Entour'Age",
+   "titre": "Services d'assistance dédiés en perte d'autonomie",
+   "texte": "1 bilan initial par adhésion",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 23
+  },
+  {
+   "id": "entour-age:fait:dcbc36cf9a:plafond:0",
+   "contrat": "Entour'Age",
+   "titre": "Services pour l'aidant de l'assuré",
+   "texte": "répit : 1 000 € TTC/an ; visites d'établissements : 200 € ; transport hébergement temporaire : 100 €/an",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 25
+  },
+  {
+   "id": "excelium-assurance-vie:fait:62d6fd5c2d:plafond:0",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Garantie « Sérénité » (plancher, incluse)",
+   "texte": "plancher = versements bruts − rachats",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 15
+  },
+  {
+   "id": "excelium-assurance-vie:fait:62d6fd5c2d:plafond:1",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Garantie « Sérénité » (plancher, incluse)",
+   "texte": "jusqu'à 80 ans (90 ans pour le volet fonds Croissance)",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 15
+  },
+  {
+   "id": "excelium-assurance-vie:fait:0b27383ed4:plafond:0",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Garantie « Revalorisée »",
+   "texte": "capital sous risque max 1 200 000 €/assuré",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 16
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:plafond:0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Accidents corporels d'activités courantes",
+   "texte": "limites fixées aux Conditions particulières",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 4
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:9347c06b89:plafond:0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Indemnisation des préjudices corporels (barème AQV)",
+   "texte": "maximum 600 000 € (AQV ≥ 100, tranche 0-19 ans)",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 7
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:9347c06b89:plafond:1",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Indemnisation des préjudices corporels (barème AQV)",
+   "texte": "plafond de garantie indiqué aux Conditions particulières (cumul aggravations)",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 7
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:4c55c61a58:plafond:0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Préjudices indemnisés selon droit commun",
+   "texte": "ATP : 10 €/h si DFP ≤ 30 %, 14 €/h si DFP > 30 %",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 9
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:4c55c61a58:plafond:1",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Préjudices indemnisés selon droit commun",
+   "texte": "PGPA plafonné à 50 000 €",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 9
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:2bd15a813d:plafond:0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "En cas de décès",
+   "texte": "frais d'obsèques : 5 000 €",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 9
+  },
+  {
+   "id": "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:5373d2e9a3:plafond:0",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "En cas de vie - sortie en capital",
+   "texte": "min 750 € par versement partiel et solde > 750 €",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 10
+  },
+  {
+   "id": "masterlife-credit:fait:d958e52a0c:plafond:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Décès",
+   "texte": "capital restant dû × quotité assurée",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 12
+  },
+  {
+   "id": "masterlife-credit:fait:a1b706a42f:plafond:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "PTIA",
+   "texte": "capital restant dû × quotité",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 12
+  },
+  {
+   "id": "masterlife-credit:fait:fbdb2c83d4:plafond:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Incapacité de travail (IJ)",
+   "texte": "1 095 jours",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 13
+  },
+  {
+   "id": "masterlife-credit:fait:fbdb2c83d4:plafond:1",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Incapacité de travail (IJ)",
+   "texte": "échéance du prêt (co-emprunteurs : total ≤ échéance)",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 13
+  },
+  {
+   "id": "masterlife-credit:fait:fbdb2c83d4:plafond:2",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Incapacité de travail (IJ)",
+   "texte": "5 ans cumulés pour rechutes d'une même affection au-delà de 90 jours",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 13
+  },
+  {
+   "id": "masterlife-credit:fait:de1ea1338f:plafond:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Invalidité totale ou partielle",
+   "texte": "plafond IJ identique incapacité",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 14
+  },
+  {
+   "id": "masterlife-credit:fait:48d0f52caf:plafond:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Invalidité spécifique AERAS (GIS)",
+   "texte": "jusqu'au terme du prêt, max 70 ans",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 16
+  },
+  {
+   "id": "masterlife-credit:fait:ba0803b83f:plafond:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Garantie Aide à la famille",
+   "texte": "50 % des IJ incapacité",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 14
+  },
+  {
+   "id": "masterlife-credit:fait:ba0803b83f:plafond:1",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Garantie Aide à la famille",
+   "texte": "4 000 €/mois/assuré (IJ + exonération)",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 14
+  },
+  {
+   "id": "masterlife-credit:fait:ba0803b83f:plafond:2",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Garantie Aide à la famille",
+   "texte": "14 mois renouvelable 1 fois",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 14
+  }
+ ]
+}

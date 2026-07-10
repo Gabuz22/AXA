@@ -16,7 +16,16 @@
 - **[Comparateur thématique](comparateur.html)** — un sujet, tous les contrats côte à côte, sourcé
 - **[Graphe de preuves](preuves.html)** — chaque élément citable (id, source, page, concepts)
 - **[Méthode & assembleur](methode-question-complexe.html)** — 5 parcours + structure de réponse sécurisée
-- **[Jeux de tests](tests.html)** — questions de contrôle + parcours attendus
+- **[Hiérarchie documentaire](hierarchie.html)** — ordre : contrat → notice → docs AXA → réglementation → réponse
+- **[Moteur choix des sources](choix-sources.html)** — quel document, quel ordre, quand s'arrêter, quand ne pas conclure
+- **[Sources officielles](sources-officielles.html)** — autorités publiques (Légifrance, BOFiP, Ameli…) par concept
+- **[Détecteur de réglementation](reglementation.html)** — signale une matière évolutive + autorités à consulter
+- **[Surveillance documentaire](surveillance.html)** — dater / alerter / préparer (jamais de mise à jour auto)
+- **[Connaissances dynamiques](connaissances-dynamiques.html)** — chaîne de validation prête (jamais automatique)
+- **[Matrices documentaires](matrices.html)** — contrats × catégories, concepts × contrats (HTML/MD/JSON/CSV)
+- **[Graphe documentaire](graphe.html)** — nœuds & relations dérivées (contrats, concepts, éléments, autorités)
+- **[Rapport de maturité](maturite.html)** — capacités documentaires, réglementaires, de preuve, de couverture
+- **[Jeux de tests](tests.html)** — ≥ 50 questions de contrôle + parcours attendus
 
 ## Formats machine
 - [concepts.json](concepts.json) · [planificateur.json](planificateur.json) · [couverture-recherche.json](couverture-recherche.json) · [preuves.json](preuves.json) · [tests.json](tests.json)

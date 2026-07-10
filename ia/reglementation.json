@@ -1,0 +1,332 @@
+{
+ "meta": {
+  "version": "1.2.0",
+  "genere_le": "2026-07-10",
+  "note": "Signalement des matières évolutives + autorités. Aucune règle stockée."
+ },
+ "concepts": {
+  "invalidite": {
+   "nom": "Invalidité",
+   "matiere_evolutive": true,
+   "domaines": [
+    "prévoyance",
+    "protection sociale"
+   ],
+   "avertissement": "Cette réponse dépend d'une réglementation susceptible d'évoluer.",
+   "sources_officielles_recommandees": [
+    {
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984"
+    },
+    {
+     "nom": "Ameli (Assurance Maladie)",
+     "url": "https://www.ameli.fr"
+    },
+    {
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr"
+    },
+    {
+     "nom": "Légifrance",
+     "url": "https://www.legifrance.gouv.fr"
+    }
+   ],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "deces": {
+   "nom": "Décès",
+   "matiere_evolutive": true,
+   "domaines": [
+    "prévoyance",
+    "succession"
+   ],
+   "avertissement": "Cette réponse dépend d'une réglementation susceptible d'évoluer.",
+   "sources_officielles_recommandees": [
+    {
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984"
+    },
+    {
+     "nom": "Code général des impôts (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577"
+    },
+    {
+     "nom": "BOFiP-Impôts",
+     "url": "https://bofip.impots.gouv.fr"
+    },
+    {
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr"
+    }
+   ],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "deces-accidentel": {
+   "nom": "Décès accidentel",
+   "matiere_evolutive": true,
+   "domaines": [
+    "prévoyance"
+   ],
+   "avertissement": "Cette réponse dépend d'une réglementation susceptible d'évoluer.",
+   "sources_officielles_recommandees": [
+    {
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984"
+    },
+    {
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr"
+    }
+   ],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "accident": {
+   "nom": "Accident",
+   "matiere_evolutive": false,
+   "domaines": [
+    "prévoyance"
+   ],
+   "avertissement": null,
+   "sources_officielles_recommandees": [],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "hospitalisation": {
+   "nom": "Hospitalisation",
+   "matiere_evolutive": true,
+   "domaines": [
+    "santé",
+    "protection sociale"
+   ],
+   "avertissement": "Cette réponse dépend d'une réglementation susceptible d'évoluer.",
+   "sources_officielles_recommandees": [
+    {
+     "nom": "Ameli (Assurance Maladie)",
+     "url": "https://www.ameli.fr"
+    },
+    {
+     "nom": "Code de la sécurité sociale (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189"
+    },
+    {
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr"
+    }
+   ],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "incapacite-temporaire": {
+   "nom": "Incapacité temporaire",
+   "matiere_evolutive": true,
+   "domaines": [
+    "protection sociale"
+   ],
+   "avertissement": "Cette réponse dépend d'une réglementation susceptible d'évoluer.",
+   "sources_officielles_recommandees": [
+    {
+     "nom": "Ameli (Assurance Maladie)",
+     "url": "https://www.ameli.fr"
+    },
+    {
+     "nom": "Code de la sécurité sociale (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189"
+    },
+    {
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr"
+    }
+   ],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "carence": {
+   "nom": "Carence / délai d'attente",
+   "matiere_evolutive": false,
+   "domaines": [
+    "assurance"
+   ],
+   "avertissement": null,
+   "sources_officielles_recommandees": [],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "rachat": {
+   "nom": "Rachat",
+   "matiere_evolutive": true,
+   "domaines": [
+    "fiscalité",
+    "assurance vie"
+   ],
+   "avertissement": "Cette réponse dépend d'une réglementation susceptible d'évoluer.",
+   "sources_officielles_recommandees": [
+    {
+     "nom": "Code général des impôts (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577"
+    },
+    {
+     "nom": "BOFiP-Impôts",
+     "url": "https://bofip.impots.gouv.fr"
+    },
+    {
+     "nom": "impots.gouv.fr",
+     "url": "https://www.impots.gouv.fr"
+    },
+    {
+     "nom": "ACPR",
+     "url": "https://acpr.banque-france.fr"
+    },
+    {
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984"
+    }
+   ],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "souscription": {
+   "nom": "Souscription & adhésion",
+   "matiere_evolutive": true,
+   "domaines": [
+    "assurance",
+    "protection sociale"
+   ],
+   "avertissement": "Cette réponse dépend d'une réglementation susceptible d'évoluer.",
+   "sources_officielles_recommandees": [
+    {
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984"
+    },
+    {
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr"
+    },
+    {
+     "nom": "ACPR",
+     "url": "https://acpr.banque-france.fr"
+    }
+   ],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "age": {
+   "nom": "Âge",
+   "matiere_evolutive": true,
+   "domaines": [
+    "retraite",
+    "protection sociale"
+   ],
+   "avertissement": "Cette réponse dépend d'une réglementation susceptible d'évoluer.",
+   "sources_officielles_recommandees": [
+    {
+     "nom": "L'Assurance retraite (CNAV)",
+     "url": "https://www.lassuranceretraite.fr"
+    },
+    {
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr"
+    },
+    {
+     "nom": "Code de la sécurité sociale (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189"
+    }
+   ],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "suicide": {
+   "nom": "Suicide",
+   "matiere_evolutive": false,
+   "domaines": [
+    "assurance"
+   ],
+   "avertissement": null,
+   "sources_officielles_recommandees": [],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "beneficiaire": {
+   "nom": "Bénéficiaire",
+   "matiere_evolutive": true,
+   "domaines": [
+    "succession",
+    "fiscalité"
+   ],
+   "avertissement": "Cette réponse dépend d'une réglementation susceptible d'évoluer.",
+   "sources_officielles_recommandees": [
+    {
+     "nom": "Code général des impôts (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577"
+    },
+    {
+     "nom": "BOFiP-Impôts",
+     "url": "https://bofip.impots.gouv.fr"
+    },
+    {
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984"
+    },
+    {
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr"
+    }
+   ],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "fiscalite": {
+   "nom": "Fiscalité",
+   "matiere_evolutive": true,
+   "domaines": [
+    "fiscalité",
+    "succession"
+   ],
+   "avertissement": "Cette réponse dépend d'une réglementation susceptible d'évoluer.",
+   "sources_officielles_recommandees": [
+    {
+     "nom": "BOFiP-Impôts",
+     "url": "https://bofip.impots.gouv.fr"
+    },
+    {
+     "nom": "impots.gouv.fr",
+     "url": "https://www.impots.gouv.fr"
+    },
+    {
+     "nom": "Code général des impôts (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577"
+    },
+    {
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr"
+    }
+   ],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "fin-garantie": {
+   "nom": "Fin de garantie",
+   "matiere_evolutive": false,
+   "domaines": [
+    "assurance"
+   ],
+   "avertissement": null,
+   "sources_officielles_recommandees": [],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  },
+  "association": {
+   "nom": "Association / ANPERE",
+   "matiere_evolutive": false,
+   "domaines": [
+    "associatif"
+   ],
+   "avertissement": null,
+   "sources_officielles_recommandees": [],
+   "derniere_verification": null,
+   "statut_verification": "non vérifié"
+  }
+ }
+}

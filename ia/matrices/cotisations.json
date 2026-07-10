@@ -1,0 +1,385 @@
+{
+ "meta": {
+  "categorie": "cotisations",
+  "version": "1.2.0",
+  "total": 47
+ },
+ "elements": [
+  {
+   "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_2ca4d97bb9ae_knowledge_6ed9ced498a7",
+   "contrat": "Avizen",
+   "titre": "tableaux",
+   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
+   "contrat": "Avizen",
+   "titre": "frais",
+   "texte": "frais. Information documentaire à consulter dans la source.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_7f531ad19cd0_knowledge_0d72b99a5472",
+   "contrat": "Avizen",
+   "titre": "exemples_chiffrés",
+   "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_abc3375d4853_knowledge_811b06665e8e",
+   "contrat": "Avizen",
+   "titre": "mode_calcul",
+   "texte": "Cotisation annuelle calculée selon : âge de l'assuré (millésime année d'adhésion - millésime année de naissance, recalculé à chaque date anniversaire), groupe tarifaire selon la profession, qualité fumeur/non-fumeur ; dépend aussi des conditions d'acceptation médicale, des conditions d'exercice de la profession, des activités/sports/loisirs et des taxes réglementaires. Payables d'avance dans les 10 jours suivant l'échéance (périodicité mensuelle, trimestrielle, semestrielle ou annuelle au certificat). Le paiement s'arrête au décès ou à la reconnaissance…",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_b516c9e6cfb0_knowledge_09a0e053a243",
+   "contrat": "Avizen",
+   "titre": "défaut_de_paiement",
+   "texte": "à l'expiration d'un délai de 40 jours suivant la lettre recommandée, l'adhésion sera résiliée",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 8
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db",
+   "contrat": "Avizen",
+   "titre": "réductions",
+   "texte": "Abattement non-fumeur · Abattement tarifaire sur les garanties capital décès/IPT toutes causes, rente éducation décès/IPT et rente décès/IPT lorsque l'assuré est non-fumeur (définition : 24 mois sans fumer ni sevrage).",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
+   "contrat": "Avizen Pro",
+   "titre": "tableaux",
+   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
+   "contrat": "Avizen Pro",
+   "titre": "exemples_chiffrés",
+   "texte": "Option taux professionnel : taux d'invalidité 50 % → taux d'indemnisation 50/66 = 75,76 % de la rente du certificat ; taux 75 % → 100 %.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_759b89f27c1f_knowledge_d18add8ca1f6",
+   "contrat": "Avizen Pro",
+   "titre": "défaut_de_paiement",
+   "texte": "à l'expiration d'un délai de 40 jours suivant la lettre recommandée, l'adhésion sera résiliée",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 8
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_819a475f3f85_knowledge_f28130b0ac7c",
+   "contrat": "Avizen Pro",
+   "titre": "mode_calcul",
+   "texte": "Identique à Avizen : âge (différence de millésimes), groupe tarifaire professionnel, fumeur/non-fumeur, conditions d'acceptation médicale, conditions d'exercice, activités/sports, taxes. Payables d'avance sous 10 jours de l'échéance (périodicité au certificat). Arrêt du paiement au décès ou à la reconnaissance d'IPT.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
+   "contrat": "Avizen Pro",
+   "titre": "frais",
+   "texte": "frais. Information documentaire à consulter dans la source.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
+   "contrat": "Avizen Pro",
+   "titre": "réductions",
+   "texte": "Abattement non-fumeur · Abattement tarifaire pour non-fumeur (24 mois sans tabac ni sevrage) sur les garanties décès/IPT, rente éducation, rente décès.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89",
+   "contrat": "Entour'Age",
+   "titre": "tableaux",
+   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d",
+   "contrat": "Entour'Age",
+   "titre": "mode_calcul",
+   "texte": "Cotisation calculée à l'adhésion selon : âge de l'assuré (différence de millésimes), garanties souscrites et niveau de rente choisi, majoration éventuelle pour risque aggravé. Payable à terme d'avance (périodicité mensuelle/trimestrielle/semestrielle/annuelle, modifiable à chaque échéance anniversaire). PAS de modification en raison de l'âge ou de la détérioration de l'état de santé en cours d'adhésion ; majorations possibles uniquement sur décision du comité de gestion paritaire (revalorisation, résultats techniques/financiers, évolutions législatives/…",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b71f718b3818_knowledge_2ceb18ba5d21",
+   "contrat": "Entour'Age",
+   "titre": "frais",
+   "texte": "Frais de fractionnement · Mentionnés comme déduits du remboursement des cotisations (garantie décès remboursement) — montant non précisé dans la notice.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_bda7c72e6e68_knowledge_c08c819e085e",
+   "contrat": "Entour'Age",
+   "titre": "exemples_chiffrés",
+   "texte": "Calcul de l'âge par différence de millésimes : né en 1947, adhésion en 2012 → 2012-1947 = 65 ans.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_d8f6e55152e0_knowledge_4ce4ee258710",
+   "contrat": "Entour'Age",
+   "titre": "défaut_de_paiement",
+   "texte": "à l'expiration d'un délai de 40 jours à compter de l'envoi de cette lettre… la résiliation de votre adhésion",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 11
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_df0f22fdd097_knowledge_21a4375ed5e3",
+   "contrat": "Entour'Age",
+   "titre": "réductions",
+   "texte": "Réduction couple 10 % · Voir options.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_e4d3550ca172_knowledge_4e2e3f2d5105",
+   "contrat": "Entour'Age",
+   "titre": "exonération",
+   "texte": "vous êtes exonéré du paiement des cotisations liées à l'ensemble des garanties",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 10
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0d109ff2f1ce_knowledge_b64c3388e76a",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "réductions",
+   "texte": "Réduction couple 10 % · Voir options.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0fdc19816413_knowledge_010612cb7537",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "défaut_de_paiement",
+   "texte": "au-delà de la première année, l'adhésion sera mise en réduction",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 18
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "frais",
+   "texte": "Frais de fonctionnement et de gestion de la garantie décès · Inclus dans les cotisations, exprimés en % du capital souscrit, fonction de l'âge à l'adhésion et de la durée : 0,9 % max du capital souscrit pour les cotisations viagères ; 0,4 % max pour les cotisations 10 ans ; 0,4 % max pour les cotisations 20 ans. Ces frais n'affectent pas le capital garanti. · Pénalité de rachat · 5 % de la valeur de rachat la 1re année, diminuée de 0,5 % par année ; nulle au-delà de la 10e année.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d352dd9df6b0_knowledge_a18b90c925a0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "exemples_chiffrés",
+   "texte": "Capital 5 000 € souscrit → 5 804,92 € après 12 ans (revalorisation 1 %/an, +16 % global). · 50 ans, capital 4 500 € : 48,84 €/mois (10 ans) ou 25,12 €/mois (viager).",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d54c486f45e6_knowledge_9b690d586091",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "tableaux",
+   "texte": "Exemple de cumul de cotisations (60 ans, capital 5 000 €) · 18 · type · durée · cotisation_annuelle_eur · cumul à 65/70/75/80/85/90/95 ans · Viager · jusqu'au décès · 390.68 · 1953 · 3907 · 5860 · 7814 · 9767 · 11720 · 13674 · Temporaire · 20 ans · 423.39 · 2117 · 4234 · 6351 · 8468 · 10 ans · 663.61 · 3318 · 6636",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d5f8f13b0b5c_knowledge_a95f12312a57",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "mode_calcul",
+   "texte": "Cotisation déterminée à l'adhésion selon : montant du capital choisi (2 000-10 000 €), âge de l'adhérent (différence de millésimes), durée de paiement (10 ans, 20 ans, viagère). Cotisations CONSTANTES (n'évoluent ni avec l'âge ni avec l'état de santé). Payables d'avance, périodicité mensuelle/trimestrielle/semestrielle/annuelle.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_171c5a3a4b19_knowledge_833f37b8be6f",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "mode_calcul",
+   "texte": "Versements libres et/ou programmés. Minima (annexe 3, au 20/05/2026) : versement initial 300 € (5 000 € gestion pilotée ; 10 000 € avec investissement progressif en pilotée) ; complémentaires 750 € ; programmés 50 €/mois, 150 €/trimestre, 300 €/semestre, 600 €/an ; rachat partiel 750 € (programmé : 150 €) avec solde minimal 750 € ; arbitrage gestion personnelle 750 €.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_297d8ca1d613_knowledge_5d36dfd4585a",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "tableaux",
+   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_4f3778d27635_knowledge_d5c460f0fa07",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "exemples_chiffrés",
+   "texte": "VR support euros après 1 an pour 2 500 € nets : 2 500 × (1 − 0,8 %) = 2 480 €. · Prime mensuelle Revalorisée : 30 ans, capital sous risque 250 € → 0,04 €/mois ; 75 ans → 1,48 €/mois.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_58fc69bea0e9_knowledge_6dce3bffa380",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "frais",
+   "texte": "Frais de dossier · 30 € maximum, prélevés uniquement au premier versement (conditions de suppression possibles, art. 5.1.1). · Droits d'adhésion ANPERE · 15 € maximum, une fois, pour les non-adhérents. · Frais sur versements · 4,85 % maximum sur chaque versement (illustrations plafonnées à 5 % cumulé la 1re année avec frais de dossier). · Frais de gestion · Support en euros : 0,80 %/an max ; fonds Croissance : 0,80 %/an max (taux mensuel équivalent 0,0669 %) ; UC hors mandat et hors AXA Immo Avenir : 0,96 %/an max (0,0804 %/mois) ; AXA Immo Avenir : 1,5…",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "réductions",
+   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_0abf98aa5778_knowledge_445e279cef50",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "mode_calcul",
+   "texte": "Cotisations fixées en fonction de la formule et des garanties choisies (montants aux Conditions particulières, non chiffrés dans les CG). Indexation à chaque échéance principale sur le « taux d'inflation annuel en France » ou indice substitué ; modification possible hors indice avec droit de résiliation. Payables d'avance à l'échéance.",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "réductions",
+   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_8e0714ae258e_knowledge_4063da2b858c",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "défaut_de_paiement",
+   "texte": "suspendre la garantie après envoi d'une lettre recommandée… 30 jours",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 22
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_9a686a6a2b25_knowledge_23fb738e71fb",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "tableaux",
+   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "frais",
+   "texte": "frais. Information documentaire à consulter dans la source.",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_c22a5aa37858_knowledge_579359b13918",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "exemples_chiffrés",
+   "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_0d373eee8846_knowledge_4a70ecf97022",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "mode_calcul",
+   "texte": "Versements réguliers fixés à l'adhésion : minima 45 €/mois, 150 €/trimestre, 300 €/semestre, 600 €/an ; PLAFOND de versement 24 000 € entre deux dates anniversaires. Versements complémentaires ≥ 500 €. Modifications de montant/périodicité sans frais.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_5f78886419a6_knowledge_e1c82020b80b",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "exemples_chiffrés",
+   "texte": "Conversion en rente : retraite à 61 ans en 2022, capital constitutif 100 € → rente viagère annuelle 3,0303 € (brut de fiscalité et PS).",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_949c0d6b1fe0_knowledge_868134057060",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "frais",
+   "texte": "Droits d'adhésion ANPERE Retraite · 20 € maximum, prélevés à l'adhésion et reversés intégralement à l'association. · Frais sur versements · 3,85 % maximum sur chaque montant versé. · Frais de gestion · Fonds Croissance : 0,80 %/an max (taux mensuel équivalent 0,0669 %) ; UC hors AXA Immo Avenir : 0,96 %/an max (0,0804 %/mois) ; AXA Immo Avenir : 1,50 %/an max (0,1259 %/mois). 100 % des coupons/dividendes réinvestis (≥ 80 % pour AXA Immo Avenir, au plus tard le 1er juin). · Frais de performance fonds Croissance · 10 % max de la somme des produits nets de…",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_9ba03053e69a_knowledge_d8f10c7d1ce0",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "réductions",
+   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_a5a20f809364_knowledge_79846d0b1e50",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "tableaux",
+   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95",
+   "contrat": "Masterlife CREDIT",
+   "titre": "exemples_chiffrés",
+   "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_317921e2cd84_knowledge_8dcd710beb80",
+   "contrat": "Masterlife CREDIT",
+   "titre": "mode_calcul",
+   "texte": "Cotisation annuelle calculée selon : âge à l'adhésion (différence de millésimes), profession, type/taux d'intérêt/durée/modalités de remboursement/montant de l'emprunt, quotité assurée, garanties et options, conditions d'acceptation médicale et activités sportives. Deux options de tarification irrévocables (constante / capital restant dû). Payables d'avance sous 10 jours des échéances (mensuelle/trimestrielle/annuelle ; mensuel et trimestriel par prélèvement automatique obligatoire).",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_8936eebaa5cc_knowledge_85eab19f89d6",
+   "contrat": "Masterlife CREDIT",
+   "titre": "réductions",
+   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_a8de7fb08bee_knowledge_fc624b04e8d5",
+   "contrat": "Masterlife CREDIT",
+   "titre": "frais",
+   "texte": "frais. Information documentaire à consulter dans la source.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_f904852eb47e_knowledge_1f5ef94b1625",
+   "contrat": "Masterlife CREDIT",
+   "titre": "tableaux",
+   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_fcc33a37f235_knowledge_bdaff89df963",
+   "contrat": "Masterlife CREDIT",
+   "titre": "défaut_de_paiement",
+   "texte": "le défaut de paiement… entraîne, sans nouvel avis, la résiliation des garanties",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 11
+  }
+ ]
+}

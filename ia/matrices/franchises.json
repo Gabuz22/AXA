@@ -1,0 +1,113 @@
+{
+ "meta": {
+  "categorie": "franchises",
+  "version": "1.2.0",
+  "total": 13
+ },
+ "elements": [
+  {
+   "id": "avizen:fait:89a1ca75b5:franchise:0",
+   "contrat": "Avizen",
+   "titre": "Indemnités journalières ITT toutes causes (optionnelle)",
+   "texte": "franchise au certificat d'adhésion",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 13
+  },
+  {
+   "id": "avizen:fait:819383df2a:franchise:0",
+   "contrat": "Avizen",
+   "titre": "Indemnités journalières ITT par accident (optionnelle)",
+   "texte": "franchise au certificat d'adhésion",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 14
+  },
+  {
+   "id": "avizen:fait:3d298b99e0:franchise:0",
+   "contrat": "Avizen",
+   "titre": "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+   "texte": "délai d'attente 90 jours (maladie) / 365 jours (troubles psychiques)",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 15
+  },
+  {
+   "id": "avizen-pro:fait:e4f8ae15eb:franchise:0",
+   "contrat": "Avizen Pro",
+   "titre": "IJ ITT toutes causes (optionnelle)",
+   "texte": "franchise au certificat",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 14
+  },
+  {
+   "id": "avizen-pro:fait:b98f6e974d:franchise:0",
+   "contrat": "Avizen Pro",
+   "titre": "IJ ITT par accident (optionnelle)",
+   "texte": "franchise au certificat",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 15
+  },
+  {
+   "id": "avizen-pro:fait:299920232f:franchise:0",
+   "contrat": "Avizen Pro",
+   "titre": "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)",
+   "texte": "franchise au certificat",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 15
+  },
+  {
+   "id": "avizen-pro:fait:59e1287b10:franchise:0",
+   "contrat": "Avizen Pro",
+   "titre": "Indemnités Remboursement des frais professionnels (optionnelle)",
+   "texte": "franchise au certificat",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 16
+  },
+  {
+   "id": "avizen-pro:fait:45763a5331:franchise:0",
+   "contrat": "Avizen Pro",
+   "titre": "Rente invalidité permanente partielle ou totale (optionnelle)",
+   "texte": "délai d'attente 90 j maladie / 365 j troubles psychiques",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 17
+  },
+  {
+   "id": "entour-age:fait:52eb8f16a6:franchise:0",
+   "contrat": "Entour'Age",
+   "titre": "Rente viagère dépendance (garantie principale obligatoire)",
+   "texte": "franchise absolue 3 mois (91e jour)",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 21
+  },
+  {
+   "id": "entour-age:fait:52eb8f16a6:franchise:1",
+   "contrat": "Entour'Age",
+   "titre": "Rente viagère dépendance (garantie principale obligatoire)",
+   "texte": "délai d'attente 1 an (maladie) / 3 ans (maladies neurologiques, neurodégénératives ou psychiatriques) / aucun si dépendance d'origine accidentelle postérieure à l'adhésion",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 21
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:franchise:0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Accidents corporels d'activités courantes",
+   "texte": "seuil d'intervention : DFP ≥ 1 % pour l'indemnisation",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 4
+  },
+  {
+   "id": "masterlife-credit:fait:fbdb2c83d4:franchise:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Incapacité de travail (IJ)",
+   "texte": "franchise au choix aux conditions particulières",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 13
+  },
+  {
+   "id": "masterlife-credit:fait:46a66d4346:franchise:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Exonération du paiement des cotisations",
+   "texte": "franchise 90 jours pour le volet incapacité",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 17
+  }
+ ]
+}

@@ -1,0 +1,497 @@
+{
+ "meta": {
+  "categorie": "points-vigilance",
+  "version": "1.2.0",
+  "total": 61
+ },
+ "elements": [
+  {
+   "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_0fe3eed1b758_knowledge_70e30390986f",
+   "contrat": "Avizen",
+   "titre": "Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.",
+   "texte": "Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_35a954074956_knowledge_5c564f1268c0",
+   "contrat": "Avizen",
+   "titre": "IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.",
+   "texte": "IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_4be05876c398_knowledge_c48f67d5f295",
+   "contrat": "Avizen",
+   "titre": "Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).",
+   "texte": "Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_7bce30284464_knowledge_2cd764868136",
+   "contrat": "Avizen",
+   "titre": "Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotif…",
+   "texte": "Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotifs exclus de la qualification d'accident.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_7fcd9a720eb6_knowledge_0576f001d0e2",
+   "contrat": "Avizen",
+   "titre": "Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en…",
+   "texte": "Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en euros pour les garanties.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_cc15c2c82089_knowledge_a0dae9627c20",
+   "contrat": "Avizen",
+   "titre": "Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie.",
+   "texte": "Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_0b64a692c15f_knowledge_f543fa5ba4e4",
+   "contrat": "Avizen Pro",
+   "titre": "Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.",
+   "texte": "Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_26fde9bd19a5_knowledge_77e0f0881c3c",
+   "contrat": "Avizen Pro",
+   "titre": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
+   "texte": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
+   "contrat": "Avizen Pro",
+   "titre": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+   "texte": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_b3c4d3f2b5e8_knowledge_7db2ae0bff95",
+   "contrat": "Avizen Pro",
+   "titre": "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — véri…",
+   "texte": "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — vérifier le choix au certificat.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_bb01f772b8f5_knowledge_b348f1b96a11",
+   "contrat": "Avizen Pro",
+   "titre": "Aucun montant garanti dans la notice — tout est au certificat d'adhésion.",
+   "texte": "Aucun montant garanti dans la notice — tout est au certificat d'adhésion.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_d3e550a93ef8_knowledge_9310380f9152",
+   "contrat": "Avizen Pro",
+   "titre": "Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.",
+   "texte": "Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_f99ef92bee2b_knowledge_314b37ae71ff",
+   "contrat": "Avizen Pro",
+   "titre": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
+   "texte": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_16c84e8a15cc_knowledge_00dcf84ccfed",
+   "contrat": "Entour'Age",
+   "titre": "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €……",
+   "texte": "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €…).",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_39e9899bad5a_knowledge_38c24a8b1762",
+   "contrat": "Entour'Age",
+   "titre": "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jam…",
+   "texte": "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jamais garantis ; GIR 4 seulement pour la dépendance légère (Capital Premiers Frais).",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_6a2656a952a6_knowledge_d8ab8642609e",
+   "contrat": "Entour'Age",
+   "titre": "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+   "texte": "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_6f230082ba39_knowledge_79617a24203d",
+   "contrat": "Entour'Age",
+   "titre": "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).",
+   "texte": "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_8eb68cebc424_knowledge_c2ef0572d645",
+   "contrat": "Entour'Age",
+   "titre": "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.",
+   "texte": "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_acdb551cb108_knowledge_8417d05b72d9",
+   "contrat": "Entour'Age",
+   "titre": "La mise en réduction met fin aux prestations d'assistance.",
+   "texte": "La mise en réduction met fin aux prestations d'assistance.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_e441d358bb4c_knowledge_b70fb02a5650",
+   "contrat": "Entour'Age",
+   "titre": "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+   "texte": "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119",
+   "contrat": "Entour'Age",
+   "titre": "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans).",
+   "texte": "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans).",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_0a61c726cd35_knowledge_4ebecf35bc1c",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).",
+   "texte": "Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_62de1e7dadfb_knowledge_09e6e3b5f2e2",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 € de VR pour 3 907 € versés à 10 ans).",
+   "texte": "Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 € de VR pour 3 907 € versés à 10 ans).",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes de frais.",
+   "texte": "Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes de frais.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_aeb56e7d32c3_knowledge_2c080b3d95be",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, quelle que soit la formule (avertissement contractuel explici…",
+   "texte": "Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, quelle que soit la formule (avertissement contractuel explicite p.8).",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiaires (L132-18).",
+   "texte": "En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiaires (L132-18).",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_d5ec81079541_knowledge_86cdae42467c",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec le capital obsèques.",
+   "texte": "Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec le capital obsèques.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_e2fddb92cc3a_knowledge_194eb1adda54",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance.",
+   "texte": "La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_09cc2c565c43",
+   "contrat": "Essen'Ciel Patrimoine",
+   "titre": "",
+   "texte": "NE PAS confondre avec Essen'Ciel (obsèques) : Patrimoine = transmission, cadre assurance vie, faculté de rachat.",
+   "notice": null,
+   "page": null
+  },
+  {
+   "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_7e9993e4030f",
+   "contrat": "Essen'Ciel Patrimoine",
+   "titre": "",
+   "texte": "Pas de garantie en capital ≥ versements nets de frais (ce n'est pas une épargne garantie).",
+   "notice": null,
+   "page": null
+  },
+  {
+   "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c",
+   "contrat": "Essen'Ciel Patrimoine",
+   "titre": "",
+   "texte": "Valeurs de rachat/réduction faibles les 1res années ; tableau à vérifier en notice (§4.3).",
+   "notice": null,
+   "page": null
+  },
+  {
+   "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f",
+   "contrat": "Essen'Ciel Patrimoine",
+   "titre": "",
+   "texte": "Âge à l'adhésion 18–65 ans ; formalités médicales possibles.",
+   "notice": null,
+   "page": null
+  },
+  {
+   "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753",
+   "contrat": "Essen'Ciel Patrimoine",
+   "titre": "",
+   "texte": "Fiscalité datée dans la notice (2018) → vérifier la fiscalité en vigueur.",
+   "notice": null,
+   "page": null
+  },
+  {
+   "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0",
+   "contrat": "Essen'Ciel Patrimoine",
+   "titre": "",
+   "texte": "Assistance limitée (France/DOM/Monaco) alors que le décès est couvert mondialement.",
+   "notice": null,
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_0aa645be29d8_knowledge_2075dc1b8feb",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+   "texte": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_218bb9d14039_knowledge_adbe0d8ec182",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+   "texte": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_33113b1f8da2_knowledge_5731bc2dd8df",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
+   "texte": "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_6dbdc19c69e0_knowledge_ab0f944dd026",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+   "texte": "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_73a0c3f0cb6e_knowledge_63403609a675",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
+   "texte": "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_ad67ed6a280f_knowledge_c720aef2dd6c",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+   "texte": "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_c375b97eae3b_knowledge_7109df78eb58",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.",
+   "texte": "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4bcd5a5c99f0_knowledge_9e023765fd47",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
+   "texte": "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4fe1d6193758_knowledge_5b9c5fea95b4",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+   "texte": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_5256a4785e84_knowledge_c7303cf5027d",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
+   "texte": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_b635c47c8e25_knowledge_40c607965a24",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (ar…",
+   "texte": "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (art. 6.5, 6.6).",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_e3bb18915674_knowledge_4d9eb5b02c92",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Subrogation de l'assureur contre le tiers responsable (6.7).",
+   "texte": "Subrogation de l'assureur contre le tiers responsable (6.7).",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_29dbe9dd07a5_knowledge_bf0dd90f6ec7",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégré…",
+   "texte": "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégrés.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_40a6471abe1e_knowledge_f517d36babe3",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Compartiment 3 : sortie en rente UNIQUEMENT.",
+   "texte": "Compartiment 3 : sortie en rente UNIQUEMENT.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_4638a08834d5_knowledge_0ba923dcc369",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Plus de déductibilité fiscale des versements après 70 ans.",
+   "texte": "Plus de déductibilité fiscale des versements après 70 ans.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_7e539c84f84b_knowledge_3f6297fa7729",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).",
+   "texte": "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_88050d867e12_knowledge_3300e810ad31",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Frais de transfert 1 % uniquement les 5 premières années.",
+   "texte": "Frais de transfert 1 % uniquement les 5 premières années.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_9a1413ab3b74_knowledge_a3ade0f48deb",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.",
+   "texte": "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_c9108a1f7554_knowledge_24bafdb8e47e",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).",
+   "texte": "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_db274a95a51e_knowledge_af2979bd8634",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.",
+   "texte": "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_14236254decd_knowledge_8c4dc54fa7d1",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Pas de valeur de rachat ni de réduction.",
+   "texte": "Pas de valeur de rachat ni de réduction.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_173b632105ef_knowledge_af69875b3299",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+   "texte": "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_484c871eb4bf_knowledge_7b643e57951b",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
+   "texte": "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_5f5655d49ac6_knowledge_91b5fa511851",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
+   "texte": "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_6acaf82de4d0_knowledge_c33f87b96f7d",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
+   "texte": "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_b54b61128019_knowledge_405b144e09ef",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).",
+   "texte": "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  },
+  {
+   "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_c3162986a52f_knowledge_df9e127805c0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.",
+   "texte": "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": null
+  }
+ ]
+}

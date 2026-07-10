@@ -1,0 +1,161 @@
+{
+ "meta": {
+  "categorie": "conditions",
+  "version": "1.2.0",
+  "total": 19
+ },
+ "elements": [
+  {
+   "id": "avizen:cond:94ec71256c",
+   "contrat": "Avizen",
+   "titre": "",
+   "texte": "Adhésion réservée aux membres de l'association ANPERE ; adhérent et assuré résidents en France métropolitaine ou DROM.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 4
+  },
+  {
+   "id": "avizen:cond:d07e269637",
+   "contrat": "Avizen",
+   "titre": "",
+   "texte": "Prise d'effet sous réserve : paiement effectif de la 1re cotisation, signature du certificat/bulletin par toutes les parties, acceptation des risques par l'assureur (avec ou sans surprime/exclusion).",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 7
+  },
+  {
+   "id": "avizen:cond:514a1f7dc2",
+   "contrat": "Avizen",
+   "titre": "",
+   "texte": "Modification des garanties possible jusqu'au 75e anniversaire de l'assuré, demande au moins 2 mois avant la date anniversaire, sous réserve d'acceptation et nouvelle tarification possible.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 7
+  },
+  {
+   "id": "avizen:cond:df91ea5e02",
+   "contrat": "Avizen",
+   "titre": "",
+   "texte": "Déplacements : questionnaire « Résidences et Voyages » préalable obligatoire pour déplacements professionnels en pays sensibles, ou personnels en pays sensibles ou > 60 jours/an hors UE, Royaume-Uni, Australie, Canada, Japon, Suisse, États-Unis.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 6
+  },
+  {
+   "id": "avizen-pro:cond:7f172f0e1e",
+   "contrat": "Avizen Pro",
+   "titre": "",
+   "texte": "Membres ANPERE ; résidence France métropolitaine ou DROM ; acceptation médicale ; couplage obligatoire des garanties ITT/invalidité avec une garantie décès.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 14
+  },
+  {
+   "id": "avizen-pro:cond:a40b5ef32a",
+   "contrat": "Avizen Pro",
+   "titre": "",
+   "texte": "Cadre Madelin : justification annuelle d'être à jour des cotisations maladie/vieillesse obligatoires.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 4
+  },
+  {
+   "id": "avizen-pro:cond:f4e8e8aef2",
+   "contrat": "Avizen Pro",
+   "titre": "",
+   "texte": "Modification des garanties jusqu'aux 75 ans de l'assuré (préavis 2 mois avant date anniversaire).",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 7
+  },
+  {
+   "id": "entour-age:cond:0757925f45",
+   "contrat": "Entour'Age",
+   "titre": "",
+   "texte": "Conditions cumulatives : résider en France métropolitaine, à Monaco ou dans un DOM ; être ou devenir membre ANPERE (droits d'adhésion) ; se soumettre aux formalités médicales demandées ; avoir entre 40 et 75 ans inclus à la signature (âge par différence de millésimes).",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 6
+  },
+  {
+   "id": "entour-age:cond:139ae41e9a",
+   "contrat": "Entour'Age",
+   "titre": "",
+   "texte": "Rente à choisir entre 500 et 3 000 €/mois ; choix de formule (Totale seule ou Totale et Partielle) ; tarification particulière possible pour risque aggravé.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 6
+  },
+  {
+   "id": "entour-age:cond:2a7fe9c4fc",
+   "contrat": "Entour'Age",
+   "titre": "",
+   "texte": "Modifications en cours d'adhésion : possibles à partir de la 3e année pleine, à jour des cotisations, assuré non dépendant ; amélioration de garanties : assuré ≤ 75 ans, acceptation d'AXA, nouveau délai d'attente sur les garanties supplémentaires.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 8
+  },
+  {
+   "id": "excelium-assurance-vie:cond:04d661bd25",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "",
+   "texte": "Adhésion ANPERE ; versement initial minimum 300 € (5 000 € en gestion pilotée) ; choix du type de gestion et de la répartition.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 79
+  },
+  {
+   "id": "excelium-assurance-vie:cond:24412e8c29",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "",
+   "texte": "Garantie Revalorisée : réservée aux conventions Fortissimo sans fonds Croissance et aux adhérents < 70 ans.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 16
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:cond:88e167c83f",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "",
+   "texte": "Souscripteur : plus de 18 ans ; résidence principale et foyer fiscal en France métropolitaine, Guadeloupe, Guyane, Réunion, Mayotte ou Martinique pendant toute la vie du contrat.",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 27
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:cond:1158f219d0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "",
+   "texte": "Garanties acquises seulement si résidence principale + foyer fiscal sur le territoire français à la survenance du sinistre ; déménagement à l'étranger à déclarer sous 15 jours.",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 22
+  },
+  {
+   "id": "ma-retraite-plan-d-epargne-retraite-individuel-per:cond:c956e63a5d",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "",
+   "texte": "Adhésion réservée aux adhérents ANPERE Retraite ; prise d'effet à réception du Bulletin signé + 1er versement + contrôle de l'origine des fonds + encaissement. L'âge envisagé de départ détermine l'échéance, la gestion Activ'Retraite Croissance et l'échéance du fonds Croissance (modifiable par avenant).",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 9
+  },
+  {
+   "id": "ma-retraite-plan-d-epargne-retraite-individuel-per:cond:e8e8e580d8",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "",
+   "texte": "Versements réguliers : minima 45 €/mois à 600 €/an, plafond 24 000 € par année d'adhésion ; complémentaires ≥ 500 €.",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 14
+  },
+  {
+   "id": "masterlife-credit:cond:1ed4ab0baf",
+   "contrat": "Masterlife CREDIT",
+   "titre": "",
+   "texte": "Membre ANPERE ; assuré personne physique résidant en France ; questionnaires (médical/financier/sportif) sauf dispense Lemoine : prêt L313-1 1° C. conso (immobilier habitation/mixte, travaux, terrains…), part assurée sur encours cumulé ≤ 200 000 € (exemples en annexe p.27), échéance du prêt avant le 60e anniversaire - 3 conditions cumulatives.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 8
+  },
+  {
+   "id": "masterlife-credit:cond:95cc3d507f",
+   "contrat": "Masterlife CREDIT",
+   "titre": "",
+   "texte": "Modification des garanties possible jusqu'au 75e anniversaire, accord du prêteur le cas échéant ; augmentation soumise à acceptation ADIS et éventuelle sélection médicale.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 9
+  },
+  {
+   "id": "masterlife-credit:cond:116d8c6c89",
+   "contrat": "Masterlife CREDIT",
+   "titre": "",
+   "texte": "Convention AERAS : examen 2e et 3e niveaux en cas de refus, écrêtement des surprimes pour les éligibles, GIS possible.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 23
+  }
+ ]
+}

@@ -150,11 +150,12 @@ for g in GLOSSAIRE:
     for en in (g.get("entrees") or []): add_src(en.get("source"), (en.get("contrat"), "definition"))
 
 # ------------------------------------------------------------------ gabarit HTML / MD
-CATS_NAV = [("index", "Index"), ("guide-ia", "Guide IA"), ("outils", "Outils"), ("contrats", "Contrats"), ("garanties", "Garanties"),
-            ("exclusions", "Exclusions"), ("definitions", "Définitions"), ("conditions", "Conditions"),
-            ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
-            ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"),
-            ("notices", "Notices"), ("sources", "Sources"), ("pack-a", "Pack A"), ("pack-b", "Pack B"), ("couverture", "Couverture")]
+CATS_NAV = [("index", "Index"), ("guide-ia", "Guide IA"), ("outils", "Outils"), ("hierarchie", "Hiérarchie"), ("choix-sources", "Choix sources"),
+            ("methode-question-complexe", "Méthode"), ("contrats", "Contrats"), ("garanties", "Garanties"), ("exclusions", "Exclusions"),
+            ("definitions", "Définitions"), ("conditions", "Conditions"), ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
+            ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"), ("matrices", "Matrices"), ("graphe", "Graphe"),
+            ("notices", "Notices"), ("sources", "Sources"), ("sources-officielles", "Sources officielles"), ("reglementation", "Réglementation"), ("surveillance", "Surveillance"),
+            ("pack-a", "Pack A"), ("pack-b", "Pack B"), ("couverture", "Couverture"), ("maturite", "Maturité")]
 def nav_html(depth):
     ip = int_pref(depth)
     return '<nav class="ianav">' + " · ".join('<a href="%s%s.html">%s</a>' % (ip, k, l) for k, l in CATS_NAV) + '</nav>'
@@ -464,7 +465,9 @@ def build_static_pages(theme_counts):
     write("guide-ia.html", page_html("Guide IA", renderish(GUIDE_MD), depth, SITE + "/ia/guide-ia.html"))
     # Manifeste lisible + ai-manifest.json
     pages = ["index", "guide-ia", "manifeste", "outils", "planificateur", "concepts", "couverture-recherche",
-             "comparateur", "preuves", "methode-question-complexe", "tests", "pack-a", "pack-b", "contrats",
+             "comparateur", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
+             "sources-officielles", "reglementation", "surveillance", "connaissances-dynamiques", "matrices",
+             "graphe", "maturite", "pack-a", "pack-b", "contrats",
              "garanties", "exclusions", "options", "cotisations", "delais", "fiscalite", "points-vigilance",
              "formules", "definitions", "conditions", "declencheurs", "plafonds", "franchises", "glossaire",
              "notices", "sources", "recherches", "themes", "couverture"]
@@ -523,7 +526,10 @@ Index → (Contrat | Catégorie | Thème) → Élément `#id` → Notice → Pag
     urls += [SITE + "/ia/themes/%s.html" % tk for tk, _, _ in THEMES]
     urls += [SITE + "/ia/ai-manifest.json", SITE + "/ia/contrats.json", SITE + "/ia/glossaire.json",
              SITE + "/ia/concepts.json", SITE + "/ia/planificateur.json", SITE + "/ia/couverture-recherche.json",
-             SITE + "/ia/preuves.json", SITE + "/ia/tests.json"]
+             SITE + "/ia/preuves.json", SITE + "/ia/tests.json", SITE + "/ia/sources-officielles.json",
+             SITE + "/ia/reglementation.json", SITE + "/ia/surveillance.json", SITE + "/ia/connaissances-dynamiques.json",
+             SITE + "/ia/choix-sources.json", SITE + "/ia/graphe.json", SITE + "/ia/matrices/couverture.json",
+             SITE + "/ia/matrices/concepts-contrats.json"]
     write("sitemap-ia.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           "".join("<url><loc>%s</loc><lastmod>%s</lastmod></url>\n" % (html.escape(u), DATE) for u in urls) + "</urlset>\n")
     write("robots.txt", "User-agent: *\nAllow: /\nSitemap: %s/ia/sitemap-ia.xml\n" % SITE)
@@ -877,7 +883,16 @@ def build_outils():
              ("comparateur", "Comparateur thématique", "un sujet, tous les contrats côte à côte, sourcé"),
              ("preuves", "Graphe de preuves", "chaque élément citable (id, source, page, concepts)"),
              ("methode-question-complexe", "Méthode & assembleur", "5 parcours + structure de réponse sécurisée"),
-             ("tests", "Jeux de tests", "questions de contrôle + parcours attendus")]
+             ("hierarchie", "Hiérarchie documentaire", "ordre : contrat → notice → docs AXA → réglementation → réponse"),
+             ("choix-sources", "Moteur choix des sources", "quel document, quel ordre, quand s'arrêter, quand ne pas conclure"),
+             ("sources-officielles", "Sources officielles", "autorités publiques (Légifrance, BOFiP, Ameli…) par concept"),
+             ("reglementation", "Détecteur de réglementation", "signale une matière évolutive + autorités à consulter"),
+             ("surveillance", "Surveillance documentaire", "dater / alerter / préparer (jamais de mise à jour auto)"),
+             ("connaissances-dynamiques", "Connaissances dynamiques", "chaîne de validation prête (jamais automatique)"),
+             ("matrices", "Matrices documentaires", "contrats × catégories, concepts × contrats (HTML/MD/JSON/CSV)"),
+             ("graphe", "Graphe documentaire", "nœuds & relations dérivées (contrats, concepts, éléments, autorités)"),
+             ("maturite", "Rapport de maturité", "capacités documentaires, réglementaires, de preuve, de couverture"),
+             ("tests", "Jeux de tests", "≥ 50 questions de contrôle + parcours attendus")]
     md = [md_hdr("Outils IA — circulation & recherche", "Outils dérivés pour aider une IA à décomposer une question, parcourir les bons contrats, vérifier sa couverture et assembler une réponse sourcée."), ""]
     hb = ['<h1>Outils IA — circulation & recherche</h1><p>Décomposer · parcourir · vérifier · comparer · prouver · assembler. Tout est dérivé et sourcé.</p><ul>']
     for k, t, d in items:
@@ -886,48 +901,406 @@ def build_outils():
     hb.append('</ul><h2>Formats machine</h2><p><a href="concepts.json">concepts.json</a> · <a href="planificateur.json">planificateur.json</a> · <a href="couverture-recherche.json">couverture-recherche.json</a> · <a href="preuves.json">preuves.json</a> · <a href="tests.json">tests.json</a></p>')
     write("outils.md", "\n".join(md)); write("outils.html", page_html("Outils IA", "".join(hb), depth, SITE + "/ia/outils.html"))
 
-TEST_QUESTIONS = [
-    ("simple", "Quel est le barème d'invalidité d'Avizen Pro ?", ["invalidite"]),
-    ("simple", "Quelle est la définition d'un accident dans Ma Protection Accident ?", ["accident"]),
-    ("simple", "Quel est l'âge maximal de souscription ?", ["age", "souscription"]),
-    ("transversale", "Quels contrats parlent d'invalidité ?", ["invalidite"]),
-    ("transversale", "Quels contrats contiennent une exclusion liée au suicide ?", ["suicide"]),
-    ("transversale", "Où trouve-t-on une carence ?", ["carence"]),
-    ("complexe", "Dans quels contrats une invalidité peut-elle déclencher une prestation, selon quelles définitions et avec quelles exclusions ?", ["invalidite"]),
-    ("complexe", "Compare les conditions d'adhésion et limites d'âge des contrats concernés.", ["souscription", "age"]),
-    ("complexe", "Quels éléments nécessitent encore une vérification dans la notice ou le certificat d'adhésion ?", ["souscription", "rachat", "fiscalite"]),
-]
+def _test_questions():
+    cmap = [(sg, nom) for sg, nom, kws, facets in CONCEPTS]
+    Q = [("transversale", "Quels contrats traitent de %s ?" % nom.lower(), [sg]) for sg, nom in cmap]
+    Q += [("comparaison", "Compare %s entre les contrats concernés." % nom.lower(), [sg]) for sg, nom in cmap]
+    Q += [
+        ("simple", "Quel est le barème d'invalidité d'Avizen Pro ?", ["invalidite"]),
+        ("simple", "Quelle est la définition d'un accident dans Ma Protection Accident ?", ["accident"]),
+        ("simple", "Quel est l'âge maximal de souscription ?", ["age", "souscription"]),
+        ("simple", "Quelle est la garantie décès de MasterLife ?", ["deces"]),
+        ("simple", "Y a-t-il une carence sur le décès par maladie ?", ["carence", "deces"]),
+        ("simple", "Quelles exclusions s'appliquent au suicide ?", ["suicide"]),
+        ("complexe", "Dans quels contrats une invalidité peut-elle déclencher une prestation, selon quelles définitions et avec quelles exclusions ?", ["invalidite"]),
+        ("complexe", "Compare les conditions d'adhésion et limites d'âge des contrats concernés.", ["souscription", "age"]),
+        ("complexe", "Quels éléments nécessitent une vérification dans la notice ou le certificat d'adhésion ?", ["rachat", "fiscalite"]),
+        ("complexe", "Quelles garanties et exclusions encadrent le décès accidentel ?", ["deces-accidentel", "deces"]),
+        ("source_officielle", "Quelle est la fiscalité de transmission d'une assurance vie au décès ?", ["fiscalite", "deces"]),
+        ("source_officielle", "Quel est le régime fiscal du PER (Ma Retraite) ?", ["fiscalite", "age"]),
+        ("source_officielle", "Quel abattement s'applique à la succession du bénéficiaire ?", ["beneficiaire", "fiscalite"]),
+        ("source_officielle", "Quel est l'âge légal de départ à la retraite ?", ["age"]),
+        ("source_officielle", "Comment est traitée fiscalement la valeur de rachat ?", ["rachat", "fiscalite"]),
+        ("ambigu", "Que couvre exactement ce contrat en cas de coup dur ?", ["invalidite", "deces", "hospitalisation", "accident"]),
+        ("ambigu", "Est-ce que je suis protégé si je tombe malade ?", ["hospitalisation", "incapacite-temporaire", "invalidite"]),
+        ("ambigu", "Quelles sont les conditions et les limites ?", ["souscription", "carence", "fin-garantie"]),
+        ("sans_reponse", "Quelle est la garantie chômage de MasterLife ?", []),
+        ("sans_reponse", "Le contrat couvre-t-il les catastrophes naturelles sur un bien immobilier ?", []),
+        ("sans_reponse", "Quel est le taux du livret A associé ?", []),
+    ]
+    return Q
+
 def build_tests(concepts):
     depth = 0; results = []
-    for typ, q, cs in TEST_QUESTIONS:
-        merged_cats, contrats, srccount, missing = {}, set(), 0, set()
+    for typ, q, cs in _test_questions():
+        merged_cats, contrats, missing, auths = {}, set(), set(), set()
+        evolving = False
         for sg in cs:
             c = concepts.get(sg, {})
             for cat, ids in (c.get("categories") or {}).items(): merged_cats[cat] = merged_cats.get(cat, 0) + len(ids)
             for ct in c.get("contrats", []): contrats.add(ct)
+            ev, dom, a = CONCEPT_REG.get(sg, (False, [], []))
+            if ev: evolving = True
+            auths.update(a)
         for cat in ["definitions", "garanties", "declencheurs", "exclusions", "conditions"]:
             if not merged_cats.get(cat): missing.add(cat)
-        can = bool(merged_cats.get("garanties") or merged_cats.get("definitions"))
+        can = bool(contrats) and bool(merged_cats.get("garanties") or merged_cats.get("definitions"))
         results.append({"type": typ, "question": q, "concepts": cs, "contrats_retrouves": sorted(contrats, key=norm),
                         "categories_consultees": merged_cats, "elements_manquants_dans_la_base": sorted(missing),
-                        "peut_conclure": can, "sinon": "renvoyer à la notice / certificat ; ne pas inventer"})
-    write("tests.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "note": "Parcours attendus calculés déterministe­ment (planificateur+couverture). Vérifie : contrats retrouvés, catégories, éléments manquants, capacité à ne pas conclure."}, "tests": results}, ensure_ascii=False, indent=1))
-    md = [md_hdr("Jeux de tests", "Questions de contrôle (simples, transversales, complexes) et parcours attendus, calculés automatiquement.")]
-    hb = ['<h1>Jeux de tests</h1><p>Parcours attendus calculés automatiquement (planificateur + couverture). Format machine : <a href="tests.json">tests.json</a>.</p>']
+                        "source_officielle_requise": evolving, "autorites_recommandees": sorted(auths),
+                        "peut_conclure": can, "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"})
+    par_type = {}
+    for r in results: par_type[r["type"]] = par_type.get(r["type"], 0) + 1
+    write("tests.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "total": len(results), "par_type": par_type,
+        "note": "Parcours attendus calculés déterministe­ment (planificateur + couverture + réglementation). Vérifie : contrats, catégories, manquants, source officielle requise, capacité à ne pas conclure."}, "tests": results}, ensure_ascii=False, indent=1))
+    md = [md_hdr("Jeux de tests (%d questions)" % len(results), "Questions simples, transversales, comparaisons, ambiguës, sans réponse et nécessitant une source officielle ; parcours attendus calculés automatiquement."),
+          "\n**Répartition :** " + ", ".join("%s : %d" % (k, v) for k, v in par_type.items()) + "\n"]
+    hb = ['<h1>Jeux de tests (%d questions)</h1><p>Répartition : %s. Format machine : <a href="tests.json">tests.json</a>.</p>' % (len(results), ", ".join("%s : %d" % (k, v) for k, v in par_type.items()))]
     for r in results:
+        so = " · **Source officielle requise** (%s)" % ", ".join(r["autorites_recommandees"]) if r["source_officielle_requise"] else ""
         md += ["", "## [%s] %s" % (r["type"], r["question"]),
-               "- Concepts : %s" % ", ".join(r["concepts"]),
                "- Contrats retrouvés : %s" % (", ".join(r["contrats_retrouves"]) or "—"),
                "- Catégories : %s" % (", ".join("%s(%d)" % (k, v) for k, v in r["categories_consultees"].items()) or "—"),
                "- Manquants dans la base : %s" % (", ".join(r["elements_manquants_dans_la_base"]) or "—"),
-               "- Peut conclure : %s" % ("oui" if r["peut_conclure"] else "NON → notice/certificat")]
-        hb.append('<h2>[%s] %s</h2><ul><li>Concepts : %s</li><li>Contrats : %s</li><li>Catégories : %s</li><li>Manquants (base) : %s</li><li>Peut conclure : <strong>%s</strong></li></ul>' % (
-            html.escape(r["type"]), html.escape(r["question"]), html.escape(", ".join(r["concepts"])),
+               "- Peut conclure : %s%s" % ("oui" if r["peut_conclure"] else "NON → notice/certificat/source officielle", so)]
+        hb.append('<h2>[%s] %s</h2><ul><li>Contrats : %s</li><li>Catégories : %s</li><li>Manquants (base) : %s</li><li>Peut conclure : <strong>%s</strong></li>%s</ul>' % (
+            html.escape(r["type"]), html.escape(r["question"]),
             " · ".join('<a href="contrat/%s.html">%s</a>' % (slug(c), html.escape(c)) for c in r["contrats_retrouves"]) or "—",
             html.escape(", ".join("%s(%d)" % (k, v) for k, v in r["categories_consultees"].items()) or "—"),
-            html.escape(", ".join(r["elements_manquants_dans_la_base"]) or "—"), "oui" if r["peut_conclure"] else "NON → notice/certificat"))
+            html.escape(", ".join(r["elements_manquants_dans_la_base"]) or "—"),
+            "oui" if r["peut_conclure"] else "NON → notice/certificat/source officielle",
+            ("<li><strong>Source officielle requise</strong> : %s</li>" % html.escape(", ".join(r["autorites_recommandees"]))) if r["source_officielle_requise"] else ""))
     write("tests.md", "\n".join(md)); write("tests.html", page_html("Tests", "".join(hb), depth, SITE + "/ia/tests.html"))
     return results
+
+# ==================================================================================================
+# INFRASTRUCTURE DE RAISONNEMENT DOCUMENTAIRE (dérivée / référentiel de navigation, non contractuelle)
+# Aucune donnée réglementaire n'est inventée : uniquement des POINTEURS vers des autorités publiques,
+# une hiérarchie documentaire, et une infrastructure de surveillance (jamais de mise à jour auto).
+# ==================================================================================================
+AUTORITES = {
+    "legifrance": ("Légifrance", "https://www.legifrance.gouv.fr", "autorite_juridique", "Textes de loi et codes (source du droit)."),
+    "code-assurances": ("Code des assurances (Légifrance)", "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984", "autorite_juridique", "Régime juridique des contrats d'assurance."),
+    "code-secu": ("Code de la sécurité sociale (Légifrance)", "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189", "autorite_juridique", "Protection sociale, retraite, maladie."),
+    "cgi": ("Code général des impôts (Légifrance)", "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577", "autorite_juridique", "Fiscalité (art. 990 I, 757 B…)."),
+    "bofip": ("BOFiP-Impôts", "https://bofip.impots.gouv.fr", "autorite_administrative", "Doctrine fiscale administrative opposable."),
+    "impots": ("impots.gouv.fr", "https://www.impots.gouv.fr", "autorite_administrative", "Fiscalité des particuliers."),
+    "service-public": ("Service-Public.fr", "https://www.service-public.fr", "documentation_officielle", "Information administrative de référence."),
+    "urssaf": ("URSSAF", "https://www.urssaf.fr", "autorite_administrative", "Cotisations sociales."),
+    "ameli": ("Ameli (Assurance Maladie)", "https://www.ameli.fr", "autorite_administrative", "Santé, maladie, invalidité (régime général)."),
+    "cnav": ("L'Assurance retraite (CNAV)", "https://www.lassuranceretraite.fr", "autorite_administrative", "Retraite du régime général."),
+    "cnil": ("CNIL", "https://www.cnil.fr", "autorite_administrative", "Données personnelles."),
+    "banque-france": ("Banque de France", "https://www.banque-france.fr", "autorite_administrative", "Stabilité financière."),
+    "acpr": ("ACPR", "https://acpr.banque-france.fr", "autorite_administrative", "Contrôle prudentiel assurances & banques."),
+    "amf": ("AMF", "https://www.amf-france.org", "autorite_administrative", "Marchés financiers, épargne."),
+    "france-travail": ("France Travail", "https://www.francetravail.fr", "autorite_administrative", "Emploi, chômage."),
+}
+TYPE_ORDER = ["autorite_juridique", "autorite_administrative", "documentation_officielle"]
+TYPE_LABEL = {"autorite_juridique": "Autorité juridique", "autorite_administrative": "Autorité administrative", "documentation_officielle": "Documentation officielle"}
+# concept -> (matiere_evolutive, domaines_reglementaires, autorites)
+CONCEPT_REG = {
+    "invalidite": (True, ["prévoyance", "protection sociale"], ["code-assurances", "ameli", "service-public", "legifrance"]),
+    "deces": (True, ["prévoyance", "succession"], ["code-assurances", "cgi", "bofip", "service-public"]),
+    "deces-accidentel": (True, ["prévoyance"], ["code-assurances", "service-public"]),
+    "accident": (False, ["prévoyance"], ["code-assurances", "service-public"]),
+    "hospitalisation": (True, ["santé", "protection sociale"], ["ameli", "code-secu", "service-public"]),
+    "incapacite-temporaire": (True, ["protection sociale"], ["ameli", "code-secu", "service-public"]),
+    "carence": (False, ["assurance"], ["code-assurances"]),
+    "rachat": (True, ["fiscalité", "assurance vie"], ["cgi", "bofip", "impots", "acpr", "code-assurances"]),
+    "souscription": (True, ["assurance", "protection sociale"], ["code-assurances", "service-public", "acpr"]),
+    "age": (True, ["retraite", "protection sociale"], ["cnav", "service-public", "code-secu"]),
+    "suicide": (False, ["assurance"], ["code-assurances", "legifrance"]),
+    "beneficiaire": (True, ["succession", "fiscalité"], ["cgi", "bofip", "code-assurances", "service-public"]),
+    "fiscalite": (True, ["fiscalité", "succession"], ["bofip", "impots", "cgi", "service-public"]),
+    "fin-garantie": (False, ["assurance"], ["code-assurances"]),
+    "association": (False, ["associatif"], ["legifrance", "service-public"]),
+}
+def auth_link_md(k): a = AUTORITES[k]; return "[%s](%s)" % (a[0], a[1])
+def auth_link_html(k): a = AUTORITES[k]; return '<a href="%s" target="_blank" rel="noopener">%s</a>' % (html.escape(a[1]), html.escape(a[0]))
+
+def build_hierarchie():
+    depth = 0
+    md = md_hdr("Hiérarchie documentaire", "L'ordre dans lequel construire toute réponse. On ne s'arrête pas au contrat si la matière est réglementaire.") + """
+## Ordre de construction d'une réponse
+1. **Contrat** (fiche IA / catégories) — ce que dit le contrat, sourcé.
+2. **Notice officielle** (PDF) — la source qui **fait foi** ; vérifier page.
+3. **Documents publics AXA** — supports publics du produit.
+4. **Réglementation officielle** — si la question dépend d'une matière évolutive (voir [réglementation](reglementation.html) et [sources officielles](sources-officielles.html)).
+5. **Réponse finale** — sourcée, avec niveau de couverture.
+
+## Hiérarchie d'autorité documentaire
+1. **Autorité juridique** (Légifrance, codes) — le droit.
+2. **Autorité administrative** (BOFiP, impots.gouv.fr, Ameli, CNAV, ACPR, AMF…) — la doctrine/application.
+3. **Documentation officielle** (Service-Public.fr) — l'information de référence.
+4. **Documentation AXA** (notice, supports) — l'application au produit.
+
+> Règle : en cas de désaccord, l'échelon **supérieur** l'emporte pour le droit ; mais pour le **contrat**, la **notice PDF AXA fait foi**. La réglementation encadre, elle ne réécrit pas la notice.
+"""
+    write("hierarchie.md", md); write("hierarchie.html", page_html("Hiérarchie documentaire", renderish(md), depth, SITE + "/ia/hierarchie.html"))
+
+def build_sources_officielles():
+    depth = 0
+    reg = {}
+    for sg, nom, kws, facets in CONCEPTS:
+        ev, dom, auths = CONCEPT_REG.get(sg, (False, [], []))
+        reg[sg] = {"nom": nom, "matiere_evolutive": ev, "domaines": dom,
+                   "autorites": [{"cle": k, "nom": AUTORITES[k][0], "url": AUTORITES[k][1], "type": AUTORITES[k][2]} for k in auths]}
+    data = {"meta": {"version": VERSION, "genere_le": DATE,
+                     "avertissement": "Référentiel de NAVIGATION vers des autorités publiques (URLs publiques, à valider). Ne contient AUCUN contenu réglementaire ; ne se substitue pas aux sources qui font foi. La notice PDF AXA fait foi pour le contrat.",
+                     "hierarchie": ["autorite_juridique", "autorite_administrative", "documentation_officielle", "documentation_axa"]},
+            "autorites": {k: {"nom": v[0], "url": v[1], "type": v[2], "role": v[3]} for k, v in AUTORITES.items()},
+            "concepts": reg}
+    write("sources-officielles.json", json.dumps(data, ensure_ascii=False, indent=1))
+    md = [md_hdr("Sources officielles", "Autorités publiques de référence à consulter selon le thème. Pointeurs de navigation — jamais du contenu réglementaire ; à valider ; la notice PDF fait foi.")]
+    md.append("\n> ⚠ Ces liens renvoient à des **autorités publiques** (Légifrance, BOFiP, Ameli…). Ils **n'apportent aucune donnée réglementaire dans la base** : ils indiquent **où** vérifier une matière évolutive.\n")
+    for t in TYPE_ORDER:
+        md.append("## %s" % TYPE_LABEL[t])
+        for k, v in AUTORITES.items():
+            if v[2] == t: md.append("- **%s** — %s — <%s>" % (v[0], v[3], v[1]))
+        md.append("")
+    md.append("## Par concept métier")
+    for sg, nom, kws, facets in CONCEPTS:
+        ev, dom, auths = CONCEPT_REG.get(sg, (False, [], []))
+        md.append("- **%s**%s : %s" % (nom, " _(matière évolutive)_" if ev else "", " → ".join(auth_link_md(k) for k in auths) or "—"))
+    write("sources-officielles.md", "\n".join(md))
+    hb = ['<h1>Sources officielles</h1><p class="warn">Pointeurs de navigation vers des autorités publiques. Aucun contenu réglementaire n\'est stocké ici : ils indiquent <strong>où vérifier</strong> une matière évolutive. La notice PDF AXA fait foi pour le contrat.</p>']
+    for t in TYPE_ORDER:
+        hb.append("<h2>%s</h2><ul>" % TYPE_LABEL[t])
+        for k, v in AUTORITES.items():
+            if v[2] == t: hb.append("<li><strong>%s</strong> — %s — %s</li>" % (html.escape(v[0]), html.escape(v[3]), auth_link_html(k)))
+        hb.append("</ul>")
+    hb.append("<h2>Par concept métier</h2><ul>")
+    for sg, nom, kws, facets in CONCEPTS:
+        ev, dom, auths = CONCEPT_REG.get(sg, (False, [], []))
+        hb.append("<li><strong>%s</strong>%s : %s</li>" % (html.escape(nom), " <em>(matière évolutive)</em>" if ev else "", " → ".join(auth_link_html(k) for k in auths) or "—"))
+    hb.append("</ul>")
+    write("sources-officielles.html", page_html("Sources officielles", "".join(hb), depth, SITE + "/ia/sources-officielles.html"))
+
+def build_reglementation():
+    depth = 0; data = {}
+    md = [md_hdr("Détecteur de réglementation", "Signale automatiquement quand une réponse dépend d'une réglementation évolutive et quelles autorités consulter. Ne fournit pas la règle : indique où la vérifier.")]
+    hb = ['<h1>Détecteur de réglementation</h1><p>Quand un concept relève d\'une matière évolutive (fiscalité, social, retraite, succession, prévoyance…), toute réponse doit être accompagnée de l\'avertissement ci-dessous.</p>']
+    for sg, nom, kws, facets in CONCEPTS:
+        ev, dom, auths = CONCEPT_REG.get(sg, (False, [], []))
+        data[sg] = {"nom": nom, "matiere_evolutive": ev, "domaines": dom,
+                    "avertissement": "Cette réponse dépend d'une réglementation susceptible d'évoluer." if ev else None,
+                    "sources_officielles_recommandees": [{"nom": AUTORITES[k][0], "url": AUTORITES[k][1]} for k in auths] if ev else [],
+                    "derniere_verification": None, "statut_verification": "non vérifié"}
+        if ev:
+            md += ["", "## %s" % nom,
+                   "> ⚠ **Cette réponse dépend d'une réglementation susceptible d'évoluer** (%s)." % ", ".join(dom),
+                   ">", "> **Sources officielles recommandées :** %s" % " · ".join(auth_link_md(k) for k in auths),
+                   ">", "> **Dernière vérification :** non vérifié (voir [surveillance](surveillance.html))."]
+            hb.append('<h2>%s</h2><p class="warn">⚠ Cette réponse dépend d\'une réglementation susceptible d\'évoluer (%s).<br>Sources officielles recommandées : %s<br>Dernière vérification : non vérifié (voir <a href="surveillance.html">surveillance</a>).</p>' % (html.escape(nom), html.escape(", ".join(dom)), " · ".join(auth_link_html(k) for k in auths)))
+    write("reglementation.md", "\n".join(md)); write("reglementation.html", page_html("Réglementation", "".join(hb), depth, SITE + "/ia/reglementation.html"))
+    write("reglementation.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "note": "Signalement des matières évolutives + autorités. Aucune règle stockée."}, "concepts": data}, ensure_ascii=False, indent=1))
+
+def build_surveillance():
+    depth = 0
+    entries = {k: {"nom": v[0], "url": v[1], "type": v[2], "date_document": None, "date_derniere_verification": None,
+                   "historique": [], "statut": "à vérifier", "version": None} for k, v in AUTORITES.items()}
+    write("surveillance.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE,
+        "regle": "Surveillance documentaire = détecter/comparer/dater/alerter/préparer. JAMAIS de mise à jour automatique ; JAMAIS de publication automatique. Validation humaine obligatoire.",
+        "etats_possibles": ["Valide", "À vérifier", "Obsolète", "En attente de validation"]}, "sources": entries}, ensure_ascii=False, indent=1))
+    md = md_hdr("Surveillance documentaire", "Infrastructure de suivi des sources officielles : détecter, comparer, dater, alerter, préparer une mise à jour. Jamais de mise à jour ni de publication automatique.") + """
+## Règle absolue
+La surveillance **ne modifie jamais** les connaissances. Elle **prépare** une mise à jour soumise à **validation humaine**.
+
+## États possibles
+- **Valide** · **À vérifier** · **Obsolète** · **En attente de validation**
+
+## Champs suivis par source
+URL · date du document · date de dernière vérification · historique · statut · version.
+
+## État actuel des sources
+""" + "\n".join("- **%s** (%s) — statut : **à vérifier** — <%s>" % (v[0], TYPE_LABEL.get(v[2], v[2]), v[1]) for v in AUTORITES.values()) + "\n\nFormat machine : [surveillance.json](surveillance.json)."
+    write("surveillance.md", md); write("surveillance.html", page_html("Surveillance documentaire", renderish(md), depth, SITE + "/ia/surveillance.html"))
+
+def build_connaissances_dynamiques():
+    depth = 0
+    chaine = ["Source officielle", "Règle actuelle", "Date", "Historique", "Validation humaine", "Publication"]
+    items = {sg: {"nom": nom, "domaines": CONCEPT_REG.get(sg, (0, [], []))[1],
+                  "chaine": {"source_officielle": [AUTORITES[k][1] for k in CONCEPT_REG.get(sg, (0, [], []))[2]],
+                             "regle_actuelle": None, "date": None, "historique": [],
+                             "validation_humaine": "requise", "publication": "manuelle uniquement"},
+                  "statut": "en attente de validation"}
+             for sg, nom, kws, facets in CONCEPTS if CONCEPT_REG.get(sg, (0, 0, 0))[0]}
+    write("connaissances-dynamiques.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE,
+        "regle": "Infrastructure prête. Aucune connaissance réglementaire n'est stockée ni mise à jour automatiquement. La chaîne exige une validation humaine avant publication."}, "concepts": items}, ensure_ascii=False, indent=1))
+    md = md_hdr("Connaissances dynamiques", "Infrastructure (chaîne) prête pour intégrer, plus tard et manuellement, des règles réglementaires validées. Aucune intégration automatique.") + """
+## Chaîne de validation (jamais automatique)
+`Source officielle → Règle actuelle → Date → Historique → Validation humaine → Publication`
+
+- La chaîne est **prête** mais **vide** : aucune règle réglementaire n'est stockée dans la base.
+- Aucune mise à jour ne modifie directement les connaissances : **validation humaine obligatoire** avant publication.
+- Les concepts en **matière évolutive** disposent d'un emplacement prêt (voir [connaissances-dynamiques.json](connaissances-dynamiques.json)).
+
+_But : préparer l'infrastructure sans jamais inventer ni intégrer automatiquement une donnée réglementaire._
+"""
+    write("connaissances-dynamiques.md", md); write("connaissances-dynamiques.html", page_html("Connaissances dynamiques", renderish(md), depth, SITE + "/ia/connaissances-dynamiques.html"))
+
+def build_choix_sources():
+    depth = 0
+    plans = {}
+    for sg, nom, kws, facets in CONCEPTS:
+        ev, dom, auths = CONCEPT_REG.get(sg, (False, [], []))
+        order = ["fiche contrat (/ia/contrat/<slug>)", "catégories (garanties, exclusions, définitions, conditions, déclencheurs)", "notice PDF (fait foi)"]
+        if ev: order.append("sources officielles : " + ", ".join(AUTORITES[k][0] for k in auths))
+        plans[sg] = {"nom": nom, "ordre": order, "matiere_evolutive": ev,
+                     "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+                     "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."}
+    write("choix-sources.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "usage": "Ordre de consultation des documents par concept + conditions d'arrêt et de non-conclusion."}, "concepts": plans}, ensure_ascii=False, indent=1))
+    md = md_hdr("Moteur — choix des sources", "Avant toute réponse : quel document consulter, dans quel ordre, pourquoi, quand passer au suivant, quand s'arrêter, quand dire « je ne peux pas conclure ».") + """
+## Procédure générale
+1. **Fiche contrat / catégories** — la donnée contractuelle, sourcée.
+2. **Notice PDF** — vérifier à la page (fait foi).
+3. **Documents publics AXA** — si besoin.
+4. **Sources officielles** — **uniquement** si matière évolutive (voir [réglementation](reglementation.html)).
+
+## Quand passer au document suivant
+Quand le document courant ne contient pas l'élément, ou qu'un chiffre est « à vérifier », ou que la matière est réglementaire.
+
+## Quand s'arrêter
+Dès que l'élément est **trouvé et sourcé** (notice). Pour une matière évolutive, après avoir cité la source officielle recommandée.
+
+## Quand dire « je ne peux pas conclure »
+- Élément **absent de la base ET de la notice**.
+- **Valeur chiffrée non extraite** (renvoyée à la notice / au certificat d'adhésion).
+- **Matière évolutive** sans vérification possible de la source officielle.
+
+## Ordre par concept
+""" + "\n".join("- **%s** : %s" % (p["nom"], " → ".join(p["ordre"])) for p in plans.values())
+    write("choix-sources.md", md); write("choix-sources.html", page_html("Choix des sources", renderish(md), depth, SITE + "/ia/choix-sources.html"))
+
+def csv_cell(v):
+    s = str(v if v is not None else "")
+    return '"' + s.replace('"', '""') + '"' if any(c in s for c in [',', '"', '\n', ';']) else s
+def csv_rows(rows): return "\r\n".join(",".join(csv_cell(c) for c in r) for r in rows) + "\r\n"
+
+MAT_CATS = ["garanties", "exclusions", "definitions", "conditions", "declencheurs", "plafonds", "franchises", "options", "cotisations", "delais", "fiscalite", "points-vigilance", "formules"]
+def build_matrices(concepts):
+    depth = 1  # pages sous ia/matrices/
+    cslugs = [cm["slug"] for cm in CONTRACT_META]; cnames = {cm["slug"]: cm["nom"] for cm in CONTRACT_META}
+    # 1) Matrice de couverture : contrats × catégories (comptes)
+    header = ["contrat"] + MAT_CATS
+    rows = []
+    for cm in CONTRACT_META:
+        rows.append([cm["nom"]] + [str(len([e for e in ELEMENTS.get(k, []) if e["cslug"] == cm["slug"]])) for k in MAT_CATS])
+    write("matrices/couverture.csv", csv_rows([header] + rows))
+    write("matrices/couverture.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE}, "colonnes": MAT_CATS,
+        "lignes": [{"contrat": r[0], **{MAT_CATS[i]: int(r[i + 1]) for i in range(len(MAT_CATS))}} for r in rows]}, ensure_ascii=False, indent=1))
+    def html_table(header, rows, linkcol0=None):
+        h = "<tr>" + "".join("<th>%s</th>" % html.escape(x) for x in header) + "</tr>"
+        body = ""
+        for r in rows:
+            c0 = ('<a href="../contrat/%s.html">%s</a>' % (slug(r[0]), html.escape(str(r[0])))) if linkcol0 else html.escape(str(r[0]))
+            body += "<tr><td>%s</td>%s</tr>" % (c0, "".join("<td>%s</td>" % html.escape(str(x)) for x in r[1:]))
+        return "<table>%s%s</table>" % (h, body)
+    def md_table(header, rows):
+        out = ["| " + " | ".join(header) + " |", "|" + "|".join(["---"] * len(header)) + "|"]
+        for r in rows: out.append("| " + " | ".join(str(x) for x in r) + " |")
+        return "\n".join(out)
+    write("matrices/couverture.md", md_hdr("Matrice de couverture — contrats × catégories", "Nombre d'éléments par contrat et par catégorie.") + "\n" + md_table(header, rows))
+    write("matrices/couverture.html", page_html("Matrice de couverture", "<h1>Matrice de couverture — contrats × catégories</h1>" + html_table(header, rows, linkcol0=True), depth, SITE + "/ia/matrices/couverture.html"))
+    # 2) Concepts × contrats
+    cheader = ["concept"] + [cnames[s] for s in cslugs]
+    crows = []
+    for sg, nom, kws, facets in CONCEPTS:
+        hits, gl = concept_hits(kws)
+        crows.append([nom] + [str(sum(1 for cat in hits for e in hits[cat] if e["cslug"] == s)) for s in cslugs])
+    write("matrices/concepts-contrats.csv", csv_rows([cheader] + crows))
+    write("matrices/concepts-contrats.json", json.dumps({"meta": {"version": VERSION}, "colonnes": [cnames[s] for s in cslugs],
+        "lignes": [{"concept": r[0], **{cheader[i + 1]: int(r[i + 1]) for i in range(len(cslugs))}} for r in crows]}, ensure_ascii=False, indent=1))
+    write("matrices/concepts-contrats.md", md_hdr("Matrice concepts × contrats", "Nombre d'éléments par concept et par contrat.") + "\n" + md_table(cheader, crows))
+    write("matrices/concepts-contrats.html", page_html("Matrice concepts × contrats", "<h1>Matrice concepts × contrats</h1>" + html_table(cheader, crows), depth, SITE + "/ia/matrices/concepts-contrats.html"))
+    # 3) Export plat par catégorie (CSV + JSON) : <catégorie> × contrats
+    for k in MAT_CATS:
+        items = ELEMENTS.get(k, [])
+        exp = [["id", "contrat", "titre", "texte", "notice", "page"]]
+        js = []
+        for e in items:
+            s = e.get("src") or {}
+            exp.append([e["id"], e["contrat"], e.get("titre", ""), e.get("texte", ""), (str(s.get("document_source")).split("/")[-1] if s.get("document_source") else ""), s.get("page", "")])
+            js.append({"id": e["id"], "contrat": e["contrat"], "titre": e.get("titre", ""), "texte": e.get("texte", ""),
+                       "notice": s.get("document_source"), "page": s.get("page")})
+        write("matrices/%s.csv" % k, csv_rows(exp))
+        write("matrices/%s.json" % k, json.dumps({"meta": {"categorie": k, "version": VERSION, "total": len(js)}, "elements": js}, ensure_ascii=False, indent=1))
+    # index des matrices
+    depth = 1
+    idx = ["<h1>Matrices documentaires</h1><p>Chaque matrice en HTML / Markdown / JSON / CSV. Dérivées, sourcées.</p>",
+           '<h2>Matrices croisées</h2><ul>',
+           '<li>Couverture (contrats × catégories) : <a href="couverture.html">HTML</a> · <a href="couverture.md">MD</a> · <a href="couverture.json">JSON</a> · <a href="couverture.csv">CSV</a></li>',
+           '<li>Concepts × contrats : <a href="concepts-contrats.html">HTML</a> · <a href="concepts-contrats.md">MD</a> · <a href="concepts-contrats.json">JSON</a> · <a href="concepts-contrats.csv">CSV</a></li></ul>',
+           '<h2>Exports par catégorie (× contrats)</h2><ul>']
+    for k in MAT_CATS:
+        idx.append('<li>%s : <a href="%s.json">JSON</a> · <a href="%s.csv">CSV</a> · <a href="../%s.html">page</a></li>' % (k, k, k, k))
+    idx.append("</ul>")
+    write("matrices/index.html", page_html("Matrices", "".join(idx), depth, SITE + "/ia/matrices/index.html"))
+    mmd = md_hdr("Matrices documentaires", "Matrices dérivées en HTML/MD/JSON/CSV.") + "\n- Couverture : [HTML](matrices/couverture.html) · [JSON](matrices/couverture.json) · [CSV](matrices/couverture.csv)\n- Concepts × contrats : [HTML](matrices/concepts-contrats.html) · [CSV](matrices/concepts-contrats.csv)\n- Par catégorie : " + " · ".join("[%s.csv](matrices/%s.csv)" % (k, k) for k in MAT_CATS)
+    write("matrices.md", mmd); write("matrices.html", page_html("Matrices", renderish(mmd), 0, SITE + "/ia/matrices.html"))
+
+def build_graphe():
+    nodes, edges, seen = [], [], set()
+    def node(nid, typ, label, extra=None):
+        if nid in seen: return
+        seen.add(nid); n = {"id": nid, "type": typ, "label": label}
+        if extra: n.update(extra)
+        nodes.append(n)
+    for cm in CONTRACT_META:
+        node("contrat:" + cm["slug"], "contrat", cm["nom"], {"url": SITE + "/ia/contrat/%s.html" % cm["slug"]})
+    for sg, nom, kws, facets in CONCEPTS:
+        ev, dom, auths = CONCEPT_REG.get(sg, (False, [], []))
+        node("concept:" + sg, "concept", nom, {"url": SITE + "/ia/concepts.html#c-" + sg})
+        for k in auths:
+            node("autorite:" + k, "article_reglementaire", AUTORITES[k][0], {"url": AUTORITES[k][1], "autorite_type": AUTORITES[k][2]})
+            edges.append({"from": "concept:" + sg, "to": "autorite:" + k, "rel": "reglementation_recommandee"})
+    for p in PDFS:
+        if p.get("path"): node("notice:" + slug(p.get("nom_fichier") or p["path"]), "notice", p.get("nom_fichier") or p["path"].split("/")[-1], {"contrat": p.get("nom_contrat")})
+    for cat in CONCEPT_ORDER + ["faits"]:
+        for e in ELEMENTS.get(cat, []):
+            nid = "el:" + e["id"]
+            node(nid, cat.rstrip("s") if cat != "faits" else "fait", (e.get("titre") or e.get("texte") or "")[:60], {"contrat": e.get("contrat")})
+            edges.append({"from": nid, "to": "contrat:" + e["cslug"], "rel": "appartient_a"})
+            for c in el_concepts(e): edges.append({"from": nid, "to": "concept:" + c, "rel": "concerne"})
+            s = e.get("src") or {}
+            if s.get("document_source"): edges.append({"from": nid, "to": "notice:" + slug(str(s["document_source"]).split("/")[-1]), "rel": "source"})
+    write("graphe.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "noeuds": len(nodes), "aretes": len(edges),
+        "types_noeuds": sorted({n["type"] for n in nodes}), "types_relations": sorted({e["rel"] for e in edges}),
+        "note": "Graphe documentaire dérivé. Relations = appartenance (élément→contrat), concept (élément→concept), source (élément→notice), réglementation (concept→autorité). AUCUNE inférence."},
+        "noeuds": nodes, "aretes": edges}, ensure_ascii=False, indent=1))
+    md = md_hdr("Graphe documentaire", "Nœuds (contrats, concepts, éléments, notices, autorités) et relations dérivées. Aucune inférence.") + """
+## Contenu
+- **%d nœuds**, **%d relations**. Types de nœuds : contrat, concept, garantie, exclusion, définition, condition, déclencheur, notice, article réglementaire.
+- Relations dérivées : `appartient_a` (élément→contrat), `concerne` (élément→concept), `source` (élément→notice), `reglementation_recommandee` (concept→autorité).
+- Aucune relation inventée ; tout est vérifiable dans les pages.
+
+Format machine : [graphe.json](graphe.json).
+""" % (len(nodes), len(edges))
+    write("graphe.md", md); write("graphe.html", page_html("Graphe documentaire", renderish(md), 0, SITE + "/ia/graphe.html"))
+
+def build_maturite(rows_cov):
+    depth = 0
+    caps = [
+        ("Capacité documentaire", "Toutes les catégories exposées, sourcées, 100 % de couverture des données.", "élevée"),
+        ("Capacité multi-contrats", "Concepts, thèmes, comparateur, matrices croisées contrats × catégories.", "élevée"),
+        ("Capacité réglementaire", "Sources officielles par concept + détecteur de matière évolutive + surveillance (infra).", "moyenne (pointeurs, pas de contenu réglementaire)"),
+        ("Capacité de preuve", "Graphe de preuves + graphe documentaire ; chaque élément citable (id, source, page).", "élevée"),
+        ("Capacité de couverture", "Détecteur de couverture par concept + matrice de couverture + rapport global.", "élevée"),
+        ("Capacité de navigation", "Index, guide, outils, hiérarchie documentaire, choix des sources, liens stables.", "élevée"),
+        ("Capacité de raisonnement", "Planificateur + méthode + choix des sources + conditions de non-conclusion.", "moyenne→élevée (cadre le LLM, ne le remplace pas)"),
+    ]
+    md = [md_hdr("Rapport de maturité — infrastructure de raisonnement", "Mesure des capacités de la Vue IA comme environnement documentaire pour un LLM.")]
+    md.append("\n| Capacité | Niveau | Détail |\n|---|---|---|")
+    for nom, det, niv in caps: md.append("| %s | %s | %s |" % (nom, niv, det))
+    md += ["", "## Couverture des données (rappel)", "", "\n".join("- %s : %d/%d" % (l, ok, tot) for l, tot, ok in rows_cov),
+           "", "## Limites restantes",
+           "- Matching concept par mots-clés (large, non sémantique).",
+           "- Aucune donnée réglementaire stockée : uniquement des pointeurs à valider.",
+           "- Chiffres « à vérifier en notice » non extraits (signalés, jamais comblés).",
+           "- Régénération manuelle (`build_ia.py`).",
+           "", "## Rôle vis-à-vis d'un LLM",
+           "Le système **ne remplace pas** un LLM : il est le **meilleur environnement documentaire** pour lui — décomposition, parcours, preuves, couverture, arbitrage des sources, conditions de non-conclusion."]
+    write("maturite.md", "\n".join(md)); write("maturite.html", page_html("Maturité", renderish("\n".join(md)), depth, SITE + "/ia/maturite.html"))
 
 def build():
     os.makedirs(IA, exist_ok=True)
@@ -954,9 +1327,19 @@ def build():
     build_preuves()
     build_methode()
     build_tests(concepts)
+    # Infrastructure de raisonnement documentaire (Parties 2–10, 12)
+    build_hierarchie()
+    build_sources_officielles()
+    build_reglementation()
+    build_surveillance()
+    build_connaissances_dynamiques()
+    build_choix_sources()
+    build_matrices(concepts)
+    build_graphe()
     build_outils()
     build_static_pages(tc)
     rows, allok = build_coverage(coverage())
+    build_maturite(rows)
     nfiles = sum(len(fs) for _, _, fs in os.walk(IA))
     print("✅ Vue IA exhaustive générée : %d fichiers, %d contrats, %d thèmes." % (nfiles, len(CONTRATS), len(THEMES)))
     print("Couverture :")

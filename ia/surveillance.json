@@ -1,0 +1,165 @@
+{
+ "meta": {
+  "version": "1.2.0",
+  "genere_le": "2026-07-10",
+  "regle": "Surveillance documentaire = détecter/comparer/dater/alerter/préparer. JAMAIS de mise à jour automatique ; JAMAIS de publication automatique. Validation humaine obligatoire.",
+  "etats_possibles": [
+   "Valide",
+   "À vérifier",
+   "Obsolète",
+   "En attente de validation"
+  ]
+ },
+ "sources": {
+  "legifrance": {
+   "nom": "Légifrance",
+   "url": "https://www.legifrance.gouv.fr",
+   "type": "autorite_juridique",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "code-assurances": {
+   "nom": "Code des assurances (Légifrance)",
+   "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+   "type": "autorite_juridique",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "code-secu": {
+   "nom": "Code de la sécurité sociale (Légifrance)",
+   "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189",
+   "type": "autorite_juridique",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "cgi": {
+   "nom": "Code général des impôts (Légifrance)",
+   "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577",
+   "type": "autorite_juridique",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "bofip": {
+   "nom": "BOFiP-Impôts",
+   "url": "https://bofip.impots.gouv.fr",
+   "type": "autorite_administrative",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "impots": {
+   "nom": "impots.gouv.fr",
+   "url": "https://www.impots.gouv.fr",
+   "type": "autorite_administrative",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "service-public": {
+   "nom": "Service-Public.fr",
+   "url": "https://www.service-public.fr",
+   "type": "documentation_officielle",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "urssaf": {
+   "nom": "URSSAF",
+   "url": "https://www.urssaf.fr",
+   "type": "autorite_administrative",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "ameli": {
+   "nom": "Ameli (Assurance Maladie)",
+   "url": "https://www.ameli.fr",
+   "type": "autorite_administrative",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "cnav": {
+   "nom": "L'Assurance retraite (CNAV)",
+   "url": "https://www.lassuranceretraite.fr",
+   "type": "autorite_administrative",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "cnil": {
+   "nom": "CNIL",
+   "url": "https://www.cnil.fr",
+   "type": "autorite_administrative",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "banque-france": {
+   "nom": "Banque de France",
+   "url": "https://www.banque-france.fr",
+   "type": "autorite_administrative",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "acpr": {
+   "nom": "ACPR",
+   "url": "https://acpr.banque-france.fr",
+   "type": "autorite_administrative",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "amf": {
+   "nom": "AMF",
+   "url": "https://www.amf-france.org",
+   "type": "autorite_administrative",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  },
+  "france-travail": {
+   "nom": "France Travail",
+   "url": "https://www.francetravail.fr",
+   "type": "autorite_administrative",
+   "date_document": null,
+   "date_derniere_verification": null,
+   "historique": [],
+   "statut": "à vérifier",
+   "version": null
+  }
+ }
+}

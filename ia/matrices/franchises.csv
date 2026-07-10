@@ -1,0 +1,14 @@
+id,contrat,titre,texte,notice,page
+avizen:fait:89a1ca75b5:franchise:0,Avizen,Indemnités journalières ITT toutes causes (optionnelle),franchise au certificat d'adhésion,2025-04 Notice d'information Avizen.pdf,13
+avizen:fait:819383df2a:franchise:0,Avizen,Indemnités journalières ITT par accident (optionnelle),franchise au certificat d'adhésion,2025-04 Notice d'information Avizen.pdf,14
+avizen:fait:3d298b99e0:franchise:0,Avizen,Rente invalidité fonctionnelle toutes causes (optionnelle),délai d'attente 90 jours (maladie) / 365 jours (troubles psychiques),2025-04 Notice d'information Avizen.pdf,15
+avizen-pro:fait:e4f8ae15eb:franchise:0,Avizen Pro,IJ ITT toutes causes (optionnelle),franchise au certificat,2025-04 Notice d'information Avizen Pro (AEP).pdf,14
+avizen-pro:fait:b98f6e974d:franchise:0,Avizen Pro,IJ ITT par accident (optionnelle),franchise au certificat,2025-04 Notice d'information Avizen Pro (AEP).pdf,15
+avizen-pro:fait:299920232f:franchise:0,Avizen Pro,IJ toutes causes complémentaires aux régimes obligatoires (optionnelle),franchise au certificat,2025-04 Notice d'information Avizen Pro (AEP).pdf,15
+avizen-pro:fait:59e1287b10:franchise:0,Avizen Pro,Indemnités Remboursement des frais professionnels (optionnelle),franchise au certificat,2025-04 Notice d'information Avizen Pro (AEP).pdf,16
+avizen-pro:fait:45763a5331:franchise:0,Avizen Pro,Rente invalidité permanente partielle ou totale (optionnelle),délai d'attente 90 j maladie / 365 j troubles psychiques,2025-04 Notice d'information Avizen Pro (AEP).pdf,17
+entour-age:fait:52eb8f16a6:franchise:0,Entour'Age,Rente viagère dépendance (garantie principale obligatoire),franchise absolue 3 mois (91e jour),2025-06 Notice d'Information Entour'Age.pdf,21
+entour-age:fait:52eb8f16a6:franchise:1,Entour'Age,Rente viagère dépendance (garantie principale obligatoire),"délai d'attente 1 an (maladie) / 3 ans (maladies neurologiques, neurodégénératives ou psychiatriques) / aucun si dépendance d'origine accidentelle postérieure à l'adhésion",2025-06 Notice d'Information Entour'Age.pdf,21
+ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:franchise:0,Ma Protection Accident (Garantie des accidents de la vie),Accidents corporels d'activités courantes,seuil d'intervention : DFP ≥ 1 % pour l'indemnisation,2024-03 CG Ma Protection Accident (AGA-AEP).pdf,4
+masterlife-credit:fait:fbdb2c83d4:franchise:0,Masterlife CREDIT,Incapacité de travail (IJ),franchise au choix aux conditions particulières,Notice-Masterlife-Credit-202410.pdf,13
+masterlife-credit:fait:46a66d4346:franchise:0,Masterlife CREDIT,Exonération du paiement des cotisations,franchise 90 jours pour le volet incapacité,Notice-Masterlife-Credit-202410.pdf,17

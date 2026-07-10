@@ -1,0 +1,625 @@
+{
+ "meta": {
+  "categorie": "declencheurs",
+  "version": "1.2.0",
+  "total": 77
+ },
+ "elements": [
+  {
+   "id": "avizen:fait:2cbcc3adad:declencheur:0",
+   "contrat": "Avizen",
+   "titre": "Capital décès toutes causes / Capital IPT toutes causes (garantie principale)",
+   "texte": "décès avant fin de l'année d'assurance des 85 ans",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 11
+  },
+  {
+   "id": "avizen:fait:2cbcc3adad:declencheur:1",
+   "contrat": "Avizen",
+   "titre": "Capital décès toutes causes / Capital IPT toutes causes (garantie principale)",
+   "texte": "IPT : consolidation pendant que la garantie est en cours",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 11
+  },
+  {
+   "id": "avizen:fait:d2f8ad4663:declencheur:0",
+   "contrat": "Avizen",
+   "titre": "Capital décès par accident / Capital IPT par accident (garantie principale)",
+   "texte": "lien direct accident-décès",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 11
+  },
+  {
+   "id": "avizen:fait:d2f8ad4663:declencheur:1",
+   "contrat": "Avizen",
+   "titre": "Capital décès par accident / Capital IPT par accident (garantie principale)",
+   "texte": "décès < 12 mois après l'accident",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 11
+  },
+  {
+   "id": "avizen:fait:d2f8ad4663:declencheur:2",
+   "contrat": "Avizen",
+   "titre": "Capital décès par accident / Capital IPT par accident (garantie principale)",
+   "texte": "IPT < 24 mois après l'accident",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 11
+  },
+  {
+   "id": "avizen:fait:9893112dc5:declencheur:0",
+   "contrat": "Avizen",
+   "titre": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+   "texte": "décès avant fin de l'année d'assurance des 85 ans",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 12
+  },
+  {
+   "id": "avizen:fait:9893112dc5:declencheur:1",
+   "contrat": "Avizen",
+   "titre": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+   "texte": "enfant fiscalement à charge à la date du décès",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 12
+  },
+  {
+   "id": "avizen:fait:89a1ca75b5:declencheur:0",
+   "contrat": "Avizen",
+   "titre": "Indemnités journalières ITT toutes causes (optionnelle)",
+   "texte": "arrêt avant la retraite et avant fin de l'année d'assurance des 67 ans",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 13
+  },
+  {
+   "id": "avizen:fait:89a1ca75b5:declencheur:1",
+   "contrat": "Avizen",
+   "titre": "Indemnités journalières ITT toutes causes (optionnelle)",
+   "texte": "exercer une activité professionnelle à la survenance (exclu si chômage, retraite, cessation d'activité)",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 13
+  },
+  {
+   "id": "avizen:fait:819383df2a:declencheur:0",
+   "contrat": "Avizen",
+   "titre": "Indemnités journalières ITT par accident (optionnelle)",
+   "texte": "activité professionnelle à la survenance",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 14
+  },
+  {
+   "id": "avizen:fait:3d298b99e0:declencheur:0",
+   "contrat": "Avizen",
+   "titre": "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+   "texte": "consolidation pendant la garantie (avant retraite et fin d'année d'assurance des 67 ans)",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 15
+  },
+  {
+   "id": "avizen:fait:3d298b99e0:declencheur:1",
+   "contrat": "Avizen",
+   "titre": "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+   "texte": "activité professionnelle au fait générateur",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 15
+  },
+  {
+   "id": "avizen:fait:3d298b99e0:declencheur:2",
+   "contrat": "Avizen",
+   "titre": "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+   "texte": "taux d'invalidité fonctionnelle ≥ 11 % (accident) ou ≥ 33 % (maladie)",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 15
+  },
+  {
+   "id": "avizen:fait:741ff49939:declencheur:0",
+   "contrat": "Avizen",
+   "titre": "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)",
+   "texte": "mêmes conditions que la rente toutes causes (taux ≥ 11 % accident / 33 % maladie)",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 16
+  },
+  {
+   "id": "avizen:fait:3bae81cb83:declencheur:0",
+   "contrat": "Avizen",
+   "titre": "Rente invalidité permanente partielle ou totale par accident (optionnelle)",
+   "texte": "taux d'invalidité fonctionnelle ≥ 11 %",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 16
+  },
+  {
+   "id": "avizen:fait:15b390b722:declencheur:0",
+   "contrat": "Avizen",
+   "titre": "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+   "texte": "taux ≥ 11 %",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 17
+  },
+  {
+   "id": "avizen:fait:e73c1c5a47:declencheur:0",
+   "contrat": "Avizen",
+   "titre": "Garantie aide à la famille",
+   "texte": "avoir souscrit une garantie IJ ITT ET une garantie rente éducation",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 18
+  },
+  {
+   "id": "avizen:fait:e73c1c5a47:declencheur:1",
+   "contrat": "Avizen",
+   "titre": "Garantie aide à la famille",
+   "texte": "enfant à charge < 20 ans nécessitant la présence de l'assuré",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 18
+  },
+  {
+   "id": "avizen:fait:e73c1c5a47:declencheur:2",
+   "contrat": "Avizen",
+   "titre": "Garantie aide à la famille",
+   "texte": "percevoir l'AJPP (art. L544-1 CSS)",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 18
+  },
+  {
+   "id": "avizen:fait:e73c1c5a47:declencheur:3",
+   "contrat": "Avizen",
+   "titre": "Garantie aide à la famille",
+   "texte": "suspension temporaire d'activité",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 18
+  },
+  {
+   "id": "avizen-pro:fait:e6e92c4b61:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "Capital décès toutes causes / Capital IPT toutes causes + double effet",
+   "texte": "décès avant fin de l'année d'assurance des 85 ans",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 11
+  },
+  {
+   "id": "avizen-pro:fait:cfb98375a0:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "Capital décès par accident / IPT par accident",
+   "texte": "décès < 12 mois / IPT < 24 mois après l'accident",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 11
+  },
+  {
+   "id": "avizen-pro:fait:6354ec813b:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "Rente éducation décès / IPT + double effet",
+   "texte": "enfant fiscalement à charge au décès",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 12
+  },
+  {
+   "id": "avizen-pro:fait:e4f8ae15eb:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "IJ ITT toutes causes (optionnelle)",
+   "texte": "couplage obligatoire avec une garantie décès à l'adhésion",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 14
+  },
+  {
+   "id": "avizen-pro:fait:e4f8ae15eb:declencheur:1",
+   "contrat": "Avizen Pro",
+   "titre": "IJ ITT toutes causes (optionnelle)",
+   "texte": "activité professionnelle à la survenance",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 14
+  },
+  {
+   "id": "avizen-pro:fait:b98f6e974d:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "IJ ITT par accident (optionnelle)",
+   "texte": "activité professionnelle à la survenance",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 15
+  },
+  {
+   "id": "avizen-pro:fait:299920232f:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)",
+   "texte": "activité professionnelle à la survenance",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 15
+  },
+  {
+   "id": "avizen-pro:fait:59e1287b10:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "Indemnités Remboursement des frais professionnels (optionnelle)",
+   "texte": "activité professionnelle à la survenance",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 16
+  },
+  {
+   "id": "avizen-pro:fait:59e1287b10:declencheur:1",
+   "contrat": "Avizen Pro",
+   "titre": "Indemnités Remboursement des frais professionnels (optionnelle)",
+   "texte": "mêmes modalités de service que 2.2.1",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 16
+  },
+  {
+   "id": "avizen-pro:fait:45763a5331:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "Rente invalidité permanente partielle ou totale (optionnelle)",
+   "texte": "consolidation pendant la garantie",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 17
+  },
+  {
+   "id": "avizen-pro:fait:45763a5331:declencheur:1",
+   "contrat": "Avizen Pro",
+   "titre": "Rente invalidité permanente partielle ou totale (optionnelle)",
+   "texte": "activité professionnelle au fait générateur",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 17
+  },
+  {
+   "id": "avizen-pro:fait:45763a5331:declencheur:2",
+   "contrat": "Avizen Pro",
+   "titre": "Rente invalidité permanente partielle ou totale (optionnelle)",
+   "texte": "taux ≥ 11 % accident / 33 % maladie (ou 15 % maladie en option)",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 17
+  },
+  {
+   "id": "avizen-pro:fait:f8c491157d:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "Capital invalidité permanente partielle ou totale (optionnelle)",
+   "texte": "taux ≥ 11 % accident / 33 % maladie (15 % en option)",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 21
+  },
+  {
+   "id": "avizen-pro:fait:0ec85aa140:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "Rente invalidité par accident (optionnelle)",
+   "texte": "taux fonctionnel ≥ 11 %",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 23
+  },
+  {
+   "id": "avizen-pro:fait:300c94bbd6:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "Capital invalidité par accident (optionnelle)",
+   "texte": "taux fonctionnel ≥ 11 %",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 24
+  },
+  {
+   "id": "avizen-pro:fait:e381236ba4:declencheur:0",
+   "contrat": "Avizen Pro",
+   "titre": "Garantie aide à la famille",
+   "texte": "garantie IJ (ITT TC, accident ou complémentaires) ET rente éducation",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 25
+  },
+  {
+   "id": "avizen-pro:fait:e381236ba4:declencheur:1",
+   "contrat": "Avizen Pro",
+   "titre": "Garantie aide à la famille",
+   "texte": "AJPP perçue",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 25
+  },
+  {
+   "id": "entour-age:fait:52eb8f16a6:declencheur:0",
+   "contrat": "Entour'Age",
+   "titre": "Rente viagère dépendance (garantie principale obligatoire)",
+   "texte": "reconnaissance de l'état de dépendance par le Médecin Conseil d'AXA",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 21
+  },
+  {
+   "id": "entour-age:fait:52eb8f16a6:declencheur:1",
+   "contrat": "Entour'Age",
+   "titre": "Rente viagère dépendance (garantie principale obligatoire)",
+   "texte": "expiration du délai d'attente (sauf origine accidentelle)",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 21
+  },
+  {
+   "id": "entour-age:fait:52eb8f16a6:declencheur:2",
+   "contrat": "Entour'Age",
+   "titre": "Rente viagère dépendance (garantie principale obligatoire)",
+   "texte": "franchise absolue de 3 mois",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 21
+  },
+  {
+   "id": "entour-age:fait:2a25013e7a:declencheur:0",
+   "contrat": "Entour'Age",
+   "titre": "Services dès l'adhésion « ENTREAIDANTS »",
+   "texte": "dès la prise d'effet de l'adhésion",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 16
+  },
+  {
+   "id": "entour-age:fait:2094e3a95e:declencheur:0",
+   "contrat": "Entour'Age",
+   "titre": "Services d'assistance dédiés en perte d'autonomie",
+   "texte": "état de dépendance reconnu",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 23
+  },
+  {
+   "id": "entour-age:fait:dcbc36cf9a:declencheur:0",
+   "contrat": "Entour'Age",
+   "titre": "Services pour l'aidant de l'assuré",
+   "texte": "selon prestation : dépendance de l'assuré reconnue, ou rôle d'aidant",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 25
+  },
+  {
+   "id": "excelium-assurance-vie:fait:4475e2a358:declencheur:0",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Garantie en cas de vie (au terme)",
+   "texte": "vie de l'assuré au terme",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 15
+  },
+  {
+   "id": "excelium-assurance-vie:fait:4475e2a358:declencheur:1",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Garantie en cas de vie (au terme)",
+   "texte": "demande de l'adhérent",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 15
+  },
+  {
+   "id": "excelium-assurance-vie:fait:48e4ad06df:declencheur:0",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Garantie en cas de décès",
+   "texte": "décès de l'assuré avant le terme",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 15
+  },
+  {
+   "id": "excelium-assurance-vie:fait:62d6fd5c2d:declencheur:0",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Garantie « Sérénité » (plancher, incluse)",
+   "texte": "incluse automatiquement",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 15
+  },
+  {
+   "id": "excelium-assurance-vie:fait:0b27383ed4:declencheur:0",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Garantie « Revalorisée »",
+   "texte": "convention Fortissimo sans fonds Croissance",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 16
+  },
+  {
+   "id": "excelium-assurance-vie:fait:0b27383ed4:declencheur:1",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Garantie « Revalorisée »",
+   "texte": "< 70 ans à l'adhésion",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 16
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:declencheur:0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Accidents corporels d'activités courantes",
+   "texte": "pendant la période d'effet des garanties",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 4
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:declencheur:1",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Accidents corporels d'activités courantes",
+   "texte": "conditions de territorialité (art. 1.4)",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 4
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:declencheur:2",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Accidents corporels d'activités courantes",
+   "texte": "hors exclusions (art. 2)",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 4
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:b8adb5c5cb:declencheur:0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Accidents corporels lors d'événements exceptionnels",
+   "texte": "pendant la période d'effet des garanties",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 4
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:efc65e79f2:declencheur:0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Accidents médicaux et infections nosocomiales",
+   "texte": "fait générateur postérieur à la prise d'effet",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 4
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:efc65e79f2:declencheur:1",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Accidents médicaux et infections nosocomiales",
+   "texte": "condition d'anormalité remplie",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 4
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:efc65e79f2:declencheur:2",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Accidents médicaux et infections nosocomiales",
+   "texte": "dommages EN DESSOUS des critères de gravité ouvrant droit à indemnisation par l'ONIAM",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 4
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:9347c06b89:declencheur:0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Indemnisation des préjudices corporels (barème AQV)",
+   "texte": "DFP imputable à l'accident ≥ 1 %",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 7
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:4c55c61a58:declencheur:0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Préjudices indemnisés selon droit commun",
+   "texte": "accident garanti avec DFP ≥ 1 %",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 9
+  },
+  {
+   "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:2bd15a813d:declencheur:0",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "En cas de décès",
+   "texte": "décès exclusivement lié à l'accident garanti",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 9
+  },
+  {
+   "id": "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:5373d2e9a3:declencheur:0",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "En cas de vie - sortie en capital",
+   "texte": "échéance + âge légal ou liquidation effective",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 10
+  },
+  {
+   "id": "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:01f933f2f8:declencheur:0",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "En cas de vie - sortie en rente viagère",
+   "texte": "échéance + âge légal ou liquidation effective",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 10
+  },
+  {
+   "id": "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:2aa29d9978:declencheur:0",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "En cas de décès avant liquidation totale",
+   "texte": "décès de l'assuré avant liquidation totale",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 12
+  },
+  {
+   "id": "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:75fb2b014a:declencheur:0",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Garantie « Sérénité » (plancher décès, incluse)",
+   "texte": "incluse automatiquement",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 13
+  },
+  {
+   "id": "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:75fb2b014a:declencheur:1",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Garantie « Sérénité » (plancher décès, incluse)",
+   "texte": "décès avant le 80e anniversaire",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 13
+  },
+  {
+   "id": "masterlife-credit:fait:d958e52a0c:declencheur:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Décès",
+   "texte": "décès avant le 85e anniversaire (âge limite de la garantie)",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 12
+  },
+  {
+   "id": "masterlife-credit:fait:a1b706a42f:declencheur:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "PTIA",
+   "texte": "consolidation avant 70 ans",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 12
+  },
+  {
+   "id": "masterlife-credit:fait:a1b706a42f:declencheur:1",
+   "contrat": "Masterlife CREDIT",
+   "titre": "PTIA",
+   "texte": "critères PTIA (définition)",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 12
+  },
+  {
+   "id": "masterlife-credit:fait:fbdb2c83d4:declencheur:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Incapacité de travail (IJ)",
+   "texte": "couplage avec décès ou PTIA",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 13
+  },
+  {
+   "id": "masterlife-credit:fait:fbdb2c83d4:declencheur:1",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Incapacité de travail (IJ)",
+   "texte": "arrêt avant 70 ans",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 13
+  },
+  {
+   "id": "masterlife-credit:fait:de1ea1338f:declencheur:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Invalidité totale ou partielle",
+   "texte": "consolidation avant la retraite et avant 70 ans",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 14
+  },
+  {
+   "id": "masterlife-credit:fait:de1ea1338f:declencheur:1",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Invalidité totale ou partielle",
+   "texte": "taux ≥ 33 %",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 14
+  },
+  {
+   "id": "masterlife-credit:fait:48d0f52caf:declencheur:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Invalidité spécifique AERAS (GIS)",
+   "texte": "mention aux conditions particulières",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 16
+  },
+  {
+   "id": "masterlife-credit:fait:48d0f52caf:declencheur:1",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Invalidité spécifique AERAS (GIS)",
+   "texte": "incapacité professionnelle totale + fonctionnelle ≥ 70 %",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 16
+  },
+  {
+   "id": "masterlife-credit:fait:ba0803b83f:declencheur:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Garantie Aide à la famille",
+   "texte": "garantie incapacité souscrite",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 14
+  },
+  {
+   "id": "masterlife-credit:fait:ba0803b83f:declencheur:1",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Garantie Aide à la famille",
+   "texte": "AJPP",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 14
+  },
+  {
+   "id": "masterlife-credit:fait:ba0803b83f:declencheur:2",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Garantie Aide à la famille",
+   "texte": "prêt immobilier ou professionnel",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 14
+  },
+  {
+   "id": "masterlife-credit:fait:46a66d4346:declencheur:0",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Exonération du paiement des cotisations",
+   "texte": "selon le cas : versement d'IJ incapacité, AJPP, ou invalidité totale/GIS",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 17
+  }
+ ]
+}

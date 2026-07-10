@@ -1,0 +1,508 @@
+{
+ "meta": {
+  "version": "1.2.0",
+  "genere_le": "2026-07-10",
+  "avertissement": "Référentiel de NAVIGATION vers des autorités publiques (URLs publiques, à valider). Ne contient AUCUN contenu réglementaire ; ne se substitue pas aux sources qui font foi. La notice PDF AXA fait foi pour le contrat.",
+  "hierarchie": [
+   "autorite_juridique",
+   "autorite_administrative",
+   "documentation_officielle",
+   "documentation_axa"
+  ]
+ },
+ "autorites": {
+  "legifrance": {
+   "nom": "Légifrance",
+   "url": "https://www.legifrance.gouv.fr",
+   "type": "autorite_juridique",
+   "role": "Textes de loi et codes (source du droit)."
+  },
+  "code-assurances": {
+   "nom": "Code des assurances (Légifrance)",
+   "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+   "type": "autorite_juridique",
+   "role": "Régime juridique des contrats d'assurance."
+  },
+  "code-secu": {
+   "nom": "Code de la sécurité sociale (Légifrance)",
+   "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189",
+   "type": "autorite_juridique",
+   "role": "Protection sociale, retraite, maladie."
+  },
+  "cgi": {
+   "nom": "Code général des impôts (Légifrance)",
+   "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577",
+   "type": "autorite_juridique",
+   "role": "Fiscalité (art. 990 I, 757 B…)."
+  },
+  "bofip": {
+   "nom": "BOFiP-Impôts",
+   "url": "https://bofip.impots.gouv.fr",
+   "type": "autorite_administrative",
+   "role": "Doctrine fiscale administrative opposable."
+  },
+  "impots": {
+   "nom": "impots.gouv.fr",
+   "url": "https://www.impots.gouv.fr",
+   "type": "autorite_administrative",
+   "role": "Fiscalité des particuliers."
+  },
+  "service-public": {
+   "nom": "Service-Public.fr",
+   "url": "https://www.service-public.fr",
+   "type": "documentation_officielle",
+   "role": "Information administrative de référence."
+  },
+  "urssaf": {
+   "nom": "URSSAF",
+   "url": "https://www.urssaf.fr",
+   "type": "autorite_administrative",
+   "role": "Cotisations sociales."
+  },
+  "ameli": {
+   "nom": "Ameli (Assurance Maladie)",
+   "url": "https://www.ameli.fr",
+   "type": "autorite_administrative",
+   "role": "Santé, maladie, invalidité (régime général)."
+  },
+  "cnav": {
+   "nom": "L'Assurance retraite (CNAV)",
+   "url": "https://www.lassuranceretraite.fr",
+   "type": "autorite_administrative",
+   "role": "Retraite du régime général."
+  },
+  "cnil": {
+   "nom": "CNIL",
+   "url": "https://www.cnil.fr",
+   "type": "autorite_administrative",
+   "role": "Données personnelles."
+  },
+  "banque-france": {
+   "nom": "Banque de France",
+   "url": "https://www.banque-france.fr",
+   "type": "autorite_administrative",
+   "role": "Stabilité financière."
+  },
+  "acpr": {
+   "nom": "ACPR",
+   "url": "https://acpr.banque-france.fr",
+   "type": "autorite_administrative",
+   "role": "Contrôle prudentiel assurances & banques."
+  },
+  "amf": {
+   "nom": "AMF",
+   "url": "https://www.amf-france.org",
+   "type": "autorite_administrative",
+   "role": "Marchés financiers, épargne."
+  },
+  "france-travail": {
+   "nom": "France Travail",
+   "url": "https://www.francetravail.fr",
+   "type": "autorite_administrative",
+   "role": "Emploi, chômage."
+  }
+ },
+ "concepts": {
+  "invalidite": {
+   "nom": "Invalidité",
+   "matiere_evolutive": true,
+   "domaines": [
+    "prévoyance",
+    "protection sociale"
+   ],
+   "autorites": [
+    {
+     "cle": "code-assurances",
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "ameli",
+     "nom": "Ameli (Assurance Maladie)",
+     "url": "https://www.ameli.fr",
+     "type": "autorite_administrative"
+    },
+    {
+     "cle": "service-public",
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr",
+     "type": "documentation_officielle"
+    },
+    {
+     "cle": "legifrance",
+     "nom": "Légifrance",
+     "url": "https://www.legifrance.gouv.fr",
+     "type": "autorite_juridique"
+    }
+   ]
+  },
+  "deces": {
+   "nom": "Décès",
+   "matiere_evolutive": true,
+   "domaines": [
+    "prévoyance",
+    "succession"
+   ],
+   "autorites": [
+    {
+     "cle": "code-assurances",
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "cgi",
+     "nom": "Code général des impôts (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "bofip",
+     "nom": "BOFiP-Impôts",
+     "url": "https://bofip.impots.gouv.fr",
+     "type": "autorite_administrative"
+    },
+    {
+     "cle": "service-public",
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr",
+     "type": "documentation_officielle"
+    }
+   ]
+  },
+  "deces-accidentel": {
+   "nom": "Décès accidentel",
+   "matiere_evolutive": true,
+   "domaines": [
+    "prévoyance"
+   ],
+   "autorites": [
+    {
+     "cle": "code-assurances",
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "service-public",
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr",
+     "type": "documentation_officielle"
+    }
+   ]
+  },
+  "accident": {
+   "nom": "Accident",
+   "matiere_evolutive": false,
+   "domaines": [
+    "prévoyance"
+   ],
+   "autorites": [
+    {
+     "cle": "code-assurances",
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "service-public",
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr",
+     "type": "documentation_officielle"
+    }
+   ]
+  },
+  "hospitalisation": {
+   "nom": "Hospitalisation",
+   "matiere_evolutive": true,
+   "domaines": [
+    "santé",
+    "protection sociale"
+   ],
+   "autorites": [
+    {
+     "cle": "ameli",
+     "nom": "Ameli (Assurance Maladie)",
+     "url": "https://www.ameli.fr",
+     "type": "autorite_administrative"
+    },
+    {
+     "cle": "code-secu",
+     "nom": "Code de la sécurité sociale (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "service-public",
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr",
+     "type": "documentation_officielle"
+    }
+   ]
+  },
+  "incapacite-temporaire": {
+   "nom": "Incapacité temporaire",
+   "matiere_evolutive": true,
+   "domaines": [
+    "protection sociale"
+   ],
+   "autorites": [
+    {
+     "cle": "ameli",
+     "nom": "Ameli (Assurance Maladie)",
+     "url": "https://www.ameli.fr",
+     "type": "autorite_administrative"
+    },
+    {
+     "cle": "code-secu",
+     "nom": "Code de la sécurité sociale (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "service-public",
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr",
+     "type": "documentation_officielle"
+    }
+   ]
+  },
+  "carence": {
+   "nom": "Carence / délai d'attente",
+   "matiere_evolutive": false,
+   "domaines": [
+    "assurance"
+   ],
+   "autorites": [
+    {
+     "cle": "code-assurances",
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "type": "autorite_juridique"
+    }
+   ]
+  },
+  "rachat": {
+   "nom": "Rachat",
+   "matiere_evolutive": true,
+   "domaines": [
+    "fiscalité",
+    "assurance vie"
+   ],
+   "autorites": [
+    {
+     "cle": "cgi",
+     "nom": "Code général des impôts (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "bofip",
+     "nom": "BOFiP-Impôts",
+     "url": "https://bofip.impots.gouv.fr",
+     "type": "autorite_administrative"
+    },
+    {
+     "cle": "impots",
+     "nom": "impots.gouv.fr",
+     "url": "https://www.impots.gouv.fr",
+     "type": "autorite_administrative"
+    },
+    {
+     "cle": "acpr",
+     "nom": "ACPR",
+     "url": "https://acpr.banque-france.fr",
+     "type": "autorite_administrative"
+    },
+    {
+     "cle": "code-assurances",
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "type": "autorite_juridique"
+    }
+   ]
+  },
+  "souscription": {
+   "nom": "Souscription & adhésion",
+   "matiere_evolutive": true,
+   "domaines": [
+    "assurance",
+    "protection sociale"
+   ],
+   "autorites": [
+    {
+     "cle": "code-assurances",
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "service-public",
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr",
+     "type": "documentation_officielle"
+    },
+    {
+     "cle": "acpr",
+     "nom": "ACPR",
+     "url": "https://acpr.banque-france.fr",
+     "type": "autorite_administrative"
+    }
+   ]
+  },
+  "age": {
+   "nom": "Âge",
+   "matiere_evolutive": true,
+   "domaines": [
+    "retraite",
+    "protection sociale"
+   ],
+   "autorites": [
+    {
+     "cle": "cnav",
+     "nom": "L'Assurance retraite (CNAV)",
+     "url": "https://www.lassuranceretraite.fr",
+     "type": "autorite_administrative"
+    },
+    {
+     "cle": "service-public",
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr",
+     "type": "documentation_officielle"
+    },
+    {
+     "cle": "code-secu",
+     "nom": "Code de la sécurité sociale (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189",
+     "type": "autorite_juridique"
+    }
+   ]
+  },
+  "suicide": {
+   "nom": "Suicide",
+   "matiere_evolutive": false,
+   "domaines": [
+    "assurance"
+   ],
+   "autorites": [
+    {
+     "cle": "code-assurances",
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "legifrance",
+     "nom": "Légifrance",
+     "url": "https://www.legifrance.gouv.fr",
+     "type": "autorite_juridique"
+    }
+   ]
+  },
+  "beneficiaire": {
+   "nom": "Bénéficiaire",
+   "matiere_evolutive": true,
+   "domaines": [
+    "succession",
+    "fiscalité"
+   ],
+   "autorites": [
+    {
+     "cle": "cgi",
+     "nom": "Code général des impôts (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "bofip",
+     "nom": "BOFiP-Impôts",
+     "url": "https://bofip.impots.gouv.fr",
+     "type": "autorite_administrative"
+    },
+    {
+     "cle": "code-assurances",
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "service-public",
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr",
+     "type": "documentation_officielle"
+    }
+   ]
+  },
+  "fiscalite": {
+   "nom": "Fiscalité",
+   "matiere_evolutive": true,
+   "domaines": [
+    "fiscalité",
+    "succession"
+   ],
+   "autorites": [
+    {
+     "cle": "bofip",
+     "nom": "BOFiP-Impôts",
+     "url": "https://bofip.impots.gouv.fr",
+     "type": "autorite_administrative"
+    },
+    {
+     "cle": "impots",
+     "nom": "impots.gouv.fr",
+     "url": "https://www.impots.gouv.fr",
+     "type": "autorite_administrative"
+    },
+    {
+     "cle": "cgi",
+     "nom": "Code général des impôts (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "service-public",
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr",
+     "type": "documentation_officielle"
+    }
+   ]
+  },
+  "fin-garantie": {
+   "nom": "Fin de garantie",
+   "matiere_evolutive": false,
+   "domaines": [
+    "assurance"
+   ],
+   "autorites": [
+    {
+     "cle": "code-assurances",
+     "nom": "Code des assurances (Légifrance)",
+     "url": "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "type": "autorite_juridique"
+    }
+   ]
+  },
+  "association": {
+   "nom": "Association / ANPERE",
+   "matiere_evolutive": false,
+   "domaines": [
+    "associatif"
+   ],
+   "autorites": [
+    {
+     "cle": "legifrance",
+     "nom": "Légifrance",
+     "url": "https://www.legifrance.gouv.fr",
+     "type": "autorite_juridique"
+    },
+    {
+     "cle": "service-public",
+     "nom": "Service-Public.fr",
+     "url": "https://www.service-public.fr",
+     "type": "documentation_officielle"
+    }
+   ]
+  }
+ }
+}

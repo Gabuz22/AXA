@@ -1,0 +1,185 @@
+{
+ "meta": {
+  "categorie": "formules",
+  "version": "1.2.0",
+  "total": 22
+ },
+ "elements": [
+  {
+   "id": "axa_avizen_2025-04_formule_01",
+   "contrat": "Avizen",
+   "titre": "Prestation invalidité (rente ou capital)",
+   "texte": "autre · prestation = montant_garanti_à_la_consolidation × n(taux_invalidité_fonctionnelle) / 100 · justification : Règle explicite aux §2.2.3 à 2.2.6 : « montant… multiplié par le taux d'indemnisation (n) ».",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 16
+  },
+  {
+   "id": "axa_avizen_2025-04_formule_02",
+   "contrat": "Avizen",
+   "titre": "Exonération ITT",
+   "texte": "cotisation · remboursement = (cotisation_annuelle / 365) × jours_d_arrêt_total_indemnisés · justification : Énoncé littéral au §2.2.7 (1/365e par jour indemnisé).",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 17
+  },
+  {
+   "id": "axa_avizen_2025-04_formule_03",
+   "contrat": "Avizen",
+   "titre": "Taux d'indemnisation zone linéaire 11-30 %",
+   "texte": "autre · pour 11 ≤ t ≤ 30 : n = 1,5 × (t − 10) ; au-delà de 30 la progression n'est plus linéaire (lecture du tableau obligatoire) ; t ≥ 66 : n = 100 · justification : Vérifiée sur les 20 premières valeurs du tableau (11→1,5 ; 20→15 ; 30→30). Au-delà de 30 % les valeurs (31→31,14…65→86,04) ne suivent pas de formule simple identifiable : utiliser le tableau.",
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 16
+  },
+  {
+   "id": "axa_avizen_pro_2025-04_formule_01",
+   "contrat": "Avizen Pro",
+   "titre": "Prestation invalidité (croisé)",
+   "texte": "autre · prestation = montant_certificat × taux_indemnisation(taux_croisé(prof, fonctionnel)) / 100 · justification : Mécanique explicite §2.2.5-2.2.6 avec les deux tableaux contractuels.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 19
+  },
+  {
+   "id": "axa_avizen_pro_2025-04_formule_02",
+   "contrat": "Avizen Pro",
+   "titre": "Prestation invalidité (option professionnelle)",
+   "texte": "autre · si 11/15/33 ≤ n < 66 : taux_indemnisation = n/66 ; si n ≥ 66 : 100 % ; prestation = montant_certificat × taux_indemnisation · justification : Formule et exemples chiffrés écrits en toutes lettres (50 % → 75,76 %).",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 20
+  },
+  {
+   "id": "axa_avizen_pro_2025-04_formule_03",
+   "contrat": "Avizen Pro",
+   "titre": "Exonération ITT",
+   "texte": "cotisation · remboursement = cotisation_annuelle/365 × jours_indemnisés · justification : Énoncé littéral §2.2.9.",
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 24
+  },
+  {
+   "id": "axa_entourage_2025-06_formule_01",
+   "contrat": "Entour'Age",
+   "titre": "Rente dépendance totale",
+   "texte": "autre · rente_mensuelle = montant_souscrit × taux_revalorisation(adhésion→reconnaissance) × coefficient_réduction_éventuel ; en dépendance partielle : × 0,5 · justification : Formule décrite explicitement comme « le produit des éléments suivants » au §4.3.1.1.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 21
+  },
+  {
+   "id": "axa_entourage_2025-06_formule_02",
+   "contrat": "Entour'Age",
+   "titre": "Capital décès remboursement des cotisations",
+   "texte": "autre · capital = Σ cotisations versées (nettes des frais de fractionnement) entre la date d'effet de la garantie et la date du décès · justification : Énoncé littéral §6.2.2.",
+   "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+   "page": 27
+  },
+  {
+   "id": "axa_essenciel_2025-06_formule_01",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Capital revalorisé",
+   "texte": "autre · capital(t) = capital_souscrit × 1,01^t (+ participation aux bénéfices éventuelle) · justification : Revalorisation contractuelle garantie de 1 %/an ; vérifiée sur l'exemple p.7 : 5 000 × 1,01^12 = 5 634 ? Non : l'exemple contractuel donne 5 804,92 € (+16 %), supérieur à 1,01^12 (+12,7 %) — l'exemple semble inclure d'autres revalorisations ou une base différente : voir zones_ambiguës. La formule en composé simple reste l'interprétation littérale du §5.2.1.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20
+  },
+  {
+   "id": "axa_essenciel_2025-06_formule_02",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Pénalité de rachat",
+   "texte": "valeur_de_rachat · pénalité(année n) = max(0 ; 5 % − 0,5 % × (n − 1)) × valeur_de_rachat, nulle à partir de la 11e année · justification : Texte explicite : 5 % la 1re année, -0,5 %/an, nulle au-delà de la 10e année.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 33
+  },
+  {
+   "id": "axa_essenciel_2025-06_formule_03",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Valeur de rachat",
+   "texte": "valeur_de_rachat · VR(t) = provision mathématique(t) − pénalité éventuelle ; PM = engagement futur de l'assureur − engagement futur de l'assuré (calcul actuariel non reproduit dans la notice ; seuls les tableaux d'exemples chiffrés sont contractuels) · justification : Définition donnée mais paramètres actuariels (tables, taux) non publiés : seuls les minima des tableaux sont garantis.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 35
+  },
+  {
+   "id": "axa_excelium_vie_2026-05_formule_01",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Valeur de rachat minimale support euros",
+   "texte": "valeur_de_rachat · VR(n) = versement_net_initial × (1 − 0,008)^n · justification : Formule écrite en toutes lettres p.47 et vérifiée sur le tableau (2 500 → 2 480 → … → 2 307).",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 46
+  },
+  {
+   "id": "axa_excelium_vie_2026-05_formule_02",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Nombre d'UC/parts après frais",
+   "texte": "valeur_de_rachat · N(n) = N0 × (1 − taux_mensuel)^(12n), avec taux_mensuel = 0,0669 % (Croissance), 0,0804 % (UC standard), 0,1014 % (UC pilotée), 0,1259 % (AXA Immo Avenir) · justification : Exemples de calcul explicites p.47 (99,200 = 100 × (1−0,0669 %)^12, etc.).",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 47
+  },
+  {
+   "id": "axa_excelium_vie_2026-05_formule_03",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Prime mensuelle garantie Revalorisée",
+   "texte": "cotisation · prime = capital_sous_risque_fin_de_mois × tarif_mensuel(âge) · justification : Formule contractuelle explicite (p.17 et p.48) + exemples chiffrés vérifiés (250 € × 0,0142 % = 0,0355 ≈ 0,04 €).",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 17
+  },
+  {
+   "id": "axa_excelium_vie_2026-05_formule_04",
+   "contrat": "Excelium (assurance vie)",
+   "titre": "Montant garanti Revalorisée",
+   "texte": "autre · MG = Σ versements_nets × Π(1 + taux_mensuel_LivretA) sur la période [mois suivant l'encaissement ; mois précédant le décès] − minorations proportionnelles aux rachats · justification : Description littérale §4.2.2 ; le mode exact de composition mensuelle du taux Livret A n'est pas formalisé en équation dans la notice.",
+   "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "page": 16
+  },
+  {
+   "id": "axa_ma_protection_accident_2024-03_formule_01",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Indice AQV",
+   "texte": "autre · AQV = arrondi_supérieur(DFP + PEP + SE) ; indemnité = tableau[AQV][tranche d'âge à la consolidation] · justification : Formule explicitement décrite p.7 (« par addition ») avec exemple chiffré p.9 vérifié contre le tableau.",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 8
+  },
+  {
+   "id": "axa_ma_protection_accident_2024-03_formule_02",
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "titre": "Renonciation vente à distance — cotisation due",
+   "texte": "cotisation · montant_dû = cotisation_annuelle × nombre_de_jours_garantis / 365 · justification : Règle de calcul écrite en toutes lettres p.19.",
+   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "page": 19
+  },
+  {
+   "id": "axa_ma_retraite_2026-05_formule_01",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Valeur de transfert en parts/UC",
+   "texte": "autre · N(1) = N0 × (1 − taux_mensuel)^12 × (1 − 1 % si transfert < 5 ans) ; taux_mensuel = 0,0669 % (Croissance), 0,0804 % (UC), 0,1259 % (AXA Immo Avenir) · justification : Exemples de calcul écrits en toutes lettres p.28-29 (98,208 = 100 × (1−0,0669 %)^12 × (1−1 %)).",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 28
+  },
+  {
+   "id": "axa_ma_retraite_2026-05_formule_02",
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "titre": "Rente initiale",
+   "texte": "autre · rente_annuelle = Σ_versements [épargne_relative_au_versement × coefficient(année_retraite, âge ; table en vigueur à la date du versement)] ; frais 1 % par arrérage déjà intégrés aux coefficients · justification : Mécanique Protection Retraite (5.1.3) + annexe 13 ; la composition exacte multi-versements/multi-tables est décrite textuellement (« la proportion de l'épargne constituée relative audit versement »).",
+   "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "page": 48
+  },
+  {
+   "id": "axa_masterlife_credit_2024-10_formule_01",
+   "contrat": "Masterlife CREDIT",
+   "titre": "IJ incapacité (plafond)",
+   "texte": "autre · IJ_max = échéance_du_prêt / N × quotité, avec N = 30 (mensuel), 90 (trimestriel), 180 (semestriel), 365 (annuel) ; prêt in fine : IJ = intérêts_annuels/365 · justification : Règles écrites en toutes lettres à l'article 4.1.a.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 12
+  },
+  {
+   "id": "axa_masterlife_credit_2024-10_formule_02",
+   "contrat": "Masterlife CREDIT",
+   "titre": "IJ invalidité partielle",
+   "texte": "autre · IJ = IJ_max × n_indemnisation(taux_croisé)/100, pour 33 ≤ taux < 66 ; 100 % si ≥ 66 ; 0 si < 33 · justification : Article 4.2.a + tableaux contractuels.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 15
+  },
+  {
+   "id": "axa_masterlife_credit_2024-10_formule_03",
+   "contrat": "Masterlife CREDIT",
+   "titre": "Exonération incapacité",
+   "texte": "cotisation · remboursement = cotisation_annuelle/365 × max(0, jours_incapacité − 90) · justification : « 1/365e par journée d'incapacité » avec « déduction d'une franchise de 90 jours » — l'application exacte de la franchise (en jours déduits) est l'interprétation la plus directe du texte.",
+   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "page": 16
+  }
+ ]
+}

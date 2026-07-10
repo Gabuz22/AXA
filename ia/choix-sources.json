@@ -1,0 +1,184 @@
+{
+ "meta": {
+  "version": "1.2.0",
+  "genere_le": "2026-07-10",
+  "usage": "Ordre de consultation des documents par concept + conditions d'arrêt et de non-conclusion."
+ },
+ "concepts": {
+  "invalidite": {
+   "nom": "Invalidité",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)",
+    "sources officielles : Code des assurances (Légifrance), Ameli (Assurance Maladie), Service-Public.fr, Légifrance"
+   ],
+   "matiere_evolutive": true,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "deces": {
+   "nom": "Décès",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)",
+    "sources officielles : Code des assurances (Légifrance), Code général des impôts (Légifrance), BOFiP-Impôts, Service-Public.fr"
+   ],
+   "matiere_evolutive": true,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "deces-accidentel": {
+   "nom": "Décès accidentel",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)",
+    "sources officielles : Code des assurances (Légifrance), Service-Public.fr"
+   ],
+   "matiere_evolutive": true,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "accident": {
+   "nom": "Accident",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)"
+   ],
+   "matiere_evolutive": false,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "hospitalisation": {
+   "nom": "Hospitalisation",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)",
+    "sources officielles : Ameli (Assurance Maladie), Code de la sécurité sociale (Légifrance), Service-Public.fr"
+   ],
+   "matiere_evolutive": true,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "incapacite-temporaire": {
+   "nom": "Incapacité temporaire",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)",
+    "sources officielles : Ameli (Assurance Maladie), Code de la sécurité sociale (Légifrance), Service-Public.fr"
+   ],
+   "matiere_evolutive": true,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "carence": {
+   "nom": "Carence / délai d'attente",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)"
+   ],
+   "matiere_evolutive": false,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "rachat": {
+   "nom": "Rachat",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)",
+    "sources officielles : Code général des impôts (Légifrance), BOFiP-Impôts, impots.gouv.fr, ACPR, Code des assurances (Légifrance)"
+   ],
+   "matiere_evolutive": true,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "souscription": {
+   "nom": "Souscription & adhésion",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)",
+    "sources officielles : Code des assurances (Légifrance), Service-Public.fr, ACPR"
+   ],
+   "matiere_evolutive": true,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "age": {
+   "nom": "Âge",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)",
+    "sources officielles : L'Assurance retraite (CNAV), Service-Public.fr, Code de la sécurité sociale (Légifrance)"
+   ],
+   "matiere_evolutive": true,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "suicide": {
+   "nom": "Suicide",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)"
+   ],
+   "matiere_evolutive": false,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "beneficiaire": {
+   "nom": "Bénéficiaire",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)",
+    "sources officielles : Code général des impôts (Légifrance), BOFiP-Impôts, Code des assurances (Légifrance), Service-Public.fr"
+   ],
+   "matiere_evolutive": true,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "fiscalite": {
+   "nom": "Fiscalité",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)",
+    "sources officielles : BOFiP-Impôts, impots.gouv.fr, Code général des impôts (Légifrance), Service-Public.fr"
+   ],
+   "matiere_evolutive": true,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "fin-garantie": {
+   "nom": "Fin de garantie",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)"
+   ],
+   "matiere_evolutive": false,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  },
+  "association": {
+   "nom": "Association / ANPERE",
+   "ordre": [
+    "fiche contrat (/ia/contrat/<slug>)",
+    "catégories (garanties, exclusions, définitions, conditions, déclencheurs)",
+    "notice PDF (fait foi)"
+   ],
+   "matiere_evolutive": false,
+   "arret": "S'arrêter dès que l'élément est trouvé ET sourcé (notice). Pour une matière évolutive, ajouter le renvoi aux sources officielles.",
+   "ne_pas_conclure_si": "élément absent de la base ET absent de la notice ; ou valeur chiffrée non extraite (à vérifier en notice) ; ou matière évolutive sans vérification de la source officielle."
+  }
+ }
+}

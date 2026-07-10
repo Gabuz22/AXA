@@ -1,0 +1,212 @@
+{
+ "meta": {
+  "version": "1.2.0",
+  "genere_le": "2026-07-10",
+  "regle": "Infrastructure prête. Aucune connaissance réglementaire n'est stockée ni mise à jour automatiquement. La chaîne exige une validation humaine avant publication."
+ },
+ "concepts": {
+  "invalidite": {
+   "nom": "Invalidité",
+   "domaines": [
+    "prévoyance",
+    "protection sociale"
+   ],
+   "chaine": {
+    "source_officielle": [
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "https://www.ameli.fr",
+     "https://www.service-public.fr",
+     "https://www.legifrance.gouv.fr"
+    ],
+    "regle_actuelle": null,
+    "date": null,
+    "historique": [],
+    "validation_humaine": "requise",
+    "publication": "manuelle uniquement"
+   },
+   "statut": "en attente de validation"
+  },
+  "deces": {
+   "nom": "Décès",
+   "domaines": [
+    "prévoyance",
+    "succession"
+   ],
+   "chaine": {
+    "source_officielle": [
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577",
+     "https://bofip.impots.gouv.fr",
+     "https://www.service-public.fr"
+    ],
+    "regle_actuelle": null,
+    "date": null,
+    "historique": [],
+    "validation_humaine": "requise",
+    "publication": "manuelle uniquement"
+   },
+   "statut": "en attente de validation"
+  },
+  "deces-accidentel": {
+   "nom": "Décès accidentel",
+   "domaines": [
+    "prévoyance"
+   ],
+   "chaine": {
+    "source_officielle": [
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "https://www.service-public.fr"
+    ],
+    "regle_actuelle": null,
+    "date": null,
+    "historique": [],
+    "validation_humaine": "requise",
+    "publication": "manuelle uniquement"
+   },
+   "statut": "en attente de validation"
+  },
+  "hospitalisation": {
+   "nom": "Hospitalisation",
+   "domaines": [
+    "santé",
+    "protection sociale"
+   ],
+   "chaine": {
+    "source_officielle": [
+     "https://www.ameli.fr",
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189",
+     "https://www.service-public.fr"
+    ],
+    "regle_actuelle": null,
+    "date": null,
+    "historique": [],
+    "validation_humaine": "requise",
+    "publication": "manuelle uniquement"
+   },
+   "statut": "en attente de validation"
+  },
+  "incapacite-temporaire": {
+   "nom": "Incapacité temporaire",
+   "domaines": [
+    "protection sociale"
+   ],
+   "chaine": {
+    "source_officielle": [
+     "https://www.ameli.fr",
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189",
+     "https://www.service-public.fr"
+    ],
+    "regle_actuelle": null,
+    "date": null,
+    "historique": [],
+    "validation_humaine": "requise",
+    "publication": "manuelle uniquement"
+   },
+   "statut": "en attente de validation"
+  },
+  "rachat": {
+   "nom": "Rachat",
+   "domaines": [
+    "fiscalité",
+    "assurance vie"
+   ],
+   "chaine": {
+    "source_officielle": [
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577",
+     "https://bofip.impots.gouv.fr",
+     "https://www.impots.gouv.fr",
+     "https://acpr.banque-france.fr",
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984"
+    ],
+    "regle_actuelle": null,
+    "date": null,
+    "historique": [],
+    "validation_humaine": "requise",
+    "publication": "manuelle uniquement"
+   },
+   "statut": "en attente de validation"
+  },
+  "souscription": {
+   "nom": "Souscription & adhésion",
+   "domaines": [
+    "assurance",
+    "protection sociale"
+   ],
+   "chaine": {
+    "source_officielle": [
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "https://www.service-public.fr",
+     "https://acpr.banque-france.fr"
+    ],
+    "regle_actuelle": null,
+    "date": null,
+    "historique": [],
+    "validation_humaine": "requise",
+    "publication": "manuelle uniquement"
+   },
+   "statut": "en attente de validation"
+  },
+  "age": {
+   "nom": "Âge",
+   "domaines": [
+    "retraite",
+    "protection sociale"
+   ],
+   "chaine": {
+    "source_officielle": [
+     "https://www.lassuranceretraite.fr",
+     "https://www.service-public.fr",
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073189"
+    ],
+    "regle_actuelle": null,
+    "date": null,
+    "historique": [],
+    "validation_humaine": "requise",
+    "publication": "manuelle uniquement"
+   },
+   "statut": "en attente de validation"
+  },
+  "beneficiaire": {
+   "nom": "Bénéficiaire",
+   "domaines": [
+    "succession",
+    "fiscalité"
+   ],
+   "chaine": {
+    "source_officielle": [
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577",
+     "https://bofip.impots.gouv.fr",
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006073984",
+     "https://www.service-public.fr"
+    ],
+    "regle_actuelle": null,
+    "date": null,
+    "historique": [],
+    "validation_humaine": "requise",
+    "publication": "manuelle uniquement"
+   },
+   "statut": "en attente de validation"
+  },
+  "fiscalite": {
+   "nom": "Fiscalité",
+   "domaines": [
+    "fiscalité",
+    "succession"
+   ],
+   "chaine": {
+    "source_officielle": [
+     "https://bofip.impots.gouv.fr",
+     "https://www.impots.gouv.fr",
+     "https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006069577",
+     "https://www.service-public.fr"
+    ],
+    "regle_actuelle": null,
+    "date": null,
+    "historique": [],
+    "validation_humaine": "requise",
+    "publication": "manuelle uniquement"
+   },
+   "statut": "en attente de validation"
+  }
+ }
+}
