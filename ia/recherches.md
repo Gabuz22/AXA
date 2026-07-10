@@ -1,0 +1,357 @@
+# Recherches suggérées (346)
+
+> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v1.2.0).
+> Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
+
+**Objectif.** Exemples de recherches courantes des conseillers (suggestions). Aide à formuler une requête.
+
+**Règles.** Pack A = preuve contractuelle. Pack B = raisonnement (jamais une preuve seule). Toujours citer la source (notice, page). Ne jamais inventer ; si une information est absente, le dire. La notice PDF fait foi.
+
+**Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
+
+- Arrêt de travail
+- Barème
+- Capital
+- Cotisation
+- Décès
+- Exclusion sport
+- Expatriation
+- Formalités médicales
+- Frais
+- Franchise
+- Invalidité
+- Mise en réduction
+- Obsèques
+- Part taxable
+- Plafond
+- Rachat partiel
+- Rapatriement
+- Rente
+- Valeur de mise en réduction
+- Valeur de rachat
+- Avizen
+- Avizen Pro
+- Entour'Age
+- Essen'Ciel (assurance obsèques)
+- Excelium (assurance vie)
+- Ma Protection Accident (Garantie des accidents de la vie)
+- Ma Retraite (plan d'épargne retraite individuel — PER)
+- Masterlife CREDIT
+- Capital décès remboursement des cotisations
+- Capital revalorisé
+- Exonération incapacité
+- Exonération ITT
+- Exonération ITT
+- IJ incapacité (plafond)
+- IJ invalidité partielle
+- Indice AQV
+- Montant garanti Revalorisée
+- Nombre d'UC/parts après frais
+- Pénalité de rachat
+- Prestation invalidité (croisé)
+- Prestation invalidité (option professionnelle)
+- Prestation invalidité (rente ou capital)
+- Prime mensuelle garantie Revalorisée
+- Renonciation vente à distance — cotisation due
+- Rente dépendance totale
+- Rente initiale
+- Taux d'indemnisation zone linéaire 11-30 %
+- Valeur de rachat
+- Valeur de rachat minimale support euros
+- Valeur de transfert en parts/UC
+- 1 an ; en cas de décès non accidentel pendant ce délai : remboursement à la succession des cotisations versées nettes de frais de fonctionnement et de gestion
+- 1 mois max après réception des pièces
+- 10 jours après remise des pièces (accord ADIS)
+- 15 jours après fin de franchise (sinon franchise prolongée) ; prolongations sous 15 jours
+- 15 jours après la fin de la franchise, sinon franchise prolongée jusqu'à réception ; prolongation d'arrêt : certificat sous 15 jours sinon jours intermédiaires…
+- 15 jours suivant l'acceptation de l'offre
+- 2 ans ; 10 ans (vie : bénéficiaire distinct / accidents : ayants droit) ; 30 ans max pour les actions du bénéficiaire après le décès
+- 2 ans ; 10 ans (vie : bénéficiaire distinct de l'adhérent ; accidents : ayants droit du décédé) ; actions du bénéficiaire prescrites au plus tard 30 ans après…
+- 2 ans (10 ans lorsque les bénéficiaires sont les ayants droit de l'assuré décédé)
+- 2 ans (régime L114-1 s., détails au §11.2)
+- 2 ans / 10 ans / 30 ans (L114-1 s.)
+- 2 ans / 10 ans / 30 ans (mêmes règles qu'Avizen, L114-1 s.)
+- 2 mois max (délais supérieurs à 3 semaines possibles sur supports non cotés/immobiliers)
+- 2 mois max après demande complète
+- 2 mois max après réception des pièces
+- 30 jours calendaires révolus ; remboursement intégral sous 30 jours
+- 30 jours calendaires révolus (conclusion = signature du Bulletin) ; LRAR à AXA France Épargne, Retraite et Prévoyance TSA 60907 92897 Nanterre Cedex 9 ; rembou…
+- 30 jours calendaires révolus à compter de l'information de la conclusion (signature du bulletin) ; remboursement intégral ; met fin à toutes les garanties
+- 30 jours pour contester par attestation médicale détaillée en RAR ; ensuite expertise amiable (expert judiciaire, frais partagés par moitié) obligatoire avant…
+- 365 jours (troubles névrotiques, psychotiques, anxieux, troubles de l'humeur, stress/adaptation, alimentation, dépression, surmenage, burn out)
+- 45 € par événement
+- 48 h (jours ouvrés) après réception de toutes les pièces justificatives
+- 5 jours ouvrés à compter de la survenance
+- 5 mois suivant l'information de la consolidation (ou du décès)
+- 90 jours : toute affection dont la 1re constatation médicale survient dans les 90 jours suivant la date d'effet est exclue, avec ses conséquences
+- 90 jours à compter de la date d'effet ; 365 jours pour les troubles psychiques (liste contractuelle) ; s'applique aussi aux suppléments en cas d'augmentation
+- à déclarer à ADIS sous 12 mois ; allongement ≤ 60 mois du prêt initial : pas de nouvelle sélection médicale
+- Accidents corporels d'activités courantes
+- Accidents corporels lors d'événements exceptionnels
+- Accidents de la circulation (VTM soumis à obligation d'assurance)
+- Accidents du travail et activités électives/syndicales
+- Accidents lors de la conduite d'un véhicule (dérogations)
+- Accidents médicaux et infections nosocomiales
+- Adhésion ANNULÉE (garanties réputées n'avoir jamais pris effet, cotisations intégralement remboursées, sauf fausse déclaration intentionnelle L113-8)
+- Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).
+- Affections même consécutives à un accident garanti
+- Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)
+- Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.
+- Agression professionnelle, hospitalisation/immobilisation, ITT, invalidité ≥ 33 %, atteinte corporelle grave, décès
+- Alcool, médicaments, stupéfiants
+- Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).
+- Assistance après accident et handicap : France métropolitaine uniquement (p.10).
+- Assistance après l'accident
+- Assistance après le décès (proches)
+- Assistance au moment du décès
+- Assistance aux handicapés
+- Assistance dès l'adhésion
+- Assistance en cas de décès
+- Assistance immédiate
+- au choix aux conditions particulières (15 ou 30 jours non proposés en dispense Lemoine) ; psy/asthénie/fibromyalgie : 90 jours ; disco-vertébrales : 30 jours ;…
+- Au plus tard 1 mois après réception de l'ensemble des pièces justificatives
+- Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.
+- Aucun montant garanti dans la notice — tout est au certificat d'adhésion.
+- Aucun si dépendance d'origine accidentelle (constatation postérieure à l'adhésion, 1re cotisation payée) ; 1 an dans les autres cas ; 3 ans si maladie neurolog…
+- Augmentation sans sélection médicale (mariage/naissance/adoption)
+- Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)
+- AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.
+- beneficiaires_1
+- Cadre fiscal Madelin
+- Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.
+- Capital décès
+- Capital décès double garantie
+- Capital décès par accident / Capital IPT par accident (garantie principale)
+- Capital décès par accident / IPT par accident
+- Capital décès remboursement des cotisations
+- Capital décès toutes causes / Capital IPT toutes causes (garantie principale)
+- Capital décès toutes causes / Capital IPT toutes causes + double effet
+- Capital invalidité par accident (optionnelle)
+- Capital invalidité permanente partielle ou totale (optionnelle)
+- Capital invalidité permanente partielle ou totale par accident (optionnelle)
+- Capital invalidité permanente partielle ou totale toutes causes (optionnelle)
+- Capital Premiers Frais
+- Capital revalorisé
+- Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.
+- Choix de la durée de cotisation
+- Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégré…
+- Compartiment 3 : sortie en rente UNIQUEMENT.
+- Conditions d'application des prestations en nature
+- conditions_de_rachat
+- conditions_souscription_1
+- conditions_souscription_2
+- conditions_souscription_3
+- conditions_souscription_4
+- Contact et conditions
+- Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, quelle que soit la formule (avertissement contractuel explici…
+- Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans).
+- Cures et esthétique
+- Décès
+- Décès — guerre/émeutes/crimes
+- Décès — suicide
+- Décès accidentel exclu
+- Décès exclus
+- Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes de frais.
+- Décès/IPT par accident
+- Décès/IPT par accident — exclusions spécifiques
+- Décès/IPT toutes causes
+- Décès/IPT toutes causes — guerre et meurtre du bénéficiaire
+- Décès/IPT toutes causes — suicide 1re année
+- Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).
+- défaut_de_paiement
+- Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotif…
+- definitions_1
+- definitions_10
+- definitions_2
+- definitions_3
+- definitions_4
+- definitions_5
+- definitions_6
+- definitions_7
+- definitions_8
+- definitions_9
+- Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.
+- Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).
+- Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).
+- Délit intentionnel ou crime
+- Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).
+- Dépendance suite à accidents — cas exclus
+- dépôt CDC 10 ans après connaissance du décès OU 120e anniversaire de l'assuré (si aucune opération depuis 2 ans et recherche infructueuse) ; acquisition par l'…
+- dès 5 ans avant l'échéance : droit d'interroger l'assureur sur les modalités de restitution et le rythme de réduction des risques
+- Dès la prise d'effet : informations juridiques professionnelles (Juridica) et prévention (TMS, burn-out, conflits)
+- determination_part_taxable
+- DFP ≥ 1 %
+- Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).
+- Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.
+- En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiaires (L132-18).
+- En cas de décès
+- En cas de décès avant liquidation totale
+- En cas de décès de l'assuré
+- En cas de vie — sortie en capital
+- En cas de vie — sortie en rente viagère
+- États antérieurs
+- Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.
+- Exclusions assistance
+- Exclusions communes — activités et sports à risque
+- Exclusions communes — activités/sports à risque
+- Exclusions de la garantie « Revalorisée »
+- Exclusions générales (dépendance et décès)
+- exemples_chiffrés
+- exonération
+- Exonération cotisations invalidité
+- Exonération cotisations ITT
+- Exonération des cotisations en cas d'invalidité
+- Exonération des cotisations en cas d'ITT
+- Exonération du paiement des cotisations
+- Exonération incapacité
+- Exonération ITT
+- Expérimentations biomédicales
+- Faits intentionnels, suicide
+- fiscalité
+- Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.
+- Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.
+- formalites_medicales_1
+- formalites_medicales_2
+- formalites_medicales_3
+- formalites_medicales_4
+- Formule Dépendance Totale et Partielle
+- frais
+- Frais de transfert 1 % uniquement les 5 premières années.
+- franchise 30 jours (ou franchise du certificat si supérieure)
+- franchise 30 jours ou celle du certificat si supérieure
+- Franchise absolue de 3 mois : rente due à compter du 91e jour suivant la reconnaissance de l'état de dépendance
+- Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).
+- franchise absolue du certificat avec un minimum de 90 jours ; indemnisation ITT plafonnée à 365 jours pour toute la durée de l'adhésion
+- franchise absolue min 90 jours ; plafond ITT 365 jours sur toute la durée de l'adhésion
+- Garantie « Revalorisée »
+- Garantie « Sérénité » (plancher décès, incluse)
+- Garantie « Sérénité » (plancher, incluse)
+- Garantie aide à la famille
+- Garantie décès (capital obsèques)
+- Garantie en cas de décès
+- Garantie en cas de vie (au terme)
+- Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.
+- Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.
+- Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).
+- Garanties de fidélité
+- Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).
+- GIR 5 et 6
+- Guerre, nucléaire
+- Hospitalisation imprévue > 24 h ou immobilisation à domicile > 5 jours
+- IJ incapacité (plafond)
+- IJ invalidité partielle
+- IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.
+- IJ ITT par accident (optionnelle)
+- IJ ITT toutes causes (optionnelle)
+- IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)
+- IJ versées après la franchise hospitalisation du certificat, jusqu'au 15e jour d'arrêt (moelle) ou 30e jour (organe)
+- Incapacité de travail (IJ)
+- Indemnisation des préjudices corporels (barème AQV)
+- Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).
+- Indemnités journalières ITT par accident (optionnelle)
+- Indemnités journalières ITT toutes causes (optionnelle)
+- Indemnités Remboursement des frais professionnels (optionnelle)
+- Indexation des garanties (option à l'adhésion)
+- Indexation des versements réguliers
+- Indexation PASS
+- Indice AQV
+- Indisponibilité de l'épargne
+- Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — véri…
+- Invalidité spécifique AERAS (GIS)
+- Invalidité totale ou partielle
+- ITT plafonnée à 365 jours de prestations toutes affections du rachis confondues, pour toute la durée de l'adhésion ; invalidité couverte uniquement si lésion c…
+- ITT plafonnée à 365 jours pour toute la durée de l'adhésion
+- ITT/Invalidité
+- ITT/Invalidité — exclusions spécifiques
+- La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jam…
+- La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance.
+- La mise en réduction met fin aux prestations d'assistance.
+- La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €……
+- La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).
+- Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).
+- Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).
+- Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).
+- Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (ar…
+- Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.
+- LR au plus tard 10 jours après la fin de la franchise (sinon franchise décomptée à réception) ; prolongations sous 10 jours ; DÉCHÉANCE possible (L113-2) si dé…
+- Maladies cause ou révélées par l'accident
+- Mes Sports à risque
+- mise_en_reduction
+- mode_calcul
+- Modification du capital garanti
+- Montant garanti Revalorisée
+- Nombre d'UC/parts après frais
+- Non-respect de réglementation (véhicules motorisés)
+- note
+- notification de la valeur sous 1 mois ; 15 jours de rétractation ; versement sous 15 jours après acceptation du gestionnaire d'accueil
+- Option pour la sortie en rente : expresse et IRRÉVOCABLE (interdit ensuite la sortie en capital).
+- Option Psy/Dos+
+- Option taux d'invalidité 15 % maladie
+- Option taux invalidité professionnelle (barème spécifique)
+- Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.
+- Pas de valeur de rachat ni de réduction.
+- Pénalité de rachat
+- plafond ITT 365 jours sur la durée de l'adhésion ; invalidité rachis seulement si lésion objectivée radiologiquement
+- Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec le capital obsèques.
+- Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie.
+- Plus de déductibilité fiscale des versements après 70 ans.
+- Préjudices indemnisés selon droit commun
+- Prestation invalidité (croisé)
+- Prestation invalidité (option professionnelle)
+- Prestation invalidité (rente ou capital)
+- Prime mensuelle garantie Revalorisée
+- Prorogation du fonds Croissance
+- PTIA
+- PTIA/incapacité/invalidité — exclusions
+- Rachats partiels programmés
+- Réduction adhésion simultanée (couple)
+- Réduction couple
+- réductions
+- régle_rachat_reduction
+- Renonciation vente à distance — cotisation due
+- Rente décès / Rente IPT
+- Rente décès / Rente IPT (garantie principale)
+- Rente dépendance totale
+- Rente éducation décès / IPT + double effet
+- Rente éducation décès / Rente éducation IPT (garantie principale)
+- Rente initiale
+- Rente invalidité fonctionnelle toutes causes (optionnelle)
+- Rente invalidité par accident (optionnelle)
+- Rente invalidité permanente partielle ou totale (optionnelle)
+- Rente invalidité permanente partielle ou totale par accident (optionnelle)
+- Rente viagère dépendance (garantie principale obligatoire)
+- résiliation définitive de la garantie 40 jours après l'envoi de la LR
+- resiliation_renonciation_1
+- resiliation_renonciation_2
+- resiliation_renonciation_3
+- resiliation_renonciation_4
+- resiliation_renonciation_5
+- Revalorisation du capital
+- Services d'assistance dédiés en perte d'autonomie
+- Services dès l'adhésion « ENTREAIDANTS »
+- Services pour l'aidant de l'assuré
+- Sports et activités exclus (sauf acceptation)
+- Sports professionnels, rémunérés, à risques, extrêmes
+- Subrogation de l'assureur contre le tiers responsable (6.7).
+- tableaux
+- tableaux_contractuels_1
+- tableaux_contractuels_2
+- tableaux_contractuels_3
+- tableaux_contractuels_4
+- tableaux_contractuels_5
+- tableaux_contractuels_6
+- tableaux_contractuels_7
+- Tarif capital restant dû
+- Tarif constant
+- Taux d'indemnisation zone linéaire 11-30 %
+- Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en…
+- Transfert individuel sortant
+- Types de gestion
+- UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).
+- Valeur de rachat
+- Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 € de VR pour 3 907 € versés à 10 ans).
+- Valeur de rachat minimale support euros
+- Valeur de transfert en parts/UC
+- valeurs_de_rachat
+- Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.
+- Versements pris en charge par la société

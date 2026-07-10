@@ -1,7 +1,7 @@
 {
   "produit": "Gabriel AXA",
-  "version": "1.0.0",
-  "nom": "v1.0 distribuable : vue IA (/ia), onboarding (Premiers pas & FAQ), « Utiliser avec une IA », « Pourquoi faire confiance », fiche métier, design pro, badges bêta",
+  "version": "1.2.0",
+  "nom": "Vue IA exhaustive : projection statique complète des JSON (contrats, catégories, thèmes, glossaire, notices, sources, index, guide, manifeste) — .html + .md sans JavaScript, IDs stables, couverture 100 %",
   "date": "2026-07-09",
-  "note": "Application métier autonome. Documents de sources publiques, aucune donnée client. Données dérivées, masters jamais modifiés. La notice PDF fait toujours foi."
+  "note": "La Vue IA est une PROJECTION des JSON (source de vérité), générée par scripts/build_ia.py. Aucun master modifié, aucune duplication manuelle. La notice PDF fait toujours foi."
 }

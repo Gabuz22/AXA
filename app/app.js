@@ -16,7 +16,7 @@ const NAV = [
   ]},
   { group: "Ressources", items: [
     { id: "assistants", label: "Utiliser avec une IA", icon: "🤝" },
-    { id: "ia", label: "Vue IA (pour les modèles)", icon: "🤖", module: "ia" },
+    { id: "ia", label: "Vue IA (pour les modèles)", icon: "🤖", href: "../ia/index.html", external: true },
     { id: "confiance", label: "Pourquoi faire confiance", icon: "🔒" },
     { id: "sources", label: "Sources officielles", icon: "📚" },
   ]},
@@ -55,7 +55,9 @@ const DEFAULT_HELP = { what: "Gabriel AXA : la base de connaissances contractuel
 function renderNav() {
   const cur = currentId();
   return NAV.map(g => `<div class="nv-g"><div class="nv-gh">${g.group}</div>` +
-    g.items.map(it => `<a class="nv-i ${it.id === cur ? "on" : ""}" href="#/${it.id}"><span>${it.icon}</span> ${it.label}${it.beta ? ` <span class="nv-beta">bêta</span>` : ""}</a>`).join("") +
+    g.items.map(it => it.external
+      ? `<a class="nv-i" href="${it.href}" target="_blank" rel="noopener"><span>${it.icon}</span> ${it.label} <span class="nv-ext">↗</span></a>`
+      : `<a class="nv-i ${it.id === cur ? "on" : ""}" href="#/${it.id}"><span>${it.icon}</span> ${it.label}${it.beta ? ` <span class="nv-beta">bêta</span>` : ""}</a>`).join("") +
     `</div>`).join("");
 }
 function parseHash() {
@@ -68,10 +70,9 @@ async function route() {
   const { id, path } = parseHash(); const item = INDEX[id];
   document.querySelectorAll(".nv-i").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#/" + id));
   const view = document.getElementById("view");
-  // La vue IA (/ia) porte son propre en-tête sémantique (h1) → pas de chrome d'en-tête d'app.
-  view.innerHTML = item.module === "ia" ? `<div id="sectionwrap"></div>` : `<div class="view-head"><h1>${item.icon} ${item.label}</h1></div><div id="sectionwrap"></div>`;
+  view.innerHTML = `<div class="view-head"><h1>${item.icon} ${item.label}</h1></div><div id="sectionwrap"></div>`;
   try {
-    const m = await import(`./modules/${item.module || "axa"}.js`);
+    const m = await import("./modules/axa.js");
     await m.mount(document.getElementById("sectionwrap"), { section: id, path });
     document.title = `${item.label} — Gabriel AXA`;
     view.scrollTo && view.scrollTo(0, 0);

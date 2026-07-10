@@ -325,6 +325,7 @@ li.diff{color:var(--gold)}
 
 /* Badge « bêta » dans la navigation (fonctionnalités en cours) */
 .nv-beta{font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.05em;color:var(--warn);border:1px solid color-mix(in srgb,var(--warn) 45%,transparent);border-radius:4px;padding:0 4px;margin-left:auto;flex:none}
+.nv-ext{margin-left:auto;color:var(--muted);font-size:11px;flex:none}
 
 /* ============================================================================
    Vue IA (/ia) — pages destinées aux modèles : HTML sémantique, style minimal.

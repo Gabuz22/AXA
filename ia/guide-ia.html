@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Guide IA — Gabriel AXA (Vue IA)</title><meta name="description" content="Vue IA de Gabriel AXA — projection statique, sourcée, lisible sans JavaScript."><link rel="canonical" href="https://gabuz22.github.io/AXA/ia/guide-ia.html"><link rel="stylesheet" href="ia.css"></head>
+<body>
+<nav class="ianav"><a href="index.html">Index</a> · <a href="guide-ia.html">Guide IA</a> · <a href="contrats.html">Contrats</a> · <a href="garanties.html">Garanties</a> · <a href="exclusions.html">Exclusions</a> · <a href="definitions.html">Définitions</a> · <a href="conditions.html">Conditions</a> · <a href="declencheurs.html">Déclencheurs</a> · <a href="plafonds.html">Plafonds</a> · <a href="franchises.html">Franchises</a> · <a href="glossaire.html">Glossaire</a> · <a href="themes.html">Thèmes</a> · <a href="notices.html">Notices</a> · <a href="sources.html">Sources</a> · <a href="pack-a.html">Pack A</a> · <a href="pack-b.html">Pack B</a> · <a href="couverture.html">Couverture</a></nav>
+<main>
+<h1>Guide IA — comment utiliser Gabriel AXA</h1>
+
+<blockquote>Page destinée à une IA ou un agent. Explique comment travailler à partir de la Vue IA seule.</blockquote>
+
+<h2>Comment utiliser Gabriel AXA</h2>
+<p>La Vue IA est la <strong>projection complète et sourcée</strong> de la base contractuelle AXA. Tu peux travailler</p>
+<p><strong>uniquement</strong> depuis ces pages (HTML/Markdown) sans les JSON. Chaque affirmation contractuelle porte</p>
+<p>sa source (notice + page).</p>
+
+<h2>Comment répondre</h2>
+<ul>
+<li>Réponds <strong>uniquement</strong> à partir des contenus présents, <strong>avec leur source</strong> (notice, page).</li>
+<li><strong>Pack A = preuve</strong> ; <strong>Pack B = raisonnement</strong> (jamais cité seul comme preuve).</li>
+<li>Sépare clairement ce qui est <strong>contractuel</strong> (Pack A / notice) de ce qui est <strong>raisonnement</strong> (Pack B).</li>
+<li>Termine en renvoyant à la <strong>notice PDF</strong>, qui fait foi.</li>
+</ul>
+
+<h2>Comment rechercher</h2>
+<p>1. Par contrat : <code>/ia/contrats.html</code> → <code>/ia/contrat/&lt;slug&gt;.html</code>.</p>
+<p>2. Par catégorie : <code>/ia/garanties.html</code>, <code>/ia/exclusions.html</code>, <code>/ia/definitions.html</code>, <code>/ia/conditions.html</code>,</p>
+<p>   <code>/ia/declencheurs.html</code>, <code>/ia/plafonds.html</code>, <code>/ia/franchises.html</code>.</p>
+<p>3. Par thème : <code>/ia/themes.html</code> (invalidité, décès, hospitalisation, rachat, souscription, fiscalité, association, ANPERE).</p>
+<p>4. Glossaire : <code>/ia/glossaire.html</code>. Sources : <code>/ia/sources.html</code>. Notices : <code>/ia/notices.html</code>.</p>
+
+<h2>Quand citer</h2>
+<p><strong>Toujours</strong>, dès qu&#x27;une information est contractuelle. Format : <code>[Notice : &lt;fichier&gt;, p.&lt;page&gt;]</code> (lien vers le PDF).</p>
+<p>Chaque élément possède aussi un <strong>identifiant stable</strong> (<code>#&lt;id&gt;</code>) réutilisable pour référencer précisément.</p>
+
+<h2>Comment arbitrer entre plusieurs contrats</h2>
+<p>Compare via les pages catégorie ou thème (qui agrègent tous les contrats). Ne mélange jamais les garanties</p>
+<p>d&#x27;un contrat avec un autre : chaque élément indique son contrat. En cas de doute, ouvre les deux fiches contrat.</p>
+
+<h2>Comment gérer une absence d&#x27;information</h2>
+<p>Si l&#x27;information n&#x27;apparaît pas dans la Vue IA : dis-le explicitement (« non présent dans la base Gabriel AXA »),</p>
+<p>propose la notice PDF du contrat, <strong>n&#x27;invente pas</strong>.</p>
+
+<h2>Comment utiliser les liens</h2>
+<ul>
+<li>Contrat → ses garanties/définitions (mêmes pages, ancres <code>#id</code>) → <strong>notice</strong> → <strong>page PDF</strong> exacte (<code>#page=</code>).</li>
+<li>Catégorie/Thème → lien vers le contrat concerné → retour thème.</li>
+</ul>
+<p>Suis la hiérarchie : <strong>Index → Contrat/Catégorie/Thème → Élément → Notice → Page PDF</strong>.</p>
+
+<h2>Hiérarchie d&#x27;autorité</h2>
+<p>1. <strong>Notice PDF</strong> (fait foi). 2. <strong>Pack A</strong> (donnée contractuelle dérivée, à citer). 3. <strong>Glossaire</strong> (définitions sourcées).</p>
+<p>4. <strong>Pack B</strong> (raisonnement ; jamais une preuve seule).</p>
+
+<h2>Exemple de BONNE réponse</h2>
+<p>« Pour MasterLife, le décès accidentel double le capital (Notice MasterLife, p.6). À confirmer sur la notice. »</p>
+
+<h2>Exemple de MAUVAISE réponse</h2>
+<p>« Oui, remboursé à 100 %. » — aucune source, non vérifiable, invention possible.</p>
+
+</main>
+<footer><p>Gabriel AXA — Vue IA v1.2.0 (2026-07-10). Projection des JSON (source de vérité) ; masters non modifiés ; données de sources publiques. La notice PDF fait foi. <a href="../">← Application</a></p></footer>
+</body></html>

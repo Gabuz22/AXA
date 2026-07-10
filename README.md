@@ -26,19 +26,28 @@ N'importe quel serveur statique fait l'affaire (l'app est en modules ES natifs).
 - **Comparateur**, **glossaire**, **notices PDF**, **outils conseiller** (analyse des besoins, préparation RDV, animateur).
 - **Utiliser avec une IA** : mode d'emploi Pack A / Pack B pour ChatGPT ou Claude.
 
+## Vue IA (`/ia`) — couche pour les modèles
+
+Un espace **statique** destiné aux IA et agents : pages `.html` **et** `.md` lisibles **sans JavaScript**,
+à URLs directes stables, entièrement sourcées. Une IA peut recevoir la seule URL `…/ia/` et comprendre
+comment exploiter Gabriel AXA sans qu'on lui fournisse les JSON.
+
+- Point d'entrée : [`/ia/`](ia/index.html) · Mode d'emploi IA : [`/ia/mode-emploi-ia.html`](ia/mode-emploi-ia.html)
+- Pack A : `/ia/pack-a.html` · `/ia/pack-a.md` — Pack B : `/ia/pack-b.html` · `/ia/pack-b.md`
+- Glossaire, Contrats, Index transverse, une page par contrat (`/ia/contrats/<slug>.html|.md`)
+- Machine : `/ia/ai-manifest.json`, `/ia/sitemap-ia.xml`, `/ia/robots.txt`, `/ia/contrats.json`, `/ia/glossaire.json`
+
+Régénérer après mise à jour des données : `python scripts/build_ia.py` (dérivé, ne touche pas aux masters).
+
 ## Structure
 
 ```
 /                     index.html (redirige vers app/)
-app/                  l'application
-  index.html          entrée
-  app.js              shell : navigation conseiller + routeur + aide + thème
-  assets/app.css      design system (sobriété pro)
-  modules/            axa.js (sections), axa_content.js
-  services/           axaKnowledge.js (recherche BM25 sourcée), markdown.js, humanView.js
-  state/store.js      préférences (thème)
-  vendor/             marked, DOMPurify (rendu Markdown sûr, hors ligne)
+app/                  l'application (SPA conseiller)
+  index.html · app.js · assets/app.css · modules/ · services/ · state/ · vendor/
+ia/                   COUCHE IA STATIQUE générée (html + md + json + manifest + sitemap)
 data/AXA/             masters Pack A/B, vues humaines, index PDF, contrats, dérivés, notices
+scripts/build_ia.py   générateur de la couche IA
 ```
 
 ## Doctrine

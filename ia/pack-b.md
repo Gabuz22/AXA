@@ -1,0 +1,5542 @@
+# Pack B — restitution exhaustive
+
+> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v1.2.0).
+> Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
+
+**Objectif.** Pack A + couches de raisonnement (Pack B). JSON brut fait foi pour l'intégralité.
+
+**Règles.** Pack A = preuve contractuelle. Pack B = raisonnement (jamais une preuve seule). Toujours citer la source (notice, page). Ne jamais inventer ; si une information est absente, le dire. La notice PDF fait foi.
+
+**Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
+
+> Pack B = Pack A + raisonnement. JSON brut : [Pack B](../data/AXA/AXA_MASTER_DONNEES_PACK_B_MATRICES_EXPERIMENTAL.json).
+
+## 1. Pack A
+
+## Avizen
+
+
+Contrat de prévoyance individuelle (via association ANPERE) garantissant, selon les garanties souscrites : capital ou rente en cas de décès ou d'invalidité permanente totale (toutes causes ou par accident), rente éducation, indemnités journalières en cas d'incapacité temporaire totale de travail, rente ou capital en cas d'invalidité permanente partielle ou totale, exonérations de cotisations, garantie aide à la famille (AJPP), et services d'assistance. Les montants garantis, franchises et durées d'indemnisation sont fixés au certificat d'adhésion.
+
+
+### Garanties (8)
+
+- **Rente invalidité permanente partielle ou totale par accident (optionnelle)** — Comme la rente toutes causes mais limitée à l'accident, seuil unique taux ≥ 11 %. Non cumulable avec la rente toutes causes. [Notice : 2025-04 Notice d'information Avizen.pdf, p.16, 2.2.5](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=16) `#axa_axa_axa_avizen_2025_04_garanties_1aaadbb8226d_knowledge_89bf645880bb`
+  - Condition : taux d'invalidité fonctionnelle ≥ 11 %
+- **Capital invalidité permanente partielle ou totale toutes causes (optionnelle)** — Capital = montant garanti à la consolidation × taux d'indemnisation (n). Taux définitivement fixé à la consolidation, sans révision. Le versement met fin à la garantie quel que soit le taux retenu. Non cumulable avec le capital par accident. [Notice : 2025-04 Notice d'information Avizen.pdf, p.16, 2.2.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=16) `#axa_axa_axa_avizen_2025_04_garanties_1f8e343ca6c1_knowledge_5a79ea84fd80`
+  - Condition : mêmes conditions que la rente toutes causes (taux ≥ 11 % accident / 33 % maladie)
+- **Indemnités journalières ITT par accident (optionnelle)** — Mêmes modalités que les IJ toutes causes mais limitées aux arrêts par accident ; cessation au plus tard au 1 095e jour d'arrêt (franchise incluse). Non cumulable avec les IJ toutes causes. [Notice : 2025-04 Notice d'information Avizen.pdf, p.14, 2.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=14) `#axa_axa_axa_avizen_2025_04_garanties_298583bbdc55_knowledge_6df41afcc8cc`
+  - Condition : activité professionnelle à la survenance
+  - Limite : 1 095 jours
+- **Capital invalidité permanente partielle ou totale par accident (optionnelle)** — Comme le capital toutes causes mais limité à l'accident, seuil taux ≥ 11 % ; taux fixé définitivement à la consolidation. [Notice : 2025-04 Notice d'information Avizen.pdf, p.17, 2.2.6](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=17) `#axa_axa_axa_avizen_2025_04_garanties_2bf2b4989e80_knowledge_8e3e075241c0`
+  - Condition : taux ≥ 11 %
+- **Indemnités journalières ITT toutes causes (optionnelle)** — IJ versées par jour d'arrêt de travail médicalement constaté, à terme échu par quinzaine, après franchise du certificat d'adhésion. Cessent à la reprise totale d'activité, à la consolidation d'une invalidité, au 365e ou 1095e jour d'arrêt (franchise incluse, selon durée d'indemnisation au certificat), à la fin de l'année d'assurance des 67 ans ou à la liquidation retraite. Reprise partielle possible = réduction de 50 % des prestations. Rechute ≤ 90 jours (mêmes causes) : reprise sans nouvelle franchise (sauf affections de la colonne vertébrale, toujours… [Notice : 2025-04 Notice d'information Avizen.pdf, p.13, 2.2.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=13) `#axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1`
+  - Condition : arrêt avant la retraite et avant fin de l'année d'assurance des 67 ans
+  - Condition : exercer une activité professionnelle à la survenance (exclu si chômage, retraite, cessation d'activité)
+  - Limite : 365 ou 1095 jours selon certificat
+- **Rente éducation décès / Rente éducation IPT (garantie principale)** — Versée aux enfants bénéficiaires fiscalement à charge (y compris nés moins de 300 jours après le décès) jusqu'au 26e anniversaire ; viagère au-delà si l'enfant perçoit une allocation handicapés (loi 30/06/1975) attribuée avant ses 21 ans et garantie souscrite avant ses 16 ans. Montant par paliers : 100 % du montant souscrit de 0-11 ans, 125 % de 12-17 ans, 150 % de 18-26 ans. Double effet : rente doublée en cas de décès simultané ou postérieur du conjoint/partenaire/concubin avec enfant à charge. En IPT : versée à l'assuré dans les mêmes conditions. [Notice : 2025-04 Notice d'information Avizen.pdf, p.12, 2.1.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=12) `#axa_axa_axa_avizen_2025_04_garanties_338c6fd6176a_knowledge_8938e101c7dc`
+  - Condition : décès avant fin de l'année d'assurance des 85 ans
+  - Condition : enfant fiscalement à charge à la date du décès
+  - Limite : paliers 100/125/150 % du montant souscrit
+- **Rente invalidité fonctionnelle toutes causes (optionnelle)** — Rente si invalidité permanente partielle ou totale (maladie ou accident) appréciée par le taux d'invalidité fonctionnelle. Montant = montant garanti à la consolidation × taux d'indemnisation (n) du tableau contractuel. Versée par trimestre civil à terme échu, tant que le taux ≥ 11 % (accident) ou ≥ 33 % (maladie). Taux révisable à la hausse comme à la baisse pendant la garantie. [Notice : 2025-04 Notice d'information Avizen.pdf, p.15, 2.2.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=15) `#axa_axa_axa_avizen_2025_04_garanties_4273eec96de1_knowledge_d37557b53e34`
+  - Condition : consolidation pendant la garantie (avant retraite et fin d'année d'assurance des 67 ans)
+  - Condition : activité professionnelle au fait générateur
+  - Condition : taux d'invalidité fonctionnelle ≥ 11 % (accident) ou ≥ 33 % (maladie)
+  - Limite : taux d'indemnisation max 100 % (taux ≥ 66 %)
+- **Garantie aide à la famille** — IJ en cas de cessation totale ou partielle d'activité pour accompagner un enfant gravement malade, handicapé ou victime d'un accident grave. Versées dès le 1er jour d'attribution de l'AJPP, à terme échu par quinzaine. Limite : 14 mois par enfant à charge et par pathologie, renouvelable une fois. Cesse si fin d'AJPP, reprise totale d'activité, 67 ans, liquidation retraite, ou versement de prestations ITT/invalidité. [Notice : 2025-04 Notice d'information Avizen.pdf, p.18, 2.3 Garantie aide à la famille](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=18) `#axa_axa_axa_avizen_2025_04_garanties_4e17c4643abb_knowledge_de5880e82d5e`
+  - Condition : avoir souscrit une garantie IJ ITT ET une garantie rente éducation
+  - Condition : enfant à charge < 20 ans nécessitant la présence de l'assuré
+  - Condition : percevoir l'AJPP (art. L544-1 CSS)
+  - Condition : suspension temporaire d'activité
+  - Limite : 14 mois par enfant et par pathologie, renouvelable une fois
+
+
+### Exclusions (5)
+
+- **ITT/Invalidité — exclusions spécifiques** — Tentatives de suicide, mutilations, blessures, lésions ou maladies d'un fait volontaire de l'assuré ; guerres et participation active à émeutes/terrorisme/crimes/rixes (sauf légitime défense/devoir professionnel) ; accident, maladie ou malformation congénitale dont la première constatation médicale est antérieure à la prise d'effet (sauf antériorités déclarées non exclues) ; drogues/stupéfiants hors prescription ; alcoolisme chronique ; alcoolémie ≥ taux légal ; cures thermales, marines, de rajeunissement, d'amaigrissement, de désintoxication et séjours… [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.1.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27) `#axa_axa_axa_avizen_2025_04_exclusions_2bc5e30f05f7_knowledge_31ea614f0cd8`
+  - Condition : garanties ITT et invalidité permanente (toutes causes et par accident)
+- **Décès/IPT toutes causes — guerre et meurtre du bénéficiaire** — Faits de guerre civile, étrangère, insurrection, opérations de maintien de l'ordre/paix (ONU ou similaire) ; exclusion du bénéfice pour toute personne ayant causé volontairement le décès ou l'IPT de l'assuré. [Notice : 2025-04 Notice d'information Avizen.pdf, p.26, 4.1.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=26) `#axa_axa_axa_avizen_2025_04_exclusions_2e814add9402_knowledge_a66ece2859b1`
+  - Condition : garanties décès/IPT toutes causes
+- **Décès/IPT toutes causes — suicide 1re année** — Suicide et tentative de suicide si le décès/IPT survient au cours de la 1re année d'assurance ; en cas d'augmentation de garanties, exclusion du supplément pendant 1 an après la prise d'effet de l'augmentation. [Notice : 2025-04 Notice d'information Avizen.pdf, p.26, 4.1.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=26) `#axa_axa_axa_avizen_2025_04_exclusions_88792af8010e_knowledge_7a2869e7f5a6`
+  - Condition : garanties décès/IPT toutes causes
+- **Exclusions communes — activités et sports à risque** — Sauf acceptation de l'assureur au certificat : essais/tentatives de records, sports de haut niveau, sports professionnels ; sports et loisirs à risque y compris pratique occasionnelle : sports extrêmes (base jump, wingsuit, speed riding, saut à l'élastique, parkour, luge de rue, caisse à savon, mountainboard, highline, zorbing, freeride, sports non fédérés en France), raids/expéditions, activités aériennes (hors passager/PNC de lignes régulières), sports mécaniques, randonnée/trekking > 3 500 m, alpinisme, escalade, varappe, spéléologie, sports d'hiver… [Notice : 2025-04 Notice d'information Avizen.pdf, p.25, 4.1.1 Exclusions communes](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=25) `#axa_axa_axa_avizen_2025_04_exclusions_88f149ec8926_knowledge_9ff89417a1a5`
+  - Condition : toutes les garanties du chapitre 2, monde entier
+  - Limite : initiations type « baptêmes » encadrées par un professionnel diplômé d'État couvertes, SAUF sports extrêmes
+  - Limite : acceptation expresse de l'assureur au certificat d'adhésion
+- **Décès/IPT par accident — exclusions spécifiques** — Guerres, insurrection, maintien de l'ordre/paix ; participation active à émeutes, terrorisme, sabotage, crimes ou délits intentionnels, rixes (sauf légitime défense ou devoir professionnel) ; accident antérieur à la prise d'effet (sauf antériorités déclarées non exclues) ; usage de drogues/stupéfiants/médicaments hors prescription ; alcoolémie ≥ taux légal de circulation du pays de survenance ; chirurgie plastique non consécutive à un accident garanti et malformations congénitales ; refus volontaire de traitements ; désintégration du noyau atomique ; at… [Notice : 2025-04 Notice d'information Avizen.pdf, p.26, 4.1.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=26) `#axa_axa_axa_avizen_2025_04_exclusions_896982b4e3b0_knowledge_584c5c70a769`
+  - Condition : garanties décès/IPT par accident
+  - Limite : légitime défense, accomplissement du devoir professionnel (rixes)
+
+
+### Options (5)
+
+- **Exonération des cotisations en cas d'ITT** — Pendant le versement des IJ, remboursement des cotisations de l'ensemble des garanties en cours à raison de 1/365e de la cotisation annuelle par jour d'arrêt total indemnisé. Garanties maintenues mais aucune augmentation possible pendant l'exonération. [Notice : 2025-04 Notice d'information Avizen.pdf, p.17, 2.2.7](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=17) `#axa_axa_axa_avizen_2025_04_options_6a1ed3c8d2d1_knowledge_bf648561fef8`
+  - Condition : souscription obligatoire avec une garantie ITT
+  - Condition : mêmes limitations/exclusions que l'ITT
+- **Indexation des garanties (option à l'adhésion)** — Réévaluation annuelle des garanties selon l'évolution du PASS, sans examen médical ; cotisation évolue du même pourcentage. Cesse au plus tard à la date anniversaire de l'année des 70 ans ou au décès. Refus définitif possible par lettre au moins 1 mois avant la date anniversaire. [Notice : 2025-04 Notice d'information Avizen.pdf, p.8, 1.2.3 a) Indexation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=8) `#axa_axa_axa_avizen_2025_04_options_8f4ee5536c39_knowledge_566df5b56ec5`
+  - Condition : avoir opté pour l'indexation
+- **Exonération des cotisations en cas d'invalidité** — Si invalidité permanente ≥ 66 % (maladie ou accident) déclenchant une indemnisation invalidité : cotisations prises en charge jusqu'au terme de la garantie, tant que l'invalidité reste ≥ 66 %. [Notice : 2025-04 Notice d'information Avizen.pdf, p.18, 2.2.8](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=18) `#axa_axa_axa_avizen_2025_04_options_9548821c6b3a_knowledge_3c980033add3`
+  - Condition : souscription obligatoire avec une garantie rente invalidité (toutes causes ou par accident)
+- **Capital décès double garantie** — Si l'assuré en IPT décède au moins 1 an après la consolidation, capital supplémentaire (égal au capital IPT déjà versé) aux bénéficiaires, si décès avant fin de l'année d'assurance des 85 ans. [Notice : 2025-04 Notice d'information Avizen.pdf, p.11, 2.1.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=11) `#axa_axa_axa_avizen_2025_04_options_9f4385ee345a_knowledge_219241330066`
+  - Condition : souscription obligatoire avec la garantie Capital décès/IPT toutes causes
+- **Augmentation sans sélection médicale (mariage/naissance/adoption)** — Augmentation du capital décès/IPT sans sélection médicale, dans la limite de 20 % du montant, en cas de mariage ou PACS, naissance ou adoption, demandée dans les 3 mois suivant l'événement. [Notice : 2025-04 Notice d'information Avizen.pdf, p.9, 1.2.3 b)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9) `#axa_axa_axa_avizen_2025_04_options_e060ef8374fa_knowledge_97cb97064d66`
+  - Condition : délai maximal de 3 mois suivant l'événement
+
+
+### Cotisations & prix (6)
+
+- **tableaux** — tableaux. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_cotisations_et_prix_2ca4d97bb9ae_knowledge_6ed9ced498a7`
+- **frais** — frais. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767`
+- **exemples_chiffrés** — exemples_chiffrés. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_cotisations_et_prix_7f531ad19cd0_knowledge_0d72b99a5472`
+- **mode_calcul** — Cotisation annuelle calculée selon : âge de l'assuré (millésime année d'adhésion - millésime année de naissance, recalculé à chaque date anniversaire), groupe tarifaire selon la profession, qualité fumeur/non-fumeur ; dépend aussi des conditions d'acceptation médicale, des conditions d'exercice de la profession, des activités/sports/loisirs et des taxes réglementaires. Payables d'avance dans les 10 jours suivant l'échéance (périodicité mensuelle, trimestrielle, semestrielle ou annuelle au certificat). Le paiement s'arrête au décès ou à la reconnaissance… [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_cotisations_et_prix_abc3375d4853_knowledge_811b06665e8e`
+- **défaut_de_paiement** — à l'expiration d'un délai de 40 jours suivant la lettre recommandée, l'adhésion sera résiliée [Notice : 2025-04 Notice d'information Avizen.pdf, p.8, 1.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=8) `#axa_axa_axa_avizen_2025_04_cotisations_et_prix_b516c9e6cfb0_knowledge_09a0e053a243`
+- **réductions** — Abattement non-fumeur · Abattement tarifaire sur les garanties capital décès/IPT toutes causes, rente éducation décès/IPT et rente décès/IPT lorsque l'assuré est non-fumeur (définition : 24 mois sans fumer ni sevrage). [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db`
+
+
+### Délais & franchises (8)
+
+- **2 ans ; 10 ans (vie : bénéficiaire distinct de l'adhérent ; accidents : ayants droit du décédé) ; actions du bénéficiaire prescrites au plus tard 30 ans après…** — 2 ans ; 10 ans (vie : bénéficiaire distinct de l'adhérent ; accidents : ayants droit du décédé) ; actions du bénéficiaire prescrites au plus tard 30 ans après le décès [Notice : 2025-04 Notice d'information Avizen.pdf, p.29, 4.6 Prescription](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=29) `#axa_axa_axa_avizen_2025_04_delais_carences_franchises_064d54938164_knowledge_e46b76d2bea0`
+- **ITT plafonnée à 365 jours pour toute la durée de l'adhésion** — ITT plafonnée à 365 jours pour toute la durée de l'adhésion [Notice : 2025-04 Notice d'information Avizen.pdf, p.28, 4.1.5 Fibromyalgie](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=28) `#axa_axa_axa_avizen_2025_04_delais_carences_franchises_0ecfc14749f3_knowledge_02dcffe3db8b`
+- **90 jours : toute affection dont la 1re constatation médicale survient dans les 90 jours suivant la date d'effet est exclue, avec ses conséquences** — 90 jours : toute affection dont la 1re constatation médicale survient dans les 90 jours suivant la date d'effet est exclue, avec ses conséquences [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.1.5 Limitation de garanties](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27) `#axa_axa_axa_avizen_2025_04_delais_carences_franchises_1eb7c3b6656b_knowledge_d1cae11fe382`
+- **365 jours (troubles névrotiques, psychotiques, anxieux, troubles de l'humeur, stress/adaptation, alimentation, dépression, surmenage, burn out)** — 365 jours (troubles névrotiques, psychotiques, anxieux, troubles de l'humeur, stress/adaptation, alimentation, dépression, surmenage, burn out) [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.1.5](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27) `#axa_axa_axa_avizen_2025_04_delais_carences_franchises_4dcefc2d1cb7_knowledge_705134a3703d`
+- **franchise absolue du certificat avec un minimum de 90 jours ; indemnisation ITT plafonnée à 365 jours pour toute la durée de l'adhésion** — franchise absolue du certificat avec un minimum de 90 jours ; indemnisation ITT plafonnée à 365 jours pour toute la durée de l'adhésion [Notice : 2025-04 Notice d'information Avizen.pdf, p.28, 4.1.5 Affections psychiatriques](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=28) `#axa_axa_axa_avizen_2025_04_delais_carences_franchises_7353dbad0140_knowledge_359a591302ec`
+- **franchise 30 jours (ou franchise du certificat si supérieure)** — franchise 30 jours (ou franchise du certificat si supérieure) [Notice : 2025-04 Notice d'information Avizen.pdf, p.28, 4.1.5 Rugby et football](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=28) `#axa_axa_axa_avizen_2025_04_delais_carences_franchises_7ea4e3d72762_knowledge_3c7b7304c016`
+- **15 jours après la fin de la franchise, sinon franchise prolongée jusqu'à réception ; prolongation d'arrêt : certificat sous 15 jours sinon jours intermédiaires…** — 15 jours après la fin de la franchise, sinon franchise prolongée jusqu'à réception ; prolongation d'arrêt : certificat sous 15 jours sinon jours intermédiaires non indemnisés [Notice : 2025-04 Notice d'information Avizen.pdf, p.20, 2.4.1 b)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=20) `#axa_axa_axa_avizen_2025_04_delais_carences_franchises_848a468470d5_knowledge_44d4257a68c3`
+- **ITT plafonnée à 365 jours de prestations toutes affections du rachis confondues, pour toute la durée de l'adhésion ; invalidité couverte uniquement si lésion c…** — ITT plafonnée à 365 jours de prestations toutes affections du rachis confondues, pour toute la durée de l'adhésion ; invalidité couverte uniquement si lésion constatée radiologiquement (scanner, IRM…) [Notice : 2025-04 Notice d'information Avizen.pdf, p.28, 4.1.5 Affections du rachis](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=28) `#axa_axa_axa_avizen_2025_04_delais_carences_franchises_8cffe28be8f9_knowledge_799a20a8bb52`
+
+
+### Fiscalité (6)
+
+- **fiscalité** — Capital décès soumis aux droits de mutation à titre gratuit (art. 757 B CGI) et/ou à la taxation de l'art. 990 I CGI. Exonération totale si bénéficiaire = conjoint, partenaire PACS ou, sous conditions (art. 796-0 ter CGI), frère/sœur. · Prestations en cas de vie (IJ et invalidité) non soumises à l'impôt sur le revenu SI l'adhésion n'a donné lieu à aucun avantage fiscal ; sinon imposables (ex. contrat Homme-clé). Régime fiscal décrit en vigueur au 01/01/2025. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5`
+- **determination_part_taxable** — determination_part_taxable. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17`
+- **conditions_de_rachat** — conditions_de_rachat. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09`
+- **régle_rachat_reduction** — Votre adhésion ne comporte ni valeur de rachat, ni valeur de réduction [Notice : 2025-04 Notice d'information Avizen.pdf, p.29, 4.4 Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=29) `#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_23f113174dd4_knowledge_0ecf20a9cf62`
+- **valeurs_de_rachat** — valeurs_de_rachat. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_906eb3ee9913_knowledge_306ed551c6e9`
+- **mise_en_reduction** — mise_en_reduction. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_d15d09b28f2a_knowledge_f7005bf2d30b`
+
+
+### Points de vigilance (6)
+
+- **Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.** — Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_points_de_vigilance_0fe3eed1b758_knowledge_70e30390986f`
+- **IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.** — IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_points_de_vigilance_35a954074956_knowledge_5c564f1268c0`
+- **Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).** — Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise). [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_points_de_vigilance_4be05876c398_knowledge_c48f67d5f295`
+- **Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotif…** — Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotifs exclus de la qualification d'accident. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_points_de_vigilance_7bce30284464_knowledge_2cd764868136`
+- **Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en…** — Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en euros pour les garanties. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_points_de_vigilance_7fcd9a720eb6_knowledge_0576f001d0e2`
+- **Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie.** — Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie. [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf) `#axa_axa_axa_avizen_2025_04_points_de_vigilance_cc15c2c82089_knowledge_a0dae9627c20`
+
+
+### Formules (3)
+
+- **Prestation invalidité (rente ou capital)** — autre · prestation = montant_garanti_à_la_consolidation × n(taux_invalidité_fonctionnelle) / 100 · justification : Règle explicite aux §2.2.3 à 2.2.6 : « montant… multiplié par le taux d'indemnisation (n) ». [Notice : 2025-04 Notice d'information Avizen.pdf, p.16, Tableau taux d'indemnisation p.16](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=16) `#axa_avizen_2025-04_formule_01`
+- **Exonération ITT** — cotisation · remboursement = (cotisation_annuelle / 365) × jours_d_arrêt_total_indemnisés · justification : Énoncé littéral au §2.2.7 (1/365e par jour indemnisé). [Notice : 2025-04 Notice d'information Avizen.pdf, p.17, §2.2.7 p.17](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=17) `#axa_avizen_2025-04_formule_02`
+- **Taux d'indemnisation zone linéaire 11-30 %** — autre · pour 11 ≤ t ≤ 30 : n = 1,5 × (t − 10) ; au-delà de 30 la progression n'est plus linéaire (lecture du tableau obligatoire) ; t ≥ 66 : n = 100 · justification : Vérifiée sur les 20 premières valeurs du tableau (11→1,5 ; 20→15 ; 30→30). Au-delà de 30 % les valeurs (31→31,14…65→86,04) ne suivent pas de formule simple identifiable : utiliser le tableau. [Notice : 2025-04 Notice d'information Avizen.pdf, p.16, Tableau taux d'indemnisation p.16](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=16) `#axa_avizen_2025-04_formule_03`
+
+
+### Définitions (10)
+
+- **Accident** — Atteinte corporelle non intentionnelle provenant directement de l'action soudaine et imprévisible d'une cause extérieure. NE SONT PAS des accidents : atteintes musculaires/tendineuses/ligamentaires et affections du rachis liées à une altération de santé préexistante ; ruptures du tendon d'Achille et fractures de fatigue ; pathologies cardiaques et affections vasculaires ; chocs émotifs et états dépressifs même consécutifs à un accident. La prise en charge en accident du travail par le régime obligatoire ne prévaut pas sur cette définition. [Notice : 2025-04 Notice d'information Avizen.pdf, p.34, 6. Définitions - Accident](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=34) `#avizen:def:bc84b360bb`
+- **Invalidité Permanente Totale (IPT)** — Taux d'invalidité fonctionnelle égal à 100 % (barème accidents du travail de la Sécurité sociale) ET reconnaissance définitive d'incapacité à se livrer à la moindre activité professionnelle procurant gain ou profit. Le classement en 2e catégorie Sécurité sociale ne suffit pas à lui seul. [Notice : 2025-04 Notice d'information Avizen.pdf, p.36, 6. Définitions - IPT](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=36) `#avizen:def:2ca20f13b2`
+- **Incapacité temporaire totale de travail (ITT)** — État de santé médicalement constaté obligeant à arrêter totalement et temporairement l'activité professionnelle (maladie ou accident). La période de droit aux IJ maternité du régime obligatoire n'est pas de l'ITT, même en cas de renonciation à ce droit. [Notice : 2025-04 Notice d'information Avizen.pdf, p.35, 6. Définitions - ITT toutes causes](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=35) `#avizen:def:26ab92ad8c`
+- **Invalidité fonctionnelle** — Établie d'après le barème des accidents du travail de la Sécurité sociale, sans tenir compte de l'incidence professionnelle. [Notice : 2025-04 Notice d'information Avizen.pdf, p.35, 6. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=35) `#avizen:def:af457b706f`
+- **Franchise** — Période entre la survenance de l'événement ouvrant droit à indemnisation et le début de l'indemnisation. Plusieurs niveaux disponibles ; choix précisé au certificat d'adhésion. Ne concerne que les IJ d'ITT et l'exonération en cas d'ITT. [Notice : 2025-04 Notice d'information Avizen.pdf, p.35, 6. Définitions - Franchise](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=35) `#avizen:def:5f15e6a842`
+- **Délai d'attente** — Période pendant laquelle les garanties ne s'appliquent pas, malgré la prise d'effet de l'adhésion ou de l'avenant d'augmentation. [Notice : 2025-04 Notice d'information Avizen.pdf, p.35, 6. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=35) `#avizen:def:216df9ed2f`
+- **Non-fumeur** — Personne n'ayant pas fumé (cigarettes, e-cigarettes, cigares, pipes) au cours des 24 derniers mois et non dépendante d'un traitement de sevrage tabagique sur cette période. Abattement tarifaire sur capital décès/IPT toutes causes, rente éducation et rente décès/IPT. [Notice : 2025-04 Notice d'information Avizen.pdf, p.36, 6. Définitions - Non-fumeur](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=36) `#avizen:def:714f512e9e`
+- **Consolidation** — Stabilisation d'un état de santé après accident ou maladie, laissant subsister des séquelles et n'étant plus susceptible d'aggravation ou d'évolution notable. [Notice : 2025-04 Notice d'information Avizen.pdf, p.34, 6. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=34) `#avizen:def:4289ad5c61`
+- **Pays sensibles** — Pays comportant des zones « formellement déconseillées ou déconseillées sauf raison impérative » par le ministère français des Affaires étrangères. [Notice : 2025-04 Notice d'information Avizen.pdf, p.36, 6. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=36) `#avizen:def:2e672467db`
+- **Pratique occasionnelle** — Pratique non régulière, exercée ne serait-ce qu'une fois dans l'année (hors baptêmes). [Notice : 2025-04 Notice d'information Avizen.pdf, p.36, 6. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=36) `#avizen:def:00b0381e1f`
+
+
+### Conditions de souscription (4)
+
+- Adhésion réservée aux membres de l'association ANPERE ; adhérent et assuré résidents en France métropolitaine ou DROM. [Notice : 2025-04 Notice d'information Avizen.pdf, p.4, 1.1.2 / 1.1.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=4) `#avizen:cond:94ec71256c`
+- Prise d'effet sous réserve : paiement effectif de la 1re cotisation, signature du certificat/bulletin par toutes les parties, acceptation des risques par l'assureur (avec ou sans surprime/exclusion). [Notice : 2025-04 Notice d'information Avizen.pdf, p.7, 1.1.7](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=7) `#avizen:cond:d07e269637`
+- Modification des garanties possible jusqu'au 75e anniversaire de l'assuré, demande au moins 2 mois avant la date anniversaire, sous réserve d'acceptation et nouvelle tarification possible. [Notice : 2025-04 Notice d'information Avizen.pdf, p.7, 1.1.8](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=7) `#avizen:cond:514a1f7dc2`
+- Déplacements : questionnaire « Résidences et Voyages » préalable obligatoire pour déplacements professionnels en pays sensibles, ou personnels en pays sensibles ou > 60 jours/an hors UE, Royaume-Uni, Australie, Canada, Japon, Suisse, États-Unis. [Notice : 2025-04 Notice d'information Avizen.pdf, p.6, 1.1.6 L'étendue territoriale](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=6) `#avizen:cond:df91ea5e02`
+
+## Avizen Pro
+
+
+Déclinaison professionnelle d'Avizen, orientée travailleurs non salariés et professions libérales : garanties décès/IPT (capital, rente, rente éducation, double effet), ITT (IJ toutes causes ou par accident, IJ complémentaires aux régimes obligatoires 90/365 jours), remboursement des frais professionnels, invalidité permanente partielle ou totale évaluée selon un taux CROISÉ (fonctionnel × professionnel) ou, en option pour 28 professions éligibles, selon le seul taux professionnel (règle n/66), exonérations de cotisations, aide à la famille, et un volet d'assistance professionnelle étendu (prévention burn-out, agression, second avis médical…). Cadre fiscal Madelin possible. Montants, franchises et options au certificat d'adhésion.
+
+
+### Garanties (8)
+
+- **IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)** — IJ courtes complémentaires aux IJ des régimes obligatoires : cessent au 90e OU 365e jour d'arrêt (franchise incluse) selon la garantie souscrite au certificat. Mêmes règles de rechute, reconstruction mammaire sans nouvelle franchise. Non cumulable avec IJ ITT par accident. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.15, 2.2.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=15) `#axa_axa_axa_avizen_pro_2025_04_garanties_036eb3e36d25_knowledge_8069455b86f2`
+  - Condition : activité professionnelle à la survenance
+  - Limite : 90 ou 365 jours selon certificat
+- **Rente invalidité par accident (optionnelle)** — Évaluée sur le seul taux d'invalidité fonctionnelle (tableau spécifique), seuil 11 %. Médecin conseil de l'assureur indépendant des décisions Sécurité sociale. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.23, 2.2.7](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=23) `#axa_axa_axa_avizen_pro_2025_04_garanties_42d478ba7b57_knowledge_6a98e41528ba`
+  - Condition : taux fonctionnel ≥ 11 %
+- **Capital invalidité permanente partielle ou totale (optionnelle)** — Capital = montant du certificat × taux d'indemnisation (croisé ou professionnel selon le choix). Taux fixé définitivement à la consolidation, sans révision ; versement met fin à la garantie. Distincte de l'extension IPT de la garantie décès. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.21, 2.2.6](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=21) `#axa_axa_axa_avizen_pro_2025_04_garanties_466534853a69_knowledge_ee3565d5451c`
+  - Condition : taux ≥ 11 % accident / 33 % maladie (15 % en option)
+- **Rente éducation décès / IPT + double effet** — Comme Avizen : enfants fiscalement à charge (et nés < 300 jours après le décès), jusqu'à 26 ans ; viagère si allocation handicapé attribuée avant 21 ans et garantie souscrite avant les 16 ans de l'enfant ; paliers 100 % (0-11 ans), 125 % (12-17), 150 % (18-26) ; rente doublée en double effet. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.12, 2.1.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=12) `#axa_axa_axa_avizen_pro_2025_04_garanties_5aa626eed35e_knowledge_7d96fb0fa4eb`
+  - Condition : enfant fiscalement à charge au décès
+  - Limite : paliers 100/125/150 %
+- **Capital décès par accident / IPT par accident** — Décès directement lié à un accident, < 12 mois après ; IPT par accident < 24 mois après l'accident ; versement anticipé à la consolidation. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.11, 2.1.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=11) `#axa_axa_axa_avizen_pro_2025_04_garanties_77887a191541_knowledge_14a294237c21`
+  - Condition : décès < 12 mois / IPT < 24 mois après l'accident
+- **Indemnités Remboursement des frais professionnels (optionnelle)** — En ITT (maladie ou accident), indemnités versées à l'adhérent : soit équivalent journalier des frais professionnels échus et payés déclarés au fisc, soit équivalent journalier des frais de remplacement de l'assuré — plafonné au plafond journalier garanti au 1er jour d'arrêt. Si cessation définitive d'activité : reliquat des frais engagés avant cessation pris en charge. Frais couverts (fixes et permanents, nets des ressources de remplacement) : salaires nets et avantages en nature des collaborateurs ; charges sociales sur salaires des collaborateurs ; ta… [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.16, 2.2.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=16) `#axa_axa_axa_avizen_pro_2025_04_garanties_80c6d0464d00_knowledge_c65eda8b8ce7`
+  - Condition : activité professionnelle à la survenance
+  - Condition : mêmes modalités de service que 2.2.1
+  - Limite : plafond journalier garanti au certificat
+- **IJ ITT par accident (optionnelle)** — Comme IJ toutes causes, limitées à l'accident ; plafond 1 095 jours. Non cumulable avec IJ toutes causes. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.15, 2.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=15) `#axa_axa_axa_avizen_pro_2025_04_garanties_80ee94d21420_knowledge_bea1d352bf2a`
+  - Condition : activité professionnelle à la survenance
+  - Limite : 1 095 jours
+- **Capital invalidité par accident (optionnelle)** — Capital × taux d'indemnisation fonctionnel ; taux définitif à la consolidation ; versement met fin à la garantie. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.24, 2.2.8](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=24) `#axa_axa_axa_avizen_pro_2025_04_garanties_8c3742b8bbe7_knowledge_18dcafdf9510`
+  - Condition : taux fonctionnel ≥ 11 %
+
+
+### Exclusions (4)
+
+- **Décès/IPT toutes causes** — Suicide/tentative la 1re année (et 1 an sur le supplément en cas d'augmentation) ; guerre, insurrection, opérations de maintien de l'ordre/paix ; meurtre de l'assuré par le bénéficiaire. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.42, 4.1.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=42) `#axa_axa_axa_avizen_pro_2025_04_exclusions_2aef8f17ca9c_knowledge_1c8e77582d69`
+  - Condition : décès/IPT toutes causes
+- **Exclusions communes — activités/sports à risque** — Liste identique à Avizen (sports extrêmes, aériens, mécaniques, montagne > 3 500 m, équestres, nautiques, tauromachie… ; métiers à risque : armée-aviation, police, journalistes, pétrole/gaz, pompiers, plongée pro, mer ; déplacements pays sensibles ou > 60 jours), sauf acceptation au certificat. Baptêmes encadrés par professionnel diplômé d'État couverts sauf sports extrêmes. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.41, 4.1.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=41) `#axa_axa_axa_avizen_pro_2025_04_exclusions_472236030697_knowledge_2a7aa41bb4c3`
+  - Condition : toutes garanties, monde entier
+  - Limite : baptêmes encadrés (hors sports extrêmes)
+  - Limite : acceptation au certificat
+- **ITT/Invalidité** — Identiques à Avizen (faits volontaires, guerres/émeutes, antériorités non déclarées, drogues, alcoolisme chronique, alcoolémie, cures et maisons de repos pour l'ITT, chirurgie plastique, nucléaire, refus de traitements) + exclusion explicite de « toute affection ou maladie dont la première constatation médicale survient pendant le délai d'attente ainsi que ses conséquences ». [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.43, 4.1.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=43) `#axa_axa_axa_avizen_pro_2025_04_exclusions_d519dc75ce41_knowledge_62b80b2e93fe`
+  - Condition : ITT et invalidité (toutes causes et par accident)
+- **Décès/IPT par accident** — Guerres/insurrection/maintien de l'ordre ; participation active à émeutes, terrorisme, sabotage, crimes/délits intentionnels, rixes (sauf légitime défense/devoir professionnel) ; nucléaire (mention spécifique « sinistres résultant directement ou indirectement de la désintégration du noyau de l'atome ») ; accident antérieur à l'adhésion non déclaré ; drogues/médicaments hors prescription ; ALCOOLISME CHRONIQUE (présent ici contrairement à Avizen) ; alcoolémie ≥ taux légal du pays ; chirurgie plastique non consécutive à accident garanti, malformations con… [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.42, 4.1.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=42) `#axa_axa_axa_avizen_pro_2025_04_exclusions_d5d0437a216c_knowledge_7f1038606936`
+  - Condition : décès/IPT par accident
+  - Limite : légitime défense, devoir professionnel
+
+
+### Options (8)
+
+- **Cadre fiscal Madelin** — Adhésion possible dans le cadre fiscal Madelin (TNS) : prestations alors imposables ; obligation de justifier chaque année (et à l'adhésion) être à jour des cotisations maladie et vieillesse obligatoires (attestations des caisses). [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.4, 1.1.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=4) `#axa_axa_axa_avizen_pro_2025_04_options_30367f970ec3_knowledge_9b700659935b`
+  - Condition : statut TNS
+  - Condition : attestations annuelles des caisses obligatoires
+- **Exonération cotisations invalidité** — Dispense de cotisations si invalidité ≥ 66 % (appréciée selon le taux croisé, professionnel ou fonctionnel suivant la garantie rente détenue) tant qu'elle perdure. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.24, 2.2.10](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=24) `#axa_axa_axa_avizen_pro_2025_04_options_30d31b0bdbeb_knowledge_6abd3591ed08`
+  - Condition : avec une garantie rente invalidité
+- **Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)** — +20 % max du capital décès/IPT sans sélection médicale, dans les 3 mois de l'événement. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.9, 1.2.3 b)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=9) `#axa_axa_axa_avizen_pro_2025_04_options_58815b57aa2b_knowledge_3b485dc6b94c`
+  - Condition : 3 mois suivant l'événement
+- **Indexation PASS** — Comme Avizen : réévaluation annuelle garanties+cotisations selon le PASS, sans examen médical, jusqu'à 70 ans ; refus définitif possible 1 mois avant la date anniversaire. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.8, 1.2.3 a)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=8) `#axa_axa_axa_avizen_pro_2025_04_options_59ba50240db5_knowledge_cbb3ace5d17d`
+  - Condition : avoir opté pour l'indexation
+- **Exonération cotisations ITT** — 1/365e de la cotisation annuelle remboursé par jour d'arrêt total indemnisé ; garanties maintenues, pas d'augmentation possible. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.24, 2.2.9](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=24) `#axa_axa_axa_avizen_pro_2025_04_options_600b2b2533a5_knowledge_9af710c106d5`
+  - Condition : avec une garantie ITT
+- **Capital décès double garantie** — Capital supplémentaire (égal au capital IPT versé) si décès ≥ 1 an après consolidation IPT, avant fin de l'année d'assurance des 85 ans. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.11, 2.1.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=11) `#axa_axa_axa_avizen_pro_2025_04_options_66925aa55f52_knowledge_685604acb028`
+  - Condition : avec Capital décès/IPT toutes causes uniquement
+- **Option taux invalidité professionnelle (barème spécifique)** — Pour 28 professions éligibles (liste contractuelle p.21), fixation du taux d'invalidité (n) uniquement selon l'invalidité professionnelle, avec barème spécifique remis à l'adhésion (n retenu jamais inférieur au barème de la profession). Indemnisation : n/66 si n < 66 %, 100 % si n ≥ 66 %. Exemple contractuel : n = 50 % → 75,76 % de la rente. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.20, 2.2.5 c)2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=20) `#axa_axa_axa_avizen_pro_2025_04_options_cd5baa4496f8_knowledge_48ad072d3fa9`
+  - Condition : profession éligible
+  - Condition : mention au certificat
+- **Option taux d'invalidité 15 % maladie** — Abaisse le seuil d'intervention invalidité maladie de 33 % à 15 % (rente et capital). Acquise seulement si mentionnée au certificat. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.17, 2.2.5 b)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=17) `#axa_axa_axa_avizen_pro_2025_04_options_d2d83a481f1d_knowledge_4f580b86f787`
+  - Condition : mention au certificat d'adhésion
+
+
+### Cotisations & prix (6)
+
+- **tableaux** — tableaux. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e`
+- **exemples_chiffrés** — Option taux professionnel : taux d'invalidité 50 % → taux d'indemnisation 50/66 = 75,76 % de la rente du certificat ; taux 75 % → 100 %. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3`
+- **défaut_de_paiement** — à l'expiration d'un délai de 40 jours suivant la lettre recommandée, l'adhésion sera résiliée [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.8, 1.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=8) `#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_759b89f27c1f_knowledge_d18add8ca1f6`
+- **mode_calcul** — Identique à Avizen : âge (différence de millésimes), groupe tarifaire professionnel, fumeur/non-fumeur, conditions d'acceptation médicale, conditions d'exercice, activités/sports, taxes. Payables d'avance sous 10 jours de l'échéance (périodicité au certificat). Arrêt du paiement au décès ou à la reconnaissance d'IPT. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_819a475f3f85_knowledge_f28130b0ac7c`
+- **frais** — frais. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201`
+- **réductions** — Abattement non-fumeur · Abattement tarifaire pour non-fumeur (24 mois sans tabac ni sevrage) sur les garanties décès/IPT, rente éducation, rente décès. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b`
+
+
+### Délais & franchises (7)
+
+- **2 ans / 10 ans / 30 ans (mêmes règles qu'Avizen, L114-1 s.)** — 2 ans / 10 ans / 30 ans (mêmes règles qu'Avizen, L114-1 s.) [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.45, 4.6](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=45) `#axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_328e8ef980da_knowledge_685a9700d24e`
+- **plafond ITT 365 jours sur la durée de l'adhésion ; invalidité rachis seulement si lésion objectivée radiologiquement** — plafond ITT 365 jours sur la durée de l'adhésion ; invalidité rachis seulement si lésion objectivée radiologiquement [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.44, 4.1.5](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=44) `#axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_32baffb6fabd_knowledge_480adab7336d`
+- **IJ versées après la franchise hospitalisation du certificat, jusqu'au 15e jour d'arrêt (moelle) ou 30e jour (organe)** — IJ versées après la franchise hospitalisation du certificat, jusqu'au 15e jour d'arrêt (moelle) ou 30e jour (organe) [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.44, 4.1.5 Don d'organe](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=44) `#axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_467720c3c6b2_knowledge_992f5f813b44`
+- **franchise absolue min 90 jours ; plafond ITT 365 jours sur toute la durée de l'adhésion** — franchise absolue min 90 jours ; plafond ITT 365 jours sur toute la durée de l'adhésion [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.44, 4.1.5](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=44) `#axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_4c3eda7401a0_knowledge_41719d2a39ff`
+- **90 jours à compter de la date d'effet ; 365 jours pour les troubles psychiques (liste contractuelle) ; s'applique aussi aux suppléments en cas d'augmentation** — 90 jours à compter de la date d'effet ; 365 jours pour les troubles psychiques (liste contractuelle) ; s'applique aussi aux suppléments en cas d'augmentation [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.43, 4.1.5](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=43) `#axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_826a5f716dd0_knowledge_861431863f92`
+- **franchise 30 jours ou celle du certificat si supérieure** — franchise 30 jours ou celle du certificat si supérieure [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.44, 4.1.5](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=44) `#axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_dbd5d88f4350_knowledge_427dde66e17f`
+- **15 jours après fin de franchise (sinon franchise prolongée) ; prolongations sous 15 jours** — 15 jours après fin de franchise (sinon franchise prolongée) ; prolongations sous 15 jours [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.27, 2.4.1 b)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=27) `#axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_fea8446cda73_knowledge_bc11aabb5e7b`
+
+
+### Fiscalité (6)
+
+- **conditions_de_rachat** — conditions_de_rachat. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2b1334381d5d_knowledge_1ed566556524`
+- **régle_rachat_reduction** — ni valeur de rachat, ni valeur de réduction [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.45, 4.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=45) `#axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2db09360e436_knowledge_a3a809ae7819`
+- **mise_en_reduction** — mise_en_reduction. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_43a1be7843ad_knowledge_c5adf18d1814`
+- **valeurs_de_rachat** — valeurs_de_rachat. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_98ed4e335a5b_knowledge_6bb9408ea279`
+- **fiscalité** — Capital décès : droits de mutation 757 B CGI et/ou taxation 990 I CGI ; exonération totale conjoint/PACS et, sous conditions 796-0 ter, frère/sœur. Régime au 01/01/2025. · Prestations en cas de vie non imposables SI aucun avantage fiscal à l'adhésion ; imposables sinon (dispositif Madelin notamment). [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_a9a1ff6e4623_knowledge_b16b93a33ab5`
+- **determination_part_taxable** — determination_part_taxable. Information documentaire à consulter dans la source. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_b51bc4461cfc_knowledge_3e9616ceeed6`
+
+
+### Points de vigilance (7)
+
+- **Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.** — Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_0b64a692c15f_knowledge_f543fa5ba4e4`
+- **Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.** — Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_26fde9bd19a5_knowledge_77e0f0881c3c`
+- **Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).** — Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14). [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291`
+- **Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — véri…** — Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — vérifier le choix au certificat. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_b3c4d3f2b5e8_knowledge_7db2ae0bff95`
+- **Aucun montant garanti dans la notice — tout est au certificat d'adhésion.** — Aucun montant garanti dans la notice — tout est au certificat d'adhésion. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_bb01f772b8f5_knowledge_b348f1b96a11`
+- **Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.** — Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_d3e550a93ef8_knowledge_9310380f9152`
+- **Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.** — Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf) `#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_f99ef92bee2b_knowledge_314b37ae71ff`
+
+
+### Formules (3)
+
+- **Prestation invalidité (croisé)** — autre · prestation = montant_certificat × taux_indemnisation(taux_croisé(prof, fonctionnel)) / 100 · justification : Mécanique explicite §2.2.5-2.2.6 avec les deux tableaux contractuels. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.19, Tableaux p.19](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=19) `#axa_avizen_pro_2025-04_formule_01`
+- **Prestation invalidité (option professionnelle)** — autre · si 11/15/33 ≤ n < 66 : taux_indemnisation = n/66 ; si n ≥ 66 : 100 % ; prestation = montant_certificat × taux_indemnisation · justification : Formule et exemples chiffrés écrits en toutes lettres (50 % → 75,76 %). [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.20, §2.2.5 c)2 p.20](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=20) `#axa_avizen_pro_2025-04_formule_02`
+- **Exonération ITT** — cotisation · remboursement = cotisation_annuelle/365 × jours_indemnisés · justification : Énoncé littéral §2.2.9. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.24, §2.2.9 p.24](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=24) `#axa_avizen_pro_2025-04_formule_03`
+
+
+### Définitions (6)
+
+- **Accident** — Identique à Avizen : atteinte corporelle non intentionnelle d'une cause extérieure soudaine et imprévisible ; exclusions de qualification (rachis, tendons, tendon d'Achille, fractures de fatigue, pathologies cardiaques/vasculaires, chocs émotifs/dépression) ; la qualification AT du régime obligatoire ne prévaut pas. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.50, 6. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=50) `#avizen-pro:def:bc84b360bb`
+- **Invalidité professionnelle** — Définie par expertise amiable, appréciée de 0 à 100 % d'après la nature de l'invalidité par rapport à la profession indiquée au certificat ET toujours exercée au moment du sinistre ; tient compte de l'exercice antérieur, des conditions normales d'exercice, des capacités restantes, des possibilités d'adaptation et des répercussions sur les revenus. Charge de la preuve sur l'assuré. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.18, 2.2.5 c)1 - Invalidité professionnelle](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=18) `#avizen-pro:def:9351ac94d0`
+- **Taux d'invalidité croisé** — Combine l'invalidité fonctionnelle (barème AT Sécurité sociale, sans incidence professionnelle) et l'invalidité professionnelle, selon le tableau croisé contractuel. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.19, 2.2.5 c)1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=19) `#avizen-pro:def:87c86c546e`
+- **IPT** — Taux d'invalidité fonctionnelle = 100 % + incapacité définitive à toute activité professionnelle rémunératrice ; le classement 2e catégorie Sécurité sociale ne suffit pas (chapitre Définitions). [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.52, 6. Définitions - IPT](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=52) `#avizen-pro:def:bc84b7162c`
+- **Hospitalisation (assistance)** — Hospitalisation imprévue > 24 h, ou < 24 h incluant chirurgie de la hanche/bras/jambe/pied/main entraînant invalidité temporaire, ou traitement de chimiothérapie/radiothérapie. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.31, 3.1 Définitions spécifiques](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=31) `#avizen-pro:def:4ce8507e31`
+- **Maladie grave (assistance)** — Cancer, infarctus du myocarde, Parkinson, sclérose en plaques, maladies coronariennes, AVC, insuffisance rénale, greffe d'organe, SLA - premier diagnostic par spécialiste inscrit à l'Ordre, distinct du bénéficiaire et de sa famille directe. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.31, 3.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=31) `#avizen-pro:def:095b5fb514`
+
+
+### Conditions de souscription (3)
+
+- Membres ANPERE ; résidence France métropolitaine ou DROM ; acceptation médicale ; couplage obligatoire des garanties ITT/invalidité avec une garantie décès. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.14, 2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=14) `#avizen-pro:cond:7f172f0e1e`
+- Cadre Madelin : justification annuelle d'être à jour des cotisations maladie/vieillesse obligatoires. [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.4, 1.1.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=4) `#avizen-pro:cond:a40b5ef32a`
+- Modification des garanties jusqu'aux 75 ans de l'assuré (préavis 2 mois avant date anniversaire). [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.7, 1.1.8](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=7) `#avizen-pro:cond:f4e8e8aef2`
+
+## Entour'Age
+
+
+Contrat dépendance : rente viagère mensuelle (montant au choix entre 500 et 3 000 €/mois) versée en cas de dépendance totale — ou 50 % en dépendance partielle si la Formule Dépendance Totale et Partielle est choisie — après reconnaissance par le Médecin Conseil d'AXA et franchise absolue de 3 mois. Options : Capital Premiers Frais (3 500 €), Capital décès (3 500 €) OU Capital décès remboursement des cotisations. Services « ENTREAIDANTS » dès l'adhésion (informations, hospitalisation/immobilisation, aide aux aidants, téléassistance à tarif réduit) et services dédiés en perte d'autonomie. Adhésion viagère, exonération des cotisations pendant le service de la rente, mise en réduction possible après 8 années pleines de cotisation.
+
+
+### Garanties (4)
+
+- **Services pour l'aidant de l'assuré** — Informations/conseils identiques à l'assuré ; organisation de services à la personne et recherche de fournisseurs (coûts non pris en charge) ; hospitalisation imprévue > 24 h de l'aidant : aide-ménagère/auxiliaire de vie 20 h max plafonnée à 500 € TTC, 1 intervention/année civile, demande sous 8 jours ; besoin de répit de l'aidant : auxiliaire de vie (7 jours/an max, 6 h/jour max) et/ou hébergement temporaire (7 jours/an, transport 100 €/an) dans la limite GLOBALE de 1 000 € TTC/an ; aide à l'hébergement en établissement (recherche 3 établissements, 2 v… [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.25, 5.2.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=25) `#axa_axa_axa_entourage_2025_06_garanties_23a00d124ec2_knowledge_1b9ff505ee1c`
+  - Condition : selon prestation : dépendance de l'assuré reconnue, ou rôle d'aidant
+  - Limite : répit : 1 000 € TTC/an ; visites d'établissements : 200 € ; transport hébergement temporaire : 100 €/an
+- **Services dès l'adhésion « ENTREAIDANTS »** — Site entreaidants.fr ; renseignements téléphoniques personnalisés 24/7 (prévention, santé, juridique, démarches dépendance « Mon assistante dédiée », aide à la constitution de dossiers APA etc.) ; garanties hospitalisation (> 24 h, ou < 24 h avec chirurgie hanche/bras/jambe/pied/main, ou chimio/radiothérapie) ou immobilisation > 4 jours : aide-ménagère/garde-malade 20 h max (min 2 h consécutives) plafonnée à 500 € TTC (demande sous 8 jours), garde/transfert animaux (2 max, 250 € TTC), visite d'un proche (transport A/R + hôtel 50 €/nuit max 250 € si aucu… [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.15, 3.3.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=15) `#axa_axa_axa_entourage_2025_06_garanties_7df9dcef291e_knowledge_8602bccd2ff7`
+  - Condition : dès la prise d'effet de l'adhésion
+  - Limite : voir détail par prestation
+- **Rente viagère dépendance (garantie principale obligatoire)** — Rente mensuelle versée tant que dure l'état de dépendance garanti. Montant en dépendance totale = montant souscrit (500 à 3 000 €/mois) × taux de revalorisation depuis l'adhésion × le cas échéant coefficient de réduction (si résiliation après ≥ 8 ans). En Formule Totale et Partielle : 50 % du montant en dépendance partielle ; la rente totale se substitue intégralement à la rente partielle si l'état s'aggrave (nouveau dossier requis). Versée mensuellement à terme échu, après franchise absolue de 3 mois (à compter du 91e jour suivant la reconnaissance). C… [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.21, 4.3.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=21) `#axa_axa_axa_entourage_2025_06_garanties_d34d924c6410_knowledge_ac2f1209e317`
+  - Condition : reconnaissance de l'état de dépendance par le Médecin Conseil d'AXA
+  - Condition : expiration du délai d'attente (sauf origine accidentelle)
+  - Condition : franchise absolue de 3 mois
+  - Limite : rente choisie entre 500 et 3 000 €/mois
+  - Limite : GIR 5/6 jamais garanti
+- **Services d'assistance dédiés en perte d'autonomie** — Bilan initial de situation de dépendance à domicile (1 seul par assuré pendant l'adhésion) ; « projet de vie personnalisé » ; bilan d'adaptation du domicile par ergothérapeute/professionnel du bâtiment pris en charge jusqu'à 500 € TTC ; suivi de la qualité de vie. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.23, 4.4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=23) `#axa_axa_axa_entourage_2025_06_garanties_ef6ab638bf32_knowledge_7c02f4cdceb0`
+  - Condition : état de dépendance reconnu
+  - Limite : bilan d'adaptation du domicile : 500 € TTC
+  - Limite : 1 bilan initial par adhésion
+
+
+### Exclusions (3)
+
+- **GIR 5 et 6** — L'état de dépendance avec classement GIR 5 ou 6 n'est jamais garanti. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.13, 2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=13) `#axa_axa_axa_entourage_2025_06_exclusions_248d286c2d2a_knowledge_d91f646bf234`
+  - Condition : toutes garanties dépendance
+- **Dépendance suite à accidents — cas exclus** — Fait intentionnel de l'assuré ; activité sportive non représentée par une fédération, sans respect des règles élémentaires de sécurité, ou à titre professionnel ; navigation aérienne (appareil sans certificat de navigabilité valable ou pilote non breveté/licence périmée ; parachute, deltaplane, parapente, ULM ou assimilé ; meeting, raid sportif, vol acrobatique, tentative de record, essais, saut en parachute non motivé par la sécurité) ; conséquences directes ou indirectes d'une transmutation de noyaux d'atomes ou de la radioactivité. La charge de la pr… [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.29, 7.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=29) `#axa_axa_axa_entourage_2025_06_exclusions_e6da0a9fdb2b_knowledge_39cbc1ab1739`
+  - Condition : dépendance d'origine accidentelle
+- **Exclusions générales (dépendance et décès)** — Tentative de suicide de l'assuré (le suicide étant également exclu la 1re année pour la garantie Décès) ; guerres civiles en France ou guerres étrangères auxquelles la France participe, invasions, agressions étrangères, hostilités contre la France ; participation active à guerre civile, guerre sans la France, rébellion, révolution, insurrection, prise de pouvoir, mouvement populaire, émeute, terrorisme — légitime défense, assistance à personne en danger et accomplissement du devoir professionnel restant garantis. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.29, 7.1 Exclusions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=29) `#axa_axa_axa_entourage_2025_06_exclusions_edcf6ad19ae4_knowledge_404409f6a74a`
+  - Condition : dépendance et décès
+  - Limite : légitime défense, assistance à personne en danger, devoir professionnel
+
+
+### Options (5)
+
+- **Réduction couple** — Si chaque conjoint adhère individuellement dans un délai maximal de 3 mois entre les deux adhésions : réduction tarifaire permanente de 10 % sur les deux cotisations. Prend fin si l'un des contrats est résilié ou mis en réduction. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.11, 1.2.6 Réduction couple](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=11) `#axa_axa_axa_entourage_2025_06_options_1e769dd60f47_knowledge_1f9477b5236e`
+  - Condition : 2 adhésions individuelles à moins de 3 mois d'écart
+- **Formule Dépendance Totale et Partielle** — Étend la couverture à la dépendance partielle : 50 % de la rente dès reconnaissance de la dépendance partielle ; substitution intégrale par la rente totale en cas d'aggravation reconnue. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.6, 1.1.2.2 b)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=6) `#axa_axa_axa_entourage_2025_06_options_9d4ceb1307a5_knowledge_4719bd564d23`
+  - Condition : choix à l'adhésion (ou passage possible après 3 ans, ≤ 75 ans, avec nouveau délai d'attente sur le supplément)
+- **Capital Premiers Frais** — Capital forfaitaire de 3 500 € versé à l'ouverture du droit à prestations pour l'état de dépendance garanti (y compris dépendance LÉGÈRE si l'option est souscrite dans le cadre de la Formule Totale et Partielle). Montant = montant souscrit × revalorisation × coefficient de réduction éventuel. Versement unique mettant fin à la garantie ; libre utilisation. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.6, 1.1.2.2 c) i)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=6) `#axa_axa_axa_entourage_2025_06_options_a965668d36e4_knowledge_28f942a2bdaa`
+  - Condition : souscription optionnelle
+- **Capital décès Remboursement des cotisations** — En cas de décès SANS dépendance préalable avant le 85e anniversaire : remboursement aux bénéficiaires du cumul des cotisations nettes des frais de fractionnement versées depuis la date d'effet de cette garantie. Non cumulable avec le Capital décès. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.27, 6.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=27) `#axa_axa_axa_entourage_2025_06_options_adbaa1191be7_knowledge_35cafcbd6d53`
+  - Condition : décès sans dépendance préalablement reconnue
+  - Condition : avant 85 ans
+- **Capital décès** — 3 500 € versés aux bénéficiaires en cas de décès de l'assuré ; le versement met fin à toutes les garanties. Cesse à la fin de l'année d'assurance des 85 ans. Non cumulable avec Capital décès remboursement des cotisations. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.6, 1.1.2.2 c) ii)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=6) `#axa_axa_axa_entourage_2025_06_options_c09b72c9c8a5_knowledge_4cd76c6d196f`
+  - Condition : non cumulable avec l'autre garantie décès
+  - Condition : prend fin à 85 ans
+
+
+### Cotisations & prix (7)
+
+- **tableaux** — tableaux. Information documentaire à consulter dans la source. [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89`
+- **mode_calcul** — Cotisation calculée à l'adhésion selon : âge de l'assuré (différence de millésimes), garanties souscrites et niveau de rente choisi, majoration éventuelle pour risque aggravé. Payable à terme d'avance (périodicité mensuelle/trimestrielle/semestrielle/annuelle, modifiable à chaque échéance anniversaire). PAS de modification en raison de l'âge ou de la détérioration de l'état de santé en cours d'adhésion ; majorations possibles uniquement sur décision du comité de gestion paritaire (revalorisation, résultats techniques/financiers, évolutions législatives/… [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d`
+- **frais** — Frais de fractionnement · Mentionnés comme déduits du remboursement des cotisations (garantie décès remboursement) — montant non précisé dans la notice. [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_cotisations_et_prix_b71f718b3818_knowledge_2ceb18ba5d21`
+- **exemples_chiffrés** — Calcul de l'âge par différence de millésimes : né en 1947, adhésion en 2012 → 2012-1947 = 65 ans. [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_cotisations_et_prix_bda7c72e6e68_knowledge_c08c819e085e`
+- **défaut_de_paiement** — à l'expiration d'un délai de 40 jours à compter de l'envoi de cette lettre… la résiliation de votre adhésion [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.11, 1.2.5](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=11) `#axa_axa_axa_entourage_2025_06_cotisations_et_prix_d8f6e55152e0_knowledge_4ce4ee258710`
+- **réductions** — Réduction couple 10 % · Voir options. [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_cotisations_et_prix_df0f22fdd097_knowledge_21a4375ed5e3`
+- **exonération** — vous êtes exonéré du paiement des cotisations liées à l'ensemble des garanties [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.10, 1.2.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=10) `#axa_axa_axa_entourage_2025_06_cotisations_et_prix_e4d3550ca172_knowledge_4e2e3f2d5105`
+
+
+### Délais & franchises (5)
+
+- **Franchise absolue de 3 mois : rente due à compter du 91e jour suivant la reconnaissance de l'état de dépendance** — Franchise absolue de 3 mois : rente due à compter du 91e jour suivant la reconnaissance de l'état de dépendance [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.21, 4.3.1.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=21) `#axa_axa_axa_entourage_2025_06_delais_carences_franchises_06b4f991951a_knowledge_def70d3ad12d`
+- **2 ans ; 10 ans (vie : bénéficiaire distinct / accidents : ayants droit) ; 30 ans max pour les actions du bénéficiaire après le décès** — 2 ans ; 10 ans (vie : bénéficiaire distinct / accidents : ayants droit) ; 30 ans max pour les actions du bénéficiaire après le décès [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.31, 7.7](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=31) `#axa_axa_axa_entourage_2025_06_delais_carences_franchises_1c5ace0d0983_knowledge_9039b861f674`
+- **Au plus tard 1 mois après réception de l'ensemble des pièces justificatives** — Au plus tard 1 mois après réception de l'ensemble des pièces justificatives [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.28, 6.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=28) `#axa_axa_axa_entourage_2025_06_delais_carences_franchises_32265caaab76_knowledge_3f10706bcc2b`
+- **Adhésion ANNULÉE (garanties réputées n'avoir jamais pris effet, cotisations intégralement remboursées, sauf fausse déclaration intentionnelle L113-8)** — Adhésion ANNULÉE (garanties réputées n'avoir jamais pris effet, cotisations intégralement remboursées, sauf fausse déclaration intentionnelle L113-8) [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.8, 1.1.4.2 c)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=8) `#axa_axa_axa_entourage_2025_06_delais_carences_franchises_ac7f227d66d5_knowledge_7ffb7027b5a8`
+- **Aucun si dépendance d'origine accidentelle (constatation postérieure à l'adhésion, 1re cotisation payée) ; 1 an dans les autres cas ; 3 ans si maladie neurolog…** — Aucun si dépendance d'origine accidentelle (constatation postérieure à l'adhésion, 1re cotisation payée) ; 1 an dans les autres cas ; 3 ans si maladie neurologique, neurodégénérative ou psychiatrique ; s'applique aussi aux augmentations de garanties (sur le supplément) [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.9, 1.1.5](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=9) `#axa_axa_axa_entourage_2025_06_delais_carences_franchises_ad16ac0bce02_knowledge_035d6a65dfdf`
+
+
+### Fiscalité (5)
+
+- **determination_part_taxable** — determination_part_taxable. Information documentaire à consulter dans la source. [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458`
+- **fiscalité** — Rente dépendance non imposable à l'impôt sur le revenu (hors Madelin). · Cadre Madelin possible : déduction fiscale des cotisations des garanties en rente ; en contrepartie, rente imposable en pensions et rentes viagères à titre gratuit. · Capital décès : exonération totale si bénéficiaire = conjoint, partenaire PACS, ou frère/sœur remplissant 3 conditions (célibataire/veuf/divorcé/séparé ; > 50 ans ou infirme ; vie commune constante les 5 ans précédant le décès). Autres bénéficiaires : 757 B et/ou 990 I CGI. [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22`
+- **valeurs_de_rachat** — L'adhésion ne comporte PAS de valeur de rachat. [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_6e3dedbb6c6b_knowledge_e47bdf2e7075`
+- **mise_en_reduction** — Après au moins 8 années pleines et consécutives de cotisations, en cas de résiliation : maintien partiel de la rente dépendance et du Capital Premiers Frais (si souscrit) par MISE EN RÉDUCTION, selon le barème en vigueur à la date d'effet de la résiliation (coefficients fonction notamment du nombre d'années cotisées, appliqués au montant des garanties ; ajustables tant qu'aucun risque n'est réalisé, sur décision du comité paritaire). La mise en réduction MET FIN aux prestations d'assistance. Le barème de coefficients lui-même ne figure pas dans la notic… [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_933bb6edae6e_knowledge_55a3c4fbd645`
+- **conditions_de_rachat** — conditions_de_rachat. Information documentaire à consulter dans la source. [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117`
+
+
+### Points de vigilance (8)
+
+- **La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €……** — La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €…). [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_points_de_vigilance_16c84e8a15cc_knowledge_00dcf84ccfed`
+- **La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jam…** — La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jamais garantis ; GIR 4 seulement pour la dépendance légère (Capital Premiers Frais). [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_points_de_vigilance_39e9899bad5a_knowledge_38c24a8b1762`
+- **Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).** — Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période). [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_points_de_vigilance_6a2656a952a6_knowledge_d8ab8642609e`
+- **Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).** — Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire). [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_points_de_vigilance_6f230082ba39_knowledge_79617a24203d`
+- **Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.** — Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance. [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_points_de_vigilance_8eb68cebc424_knowledge_c2ef0572d645`
+- **La mise en réduction met fin aux prestations d'assistance.** — La mise en réduction met fin aux prestations d'assistance. [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_points_de_vigilance_acdb551cb108_knowledge_8417d05b72d9`
+- **Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).** — Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral). [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_points_de_vigilance_e441d358bb4c_knowledge_b70fb02a5650`
+- **Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans).** — Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans). [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf) `#axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119`
+
+
+### Formules (2)
+
+- **Rente dépendance totale** — autre · rente_mensuelle = montant_souscrit × taux_revalorisation(adhésion→reconnaissance) × coefficient_réduction_éventuel ; en dépendance partielle : × 0,5 · justification : Formule décrite explicitement comme « le produit des éléments suivants » au §4.3.1.1. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.21, §4.3.1.1 p.21](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=21) `#axa_entourage_2025-06_formule_01`
+- **Capital décès remboursement des cotisations** — autre · capital = Σ cotisations versées (nettes des frais de fractionnement) entre la date d'effet de la garantie et la date du décès · justification : Énoncé littéral §6.2.2. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.27, §6.2.2 p.27](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=27) `#axa_entourage_2025-06_formule_02`
+
+
+### Définitions (6)
+
+- **Actes de la Vie Quotidienne (AVQ)** — 5 actes de référence : transfert (debout/assis/couché dans les 2 sens), déplacement à l'intérieur, alimentation (manger des aliments préalablement servis et coupés, boire), toilette (corps + hygiène de l'élimination), habillage. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.12, 2.1.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=12) `#entour-age:def:a8dc36eba3`
+- **Grille AGGIR / GIR 1-6** — Outil national d'évaluation de la dépendance (GIR 1 = dépendance la plus lourde, GIR 6 = autonomie). L'état de dépendance classé GIR 5 ou 6 n'est JAMAIS garanti par AXA. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.13, 2.1.2 / 2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=13) `#entour-age:def:766361feb1`
+- **Test Folstein** — Test d'évaluation de la dépendance psychique, réalisé par le neurologue ou psychiatre traitant ; disponible sur demande auprès d'AXA Assistance. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.12, 2.1.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=12) `#entour-age:def:7688339d3f`
+- **Dépendance Totale** — 2 conditions cumulatives : (1) état de santé justifiant définitivement l'assistance d'une tierce personne ; (2) selon la nature : physique = incapacité d'exercer seule ≥ 4 des 5 AVQ ; psychique = démence diagnostiquée avec Folstein ≤ 10 ET incitation nécessaire pour ≥ 2 AVQ ; mixte = démence avec Folstein ≤ 15 ET incapacité pour ≥ 3 AVQ. État consolidé, permanent, reconnu par le Médecin Conseil d'AXA. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.13, 2.2.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=13) `#entour-age:def:81f0a11726`
+- **Dépendance Partielle** — 2 conditions cumulatives : (1) GIR 1, 2 ou 3 ; (2) physique = incapacité pour ≥ 3 des 5 AVQ, ou psychique = démence diagnostiquée avec Folstein < 15. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.13, 2.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=13) `#entour-age:def:8934291cab`
+- **Dépendance Légère** — (Pour le Capital Premiers Frais en Formule Totale et Partielle) : GIR 1-4 ET physique = incapacité pour ≥ 2 des 5 AVQ ou psychique = démence avec Folstein < 18. Score évalué par le Médecin Conseil d'AXA. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.13, 2.2.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=13) `#entour-age:def:dd8cd4544e`
+
+
+### Conditions de souscription (3)
+
+- Conditions cumulatives : résider en France métropolitaine, à Monaco ou dans un DOM ; être ou devenir membre ANPERE (droits d'adhésion) ; se soumettre aux formalités médicales demandées ; avoir entre 40 et 75 ans inclus à la signature (âge par différence de millésimes). [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.6, 1.1.2.1 Admissibilité](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=6) `#entour-age:cond:0757925f45`
+- Rente à choisir entre 500 et 3 000 €/mois ; choix de formule (Totale seule ou Totale et Partielle) ; tarification particulière possible pour risque aggravé. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.6, 1.1.2.2 a)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=6) `#entour-age:cond:139ae41e9a`
+- Modifications en cours d'adhésion : possibles à partir de la 3e année pleine, à jour des cotisations, assuré non dépendant ; amélioration de garanties : assuré ≤ 75 ans, acceptation d'AXA, nouveau délai d'attente sur les garanties supplémentaires. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.8, 1.1.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=8) `#entour-age:cond:2a7fe9c4fc`
+
+## Essen'Ciel (assurance obsèques)
+
+
+Assurance obsèques : capital garanti choisi entre 2 000 et 10 000 €, versé en priorité à la personne ou l'entreprise de pompes funèbres ayant pris en charge les obsèques (sur facture, mise à disposition sous 48 h ouvrées après pièces), le solde éventuel aux bénéficiaires subsidiaires. Revalorisation contractuelle garantie de 1 %/an du capital (sans hausse de cotisation) + participation aux bénéfices éventuelle. Cotisations fixes (10 ans, 20 ans ou viagères). Délai d'attente d'1 an pour le décès non accidentel (remboursement des cotisations nettes de frais sinon). Contrat rachetable après 1 an (pénalité dégressive 10 ans) et réductible. Garanties d'assistance avant/pendant/après le décès (rapatriement, services à la personne, soutien psychologique…).
+
+
+### Garanties (5)
+
+- **Garantie décès (capital obsèques)** — Versement du capital garanti (2 000 à 10 000 €, choisi à l'adhésion) : à hauteur des frais d'obsèques à la personne/entreprise de pompes funèbres sur facture (acquittée → remboursement à la personne ayant avancé ; non acquittée → versement direct aux pompes funèbres) ; solde éventuel aux bénéficiaires subsidiaires. Le capital doit obligatoirement être affecté au financement des obsèques à concurrence de leur coût. Mise à disposition sous 48 h (ouvrées) après réception des pièces. Couverture monde entier. Le contrat n'organise PAS les obsèques. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) `#axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb`
+  - Condition : décès de l'assuré
+  - Condition : décès accidentel : dès la prise d'effet ; décès non accidentel : après 1 an (sinon remboursement des cotisations nettes de frais à la succession)
+  - Limite : capital 2 000 - 10 000 €
+  - Limite : le capital peut être insuffisant pour couvrir les frais réels (reliquat à charge des proches)
+- **Revalorisation du capital** — Revalorisation contractuelle GARANTIE de 1 %/an du capital à chaque anniversaire de l'adhésion, sans augmentation de cotisation ; + participation aux résultats techniques et financiers (taux annuel décidé par AXA, attribution au plus tard le 1er avril à effet du 31/12 précédent). La revalorisation est étendue post-mortem jusqu'à réception complète des pièces (L132-5). [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) `#axa_axa_axa_essenciel_2025_06_garanties_9ebc6fa82294_knowledge_6e72c2b48f79`
+- **Assistance dès l'adhésion** — Informations et conseils « Obsèques » (8h-20h30, 7j/7) ; informations juridiques « Obsèques » (succession, fiscalité, juridictions…). [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.23, 6.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=23) `#axa_axa_axa_essenciel_2025_06_garanties_c0b7532da10b_knowledge_580dd13f2d14`
+  - Condition : dès l'adhésion
+  - Limite : renseignements d'ordre documentaire
+- **Assistance au moment du décès** — Rapatriement du corps/cendres jusqu'au lieu d'inhumation en France (frais réels ; cercueil lié au transport : 800 € TTC max ; frais d'obsèques/cérémonie/convois/inhumation à charge de la famille ; rapatriement vers l'étranger possible mais tous frais à charge) ; retour des membres de la famille voyageant avec l'assuré (aller simple) ; présence d'un membre de la famille (A/R + hôtel 3 nuits max à 80 €/nuit, si l'assuré était seul sur place) — PLAFOND GLOBAL de ces 3 garanties : 3 600 € TTC ; monde entier si décès à plus de 30 km du domicile, séjours étra… [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24) `#axa_axa_axa_essenciel_2025_06_garanties_e42b591edf9f_knowledge_8cbfa291bbd8`
+  - Condition : décès à plus de 30 km du domicile pour le volet rapatriement
+  - Condition : appel préalable obligatoire à AXA Assistance avant toute dépense
+  - Limite : 3 600 € TTC (rapatriement+retour+présence)
+  - Limite : cercueil 800 € TTC
+  - Limite : hôtel 80 €/nuit ×3
+  - Limite : 750 € TTC (garde enfants+animaux+aide-ménagère)
+- **Assistance après le décès (proches)** — Soutien psychologique : 6 entretiens max (téléphone et/ou cabinet, remboursement 80 €/séance max en cabinet) pendant 12 mois ; accompagnement social : jusqu'à 3 évaluations téléphoniques par assistant(e) social(e) pendant 3 mois ; plateforme digitale de démarches post-décès (courriers types, 1 an d'accès) ; aide à la mobilité pour personnes seules (accompagnateur taxi/VTC, rayon 50 km, limite 160 € TTC, pendant 3 mois) ; mise en relation entretien/fleurissement de sépulture ; organisation de services à la personne (devis, avantages CESU/fiscaux — coût à… [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.27, 6.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=27) `#axa_axa_axa_essenciel_2025_06_garanties_e659d22109db_knowledge_887ac2922e7f`
+  - Condition : demande d'un membre de la famille
+  - Limite : 6 entretiens psy / 80 €/séance
+  - Limite : aide mobilité 160 € TTC
+  - Limite : 3 évaluations sociales
+
+
+### Exclusions (3)
+
+- **Exclusions assistance** — Excédents de bagages ; frais non justifiés par documents originaux ; frais de documents officiels ; coût des services à la personne organisés mais non pris en charge (§6.2.7) ; interventions étatiques/inter-étatiques. Limites de responsabilité : secours primaires non remboursés ; force majeure, guerre, grèves, cataclysmes, radioactivité, épidémies, risques infectieux/chimiques ; clause sanctions/embargo ONU/UE/UK/USA. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.31, 7.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=31) `#axa_axa_axa_essenciel_2025_06_exclusions_5b2186ce331c_knowledge_29657214c9c8`
+  - Condition : garanties d'assistance
+- **Décès accidentel exclu** — Alcoolémie ≥ limite du Code de la route français ; emprise de stupéfiants ou substances médicamenteuses hors prescription ; attentats/actes terroristes par armes ou matières radioactives, chimiques, bactériologiques ou virales ; action directe ou indirecte de tout agent biologique. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.30, 7.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=30) `#axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d`
+  - Condition : garantie décès (volet accidentel)
+- **Décès exclus** — Suicide ou tentative au cours de la 1re année d'adhésion ; guerre civile ou étrangère, invasions, agressions étrangères, hostilités ; participation active à une guerre où la France ne participe pas, rébellion, révolution, insurrection, prise de pouvoir, mouvement populaire, émeute, terrorisme (légitime défense, assistance à personne en danger et devoir professionnel garantis). [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.30, 7.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=30) `#axa_axa_axa_essenciel_2025_06_exclusions_e72bdb32890b_knowledge_17f7b1238668`
+  - Condition : garantie décès
+  - Limite : légitime défense, assistance à personne en danger, devoir professionnel
+  - Limite : si exclusion appliquée : AXA verse aux bénéficiaires subsidiaires une somme égale à la VALEUR DE RACHAT (L132-18)
+
+
+### Options (3)
+
+- **Modification du capital garanti** — Possible après 1 année pleine de cotisation, avant 86 ans, une fois par année d'adhésion. Augmentation : complément de cotisation (âge + tarif en vigueur + montant) et nouveau délai d'attente d'1 an sur la fraction nouvelle (décès accidentel seul couvert pendant ce délai ; si décès par maladie : capital initial versé + cotisations complémentaires nettes de frais remboursées à la succession). Diminution : recalcul des cotisations. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.22, 5.5](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=22) `#axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad`
+  - Condition : 1 année pleine de cotisations payées
+  - Condition : moins de 86 ans
+  - Condition : 1 fois par année d'adhésion
+- **Réduction adhésion simultanée (couple)** — Adhésion simultanée de l'adhérent et de son partenaire de vie (époux, PACS, concubin) : réduction permanente de 10 % sur l'ensemble des cotisations des 2 adhésions. Prend fin en cas de rachat, résiliation ou mise en réduction de l'une des adhésions. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.17, 4.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=17) `#axa_axa_axa_essenciel_2025_06_options_de0a3dff8347_knowledge_6e47ac594507`
+  - Condition : adhésion simultanée
+- **Choix de la durée de cotisation** — Cotisations temporaires 10 ans ou 20 ans (âge < 90 ans au paiement de la dernière cotisation) ou viagères. Cotisation viagère mensuelle plus faible, mais le cumul versé peut dépasser le capital garanti dans tous les cas. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.8, 1. exemple](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=8) `#axa_axa_axa_essenciel_2025_06_options_e59c0ac74c82_knowledge_786fe21d3933`
+  - Condition : choix à l'adhésion
+
+
+### Cotisations & prix (6)
+
+- **réductions** — Réduction couple 10 % · Voir options. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0d109ff2f1ce_knowledge_b64c3388e76a`
+- **défaut_de_paiement** — au-delà de la première année, l'adhésion sera mise en réduction [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.18, 4.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=18) `#axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0fdc19816413_knowledge_010612cb7537`
+- **frais** — Frais de fonctionnement et de gestion de la garantie décès · Inclus dans les cotisations, exprimés en % du capital souscrit, fonction de l'âge à l'adhésion et de la durée : 0,9 % max du capital souscrit pour les cotisations viagères ; 0,4 % max pour les cotisations 10 ans ; 0,4 % max pour les cotisations 20 ans. Ces frais n'affectent pas le capital garanti. · Pénalité de rachat · 5 % de la valeur de rachat la 1re année, diminuée de 0,5 % par année ; nulle au-delà de la 10e année. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8`
+- **exemples_chiffrés** — Capital 5 000 € souscrit → 5 804,92 € après 12 ans (revalorisation 1 %/an, +16 % global). · 50 ans, capital 4 500 € : 48,84 €/mois (10 ans) ou 25,12 €/mois (viager). [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d352dd9df6b0_knowledge_a18b90c925a0`
+- **tableaux** — Exemple de cumul de cotisations (60 ans, capital 5 000 €) · 18 · type · durée · cotisation_annuelle_eur · cumul à 65/70/75/80/85/90/95 ans · Viager · jusqu'au décès · 390.68 · 1953 · 3907 · 5860 · 7814 · 9767 · 11720 · 13674 · Temporaire · 20 ans · 423.39 · 2117 · 4234 · 6351 · 8468 · 10 ans · 663.61 · 3318 · 6636 [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d54c486f45e6_knowledge_9b690d586091`
+- **mode_calcul** — Cotisation déterminée à l'adhésion selon : montant du capital choisi (2 000-10 000 €), âge de l'adhérent (différence de millésimes), durée de paiement (10 ans, 20 ans, viagère). Cotisations CONSTANTES (n'évoluent ni avec l'âge ni avec l'état de santé). Payables d'avance, périodicité mensuelle/trimestrielle/semestrielle/annuelle. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d5f8f13b0b5c_knowledge_a95f12312a57`
+
+
+### Délais & franchises (6)
+
+- **30 jours calendaires révolus ; remboursement intégral sous 30 jours** — 30 jours calendaires révolus ; remboursement intégral sous 30 jours [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.33, 8.3 Par renonciation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=33) `#axa_axa_axa_essenciel_2025_06_delais_carences_franchises_03376793904c_knowledge_ed2b1ff2548f`
+- **48 h (jours ouvrés) après réception de toutes les pièces justificatives** — 48 h (jours ouvrés) après réception de toutes les pièces justificatives [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.38, 10.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=38) `#axa_axa_axa_essenciel_2025_06_delais_carences_franchises_21965f763a67_knowledge_c36b182e6cb5`
+- **1 an ; en cas de décès non accidentel pendant ce délai : remboursement à la succession des cotisations versées nettes de frais de fonctionnement et de gestion** — 1 an ; en cas de décès non accidentel pendant ce délai : remboursement à la succession des cotisations versées nettes de frais de fonctionnement et de gestion [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.32, 8.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=32) `#axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73`
+- **2 mois max après réception des pièces** — 2 mois max après réception des pièces [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.35, 8.3 Modalités de paiement](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=35) `#axa_axa_axa_essenciel_2025_06_delais_carences_franchises_57a01f7012c4_knowledge_8336ecd3eb5c`
+- **2 ans (régime L114-1 s., détails au §11.2)** — 2 ans (régime L114-1 s., détails au §11.2) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.41, 11.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=41) `#axa_axa_axa_essenciel_2025_06_delais_carences_franchises_721dff430cbb_knowledge_f273b2650a93`
+- **dépôt CDC 10 ans après connaissance du décès OU 120e anniversaire de l'assuré (si aucune opération depuis 2 ans et recherche infructueuse) ; acquisition par l'…** — dépôt CDC 10 ans après connaissance du décès OU 120e anniversaire de l'assuré (si aucune opération depuis 2 ans et recherche infructueuse) ; acquisition par l'État 20 ans après dépôt [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.39, 10.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=39) `#axa_axa_axa_essenciel_2025_06_delais_carences_franchises_d1a4a99c46a0_knowledge_d17b80e56b2c`
+
+
+### Fiscalité (5)
+
+- **valeurs_de_rachat** — Rachat TOTAL possible après la première année. Valeur de rachat = provision mathématique, fonction de l'âge à l'adhésion, des années payées, du capital et du type/durée de cotisation. Pénalité : 5 % la 1re année, -0,5 %/an, nulle au-delà de la 10e. La valeur de rachat peut être inférieure au cumul des cotisations versées. Règlement sous 2 mois max après réception des pièces (demande signée, original du certificat, pièce d'identité, RIB, accord du bénéficiaire acceptant le cas échéant). Le rachat met fin à l'adhésion. Accord du bénéficiaire acceptant req… [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_10b11fed39d8_knowledge_81a9d27bb02d`
+- **conditions_de_rachat** — après la 1re année d'adhésion · accord du bénéficiaire acceptant (L132-9) · pièces : demande signée, original du certificat d'adhésion, justificatif d'identité, RIB [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_622c88ea9f4b_knowledge_9e5bc789bca2`
+- **fiscalité** — Support en euros : promotion de caractéristiques environnementales (SFDR) ; annexes durabilité p.49 s. ; pas de part minimale obligatoire d'actifs durables. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_6b52755aa9bc_knowledge_bf8cc347b759`
+- **determination_part_taxable** — Régime fiscal de l'assurance vie (au 01/01/2025) : en cas de RACHAT, les PRODUITS attachés au contrat sont imposables (prélèvement forfaitaire ou, sur option expresse et irrévocable, barème progressif après abattement — art. 125-0 A et 200 A CGI) + prélèvements sociaux. En cas de DÉCÈS : capital exonéré de droits de succession et de la taxation 990 I si bénéficiaire = conjoint, partenaire PACS ou, sous conditions, frères et sœurs. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641`
+- **mise_en_reduction** — En cas d'arrêt de paiement au-delà de la 1re année : mise en réduction = nouveau capital garanti réduit (fonction âge à l'adhésion, années révolues payées, capital choisi, type/durée de cotisation). Rachat substitué d'office si VR < 1/2 SMIC mensuel brut (R132-2). Met fin aux garanties d'assistance. Tableaux d'exemples contractuels (voir tableaux_contractuels). [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_94c8368f6856_knowledge_d80119f3d2ae`
+
+
+### Points de vigilance (7)
+
+- **Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).** — Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations). [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_points_de_vigilance_0a61c726cd35_knowledge_4ebecf35bc1c`
+- **Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 € de VR pour 3 907 € versés à 10 ans).** — Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 € de VR pour 3 907 € versés à 10 ans). [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_points_de_vigilance_62de1e7dadfb_knowledge_09e6e3b5f2e2`
+- **Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes de frais.** — Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes de frais. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174`
+- **Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, quelle que soit la formule (avertissement contractuel explici…** — Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, quelle que soit la formule (avertissement contractuel explicite p.8). [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_points_de_vigilance_aeb56e7d32c3_knowledge_2c080b3d95be`
+- **En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiaires (L132-18).** — En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiaires (L132-18). [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c`
+- **Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec le capital obsèques.** — Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec le capital obsèques. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_points_de_vigilance_d5ec81079541_knowledge_86cdae42467c`
+- **La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance.** — La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf) `#axa_axa_axa_essenciel_2025_06_points_de_vigilance_e2fddb92cc3a_knowledge_194eb1adda54`
+
+
+### Formules (3)
+
+- **Capital revalorisé** — autre · capital(t) = capital_souscrit × 1,01^t (+ participation aux bénéfices éventuelle) · justification : Revalorisation contractuelle garantie de 1 %/an ; vérifiée sur l'exemple p.7 : 5 000 × 1,01^12 = 5 634 ? Non : l'exemple contractuel donne 5 804,92 € (+16 %), supérieur à 1,01^12 (+12,7 %) — l'exemple semble inclure d'autres revalorisations ou une base différente : voir zones_ambiguës. La formule en composé simple reste l'interprétation littérale du §5.2.1. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, §5.2.1 p.20 + exemple p.7](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) `#axa_essenciel_2025-06_formule_01`
+- **Pénalité de rachat** — valeur_de_rachat · pénalité(année n) = max(0 ; 5 % − 0,5 % × (n − 1)) × valeur_de_rachat, nulle à partir de la 11e année · justification : Texte explicite : 5 % la 1re année, -0,5 %/an, nulle au-delà de la 10e année. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.33, §8.3 p.33](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=33) `#axa_essenciel_2025-06_formule_02`
+- **Valeur de rachat** — valeur_de_rachat · VR(t) = provision mathématique(t) − pénalité éventuelle ; PM = engagement futur de l'assureur − engagement futur de l'assuré (calcul actuariel non reproduit dans la notice ; seuls les tableaux d'exemples chiffrés sont contractuels) · justification : Définition donnée mais paramètres actuariels (tables, taux) non publiés : seuls les minima des tableaux sont garantis. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.35, §8.3 p.33-35](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=35) `#axa_essenciel_2025-06_formule_03`
+
+## Essen'Ciel Patrimoine
+
+
+Capital décès aux bénéficiaires désignés. L'adhésion NE comporte PAS de garantie en capital au moins égale aux sommes versées nettes de frais. Participation aux bénéfices (Code des assurances, non contractuelle). Faculté de rachat (règlement sous 2 mois) avec tableau des valeurs de rachat au terme des 8 premières années. Mise en réduction possible. Durée viagère ; le décès ou le rachat total met fin à l'adhésion.
+
+
+### Garanties (2)
+
+- **Garantie décès — versement d'un capital aux bénéficiaires** — En cas de décès de l'assuré, versement d'un capital au(x) bénéficiaire(s) désigné(s). Cadre fiscal assurance vie. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.2, 4, 16, 1.1, 2.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=2) `#axa_essenciel_patrimoine_2023-09_garantie_e7d9ed7ecece`
+  - Condition : décès de l'assuré
+  - Condition : bénéficiaire(s) désigné(s)
+  - Condition : réception des pièces justificatives
+  - Limite : Pas de garantie plancher égale aux versements nets de frais (≠ épargne garantie).
+- **Revalorisation / participation aux bénéfices** — Pas de PB contractuelle, mais participation aux bénéfices selon le Code des assurances ; revalorisation possible du capital décès. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.6, 8, 2.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=6) `#axa_essenciel_patrimoine_2023-09_garantie_382e69377b50`
+  - Condition : adhésion en cours à la date d'attribution
+  - Limite : PB non garantie contractuellement (dépend des résultats de l'assureur).
+
+
+### Exclusions (1)
+
+- **Risques exclus de la garantie décès** — Décès exclu si : suicide la 1re année, guerre civile/étrangère, et autres cas listés §2.4. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.6, 2.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=6) `#axa_essenciel_patrimoine_2023-09_exclusion_90a4216e1cb7`
+  - Limite : Délai de carence suicide : 1re année. Vérifier la liste complète des exclusions en notice §2.4 (p.6).
+
+
+### Options (4)
+
+- **Faculté de rachat (total / partiel) + tableau des valeurs de rachat** — Le contrat comporte une faculté de rachat ; règlement sous 2 mois. Un tableau des valeurs de rachat au terme des 8 premières années figure dans la notice (§4.3). [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.2, 14, 15, 4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=2) `#axa_essenciel_patrimoine_2023-09_option_d5aed7e8f30b`
+  - Condition : demande de l'adhérent
+  - Limite : Valeurs de rachat des 1res années faibles (frais) ; hors prélèvements sociaux et fiscaux dans les exemples.
+- **Mise en réduction (valeur de réduction)** — Si l'adhérent cesse de payer les cotisations, l'adhésion peut être mise en réduction : un nouveau capital garanti (valeur de réduction) est calculé. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.13, 14, 15, 4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=13) `#axa_essenciel_patrimoine_2023-09_option_4c8a4bdf86b1`
+  - Condition : arrêt du paiement des cotisations
+  - Limite : La réduction diminue le capital garanti ; fin de la réduction tarifaire conjoint (10 %).
+- **Réduction tarifaire couple (-10 %)** — Adhésion simultanée de l'adhérent et de son conjoint (marié/PACS/concubin) : -10 % permanent sur l'ensemble des cotisations. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.13, 4.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=13) `#axa_essenciel_patrimoine_2023-09_option_133833a39642`
+  - Condition : adhésion simultanée des deux conjoints
+  - Limite : La réduction cesse si l'un rachète ou met en réduction.
+- **Prestations d'assistance (suite au décès)** — Prestations d'assistance fournies par AXA Assistance (suite au décès de l'assuré). [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.7, 9, 10, 3.x](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=7) `#axa_essenciel_patrimoine_2023-09_option_1c3ca5ad4e41`
+  - Limite : Territorialité assistance limitée (voir territorialité).
+
+
+### Fiscalité (1)
+
+- **Régime fiscal — assurance vie (transmission)** — Régime fiscal de l'assurance vie : transmission via art. 990 I et 757 B du CGI (selon âge des versements). Avantage de transmission hors succession dans les limites légales. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.5, 16, Régime fiscal](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=5) `#axa_essenciel_patrimoine_2023-09_fiscalite_d81aa98e400a`
+  - Limite : Annexe fiscale datée (2018) ; vérifier la fiscalité EN VIGUEUR au moment du conseil. Distinguer 990 I (versements avant 70 ans) et 757 B (après 70 ans).
+
+
+### Points de vigilance (6)
+
+- NE PAS confondre avec Essen'Ciel (obsèques) : Patrimoine = transmission, cadre assurance vie, faculté de rachat. `#axa_essenciel_patrimoine_2023-09_point_vigilance_09cc2c565c43`
+- Pas de garantie en capital ≥ versements nets de frais (ce n'est pas une épargne garantie). `#axa_essenciel_patrimoine_2023-09_point_vigilance_7e9993e4030f`
+- Valeurs de rachat/réduction faibles les 1res années ; tableau à vérifier en notice (§4.3). `#axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c`
+- Âge à l'adhésion 18–65 ans ; formalités médicales possibles. `#axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f`
+- Fiscalité datée dans la notice (2018) → vérifier la fiscalité en vigueur. `#axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753`
+- Assistance limitée (France/DOM/Monaco) alors que le décès est couvert mondialement. `#axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0`
+
+## Excelium (assurance vie)
+
+
+Assurance vie multisupport : épargne disponible (rachats), capital au terme ou rente viagère sur proposition, capital décès aux bénéficiaires. Trois familles de supports : euros (capital garanti net de frais, PB contractuelle sans minimum garanti), fonds Croissance (garantie de 100 % des sommes nettes de frais à l'échéance — 10 ans prorogeable, participation aux résultats 100 %), unités de compte (capital non garanti). Trois types de gestion : personnelle, par convention, pilotée (sous mandat). Garantie décès plancher « Sérénité » incluse (jusqu'à 80 ans) et garantie « Revalorisée » (Livret A) automatique sous conditions. Frais plafonnés contractuellement (annexe 3). Rachat à tout moment, règlement sous 2 mois.
+
+
+### Garanties (4)
+
+- **Garantie en cas de décès** — Capital décès = épargne tous supports confondus, OU montant dû au titre de la garantie « Sérénité », OU montant dû au titre de la garantie « Revalorisée ». Le versement met fin à l'adhésion. [Notice : 2026-05 Notice Excelium Vie.pdf, p.15, 4.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=15) `#axa_axa_axa_excelium_vie_2026_05_garanties_646ff8db73da_knowledge_44cff956d072`
+  - Condition : décès de l'assuré avant le terme
+- **Garantie « Revalorisée »** — Souscrite automatiquement et exclusivement si gestion par convention Conviction Fortissimo ou Horizon Actions Fortissimo (sans fonds Croissance) ET âge < 70 ans à l'adhésion. Capital décès minimum = cumul des versements NETS revalorisés au taux mensuel du Livret A (du 1er jour du mois suivant l'encaissement au dernier jour du mois précédant le décès), minorés proportionnellement à chaque rachat partiel. Effet à la fin du délai de renonciation ; cesse en cas de changement de gestion/convention avec fonds Croissance, rachat total, renonciation, ou au 1er… [Notice : 2026-05 Notice Excelium Vie.pdf, p.16, 4.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=16) `#axa_axa_axa_excelium_vie_2026_05_garanties_74ce8a266629_knowledge_ea183a5624f4`
+  - Condition : convention Fortissimo sans fonds Croissance
+  - Condition : < 70 ans à l'adhésion
+  - Limite : capital sous risque max 1 200 000 €/assuré
+- **Garantie « Sérénité » (plancher, incluse)** — Capital décès jamais inférieur aux versements BRUTS de frais diminués des rachats. Cesse au 80e anniversaire (coût inclus dans les frais de gestion des UC, prélevé toute la durée y compris après 80 ans). Fonds Croissance : si décès entre 80 et 90 ans avant l'échéance, minimum = montant garanti du fonds Croissance, sans frais. Cesse en cas de renonciation ou rachat total. [Notice : 2026-05 Notice Excelium Vie.pdf, p.15, 4.2.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=15) `#axa_axa_axa_excelium_vie_2026_05_garanties_c32aff3d329b_knowledge_f37b388cf816`
+  - Condition : incluse automatiquement
+  - Limite : plancher = versements bruts − rachats
+  - Limite : jusqu'à 80 ans (90 ans pour le volet fonds Croissance)
+- **Garantie en cas de vie (au terme)** — Capital, ou sur proposition de l'assureur rente viagère (conditions et tarif en vigueur à la demande : frais d'arrérage, taux technique, table de mortalité ; trop-perçus post-décès remboursés par les héritiers). Le règlement met fin à l'adhésion. [Notice : 2026-05 Notice Excelium Vie.pdf, p.15, 4.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=15) `#axa_axa_axa_excelium_vie_2026_05_garanties_d4df6041404f_knowledge_6cd775321f12`
+  - Condition : vie de l'assuré au terme
+  - Condition : demande de l'adhérent
+
+
+### Exclusions (1)
+
+- **Exclusions de la garantie « Revalorisée »** — Suicide/tentative (conscient ou non) ou tout acte volontaire de l'assuré dans l'année suivant la prise d'effet ; guerre civile/étrangère/insurrection, opérations de maintien de l'ordre/paix ; accident en conduite d'engin à moteur avec alcoolémie ≥ taux légal du pays ou sous toxiques/stupéfiants/médicaments non prescrits ; accident antérieur à la prise d'effet ou maladie à premières manifestations antérieures, sauf acceptation expresse d'AXA. [Notice : 2026-05 Notice Excelium Vie.pdf, p.16, 4.2.2 Exclusions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=16) `#axa_axa_axa_excelium_vie_2026_05_exclusions_54ca499b394e_knowledge_1e79d12cb875`
+  - Condition : garantie Revalorisée uniquement
+  - Limite : acceptation expresse d'AXA pour les antériorités
+
+
+### Options (3)
+
+- **Prorogation du fonds Croissance** — Option expresse, sans frais, à tout moment : à l'échéance, la garantie (10 ans) est prorogée ; renonciation possible par lettre simple ; l'assureur peut refuser jusqu'à 3 mois avant l'échéance. Les prélèvements sociaux du fonds Croissance sont reportés à la nouvelle échéance. [Notice : 2026-05 Notice Excelium Vie.pdf, p.20, 5.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=20) `#axa_axa_axa_excelium_vie_2026_05_options_1cdccb5c2dfd_knowledge_e2f08d8f4d98`
+- **Types de gestion** — Gestion personnelle (libre choix des supports) ; gestion par convention (profils, dont conventions Conviction/Horizon, avec ou sans fonds Croissance, équilibrages automatiques) ; gestion pilotée / sous mandat (profils d'allocation, frais de mandat +0,25 %/an sur UC). Options d'arbitrage automatique en gestion personnelle : investissement progressif (0 %), sécurisation des performances (0,80 %), stop loss (0 %). [Notice : 2026-05 Notice Excelium Vie.pdf, p.79, Annexe 3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=79) `#axa_axa_axa_excelium_vie_2026_05_options_6daa8e90677e_knowledge_74b7d68ed563`
+  - Condition : minima de versement différents (300 € / 5 000 € en pilotée / 10 000 € avec investissement progressif en pilotée)
+- **Rachats partiels programmés** — Durée max 3 ans, montant en euros (brut ou net de fiscalité), périodicité au choix ; min 150 €/rachat, valeur de rachat restante ≥ 750 € ; incompatible avec versements programmés et options d'arbitrage automatique ; modifications avec préavis 1 mois ; une seule suspension/reprise ; l'assureur peut arrêter l'option. [Notice : 2026-05 Notice Excelium Vie.pdf, p.45, 7.1.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=45) `#axa_axa_axa_excelium_vie_2026_05_options_a2272a8885f5_knowledge_cdbcbea03f9e`
+  - Condition : après le délai de renonciation
+  - Condition : acceptation de l'assureur
+
+
+### Cotisations & prix (5)
+
+- **mode_calcul** — Versements libres et/ou programmés. Minima (annexe 3, au 20/05/2026) : versement initial 300 € (5 000 € gestion pilotée ; 10 000 € avec investissement progressif en pilotée) ; complémentaires 750 € ; programmés 50 €/mois, 150 €/trimestre, 300 €/semestre, 600 €/an ; rachat partiel 750 € (programmé : 150 €) avec solde minimal 750 € ; arbitrage gestion personnelle 750 €. [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_171c5a3a4b19_knowledge_833f37b8be6f`
+- **tableaux** — tableaux. Information documentaire à consulter dans la source. [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_297d8ca1d613_knowledge_5d36dfd4585a`
+- **exemples_chiffrés** — VR support euros après 1 an pour 2 500 € nets : 2 500 × (1 − 0,8 %) = 2 480 €. · Prime mensuelle Revalorisée : 30 ans, capital sous risque 250 € → 0,04 €/mois ; 75 ans → 1,48 €/mois. [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_4f3778d27635_knowledge_d5c460f0fa07`
+- **frais** — Frais de dossier · 30 € maximum, prélevés uniquement au premier versement (conditions de suppression possibles, art. 5.1.1). · Droits d'adhésion ANPERE · 15 € maximum, une fois, pour les non-adhérents. · Frais sur versements · 4,85 % maximum sur chaque versement (illustrations plafonnées à 5 % cumulé la 1re année avec frais de dossier). · Frais de gestion · Support en euros : 0,80 %/an max ; fonds Croissance : 0,80 %/an max (taux mensuel équivalent 0,0669 %) ; UC hors mandat et hors AXA Immo Avenir : 0,96 %/an max (0,0804 %/mois) ; AXA Immo Avenir : 1,5… [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_58fc69bea0e9_knowledge_6dce3bffa380`
+- **réductions** — réductions. Information documentaire à consulter dans la source. [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674`
+
+
+### Délais & franchises (3)
+
+- **résiliation définitive de la garantie 40 jours après l'envoi de la LR** — résiliation définitive de la garantie 40 jours après l'envoi de la LR [Notice : 2026-05 Notice Excelium Vie.pdf, p.17, 4.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=17) `#axa_axa_axa_excelium_vie_2026_05_delais_carences_franchises_263e9fdfb993_knowledge_59f8e985663a`
+- **2 mois max (délais supérieurs à 3 semaines possibles sur supports non cotés/immobiliers)** — 2 mois max (délais supérieurs à 3 semaines possibles sur supports non cotés/immobiliers) [Notice : 2026-05 Notice Excelium Vie.pdf, p.44, 7.1.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=44) `#axa_axa_axa_excelium_vie_2026_05_delais_carences_franchises_7cd811231573_knowledge_14d553d90326`
+- **30 jours calendaires révolus à compter de l'information de la conclusion (signature du bulletin) ; remboursement intégral ; met fin à toutes les garanties** — 30 jours calendaires révolus à compter de l'information de la conclusion (signature du bulletin) ; remboursement intégral ; met fin à toutes les garanties [Notice : 2026-05 Notice Excelium Vie.pdf, p.60, 8.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=60) `#axa_axa_axa_excelium_vie_2026_05_delais_carences_franchises_f53d6c273460_knowledge_c3f8fe42d976`
+
+
+### Fiscalité (5)
+
+- **mise_en_reduction** — mise_en_reduction. Information documentaire à consulter dans la source. [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_3dfb729787c5_knowledge_8280ed50233d`
+- **fiscalité** — fiscalité. Information documentaire à consulter dans la source. [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba`
+- **conditions_de_rachat** — à tout moment · rachat partiel ≥ 750 € et solde ≥ 750 € · accord du bénéficiaire acceptant [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_85bea04ba9d3_knowledge_ad9b384335e5`
+- **determination_part_taxable** — Rachat : seuls les PRODUITS sont imposables. Versements avant le 27/09/2017 : IR par défaut, option PFL irrévocable (7,5 % à 8 ans+, tous ces versements ayant plus de 8 ans au 01/01/2026). Versements depuis le 27/09/2017 : PFU par défaut — 12,8 % avant 8 ans ; après 8 ans : 7,5 % pour les produits issus de versements ≤ 150 000 € (primes nettes au 31/12 N-1, tous contrats) et 12,8 % au-delà ; option globale possible pour le barème progressif. Abattement annuel après 8 ans : 4 600 € (seul) / 9 200 € (couple). Prélèvements sociaux 17,2 % (produits depuis 1… [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_c0f287ca10a5_knowledge_4b1481c5d49d`
+- **valeurs_de_rachat** — Faculté de rachat partiel ou total à tout moment ; valeur de rachat = somme des valeurs sur Global Euro + fonds Croissance + UC ; UC/parts converties en euros à la date de valeur applicable. Versement sous 2 mois max après demande complète ; délai possible > 3 semaines pour AXA Immo Avenir, AXA Avenir Infrastructure, AXA Avenir Entrepreneurs. Minima : rachat partiel 750 € (programmé 150 €), solde restant ≥ 750 €. Rachat total = fin de l'adhésion ; accord du bénéficiaire acceptant requis. [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_ee50e7e2015b_knowledge_076ec1b062c1`
+
+
+### Points de vigilance (7)
+
+- **Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).** — Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC). [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_0aa645be29d8_knowledge_2075dc1b8feb`
+- **Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.** — Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€. [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_218bb9d14039_knowledge_adbe0d8ec182`
+- **Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.** — Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans. [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_33113b1f8da2_knowledge_5731bc2dd8df`
+- **UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).** — UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital). [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_6dbdc19c69e0_knowledge_ab0f944dd026`
+- **Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).** — Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans). [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_73a0c3f0cb6e_knowledge_63403609a675`
+- **AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.** — AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés. [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_ad67ed6a280f_knowledge_c720aef2dd6c`
+- **Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.** — Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant. [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_c375b97eae3b_knowledge_7109df78eb58`
+
+
+### Formules (4)
+
+- **Valeur de rachat minimale support euros** — valeur_de_rachat · VR(n) = versement_net_initial × (1 − 0,008)^n · justification : Formule écrite en toutes lettres p.47 et vérifiée sur le tableau (2 500 → 2 480 → … → 2 307). [Notice : 2026-05 Notice Excelium Vie.pdf, p.46, 7.1.3 p.46-47](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=46) `#axa_excelium_vie_2026-05_formule_01`
+- **Nombre d'UC/parts après frais** — valeur_de_rachat · N(n) = N0 × (1 − taux_mensuel)^(12n), avec taux_mensuel = 0,0669 % (Croissance), 0,0804 % (UC standard), 0,1014 % (UC pilotée), 0,1259 % (AXA Immo Avenir) · justification : Exemples de calcul explicites p.47 (99,200 = 100 × (1−0,0669 %)^12, etc.). [Notice : 2026-05 Notice Excelium Vie.pdf, p.47, 7.1.3 p.47](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=47) `#axa_excelium_vie_2026-05_formule_02`
+- **Prime mensuelle garantie Revalorisée** — cotisation · prime = capital_sous_risque_fin_de_mois × tarif_mensuel(âge) · justification : Formule contractuelle explicite (p.17 et p.48) + exemples chiffrés vérifiés (250 € × 0,0142 % = 0,0355 ≈ 0,04 €). [Notice : 2026-05 Notice Excelium Vie.pdf, p.17, 4.2.2 p.17-18](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=17) `#axa_excelium_vie_2026-05_formule_03`
+- **Montant garanti Revalorisée** — autre · MG = Σ versements_nets × Π(1 + taux_mensuel_LivretA) sur la période [mois suivant l'encaissement ; mois précédant le décès] − minorations proportionnelles aux rachats · justification : Description littérale §4.2.2 ; le mode exact de composition mensuelle du taux Livret A n'est pas formalisé en équation dans la notice. [Notice : 2026-05 Notice Excelium Vie.pdf, p.16, 4.2.2 p.16](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=16) `#axa_excelium_vie_2026-05_formule_04`
+
+
+### Définitions (3)
+
+- **Fonds Croissance** — Engagements donnant lieu à constitution d'une provision de diversification : garantie en capital à l'ÉCHÉANCE égale à 100 % des sommes versées nettes de frais sur versements ; valeur de part fluctuante entre-temps ; durée initiale de garantie 10 ans, prorogeable (l'assureur peut refuser la prorogation jusqu'à 3 mois avant l'échéance). [Notice : 2026-05 Notice Excelium Vie.pdf, p.2, Encadré + 5.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=2) `#excelium-assurance-vie:def:e60bade006`
+- **Capital sous risque (garantie Revalorisée)** — Différence positive entre le montant garanti et la valeur de l'épargne au dernier jour du mois. [Notice : 2026-05 Notice Excelium Vie.pdf, p.17, 4.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=17) `#excelium-assurance-vie:def:6786e29652`
+- **Versements nets** — Versements bruts moins droits d'adhésion, frais de dossier et frais sur versements. [Notice : 2026-05 Notice Excelium Vie.pdf, p.16, 4.2.2 note (1)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=16) `#excelium-assurance-vie:def:260046ebea`
+
+
+### Conditions de souscription (2)
+
+- Adhésion ANPERE ; versement initial minimum 300 € (5 000 € en gestion pilotée) ; choix du type de gestion et de la répartition. [Notice : 2026-05 Notice Excelium Vie.pdf, p.79, Annexe 3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=79) `#excelium-assurance-vie:cond:04d661bd25`
+- Garantie Revalorisée : réservée aux conventions Fortissimo sans fonds Croissance et aux adhérents < 70 ans. [Notice : 2026-05 Notice Excelium Vie.pdf, p.16, 4.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=16) `#excelium-assurance-vie:cond:24412e8c29`
+
+## Ma Protection Accident (Garantie des accidents de la vie)
+
+
+Contrat de garantie des accidents de la vie (GAV) indemnisant, selon le droit commun et un barème contractuel AQV, les préjudices consécutifs à un accident de la vie privée (activités courantes, événements exceptionnels, accidents médicaux, certains cas de conduite) entraînant le décès ou un déficit fonctionnel permanent d'au moins 1 %. Services d'assistance inclus même sous le seuil d'intervention. Option « Mes Sports à risque ». Le contrat est constitué des Conditions générales et des Conditions particulières (qui prévalent en cas de contradiction) ; formules, plafonds et cotisations figurent aux Conditions particulières.
+
+
+### Garanties (7)
+
+- **Accidents lors de la conduite d'un véhicule (dérogations)** — Par dérogation à l'exclusion circulation : véhicule 4 roues loué < 3 mois ; engin de jardinage autoporteur ou fauteuil roulant ; enfant < 12 ans conduisant un véhicule à moteur pour enfant ; victime impliquant son propre véhicule alors qu'elle n'avait plus/pas encore la qualité de conducteur. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.5, 1.2 conduite d'un véhicule](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=5) `#axa_axa_axa_ma_protection_accident_2024_03_garanties_26e5f14dc994_knowledge_debe9a9a0e38`
+- **Accidents médicaux et infections nosocomiales** — Accidents médicaux dont le fait générateur est postérieur à la prise d'effet, première manifestation dommageable pendant la garantie, avec conséquences anormales au regard de l'état initial du patient et de son évolution prévisible. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.4, 1.2 Les accidents médicaux](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=4) `#axa_axa_axa_ma_protection_accident_2024_03_garanties_72021e69b219_knowledge_0bef033c84e0`
+  - Condition : fait générateur postérieur à la prise d'effet
+  - Condition : condition d'anormalité remplie
+  - Condition : dommages EN DESSOUS des critères de gravité ouvrant droit à indemnisation par l'ONIAM
+- **Préjudices indemnisés selon droit commun** — Assistance tierce personne (ATP) ; frais de logement adapté (FLA) ; frais de véhicule adapté (FVA) ; pertes de gains professionnels actuels (PGPA) ; pertes de gains professionnels futurs (PGPF, capitalisation au barème des organismes sociaux R376-1/R454-1 CSS). [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.9, 3.2.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=9) `#axa_axa_axa_ma_protection_accident_2024_03_garanties_8b91476378b2_knowledge_266f5c0542dc`
+  - Condition : accident garanti avec DFP ≥ 1 %
+  - Limite : ATP : 10 €/h si DFP ≤ 30 %, 14 €/h si DFP > 30 %
+  - Limite : PGPA plafonné à 50 000 €
+- **Indemnisation des préjudices corporels (barème AQV)** — Indemnisation contractuelle des postes DFP (0-100), Préjudice Esthétique Permanent (0-7) et Souffrances Endurées (0-7) selon l'indice AQV (= somme des trois, arrondi à l'entier supérieur) et l'âge à la consolidation, suivant le tableau contractuel. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.7, 3.2.1 En cas de dommages corporels](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=7) `#axa_axa_axa_ma_protection_accident_2024_03_garanties_9f89adc0658d_knowledge_de02ca1df5b3`
+  - Condition : DFP imputable à l'accident ≥ 1 %
+  - Limite : maximum 600 000 € (AQV ≥ 100, tranche 0-19 ans)
+  - Limite : plafond de garantie indiqué aux Conditions particulières (cumul aggravations)
+- **En cas de décès** — Remboursement des frais d'obsèques (frais réels, limite 5 000 €) à la personne justifiant les avoir réglés ; si conjoint/enfant/famille couverts : préjudice d'affection (PAF), frais divers (FD), pertes de revenus des proches (PR, capitalisées). [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.9, 3.2.2 En cas de décès](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=9) `#axa_axa_axa_ma_protection_accident_2024_03_garanties_ab5b155c98dd_knowledge_f44230ee79a8`
+  - Condition : décès exclusivement lié à l'accident garanti
+  - Limite : frais d'obsèques : 5 000 €
+- **Accidents corporels d'activités courantes** — Accidents survenus lors d'activités domestiques, scolaires et de loisirs pendant la période d'effet ; activités sportives en baptême ou initiation encadrée par personnes qualifiées d'une structure habilitée. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.4, 1.2 Les accidents de la vie pris en compte](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=4) `#axa_axa_axa_ma_protection_accident_2024_03_garanties_e1f5f51c7ef1_knowledge_b9e1422d7074`
+  - Condition : pendant la période d'effet des garanties
+  - Condition : conditions de territorialité (art. 1.4)
+  - Condition : hors exclusions (art. 2)
+  - Limite : limites fixées aux Conditions particulières
+- **Accidents corporels lors d'événements exceptionnels** — Catastrophes naturelles, industrielles ou technologiques ; agressions, vandalisme ; terrorisme, attentats, infractions des articles 706-3 et suivants du Code de procédure pénale ; mouvements populaires et rassemblements sur la voie publique. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.4, 1.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=4) `#axa_axa_axa_ma_protection_accident_2024_03_garanties_f523b50de602_knowledge_daf339abe06e`
+  - Condition : pendant la période d'effet des garanties
+
+
+### Exclusions (8)
+
+- **Faits intentionnels, suicide** — Dommages corporels que l'assuré s'est causés intentionnellement ; conséquences du suicide ou d'une tentative de suicide. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.6, 2.](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=6) `#axa_axa_axa_ma_protection_accident_2024_03_exclusions_056b97629881_knowledge_04ae4fbde1d2`
+  - Condition : toutes garanties
+- **Affections même consécutives à un accident garanti** — Affections cardio-vasculaires et vasculaires cérébrales ; affections virales, parasitaires, mycosiques ; affections musculaires, articulaires, tendineuses et discales sans cause extérieure (pathologies disco-vertébrales, rhumatismales, hernies de la paroi abdominale) ; fibromyalgie. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.6, 2. Les exclusions communes](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=6) `#axa_axa_axa_ma_protection_accident_2024_03_exclusions_22210ec1a6d2_knowledge_47d6f96ffc4b`
+  - Condition : toutes garanties
+- **Délit intentionnel ou crime** — Accidents résultant de poursuite pénale de l'assuré liée à un délit intentionnel (art. 121-3 Code pénal) ou à un crime. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.6, 2.](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=6) `#axa_axa_axa_ma_protection_accident_2024_03_exclusions_2ac1c308b745_knowledge_ddebe98b7f99`
+  - Condition : toutes garanties
+  - Limite : légitime défense ou assistance de personne en danger
+- **Accidents du travail et activités électives/syndicales** — Accidents du travail, incluant les accidents de trajet ; accidents survenant dans le cadre d'activités électives ou syndicales. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.6, 2.](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=6) `#axa_axa_axa_ma_protection_accident_2024_03_exclusions_2bbf501d56a0_knowledge_9283aa6a94cd`
+  - Condition : toutes garanties
+- **Alcool, médicaments, stupéfiants** — Faits accidentels et/ou dommages consécutifs à une consommation d'alcool ≥ 0,5 g/l de sang ; à l'absorption de médicaments, drogues ou substances stupéfiantes à un dosage non prescrit médicalement. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.6, 2.](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=6) `#axa_axa_axa_ma_protection_accident_2024_03_exclusions_30878c977dde_knowledge_bd99bda85a24`
+  - Condition : toutes garanties
+- **Sports professionnels, rémunérés, à risques, extrêmes** — Sports exercés à titre professionnel ; sports rémunérés (y compris primes de match) ; sports à risques ; sports extrêmes (base jump, wingsuit, MMA) ; sports non autorisés en France ; tentatives de records ou exploits. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.6, 2.](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=6) `#axa_axa_axa_ma_protection_accident_2024_03_exclusions_3dffca697908_knowledge_bd6c83fedadb`
+  - Condition : toutes garanties
+  - Limite : sports à risques couverts si option « Mes Sports à risque » souscrite
+- **Non-respect de réglementation (véhicules motorisés)** — Accidents causés par l'assuré ne respectant pas la réglementation impérative en cas d'utilisation de véhicules motorisés aériens, nautiques, aquatiques, fluviaux, maritimes et lacustres. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.6, 2.](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=6) `#axa_axa_axa_ma_protection_accident_2024_03_exclusions_5992ad6bba77_knowledge_4ad819df3f8c`
+  - Condition : toutes garanties
+- **Expérimentations biomédicales** — Accidents et traitements médicaux résultant d'expérimentations biomédicales. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.6, 2.](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=6) `#axa_axa_axa_ma_protection_accident_2024_03_exclusions_6e33a15dbb6d_knowledge_ed5c9a10fa14`
+  - Condition : toutes garanties
+
+
+### Options (1)
+
+- **Mes Sports à risque** — Couvre les accidents résultant uniquement des sports listés : sports aériens (parachutisme, parapente, deltaplane, parachute ascensionnel, saut à élastique, ULM, autogyre, vol à voile, skydiving, planeur) ; aquatiques/nautiques (kitesurf, plongeon, hydrospeed, rafting, canyoning, plongée sous-marine et souterraine, apnée, aéroglisseur, wakeboard, scooter des mers) ; montagne (alpinisme, VTT de descente, escalade hors support artificiel sécurisé, raids et expéditions, ski hors-piste, spéléologie, motoneige) ; sports avec armes à feu ou à air comprimé. In… [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.5, 1.3 + 4.5](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=5) `#axa_axa_axa_ma_protection_accident_2024_03_options_becda5d4fd28_knowledge_111a93605f95`
+  - Condition : souscription expresse mentionnée aux Conditions particulières
+  - Condition : pour les coachings : autorisation médicale de reprise
+
+
+### Cotisations & prix (6)
+
+- **mode_calcul** — Cotisations fixées en fonction de la formule et des garanties choisies (montants aux Conditions particulières, non chiffrés dans les CG). Indexation à chaque échéance principale sur le « taux d'inflation annuel en France » ou indice substitué ; modification possible hors indice avec droit de résiliation. Payables d'avance à l'échéance. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_0abf98aa5778_knowledge_445e279cef50`
+- **réductions** — réductions. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e`
+- **défaut_de_paiement** — suspendre la garantie après envoi d'une lettre recommandée… 30 jours [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.22, 6.5 Cotisations](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=22) `#axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_8e0714ae258e_knowledge_4063da2b858c`
+- **tableaux** — tableaux. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_9a686a6a2b25_knowledge_23fb738e71fb`
+- **frais** — frais. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e`
+- **exemples_chiffrés** — exemples_chiffrés. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_c22a5aa37858_knowledge_579359b13918`
+
+
+### Délais & franchises (6)
+
+- **5 mois suivant l'information de la consolidation (ou du décès)** — 5 mois suivant l'information de la consolidation (ou du décès) [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.17, 5.2 Les délais d'indemnisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=17) `#axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_37393853f687_knowledge_961d22bd6d10`
+- **5 jours ouvrés à compter de la survenance** — 5 jours ouvrés à compter de la survenance [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.16, 5.1 Comment déclarer l'accident](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=16) `#axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_4869f9742f94_knowledge_59e389e27578`
+- **2 ans (10 ans lorsque les bénéficiaires sont les ayants droit de l'assuré décédé)** — 2 ans (10 ans lorsque les bénéficiaires sont les ayants droit de l'assuré décédé) [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.20, 6.2 Prescription](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=20) `#axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_53a94ed30feb_knowledge_86f7a15c46f1`
+- **DFP ≥ 1 %** — DFP ≥ 1 % [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.4, 1.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=4) `#axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_562da122974e_knowledge_309553eac304`
+- **15 jours suivant l'acceptation de l'offre** — 15 jours suivant l'acceptation de l'offre [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.17, 5.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=17) `#axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_74eaaff81bd2_knowledge_6ec0d7dce9da`
+- **45 € par événement** — 45 € par événement [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.11, 4.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=11) `#axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_cb11d4b6fb46_knowledge_3a65dec67694`
+
+
+### Fiscalité (6)
+
+- **fiscalité** — fiscalité. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_12a04ea57d41_knowledge_347f5f4fe5ab`
+- **valeurs_de_rachat** — valeurs_de_rachat. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_23df485b165e_knowledge_a358e165a171`
+- **note** — Sans objet : contrat de prévoyance dommages corporels, pas de valeur de rachat. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_243bf8cd8a2e_knowledge_fd2afdcc6a20`
+- **conditions_de_rachat** — conditions_de_rachat. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_72c35224482f_knowledge_a9a24a4c6a38`
+- **determination_part_taxable** — determination_part_taxable. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_7a8987e8b1f5_knowledge_ddb46c1a8ae9`
+- **mise_en_reduction** — mise_en_reduction. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_d7a8988e5d19_knowledge_70abebba0cab`
+
+
+### Points de vigilance (5)
+
+- **Assistance après accident et handicap : France métropolitaine uniquement (p.10).** — Assistance après accident et handicap : France métropolitaine uniquement (p.10). [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4bcd5a5c99f0_knowledge_9e023765fd47`
+- **Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).** — Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16). [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4fe1d6193758_knowledge_5b9c5fea95b4`
+- **Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).** — Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2). [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_5256a4785e84_knowledge_c7303cf5027d`
+- **Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (ar…** — Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (art. 6.5, 6.6). [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_b635c47c8e25_knowledge_40c607965a24`
+- **Subrogation de l'assureur contre le tiers responsable (6.7).** — Subrogation de l'assureur contre le tiers responsable (6.7). [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_e3bb18915674_knowledge_4d9eb5b02c92`
+
+
+### Formules (2)
+
+- **Indice AQV** — autre · AQV = arrondi_supérieur(DFP + PEP + SE) ; indemnité = tableau[AQV][tranche d'âge à la consolidation] · justification : Formule explicitement décrite p.7 (« par addition ») avec exemple chiffré p.9 vérifié contre le tableau. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.8, Barème AQV p.8](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=8) `#axa_ma_protection_accident_2024-03_formule_01`
+- **Renonciation vente à distance — cotisation due** — cotisation · montant_dû = cotisation_annuelle × nombre_de_jours_garantis / 365 · justification : Règle de calcul écrite en toutes lettres p.19. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.19, 6.1 Fourniture à distance, p.19](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=19) `#axa_ma_protection_accident_2024-03_formule_02`
+
+
+### Définitions (9)
+
+- **Accident** — Toute atteinte corporelle non intentionnelle de la part de l'assuré, provenant de l'action soudaine, violente et imprévisible d'une cause extérieure qui cause des lésions corporelles ou le décès. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.25, 7. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=25) `#ma-protection-accident-garantie-des-accidents-de-la-vie:def:bc84b360bb`
+- **Accident médical** — Acte ou ensemble d'actes de caractère médical ayant eu sur l'assuré des conséquences dommageables pour sa santé, pratiqué par des médecins/auxiliaires médicaux ou praticiens autorisés. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.25, 7. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=25) `#ma-protection-accident-garantie-des-accidents-de-la-vie:def:a7ab0cecc7`
+- **Date de consolidation** — Date à laquelle les dommages corporels ont médicalement acquis un caractère permanent tel qu'un traitement n'est plus nécessaire si ce n'est pour éviter une aggravation, et qu'il devient possible de déterminer les séquelles. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.26, 7. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=26) `#ma-protection-accident-garantie-des-accidents-de-la-vie:def:5af24fd375`
+- **Déficit fonctionnel permanent (DFP)** — Séquelles permanentes gardées à la suite de l'accident : réduction définitive du potentiel physique, psycho-sensoriel ou intellectuel, douleurs pérennes et répercussions psychologiques liées. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.26, 7. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=26) `#ma-protection-accident-garantie-des-accidents-de-la-vie:def:4aa801f469`
+- **Seuil d'intervention** — Taux de déficit fonctionnel permanent en deçà duquel l'assureur n'intervient pas, pour quelque préjudice que ce soit. Il s'élève à 1 %. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.26, 7. Définitions + 1.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=26) `#ma-protection-accident-garantie-des-accidents-de-la-vie:def:07ebe9bf72`
+- **Conjoint** — Conjoint non séparé de corps ou concubin (Pacs ou non) du souscripteur, résidant sous son toit à l'adresse des Conditions particulières. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.26, 7. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=26) `#ma-protection-accident-garantie-des-accidents-de-la-vie:def:65b635209b`
+- **Enfants** — Enfants du souscripteur/conjoint résidant sous son toit ; enfants mineurs même hors du toit ; enfants majeurs célibataires de moins de 26 ans poursuivant leurs études. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.26, 7. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=26) `#ma-protection-accident-garantie-des-accidents-de-la-vie:def:45633cfa34`
+- **Bénéficiaire** — En cas de DFP : l'assuré victime lui-même. En cas de décès : enfant, conjoint ou membres de la famille couverts par le même contrat justifiant un préjudice direct, à l'exception des personnes ayant causé volontairement les dommages. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.25, 7. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=25) `#ma-protection-accident-garantie-des-accidents-de-la-vie:def:11cbeb7842`
+- **Souscripteur** — Personne désignée aux Conditions particulières ; doit avoir plus de 18 ans et résidence principale + foyer fiscal en France métropolitaine, Guadeloupe, Guyane, Réunion, Mayotte ou Martinique pendant toute la vie du contrat. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.27, 7. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=27) `#ma-protection-accident-garantie-des-accidents-de-la-vie:def:890b9fbc67`
+
+
+### Conditions de souscription (2)
+
+- Souscripteur : plus de 18 ans ; résidence principale et foyer fiscal en France métropolitaine, Guadeloupe, Guyane, Réunion, Mayotte ou Martinique pendant toute la vie du contrat. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.27, 7. Définitions - Souscripteur](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=27) `#ma-protection-accident-garantie-des-accidents-de-la-vie:cond:88e167c83f`
+- Garanties acquises seulement si résidence principale + foyer fiscal sur le territoire français à la survenance du sinistre ; déménagement à l'étranger à déclarer sous 15 jours. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.22, 6.6 Limites de garantie](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=22) `#ma-protection-accident-garantie-des-accidents-de-la-vie:cond:1158f219d0`
+
+## Ma Retraite (plan d'épargne retraite individuel — PER)
+
+
+PER individuel multisupport (fonds Croissance eurocroissance + unités de compte, PAS de fonds en euros classique) : constitution d'un supplément de retraite versé en capital (compartiments 1-2, en une fois ou fractionné) et/ou en rente viagère (compartiment 3 : rente uniquement), avec options de rente (réversion 60/100 %, annuités garanties, réversion temporaire ≥ 10 ans, rente majorée/minorée). Garantie « Protection Retraite » : coefficients de conversion en rente garantis au jour de chaque versement (table TGF05, taux technique nul). Garantie décès plancher « Sérénité » incluse (jusqu'à 80 ans). Déductibilité fiscale des versements volontaires (option), 6 cas de déblocage anticipé + résidence principale. Transfert individuel possible (frais 1 % max avant 5 ans).
+
+
+### Garanties (5)
+
+- **Garantie « Sérénité » (plancher décès, incluse)** — Si décès avant 80 ans : capital décès (ou capital constitutif de rente) ≥ cumul des versements bruts de frais − rachats (rachats exceptionnels, sorties partielles en capital ou en rente à hauteur du capital constitutif). Coût inclus dans les frais de gestion UC, prélevé toute la durée y compris après 80 ans. [Notice : 2026-05 Notice Ma Retraite.pdf, p.13, 5.2 Garantie « Sérénité »](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=13) `#axa_axa_axa_ma_retraite_2026_05_garanties_2a82507190c0_knowledge_a3e9a5052e25`
+  - Condition : incluse automatiquement
+  - Condition : décès avant le 80e anniversaire
+- **En cas de décès avant liquidation totale** — Prestation aux bénéficiaires en capital ou en rente : capital = épargne (tous supports) ou montant de la garantie « Sérénité ». Bénéficiaire majeur : rente viagère ou temporaire ≥ 10 ans ; bénéficiaire mineur : rente temporaire d'éducation jusqu'à 25 ans. Versement sous 1 mois après réception des pièces. Met fin à l'adhésion. Versements réguliers et arbitrages Activ'Retraite arrêtés au traitement de l'acte de décès. [Notice : 2026-05 Notice Ma Retraite.pdf, p.12, 5.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=12) `#axa_axa_axa_ma_retraite_2026_05_garanties_2f0464c0cd48_knowledge_500bf61880f1`
+  - Condition : décès de l'assuré avant liquidation totale
+- **Garanties de fidélité** — Le contrat ne comporte pas de garantie de fidélité (hors offres commerciales ponctuelles). [Notice : 2026-05 Notice Ma Retraite.pdf, p.26, 8.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=26) `#axa_axa_axa_ma_retraite_2026_05_garanties_2fe10460c58d_knowledge_13e68eb757c5`
+- **En cas de vie — sortie en capital** — À l'échéance (et sous réserve de liquidation effective de la retraite ou d'atteinte de l'âge légal) : délivrance de tout ou partie des droits des compartiments 1 et 2 en capital, en une fois ou fractionné ; versement partiel ≥ 750 €, solde restant > 750 €. Pas de frais de sortie en capital. Interdit si option expresse et irrévocable pour la rente. [Notice : 2026-05 Notice Ma Retraite.pdf, p.10, 5.1.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=10) `#axa_axa_axa_ma_retraite_2026_05_garanties_b0952cb6ac40_knowledge_318fdaeb25df`
+  - Condition : échéance + âge légal ou liquidation effective
+  - Limite : min 750 € par versement partiel et solde > 750 €
+- **En cas de vie — sortie en rente viagère** — Rente trimestrielle à terme échu (effet le 1er jour du mois suivant l'échéance demandée), calculée selon âge, option de rente, âge du réversataire et taux de réversion, frais de service de 1 % par arrérage, conditions tarifaires garanties au moment de chaque investissement (Protection Retraite). Options : réversion 60 % ou 100 % ; annuités garanties (versées quoi qu'il arrive sur la période, bénéficiaire désigné irrévocablement) ; réversion temporaire (≥ 10 ans) ; rente majorée ou minorée pendant la première période. Trop-perçu post-décès remboursé. Com… [Notice : 2026-05 Notice Ma Retraite.pdf, p.10, 5.1.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=10) `#axa_axa_axa_ma_retraite_2026_05_garanties_dd10b98b0d62_knowledge_5506ae497daf`
+  - Condition : échéance + âge légal ou liquidation effective
+
+
+### Exclusions (1)
+
+- **Indisponibilité de l'épargne** — Aucun rachat avant l'échéance hors les cas de l'art. L224-4 CMF : décès du conjoint/partenaire PACS ; invalidité (2°/3° L341-4 CSS) de l'adhérent, ses enfants, son conjoint/partenaire ; surendettement (L711-1 C. conso) ; expiration des droits au chômage (ou dirigeants non renouvelés sans contrat/mandat depuis ≥ 2 ans) ; liquidation judiciaire de l'activité non salariée (ou décision du président du tribunal de commerce en conciliation) ; affectation à l'acquisition de la RÉSIDENCE PRINCIPALE (sauf compartiment 3). Rachat total = fin de l'adhésion ; verse… [Notice : 2026-05 Notice Ma Retraite.pdf, p.27, 9.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=27) `#axa_axa_axa_ma_retraite_2026_05_exclusions_e6de09eaf132_knowledge_bb7640d6ac46`
+  - Condition : disponibilité de l'épargne
+  - Limite : 6 cas légaux + résidence principale (compartiments 1-2)
+
+
+### Options (4)
+
+- **Types de gestion** — Gestion personnelle (choix libre des supports), gestions de la gamme Activ'Retraite Croissance (gestion à horizon de départ en retraite avec fonds Croissance, profils dont « Prudente » ; réajustements semestriels sans frais entre supports), répartition libre possible à côté. Changement de type de gestion / d'horizon / de supports possible après le délai de renonciation. [Notice : 2026-05 Notice Ma Retraite.pdf, p.16, 7.1.2 / 7.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=16) `#axa_axa_axa_ma_retraite_2026_05_options_03060a22d564_knowledge_46aead17e71e`
+- **Indexation des versements réguliers** — Indexation annuelle (avant le 1er avril) sur la variation du plafond de la Sécurité sociale au 1er janvier ; refus possible avant le 1er mars de chaque année. [Notice : 2026-05 Notice Ma Retraite.pdf, p.14, 6.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=14) `#axa_axa_axa_ma_retraite_2026_05_options_1a4d11b3967f_knowledge_d7b3d80bd8ba`
+- **Versements pris en charge par la société** — Versements possibles par la société de l'adhérent (dirigeant ou salarié) : avantage en espèces imposable en traitements et salaires pour l'adhérent, droit à déduction comme s'il avait versé lui-même ; pour la société : cotisations sociales de droit commun + déductibilité du résultat (travail effectif, non excessif). Obligation d'interrompre ces versements à la rupture du contrat de travail / fin du mandat. [Notice : 2026-05 Notice Ma Retraite.pdf, p.14, 6.](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=14) `#axa_axa_axa_ma_retraite_2026_05_options_cf50f22c7839_knowledge_63ffd274ad71`
+- **Transfert individuel sortant** — Vers tout autre PER (loi 2019-486) : demande en LRAR avec certificat + RIB du gestionnaire d'accueil ; valeur de transfert notifiée sous 1 mois ; 15 jours pour y renoncer ; versement au nouveau gestionnaire sous 15 jours après acceptation. Frais : 1 % max avant le 5e anniversaire de l'adhésion, nuls ensuite ou après l'échéance. Transfert = totalité de l'épargne, fin de l'adhésion. [Notice : 2026-05 Notice Ma Retraite.pdf, p.28, 9.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=28) `#axa_axa_axa_ma_retraite_2026_05_options_eeb5b0c6e766_knowledge_6af0d458d009`
+
+
+### Cotisations & prix (5)
+
+- **mode_calcul** — Versements réguliers fixés à l'adhésion : minima 45 €/mois, 150 €/trimestre, 300 €/semestre, 600 €/an ; PLAFOND de versement 24 000 € entre deux dates anniversaires. Versements complémentaires ≥ 500 €. Modifications de montant/périodicité sans frais. [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_0d373eee8846_knowledge_4a70ecf97022`
+- **exemples_chiffrés** — Conversion en rente : retraite à 61 ans en 2022, capital constitutif 100 € → rente viagère annuelle 3,0303 € (brut de fiscalité et PS). [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_5f78886419a6_knowledge_e1c82020b80b`
+- **frais** — Droits d'adhésion ANPERE Retraite · 20 € maximum, prélevés à l'adhésion et reversés intégralement à l'association. · Frais sur versements · 3,85 % maximum sur chaque montant versé. · Frais de gestion · Fonds Croissance : 0,80 %/an max (taux mensuel équivalent 0,0669 %) ; UC hors AXA Immo Avenir : 0,96 %/an max (0,0804 %/mois) ; AXA Immo Avenir : 1,50 %/an max (0,1259 %/mois). 100 % des coupons/dividendes réinvestis (≥ 80 % pour AXA Immo Avenir, au plus tard le 1er juin). · Frais de performance fonds Croissance · 10 % max de la somme des produits nets de… [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_949c0d6b1fe0_knowledge_868134057060`
+- **réductions** — réductions. Information documentaire à consulter dans la source. [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_9ba03053e69a_knowledge_d8f10c7d1ce0`
+- **tableaux** — tableaux. Information documentaire à consulter dans la source. [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_a5a20f809364_knowledge_79846d0b1e50`
+
+
+### Délais & franchises (5)
+
+- **30 jours calendaires révolus (conclusion = signature du Bulletin) ; LRAR à AXA France Épargne, Retraite et Prévoyance TSA 60907 92897 Nanterre Cedex 9 ; rembou…** — 30 jours calendaires révolus (conclusion = signature du Bulletin) ; LRAR à AXA France Épargne, Retraite et Prévoyance TSA 60907 92897 Nanterre Cedex 9 ; remboursement intégral [Notice : 2026-05 Notice Ma Retraite.pdf, p.43, 11.8](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=43) `#axa_axa_axa_ma_retraite_2026_05_delais_carences_franchises_338cb3043389_knowledge_e77cb85bacc0`
+- **notification de la valeur sous 1 mois ; 15 jours de rétractation ; versement sous 15 jours après acceptation du gestionnaire d'accueil** — notification de la valeur sous 1 mois ; 15 jours de rétractation ; versement sous 15 jours après acceptation du gestionnaire d'accueil [Notice : 2026-05 Notice Ma Retraite.pdf, p.27, 9.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=27) `#axa_axa_axa_ma_retraite_2026_05_delais_carences_franchises_637e5ceb08df_knowledge_a7290371655e`
+- **2 mois max après demande complète** — 2 mois max après demande complète [Notice : 2026-05 Notice Ma Retraite.pdf, p.27, 9.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=27) `#axa_axa_axa_ma_retraite_2026_05_delais_carences_franchises_6bbe8fbb8a03_knowledge_577fa7bf824d`
+- **1 mois max après réception des pièces** — 1 mois max après réception des pièces [Notice : 2026-05 Notice Ma Retraite.pdf, p.12, 5.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=12) `#axa_axa_axa_ma_retraite_2026_05_delais_carences_franchises_6d23a54f0cc2_knowledge_d445fc399b8d`
+- **dès 5 ans avant l'échéance : droit d'interroger l'assureur sur les modalités de restitution et le rythme de réduction des risques** — dès 5 ans avant l'échéance : droit d'interroger l'assureur sur les modalités de restitution et le rythme de réduction des risques [Notice : 2026-05 Notice Ma Retraite.pdf, p.39, 11.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=39) `#axa_axa_axa_ma_retraite_2026_05_delais_carences_franchises_de86b07410c8_knowledge_9957db1025ba`
+
+
+### Fiscalité (5)
+
+- **valeurs_de_rachat** — Pas de rachat libre avant l'échéance (épargne indisponible) ; rachats exceptionnels L224-4 sans frais, versés sous 2 mois ; après l'échéance, sortie en capital libre (compartiments 1-2). [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1c74300ec161_knowledge_7796cf78275b`
+- **fiscalité** — fiscalité. Information documentaire à consulter dans la source. [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779`
+- **conditions_de_rachat** — cas L224-4 CMF (6 cas + résidence principale hors compartiment 3) · après échéance : libre (compartiments 1-2) [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_30d289ee955a_knowledge_7c124417b8b5`
+- **mise_en_reduction** — Le contrat ne comporte pas de valeurs de réduction. [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_58efaba51d48_knowledge_4b450012844f`
+- **determination_part_taxable** — Versements (compartiment 1, hors transferts) : déductibles dans les limites des art. 154 bis / 154 bis-0 A (TNS) et 163 quatervicies CGI ; option de renonciation à la déductibilité au plus tard au jour du versement (change la fiscalité de sortie) ; AUCUNE déductibilité pour les versements à partir du 70e anniversaire. · Sortie en rente : imposée en pensions/retraites (158-5a CGI) ou rentes viagères à titre onéreux (158-6) selon le compartiment + PS. Sortie en capital : IR ou exonération selon compartiment, PS sur les produits. Rachats anticipés hors rés… [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_78d2a3fea36c_knowledge_b714c809e8b8`
+
+
+### Points de vigilance (8)
+
+- **Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégré…** — Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégrés. [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_29dbe9dd07a5_knowledge_bf0dd90f6ec7`
+- **Compartiment 3 : sortie en rente UNIQUEMENT.** — Compartiment 3 : sortie en rente UNIQUEMENT. [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_40a6471abe1e_knowledge_f517d36babe3`
+- **Plus de déductibilité fiscale des versements après 70 ans.** — Plus de déductibilité fiscale des versements après 70 ans. [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_4638a08834d5_knowledge_0ba923dcc369`
+- **Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).** — Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture). [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_7e539c84f84b_knowledge_3f6297fa7729`
+- **Frais de transfert 1 % uniquement les 5 premières années.** — Frais de transfert 1 % uniquement les 5 premières années. [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_88050d867e12_knowledge_3300e810ad31`
+- **Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.** — Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital. [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_9a1413ab3b74_knowledge_a3ade0f48deb`
+- **La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).** — La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière). [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_c9108a1f7554_knowledge_24bafdb8e47e`
+- **Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.** — Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants. [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf) `#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_db274a95a51e_knowledge_af2979bd8634`
+
+
+### Formules (2)
+
+- **Valeur de transfert en parts/UC** — autre · N(1) = N0 × (1 − taux_mensuel)^12 × (1 − 1 % si transfert < 5 ans) ; taux_mensuel = 0,0669 % (Croissance), 0,0804 % (UC), 0,1259 % (AXA Immo Avenir) · justification : Exemples de calcul écrits en toutes lettres p.28-29 (98,208 = 100 × (1−0,0669 %)^12 × (1−1 %)). [Notice : 2026-05 Notice Ma Retraite.pdf, p.28, 9.2 p.28-29](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=28) `#axa_ma_retraite_2026-05_formule_01`
+- **Rente initiale** — autre · rente_annuelle = Σ_versements [épargne_relative_au_versement × coefficient(année_retraite, âge ; table en vigueur à la date du versement)] ; frais 1 % par arrérage déjà intégrés aux coefficients · justification : Mécanique Protection Retraite (5.1.3) + annexe 13 ; la composition exacte multi-versements/multi-tables est décrite textuellement (« la proportion de l'épargne constituée relative audit versement »). [Notice : 2026-05 Notice Ma Retraite.pdf, p.48, Annexe 13 p.48-49](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=48) `#axa_ma_retraite_2026-05_formule_02`
+
+
+### Définitions (3)
+
+- **Compartiments 1/2/3** — 1 : versements volontaires et transferts de contrats individuels ; 2 : épargne salariale transférée (participation, intéressement, PPV, CET…) ; 3 : versements obligatoires transférés (sortie en rente uniquement). [Notice : 2026-05 Notice Ma Retraite.pdf, p.6, 3.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=6) `#ma-retraite-plan-d-epargne-retraite-individuel-per:def:8c75970030`
+- **Fonds Croissance** — Support eurocroissance en coassurance AXA France Vie / AXA Assurances Vie Mutuelle (provision de diversification), garanti à l'échéance ; risque de perte en capital avant l'échéance ; participation aux résultats 100 % du solde du compte (hebdomadaire), attributions de parts possibles ; provision collective de diversification différée à affecter sous 15 ans (réglementation au 01/04/2026) ; en cas de baisse de l'épargne en gestion personnelle à l'échéance, arbitrage sans frais vers un support défini par A134-6 ; en gestion Activ'Retraite Croissance, prorogation de 5 ans de la garantie (100 % du net investi). [Notice : 2026-05 Notice Ma Retraite.pdf, p.24, 8.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=24) `#ma-retraite-plan-d-epargne-retraite-individuel-per:def:e60bade006`
+- **Garantie Protection Retraite** — Chaque versement acquiert une fraction de rente calculée sur la table de mortalité en vigueur À LA DATE DU VERSEMENT (taux technique nul) - les fractions acquises ne sont pas affectées par un changement ultérieur de table. Ne s'applique qu'à la rente versée à l'adhérent (pas au réversataire). [Notice : 2026-05 Notice Ma Retraite.pdf, p.11, 5.1.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=11) `#ma-retraite-plan-d-epargne-retraite-individuel-per:def:ac7dc65e58`
+
+
+### Conditions de souscription (2)
+
+- Adhésion réservée aux adhérents ANPERE Retraite ; prise d'effet à réception du Bulletin signé + 1er versement + contrôle de l'origine des fonds + encaissement. L'âge envisagé de départ détermine l'échéance, la gestion Activ'Retraite Croissance et l'échéance du fonds Croissance (modifiable par avenant). [Notice : 2026-05 Notice Ma Retraite.pdf, p.9, 4.](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=9) `#ma-retraite-plan-d-epargne-retraite-individuel-per:cond:c956e63a5d`
+- Versements réguliers : minima 45 €/mois à 600 €/an, plafond 24 000 € par année d'adhésion ; complémentaires ≥ 500 €. [Notice : 2026-05 Notice Ma Retraite.pdf, p.14, 6.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=14) `#ma-retraite-plan-d-epargne-retraite-individuel-per:cond:e8e8e580d8`
+
+## Masterlife CREDIT
+
+
+Assurance emprunteur couvrant, au titre du prêt mentionné aux conditions particulières et à concurrence de la quotité assurée : décès (capital restant dû), PTIA (capital restant dû à la consolidation, avant 70 ans), incapacité temporaire totale de travail (IJ jusqu'à 1/30e de la mensualité, max 1 095 jours), invalidité totale ou partielle (barème croisé fonctionnel × professionnel, seuil 33 %, plein à 66 %), invalidité spécifique AERAS (sur proposition de l'assureur), garantie aide à la famille (AJPP) et exonération/remboursement des cotisations. Deux tarifications au choix irrévocable : constante ou sur capital restant dû. Bénéficiaire par défaut : l'organisme prêteur à hauteur du capital restant dû.
+
+
+### Garanties (7)
+
+- **Incapacité de travail (IJ)** — IJ aux bénéficiaires × quotité assurée, plafonnées à 1/30e de la mensualité (1/90e trimestrialité, 1/180e semestrialité, 1/365e annuité ; prêt in fine : 1/365e des intérêts annuels — capital final toujours exclu). Cessent : fin d'incapacité ou consolidation, 1 095e jour (franchise incluse), 70 ans, fin/remboursement du prêt, liquidation retraite (y compris inaptitude L351-7). Mi-temps thérapeutique : 50 % maintenus 90 jours max. Rechute ≤ 90 jours (même affection) : reprise immédiate sans franchise ; > 90 jours : nouvelle franchise, et si même affection… [Notice : Notice-Masterlife-Credit-202410.pdf, p.13, Article 4.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=13) `#axa_axa_axa_masterlife_credit_2024_10_garanties_7fecd8ae9f79_knowledge_d0af30a9aaf6`
+  - Condition : couplage avec décès ou PTIA
+  - Condition : arrêt avant 70 ans
+  - Limite : 1 095 jours
+  - Limite : échéance du prêt (co-emprunteurs : total ≤ échéance)
+  - Limite : 5 ans cumulés pour rechutes d'une même affection au-delà de 90 jours
+- **Invalidité totale ou partielle** — IJ trimestrielles × quotité, pour chaque jour d'invalidité : taux (n) ≥ 66 % → 100 % des IJ plafond (1/30e mensualité…) ; 33 % ≤ n < 66 % → IJ × taux d'indemnisation(n) ; n < 33 % → rien. Taux croisé fonctionnel × professionnel (tableau) pour les actifs ; fonctionnel seul pour chômeurs/inactifs. Taux révisable. Non cumulable avec l'incapacité. Si n ≥ 66 % et prêt amortissable à échéances constantes : ADIS peut verser le capital restant dû (met fin à l'adhésion). [Notice : Notice-Masterlife-Credit-202410.pdf, p.14, Article 4.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=14) `#axa_axa_axa_masterlife_credit_2024_10_garanties_93963eb93de3_knowledge_9f59cb6de90f`
+  - Condition : consolidation avant la retraite et avant 70 ans
+  - Condition : taux ≥ 33 %
+  - Limite : plafond IJ identique incapacité
+- **Exonération du paiement des cotisations** — Incapacité : remboursement de 1/365e de la cotisation annuelle par journée d'incapacité, après déduction d'une FRANCHISE DE 90 JOURS, remboursement en fin de période. Aide à la famille : remboursement 1/365e par jour indemnisé (plafond global 4 000 €/mois). Invalidité totale ou GIS : exonération des cotisations à échoir jusqu'à 70 ans max, garanties intégralement maintenues sans modification possible. [Notice : Notice-Masterlife-Credit-202410.pdf, p.16, Article 4.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=16) `#axa_axa_axa_masterlife_credit_2024_10_garanties_9542660c76a0_knowledge_3dd8f3ed7869`
+  - Condition : selon le cas : versement d'IJ incapacité, AJPP, ou invalidité totale/GIS
+- **Invalidité spécifique AERAS (GIS)** — Proposée par l'assureur (pas une option à la demande) si incapacité et invalidité refusées pour raisons médicales. IJ trimestrielles × quotité si incapacité professionnelle TOTALE (titre de pension 2e/3e catégorie SS, congé longue maladie fonctionnaires, ou notification d'inaptitude totale non-salariés) ET incapacité fonctionnelle ≥ 70 % (barème du Code des pensions civiles). Cessent sous 70 %. Faculté de verser le capital restant dû (fin d'adhésion). Prestations en cours maintenues même si la convention ANPERE/AXA est résiliée. [Notice : Notice-Masterlife-Credit-202410.pdf, p.16, Article 4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=16) `#axa_axa_axa_masterlife_credit_2024_10_garanties_adf30e38133e_knowledge_9073a4080125`
+  - Condition : mention aux conditions particulières
+  - Condition : incapacité professionnelle totale + fonctionnelle ≥ 70 %
+  - Limite : jusqu'au terme du prêt, max 70 ans
+- **PTIA** — Capital restant dû à la date de consolidation de la PTIA × quotité assurée, si consolidation avant le 70e anniversaire. Le versement met fin à l'adhésion. [Notice : Notice-Masterlife-Credit-202410.pdf, p.12, Article 3.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=12) `#axa_axa_axa_masterlife_credit_2024_10_garanties_d491c9d8dfde_knowledge_32a7d6cd89bf`
+  - Condition : consolidation avant 70 ans
+  - Condition : critères PTIA (définition)
+  - Limite : capital restant dû × quotité
+- **Garantie Aide à la famille** — IJ = 50 % des IJ incapacité, si garantie incapacité souscrite, enfant à charge < 20 ans gravement malade/handicapé/accidenté, AJPP perçue, cessation ponctuelle d'activité, et prêt immobilier ou professionnel. Versées dès le 1er jour d'AJPP. Max 14 mois par enfant et pathologie, renouvelable une fois. Plafond GLOBAL avec l'exonération : 4 000 €/mois/assuré. [Notice : Notice-Masterlife-Credit-202410.pdf, p.14, Article 4.1.d](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=14) `#axa_axa_axa_masterlife_credit_2024_10_garanties_e995610a6cfc_knowledge_bb8b7f487fe1`
+  - Condition : garantie incapacité souscrite
+  - Condition : AJPP
+  - Condition : prêt immobilier ou professionnel
+  - Limite : 50 % des IJ incapacité
+  - Limite : 4 000 €/mois/assuré (IJ + exonération)
+  - Limite : 14 mois renouvelable 1 fois
+- **Décès** — Capital égal au montant restant dû au jour du décès (quelle qu'en soit la cause), à concurrence de la quotité assurée, versé aux bénéficiaires. Échéances impayées antérieures au décès exclues. Co-emprunteurs décédés simultanément : versement total plafonné au restant dû du prêt. Règlement sous 10 jours après pièces (avec accord de prise en charge ADIS). [Notice : Notice-Masterlife-Credit-202410.pdf, p.12, Article 3.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=12) `#axa_axa_axa_masterlife_credit_2024_10_garanties_f9f69ff37530_knowledge_4f246d649228`
+  - Condition : décès avant le 85e anniversaire (âge limite de la garantie)
+  - Limite : capital restant dû × quotité assurée
+
+
+### Exclusions (7)
+
+- **États antérieurs** — Accidents antérieurs à la prise d'effet, maladies à premières manifestations antérieures, malformations congénitales connues : exclus des garanties incapacité/invalidité/GIS. EXCEPTIONS : droit à l'oubli ; assurés dispensés d'acceptation médicale (Lemoine) ; antériorités déclarées et non exclues aux conditions particulières. [Notice : Notice-Masterlife-Credit-202410.pdf, p.21, Article 7.2 État antérieurs](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=21) `#axa_axa_axa_masterlife_credit_2024_10_exclusions_1d2b077cf406_knowledge_ceaaab562fc8`
+  - Condition : incapacité, invalidité, GIS
+  - Limite : droit à l'oubli
+  - Limite : dispense Lemoine
+  - Limite : antériorités déclarées non exclues
+- **Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)** — Exclusion de principe de l'incapacité/invalidité consécutive aux troubles psychologiques (liste large incl. burn/bore/brown out, dépression post-partum), asthénie/fibromyalgie, et affections disco-vertébrales (hernie discale, discopathie, lombalgie, sciatique…, sauf fracture sans pathologie osseuse). RACHATS sans option : psy et asthénie/fibromyalgie indemnisées si hospitalisation continue ≥ 30 jours en établissement spécialisé (hors cure de repos), franchise 90 jours dès le 1er jour d'hospitalisation ; disco-vertébrales si hospitalisation continue ≥ 15… [Notice : Notice-Masterlife-Credit-202410.pdf, p.21, Article 7.2 Affections psychologiques](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=21) `#axa_axa_axa_masterlife_credit_2024_10_exclusions_2bcaeda3d931_knowledge_1b55e7e978ee`
+  - Condition : incapacité et invalidité
+  - Limite : hospitalisations qualifiantes
+  - Limite : option Psy/Dos+
+- **PTIA/incapacité/invalidité — exclusions** — Faits volontaires, tentative de suicide, mutilations volontaires ; stupéfiants/tranquillisants hors prescription ; refus volontaire de soins ; désintégration du noyau atomique ; sportifs professionnels et amateurs de haut niveau (sauf acceptation) ; arrêts liés au traitement de la stérilité (incapacité). [Notice : Notice-Masterlife-Credit-202410.pdf, p.20, Article 7.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=20) `#axa_axa_axa_masterlife_credit_2024_10_exclusions_3388797f1d90_knowledge_3dcf66148710`
+  - Condition : PTIA, incapacité, invalidité, GIS
+- **Sports et activités exclus (sauf acceptation)** — Sports à moteur hors voie ouverte au public ; plongée > 20 m sans bouteille / > 40 m avec ; navigation > 40 milles ; alpinisme et randonnée > 4 000 m, escalade (hors salle) ; speed riding, ski artistique/acrobatique/héliporté, paraski, char à glace, kilomètre lancé, combiné nordique ; spéléologie, canyoning, rafting, kitesurf ; sports de combat (hors escrime) ; longue liste équestre ; saut à l'élastique, base jump, wingsuit ; sports aériens motorisés et non motorisés ; ULM, parapente, deltaplane, parachutisme ; tout sport non représenté par une fédérati… [Notice : Notice-Masterlife-Credit-202410.pdf, p.20, Article 7.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=20) `#axa_axa_axa_masterlife_credit_2024_10_exclusions_673c6f1fa5a9_knowledge_9ae21104adca`
+  - Condition : toutes garanties
+  - Limite : acceptation aux conditions particulières
+  - Limite : baptêmes/initiations encadrés par personnel qualifié et breveté (hors sports non fédérés)
+- **Décès — guerre/émeutes/crimes** — Guerres civiles/étrangères, insurrection, opérations de maintien de l'ordre/paix (ONU…) ; participation active à émeutes, terrorisme, sabotage, crimes ou délits intentionnels, rixes (sauf légitime défense/devoir professionnel). [Notice : Notice-Masterlife-Credit-202410.pdf, p.20, Article 7.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=20) `#axa_axa_axa_masterlife_credit_2024_10_exclusions_7d71c356f084_knowledge_8c611c90bc41`
+  - Condition : décès (et étendue aux autres garanties via 7.2)
+  - Limite : légitime défense, devoir professionnel
+- **Décès — suicide** — Suicide exclu la 1re année d'adhésion (et 1 an sur le supplément en cas d'augmentation). EXCEPTION : prêts immobiliers finançant l'acquisition du logement principal → suicide couvert dès la date d'effet dans la limite de l'art. R132-5 (120 000 € au 15/08/2024). [Notice : Notice-Masterlife-Credit-202410.pdf, p.20, Article 7.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=20) `#axa_axa_axa_masterlife_credit_2024_10_exclusions_84dc965c3cbd_knowledge_e316f16d3470`
+  - Condition : décès
+  - Limite : logement principal : couvert dès l'effet, limite 120 000 €
+- **Cures et esthétique** — Cures thermales/marines/rajeunissement/amaigrissement/désintoxication et maisons de repos : exclues de l'incapacité (et leurs conséquences). Traitements esthétiques, chirurgie esthétique, malformations constitutionnelles : exclus incapacité/invalidité/PTIA (et conséquences). [Notice : Notice-Masterlife-Credit-202410.pdf, p.22, Article 7.2 Cures](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=22) `#axa_axa_axa_masterlife_credit_2024_10_exclusions_888092d99f15_knowledge_15c6a7500dd4`
+  - Condition : incapacité, invalidité, PTIA
+
+
+### Options (3)
+
+- **Option Psy/Dos+** — Prise en charge des affections psychologiques/asthénie/fibromyalgie SANS condition d'hospitalisation (franchise 90 jours ou franchise du contrat si supérieure ; si franchise souscrite < 90 jours et hospitalisation continue en établissement spécialisé > franchise : franchise du contrat dès le 1er jour d'hospitalisation, prise en charge au plus tard 90 jours après le début de l'arrêt) et des affections disco-vertébrales SANS condition d'hospitalisation (franchise 30 jours ou supérieure du contrat). Vaut pour l'incapacité ET l'invalidité. [Notice : Notice-Masterlife-Credit-202410.pdf, p.13, Article 4.1.c](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=13) `#axa_axa_axa_masterlife_credit_2024_10_options_bb2687eed056_knowledge_8805759d2325`
+  - Condition : mention aux conditions particulières
+- **Tarif constant** — Cotisation annuelle fixe jusqu'au terme ; assiette = montant emprunté × quotité. NON proposée en cas de dispense Lemoine de questionnaire médical. Choix irrévocable. [Notice : Notice-Masterlife-Credit-202410.pdf, p.11, Article 2.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=11) `#axa_axa_axa_masterlife_credit_2024_10_options_cd4d91e29f75_knowledge_d0c39ab9e6b2`
+  - Condition : mention aux conditions particulières
+- **Tarif capital restant dû** — Cotisation fluctuant selon le capital restant dû et l'âge ; assiette = capital restant dû × quotité. Choix irrévocable. [Notice : Notice-Masterlife-Credit-202410.pdf, p.11, Article 2.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=11) `#axa_axa_axa_masterlife_credit_2024_10_options_edabb5425d62_knowledge_f2d4e1a2a65c`
+  - Condition : mention aux conditions particulières
+
+
+### Cotisations & prix (6)
+
+- **exemples_chiffrés** — exemples_chiffrés. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95`
+- **mode_calcul** — Cotisation annuelle calculée selon : âge à l'adhésion (différence de millésimes), profession, type/taux d'intérêt/durée/modalités de remboursement/montant de l'emprunt, quotité assurée, garanties et options, conditions d'acceptation médicale et activités sportives. Deux options de tarification irrévocables (constante / capital restant dû). Payables d'avance sous 10 jours des échéances (mensuelle/trimestrielle/annuelle ; mensuel et trimestriel par prélèvement automatique obligatoire). [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_317921e2cd84_knowledge_8dcd710beb80`
+- **réductions** — réductions. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_8936eebaa5cc_knowledge_85eab19f89d6`
+- **frais** — frais. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_a8de7fb08bee_knowledge_fc624b04e8d5`
+- **tableaux** — tableaux. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_f904852eb47e_knowledge_1f5ef94b1625`
+- **défaut_de_paiement** — le défaut de paiement… entraîne, sans nouvel avis, la résiliation des garanties [Notice : Notice-Masterlife-Credit-202410.pdf, p.11, Article 2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=11) `#axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_fcc33a37f235_knowledge_bdaff89df963`
+
+
+### Délais & franchises (6)
+
+- **à déclarer à ADIS sous 12 mois ; allongement ≤ 60 mois du prêt initial : pas de nouvelle sélection médicale** — à déclarer à ADIS sous 12 mois ; allongement ≤ 60 mois du prêt initial : pas de nouvelle sélection médicale [Notice : Notice-Masterlife-Credit-202410.pdf, p.8, 1.8](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=8) `#axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_126e25f4e036_knowledge_a77c08f89bb7`
+- **LR au plus tard 10 jours après la fin de la franchise (sinon franchise décomptée à réception) ; prolongations sous 10 jours ; DÉCHÉANCE possible (L113-2) si dé…** — LR au plus tard 10 jours après la fin de la franchise (sinon franchise décomptée à réception) ; prolongations sous 10 jours ; DÉCHÉANCE possible (L113-2) si déclaration > 180 jours après le début de l'arrêt (prolongation : 90 jours) avec préjudice pour l'assureur [Notice : Notice-Masterlife-Credit-202410.pdf, p.18, Article 5.1.b](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=18) `#axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_27779267fdf7_knowledge_2a150183bfff`
+- **au choix aux conditions particulières (15 ou 30 jours non proposés en dispense Lemoine) ; psy/asthénie/fibromyalgie : 90 jours ; disco-vertébrales : 30 jours ;…** — au choix aux conditions particulières (15 ou 30 jours non proposés en dispense Lemoine) ; psy/asthénie/fibromyalgie : 90 jours ; disco-vertébrales : 30 jours ; exonération : 90 jours [Notice : Notice-Masterlife-Credit-202410.pdf, p.13, 4.1.b / 7.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=13) `#axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_43661b0990e6_knowledge_804dcccb9054`
+- **30 jours pour contester par attestation médicale détaillée en RAR ; ensuite expertise amiable (expert judiciaire, frais partagés par moitié) obligatoire avant…** — 30 jours pour contester par attestation médicale détaillée en RAR ; ensuite expertise amiable (expert judiciaire, frais partagés par moitié) obligatoire avant toute voie judiciaire [Notice : Notice-Masterlife-Credit-202410.pdf, p.18, 5.2 / 5.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=18) `#axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_5c99bb1c3721_knowledge_80b877f736b9`
+- **2 ans / 10 ans / 30 ans (L114-1 s.)** — 2 ans / 10 ans / 30 ans (L114-1 s.) [Notice : Notice-Masterlife-Credit-202410.pdf, p.23, Article 11](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=23) `#axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_88bd824e4adb_knowledge_64636cd533fc`
+- **10 jours après remise des pièces (accord ADIS)** — 10 jours après remise des pièces (accord ADIS) [Notice : Notice-Masterlife-Credit-202410.pdf, p.12, 3. Le règlement des prestations](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=12) `#axa_axa_axa_masterlife_credit_2024_10_delais_carences_franchises_bee2e6c68d66_knowledge_327cbd2a76fe`
+
+
+### Fiscalité (5)
+
+- **mise_en_reduction** — mise_en_reduction. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6184af0ed0bb_knowledge_d2b949a61e4b`
+- **determination_part_taxable** — determination_part_taxable. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6557ee3b82de_knowledge_bcf56946772e`
+- **conditions_de_rachat** — conditions_de_rachat. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_8d6684edc0fe_knowledge_549556fde47d`
+- **valeurs_de_rachat** — L'adhésion ne comporte ni valeur de rachat, ni valeur de réduction. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_965709e14702_knowledge_59bba4ded7e7`
+- **fiscalité** — fiscalité. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_a579030f51e4_knowledge_6b6563df11b1`
+
+
+### Points de vigilance (7)
+
+- **Pas de valeur de rachat ni de réduction.** — Pas de valeur de rachat ni de réduction. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_14236254decd_knowledge_8c4dc54fa7d1`
+- **Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).** — Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours). [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_173b632105ef_knowledge_af69875b3299`
+- **Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).** — Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet). [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_484c871eb4bf_knowledge_7b643e57951b`
+- **Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.** — Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_5f5655d49ac6_knowledge_91b5fa511851`
+- **Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.** — Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_6acaf82de4d0_knowledge_c33f87b96f7d`
+- **Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).** — Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici). [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_b54b61128019_knowledge_405b144e09ef`
+- **Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.** — Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+. [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_c3162986a52f_knowledge_df9e127805c0`
+
+
+### Formules (3)
+
+- **IJ incapacité (plafond)** — autre · IJ_max = échéance_du_prêt / N × quotité, avec N = 30 (mensuel), 90 (trimestriel), 180 (semestriel), 365 (annuel) ; prêt in fine : IJ = intérêts_annuels/365 · justification : Règles écrites en toutes lettres à l'article 4.1.a. [Notice : Notice-Masterlife-Credit-202410.pdf, p.12, Article 4.1.a p.12](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=12) `#axa_masterlife_credit_2024-10_formule_01`
+- **IJ invalidité partielle** — autre · IJ = IJ_max × n_indemnisation(taux_croisé)/100, pour 33 ≤ taux < 66 ; 100 % si ≥ 66 ; 0 si < 33 · justification : Article 4.2.a + tableaux contractuels. [Notice : Notice-Masterlife-Credit-202410.pdf, p.15, Tableaux p.15](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=15) `#axa_masterlife_credit_2024-10_formule_02`
+- **Exonération incapacité** — cotisation · remboursement = cotisation_annuelle/365 × max(0, jours_incapacité − 90) · justification : « 1/365e par journée d'incapacité » avec « déduction d'une franchise de 90 jours » — l'application exacte de la franchise (en jours déduits) est l'interprétation la plus directe du texte. [Notice : Notice-Masterlife-Credit-202410.pdf, p.16, Article 4.4.a p.16](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=16) `#axa_masterlife_credit_2024-10_formule_03`
+
+
+### Définitions (5)
+
+- **Accident** — Atteinte corporelle non intentionnelle provenant directement de l'action soudaine et imprévisible d'une cause extérieure. L'infarctus du myocarde, les affections coronariennes, affections soudaines, affections dues à un choc émotif ou à un surmenage et les dépressions sont des MALADIES, pas des accidents. [Notice : Notice-Masterlife-Credit-202410.pdf, p.4, Définitions - Accident](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=4) `#masterlife-credit:def:bc84b360bb`
+- **PTIA** — Reconnu avant le 70e anniversaire définitivement incapable de toute occupation/travail rémunérateur + taux d'invalidité fonctionnelle = 100 % (barème AT SS). Tierce personne exigée entre 60 et 70 ans ; non exigée avant 60 ans. [Notice : Notice-Masterlife-Credit-202410.pdf, p.5, Définitions - PTIA](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=5) `#masterlife-credit:def:4c35567e6e`
+- **Incapacité temporaire totale de travail** — Arrêt total et temporaire de la profession (maladie/accident), médicalement constaté. Chômeur ou sans activité non retraité : incapacité totale d'effectuer ses activités habituelles NON professionnelles. Congé légal de maternité exclu de la notion. [Notice : Notice-Masterlife-Credit-202410.pdf, p.5, Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=5) `#masterlife-credit:def:79f88b32e2`
+- **Invalidité professionnelle** — Définie par expertise, 0-100 %, par rapport à la profession exercée ; indépendante de la position de la Sécurité sociale (la reconnaissance par un organisme ne s'impose pas à l'assureur). [Notice : Notice-Masterlife-Credit-202410.pdf, p.5, Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=5) `#masterlife-credit:def:9351ac94d0`
+- **Franchise** — Période entre l'événement et le début de l'indemnisation ; plusieurs niveaux, choix aux conditions particulières ; ne concerne que l'incapacité de travail. [Notice : Notice-Masterlife-Credit-202410.pdf, p.4, Définitions - Franchise](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=4) `#masterlife-credit:def:5f15e6a842`
+
+
+### Conditions de souscription (3)
+
+- Membre ANPERE ; assuré personne physique résidant en France ; questionnaires (médical/financier/sportif) sauf dispense Lemoine : prêt L313-1 1° C. conso (immobilier habitation/mixte, travaux, terrains…), part assurée sur encours cumulé ≤ 200 000 € (exemples en annexe p.27), échéance du prêt avant le 60e anniversaire - 3 conditions cumulatives. [Notice : Notice-Masterlife-Credit-202410.pdf, p.8, Article 1.4 a)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=8) `#masterlife-credit:cond:1ed4ab0baf`
+- Modification des garanties possible jusqu'au 75e anniversaire, accord du prêteur le cas échéant ; augmentation soumise à acceptation ADIS et éventuelle sélection médicale. [Notice : Notice-Masterlife-Credit-202410.pdf, p.9, Article 1.7](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=9) `#masterlife-credit:cond:95cc3d507f`
+- Convention AERAS : examen 2e et 3e niveaux en cas de refus, écrêtement des surprimes pour les éligibles, GIS possible. [Notice : Notice-Masterlife-Credit-202410.pdf, p.23, Article 10](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=23) `#masterlife-credit:cond:116d8c6c89`
+
+## 2. Raisonnement (Pack B)
+
+### mode_navigation_ia
+
+- **priorite_recherche** :
+  - Contrat AXA: chercher d'abord dans contrats_axa puis verifier references_pdf.
+  - Regle publique: chercher dans sources_officielles_et_regles_publiques.
+  - Question mixte: croiser regles_transverses_et_garde_fous avec contrat et source officielle.
+  - Source absente: utiliser recherche_externe_controlee sans presenter le resultat comme preuve certaine.
+  - Reponse client: utiliser style_et_reponses_terrain seulement apres preuve.
+  - Formulaire/besoin: utiliser formulaires_et_analyse_besoins.
+- **regle_de_preuve** :
+  - **clause_AXA** : PDF/notice/conditions generales ou JSON contractuel avec provenance et reference PDF.
+  - **regle_officielle** : source officielle integree ou externe verifiee.
+  - **pointeur** : jamais preuve.
+  - **source_fiable_non_officielle** : jamais equivalente a une source officielle.
+  - **test** : jamais preuve.
+  - **style** : jamais preuve.
+- **regle_de_refus** :
+  - Refuser si source insuffisante.
+  - Refuser si donnee client manquante.
+  - Refuser si calcul personnalise impossible.
+  - Refuser si question medicale detaillee.
+  - Refuser si caisse, pays ou fiscalite non sources.
+  - Refuser de promettre une acceptation AERAS.
+- **regle_tokens** :
+  - Commencer par index_rapide.
+  - Ne lire que les blocs necessaires.
+  - Citer uniquement les sources utiles.
+  - Ne pas parcourir tout le master si un bloc cible suffit.
+  - Ne pas repeter le contenu du JSON dans la reponse.
+
+### arbres_decision
+
+- **reponse_contractuelle** :
+  - identifier contrat
+  - ouvrir contrats_axa
+  - verifier references_pdf
+  - citer source
+  - refuser si page/source insuffisante
+- **reponse_officielle** :
+  - identifier theme public
+  - ouvrir sources_officielles_et_regles_publiques
+  - verifier statut_source
+  - ne pas transformer pointeur en source
+- **source_absente** :
+  - ne pas conclure
+  - ouvrir recherche_externe_controlee
+  - appliquer paliers
+  - annoncer fiabilite
+
+### regles_transverses_et_garde_fous
+
+- **blocs** :
+  - **bloc_id** : json_0001
+  - **source** :
+    - **source_file_original** : assurance_emprunteur_regles_transverses.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\assurance_emprunteur_regles_transverses.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : 59568e577a790ffb6dbe679474efa9ec8dae9b05d0958121ef6aaa7977392c37
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.4_transverses
+    - **regles** :
+      - **id_regle** : RT-EMP-001
+      - **theme** : AERAS
+      - **question_utilisateur_typique** : AERAS garantit-il l'acceptation ?
+      - **couche_concernee** :
+        - emprunteur
+        - AERAS
+        - souscription
+      - **regle_connue** : AERAS encadre certaines situations mais ne doit pas etre presente comme une acceptation automatique.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/officiel_gouv/assurance_emprunteur_regles_publiques.json
+        - 03_SOURCES_PREUVES/contrats/masterlife_credit.json
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Source AERAS actualisee si besoin.
+      - **contrats_axa_potentiellement_concernes** :
+        - Masterlife Credit
+      - **donnees_client_necessaires** :
+        - pret
+        - garanties banque
+        - question generale ou dossier
+        - details medicaux hors IA
+      - **piege_frequent** : Confondre cadre AERAS et decision assureur.
+      - **mauvaise_reponse_ia_typique** : AERAS oblige l'assureur a accepter.
+      - **reponse_prudente_attendue** : Expliquer le cadre, refuser les donnees medicales identifiantes et ne pas promettre l'acceptation.
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_regle** : RT-EMP-002
+      - **theme** : Droit a l'oubli
+      - **question_utilisateur_typique** : Avec un ancien probleme de sante, ai-je le droit a l'oubli ?
+      - **couche_concernee** :
+        - emprunteur
+        - AERAS
+        - source officielle
+      - **regle_connue** : Sujet sensible necessitant source officielle a jour et traitement hors IA des donnees medicales.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/officiel_gouv/assurance_emprunteur_regles_publiques.json
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Source officielle actualisee droit a l'oubli/AERAS.
+      - **contrats_axa_potentiellement_concernes** :
+        - Masterlife Credit
+      - **donnees_client_necessaires** :
+        - cadre general
+        - pret
+        - date dossier ; details medicaux hors IA
+      - **piege_frequent** : Demander ou traiter des donnees medicales identifiantes dans l'IA.
+      - **mauvaise_reponse_ia_typique** : Donnez-moi votre pathologie et je vous dirai.
+      - **reponse_prudente_attendue** : Rester general, citer la source, proposer traitement conseiller hors IA.
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+  - **_provenance** :
+    - **source_file_original** : assurance_emprunteur_regles_transverses.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\assurance_emprunteur_regles_transverses.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0002
+  - **source** :
+    - **source_file_original** : assurance_vie_regles_transverses.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\assurance_vie_regles_transverses.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : c9b9ba45f95e8a24435edc773bc7d240793d8187891f2a1f8b9c62a0256a10e2
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.4_transverses
+    - **regles** :
+      - **id_regle** : RT-AV-001
+      - **theme** : Assurance-vie vs fiscalite
+      - **question_utilisateur_typique** : La fiscalite de l'assurance-vie garantit-elle le capital ?
+      - **couche_concernee** :
+        - assurance-vie
+        - fiscalite
+        - contrat AXA
+      - **regle_connue** : La fiscalite et le fonctionnement contractuel sont deux couches differentes. La fiscalite ne prouve pas une garantie de capital.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/officiel_gouv/fiscalite_assurance_vie.json
+        - 03_SOURCES_PREUVES/contrats/excelium.json
+        - 03_SOURCES_PREUVES/officiel_gouv/official_sources_augmented_v1.5/sources_officielles_augmentees_index.json#offaug.service_public.assurance_vie_souscription
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Source officielle fiscale actualisee et DIC/supports si besoin.
+      - **contrats_axa_potentiellement_concernes** :
+        - Excelium
+        - EssenCiel Patrimoine
+      - **donnees_client_necessaires** :
+        - contrat
+        - supports
+        - date versements
+        - objectif
+      - **piege_frequent** : Transformer une regle fiscale en garantie contractuelle.
+      - **mauvaise_reponse_ia_typique** : Oui, assurance-vie veut dire capital garanti.
+      - **reponse_prudente_attendue** : Distinguer fiscalite, souscription, beneficiaire, supports, risques et garanties ; ouvrir le contrat, la source fiscale et la source officielle v1.5 si utile.
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_regle** : RT-AV-002
+      - **theme** : Rachat assurance-vie
+      - **question_utilisateur_typique** : Peux-tu calculer l'impot exact sur un rachat ?
+      - **couche_concernee** :
+        - assurance-vie
+        - fiscalite
+        - formule ou calcul
+      - **regle_connue** : Refuser le calcul definitif sans donnees completes et source fiscale a jour.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/officiel_gouv/fiscalite_rachat_assurance_vie.json
+        - 02_RAISONNEMENT_COMPLEXE/formules_et_calculs_a_verifier/formules_axa_a_verifier.json
+        - 03_SOURCES_PREUVES/officiel_gouv/pointeurs_recherche_officielle/pointeurs_recherche_officielle_index.json#PTR-IMPOTS-ASSURANCE-VIE
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Source fiscale actualisee au jour de la reponse.
+      - **contrats_axa_potentiellement_concernes** :
+        - Excelium
+        - EssenCiel Patrimoine
+      - **donnees_client_necessaires** :
+        - date ouverture
+        - date versements
+        - montants
+        - plus-value
+        - option fiscale
+        - residence fiscale
+      - **piege_frequent** : Donner un montant fiscal sans donnees.
+      - **mauvaise_reponse_ia_typique** : Voici l'impot exact a payer.
+      - **reponse_prudente_attendue** : Lister les donnees necessaires et renvoyer vers la source fiscale a verifier ; si la source est absente ou douteuse, proposer le pointeur impots.gouv.fr sans le citer comme source.
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+  - **_provenance** :
+    - **source_file_original** : assurance_vie_regles_transverses.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\assurance_vie_regles_transverses.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0003
+  - **source** :
+    - **source_file_original** : beneficiaires_deces_succession_transmission.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\beneficiaires_deces_succession_transmission.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : e7543e7963bdb426ade9f66dd8118df4e3e396386183a6d2040bd9e4ca3b9cf7
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.4_transverses
+    - **regles** :
+      - **id_regle** : RT-BEN-001
+      - **theme** : Beneficiaire mineur
+      - **question_utilisateur_typique** : Peut-on designer un enfant mineur beneficiaire ?
+      - **couche_concernee** :
+        - beneficiaire
+        - assurance-vie
+        - succession
+        - contrat AXA
+      - **regle_connue** : Question transverse : verifier clause beneficiaire, modalites contractuelles et eventuelles consequences juridiques/fiscales.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/contrats/excelium.json
+        - 03_SOURCES_PREUVES/officiel_gouv/fiscalite_deces_succession_beneficiaires.json
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Guide clause beneficiaire / regles mineur beneficiaire a sourcer.
+      - **contrats_axa_potentiellement_concernes** :
+        - Excelium
+        - EssenCiel Patrimoine
+        - Avizen
+      - **donnees_client_necessaires** :
+        - age beneficiaire
+        - lien familial
+        - objectif
+        - clause
+        - representants
+      - **piege_frequent** : Dire que le capital ira automatiquement et simplement au mineur.
+      - **mauvaise_reponse_ia_typique** : Aucune verification n'est necessaire.
+      - **reponse_prudente_attendue** : Verifier clause, contrat et source juridique/fiscale ; demander donnees manquantes.
+      - **niveau_prudence** : critique
+      - **statut** : a sourcer
+      - **id_regle** : RT-BEN-002
+      - **theme** : Obseques vs transmission patrimoniale
+      - **question_utilisateur_typique** : Je veux 40000 EUR pour deces/obseques et transmettre aux enfants.
+      - **couche_concernee** :
+        - beneficiaire
+        - assurance-vie
+        - contrat AXA
+        - fiscalite
+      - **regle_connue** : Distinguer financement obseques, assistance, capital deces et transmission patrimoniale.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/contrats/essenciel.json
+        - 03_SOURCES_PREUVES/contrats/essenciel_patrimoine.json
+        - 03_SOURCES_PREUVES/officiel_gouv/fiscalite_assurance_vie.json
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Source fiscale actualisee si calcul demande.
+      - **contrats_axa_potentiellement_concernes** :
+        - EssenCiel
+        - EssenCiel Patrimoine
+        - Excelium
+      - **donnees_client_necessaires** :
+        - objectif
+        - beneficiaires
+        - montant
+        - pays
+        - age
+        - dates versements
+      - **piege_frequent** : Confondre obseques et transmission.
+      - **mauvaise_reponse_ia_typique** : Un contrat obseques suffit pour transmettre aux enfants.
+      - **reponse_prudente_attendue** : Separer les objectifs et ouvrir les sources correspondantes.
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+  - **_provenance** :
+    - **source_file_original** : beneficiaires_deces_succession_transmission.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\beneficiaires_deces_succession_transmission.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0004
+  - **source** :
+    - **source_file_original** : branchements_sensibles_v1.6.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\branchements_sensibles_v1.6.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : 14c09910dc3c986962454c293b634f525ca11b5d3f73e1254739118d3ee02269
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.6
+    - **regles** :
+      - **id_regle** : RT-AERAS-001
+      - **theme** : AERAS et acceptation assurance emprunteur
+      - **source_officielle** : 03_SOURCES_PREUVES/officiel_gouv/aeras_v1.6/aeras_sources_verifiees_index.json#aeras.site_officiel.accueil
+      - **module_v1_6** : 03_SOURCES_PREUVES/officiel_gouv/aeras_v1.6/
+      - **PDF_AXA_a_ouvrir** :
+        - MasterLife Credit
+      - **pointeur_si_source_manquante** : aeras_pointeurs_recherche_controlee.json
+      - **test_associe** : AERAS-002
+      - **reponse_prudente** : AERAS facilite l'acces mais ne garantit pas l'acceptation ; ne pas promettre l'absence de surprime, exclusion ou refus.
+      - **statut** : partiellement_comble_source_officielle
+      - **id_regle** : RT-AERAS-002
+      - **theme** : Droit a l'oubli et grille de reference
+      - **source_officielle** : 03_SOURCES_PREUVES/officiel_gouv/aeras_v1.6/aeras_droit_oubli_grille_reference.json
+      - **module_v1_6** : 03_SOURCES_PREUVES/officiel_gouv/aeras_v1.6/
+      - **PDF_AXA_a_ouvrir** :
+        - MasterLife Credit
+      - **pointeur_si_source_manquante** : AERAS-PTR-GRILLE
+      - **test_associe** : AERAS-003
+      - **reponse_prudente** : Ne pas analyser medicalement ; verifier la grille officielle a jour et ne pas collecter de donnees medicales detaillees.
+      - **statut** : partiellement_comble_source_officielle
+      - **id_regle** : RT-PROF-001
+      - **theme** : Professions, statuts et caisses
+      - **source_officielle** : 03_SOURCES_PREUVES/officiel_gouv/professions_caisses_v1.6/professions_caisses_index.json
+      - **module_v1_6** : 03_SOURCES_PREUVES/officiel_gouv/professions_caisses_v1.6/
+      - **PDF_AXA_a_ouvrir** :
+        - Avizen
+        - Avizen Pro
+        - Ma retraite
+      - **pointeur_si_source_manquante** : pointeurs_caisses_professionnelles.json
+      - **test_associe** : PROF-016
+      - **reponse_prudente** : Identifier le statut exact avant la caisse ; ne jamais inventer un bareme ou une caisse.
+      - **statut** : partiellement_comble_source_officielle
+      - **id_regle** : RT-CAISSE-001
+      - **theme** : Calcul caisse ou regime obligatoire
+      - **source_officielle** : sources v1.5 + professions_caisses_v1.6
+      - **module_v1_6** : 03_SOURCES_PREUVES/officiel_gouv/professions_caisses_v1.6/
+      - **PDF_AXA_a_ouvrir** :
+        - Avizen
+        - Avizen Pro
+      - **pointeur_si_source_manquante** : pointeurs_recherche_officielle_v1.6_detail.json
+      - **test_associe** : PROF-018
+      - **reponse_prudente** : Refuser tout calcul definitif sans source caisse a jour, statut exact et donnees completes.
+      - **statut** : partiel
+      - **id_regle** : RT-RES-001
+      - **theme** : Residence fiscale et contrats patrimoniaux
+      - **source_officielle** : 03_SOURCES_PREUVES/officiel_gouv/residences_etranger_v1.6/residences_etranger_index.json#res.service_public.domicile_fiscal
+      - **module_v1_6** : 03_SOURCES_PREUVES/officiel_gouv/residences_etranger_v1.6/
+      - **PDF_AXA_a_ouvrir** :
+        - Excelium
+        - Ma retraite
+      - **pointeur_si_source_manquante** : residence_fiscale_pointeurs.json
+      - **test_associe** : RES-005
+      - **reponse_prudente** : Demander pays, foyer, sejour, activite et convention fiscale ; ne pas conclure pays par pays.
+      - **statut** : partiellement_comble_source_officielle
+      - **id_regle** : RT-FRONT-001
+      - **theme** : Frontaliers et securite sociale
+      - **source_officielle** : 03_SOURCES_PREUVES/officiel_gouv/residences_etranger_v1.6/residences_etranger_index.json#res.cleiss.mobilite_internationale
+      - **module_v1_6** : 03_SOURCES_PREUVES/officiel_gouv/residences_etranger_v1.6/
+      - **PDF_AXA_a_ouvrir** :
+        - Avizen
+        - Avizen Pro
+        - Ma retraite
+      - **pointeur_si_source_manquante** : expatriation_frontaliers_pointeurs.json
+      - **test_associe** : RES-003
+      - **reponse_prudente** : Distinguer fiscalite et securite sociale ; demander pays de residence, pays de travail et statut.
+      - **statut** : partiel
+      - **id_regle** : RT-DEC-ETR-001
+      - **theme** : Deces a l'etranger et obsèques
+      - **source_officielle** : 03_SOURCES_PREUVES/officiel_gouv/residences_etranger_v1.6/residences_etranger_index.json#res.diplomatie.deces_etranger
+      - **module_v1_6** : 03_SOURCES_PREUVES/officiel_gouv/residences_etranger_v1.6/
+      - **PDF_AXA_a_ouvrir** :
+        - EssenCiel
+        - assistance
+      - **pointeur_si_source_manquante** : deces_etranger_sources_pointeurs.json
+      - **test_associe** : RES-006
+      - **reponse_prudente** : Separer declaration consulaire, rapatriement, assistance et garantie contractuelle AXA.
+      - **statut** : partiellement_comble_source_officielle
+      - **id_regle** : RT-TERR-001
+      - **theme** : Territorialite, sejour temporaire, expatriation
+      - **source_officielle** : 03_SOURCES_PREUVES/officiel_gouv/residences_etranger_v1.6/
+      - **module_v1_6** : 03_SOURCES_PREUVES/officiel_gouv/residences_etranger_v1.6/
+      - **PDF_AXA_a_ouvrir** :
+        - PDF AXA du contrat concerne
+      - **pointeur_si_source_manquante** : territorialite_assurance_pointeurs.json
+      - **test_associe** : RES-013
+      - **reponse_prudente** : Ouvrir toujours le PDF AXA ; distinguer garantie et assistance.
+      - **statut** : partiel_source_AXA_a_verifier
+  - **_provenance** :
+    - **source_file_original** : branchements_sensibles_v1.6.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\branchements_sensibles_v1.6.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0005
+  - **source** :
+    - **source_file_original** : capacite_souscription_mineurs_majeurs.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\capacite_souscription_mineurs_majeurs.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : 51c2c901ee85a8975ad9880e0ed9ddab2e20cff7c44e5a31b7ecc87e8d1f1392
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.4_transverses
+    - **regles** :
+      - **id_regle** : RT-CAP-001
+      - **theme** : Mineur non emancipe et assurance-vie
+      - **question_utilisateur_typique** : Un client de 17 ans peut-il souscrire Excelium ?
+      - **couche_concernee** :
+        - assurance-vie
+        - capacite juridique
+        - souscription
+      - **regle_connue** : Point transverse a verifier : la notice produit seule peut etre insuffisante pour repondre a la capacite juridique d'un mineur. Ne pas affirmer sans source juridique/contractuelle et modalites AXA/ANPERE.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/contrats/excelium.json
+        - 03_SOURCES_PREUVES/PDF_AXA/Excelium/2026-05 Notice Excelium Vie.pdf
+        - 03_SOURCES_PREUVES/officiel_gouv/official_sources_augmented_v1.5/sources_officielles_augmentees_index.json#offaug.service_public.assurance_vie_souscription
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Regles juridiques mineur/representant legal + bulletin/modalites AXA/ANPERE applicables a Excelium.
+      - **contrats_axa_potentiellement_concernes** :
+        - Excelium
+        - EssenCiel Patrimoine
+        - Ma retraite
+      - **donnees_client_necessaires** :
+        - age exact
+        - emancipation
+        - representants legaux
+        - contrat vise
+        - modalites de souscription
+      - **piege_frequent** : Chercher uniquement dans la notice produit et conclure trop vite.
+      - **mauvaise_reponse_ia_typique** : Oui, un mineur de 17 ans peut souscrire seul Excelium.
+      - **reponse_prudente_attendue** : La question releve aussi de la capacite juridique. Utiliser la source officielle v1.5 pour le cadre general, puis verifier les modalites AXA/ANPERE applicables. Ne pas conclure que le mineur souscrit seul.
+      - **niveau_prudence** : critique
+      - **statut** : partielle_source_officielle_v1.5
+      - **id_regle** : RT-CAP-002
+      - **theme** : Mineur emancipe
+      - **question_utilisateur_typique** : Un mineur emancipe peut-il adherer a une assurance-vie ?
+      - **couche_concernee** :
+        - assurance-vie
+        - capacite juridique
+        - souscription
+      - **regle_connue** : Cas transverse distinct du mineur non emancipe. Source juridique et modalites contractuelles AXA necessaires.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/officiel_gouv/official_sources_augmented_v1.5/sources_officielles_augmentees_index.json#offaug.service_public.assurance_vie_souscription
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Source juridique mineur emancipe + modalites AXA/ANPERE.
+      - **contrats_axa_potentiellement_concernes** :
+        - Excelium
+        - EssenCiel Patrimoine
+        - Ma retraite
+      - **donnees_client_necessaires** :
+        - preuve emancipation
+        - age
+        - contrat vise
+        - representants ou autonomie juridique
+      - **piege_frequent** : Assimiler mineur emancipe et mineur non emancipe.
+      - **mauvaise_reponse_ia_typique** : Tous les mineurs sont traites pareil.
+      - **reponse_prudente_attendue** : Distinguer le cas emancipe avec la source officielle v1.5, puis signaler que les modalites AXA/ANPERE restent a verifier.
+      - **niveau_prudence** : critique
+      - **statut** : partielle_source_officielle_v1.5
+      - **id_regle** : RT-CAP-003
+      - **theme** : Souscripteur, adherent, assure distincts
+      - **question_utilisateur_typique** : Le souscripteur peut-il etre different de l'assure ?
+      - **couche_concernee** :
+        - contrat AXA
+        - souscription
+        - beneficiaire
+      - **regle_connue** : Les roles doivent etre verifies contrat par contrat. Ne jamais transposer une regle d'un produit a l'autre.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/contrats/
+        - 03_SOURCES_PREUVES/PDF_AXA/
+        - 03_SOURCES_PREUVES/officiel_gouv/official_sources_augmented_v1.5/sources_officielles_augmentees_index.json#offaug.service_public.assurance_vie_souscription
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Bulletins d'adhesion et conditions de souscription par produit si absents.
+      - **contrats_axa_potentiellement_concernes** :
+        - Excelium
+        - EssenCiel Patrimoine
+        - Avizen
+        - Avizen Pro
+        - Masterlife Credit
+      - **donnees_client_necessaires** :
+        - contrat vise
+        - role de chaque personne
+        - age
+        - lien familial
+        - objectif
+      - **piege_frequent** : Confondre souscripteur, adherent, assure et beneficiaire.
+      - **mauvaise_reponse_ia_typique** : Ces roles sont toujours interchangeables.
+      - **reponse_prudente_attendue** : Identifier les roles puis ouvrir le contrat et le bulletin/modalites de souscription applicables.
+      - **niveau_prudence** : eleve
+      - **statut** : partielle
+  - **_provenance** :
+    - **source_file_original** : capacite_souscription_mineurs_majeurs.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\capacite_souscription_mineurs_majeurs.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0006
+  - **source** :
+    - **source_file_original** : carte_trous_transverses.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\carte_trous_transverses.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : 8b26adb29a71b47c7f6663c2cce913f0c92d130130faa56320d878b1cc9a3d4c
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.4_transverses
+    - **trous** :
+      - **domaine** : regles mineurs / representants legaux
+      - **impact_conseiller** : repondre aux souscriptions assurance-vie mineurs
+      - **risque_de_mauvaise_reponse** : conclusion juridique fausse
+      - **source_a_ajouter** : modalites AXA/ANPERE ; source officielle v1.5 deja ajoutee
+      - **source_v1_5** : offaug.service_public.assurance_vie_souscription
+      - **statut_v1_5** : partiellement_comble
+      - **urgence** : elevee
+      - **difficulte** : moyenne
+      - **priorite** : P1
+      - **domaine** : regles transversales assurance-vie
+      - **impact_conseiller** : distinguer produit, souscription, fiscalite, beneficiaire
+      - **risque_de_mauvaise_reponse** : melange produit/fiscalite
+      - **source_a_ajouter** : fiscalite actualisee et clauses AXA ; source souscription v1.5 deja ajoutee
+      - **source_v1_5** : offaug.service_public.assurance_vie_souscription
+      - **statut_v1_5** : partiellement_comble
+      - **urgence** : elevee
+      - **difficulte** : moyenne
+      - **priorite** : P1
+      - **domaine** : modalites souscription AXA/ANPERE
+      - **impact_conseiller** : traiter les cas hors notice
+      - **risque_de_mauvaise_reponse** : reponse incomplete
+      - **source_a_ajouter** : bulletins et conditions d'adhesion
+      - **urgence** : elevee
+      - **difficulte** : moyenne
+      - **priorite** : P1
+      - **domaine** : IJ salarie / invalidite
+      - **impact_conseiller** : distinguer regime obligatoire, employeur et prevoyance AXA
+      - **risque_de_mauvaise_reponse** : garantie declenchee a tort
+      - **source_a_ajouter** : caisse/statut/convention/contrat AXA ; sources officielles v1.5 deja ajoutees
+      - **source_v1_5** : offaug.service_public.ij_salarie / offaug.service_public.invalidite
+      - **statut_v1_5** : partiellement_comble
+      - **urgence** : elevee
+      - **difficulte** : moyenne
+      - **priorite** : P1
+      - **domaine** : caisses professionnelles
+      - **impact_conseiller** : TNS/liberaux/medicaux
+      - **risque_de_mauvaise_reponse** : baremes inventes
+      - **source_a_ajouter** : sources par caisse
+      - **urgence** : elevee
+      - **difficulte** : elevee
+      - **priorite** : P1
+      - **domaine** : professions medicales
+      - **impact_conseiller** : comparaison prevoyance medicale
+      - **risque_de_mauvaise_reponse** : caisse ou prestations inventees
+      - **source_a_ajouter** : sources caisses medicales
+      - **urgence** : elevee
+      - **difficulte** : elevee
+      - **priorite** : P1
+      - **domaine** : frontaliers
+      - **impact_conseiller** : residence/travail transfrontalier
+      - **risque_de_mauvaise_reponse** : regle pays inventee
+      - **source_a_ajouter** : sources regimes frontaliers
+      - **urgence** : moyenne
+      - **difficulte** : elevee
+      - **priorite** : P2
+      - **domaine** : residence a l'etranger
+      - **impact_conseiller** : souscription, fiscalite, maintien garanties
+      - **risque_de_mauvaise_reponse** : generalisation abusive
+      - **source_a_ajouter** : sources residence/expatriation
+      - **urgence** : elevee
+      - **difficulte** : elevee
+      - **priorite** : P1
+      - **domaine** : territorialite assistance
+      - **impact_conseiller** : deces/assistance hors France
+      - **risque_de_mauvaise_reponse** : assistance confondue avec garantie
+      - **source_a_ajouter** : clauses territorialite indexees
+      - **urgence** : elevee
+      - **difficulte** : moyenne
+      - **priorite** : P1
+      - **domaine** : fiscalite actualisee
+      - **impact_conseiller** : rachat, succession, PER
+      - **risque_de_mauvaise_reponse** : calcul faux
+      - **source_a_ajouter** : sources fiscales rachat/succession a jour ; PER v1.5 partiellement ajoute
+      - **source_v1_5** : offaug.service_public.per
+      - **statut_v1_5** : partiellement_comble
+      - **urgence** : elevee
+      - **difficulte** : moyenne
+      - **priorite** : P1
+      - **domaine** : APA / GIR / dependance
+      - **impact_conseiller** : distinguer aide publique et garantie EntourAge
+      - **risque_de_mauvaise_reponse** : declenchement contractuel invente
+      - **source_a_ajouter** : definition contractuelle EntourAge ; source APA/GIR v1.5 deja ajoutee
+      - **source_v1_5** : offaug.service_public.apa_gir
+      - **statut_v1_5** : partiellement_comble
+      - **urgence** : elevee
+      - **difficulte** : moyenne
+      - **priorite** : P1
+      - **domaine** : comparaisons concurrentes
+      - **impact_conseiller** : MACSF/La Medicale/autres
+      - **risque_de_mauvaise_reponse** : denigrement ou invention
+      - **source_a_ajouter** : notice concurrente fournie
+      - **urgence** : moyenne
+      - **difficulte** : moyenne
+      - **priorite** : P2
+      - **domaine** : bulletins adhesion
+      - **impact_conseiller** : modalites souscription non dans notice
+      - **risque_de_mauvaise_reponse** : condition oubliee
+      - **source_a_ajouter** : bulletins adhesion produit
+      - **urgence** : elevee
+      - **difficulte** : moyenne
+      - **priorite** : P1
+      - **domaine** : procedures internes non publiques
+      - **impact_conseiller** : acceptation/tarification
+      - **risque_de_mauvaise_reponse** : inventer procedure AXA
+      - **source_a_ajouter** : ne pas ajouter si non public ; signaler hors pack
+      - **urgence** : moyenne
+      - **difficulte** : elevee
+      - **priorite** : P2
+      - **domaine** : regles acceptation medicale
+      - **impact_conseiller** : emprunteur/prevoyance
+      - **risque_de_mauvaise_reponse** : promesse acceptation
+      - **source_a_ajouter** : source officielle/publique et procedure hors IA
+      - **urgence** : elevee
+      - **difficulte** : elevee
+      - **priorite** : P1
+      - **domaine** : AERAS / droit a l'oubli
+      - **impact_conseiller** : assurance emprunteur avec risque aggrave de sante
+      - **risque_de_mauvaise_reponse** : acceptation ou absence de surprime promise
+      - **source_a_ajouter** : decision assureur/AXA hors pack ; module AERAS v1.6 ajoute
+      - **source_v1_6** : 03_SOURCES_PREUVES/officiel_gouv/aeras_v1.6/
+      - **statut_v1_6** : partiellement_comble
+      - **urgence** : elevee
+      - **difficulte** : elevee
+      - **priorite** : P1
+      - **domaine** : professions / caisses
+      - **impact_conseiller** : orienter TNS, liberaux, sante, dirigeants
+      - **risque_de_mauvaise_reponse** : caisse ou bareme invente
+      - **source_a_ajouter** : baremes et sources caisses detaillees ; module professions v1.6 ajoute
+      - **source_v1_6** : 03_SOURCES_PREUVES/officiel_gouv/professions_caisses_v1.6/
+      - **statut_v1_6** : partiellement_comble
+      - **urgence** : elevee
+      - **difficulte** : elevee
+      - **priorite** : P1
+      - **domaine** : residence / frontalier / etranger
+      - **impact_conseiller** : fiscalite, securite sociale, territorialite
+      - **risque_de_mauvaise_reponse** : regle pays inventee
+      - **source_a_ajouter** : conventions pays et PDF AXA ; module residences v1.6 ajoute
+      - **source_v1_6** : 03_SOURCES_PREUVES/officiel_gouv/residences_etranger_v1.6/
+      - **statut_v1_6** : partiellement_comble
+      - **urgence** : elevee
+      - **difficulte** : elevee
+      - **priorite** : P1
+  - **_provenance** :
+    - **source_file_original** : carte_trous_transverses.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\carte_trous_transverses.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0007
+  - **source** :
+    - **source_file_original** : prevoyance_regles_transverses.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\prevoyance_regles_transverses.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : 4047360ec1243405eeb71a980479fa37d6611ebf485482fc5a0872936a4b6225
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.4_transverses
+    - **regles** :
+      - **id_regle** : RT-PREV-001
+      - **theme** : Incapacite vs invalidite
+      - **question_utilisateur_typique** : Incapacite et invalidite, c'est pareil ?
+      - **couche_concernee** :
+        - prevoyance
+        - regime obligatoire
+        - contrat AXA
+      - **regle_connue** : Les notions doivent etre distinguees et verifiees dans le contrat et les sources officielles.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/officiel_gouv/securite_sociale_invalidite_incapacite.json
+        - 03_SOURCES_PREUVES/contrats/avizen.json
+        - 03_SOURCES_PREUVES/contrats/avizen_pro.json
+        - 03_SOURCES_PREUVES/officiel_gouv/official_sources_augmented_v1.5/sources_officielles_augmentees_index.json#offaug.service_public.invalidite
+        - 03_SOURCES_PREUVES/officiel_gouv/official_sources_augmented_v1.5/sources_officielles_augmentees_index.json#offaug.service_public.ij_salarie
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Definitions contractuelles page PDF si non indexees.
+      - **contrats_axa_potentiellement_concernes** :
+        - Avizen
+        - Avizen Pro
+      - **donnees_client_necessaires** :
+        - statut
+        - contrat
+        - profession
+        - situation de travail
+      - **piege_frequent** : Utiliser la definition Securite sociale comme clause AXA.
+      - **mauvaise_reponse_ia_typique** : C'est la meme chose.
+      - **reponse_prudente_attendue** : Comparer les definitions contractuelles et officielles v1.5, sans automatisme de garantie.
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_regle** : RT-PREV-002
+      - **theme** : Mutuelle vs prevoyance
+      - **question_utilisateur_typique** : Ma mutuelle couvre deja tout, non ?
+      - **couche_concernee** :
+        - prevoyance
+        - regime obligatoire
+        - contrat AXA
+      - **regle_connue** : Distinguer frais de sante, revenus, invalidite, deces et accident.
+      - **source_presente_dans_le_pack** :
+        - 02_RAISONNEMENT_COMPLEXE/tests_non_confusion/
+        - 03_SOURCES_PREUVES/contrats/avizen.json
+        - 03_SOURCES_PREUVES/contrats/ma_protection_accident.json
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Contrat mutuelle client si comparaison reelle.
+      - **contrats_axa_potentiellement_concernes** :
+        - Avizen
+        - Avizen Pro
+        - Ma Protection Accident
+      - **donnees_client_necessaires** :
+        - contrat mutuelle
+        - prevoyance employeur
+        - statut
+        - besoin
+      - **piege_frequent** : Denigrer la mutuelle ou dire qu'elle suffit a tout.
+      - **mauvaise_reponse_ia_typique** : Votre mutuelle couvre aussi vos revenus et le deces.
+      - **reponse_prudente_attendue** : Clarifier les familles de risque et ouvrir les contrats utiles.
+      - **niveau_prudence** : eleve
+      - **statut** : partielle
+  - **_provenance** :
+    - **source_file_original** : prevoyance_regles_transverses.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\prevoyance_regles_transverses.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0008
+  - **source** :
+    - **source_file_original** : regimes_obligatoires_caisses_a_sourcer.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\regimes_obligatoires_caisses_a_sourcer.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : fef981358676714faf9adc17b7262015c94d32416756482aaac152bcec4a93bf
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.4_transverses
+    - **regles** :
+      - **id_regle** : RT-CAISSE-001
+      - **theme** : Profession liberale et caisse non documentee
+      - **question_utilisateur_typique** : Quelle indemnite pour un medecin liberal ?
+      - **couche_concernee** :
+        - regime obligatoire
+        - caisse
+        - prevoyance
+        - formule ou calcul
+      - **regle_connue** : Ne pas inventer la caisse ou le bareme. Identifier la caisse et ajouter la source.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/officiel_gouv/regime_obligatoire_professions_liberales.json
+        - 02_RAISONNEMENT_COMPLEXE/formules_et_calculs_a_verifier/formules_caisses_a_verifier.json
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Sources par caisses professionnelles medicales et non medicales.
+      - **contrats_axa_potentiellement_concernes** :
+        - Avizen Pro
+      - **donnees_client_necessaires** :
+        - profession exacte
+        - caisse
+        - revenu
+        - statut
+        - contrat
+      - **piege_frequent** : Utiliser un bareme generique non source.
+      - **mauvaise_reponse_ia_typique** : Voici l'IJ exacte du medecin liberal.
+      - **reponse_prudente_attendue** : Refuser le calcul, demander la caisse et signaler source a ajouter.
+      - **niveau_prudence** : critique
+      - **statut** : a sourcer
+      - **id_regle** : RT-CAISSE-002
+      - **theme** : TNS et regime obligatoire
+      - **question_utilisateur_typique** : Un TNS est-il deja couvert suffisamment ?
+      - **couche_concernee** :
+        - regime obligatoire
+        - prevoyance
+        - contrat AXA
+      - **regle_connue** : Comparer regime obligatoire et contrat complementaire sans denigrer ni promettre.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/officiel_gouv/regime_obligatoire_independants_tns.json
+        - 03_SOURCES_PREUVES/contrats/avizen_pro.json
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Sources regime/caisse selon statut exact si manquantes.
+      - **contrats_axa_potentiellement_concernes** :
+        - Avizen Pro
+      - **donnees_client_necessaires** :
+        - statut
+        - caisse
+        - revenu
+        - charges
+        - delai supportable
+      - **piege_frequent** : Dire que le regime obligatoire ne couvre rien.
+      - **mauvaise_reponse_ia_typique** : Le regime obligatoire est inutile.
+      - **reponse_prudente_attendue** : Verifier ce que couvre deja le regime et ce qui reste a charge.
+      - **niveau_prudence** : eleve
+      - **statut** : partielle
+  - **_provenance** :
+    - **source_file_original** : regimes_obligatoires_caisses_a_sourcer.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\regimes_obligatoires_caisses_a_sourcer.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0009
+  - **source** :
+    - **source_file_original** : regles_transverses_index.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\regles_transverses_index.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : 8875f1f34149155648c54b00b40b225c971363891b08e6df5800ab95dfbd1358
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.4_transverses
+    - **date_creation** : 2026-06-20
+    - **role** : index des regles transverses metier a verifier avant conclusion
+    - **regle** : Une entree transverse n'est pas une preuve. Si la source manque, repondre prudemment et proposer la source a ajouter.
+    - **fichiers** :
+      - **chemin** : capacite_souscription_mineurs_majeurs.json
+      - **theme** : capacite juridique et souscription
+      - **statut_global** : a sourcer
+      - **chemin** : assurance_vie_regles_transverses.json
+      - **theme** : assurance-vie
+      - **statut_global** : partielle
+      - **chemin** : prevoyance_regles_transverses.json
+      - **theme** : prevoyance
+      - **statut_global** : partielle
+      - **chemin** : retraite_per_regles_transverses.json
+      - **theme** : retraite/PER
+      - **statut_global** : partielle
+      - **chemin** : assurance_emprunteur_regles_transverses.json
+      - **theme** : emprunteur/AERAS
+      - **statut_global** : partielle
+      - **chemin** : territorialite_residence_etranger.json
+      - **theme** : territorialite/residence/etranger
+      - **statut_global** : partiellement comble v1.6
+      - **chemin** : branchements_sensibles_v1.6.json
+      - **theme** : AERAS, professions, caisses, residences, territorialite
+      - **statut_global** : partiellement comble v1.6
+      - **chemin** : beneficiaires_deces_succession_transmission.json
+      - **theme** : beneficiaires/deces/succession
+      - **statut_global** : partielle
+      - **chemin** : regimes_obligatoires_caisses_a_sourcer.json
+      - **theme** : regimes obligatoires et caisses
+      - **statut_global** : partiellement comble v1.6
+      - **chemin** : comparaison_contrat_concurrent_prudence.json
+      - **theme** : comparaison concurrente
+      - **statut_global** : source externe necessaire
+      - **chemin** : CARTE_TROUS_TRANSVERSES.md
+      - **theme** : trous du pack
+      - **statut_global** : pilotage
+      - **chemin** : carte_trous_transverses.json
+      - **theme** : trous du pack structure
+      - **statut_global** : pilotage
+  - **_provenance** :
+    - **source_file_original** : regles_transverses_index.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\regles_transverses_index.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0010
+  - **source** :
+    - **source_file_original** : retraite_per_regles_transverses.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\retraite_per_regles_transverses.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : dbb053380884288bebd7fb3064fda688f24f091fe50492238e1bf2aae2992969
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.4_transverses
+    - **regles** :
+      - **id_regle** : RT-PER-001
+      - **theme** : PER deduction et fiscalite
+      - **question_utilisateur_typique** : Le PER est-il toujours fiscalement avantageux ?
+      - **couche_concernee** :
+        - retraite/PER
+        - fiscalite
+        - formule ou calcul
+      - **regle_connue** : L'interet fiscal depend de donnees client et de sources a jour. Pas de conclusion automatique.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/officiel_gouv/fiscalite_per.json
+        - 03_SOURCES_PREUVES/contrats/ma_retraite.json
+        - 03_SOURCES_PREUVES/officiel_gouv/official_sources_augmented_v1.5/sources_officielles_augmentees_index.json#offaug.service_public.per
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Fiscalite PER actualisee et notice/DIC applicables.
+      - **contrats_axa_potentiellement_concernes** :
+        - Ma retraite
+      - **donnees_client_necessaires** :
+        - revenus
+        - TMI
+        - horizon
+        - age
+        - besoin liquidite
+        - sortie souhaitee
+      - **piege_frequent** : Dire que le PER est toujours avantageux.
+      - **mauvaise_reponse_ia_typique** : Oui, le PER reduit toujours l'impot et convient toujours.
+      - **reponse_prudente_attendue** : Lister les donnees, verifier la source PER v1.5 et la fiscalite a jour, puis refuser le calcul definitif.
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_regle** : RT-PER-002
+      - **theme** : Retraite proche
+      - **question_utilisateur_typique** : A quelques annees de la retraite, PER ou assurance-vie ?
+      - **couche_concernee** :
+        - retraite/PER
+        - assurance-vie
+        - fiscalite
+      - **regle_connue** : Comparer objectif, horizon, disponibilite et fiscalite ; ne pas faire de recommandation definitive sans donnees.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/contrats/ma_retraite.json
+        - 03_SOURCES_PREUVES/contrats/excelium.json
+        - 03_SOURCES_PREUVES/officiel_gouv/retraite_obligatoire.json
+        - 03_SOURCES_PREUVES/officiel_gouv/official_sources_augmented_v1.5/sources_officielles_augmentees_index.json#offaug.service_public.per
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Sources fiscales actualisees et donnees retraite client.
+      - **contrats_axa_potentiellement_concernes** :
+        - Ma retraite
+        - Excelium
+      - **donnees_client_necessaires** :
+        - age
+        - revenus
+        - fiscalite
+        - horizon
+        - epargne existante
+      - **piege_frequent** : Choisir un produit sans objectif.
+      - **mauvaise_reponse_ia_typique** : Prenez le PER, c'est toujours mieux.
+      - **reponse_prudente_attendue** : Comparer les couches et signaler les donnees manquantes.
+      - **niveau_prudence** : eleve
+      - **statut** : partielle
+  - **_provenance** :
+    - **source_file_original** : retraite_per_regles_transverses.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\retraite_per_regles_transverses.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0011
+  - **source** :
+    - **source_file_original** : territorialite_residence_etranger.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\territorialite_residence_etranger.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : 7fce8bcf1e9f3328acea5b0bc1e32b3f0a28afe491d26da67bfa144807a00dbc
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.4_transverses
+    - **regles** :
+      - **id_regle** : RT-TER-001
+      - **theme** : Deces a l'etranger
+      - **question_utilisateur_typique** : Le deces est-il couvert si le client meurt a l'etranger ?
+      - **couche_concernee** :
+        - territorialite
+        - contrat AXA
+        - assistance
+      - **regle_connue** : Ne pas assimiler assistance et garantie principale. Verifier la territorialite dans la notice.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/PDF_AXA/
+        - 03_SOURCES_PREUVES/contrats/
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Clauses territorialite par contrat si non indexees.
+      - **contrats_axa_potentiellement_concernes** :
+        - EssenCiel
+        - EssenCiel Patrimoine
+        - Avizen
+        - Ma Protection Accident
+      - **donnees_client_necessaires** :
+        - pays
+        - residence
+        - duree sejour
+        - contrat
+        - cause evenement
+      - **piege_frequent** : Conclure monde entier parce qu'une assistance existe.
+      - **mauvaise_reponse_ia_typique** : Oui, c'est couvert partout.
+      - **reponse_prudente_attendue** : Ouvrir la notice, distinguer garantie/assistance et demander pays/residence.
+      - **niveau_prudence** : critique
+      - **statut** : a sourcer
+      - **id_regle** : RT-TER-002
+      - **theme** : Residence a l'etranger ou demenagement
+      - **question_utilisateur_typique** : Que se passe-t-il si le client demenage hors de France apres souscription ?
+      - **couche_concernee** :
+        - residence
+        - territorialite
+        - souscription
+        - fiscalite
+      - **regle_connue** : Question transverse. Les consequences peuvent dependre du contrat, de la residence fiscale/sociale et des modalites AXA.
+      - **source_presente_dans_le_pack** :
+        - 03_SOURCES_PREUVES/PDF_AXA/
+      - **source_officielle_ou_contractuelle_a_ajouter_si_absente** : Regles residence/expatriation et modalites AXA par contrat.
+      - **contrats_axa_potentiellement_concernes** :
+        - Excelium
+        - Ma retraite
+        - Avizen
+        - EssenCiel
+      - **donnees_client_necessaires** :
+        - pays
+        - date demenagement
+        - residence fiscale
+        - contrat
+        - statut
+      - **piege_frequent** : Inventer une regle pays ou une fiscalite internationale.
+      - **mauvaise_reponse_ia_typique** : Le contrat continue exactement pareil dans tous les pays.
+      - **reponse_prudente_attendue** : Dire que le pack doit etre enrichi par sources residence/territorialite et verifier contrat par contrat.
+      - **niveau_prudence** : critique
+      - **statut** : source externe necessaire
+  - **_provenance** :
+    - **source_file_original** : territorialite_residence_etranger.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\99_REGLES_TRANSVERSES\territorialite_residence_etranger.json
+    - **type_source** : regle_transverse
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : regle_transverse
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0012
+  - **source** :
+    - **source_file_original** : axa_etudes_modeles.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\calculs\axa_etudes_modeles.json
+    - **type_source** : information_pack
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : information_pack
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : badc54a4ae640a3957cbd719bb44ce0092ccb76a89432ce0a6ac6f87665e7316
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **meta** :
+      - **type** : modeles_etudes_calculs_axa
+      - **version** : 2.9.2
+      - **json_contractuels_modifies** : False
+    - **etudes_modeles** :
+      - **id** : etude_obseques
+      - **nom** : Étude obsèques
+      - **contrats_recommandes** :
+        - axa_essenciel_2025-06
+        - axa_entourage_2025-06
+        - axa_avizen_2025-04
+        - axa_excelium_vie_2026-05
+      - **formules_utiles** :
+        - axa_essenciel_2025-06_formule_01
+        - axa_essenciel_2025-06_formule_02
+        - axa_essenciel_2025-06_formule_03
+      - **variables_typiques** :
+        - cotisation_mensuelle
+        - capital_souscrit
+        - annees
+      - **graphiques_typiques** :
+        - cumul_vs_capital
+        - cumul_vs_reduction
+        - hypotheses_estimees
+      - **id** : etude_essenciel
+      - **nom** : Essen'Ciel seul
+      - **contrats_recommandes** :
+        - axa_essenciel_2025-06
+      - **formules_utiles** :
+        - axa_essenciel_2025-06_formule_01
+        - axa_essenciel_2025-06_formule_02
+        - axa_essenciel_2025-06_formule_03
+      - **variables_typiques** :
+        - cotisation_mensuelle
+        - capital_souscrit
+        - annees
+      - **graphiques_typiques** :
+        - cumul_vs_capital
+        - capital_vs_reduction
+      - **id** : etude_prevoyance_tns
+      - **nom** : Prévoyance TNS
+      - **contrats_recommandes** :
+        - axa_avizen_pro_2025-04
+        - axa_masterlife_credit_2024-10
+      - **formules_utiles** :
+      - **variables_typiques** :
+        - cotisation_annuelle
+        - jours_indemnises
+        - taux_indemnisation
+      - **graphiques_typiques** :
+        - evolution_cotisation
+      - **id** : etude_rachat_reduction
+      - **nom** : Rachat / réduction
+      - **contrats_recommandes** :
+        - axa_essenciel_2025-06
+        - axa_excelium_vie_2026-05
+        - axa_ma_retraite_2026-05
+      - **formules_utiles** :
+      - **variables_typiques** :
+        - annees
+        - cumul_cotisations
+        - taux_provision
+      - **graphiques_typiques** :
+        - rachat_temps
+        - capital_vs_reduction
+        - part_taxable
+      - **id** : etude_cotisations
+      - **nom** : Étude cotisations
+      - **contrats_recommandes** :
+      - **formules_utiles** :
+      - **variables_typiques** :
+        - cotisation_mensuelle
+        - taux_annuel
+        - annees
+      - **graphiques_typiques** :
+        - evolution_cotisation
+        - cumul_vs_capital
+      - **id** : etude_comparaison
+      - **nom** : Comparaison de contrats
+      - **contrats_recommandes** :
+      - **formules_utiles** :
+      - **variables_typiques** :
+        - annees
+      - **graphiques_typiques** :
+        - comparaison_contrats
+    - **graphiques_modeles** :
+      - **id** : cumul_vs_capital
+      - **nom** : Cumul cotisations vs capital garanti
+      - **courbes** :
+        - cumul_cotisations
+        - capital_garanti
+      - **id** : cumul_vs_reduction
+      - **nom** : Cumul cotisations vs valeur de réduction
+      - **courbes** :
+        - cumul_cotisations
+        - valeur_reduction
+      - **id** : capital_vs_reduction
+      - **nom** : Capital garanti vs valeur de réduction
+      - **courbes** :
+        - capital_garanti
+        - valeur_reduction
+      - **id** : evolution_cotisation
+      - **nom** : Évolution cotisation annuelle
+      - **courbes** :
+        - cotisation_annuelle
+      - **id** : rachat_temps
+      - **nom** : Valeur de rachat dans le temps
+      - **courbes** :
+        - valeur_rachat
+      - **id** : part_taxable
+      - **nom** : Part taxable selon rachat
+      - **courbes** :
+        - part_taxable
+      - **id** : comparaison_contrats
+      - **nom** : Comparaison de contrats sur le même horizon
+      - **courbes** :
+        - comparaison
+      - **id** : hypotheses_estimees
+      - **nom** : Hypothèse basse / centrale / haute
+      - **courbes** :
+        - basse
+        - centrale
+        - haute
+  - **_provenance** :
+    - **source_file_original** : axa_etudes_modeles.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\calculs\axa_etudes_modeles.json
+    - **type_source** : information_pack
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : information_pack
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0013
+  - **source** :
+    - **source_file_original** : axa_formules_estimees_parametres.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\calculs\axa_formules_estimees_parametres.json
+    - **type_source** : information_pack
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : information_pack
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : 2091f7fb259c101eb0418e308d504dadda45099a0f2556a870d82a4f560488d9
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **meta** :
+      - **type** : parametres_formules_estimees
+      - **objectif** : Permettre de tester des hypothèses personnelles sans modifier les contrats.
+      - **rappel** : Toute formule estimée nécessite validation humaine.
+      - **json_contractuels_modifies** : False
+      - **version** : 2.9.2
+    - **formules** :
+      - **id** : axa_avizen_2025-04_formule_03
+      - **nom** : Taux d'indemnisation linéaire Avizen, zone 11-30 %
+      - **contrat** : Avizen
+      - **contrat_id** : axa_avizen_2025-04
+      - **usage** : interpolation_bareme
+      - **statut** : estimee
+      - **expression_base** : 1.5 * (taux_invalidite - 10)
+      - **variables** :
+        - taux_invalidite
+      - **parametres_modifiables** :
+        - **nom** : taux_invalidite
+        - **valeur_defaut** : 20
+        - **unite** : %
+        - **min** : 11
+        - **max** : 30
+        - **pas** : 1
+        - **marge_erreur_estimee** : 0 % dans la zone linéaire vérifiée
+        - **justification_marge** : Relation vérifiée sur les points 11 à 30 du tableau.
+        - **source** : déduction tableau
+      - **marge_pourcentage** : 0
+      - **niveau_confiance** : 85
+      - **message_validation** : Formule estimée - validation humaine obligatoire.
+      - **id** : axa_essenciel_2025-06_formule_01
+      - **nom** : Capital Essen'Ciel revalorisé
+      - **contrat** : Essen'Ciel (assurance obsèques)
+      - **contrat_id** : axa_essenciel_2025-06
+      - **usage** : capital_garanti
+      - **statut** : estimee
+      - **expression_base** : capital_souscrit * (1 + taux_revalorisation / 100) ^ annees
+      - **variables** :
+        - capital_souscrit
+        - taux_revalorisation
+        - annees
+      - **parametres_modifiables** :
+        - **nom** : capital_souscrit
+        - **valeur_defaut** : 5000
+        - **unite** : EUR
+        - **min** : 1000
+        - **max** : 15000
+        - **pas** : 100
+        - **marge_erreur_estimee** : sans marge si valeur contractuelle saisie
+        - **justification_marge** : Valeur issue des conditions particulières.
+        - **source** : travail personnel
+        - **nom** : taux_revalorisation
+        - **valeur_defaut** : 1
+        - **unite** : %/an
+        - **min** : 0
+        - **max** : 3
+        - **pas** : 0.1
+        - **marge_erreur_estimee** : Â±0,5 point testé
+        - **justification_marge** : Le minimum de 1 % est documenté, la participation éventuelle n'est pas garantie.
+        - **source** : déduction tableau
+        - **nom** : annees
+        - **valeur_defaut** : 10
+        - **unite** : années
+        - **min** : 0
+        - **max** : 30
+        - **pas** : 1
+        - **marge_erreur_estimee** : horizon utilisateur
+        - **justification_marge** : Projection annuelle composée.
+        - **source** : travail personnel
+      - **marge_pourcentage** : 7
+      - **niveau_confiance** : 75
+      - **message_validation** : Formule estimée - validation humaine obligatoire. La participation aux bénéfices n'est pas garantie.
+      - **id** : axa_essenciel_2025-06_formule_03
+      - **nom** : Valeur de rachat Essen'Ciel, approximation prudente
+      - **contrat** : Essen'Ciel (assurance obsèques)
+      - **contrat_id** : axa_essenciel_2025-06
+      - **usage** : valeur_rachat
+      - **statut** : estimee
+      - **expression_base** : cumul_cotisations * taux_provision / 100 * (1 - penalite / 100)
+      - **variables** :
+        - cumul_cotisations
+        - taux_provision
+        - penalite
+      - **parametres_modifiables** :
+        - **nom** : cumul_cotisations
+        - **valeur_defaut** : 4800
+        - **unite** : EUR
+        - **min** : 0
+        - **max** : 30000
+        - **pas** : 100
+        - **marge_erreur_estimee** : sans marge si cumul réel saisi
+        - **justification_marge** : Somme des cotisations réellement versées.
+        - **source** : travail personnel
+        - **nom** : taux_provision
+        - **valeur_defaut** : 70
+        - **unite** : %
+        - **min** : 40
+        - **max** : 100
+        - **pas** : 1
+        - **marge_erreur_estimee** : marge non déterminée - prudence élevée
+        - **justification_marge** : Paramètres actuariels absents de la notice.
+        - **source** : estimation modèle
+        - **nom** : penalite
+        - **valeur_defaut** : 2.5
+        - **unite** : %
+        - **min** : 0
+        - **max** : 5
+        - **pas** : 0.5
+        - **marge_erreur_estimee** : selon année de rachat
+        - **justification_marge** : Pénalité contractuelle décroissante, année exacte à vérifier.
+        - **source** : déduction tableau
+      - **marge_pourcentage** : 20
+      - **niveau_confiance** : 45
+      - **message_validation** : Formule estimée - validation humaine obligatoire. Marge actuarielle inconnue : ne jamais présenter comme valeur contractuelle.
+      - **id** : axa_masterlife_credit_2024-10_formule_03
+      - **nom** : Exonération incapacité Masterlife
+      - **contrat** : Masterlife CREDIT
+      - **contrat_id** : axa_masterlife_credit_2024-10
+      - **usage** : cotisation
+      - **statut** : estimee
+      - **expression_base** : cotisation_annuelle / 365 * max(0, jours_incapacite - franchise_jours)
+      - **variables** :
+        - cotisation_annuelle
+        - jours_incapacite
+        - franchise_jours
+      - **parametres_modifiables** :
+        - **nom** : cotisation_annuelle
+        - **valeur_defaut** : 600
+        - **unite** : EUR/an
+        - **min** : 0
+        - **max** : 10000
+        - **pas** : 10
+        - **marge_erreur_estimee** : sans marge si valeur réelle saisie
+        - **justification_marge** : Valeur du contrat.
+        - **source** : travail personnel
+        - **nom** : jours_incapacite
+        - **valeur_defaut** : 120
+        - **unite** : jours
+        - **min** : 0
+        - **max** : 730
+        - **pas** : 1
+        - **marge_erreur_estimee** : selon décision de prise en charge
+        - **justification_marge** : Durée reconnue à vérifier.
+        - **source** : travail personnel
+        - **nom** : franchise_jours
+        - **valeur_defaut** : 90
+        - **unite** : jours
+        - **min** : 0
+        - **max** : 180
+        - **pas** : 1
+        - **marge_erreur_estimee** : 0 si franchise contractuelle confirmée
+        - **justification_marge** : Interprétation directe de la franchise de 90 jours.
+        - **source** : déduction tableau
+      - **marge_pourcentage** : 5
+      - **niveau_confiance** : 85
+      - **message_validation** : Formule estimée - validation humaine obligatoire.
+  - **_provenance** :
+    - **source_file_original** : axa_formules_estimees_parametres.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\calculs\axa_formules_estimees_parametres.json
+    - **type_source** : information_pack
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : information_pack
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0014
+  - **source** :
+    - **source_file_original** : axa_glossaire_formules.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\calculs\axa_glossaire_formules.json
+    - **type_source** : information_pack
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : information_pack
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : 50af86c8ef82b50358b4093f289b134de121bef721e4aa8d6a6261319b261807
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **meta** :
+      - **type** : glossaire_formules_axa
+      - **objectif** : Rendre les formules et variables compréhensibles par un conseiller débutant.
+      - **validation** : documentaire_et_humaine_a_verifier
+      - **json_contractuels_modifies** : False
+      - **version** : 2.9.2
+    - **termes** :
+      - **id** : aqv
+      - **terme** : AQV
+      - **definition_courte** : Indice d'atteinte à la qualité de vie.
+      - **definition_simple** : Addition contractuelle de plusieurs postes de préjudice utilisée par Ma Protection Accident pour lire un barème d'indemnisation.
+      - **definition_technique** : AQV = DFP + PEP + SE, arrondi à l'entier supérieur, puis lecture du barème selon l'âge.
+      - **exemple** : DFP 50 + PEP 3 + SE 5 donne un indice AQV de 58.
+      - **contrats_concernes** :
+        - Ma Protection Accident
+      - **attention** : Le montant final dépend du tableau contractuel et de l'âge à la consolidation.
+      - **source** : CG Ma Protection Accident, barème AQV
+      - **niveau_confiance** : 98
+      - **id** : provision_mathematique
+      - **terme** : Provision mathématique
+      - **definition_courte** : Valeur actuarielle constituée dans le contrat.
+      - **definition_simple** : Montant calculé par l'assureur à partir de ses engagements futurs et de ceux de l'assuré.
+      - **definition_technique** : Différence actuarielle entre engagements futurs de l'assureur et engagements futurs de l'assuré.
+      - **exemple** : Elle peut servir de base à une valeur de rachat.
+      - **contrats_concernes** :
+        - Essen'Ciel
+        - Excelium
+      - **attention** : Elle n'est pas recalculable fiablement sans paramètres actuariels complets.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 90
+      - **id** : valeur_reduction
+      - **terme** : Valeur de réduction
+      - **definition_courte** : Garantie maintenue après arrêt des cotisations.
+      - **definition_simple** : Nouveau niveau de garantie lorsque le client cesse de cotiser sans racheter le contrat.
+      - **definition_technique** : Valeur issue d'un barème de réduction ou d'un calcul actuariel propre au contrat.
+      - **exemple** : Après plusieurs années, le capital initial peut être réduit mais rester garanti.
+      - **contrats_concernes** :
+        - Essen'Ciel
+        - Entour'Age
+      - **attention** : Ne pas l'estimer comme contractuelle sans barème officiel.
+      - **source** : Notices, barèmes à vérifier
+      - **niveau_confiance** : 75
+      - **id** : valeur_rachat
+      - **terme** : Valeur de rachat
+      - **definition_courte** : Somme récupérable lors d'une sortie anticipée.
+      - **definition_simple** : Montant versé si le client met fin au contrat par rachat, après frais ou pénalités éventuels.
+      - **definition_technique** : Provision ou valeur acquise diminuée des frais et pénalités prévus au contrat.
+      - **exemple** : Une pénalité peut s'appliquer pendant les dix premières années.
+      - **contrats_concernes** :
+        - Essen'Ciel
+        - Excelium
+      - **attention** : Toujours vérifier la date, le support et le tableau contractuel.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 90
+      - **id** : mise_reduction
+      - **terme** : Mise en réduction
+      - **definition_courte** : Arrêt des cotisations avec maintien réduit.
+      - **definition_simple** : Le client arrête de payer mais conserve une garantie diminuée selon le contrat.
+      - **definition_technique** : Transformation du contrat en garantie réduite selon le barème ou les règles en vigueur.
+      - **exemple** : Une garantie obsèques peut continuer avec un capital inférieur.
+      - **contrats_concernes** :
+        - Essen'Ciel
+        - Entour'Age
+      - **attention** : Peut mettre fin à certains services d'assistance.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 90
+      - **id** : part_taxable
+      - **terme** : Part taxable
+      - **definition_courte** : Fraction d'un retrait soumise à fiscalité.
+      - **definition_simple** : Part du rachat correspondant aux gains et susceptible d'être imposée.
+      - **definition_technique** : Calcul dépendant du montant retiré, de la valeur du contrat, des primes et du régime fiscal.
+      - **exemple** : Un rachat partiel contient une part de capital et une part de gains.
+      - **contrats_concernes** :
+        - Excelium
+      - **attention** : Fiscalité à confirmer selon date, option fiscale et situation client.
+      - **source** : Règles fiscales et notice
+      - **niveau_confiance** : 70
+      - **id** : capital_garanti
+      - **terme** : Capital garanti
+      - **definition_courte** : Montant couvert selon les conditions du contrat.
+      - **definition_simple** : Somme que l'assureur prévoit de verser si l'événement garanti survient.
+      - **definition_technique** : Montant défini au certificat, éventuellement revalorisé, réduit ou plafonné.
+      - **exemple** : Capital obsèques souscrit de 5 000 euros.
+      - **contrats_concernes** :
+      - **attention** : Vérifier exclusions, délais, plafonds et certificat d'adhésion.
+      - **source** : Conditions particulières et notices
+      - **niveau_confiance** : 95
+      - **id** : capital_deces
+      - **terme** : Capital décès
+      - **definition_courte** : Capital versé au décès selon les garanties.
+      - **definition_simple** : Somme destinée au bénéficiaire si les conditions de la garantie décès sont réunies.
+      - **definition_technique** : Capital souscrit ou calculé, après application des clauses, exclusions et revalorisations.
+      - **exemple** : Capital obsèques ou capital d'un contrat de prévoyance.
+      - **contrats_concernes** :
+      - **attention** : Bénéficiaire, cause du décès et délai de carence doivent être contrôlés.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 95
+      - **id** : cumul_cotisations
+      - **terme** : Cumul des cotisations
+      - **definition_courte** : Total payé depuis la souscription.
+      - **definition_simple** : Somme de toutes les cotisations versées sur la période étudiée.
+      - **definition_technique** : Cotisation périodique multipliée par le nombre de périodes, avec évolution éventuelle.
+      - **exemple** : 40 euros par mois pendant 10 ans = 4 800 euros hors évolution.
+      - **contrats_concernes** :
+      - **attention** : Ce total n'est pas une valeur de rachat ni un rendement.
+      - **source** : Calcul arithmétique utilisateur
+      - **niveau_confiance** : 100
+      - **id** : cotisation_viagere
+      - **terme** : Cotisation viagère
+      - **definition_courte** : Cotisation due tant que l'assuré est en vie.
+      - **definition_simple** : Paiement qui continue pendant toute la vie selon les règles du contrat.
+      - **definition_technique** : Durée de paiement non fixée à l'avance, arrêtée par décès ou événement contractuel.
+      - **exemple** : Cotisation mensuelle sans terme prédéterminé.
+      - **contrats_concernes** :
+        - Essen'Ciel
+      - **attention** : Le cumul peut dépasser le capital garanti.
+      - **source** : Notice Essen'Ciel
+      - **niveau_confiance** : 95
+      - **id** : cotisation_temporaire
+      - **terme** : Cotisation temporaire
+      - **definition_courte** : Cotisation payée pendant une durée définie.
+      - **definition_simple** : Paiement limité à un nombre d'années choisi ou prévu.
+      - **definition_technique** : Échéancier fixe, sous réserve d'impayés, revalorisations et clauses contractuelles.
+      - **exemple** : Cotiser pendant 10 ou 15 ans.
+      - **contrats_concernes** :
+        - Essen'Ciel
+      - **attention** : La durée choisie influence le montant périodique.
+      - **source** : Notice contractuelle
+      - **niveau_confiance** : 95
+      - **id** : age_actuariel
+      - **terme** : Âge actuariel
+      - **definition_courte** : Âge retenu pour les calculs d'assurance.
+      - **definition_simple** : Âge utilisé par l'assureur, qui peut différer de l'âge exact selon ses règles.
+      - **definition_technique** : Âge calculé à une date de référence avec une convention d'arrondi contractuelle.
+      - **exemple** : Un âge peut être arrondi à l'anniversaire le plus proche.
+      - **contrats_concernes** :
+      - **attention** : Définition exacte à vérifier dans chaque contrat.
+      - **source** : Définition à vérifier
+      - **niveau_confiance** : 55
+      - **id** : age_souscription
+      - **terme** : Âge de souscription
+      - **definition_courte** : Âge du client à l'adhésion.
+      - **definition_simple** : Âge utilisé pour vérifier l'éligibilité et souvent déterminer le tarif.
+      - **definition_technique** : Âge à la date d'effet ou date de signature selon le contrat.
+      - **exemple** : Souscription à 55 ans.
+      - **contrats_concernes** :
+      - **attention** : Vérifier l'âge limite et la convention de calcul.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 95
+      - **id** : duree_cotisation
+      - **terme** : Durée de cotisation
+      - **definition_courte** : Période pendant laquelle les paiements sont dus.
+      - **definition_simple** : Nombre d'années ou de mois durant lesquels le client cotise.
+      - **definition_technique** : Durée temporaire ou viagère définie par le contrat et le choix client.
+      - **exemple** : 120 mensualités sur 10 ans.
+      - **contrats_concernes** :
+      - **attention** : Ne pas confondre avec la durée de garantie.
+      - **source** : Conditions particulières
+      - **niveau_confiance** : 95
+      - **id** : duree_ecoulee
+      - **terme** : Durée écoulée
+      - **definition_courte** : Temps passé depuis la prise d'effet.
+      - **definition_simple** : Nombre d'années ou de jours entre le début du contrat et la date étudiée.
+      - **definition_technique** : Période utilisée pour revalorisations, pénalités ou calculs prorata temporis.
+      - **exemple** : 7 années révolues.
+      - **contrats_concernes** :
+      - **attention** : Certaines règles utilisent des années entières, d'autres des jours.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 95
+      - **id** : bareme
+      - **terme** : Barème
+      - **definition_courte** : Table officielle de correspondance.
+      - **definition_simple** : Tableau contractuel donnant un montant ou coefficient selon plusieurs critères.
+      - **definition_technique** : Référentiel discret qui ne doit pas être remplacé par une interpolation sans avertissement.
+      - **exemple** : Barème AQV par indice et tranche d'âge.
+      - **contrats_concernes** :
+      - **attention** : Sans barème importé, le calcul fiable est impossible.
+      - **source** : Documents contractuels
+      - **niveau_confiance** : 100
+      - **id** : coefficient
+      - **terme** : Coefficient
+      - **definition_courte** : Facteur multiplicateur utilisé dans un calcul.
+      - **definition_simple** : Nombre appliqué à une valeur pour l'ajuster.
+      - **definition_technique** : Facteur issu d'une table, d'un âge, d'une durée ou d'une règle actuarielle.
+      - **exemple** : Coefficient de conversion d'une épargne en rente.
+      - **contrats_concernes** :
+      - **attention** : Toujours identifier la table et la date du coefficient.
+      - **source** : Notices et annexes
+      - **niveau_confiance** : 95
+      - **id** : taux_technique
+      - **terme** : Taux technique
+      - **definition_courte** : Hypothèse financière utilisée dans certains calculs actuariels.
+      - **definition_simple** : Taux intégré à l'avance dans le calcul d'une rente ou d'une provision.
+      - **definition_technique** : Taux d'actualisation réglementé ou contractuel appliqué aux engagements futurs.
+      - **exemple** : Conversion en rente avec taux technique nul.
+      - **contrats_concernes** :
+        - Ma Retraite
+      - **attention** : Ce n'est pas un rendement promis au client.
+      - **source** : Notice Ma Retraite
+      - **niveau_confiance** : 90
+      - **id** : frais
+      - **terme** : Frais
+      - **definition_courte** : Prélèvements prévus par le contrat.
+      - **definition_simple** : Montants ou pourcentages retirés lors des versements, de la gestion ou d'opérations.
+      - **definition_technique** : Frais sur versement, gestion, arbitrage, arrérage ou autres selon le contrat.
+      - **exemple** : 1 % de frais intégrés à un coefficient de rente.
+      - **contrats_concernes** :
+      - **attention** : Vérifier assiette, fréquence et support.
+      - **source** : Notices et DIC
+      - **niveau_confiance** : 95
+      - **id** : participation_benefices
+      - **terme** : Participation aux bénéfices
+      - **definition_courte** : Part éventuelle de résultats attribuée au contrat.
+      - **definition_simple** : Complément de revalorisation décidé selon les résultats et règles applicables.
+      - **definition_technique** : Attribution non nécessairement garantie, distincte du taux minimum contractuel.
+      - **exemple** : Revalorisation complémentaire d'un capital.
+      - **contrats_concernes** :
+        - Essen'Ciel
+        - Excelium
+      - **attention** : Ne pas la projeter comme certaine.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 85
+      - **id** : revalorisation
+      - **terme** : Revalorisation
+      - **definition_courte** : Augmentation d'une valeur dans le temps.
+      - **definition_simple** : Évolution du capital, de la rente ou de la cotisation selon une règle ou décision.
+      - **definition_technique** : Application périodique d'un taux garanti, indiciel ou discrétionnaire.
+      - **exemple** : Capital augmenté de 1 % par an.
+      - **contrats_concernes** :
+      - **attention** : Distinguer garanti, estimé et participation éventuelle.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 95
+      - **id** : rente
+      - **terme** : Rente
+      - **definition_courte** : Versement périodique.
+      - **definition_simple** : Somme versée régulièrement, par exemple chaque mois ou trimestre.
+      - **definition_technique** : Prestation périodique temporaire ou viagère issue d'un capital ou d'une garantie.
+      - **exemple** : Rente dépendance mensuelle.
+      - **contrats_concernes** :
+        - Entour'Age
+        - Ma Retraite
+      - **attention** : Vérifier fréquence, durée, réversion et revalorisation.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 95
+      - **id** : fiscalite
+      - **terme** : Fiscalité
+      - **definition_courte** : Règles d'imposition et prélèvements.
+      - **definition_simple** : Traitement fiscal d'un versement, rachat, capital ou rente.
+      - **definition_technique** : Régime dépendant du produit, de la date, de la durée et de la situation du client.
+      - **exemple** : Imposition de la part de gains lors d'un rachat.
+      - **contrats_concernes** :
+      - **attention** : Toujours valider avec les règles en vigueur et la situation client.
+      - **source** : Réglementation et notice
+      - **niveau_confiance** : 70
+      - **id** : prime
+      - **terme** : Prime
+      - **definition_courte** : Montant payé pour une garantie.
+      - **definition_simple** : Autre terme employé pour une cotisation d'assurance.
+      - **definition_technique** : Prix périodique ou ponctuel calculé selon le risque et les garanties.
+      - **exemple** : Prime mensuelle d'une garantie décès.
+      - **contrats_concernes** :
+      - **attention** : Dans certains contrats, prime et cotisation peuvent désigner des notions différentes.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 90
+      - **id** : echeance
+      - **terme** : Échéance
+      - **definition_courte** : Date ou montant périodique dû.
+      - **definition_simple** : Moment où une cotisation ou une mensualité doit être payée.
+      - **definition_technique** : Périodicité mensuelle, trimestrielle, semestrielle ou annuelle.
+      - **exemple** : Échéance mensuelle d'un prêt.
+      - **contrats_concernes** :
+        - Masterlife CREDIT
+      - **attention** : Vérifier si le terme désigne la date ou le montant.
+      - **source** : Notice contractuelle
+      - **niveau_confiance** : 95
+      - **id** : franchise
+      - **terme** : Franchise
+      - **definition_courte** : Période ou montant restant sans indemnisation.
+      - **definition_simple** : Délai ou part de sinistre non pris en charge avant le début de la prestation.
+      - **definition_technique** : Franchise en jours, montant ou pourcentage selon la garantie.
+      - **exemple** : 90 jours d'incapacité avant indemnisation.
+      - **contrats_concernes** :
+      - **attention** : Ne pas confondre avec le délai de carence.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 100
+      - **id** : carence
+      - **terme** : Carence
+      - **definition_courte** : Période initiale sans couverture complète.
+      - **definition_simple** : Temps après la souscription pendant lequel certains événements ne sont pas garantis.
+      - **definition_technique** : Délai courant depuis la prise d'effet, avec exceptions éventuelles comme l'accident.
+      - **exemple** : Un an pour un décès non accidentel.
+      - **contrats_concernes** :
+      - **attention** : Les cotisations peuvent être dues pendant la carence.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 100
+      - **id** : plafond
+      - **terme** : Plafond
+      - **definition_courte** : Maximum pris en charge ou versé.
+      - **definition_simple** : Limite supérieure d'une garantie, prestation ou dépense.
+      - **definition_technique** : Montant maximal par sinistre, période, personne ou contrat.
+      - **exemple** : Indemnité journalière limitée à l'échéance assurée.
+      - **contrats_concernes** :
+      - **attention** : Identifier l'assiette et la période du plafond.
+      - **source** : Notices contractuelles
+      - **niveau_confiance** : 100
+      - **id** : garantie
+      - **terme** : Garantie
+      - **definition_courte** : Protection prévue par le contrat.
+      - **definition_simple** : Événement et prestation couverts si toutes les conditions sont réunies.
+      - **definition_technique** : Engagement de l'assureur défini avec conditions, exclusions, limites et durée.
+      - **exemple** : Garantie décès ou invalidité.
+      - **contrats_concernes** :
+      - **attention** : Une garantie ne se résume jamais à son titre.
+      - **source** : Documents contractuels
+      - **niveau_confiance** : 100
+    - **variables** :
+      - **nom** : cotisation_annuelle
+      - **definition_simple** : Total des cotisations dues sur une année.
+      - **unite** : EUR/an
+      - **exemple_valeur** : 480
+      - **erreurs_frequentes** :
+        - Saisir une cotisation mensuelle
+        - Oublier une revalorisation
+      - **statut_source** : conditions particulières à vérifier
+      - **nom** : nombre_de_jours_garantis
+      - **definition_simple** : Nombre de jours pendant lesquels la garantie a effectivement couru.
+      - **unite** : jours
+      - **exemple_valeur** : 30
+      - **erreurs_frequentes** :
+        - Confondre avec jours calendaires du contrat
+      - **statut_source** : notice contractuelle
+      - **nom** : jours_d_arrêt_total_indemnisés
+      - **definition_simple** : Jours d'arrêt ouvrant droit à indemnisation après règles et franchises.
+      - **unite** : jours
+      - **exemple_valeur** : 45
+      - **erreurs_frequentes** :
+        - Inclure la franchise
+        - Inclure des jours non reconnus
+      - **statut_source** : décision de prise en charge
+      - **nom** : jours_indemnisés
+      - **definition_simple** : Nombre de journées reconnues indemnisables.
+      - **unite** : jours
+      - **exemple_valeur** : 60
+      - **erreurs_frequentes** :
+        - Utiliser la durée totale d'arrêt sans retraitement
+      - **statut_source** : dossier sinistre
+      - **nom** : montant_certificat
+      - **definition_simple** : Montant garanti figurant au certificat d'adhésion.
+      - **unite** : EUR
+      - **exemple_valeur** : 100000
+      - **erreurs_frequentes** :
+        - Utiliser un capital souhaité plutôt que souscrit
+      - **statut_source** : certificat d'adhésion
+      - **nom** : taux_indemnisation
+      - **definition_simple** : Pourcentage applicable après lecture de la règle ou du barème.
+      - **unite** : ratio ou % selon expression
+      - **exemple_valeur** : 0.75
+      - **erreurs_frequentes** :
+        - Saisir 75 au lieu de 0,75
+        - Inventer le taux sans barème
+      - **statut_source** : barème contractuel
+      - **nom** : intérêts_annuels
+      - **definition_simple** : Montant annuel des intérêts du prêt pour un prêt in fine.
+      - **unite** : EUR/an
+      - **exemple_valeur** : 3600
+      - **erreurs_frequentes** :
+        - Saisir le capital emprunté
+      - **statut_source** : échéancier du prêt
+      - **nom** : capital_souscrit
+      - **definition_simple** : Capital choisi et accepté à la souscription.
+      - **unite** : EUR
+      - **exemple_valeur** : 5000
+      - **erreurs_frequentes** :
+        - Confondre avec valeur actuelle ou cumul cotisé
+      - **statut_source** : conditions particulières
+      - **nom** : t
+      - **definition_simple** : Durée écoulée utilisée par la formule.
+      - **unite** : années
+      - **exemple_valeur** : 10
+      - **erreurs_frequentes** :
+        - Saisir des mois
+        - Dépasser la plage du barème
+      - **statut_source** : hypothèse d'étude
+      - **nom** : cotisation_mensuelle
+      - **definition_simple** : Montant payé chaque mois.
+      - **unite** : EUR/mois
+      - **exemple_valeur** : 40
+      - **erreurs_frequentes** :
+        - Saisir le montant annuel
+      - **statut_source** : hypothèse ou échéancier
+      - **nom** : taux_annuel
+      - **definition_simple** : Taux d'évolution appliqué chaque année.
+      - **unite** : %/an
+      - **exemple_valeur** : 2
+      - **erreurs_frequentes** :
+        - Saisir 0,02 au lieu de 2
+      - **statut_source** : hypothèse personnelle
+      - **nom** : annees
+      - **definition_simple** : Horizon de projection.
+      - **unite** : années
+      - **exemple_valeur** : 20
+      - **erreurs_frequentes** :
+        - Projeter au-delà de la durée utile
+      - **statut_source** : hypothèse d'étude
+  - **_provenance** :
+    - **source_file_original** : axa_glossaire_formules.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\calculs\axa_glossaire_formules.json
+    - **type_source** : information_pack
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : information_pack
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0015
+  - **source** :
+    - **source_file_original** : calculs_index.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\calculs\calculs_index.json
+    - **type_source** : information_pack
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : information_pack
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : daf6b9b2bfe6dc9fce18298ae76096782fb34514ac2439e9e1ff85f88b03bbea
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **meta** :
+      - **type** : calculs_index
+      - **generated_at** : 2026-06-13T11:41:15.890Z
+      - **read_only_sources** : True
+      - **source** : data/AXA/ia/axa_formules_index.json
+      - **avertissement** : Couche calculs indépendante. Ne modifie aucun JSON contractuel. Les formules estimées exigent une validation humaine.
+      - **total** : 22
+      - **executables** : 5
+      - **estimees** : 4
+    - **formules** :
+      - **id** : axa_ma_protection_accident_2024-03_formule_01
+      - **nom** : Indice AQV
+      - **contrat** : Ma Protection Accident (Garantie des accidents de la vie)
+      - **contrat_id** : axa_ma_protection_accident_2024-03
+      - **famille** : prévoyance
+      - **usage** : autre
+      - **formule** : AQV = arrondi_supérieur(DFP + PEP + SE) ; indemnité = tableau[AQV][tranche d'âge à la consolidation]
+      - **rhs** : tableau[AQV][tranche d'âge à la consolidation]
+      - **executable** : False
+      - **raison_non_exec** : référence un barème / tableau
+      - **variables_tokens** :
+      - **variables_desc** :
+        - DFP: taux de déficit fonctionnel permanent (0-100)
+        - PEP: préjudice esthétique permanent (0-7)
+        - SE: souffrances endurées (0-7)
+        - âge à la date de consolidation
+      - **niveau_confiance** : 98
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf
+        - **page** : 8
+        - **section** : Barème AQV p.8
+        - **pdf_ids** :
+          - axa_pdf_07
+      - **tableau_source_present** : True
+      - **id** : axa_ma_protection_accident_2024-03_formule_02
+      - **nom** : Renonciation vente à distance - cotisation due
+      - **contrat** : Ma Protection Accident (Garantie des accidents de la vie)
+      - **contrat_id** : axa_ma_protection_accident_2024-03
+      - **famille** : prévoyance
+      - **usage** : cotisation
+      - **formule** : montant_dû = cotisation_annuelle × nombre_de_jours_garantis / 365
+      - **rhs** : cotisation_annuelle * nombre_de_jours_garantis / 365
+      - **executable** : True
+      - **raison_non_exec** : None
+      - **variables_tokens** :
+        - cotisation_annuelle
+        - nombre_de_jours_garantis
+      - **variables_desc** :
+        - cotisation_annuelle (Conditions particulières)
+        - nombre_de_jours_garantis
+      - **niveau_confiance** : 97
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf
+        - **page** : 19
+        - **section** : 6.1 Fourniture à distance, p.19
+        - **pdf_ids** :
+          - axa_pdf_07
+      - **tableau_source_present** : True
+      - **id** : axa_avizen_2025-04_formule_01
+      - **nom** : Prestation invalidité (rente ou capital)
+      - **contrat** : Avizen
+      - **contrat_id** : axa_avizen_2025-04
+      - **famille** : prévoyance
+      - **usage** : autre
+      - **formule** : prestation = montant_garanti_à_la_consolidation × n(taux_invalidité_fonctionnelle) / 100
+      - **rhs** : montant_garanti_à_la_consolidation * n(taux_invalidité_fonctionnelle) / 100
+      - **executable** : False
+      - **raison_non_exec** : fonction non standard: n
+      - **variables_tokens** :
+      - **variables_desc** :
+        - montant_garanti (certificat d'adhésion)
+        - n : taux d'indemnisation du tableau p.16
+      - **niveau_confiance** : 97
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Avizen/2025-04 Notice d'information Avizen.pdf
+        - **page** : 16
+        - **section** : Tableau taux d'indemnisation p.16
+        - **pdf_ids** :
+          - axa_pdf_01
+      - **tableau_source_present** : True
+      - **id** : axa_avizen_2025-04_formule_02
+      - **nom** : Exonération ITT
+      - **contrat** : Avizen
+      - **contrat_id** : axa_avizen_2025-04
+      - **famille** : prévoyance
+      - **usage** : cotisation
+      - **formule** : remboursement = (cotisation_annuelle / 365) × jours_d_arrêt_total_indemnisés
+      - **rhs** : (cotisation_annuelle / 365) * jours_d_arrêt_total_indemnisés
+      - **executable** : True
+      - **raison_non_exec** : None
+      - **variables_tokens** :
+        - cotisation_annuelle
+        - jours_d_arrêt_total_indemnisés
+      - **variables_desc** :
+        - cotisation_annuelle
+        - jours d'arrêt indemnisés
+      - **niveau_confiance** : 97
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Avizen/2025-04 Notice d'information Avizen.pdf
+        - **page** : 17
+        - **section** : §2.2.7 p.17
+        - **pdf_ids** :
+          - axa_pdf_01
+      - **tableau_source_present** : True
+      - **id** : axa_avizen_2025-04_formule_03
+      - **nom** : Taux d'indemnisation zone linéaire 11-30 %
+      - **contrat** : Avizen
+      - **contrat_id** : axa_avizen_2025-04
+      - **famille** : prévoyance
+      - **usage** : autre
+      - **formule** : pour 11 ≤ t ≤ 30 : n = 1,5 × (t − 10) ; au-delà de 30 la progression n'est plus linéaire (lecture du tableau obligatoire) ; t ≥ 66 : n = 100
+      - **rhs** : 100
+      - **executable** : False
+      - **raison_non_exec** : constante / pas de calcul
+      - **variables_tokens** :
+      - **variables_desc** :
+        - t : taux d'invalidité fonctionnelle (%)
+      - **niveau_confiance** : 85
+      - **confiance_label** : moyen
+      - **formule_estimee** : True
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Avizen/2025-04 Notice d'information Avizen.pdf
+        - **page** : 16
+        - **section** : Tableau taux d'indemnisation p.16
+        - **pdf_ids** :
+          - axa_pdf_01
+      - **tableau_source_present** : True
+      - **id** : axa_avizen_pro_2025-04_formule_01
+      - **nom** : Prestation invalidité (croisé)
+      - **contrat** : Avizen Pro
+      - **contrat_id** : axa_avizen_pro_2025-04
+      - **famille** : prévoyance
+      - **usage** : autre
+      - **formule** : prestation = montant_certificat × taux_indemnisation(taux_croisé(prof, fonctionnel)) / 100
+      - **rhs** : montant_certificat * taux_indemnisation(taux_croisé(prof, fonctionnel)) / 100
+      - **executable** : False
+      - **raison_non_exec** : liste / décimales descriptives (virgules)
+      - **variables_tokens** :
+      - **variables_desc** :
+        - taux professionnel (expertise amiable)
+        - taux fonctionnel (barème AT SS)
+        - tables p.19
+      - **niveau_confiance** : 95
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf
+        - **page** : 19
+        - **section** : Tableaux p.19
+        - **pdf_ids** :
+          - axa_pdf_02
+      - **tableau_source_present** : True
+      - **id** : axa_avizen_pro_2025-04_formule_02
+      - **nom** : Prestation invalidité (option professionnelle)
+      - **contrat** : Avizen Pro
+      - **contrat_id** : axa_avizen_pro_2025-04
+      - **famille** : prévoyance
+      - **usage** : autre
+      - **formule** : si 11/15/33 ≤ n < 66 : taux_indemnisation = n/66 ; si n ≥ 66 : 100 % ; prestation = montant_certificat × taux_indemnisation
+      - **rhs** : montant_certificat * taux_indemnisation
+      - **executable** : True
+      - **raison_non_exec** : None
+      - **variables_tokens** :
+        - montant_certificat
+        - taux_indemnisation
+      - **variables_desc** :
+        - n : taux d'invalidité professionnelle
+      - **niveau_confiance** : 98
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf
+        - **page** : 20
+        - **section** : §2.2.5 c)2 p.20
+        - **pdf_ids** :
+          - axa_pdf_02
+      - **tableau_source_present** : True
+      - **id** : axa_avizen_pro_2025-04_formule_03
+      - **nom** : Exonération ITT
+      - **contrat** : Avizen Pro
+      - **contrat_id** : axa_avizen_pro_2025-04
+      - **famille** : prévoyance
+      - **usage** : cotisation
+      - **formule** : remboursement = cotisation_annuelle/365 × jours_indemnisés
+      - **rhs** : cotisation_annuelle/365 * jours_indemnisés
+      - **executable** : True
+      - **raison_non_exec** : None
+      - **variables_tokens** :
+        - cotisation_annuelle
+        - jours_indemnisés
+      - **variables_desc** :
+        - cotisation annuelle
+      - **niveau_confiance** : 97
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf
+        - **page** : 24
+        - **section** : §2.2.9 p.24
+        - **pdf_ids** :
+          - axa_pdf_02
+      - **tableau_source_present** : True
+      - **id** : axa_entourage_2025-06_formule_01
+      - **nom** : Rente dépendance totale
+      - **contrat** : Entour'Age
+      - **contrat_id** : axa_entourage_2025-06
+      - **famille** : prévoyance
+      - **usage** : autre
+      - **formule** : rente_mensuelle = montant_souscrit × taux_revalorisation(adhésion→reconnaissance) × coefficient_réduction_éventuel ; en dépendance partielle : × 0,5
+      - **rhs** : en dépendance partielle : * 0,5
+      - **executable** : False
+      - **raison_non_exec** : liste / décimales descriptives (virgules)
+      - **variables_tokens** :
+      - **variables_desc** :
+        - montant_souscrit (500-3 000 €)
+        - taux de revalorisation décidé par le comité paritaire
+        - coefficient de réduction (barème en vigueur, si résiliation après ≥ 8 ans)
+      - **niveau_confiance** : 95
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : EntourAge/2025-06 Notice d'Information Entour'Age.pdf
+        - **page** : 21
+        - **section** : §4.3.1.1 p.21
+        - **pdf_ids** :
+          - axa_pdf_03
+      - **tableau_source_present** : True
+      - **id** : axa_entourage_2025-06_formule_02
+      - **nom** : Capital décès remboursement des cotisations
+      - **contrat** : Entour'Age
+      - **contrat_id** : axa_entourage_2025-06
+      - **famille** : prévoyance
+      - **usage** : autre
+      - **formule** : capital = Î£ cotisations versées (nettes des frais de fractionnement) entre la date d'effet de la garantie et la date du décès
+      - **rhs** : Î£ cotisations versées (nettes des frais de fractionnement) entre la date d'effet de la garantie et la date du décès
+      - **executable** : False
+      - **raison_non_exec** : fonction non standard: versées
+      - **variables_tokens** :
+      - **variables_desc** :
+        - cotisations versées
+        - frais de fractionnement
+      - **niveau_confiance** : 97
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : EntourAge/2025-06 Notice d'Information Entour'Age.pdf
+        - **page** : 27
+        - **section** : §6.2.2 p.27
+        - **pdf_ids** :
+          - axa_pdf_03
+      - **tableau_source_present** : True
+      - **id** : axa_essenciel_2025-06_formule_01
+      - **nom** : Capital revalorisé
+      - **contrat** : Essen'Ciel (assurance obsèques)
+      - **contrat_id** : axa_essenciel_2025-06
+      - **famille** : prévoyance
+      - **usage** : autre
+      - **formule** : capital(t) = capital_souscrit × 1,01^t (+ participation aux bénéfices éventuelle)
+      - **rhs** : capital_souscrit * 1,01^t (+ participation aux bénéfices éventuelle)
+      - **executable** : False
+      - **raison_non_exec** : liste / décimales descriptives (virgules)
+      - **variables_tokens** :
+      - **variables_desc** :
+        - t : années d'adhésion entières
+      - **niveau_confiance** : 95
+      - **confiance_label** : bon
+      - **formule_estimee** : True
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf
+        - **page** : 20
+        - **section** : §5.2.1 p.20 + exemple p.7
+        - **pdf_ids** :
+          - axa_pdf_04
+      - **tableau_source_present** : True
+      - **id** : axa_essenciel_2025-06_formule_02
+      - **nom** : Pénalité de rachat
+      - **contrat** : Essen'Ciel (assurance obsèques)
+      - **contrat_id** : axa_essenciel_2025-06
+      - **famille** : prévoyance
+      - **usage** : valeur_de_rachat
+      - **formule** : pénalité(année n) = max(0 ; 5 % − 0,5 % × (n − 1)) × valeur_de_rachat, nulle à partir de la 11e année
+      - **rhs** : 5 % − 0,5 % * (n − 1)) * valeur_de_rachat, nulle à partir de la 11e année
+      - **executable** : False
+      - **raison_non_exec** : pourcentages / valeurs descriptives
+      - **variables_tokens** :
+      - **variables_desc** :
+        - n : année d'adhésion du rachat
+      - **niveau_confiance** : 92
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf
+        - **page** : 33
+        - **section** : §8.3 p.33
+        - **pdf_ids** :
+          - axa_pdf_04
+      - **tableau_source_present** : True
+      - **id** : axa_essenciel_2025-06_formule_03
+      - **nom** : Valeur de rachat
+      - **contrat** : Essen'Ciel (assurance obsèques)
+      - **contrat_id** : axa_essenciel_2025-06
+      - **famille** : prévoyance
+      - **usage** : valeur_de_rachat
+      - **formule** : VR(t) = provision mathématique(t) − pénalité éventuelle ; PM = engagement futur de l'assureur − engagement futur de l'assuré (calcul actuariel non reproduit dans la notice ; seuls les tableaux d'exemples chiffrés sont contractuels)
+      - **rhs** : seuls les tableaux d'exemples chiffrés sont contractuels)
+      - **executable** : False
+      - **raison_non_exec** : référence un barème / tableau
+      - **variables_tokens** :
+      - **variables_desc** :
+        - âge à l'adhésion
+        - années révolues de paiement
+        - capital choisi
+        - type et durée de cotisation
+      - **niveau_confiance** : 60
+      - **confiance_label** : faible
+      - **formule_estimee** : True
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf
+        - **page** : 35
+        - **section** : §8.3 p.33-35
+        - **pdf_ids** :
+          - axa_pdf_04
+      - **tableau_source_present** : True
+      - **id** : axa_masterlife_credit_2024-10_formule_01
+      - **nom** : IJ incapacité (plafond)
+      - **contrat** : Masterlife CREDIT
+      - **contrat_id** : axa_masterlife_credit_2024-10
+      - **famille** : assurance_emprunteur
+      - **usage** : autre
+      - **formule** : IJ_max = échéance_du_prêt / N × quotité, avec N = 30 (mensuel), 90 (trimestriel), 180 (semestriel), 365 (annuel) ; prêt in fine : IJ = intérêts_annuels/365
+      - **rhs** : intérêts_annuels/365
+      - **executable** : True
+      - **raison_non_exec** : None
+      - **variables_tokens** :
+        - intérêts_annuels
+      - **variables_desc** :
+        - échéance du prêt
+        - périodicité
+        - quotité assurée
+      - **niveau_confiance** : 97
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : MasterLife/Notice-Masterlife-Credit-202410.pdf
+        - **page** : 12
+        - **section** : Article 4.1.a p.12
+        - **pdf_ids** :
+          - axa_pdf_10
+      - **tableau_source_present** : True
+      - **id** : axa_masterlife_credit_2024-10_formule_02
+      - **nom** : IJ invalidité partielle
+      - **contrat** : Masterlife CREDIT
+      - **contrat_id** : axa_masterlife_credit_2024-10
+      - **famille** : assurance_emprunteur
+      - **usage** : autre
+      - **formule** : IJ = IJ_max × n_indemnisation(taux_croisé)/100, pour 33 ≤ taux < 66 ; 100 % si ≥ 66 ; 0 si < 33
+      - **rhs** : 0 si < 33
+      - **executable** : False
+      - **raison_non_exec** : symboles non arithmétiques
+      - **variables_tokens** :
+      - **variables_desc** :
+        - taux croisé (tableau p.15)
+      - **niveau_confiance** : 96
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : MasterLife/Notice-Masterlife-Credit-202410.pdf
+        - **page** : 15
+        - **section** : Tableaux p.15
+        - **pdf_ids** :
+          - axa_pdf_10
+      - **tableau_source_present** : True
+      - **id** : axa_masterlife_credit_2024-10_formule_03
+      - **nom** : Exonération incapacité
+      - **contrat** : Masterlife CREDIT
+      - **contrat_id** : axa_masterlife_credit_2024-10
+      - **famille** : assurance_emprunteur
+      - **usage** : cotisation
+      - **formule** : remboursement = cotisation_annuelle/365 × max(0, jours_incapacité − 90)
+      - **rhs** : cotisation_annuelle/365 * max(0, jours_incapacité − 90)
+      - **executable** : False
+      - **raison_non_exec** : liste / décimales descriptives (virgules)
+      - **variables_tokens** :
+      - **variables_desc** :
+        - cotisation annuelle
+        - jours d'incapacité
+      - **niveau_confiance** : 85
+      - **confiance_label** : moyen
+      - **formule_estimee** : True
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : MasterLife/Notice-Masterlife-Credit-202410.pdf
+        - **page** : 16
+        - **section** : Article 4.4.a p.16
+        - **pdf_ids** :
+          - axa_pdf_10
+      - **tableau_source_present** : True
+      - **id** : axa_excelium_vie_2026-05_formule_01
+      - **nom** : Valeur de rachat minimale support euros
+      - **contrat** : Excelium (assurance vie)
+      - **contrat_id** : axa_excelium_vie_2026-05
+      - **famille** : épargne
+      - **usage** : valeur_de_rachat
+      - **formule** : VR(n) = versement_net_initial × (1 − 0,008)^n
+      - **rhs** : versement_net_initial * (1 − 0,008)^n
+      - **executable** : False
+      - **raison_non_exec** : liste / décimales descriptives (virgules)
+      - **variables_tokens** :
+      - **variables_desc** :
+        - n : années écoulées
+        - taux de frais de gestion 0,8 %/an
+      - **niveau_confiance** : 97
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Excelium/2026-05 Notice Excelium Vie.pdf
+        - **page** : 46
+        - **section** : 7.1.3 p.46-47
+        - **pdf_ids** :
+          - axa_pdf_05
+          - axa_pdf_06
+      - **tableau_source_present** : True
+      - **id** : axa_excelium_vie_2026-05_formule_02
+      - **nom** : Nombre d'UC/parts après frais
+      - **contrat** : Excelium (assurance vie)
+      - **contrat_id** : axa_excelium_vie_2026-05
+      - **famille** : épargne
+      - **usage** : valeur_de_rachat
+      - **formule** : N(n) = N0 × (1 − taux_mensuel)^(12n), avec taux_mensuel = 0,0669 % (Croissance), 0,0804 % (UC standard), 0,1014 % (UC pilotée), 0,1259 % (AXA Immo Avenir)
+      - **rhs** : N0 * (1 − taux_mensuel)^(12n), avec taux_mensuel = 0,0669 % (Croissance), 0,0804 % (UC standard), 0,1014 % (UC pilotée), 0,1259 % (AXA Immo Avenir)
+      - **executable** : False
+      - **raison_non_exec** : pourcentages / valeurs descriptives
+      - **variables_tokens** :
+      - **variables_desc** :
+        - N0 : nombre initial de parts/UC
+      - **niveau_confiance** : 97
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Excelium/2026-05 Notice Excelium Vie.pdf
+        - **page** : 47
+        - **section** : 7.1.3 p.47
+        - **pdf_ids** :
+          - axa_pdf_05
+          - axa_pdf_06
+      - **tableau_source_present** : True
+      - **id** : axa_excelium_vie_2026-05_formule_03
+      - **nom** : Prime mensuelle garantie Revalorisée
+      - **contrat** : Excelium (assurance vie)
+      - **contrat_id** : axa_excelium_vie_2026-05
+      - **famille** : épargne
+      - **usage** : cotisation
+      - **formule** : prime = capital_sous_risque_fin_de_mois × tarif_mensuel(âge)
+      - **rhs** : capital_sous_risque_fin_de_mois * tarif_mensuel(âge)
+      - **executable** : False
+      - **raison_non_exec** : fonction non standard: tarif_mensuel
+      - **variables_tokens** :
+      - **variables_desc** :
+        - capital sous risque = max(0, montant_garanti − épargne)
+        - tarif par âge (tableau p.17)
+      - **niveau_confiance** : 97
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Excelium/2026-05 Notice Excelium Vie.pdf
+        - **page** : 17
+        - **section** : 4.2.2 p.17-18
+        - **pdf_ids** :
+          - axa_pdf_05
+          - axa_pdf_06
+      - **tableau_source_present** : True
+      - **id** : axa_excelium_vie_2026-05_formule_04
+      - **nom** : Montant garanti Revalorisée
+      - **contrat** : Excelium (assurance vie)
+      - **contrat_id** : axa_excelium_vie_2026-05
+      - **famille** : épargne
+      - **usage** : autre
+      - **formule** : MG = Î£ versements_nets × Î (1 + taux_mensuel_LivretA) sur la période [mois suivant l'encaissement ; mois précédant le décès] − minorations proportionnelles aux rachats
+      - **rhs** : mois précédant le décès] − minorations proportionnelles aux rachats
+      - **executable** : False
+      - **raison_non_exec** : référence un barème / tableau
+      - **variables_tokens** :
+      - **variables_desc** :
+        - taux mensuel du Livret A de chaque mois
+        - rachats partiels
+      - **niveau_confiance** : 90
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Excelium/2026-05 Notice Excelium Vie.pdf
+        - **page** : 16
+        - **section** : 4.2.2 p.16
+        - **pdf_ids** :
+          - axa_pdf_05
+          - axa_pdf_06
+      - **tableau_source_present** : True
+      - **id** : axa_ma_retraite_2026-05_formule_01
+      - **nom** : Valeur de transfert en parts/UC
+      - **contrat** : Ma Retraite (plan d'épargne retraite individuel - PER)
+      - **contrat_id** : axa_ma_retraite_2026-05
+      - **famille** : retraite
+      - **usage** : autre
+      - **formule** : N(1) = N0 × (1 − taux_mensuel)^12 × (1 − 1 % si transfert < 5 ans) ; taux_mensuel = 0,0669 % (Croissance), 0,0804 % (UC), 0,1259 % (AXA Immo Avenir)
+      - **rhs** : 0,0669 % (Croissance), 0,0804 % (UC), 0,1259 % (AXA Immo Avenir)
+      - **executable** : False
+      - **raison_non_exec** : pourcentages / valeurs descriptives
+      - **variables_tokens** :
+      - **variables_desc** :
+        - N0 parts/UC initiales
+      - **niveau_confiance** : 97
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Ma retraite/2026-05 Notice Ma Retraite.pdf
+        - **page** : 28
+        - **section** : 9.2 p.28-29
+        - **pdf_ids** :
+          - axa_pdf_08
+          - axa_pdf_09
+      - **tableau_source_present** : True
+      - **id** : axa_ma_retraite_2026-05_formule_02
+      - **nom** : Rente initiale
+      - **contrat** : Ma Retraite (plan d'épargne retraite individuel - PER)
+      - **contrat_id** : axa_ma_retraite_2026-05
+      - **famille** : retraite
+      - **usage** : autre
+      - **formule** : rente_annuelle = Î£_versements [épargne_relative_au_versement × coefficient(année_retraite, âge ; table en vigueur à la date du versement)] ; frais 1 % par arrérage déjà intégrés aux coefficients
+      - **rhs** : frais 1 % par arrérage déjà intégrés aux coefficients
+      - **executable** : False
+      - **raison_non_exec** : pourcentages / valeurs descriptives
+      - **variables_tokens** :
+      - **variables_desc** :
+        - coefficients de l'annexe 13
+        - âge à la liquidation
+        - année de la retraite
+      - **niveau_confiance** : 90
+      - **confiance_label** : bon
+      - **formule_estimee** : False
+      - **exemple_chiffre** : None
+      - **source** :
+        - **document_source** : Ma retraite/2026-05 Notice Ma Retraite.pdf
+        - **page** : 48
+        - **section** : Annexe 13 p.48-49
+        - **pdf_ids** :
+          - axa_pdf_08
+          - axa_pdf_09
+      - **tableau_source_present** : True
+  - **_provenance** :
+    - **source_file_original** : calculs_index.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\calculs\calculs_index.json
+    - **type_source** : information_pack
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : information_pack
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0016
+  - **source** :
+    - **source_file_original** : formules_axa_a_verifier.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\formules_et_calculs_a_verifier\formules_axa_a_verifier.json
+    - **type_source** : trou_du_pack_ou_hypothese
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : trou_du_pack_ou_hypothese
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : 0fc3b162f7f135888feb7ddac9c18e65b04ae5b04682429ec7dcdf381f794d29
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.2_test_profils
+    - **date_creation** : 2026-06-20
+    - **regle** : Ne pas inventer de formule AXA. Verifier la notice ou le JSON source avant tout calcul.
+    - **formules** :
+      - **id_formule** : FAXA-001
+      - **domaine** : incapacite / indemnites journalieres
+      - **source_actuelle_dans_le_pack** : contrats/avizen_pro.json ; base_connaissances_contractuelle/Contrat_avizen_pro/
+      - **source_officielle_a_verifier** : PDF Avizen Pro
+      - **contrat_axa_concerne** : Avizen Pro
+      - **regime_ou_caisse_concerne** : None
+      - **variables_necessaires** :
+        - garantie souscrite
+        - franchise
+        - revenu assure
+        - duree
+        - exclusions
+      - **donnees_client_necessaires** :
+        - statut
+        - profession
+        - revenu
+        - contrat/options
+        - date evenement
+      - **frequence_mise_a_jour** : a chaque nouvelle notice
+      - **risque_erreur** : eleve
+      - **niveau_prudence** : critique
+      - **statut** : a verifier
+      - **id_formule** : FAXA-002
+      - **domaine** : invalidite
+      - **source_actuelle_dans_le_pack** : contrats/avizen.json ; contrats/avizen_pro.json
+      - **source_officielle_a_verifier** : PDF Avizen et Avizen Pro
+      - **contrat_axa_concerne** : Avizen ; Avizen Pro
+      - **regime_ou_caisse_concerne** : None
+      - **variables_necessaires** :
+        - definition contractuelle
+        - taux/seuil si present
+        - option
+        - exclusions
+      - **donnees_client_necessaires** :
+        - contrat
+        - profession
+        - situation non nominative
+        - decision assureur
+      - **frequence_mise_a_jour** : a chaque notice
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_formule** : FAXA-003
+      - **domaine** : capital deces
+      - **source_actuelle_dans_le_pack** : contrats/avizen.json ; contrats/avizen_pro.json ; contrats/essenciel.json
+      - **source_officielle_a_verifier** : PDF du contrat concerne
+      - **contrat_axa_concerne** : Avizen ; Avizen Pro ; EssenCiel
+      - **regime_ou_caisse_concerne** : None
+      - **variables_necessaires** :
+        - capital choisi
+        - age
+        - beneficiaire
+        - cause deces
+        - exclusions
+        - delai
+      - **donnees_client_necessaires** :
+        - contrat/options
+        - beneficiaires
+        - age
+        - situation familiale
+      - **frequence_mise_a_jour** : a chaque notice
+      - **risque_erreur** : eleve
+      - **niveau_prudence** : critique
+      - **statut** : a verifier
+      - **id_formule** : FAXA-004
+      - **domaine** : rente education
+      - **source_actuelle_dans_le_pack** : a rechercher dans contrats/avizen*.json
+      - **source_officielle_a_verifier** : PDF Avizen / Avizen Pro
+      - **contrat_axa_concerne** : Avizen ; Avizen Pro si present
+      - **regime_ou_caisse_concerne** : None
+      - **variables_necessaires** :
+        - existence garantie
+        - option
+        - age enfant
+        - montant
+        - duree
+      - **donnees_client_necessaires** :
+        - age enfants
+        - option souscrite
+        - beneficiaires
+      - **frequence_mise_a_jour** : a chaque notice
+      - **risque_erreur** : eleve
+      - **niveau_prudence** : eleve
+      - **statut** : a verifier
+      - **id_formule** : FAXA-005
+      - **domaine** : franchise / carence
+      - **source_actuelle_dans_le_pack** : contrats/*.json ; base_connaissances_contractuelle/*/conditions_souscription.json
+      - **source_officielle_a_verifier** : PDF du contrat concerne
+      - **contrat_axa_concerne** : Avizen ; Avizen Pro ; Masterlife Credit ; autres selon cas
+      - **regime_ou_caisse_concerne** : None
+      - **variables_necessaires** :
+        - garantie
+        - delai
+        - date evenement
+        - option
+        - statut
+      - **donnees_client_necessaires** :
+        - contrat exact
+        - date effet
+        - date sinistre
+        - option
+      - **frequence_mise_a_jour** : a chaque notice
+      - **risque_erreur** : eleve
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_formule** : FAXA-006
+      - **domaine** : assurance emprunteur
+      - **source_actuelle_dans_le_pack** : contrats/masterlife_credit.json
+      - **source_officielle_a_verifier** : PDF Masterlife Credit et exigences banque
+      - **contrat_axa_concerne** : Masterlife Credit
+      - **regime_ou_caisse_concerne** : None
+      - **variables_necessaires** :
+        - capital emprunte
+        - quotite
+        - garanties exigees
+        - age
+        - duree
+        - etat dossier
+      - **donnees_client_necessaires** :
+        - offre de pret
+        - fiche banque
+        - quotite
+        - dossier assureur hors IA
+      - **frequence_mise_a_jour** : a chaque notice ou regle emprunteur
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : a verifier
+      - **id_formule** : FAXA-007
+      - **domaine** : rachat assurance vie
+      - **source_actuelle_dans_le_pack** : contrats/excelium.json ; officiel_gouv/fiscalite_rachat_assurance_vie.json
+      - **source_officielle_a_verifier** : PDF Excelium et fiscalite officielle a jour
+      - **contrat_axa_concerne** : Excelium
+      - **regime_ou_caisse_concerne** : None
+      - **variables_necessaires** :
+        - valeur contrat
+        - versements
+        - date versements
+        - plus-value
+        - fiscalite
+      - **donnees_client_necessaires** :
+        - historique versements
+        - date ouverture
+        - situation fiscale
+        - montant rachat
+      - **frequence_mise_a_jour** : annuelle ou changement fiscal
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_formule** : FAXA-008
+      - **domaine** : dependance / perte autonomie
+      - **source_actuelle_dans_le_pack** : contrats/entourage.json ; officiel_gouv/dependance_perte_autonomie.json
+      - **source_officielle_a_verifier** : PDF EntourAge et source officielle dependance
+      - **contrat_axa_concerne** : EntourAge
+      - **regime_ou_caisse_concerne** : APA/GIR officiel si pertinent
+      - **variables_necessaires** :
+        - niveau dependance
+        - definition contractuelle
+        - age
+        - garanties
+        - exclusions
+      - **donnees_client_necessaires** :
+        - age
+        - contrat
+        - situation non nominative
+        - evaluation hors IA
+      - **frequence_mise_a_jour** : a chaque notice/source officielle
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_formule** : FAXA-009
+      - **domaine** : obseques
+      - **source_actuelle_dans_le_pack** : contrats/essenciel.json
+      - **source_officielle_a_verifier** : PDF EssenCiel
+      - **contrat_axa_concerne** : EssenCiel
+      - **regime_ou_caisse_concerne** : None
+      - **variables_necessaires** :
+        - capital
+        - age
+        - beneficiaire
+        - delai
+        - assistance
+        - exclusions
+      - **donnees_client_necessaires** :
+        - montant souhaite
+        - age
+        - pays
+        - beneficiaire
+      - **frequence_mise_a_jour** : a chaque notice
+      - **risque_erreur** : eleve
+      - **niveau_prudence** : eleve
+      - **statut** : a verifier
+      - **id_formule** : FAXA-010
+      - **domaine** : protection accident
+      - **source_actuelle_dans_le_pack** : contrats/ma_protection_accident.json
+      - **source_officielle_a_verifier** : CG Ma Protection Accident
+      - **contrat_axa_concerne** : Ma Protection Accident
+      - **regime_ou_caisse_concerne** : None
+      - **variables_necessaires** :
+        - definition accident
+        - seuils
+        - prejudices
+        - assistance
+        - exclusions
+      - **donnees_client_necessaires** :
+        - activites
+        - famille couverte
+        - contrat/options
+        - evenement
+      - **frequence_mise_a_jour** : a chaque CG
+      - **risque_erreur** : eleve
+      - **niveau_prudence** : eleve
+      - **statut** : a verifier
+  - **_provenance** :
+    - **source_file_original** : formules_axa_a_verifier.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\formules_et_calculs_a_verifier\formules_axa_a_verifier.json
+    - **type_source** : trou_du_pack_ou_hypothese
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : trou_du_pack_ou_hypothese
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0017
+  - **source** :
+    - **source_file_original** : formules_caisses_a_verifier.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\formules_et_calculs_a_verifier\formules_caisses_a_verifier.json
+    - **type_source** : trou_du_pack_ou_hypothese
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : trou_du_pack_ou_hypothese
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : c6ce603fd7eea458da91b221b4a847d8d277fc26271b56b5d35da10e2e8c09b8
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.2_test_profils
+    - **date_creation** : 2026-06-20
+    - **regle** : Ne pas inventer de caisse, bareme ou formule. Marquer a sourcer si absent.
+    - **formules** :
+      - **id_formule** : FCAISSE-001
+      - **domaine** : professions medicales
+      - **source_actuelle_dans_le_pack** : aucune source caisse specifique suffisante identifiee
+      - **source_officielle_a_verifier** : source regime/caisse professionnelle a ajouter ou verifier
+      - **contrat_axa_concerne** : Avizen Pro si comparaison
+      - **regime_ou_caisse_concerne** : caisse professionnelle medicale exacte a identifier
+      - **variables_necessaires** :
+        - profession
+        - caisse
+        - revenu
+        - droits
+        - delais
+        - plafonds
+      - **donnees_client_necessaires** :
+        - profession exacte
+        - caisse
+        - revenu
+      - **frequence_mise_a_jour** : annuelle ou changement caisse
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : a sourcer
+      - **id_formule** : FCAISSE-002
+      - **domaine** : professions liberales non medicales
+      - **source_actuelle_dans_le_pack** : officiel_gouv/regime_obligatoire_professions_liberales.json partiel
+      - **source_officielle_a_verifier** : source caisse par profession a ajouter
+      - **contrat_axa_concerne** : Avizen Pro
+      - **regime_ou_caisse_concerne** : caisse professionnelle exacte
+      - **variables_necessaires** :
+        - profession
+        - caisse
+        - revenu
+        - droits
+      - **donnees_client_necessaires** :
+        - profession exacte
+        - caisse
+        - revenu
+      - **frequence_mise_a_jour** : annuelle
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_formule** : FCAISSE-003
+      - **domaine** : artisans commercants
+      - **source_actuelle_dans_le_pack** : officiel_gouv/regime_obligatoire_independants_tns.json partiel
+      - **source_officielle_a_verifier** : source officielle regime independants a jour
+      - **contrat_axa_concerne** : Avizen Pro
+      - **regime_ou_caisse_concerne** : TNS/artisan/commercant
+      - **variables_necessaires** :
+        - statut
+        - revenu
+        - droits
+        - plafond
+      - **donnees_client_necessaires** :
+        - statut exact
+        - revenu
+        - date
+      - **frequence_mise_a_jour** : annuelle
+      - **risque_erreur** : eleve
+      - **niveau_prudence** : critique
+      - **statut** : a verifier
+      - **id_formule** : FCAISSE-004
+      - **domaine** : frontaliers / mobilite internationale
+      - **source_actuelle_dans_le_pack** : absente du pack
+      - **source_officielle_a_verifier** : source regime frontalier selon pays a ajouter
+      - **contrat_axa_concerne** : selon contrat
+      - **regime_ou_caisse_concerne** : regime pays de travail/residence
+      - **variables_necessaires** :
+        - pays residence
+        - pays travail
+        - statut
+        - duree
+        - residence fiscale/sociale
+      - **donnees_client_necessaires** :
+        - pays
+        - statut
+        - contrat vise
+      - **frequence_mise_a_jour** : a chaque changement reglementaire
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : absente du pack
+      - **id_formule** : FCAISSE-005
+      - **domaine** : caisses retraite complementaires
+      - **source_actuelle_dans_le_pack** : officiel_gouv/retraite_obligatoire.json partiel
+      - **source_officielle_a_verifier** : sources retraite individuelles a ajouter/verifier
+      - **contrat_axa_concerne** : Ma retraite si comparaison
+      - **regime_ou_caisse_concerne** : caisse retraite selon statut
+      - **variables_necessaires** :
+        - statut
+        - carriere
+        - points/trimestres
+        - age
+      - **donnees_client_necessaires** :
+        - releves officiels
+        - age
+        - statut
+      - **frequence_mise_a_jour** : selon reforme/revalorisation
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : a sourcer
+  - **_provenance** :
+    - **source_file_original** : formules_caisses_a_verifier.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\formules_et_calculs_a_verifier\formules_caisses_a_verifier.json
+    - **type_source** : trou_du_pack_ou_hypothese
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : trou_du_pack_ou_hypothese
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **bloc_id** : json_0018
+  - **source** :
+    - **source_file_original** : formules_regimes_obligatoires_a_verifier.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\formules_et_calculs_a_verifier\formules_regimes_obligatoires_a_verifier.json
+    - **type_source** : trou_du_pack_ou_hypothese
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : trou_du_pack_ou_hypothese
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+  - **hash_sha256** : 9be1cce314d7eb9658d2fadfeb26b28885105eaa8235bc43e834044ba144ef67
+  - **doublon_exact_de** : None
+  - **statut_parse** : valide
+  - **contenu** :
+    - **version** : v1.2_test_profils
+    - **date_creation** : 2026-06-20
+    - **regle** : Ne pas inventer de regle officielle. Utiliser uniquement les sources officielles datees du pack ou marquer a verifier.
+    - **formules** :
+      - **id_formule** : FREG-001
+      - **domaine** : indemnites journalieres salarie
+      - **source_actuelle_dans_le_pack** : officiel_gouv/securite_sociale_indemnites_journalieres.json
+      - **source_officielle_a_verifier** : source officielle datee a recontroler
+      - **contrat_axa_concerne** : None
+      - **regime_ou_caisse_concerne** : regime salarie
+      - **variables_necessaires** :
+        - revenu
+        - anciennete/droits
+        - arret
+        - plafond
+        - delai
+      - **donnees_client_necessaires** :
+        - statut
+        - revenus
+        - dates
+        - contrat employeur
+      - **frequence_mise_a_jour** : annuelle ou changement reglementaire
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_formule** : FREG-002
+      - **domaine** : invalidite Securite sociale
+      - **source_actuelle_dans_le_pack** : officiel_gouv/securite_sociale_invalidite_incapacite.json
+      - **source_officielle_a_verifier** : source officielle datee a recontroler
+      - **contrat_axa_concerne** : None
+      - **regime_ou_caisse_concerne** : Securite sociale
+      - **variables_necessaires** :
+        - categorie
+        - revenus
+        - droits
+        - date
+        - plafond
+      - **donnees_client_necessaires** :
+        - statut
+        - decision officielle
+        - revenus
+        - carriere
+      - **frequence_mise_a_jour** : annuelle ou changement reglementaire
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_formule** : FREG-003
+      - **domaine** : regime TNS
+      - **source_actuelle_dans_le_pack** : officiel_gouv/regime_obligatoire_independants_tns.json
+      - **source_officielle_a_verifier** : source officielle TNS a recontroler
+      - **contrat_axa_concerne** : Avizen Pro si comparaison
+      - **regime_ou_caisse_concerne** : TNS
+      - **variables_necessaires** :
+        - statut exact
+        - revenu
+        - caisse
+        - droits
+        - plafond
+      - **donnees_client_necessaires** :
+        - statut
+        - revenu
+        - caisse
+        - dates
+      - **frequence_mise_a_jour** : annuelle ou changement reglementaire
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : a verifier
+      - **id_formule** : FREG-004
+      - **domaine** : professions liberales
+      - **source_actuelle_dans_le_pack** : officiel_gouv/regime_obligatoire_professions_liberales.json
+      - **source_officielle_a_verifier** : source regime/caisse professionnelle a ajouter ou verifier
+      - **contrat_axa_concerne** : Avizen Pro si comparaison
+      - **regime_ou_caisse_concerne** : professions liberales
+      - **variables_necessaires** :
+        - profession
+        - caisse
+        - revenu
+        - droits
+        - plafonds
+      - **donnees_client_necessaires** :
+        - profession exacte
+        - caisse
+        - revenu
+      - **frequence_mise_a_jour** : annuelle ou changement caisse
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_formule** : FREG-005
+      - **domaine** : PASS / plafonds
+      - **source_actuelle_dans_le_pack** : base_connaissances_contractuelle/plafonds.json ; officiel_gouv selon fichiers
+      - **source_officielle_a_verifier** : source officielle PASS/plafonds a jour
+      - **contrat_axa_concerne** : selon formule
+      - **regime_ou_caisse_concerne** : Securite sociale / regimes
+      - **variables_necessaires** :
+        - annee
+        - plafond
+        - assiette
+        - regime
+      - **donnees_client_necessaires** :
+        - annee applicable
+        - revenu
+        - statut
+      - **frequence_mise_a_jour** : annuelle
+      - **risque_erreur** : eleve
+      - **niveau_prudence** : critique
+      - **statut** : a verifier
+      - **id_formule** : FREG-006
+      - **domaine** : AERAS / droit a l'oubli
+      - **source_actuelle_dans_le_pack** : officiel_gouv/assurance_emprunteur_regles_publiques.json
+      - **source_officielle_a_verifier** : source officielle AERAS a jour
+      - **contrat_axa_concerne** : Masterlife Credit
+      - **regime_ou_caisse_concerne** : assurance emprunteur
+      - **variables_necessaires** :
+        - type pret
+        - montant
+        - echeance
+        - regle applicable
+        - etat dossier
+      - **donnees_client_necessaires** :
+        - donnees non medicales dans l'IA ; details medicaux hors IA
+      - **frequence_mise_a_jour** : a chaque evolution reglementaire
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_formule** : FREG-007
+      - **domaine** : retraite obligatoire
+      - **source_actuelle_dans_le_pack** : officiel_gouv/retraite_obligatoire.json
+      - **source_officielle_a_verifier** : source retraite officielle a jour
+      - **contrat_axa_concerne** : Ma retraite si comparaison
+      - **regime_ou_caisse_concerne** : retraite obligatoire
+      - **variables_necessaires** :
+        - age
+        - trimestres
+        - carriere
+        - regime
+        - date
+      - **donnees_client_necessaires** :
+        - carriere
+        - releves
+        - age
+        - statut
+      - **frequence_mise_a_jour** : des qu'une reforme evolue
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+      - **id_formule** : FREG-008
+      - **domaine** : dependance / APA / GIR
+      - **source_actuelle_dans_le_pack** : officiel_gouv/dependance_perte_autonomie.json
+      - **source_officielle_a_verifier** : source officielle dependance a jour
+      - **contrat_axa_concerne** : EntourAge si comparaison
+      - **regime_ou_caisse_concerne** : aides publiques dependance
+      - **variables_necessaires** :
+        - GIR
+        - ressources
+        - departement
+        - date
+        - aide
+      - **donnees_client_necessaires** :
+        - evaluation officielle
+        - ressources
+        - lieu
+      - **frequence_mise_a_jour** : annuelle ou changement reglementaire
+      - **risque_erreur** : critique
+      - **niveau_prudence** : critique
+      - **statut** : partielle
+  - **_provenance** :
+    - **source_file_original** : formules_regimes_obligatoires_a_verifier.json
+    - **source_path_original** : 02_RAISONNEMENT_COMPLEXE\formules_et_calculs_a_verifier\formules_regimes_obligatoires_a_verifier.json
+    - **type_source** : trou_du_pack_ou_hypothese
+    - **contrat** : None
+    - **objet** : None
+    - **detail_id** : None
+    - **pdf_source** : None
+    - **page** : None
+    - **section** : None
+    - **statut_source** : trou_du_pack_ou_hypothese
+    - **niveau_fiabilite** : None
+    - **date_source** : None
+    - **date_consultation** : None
+    - **remarque_limite** : Bloc consolide automatiquement sans modification du contenu source.
+- **regle_schema** :
+  - **champs_attendus** :
+    - id_regle
+    - titre
+    - themes
+    - contrats_concernes
+    - description
+    - source_requise
+    - source_disponible
+    - statut
+    - niveau_prudence
+    - risque_si_erreur
+    - reponse_attendue
+    - erreurs_a_eviter
+    - provenance
+
+### modeles_reponse_par_question
+
+- **question_contractuelle_simple** :
+  - **structure_recommandee** :
+    - réponse courte
+    - contrat/PDF/page
+    - à vérifier
+  - **preuve_minimale** : contrat + référence PDF du fait principal
+  - **limite_a_signaler** : si page non certaine, réponse interne seulement
+  - **action_suivante** : ouvrir PDF si réponse client
+  - **refus_si_necessaire** : si PDF absent ou page introuvable sur clause sensible
+  - **exemple** : La garantie semble prévue dans le contrat, mais je vérifie la notice et la garantie souscrite avant confirmation client.
+- **question_contractuelle_sensible** :
+  - **structure_recommandee** :
+    - fait
+    - preuve
+    - exclusions/conditions
+    - validation humaine
+  - **preuve_minimale** : PDF/page certaine ou probable avec ouverture PDF
+  - **limite_a_signaler** : ne jamais conclure sur incertain/introuvable
+  - **action_suivante** : validation humaine obligatoire
+  - **refus_si_necessaire** : si exclusion, indemnisation, décès, invalidité, barème ou territorialité non vérifiés
+  - **exemple** : Sujet sensible : ouvrir la notice, citer la page et refuser toute promesse.
+- **question_source_officielle** :
+  - **structure_recommandee** :
+    - source officielle
+    - statut
+    - limite
+    - action
+  - **preuve_minimale** : source officielle intégrée ou redirection vérifiée
+  - **limite_a_signaler** : une redirection n'est pas un contenu
+  - **action_suivante** : consulter la page officielle
+  - **refus_si_necessaire** : si source non officielle ou absente
+  - **exemple** : La réponse dépend d'une source officielle à jour ; je ne conclus pas depuis le seul pack.
+- **question_mixte_contrat_officiel** :
+  - **structure_recommandee** :
+    - contrat AXA
+    - source officielle
+    - séparation des règles
+    - limites
+  - **preuve_minimale** : preuve AXA + source publique officielle
+  - **limite_a_signaler** : ne pas fusionner clause et règle publique
+  - **action_suivante** : ouvrir les deux sources
+  - **refus_si_necessaire** : si l'une des deux sources manque
+  - **exemple** : Le contrat dit X, la règle publique doit être vérifiée séparément avant réponse client.
+- **question_multi_contrats** :
+  - **structure_recommandee** :
+    - besoin client
+    - contrats candidats
+    - données manquantes
+    - pistes
+  - **preuve_minimale** : références principales de chaque contrat comparé
+  - **limite_a_signaler** : pas de meilleur contrat sans critères
+  - **action_suivante** : demander objectif, âge, statut, budget, garanties voulues
+  - **refus_si_necessaire** : si besoin client insuffisant ou contrat non fourni
+  - **exemple** : Je peux comparer les garanties, pas désigner le meilleur sans vos critères.
+- **question_calcul** :
+  - **structure_recommandee** :
+    - données nécessaires
+    - source
+    - limite
+    - orientation
+  - **preuve_minimale** : barème/formule PDF + données client complètes
+  - **limite_a_signaler** : calcul personnalisé interdit sans preuve et données
+  - **action_suivante** : demander les données et ouvrir le barème
+  - **refus_si_necessaire** : si formule, plafond, fiscalité ou situation incomplets
+  - **exemple** : Je ne fais pas le calcul définitif ; je liste les données à réunir.
+- **question_fiscale** :
+  - **structure_recommandee** :
+    - principe général
+    - source officielle
+    - situation client
+    - validation
+  - **preuve_minimale** : source officielle à jour + données fiscales client
+  - **limite_a_signaler** : ne pas personnaliser depuis le seul contrat
+  - **action_suivante** : consulter impots/service-public selon sujet
+  - **refus_si_necessaire** : si plafond, TMI, résidence ou succession inconnus
+  - **exemple** : La fiscalité dépend de votre situation ; je vérifie la source officielle avant toute estimation.
+- **question_aeras** :
+  - **structure_recommandee** :
+    - AERAS
+    - droit à l'oubli/grille si pertinent
+    - limites
+    - orientation
+  - **preuve_minimale** : source officielle AERAS consultée
+  - **limite_a_signaler** : AERAS ne garantit pas l'acceptation
+  - **action_suivante** : orienter vers procédure/questionnaire/assureur
+  - **refus_si_necessaire** : si demande de promesse d'acceptation ou surprime
+  - **exemple** : Je ne peux pas promettre l'acceptation ; AERAS encadre l'étude du dossier.
+- **question_residence_etranger** :
+  - **structure_recommandee** :
+    - pays/résidence
+    - contrat
+    - source officielle
+    - limite
+  - **preuve_minimale** : clause territorialité + source officielle si droit public
+  - **limite_a_signaler** : pays et durée manquants bloquent la conclusion
+  - **action_suivante** : demander pays, durée, résidence fiscale, statut
+  - **refus_si_necessaire** : si pays/durée/source absents
+  - **exemple** : La réponse dépend du pays, de la durée et de la clause territorialité.
+- **question_profession_caisse** :
+  - **structure_recommandee** :
+    - profession
+    - caisse
+    - contrat
+    - source officielle
+  - **preuve_minimale** : source caisse/URSSAF/CNAVPL + contrat AXA si garantie
+  - **limite_a_signaler** : ne pas deviner la caisse
+  - **action_suivante** : demander profession exacte et statut
+  - **refus_si_necessaire** : si caisse non sourcée
+  - **exemple** : Je ne peux pas identifier la caisse sans source officielle et profession précise.
+- **question_reponse_client** :
+  - **structure_recommandee** :
+    - phrase simple
+    - condition
+    - prochaine étape
+  - **preuve_minimale** : preuve vérifiée en amont
+  - **limite_a_signaler** : pas de détail technique inutile
+  - **action_suivante** : si non vérifié, dire que la notice doit être ouverte
+  - **refus_si_necessaire** : si preuve absente
+  - **exemple** : Je vérifie la notice avant de vous confirmer ce point.
+- **question_inspecteur** :
+  - **structure_recommandee** :
+    - contrat
+    - fait
+    - PDF/page/statut
+    - source officielle
+    - risques
+    - décision
+  - **preuve_minimale** : preuves traçables
+  - **limite_a_signaler** : aucune page probable citée comme certaine
+  - **action_suivante** : lister les contrôles restants
+  - **refus_si_necessaire** : si preuve primaire absente
+  - **exemple** : Décision : non validable sans page PDF certaine ou vérification humaine.
+
+### modeles_reponse_client_v2_6
+
+- **whatsapp_court** : Je vérifie la notice avant de vous confirmer. Ce point dépend des garanties souscrites et des conditions du contrat.
+- **mail_client** : Après vérification, je vous confirme les éléments sourcés dans la notice. Si une clause ou votre situation personnelle reste à contrôler, je vous l'indiquerai clairement avant toute conclusion.
+- **synthese_rdv** : Points à vérifier après rendez-vous : garanties souscrites, exclusions, conditions, page de notice et données personnelles nécessaires.
+- **apres_verification** : La notice prévoit ce point sous conditions. Je vous indique les limites applicables et ce qui reste à confirmer selon votre situation.
+- **je_dois_verifier_notice** : Je dois vérifier la notice avant de vous répondre, car ce point dépend d'une clause contractuelle précise.
+- **je_ne_peux_pas_confirmer_sans_source** : Je ne peux pas vous le confirmer sans source fiable. Je préfère vérifier plutôt que vous donner une réponse imprécise.
+- **depend_de_votre_situation** : Ce point dépend de votre situation personnelle. Il me faut les informations manquantes avant de vous répondre correctement.
+- **regle** : Ces modèles ne remplacent jamais la source ; ils servent uniquement après vérification ou pour expliquer une attente de vérification.
+
+### raisonnements_complexes
+
+- **mode_emploi** :
+  - **regles** :
+    - Toujours identifier besoin client, besoin réel et donnée manquante.
+    - Ouvrir les contrats candidats, puis vérifier exclusions et conditions.
+    - Vérifier les sources officielles si le sujet est public, fiscal, social, résidence, AERAS ou caisse.
+    - Refuser de conclure si données insuffisantes.
+    - Proposer plusieurs pistes si nécessaire, jamais 'meilleur contrat' sans critères.
+- **arbres_multi_contrats** :
+  - **deces_protection_famille** :
+    - **besoin** : décès / protection famille
+    - **questions_a_poser** :
+      - objectif client
+      - âge/statut/résidence
+      - profession
+      - budget
+      - contrats déjà détenus
+    - **contrats_candidats** :
+      - avizen
+      - avizen_pro
+    - **garanties_a_verifier** :
+      - capital décès
+      - rente éducation
+      - bénéficiaire
+    - **exclusions_a_verifier** :
+      - exclusions décès
+      - conditions souscription
+    - **sources_officielles_a_verifier** :
+      - selon fiscalité, résidence, caisse, AERAS, régime obligatoire
+    - **redirections** :
+      - sources_officielles_prioritaires_v2_3 si sujet public
+    - **limites** :
+      - ne pas conclure si données insuffisantes
+      - ouvrir PDF si référence incertaine
+    - **reponse_possible** : orientation prudente, pas recommandation définitive
+    - **refus_si_donnees_manquantes** : True
+  - **prevoyance_professionnel** :
+    - **besoin** : prévoyance professionnel
+    - **questions_a_poser** :
+      - objectif client
+      - âge/statut/résidence
+      - profession
+      - budget
+      - contrats déjà détenus
+    - **contrats_candidats** :
+      - avizen_pro
+      - avizen
+    - **garanties_a_verifier** :
+      - IJ
+      - invalidité
+      - frais professionnels
+    - **exclusions_a_verifier** :
+      - activité professionnelle
+      - barème
+      - franchise
+    - **sources_officielles_a_verifier** :
+      - selon fiscalité, résidence, caisse, AERAS, régime obligatoire
+    - **redirections** :
+      - sources_officielles_prioritaires_v2_3 si sujet public
+    - **limites** :
+      - ne pas conclure si données insuffisantes
+      - ouvrir PDF si référence incertaine
+    - **reponse_possible** : orientation prudente, pas recommandation définitive
+    - **refus_si_donnees_manquantes** : True
+  - **etudiant_accident_etranger** :
+    - **besoin** : étudiant / accident / étranger
+    - **questions_a_poser** :
+      - objectif client
+      - âge/statut/résidence
+      - profession
+      - budget
+      - contrats déjà détenus
+    - **contrats_candidats** :
+      - ma_protection_accident
+    - **garanties_a_verifier** :
+      - accident
+      - territorialité
+    - **exclusions_a_verifier** :
+      - durée séjour
+      - résidence
+      - PDF
+    - **sources_officielles_a_verifier** :
+      - selon fiscalité, résidence, caisse, AERAS, régime obligatoire
+    - **redirections** :
+      - sources_officielles_prioritaires_v2_3 si sujet public
+    - **limites** :
+      - ne pas conclure si données insuffisantes
+      - ouvrir PDF si référence incertaine
+    - **reponse_possible** : orientation prudente, pas recommandation définitive
+    - **refus_si_donnees_manquantes** : True
+  - **obseques** :
+    - **besoin** : obsèques
+    - **questions_a_poser** :
+      - objectif client
+      - âge/statut/résidence
+      - profession
+      - budget
+      - contrats déjà détenus
+    - **contrats_candidats** :
+      - essenciel
+      - essen_ciel_patrimoine
+    - **garanties_a_verifier** :
+      - capital obsèques
+      - organisation
+    - **exclusions_a_verifier** :
+      - rachat
+      - réduction
+      - étranger
+    - **sources_officielles_a_verifier** :
+      - selon fiscalité, résidence, caisse, AERAS, régime obligatoire
+    - **redirections** :
+      - sources_officielles_prioritaires_v2_3 si sujet public
+    - **limites** :
+      - ne pas conclure si données insuffisantes
+      - ouvrir PDF si référence incertaine
+    - **reponse_possible** : orientation prudente, pas recommandation définitive
+    - **refus_si_donnees_manquantes** : True
+  - **transmission_epargne_enfant** :
+    - **besoin** : transmission / épargne enfant
+    - **questions_a_poser** :
+      - objectif client
+      - âge/statut/résidence
+      - profession
+      - budget
+      - contrats déjà détenus
+    - **contrats_candidats** :
+      - excelium
+    - **garanties_a_verifier** :
+      - mineur
+      - bénéficiaire
+    - **exclusions_a_verifier** :
+      - capacité juridique
+      - fiscalité
+    - **sources_officielles_a_verifier** :
+      - selon fiscalité, résidence, caisse, AERAS, régime obligatoire
+    - **redirections** :
+      - sources_officielles_prioritaires_v2_3 si sujet public
+    - **limites** :
+      - ne pas conclure si données insuffisantes
+      - ouvrir PDF si référence incertaine
+    - **reponse_possible** : orientation prudente, pas recommandation définitive
+    - **refus_si_donnees_manquantes** : True
+  - **retraite_fiscalite** :
+    - **besoin** : retraite / fiscalité
+    - **questions_a_poser** :
+      - objectif client
+      - âge/statut/résidence
+      - profession
+      - budget
+      - contrats déjà détenus
+    - **contrats_candidats** :
+      - ma_retraite
+    - **garanties_a_verifier** :
+      - PER
+      - sortie capital/rente
+    - **exclusions_a_verifier** :
+      - fiscalité officielle
+    - **sources_officielles_a_verifier** :
+      - selon fiscalité, résidence, caisse, AERAS, régime obligatoire
+    - **redirections** :
+      - sources_officielles_prioritaires_v2_3 si sujet public
+    - **limites** :
+      - ne pas conclure si données insuffisantes
+      - ouvrir PDF si référence incertaine
+    - **reponse_possible** : orientation prudente, pas recommandation définitive
+    - **refus_si_donnees_manquantes** : True
+  - **emprunteur_aeras** :
+    - **besoin** : emprunteur / AERAS
+    - **questions_a_poser** :
+      - objectif client
+      - âge/statut/résidence
+      - profession
+      - budget
+      - contrats déjà détenus
+    - **contrats_candidats** :
+      - masterlife_credit
+    - **garanties_a_verifier** :
+      - assurance emprunteur
+    - **exclusions_a_verifier** :
+      - AERAS
+      - droit à l'oubli
+    - **sources_officielles_a_verifier** :
+      - selon fiscalité, résidence, caisse, AERAS, régime obligatoire
+    - **redirections** :
+      - sources_officielles_prioritaires_v2_3 si sujet public
+    - **limites** :
+      - ne pas conclure si données insuffisantes
+      - ouvrir PDF si référence incertaine
+    - **reponse_possible** : orientation prudente, pas recommandation définitive
+    - **refus_si_donnees_manquantes** : True
+  - **dependance** :
+    - **besoin** : dépendance
+    - **questions_a_poser** :
+      - objectif client
+      - âge/statut/résidence
+      - profession
+      - budget
+      - contrats déjà détenus
+    - **contrats_candidats** :
+      - entour_age
+    - **garanties_a_verifier** :
+      - dépendance contractuelle
+    - **exclusions_a_verifier** :
+      - APA officielle
+      - PDF
+    - **sources_officielles_a_verifier** :
+      - selon fiscalité, résidence, caisse, AERAS, régime obligatoire
+    - **redirections** :
+      - sources_officielles_prioritaires_v2_3 si sujet public
+    - **limites** :
+      - ne pas conclure si données insuffisantes
+      - ouvrir PDF si référence incertaine
+    - **reponse_possible** : orientation prudente, pas recommandation définitive
+    - **refus_si_donnees_manquantes** : True
+  - **profession_sante** :
+    - **besoin** : profession de santé
+    - **questions_a_poser** :
+      - objectif client
+      - âge/statut/résidence
+      - profession
+      - budget
+      - contrats déjà détenus
+    - **contrats_candidats** :
+      - avizen_pro
+    - **garanties_a_verifier** :
+      - frais professionnels
+      - IJ
+    - **exclusions_a_verifier** :
+      - caisse
+      - profession
+    - **sources_officielles_a_verifier** :
+      - selon fiscalité, résidence, caisse, AERAS, régime obligatoire
+    - **redirections** :
+      - sources_officielles_prioritaires_v2_3 si sujet public
+    - **limites** :
+      - ne pas conclure si données insuffisantes
+      - ouvrir PDF si référence incertaine
+    - **reponse_possible** : orientation prudente, pas recommandation définitive
+    - **refus_si_donnees_manquantes** : True
+  - **independant_frais_professionnels** :
+    - **besoin** : indépendant / frais professionnels
+    - **questions_a_poser** :
+      - objectif client
+      - âge/statut/résidence
+      - profession
+      - budget
+      - contrats déjà détenus
+    - **contrats_candidats** :
+      - avizen_pro
+    - **garanties_a_verifier** :
+      - IJ frais professionnels
+    - **exclusions_a_verifier** :
+      - statut TNS
+      - justificatifs
+    - **sources_officielles_a_verifier** :
+      - selon fiscalité, résidence, caisse, AERAS, régime obligatoire
+    - **redirections** :
+      - sources_officielles_prioritaires_v2_3 si sujet public
+    - **limites** :
+      - ne pas conclure si données insuffisantes
+      - ouvrir PDF si référence incertaine
+    - **reponse_possible** : orientation prudente, pas recommandation définitive
+    - **refus_si_donnees_manquantes** : True
+- **matrices_besoins_solutions** :
+  - **besoin_vers_contrats** :
+    - **protéger famille décès** :
+      - Avizen
+      - Avizen Pro
+    - **protéger revenu professionnel** :
+      - Avizen Pro
+    - **accident vie privée / étudiant** :
+      - Ma Protection Accident
+    - **obsèques** :
+      - EssenCiel
+      - EssenCiel Patrimoine
+    - **épargne enfant** :
+      - Excelium
+    - **retraite / PER** :
+      - Ma Retraite
+    - **prêt immobilier / AERAS** :
+      - MasterLife Credit
+    - **dépendance** :
+      - EntourAge
+  - **theme_officiel_vers_source** :
+    - **aeras** : https://www.aeras-infos.fr/sites/aeras/accueil.html
+    - **droit_a_l_oubli_et_grille_aeras** : https://www.aeras-infos.fr/sites/aeras/accueil.html
+    - **fiscalite_assurance_vie** : https://www.impots.gouv.fr/particulier
+    - **fiscalite_deces_succession** : https://www.impots.gouv.fr/particulier
+    - **fiscalite_per** : https://www.impots.gouv.fr/particulier
+    - **residence_fiscale_residence_etrangere_expatriation** : https://www.service-public.gouv.fr/particuliers/vosdroits/N19804
+    - **deces_a_l_etranger_expatriation** : https://www.diplomatie.gouv.fr/fr/services-aux-francaises-et-aux-francais
+    - **caisses_professionnelles_professions_liberales** : https://www.cnavpl.fr/
+    - **tns_dirigeant_president_sasu** : https://www.urssaf.fr/accueil.html
+    - **securite_sociale_ij_incapacite** : https://www.ameli.fr/assure/remboursements/indemnites-journalieres
+    - **invalidite_securite_sociale** : https://www.ameli.fr/assure/droits-demarches/invalidite-handicap/invalidite
+    - **dependance_apa** : https://www.service-public.fr/particuliers/vosdroits/N392
+    - **mineur_capacite_juridique** : https://www.service-public.fr/particuliers/vosdroits/N19804
+- **scenarios_clients** :
+  - **jeune_parent** :
+    - **donnees_necessaires** :
+      - âge
+      - résidence
+      - profession
+      - objectif
+      - budget
+      - situation familiale
+    - **contrats_a_envisager** :
+      - à déterminer par besoin via matrices_besoins_solutions
+    - **questions_a_poser** :
+      - Quel est l'objectif prioritaire ?
+      - Quelle situation professionnelle/résidence ?
+      - Y a-t-il un prêt ou un enjeu fiscal ?
+    - **risques** :
+      - source officielle nécessaire
+      - PDF incertain
+      - données client manquantes
+    - **sources_a_verifier** :
+      - PDF contractuel
+      - source officielle si thème public
+    - **reponse_conseiller_possible** : orientation prudente avec prochaines vérifications
+    - **reponse_inspecteur_possible** : liste preuves, limites, refus possibles
+    - **limites** :
+      - ne pas promettre
+      - ne pas calculer définitivement
+  - **independant** :
+    - **donnees_necessaires** :
+      - âge
+      - résidence
+      - profession
+      - objectif
+      - budget
+      - situation familiale
+    - **contrats_a_envisager** :
+      - à déterminer par besoin via matrices_besoins_solutions
+    - **questions_a_poser** :
+      - Quel est l'objectif prioritaire ?
+      - Quelle situation professionnelle/résidence ?
+      - Y a-t-il un prêt ou un enjeu fiscal ?
+    - **risques** :
+      - source officielle nécessaire
+      - PDF incertain
+      - données client manquantes
+    - **sources_a_verifier** :
+      - PDF contractuel
+      - source officielle si thème public
+    - **reponse_conseiller_possible** : orientation prudente avec prochaines vérifications
+    - **reponse_inspecteur_possible** : liste preuves, limites, refus possibles
+    - **limites** :
+      - ne pas promettre
+      - ne pas calculer définitivement
+  - **professionnel_de_sante** :
+    - **donnees_necessaires** :
+      - âge
+      - résidence
+      - profession
+      - objectif
+      - budget
+      - situation familiale
+    - **contrats_a_envisager** :
+      - à déterminer par besoin via matrices_besoins_solutions
+    - **questions_a_poser** :
+      - Quel est l'objectif prioritaire ?
+      - Quelle situation professionnelle/résidence ?
+      - Y a-t-il un prêt ou un enjeu fiscal ?
+    - **risques** :
+      - source officielle nécessaire
+      - PDF incertain
+      - données client manquantes
+    - **sources_a_verifier** :
+      - PDF contractuel
+      - source officielle si thème public
+    - **reponse_conseiller_possible** : orientation prudente avec prochaines vérifications
+    - **reponse_inspecteur_possible** : liste preuves, limites, refus possibles
+    - **limites** :
+      - ne pas promettre
+      - ne pas calculer définitivement
+  - **etudiant_a_l_etranger** :
+    - **donnees_necessaires** :
+      - âge
+      - résidence
+      - profession
+      - objectif
+      - budget
+      - situation familiale
+    - **contrats_a_envisager** :
+      - à déterminer par besoin via matrices_besoins_solutions
+    - **questions_a_poser** :
+      - Quel est l'objectif prioritaire ?
+      - Quelle situation professionnelle/résidence ?
+      - Y a-t-il un prêt ou un enjeu fiscal ?
+    - **risques** :
+      - source officielle nécessaire
+      - PDF incertain
+      - données client manquantes
+    - **sources_a_verifier** :
+      - PDF contractuel
+      - source officielle si thème public
+    - **reponse_conseiller_possible** : orientation prudente avec prochaines vérifications
+    - **reponse_inspecteur_possible** : liste preuves, limites, refus possibles
+    - **limites** :
+      - ne pas promettre
+      - ne pas calculer définitivement
+  - **senior_prevoyant_obseques** :
+    - **donnees_necessaires** :
+      - âge
+      - résidence
+      - profession
+      - objectif
+      - budget
+      - situation familiale
+    - **contrats_a_envisager** :
+      - à déterminer par besoin via matrices_besoins_solutions
+    - **questions_a_poser** :
+      - Quel est l'objectif prioritaire ?
+      - Quelle situation professionnelle/résidence ?
+      - Y a-t-il un prêt ou un enjeu fiscal ?
+    - **risques** :
+      - source officielle nécessaire
+      - PDF incertain
+      - données client manquantes
+    - **sources_a_verifier** :
+      - PDF contractuel
+      - source officielle si thème public
+    - **reponse_conseiller_possible** : orientation prudente avec prochaines vérifications
+    - **reponse_inspecteur_possible** : liste preuves, limites, refus possibles
+    - **limites** :
+      - ne pas promettre
+      - ne pas calculer définitivement
+  - **client_avec_pret_immobilier** :
+    - **donnees_necessaires** :
+      - âge
+      - résidence
+      - profession
+      - objectif
+      - budget
+      - situation familiale
+    - **contrats_a_envisager** :
+      - à déterminer par besoin via matrices_besoins_solutions
+    - **questions_a_poser** :
+      - Quel est l'objectif prioritaire ?
+      - Quelle situation professionnelle/résidence ?
+      - Y a-t-il un prêt ou un enjeu fiscal ?
+    - **risques** :
+      - source officielle nécessaire
+      - PDF incertain
+      - données client manquantes
+    - **sources_a_verifier** :
+      - PDF contractuel
+      - source officielle si thème public
+    - **reponse_conseiller_possible** : orientation prudente avec prochaines vérifications
+    - **reponse_inspecteur_possible** : liste preuves, limites, refus possibles
+    - **limites** :
+      - ne pas promettre
+      - ne pas calculer définitivement
+  - **client_avec_antecedent_de_sante** :
+    - **donnees_necessaires** :
+      - âge
+      - résidence
+      - profession
+      - objectif
+      - budget
+      - situation familiale
+    - **contrats_a_envisager** :
+      - à déterminer par besoin via matrices_besoins_solutions
+    - **questions_a_poser** :
+      - Quel est l'objectif prioritaire ?
+      - Quelle situation professionnelle/résidence ?
+      - Y a-t-il un prêt ou un enjeu fiscal ?
+    - **risques** :
+      - source officielle nécessaire
+      - PDF incertain
+      - données client manquantes
+    - **sources_a_verifier** :
+      - PDF contractuel
+      - source officielle si thème public
+    - **reponse_conseiller_possible** : orientation prudente avec prochaines vérifications
+    - **reponse_inspecteur_possible** : liste preuves, limites, refus possibles
+    - **limites** :
+      - ne pas promettre
+      - ne pas calculer définitivement
+  - **client_expatrie** :
+    - **donnees_necessaires** :
+      - âge
+      - résidence
+      - profession
+      - objectif
+      - budget
+      - situation familiale
+    - **contrats_a_envisager** :
+      - à déterminer par besoin via matrices_besoins_solutions
+    - **questions_a_poser** :
+      - Quel est l'objectif prioritaire ?
+      - Quelle situation professionnelle/résidence ?
+      - Y a-t-il un prêt ou un enjeu fiscal ?
+    - **risques** :
+      - source officielle nécessaire
+      - PDF incertain
+      - données client manquantes
+    - **sources_a_verifier** :
+      - PDF contractuel
+      - source officielle si thème public
+    - **reponse_conseiller_possible** : orientation prudente avec prochaines vérifications
+    - **reponse_inspecteur_possible** : liste preuves, limites, refus possibles
+    - **limites** :
+      - ne pas promettre
+      - ne pas calculer définitivement
+  - **client_voulant_preparer_retraite** :
+    - **donnees_necessaires** :
+      - âge
+      - résidence
+      - profession
+      - objectif
+      - budget
+      - situation familiale
+    - **contrats_a_envisager** :
+      - à déterminer par besoin via matrices_besoins_solutions
+    - **questions_a_poser** :
+      - Quel est l'objectif prioritaire ?
+      - Quelle situation professionnelle/résidence ?
+      - Y a-t-il un prêt ou un enjeu fiscal ?
+    - **risques** :
+      - source officielle nécessaire
+      - PDF incertain
+      - données client manquantes
+    - **sources_a_verifier** :
+      - PDF contractuel
+      - source officielle si thème public
+    - **reponse_conseiller_possible** : orientation prudente avec prochaines vérifications
+    - **reponse_inspecteur_possible** : liste preuves, limites, refus possibles
+    - **limites** :
+      - ne pas promettre
+      - ne pas calculer définitivement
+  - **client_voulant_transmettre_a_ses_enfants** :
+    - **donnees_necessaires** :
+      - âge
+      - résidence
+      - profession
+      - objectif
+      - budget
+      - situation familiale
+    - **contrats_a_envisager** :
+      - à déterminer par besoin via matrices_besoins_solutions
+    - **questions_a_poser** :
+      - Quel est l'objectif prioritaire ?
+      - Quelle situation professionnelle/résidence ?
+      - Y a-t-il un prêt ou un enjeu fiscal ?
+    - **risques** :
+      - source officielle nécessaire
+      - PDF incertain
+      - données client manquantes
+    - **sources_a_verifier** :
+      - PDF contractuel
+      - source officielle si thème public
+    - **reponse_conseiller_possible** : orientation prudente avec prochaines vérifications
+    - **reponse_inspecteur_possible** : liste preuves, limites, refus possibles
+    - **limites** :
+      - ne pas promettre
+      - ne pas calculer définitivement
+- **comparaisons_avancees** :
+  - **avizen_vs_avizen_pro** :
+    - **objectif** : Avizen vs Avizen Pro
+    - **contrats** :
+      - avizen
+      - avizen_pro
+    - **quand_utiliser** : quand le besoin client correspond aux objectifs comparés
+    - **quand_ne_pas_utiliser** : si profil ou besoin insuffisant
+    - **garanties_centrales** :
+      - à vérifier dans contrats_axa
+    - **exclusions** :
+      - à vérifier dans PDF
+    - **conditions** :
+      - à vérifier dans contrat canonique
+    - **sources** :
+      - PDF contractuel
+      - source officielle si sujet public
+    - **pieges** :
+      - ne pas désigner meilleur sans critères
+      - ne pas mélanger source officielle et clause AXA
+    - **reponse_prudente** : présenter différences utiles et vérifications nécessaires
+  - **essenciel_vs_essenciel_patrimoine** :
+    - **objectif** : EssenCiel vs EssenCiel Patrimoine
+    - **contrats** :
+      - essenciel
+      - essen_ciel_patrimoine
+    - **quand_utiliser** : quand le besoin client correspond aux objectifs comparés
+    - **quand_ne_pas_utiliser** : si profil ou besoin insuffisant
+    - **garanties_centrales** :
+      - à vérifier dans contrats_axa
+    - **exclusions** :
+      - à vérifier dans PDF
+    - **conditions** :
+      - à vérifier dans contrat canonique
+    - **sources** :
+      - PDF contractuel
+      - source officielle si sujet public
+    - **pieges** :
+      - ne pas désigner meilleur sans critères
+      - ne pas mélanger source officielle et clause AXA
+    - **reponse_prudente** : présenter différences utiles et vérifications nécessaires
+  - **excelium_vs_ma_retraite** :
+    - **objectif** : Excelium vs Ma Retraite
+    - **contrats** :
+      - excelium
+      - ma_retraite
+    - **quand_utiliser** : quand le besoin client correspond aux objectifs comparés
+    - **quand_ne_pas_utiliser** : si profil ou besoin insuffisant
+    - **garanties_centrales** :
+      - à vérifier dans contrats_axa
+    - **exclusions** :
+      - à vérifier dans PDF
+    - **conditions** :
+      - à vérifier dans contrat canonique
+    - **sources** :
+      - PDF contractuel
+      - source officielle si sujet public
+    - **pieges** :
+      - ne pas désigner meilleur sans critères
+      - ne pas mélanger source officielle et clause AXA
+    - **reponse_prudente** : présenter différences utiles et vérifications nécessaires
+  - **ma_protection_accident_vs_prevoyance_deces_invalidite** :
+    - **objectif** : Ma Protection Accident vs prévoyance décès/invalidité
+    - **contrats** :
+      - ma_protection_accident
+      - avizen
+      - avizen_pro
+    - **quand_utiliser** : quand le besoin client correspond aux objectifs comparés
+    - **quand_ne_pas_utiliser** : si profil ou besoin insuffisant
+    - **garanties_centrales** :
+      - à vérifier dans contrats_axa
+    - **exclusions** :
+      - à vérifier dans PDF
+    - **conditions** :
+      - à vérifier dans contrat canonique
+    - **sources** :
+      - PDF contractuel
+      - source officielle si sujet public
+    - **pieges** :
+      - ne pas désigner meilleur sans critères
+      - ne pas mélanger source officielle et clause AXA
+    - **reponse_prudente** : présenter différences utiles et vérifications nécessaires
+  - **masterlife_credit_vs_prevoyance_classique** :
+    - **objectif** : MasterLife Credit vs prévoyance classique
+    - **contrats** :
+      - masterlife_credit
+      - avizen
+      - avizen_pro
+    - **quand_utiliser** : quand le besoin client correspond aux objectifs comparés
+    - **quand_ne_pas_utiliser** : si profil ou besoin insuffisant
+    - **garanties_centrales** :
+      - à vérifier dans contrats_axa
+    - **exclusions** :
+      - à vérifier dans PDF
+    - **conditions** :
+      - à vérifier dans contrat canonique
+    - **sources** :
+      - PDF contractuel
+      - source officielle si sujet public
+    - **pieges** :
+      - ne pas désigner meilleur sans critères
+      - ne pas mélanger source officielle et clause AXA
+    - **reponse_prudente** : présenter différences utiles et vérifications nécessaires
+  - **entourage_vs_sources_officielles_dependance_apa** :
+    - **objectif** : EntourAge vs sources officielles dépendance / APA
+    - **contrats** :
+      - entour_age
+    - **quand_utiliser** : quand le besoin client correspond aux objectifs comparés
+    - **quand_ne_pas_utiliser** : si profil ou besoin insuffisant
+    - **garanties_centrales** :
+      - à vérifier dans contrats_axa
+    - **exclusions** :
+      - à vérifier dans PDF
+    - **conditions** :
+      - à vérifier dans contrat canonique
+    - **sources** :
+      - PDF contractuel
+      - source officielle si sujet public
+    - **pieges** :
+      - ne pas désigner meilleur sans critères
+      - ne pas mélanger source officielle et clause AXA
+    - **reponse_prudente** : présenter différences utiles et vérifications nécessaires
+- **croisements_contrat_source_officielle** :
+  - **regle_generale** : Le contrat AXA dit ce qu'AXA couvre; la source officielle dit le cadre public. Ne jamais mélanger les deux.
+  - **croisements** :
+    - contrat AXA + fiscalité
+    - contrat AXA + succession
+    - contrat AXA + résidence étrangère
+    - contrat AXA + régime obligatoire
+    - contrat AXA + AERAS
+    - contrat AXA + profession/caisse
+    - contrat AXA + invalidité Sécurité sociale
+    - contrat AXA + IJ
+    - contrat AXA + mineur
+- **protocoles_recherche_approfondie** :
+  - **contrat** :
+    - index_navigation_compact
+    - contrat canonique
+    - références PDF
+    - PDF si incertain
+  - **source_officielle** :
+    - sources_officielles_prioritaires_v2_3
+    - redirection officielle
+    - refus si non vérifiée
+  - **mixte** :
+    - contrat
+    - source officielle
+    - ne pas fusionner les statuts
+  - **source_absente** :
+    - recherche_externe_controlee
+    - paliers
+    - refus si seuil insuffisant
+  - **pdf_incertain** :
+    - annoncer incertitude
+    - ouvrir PDF
+    - validation humaine
+  - **client_incomplet** :
+    - demander données
+    - ne pas recommander
+- **regles_arbitrage** :
+  - Prioriser le contrat le plus directement lié au besoin.
+  - Ne pas recommander si profil incomplet.
+  - Ne pas promettre prise en charge.
+  - Présenter les options comme options.
+  - Distinguer protection, épargne, fiscalité et succession.
+  - Toujours dire ce qui manque pour conclure.
+- **modeles_reponse_complexe** :
+  - **conseiller_court** : A ce stade, je peux vous orienter vers [piste], mais je dois vérifier [PDF/source] avant de conclure.
+  - **conseiller_complete** : Besoin identifié, contrats candidats, preuves, limites, données manquantes, prochaine vérification.
+  - **inspecteur** : Contrat, clause/source, page/statut, source officielle, risque, refus éventuel.
+  - **refus** : Je ne peux pas conclure de façon fiable sans [donnée/source/PDF].
+  - **multi_contrats** : Comparer les pistes selon besoin, exclusions, conditions, sources officielles et données manquantes.
+- **limites_et_refus_complexes** :
+  - Refuser si profil client incomplet.
+  - Refuser si source officielle nécessaire non vérifiée.
+  - Refuser si PDF incertain sur sujet sensible.
+  - Demander validation inspecteur en cas de contradiction ou enjeu fiscal/social.
+
+### matrices_croisement_avance
+
+- **besoin_client_vers_contrats** :
+  - **deces_famille** :
+    - **entree** : protéger famille en cas de décès
+    - **criteres** :
+      - famille
+      - capital/rente
+      - enfants
+    - **contrats_ou_sources_concernes** :
+      - avizen
+      - avizen_pro
+      - excelium
+    - **donnees_a_verifier** :
+      - garantie souscrite
+      - bénéficiaires
+    - **limite** : pas de meilleur contrat sans critères
+    - **action_recommandee** : ouvrir dossier protection_famille_deces
+    - **niveau_de_prudence** : élevé
+  - **revenus_pro** :
+    - **entree** : protéger revenus/frais pro
+    - **criteres** :
+      - profession
+      - statut
+      - frais
+    - **contrats_ou_sources_concernes** :
+      - avizen_pro
+    - **donnees_a_verifier** :
+      - activité
+      - franchise
+      - frais
+    - **limite** : barème et exclusions à vérifier
+    - **action_recommandee** : ouvrir dossier prevoyance_professionnel
+    - **niveau_de_prudence** : maximal
+  - **emprunteur_sante** :
+    - **entree** : assurance emprunteur avec santé
+    - **criteres** :
+      - prêt
+      - garanties
+      - AERAS
+    - **contrats_ou_sources_concernes** :
+      - masterlife_credit
+      - aeras-infos.fr
+    - **donnees_a_verifier** :
+      - prêt
+      - quotité
+      - source AERAS
+    - **limite** : aucune promesse d'acceptation
+    - **action_recommandee** : ouvrir dossier emprunteur_aeras_sante
+    - **niveau_de_prudence** : maximal
+- **profil_client_vers_questions** :
+  - **independant** :
+    - **entree** : indépendant
+    - **criteres** :
+      - statut
+      - revenus
+      - frais
+    - **contrats_ou_sources_concernes** :
+      - avizen_pro
+      - urssaf.fr
+    - **donnees_a_verifier** :
+      - profession
+      - caisse
+      - activité
+    - **limite** : ne pas deviner régime
+    - **action_recommandee** : demander statut/caisse/profession
+    - **niveau_de_prudence** : maximal
+  - **mineur** :
+    - **entree** : mineur
+    - **criteres** :
+      - représentant légal
+      - objectif
+    - **contrats_ou_sources_concernes** :
+      - excelium
+      - service-public.fr
+    - **donnees_a_verifier** :
+      - âge
+      - représentant
+    - **limite** : capacité juridique à vérifier
+    - **action_recommandee** : ouvrir source officielle
+    - **niveau_de_prudence** : maximal
+- **contrat_vers_sources_officielles** :
+  - **masterlife_credit** :
+    - **entree** : MasterLife Credit
+    - **criteres** :
+      - AERAS
+      - emprunteur
+    - **contrats_ou_sources_concernes** :
+      - aeras-infos.fr
+    - **donnees_a_verifier** :
+      - santé/prêt/garantie
+    - **limite** : source officielle séparée
+    - **action_recommandee** : ne pas promettre acceptation
+    - **niveau_de_prudence** : maximal
+  - **ma_retraite** :
+    - **entree** : Ma Retraite
+    - **criteres** :
+      - PER
+      - fiscalité
+    - **contrats_ou_sources_concernes** :
+      - impots.gouv.fr
+    - **donnees_a_verifier** :
+      - plafond
+      - TMI
+      - sortie
+    - **limite** : pas de calcul définitif
+    - **action_recommandee** : demander données fiscales
+    - **niveau_de_prudence** : maximal
+- **contrat_vers_risques** :
+  - **avizen_pro** :
+    - **entree** : Avizen Pro
+    - **criteres** :
+      - invalidité
+      - frais pro
+    - **contrats_ou_sources_concernes** :
+      - PDF Avizen Pro
+    - **donnees_a_verifier** :
+      - barème
+      - profession
+      - activité
+    - **limite** : risque taux officiel vs AXA
+    - **action_recommandee** : ouvrir PDF/barème
+    - **niveau_de_prudence** : maximal
+  - **essenciel** :
+    - **entree** : EssenCiel
+    - **criteres** :
+      - obsèques
+      - étranger
+    - **contrats_ou_sources_concernes** :
+      - PDF EssenCiel
+      - diplomatie.gouv.fr
+    - **donnees_a_verifier** :
+      - pays
+      - assistance
+    - **limite** : ne pas garantir frais totaux
+    - **action_recommandee** : séparer capital/assistance
+    - **niveau_de_prudence** : élevé
+- **question_vers_refus** :
+  - **promesse** :
+    - **entree** : promesse d'indemnisation/acceptation
+    - **criteres** :
+      - certitude demandée
+    - **contrats_ou_sources_concernes** :
+      - contrat
+      - source officielle
+    - **donnees_a_verifier** :
+      - preuve
+      - données client
+    - **limite** : refus obligatoire si preuve manque
+    - **action_recommandee** : refus prudent
+    - **niveau_de_prudence** : maximal
+  - **calcul** :
+    - **entree** : calcul fiscal/succession
+    - **criteres** :
+      - montant exact
+    - **contrats_ou_sources_concernes** :
+      - impots.gouv.fr
+    - **donnees_a_verifier** :
+      - données fiscales
+    - **limite** : calcul personnalisé interdit
+    - **action_recommandee** : demander données et source
+    - **niveau_de_prudence** : maximal
+- **situation_vers_validation_humaine** :
+  - **pdf_incertain** :
+    - **entree** : page PDF incertaine
+    - **criteres** :
+      - clause sensible
+    - **contrats_ou_sources_concernes** :
+      - PDF AXA
+    - **donnees_a_verifier** :
+      - page
+      - extrait
+    - **limite** : ne pas citer comme certain
+    - **action_recommandee** : ouvrir PDF
+    - **niveau_de_prudence** : maximal
+  - **source_redirigee** :
+    - **entree** : source officielle redirigée
+    - **criteres** :
+      - règle publique
+    - **contrats_ou_sources_concernes** :
+      - site officiel
+    - **donnees_a_verifier** :
+      - date
+      - contenu
+    - **limite** : redirection non suffisante
+    - **action_recommandee** : consulter source
+    - **niveau_de_prudence** : maximal
+- **multi_contrats_compatibilite** :
+  - **deces_epargne** :
+    - **entree** : décès + épargne enfant
+    - **criteres** :
+      - besoin principal
+      - horizon
+    - **contrats_ou_sources_concernes** :
+      - avizen
+      - excelium
+    - **donnees_a_verifier** :
+      - bénéficiaires
+      - objectif
+    - **limite** : ne pas fusionner garanties
+    - **action_recommandee** : comparer fonctions
+    - **niveau_de_prudence** : élevé
+  - **obseques_transmission** :
+    - **entree** : obsèques + transmission
+    - **criteres** :
+      - frais
+      - patrimoine
+    - **contrats_ou_sources_concernes** :
+      - essenciel
+      - essen_ciel_patrimoine
+    - **donnees_a_verifier** :
+      - capital
+      - bénéficiaire
+    - **limite** : ne pas assimiler contrats
+    - **action_recommandee** : ouvrir deux notices
+    - **niveau_de_prudence** : élevé
+- **contrats_a_ne_pas_confondre** :
+  - **essenciel_vs_essenciel_patrimoine** :
+    - **entree** : EssenCiel vs EssenCiel Patrimoine
+    - **criteres** :
+      - obsèques
+      - transmission
+    - **contrats_ou_sources_concernes** :
+      - essenciel
+      - essen_ciel_patrimoine
+    - **donnees_a_verifier** :
+      - objectif
+    - **limite** : natures différentes
+    - **action_recommandee** : expliquer différence
+    - **niveau_de_prudence** : élevé
+  - **avizen_vs_masterlife** :
+    - **entree** : Prévoyance vs emprunteur
+    - **criteres** :
+      - famille
+      - prêt
+    - **contrats_ou_sources_concernes** :
+      - avizen
+      - masterlife_credit
+    - **donnees_a_verifier** :
+      - besoin
+      - prêt
+    - **limite** : finalités différentes
+    - **action_recommandee** : comparer selon objectif
+    - **niveau_de_prudence** : élevé
+
+### profils_reponse
+
+- **conseiller_terrain** :
+  - **objectif** : donner une réponse courte, actionnable et vérifiable au conseiller
+  - **niveau_de_detail** : court
+  - **niveau_de_prudence** : élevé
+  - **sources_a_citer** :
+    - contrat
+    - PDF/page si disponible
+    - limite si page incertaine
+  - **structure_reponse** :
+    - réponse en 3 points
+    - à vérifier
+    - données client manquantes
+    - action suivante
+  - **a_eviter** :
+    - long développement juridique
+    - promesse client
+    - comparaison sans besoin
+  - **validation_humaine_si** :
+    - page PDF incertaine, introuvable ou probable sur sujet sensible
+    - source officielle seulement redirigée ou absente
+    - calcul personnalisé, fiscalité, résidence, AERAS, santé, caisse professionnelle
+  - **exemple_reponse** : À ce stade, ouvrir la notice Avizen et vérifier la garantie souscrite. Si la page est certaine, citer PDF + page ; sinon réponse interne seulement.
+  - **exemple_refus** : Je ne peux pas conclure sans la garantie souscrite et la page PDF : il faut ouvrir la notice avant réponse client.
+- **animateur** :
+  - **objectif** : aider un conseiller à comprendre le raisonnement et les pièges
+  - **niveau_de_detail** : moyen
+  - **niveau_de_prudence** : élevé
+  - **sources_a_citer** :
+    - contrat
+    - règle transverse
+    - source officielle si sujet public
+  - **structure_reponse** :
+    - raisonnement
+    - pièges
+    - questions à poser
+    - formulation conseillée
+  - **a_eviter** :
+    - faire à la place du conseiller une conclusion non sourcée
+    - réduire les garde-fous
+  - **validation_humaine_si** :
+    - page PDF incertaine, introuvable ou probable sur sujet sensible
+    - source officielle seulement redirigée ou absente
+    - calcul personnalisé, fiscalité, résidence, AERAS, santé, caisse professionnelle
+  - **exemple_reponse** : Explique au conseiller pourquoi il faut distinguer invalidité AXA et invalidité Sécurité sociale, puis liste les preuves à ouvrir.
+  - **exemple_refus** : Ne valide pas la réponse : la source officielle ou la page contractuelle manque.
+- **inspecteur** :
+  - **objectif** : fournir une réponse traçable et audit-ready
+  - **niveau_de_detail** : détaillé
+  - **niveau_de_prudence** : maximal
+  - **sources_a_citer** :
+    - contrat
+    - PDF
+    - page
+    - section/article
+    - source officielle
+    - statut de confiance
+    - limites
+  - **structure_reponse** :
+    - fait vérifié
+    - preuve contractuelle
+    - preuve officielle
+    - limites
+    - risque de confusion
+    - décision possible
+  - **a_eviter** :
+    - résumé commercial
+    - source implicite
+    - page non vérifiée citée comme certaine
+  - **validation_humaine_si** :
+    - page PDF incertaine, introuvable ou probable sur sujet sensible
+    - source officielle seulement redirigée ou absente
+    - calcul personnalisé, fiscalité, résidence, AERAS, santé, caisse professionnelle
+  - **exemple_reponse** : Contrat : Avizen Pro. Fait : invalidité. Preuve : PDF/page si certaine. Limite : barème à ouvrir si statut incertain. Risque : confondre taux fonctionnel et professionnel.
+  - **exemple_refus** : Réponse inspecteur impossible à valider : page PDF ou source officielle insuffisante.
+- **fonction_support** :
+  - **objectif** : diagnostiquer un blocage et proposer une action
+  - **niveau_de_detail** : structuré
+  - **niveau_de_prudence** : maximal
+  - **sources_a_citer** :
+    - source du blocage
+    - contrat/PDF
+    - source officielle éventuelle
+    - statut
+  - **structure_reponse** :
+    - diagnostic
+    - source
+    - décision possible
+    - blocage
+    - action recommandée
+  - **a_eviter** :
+    - réponse client directe
+    - avis juridique/fiscal définitif
+  - **validation_humaine_si** :
+    - page PDF incertaine, introuvable ou probable sur sujet sensible
+    - source officielle seulement redirigée ou absente
+    - calcul personnalisé, fiscalité, résidence, AERAS, santé, caisse professionnelle
+  - **exemple_reponse** : Diagnostic : source officielle manquante. Décision : pas de réponse client. Action : consulter impots.gouv.fr et intégrer la référence validée si nécessaire.
+  - **exemple_refus** : Support : blocage maintenu, source officielle absente ou non datée.
+- **client** :
+  - **objectif** : répondre simplement après vérification, sans jargon ni surpromesse
+  - **niveau_de_detail** : court
+  - **niveau_de_prudence** : maximal
+  - **sources_a_citer** :
+    - source citée brièvement si utile
+    - mention de vérification
+  - **structure_reponse** :
+    - réponse simple
+    - condition ou limite
+    - prochaine étape
+  - **a_eviter** :
+    - page technique détaillée
+    - certitude juridique
+    - promesse d'indemnisation
+  - **validation_humaine_si** :
+    - page PDF incertaine, introuvable ou probable sur sujet sensible
+    - source officielle seulement redirigée ou absente
+    - calcul personnalisé, fiscalité, résidence, AERAS, santé, caisse professionnelle
+  - **exemple_reponse** : Sous réserve de vérification de votre notice et des garanties souscrites, ce point peut être couvert dans certains cas. Je vérifie la clause avant de vous confirmer.
+  - **exemple_refus** : Je ne peux pas vous le confirmer sans vérifier la notice et votre situation précise.
+- **audit** :
+  - **objectif** : contrôler cohérence, preuves et risques de régression
+  - **niveau_de_detail** : technique
+  - **niveau_de_prudence** : maximal
+  - **sources_a_citer** :
+    - chemin JSON
+    - contrat
+    - PDF/page
+    - statut
+    - source officielle
+  - **structure_reponse** :
+    - constat
+    - preuve
+    - écart
+    - risque
+    - correction
+  - **a_eviter** :
+    - formulation client
+    - simplification non prouvée
+  - **validation_humaine_si** :
+    - page PDF incertaine, introuvable ou probable sur sujet sensible
+    - source officielle seulement redirigée ou absente
+    - calcul personnalisé, fiscalité, résidence, AERAS, santé, caisse professionnelle
+  - **exemple_reponse** : Écart : statut incertain conservé. Risque : citation page. Correction : validation_humaine_obligatoire + ouvrir_pdf_avant_reponse.
+  - **exemple_refus** : Audit non validable : preuve primaire absente.
+- **refus_prudent** :
+  - **objectif** : refuser utilement sans bloquer le conseiller
+  - **niveau_de_detail** : court à moyen
+  - **niveau_de_prudence** : maximal
+  - **sources_a_citer** :
+    - raison du refus
+    - source manquante
+    - action de vérification
+  - **structure_reponse** :
+    - ce que je ne peux pas conclure
+    - pourquoi
+    - ce qu'il faut vérifier
+    - réponse possible après vérification
+  - **a_eviter** :
+    - refus sec sans action
+    - inventer une alternative
+    - déduire une clause
+  - **validation_humaine_si** :
+    - page PDF incertaine, introuvable ou probable sur sujet sensible
+    - source officielle seulement redirigée ou absente
+    - calcul personnalisé, fiscalité, résidence, AERAS, santé, caisse professionnelle
+  - **exemple_reponse** : Je ne peux pas conclure car la page PDF est introuvable. Ouvrir la notice et vérifier la clause avant toute réponse client.
+  - **exemple_refus** : Refus : source insuffisante pour répondre de façon fiable.
+
+### tests_minimum_et_criteres_eliminatoires
+
+- **blocs** :
+  - **deplace_vers_archive** : True
+  - **archive_ref** : AXA_ARCHIVE_BLOCS_SOURCES_CONSOLIDES_v3.0.json
+  - **nombre_entrees** : 11
+  - **taille_originale_octets** : 309675
+  - **description** : Blocs bruts d'ingestion/consolidation (hash, statut de parsing, contenu source integral, y compris profils de test fictifs). Materiel de construction, pas de reponse client. Deplace hors runtime, conserve integralement dans le fichier atelier reference ci-dessus.
+
+### trous_connus_et_limites
+
+- **principes** :
+  - Les pages introuvables sont signalees explicitement.
+  - Les contradictions ne sont pas fusionnees.
+  - Les calculs personnalises ne sont pas definitifs.
+- **references_pdf_a_verifier** :
+  - **deplace_vers_archive** : True
+  - **archive_ref** : AXA_ARCHIVE_AUDIT_TRAIL_REFERENCES_PDF_A_VERIFIER_v3.0.json
+  - **nombre_entrees** : 4951
+  - **taille_originale_octets** : 4520619
+  - **description** : Trace d'audit historique (lots de fiabilisation v2.9.x : promotions, verifications automatisees, heritages de statut). Ne sert pas a repondre au client, sert a la tracabilite et a la reconstruction d'audit. Deplacee hors runtime, conservee integralement dans le fichier atelier reference ci-dessus.
+- **actualisation_v2_3** :
+  - **references_critiques_apres** :
+    - **total** : 413
+    - **incertain** : 229
+    - **pdf_vide** : 224
+    - **validation_humaine** : 229
+    - **certain** : 184
+    - **page_vide** : 5
+  - **validation_humaine_obligatoire** : Tous les statuts incertain, introuvable ou page_a_verifier sur sujet sensible.
+  - **sources_officielles_a_consulter** :
+    - AERAS
+    - droit à l'oubli et grille AERAS
+    - fiscalité assurance vie
+    - fiscalité décès / succession
+    - fiscalité PER
+    - résidence fiscale / résidence étrangère / expatriation
+    - décès à l'étranger / expatriation
+    - caisses professionnelles / professions libérales
+    - TNS / dirigeant / président SASU
+    - Sécurité sociale IJ / incapacité
+    - invalidité Sécurité sociale
+    - dépendance / APA
+    - mineur / capacité juridique

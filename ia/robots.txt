@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gabuz22.github.io/AXA/ia/sitemap-ia.xml
