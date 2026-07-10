@@ -1,6 +1,6 @@
 # Gabriel AXA — Vue IA
 
-> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v1.2.0).
+> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v2.1.0).
 > Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
 
 **Objectif.** Point d'entrée de la couche IA : commencer ici, puis naviguer.
@@ -9,8 +9,14 @@
 
 **Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
 
-## Commencer (pour une IA)
-- **[Guide IA](guide-ia.html)** — comment utiliser Gabriel AXA (règles, arbitrage, absence, liens).
+## Pour toute IA (ChatGPT, Claude, Gemini, Copilot, Mistral, DeepSeek, Qwen…)
+Un conseiller t'a demandé d'utiliser Gabriel AXA. Procède dans cet ordre, sans rien demander de plus :
+- **1. Lis les [Instructions maîtres](instructions-maitres.html)** — le protocole complet à appliquer avant de répondre.
+- **2. Utilise les outils nécessaires** — routage, concepts, comparateur, matrices, preuves, couverture, méthode, sources officielles.
+- **3. Réponds** — en citant contrat + notice + page, en distinguant contractuel et réglementaire, en signalant toute absence.
+
+## Repères (pour approfondir)
+- **[Guide IA](guide-ia.html)** — comment naviguer la Vue IA (règles, arbitrage, absence, liens).
 - **[Outils IA](outils.html)** — planificateur, concepts, couverture, comparateur, preuves, méthode.
 - **[Manifeste IA](manifeste.html)** — organisation, citation, hiérarchie, autorité.
 

@@ -75,7 +75,7 @@ async function accueil(body) {
       ${tile("⚖️", "Comparateur", "#/comparateur", "deux contrats côte à côte")}
       ${tile("📖", "Glossaire", "#/glossaire", "les termes AXA définis, sourcés")}
       ${tile("🧠", "Copilote de réponse", "#/copilote", "preuve + raisonnement, sourcé")}
-      ${tile("🤖", "Utiliser avec une IA", "#/assistants", "colle l'adresse à ChatGPT · Claude · Gemini")}
+      ${tile("🤖", "Utiliser avec une IA", "#/assistants", "un mini-prompt à coller dans ton IA")}
       ${tile("📄", "Notices PDF", "#/pdf", "la source qui fait foi")}
     </div>
     ${stats ? `<h3 class="day-h">Base de connaissances</h3>
@@ -101,7 +101,7 @@ const PP_FAQ = [
   ["Est-ce que ça contient des données client ?", "Non. Aucune donnée client n'est stockée. Les documents embarqués proviennent de sources publiques (notices d'information, conditions générales)."],
   ["Puis-je répondre à un client à partir d'un résultat ?", "Le résultat vous oriente et cite sa source. Avant toute réponse ferme, vérifiez la notice PDF à la page indiquée : c'est elle qui fait foi."],
   ["Comment chercher efficacement ?", "Tapez en langage naturel (« le décès accidentel est-il couvert ? »). Les synonymes métier sont tolérés. Filtrez ensuite par type (garantie, exclusion, définition…)."],
-  ["C'est quoi Pack A et Pack B ?", "Pack A = les données contractuelles qui font foi. Pack B = une aide au raisonnement (jamais une preuve seule). Voir « Utiliser avec une IA »."],
+  ["Comment utiliser Gabriel AXA avec une IA ?", "Ouvrez « Utiliser avec une IA », copiez le mini-prompt et collez-le dans votre assistant (ChatGPT, Claude, Gemini…). L'IA découvre seule Gabriel AXA, applique ses instructions et répond en citant ses sources."],
   ["Ça marche sur mobile ?", "Oui, l'interface est responsive. La recherche et les fiches sont utilisables sur téléphone."],
 ];
 async function premiers_pas(body) {
@@ -175,56 +175,65 @@ async function confiance(body) {
       <div class="btns"><a class="btn gold" href="#/recherche">🔎 Essayer une recherche</a><a class="btn ghost" href="#/pdf">📄 Voir les notices</a></div></div>`;
 }
 
-/* ---------- Utiliser avec une IA (coller l'adresse de la Vue IA) ---------- */
+/* ---------- Utiliser avec une IA (protocole : donner Gabriel AXA à son IA) ---------- */
 const IA_URL = "https://gabuz22.github.io/AXA/ia/";
-const IA_PROMPTS = [
-  ["Question simple, sourcée",
-    `Tu es un assistant pour un conseiller AXA. Utilise UNIQUEMENT la base documentaire publique ici : ${IA_URL} (pages lisibles sans exécuter de code). Réponds en citant la notice et la page. N'invente rien ; si l'information est absente, dis-le. La notice PDF fait foi.\n\nMa question : `],
-  ["Comparaison entre contrats",
-    `À partir de la base ${IA_URL} — compare les contrats que je nomme sur le sujet indiqué. Pour chaque contrat : définition, garantie, exclusions, conditions, source (notice + page). Signale les données absentes. Ne conclus pas au-delà des sources.\n\nContrats et sujet : `],
-  ["Question réglementaire",
-    `À partir de ${IA_URL} — distingue ce qui vient du contrat (sourcé notice) et ce qui relève d'une réglementation évolutive. Si c'est réglementaire (fiscalité, retraite, succession…), signale-le et renvoie aux sources officielles listées ; ne donne aucun chiffre non vérifié.\n\nMa question : `],
-];
+const IA_INSTRUCTIONS_URL = IA_URL + "instructions-maitres.html";
+const IA_TXT_REL = "../ia/instructions-maitres.txt"; // même origine (app et /ia servis sous /AXA/)
+// Mini-prompt : le SEUL texte que le conseiller manipule. L'IA découvre et applique seule Gabriel AXA.
+const MINI_PROMPT = `Utilise Gabriel AXA :
+${IA_INSTRUCTIONS_URL}
+
+Lis d'abord ces instructions destinées aux IA, applique-les, puis réponds.
+
+Ma question : `;
+
 async function assistants(body) {
   body.innerHTML = `
-    <p class="lead">Gabriel AXA ne branche aucune IA. Mais tu peux donner <b>toute sa base documentaire</b> à ton assistant
-    (ChatGPT, Claude, Gemini…) en <b>collant une seule adresse</b>. Plus besoin de télécharger de fichiers.</p>
+    <p class="lead">Tu n'as rien à apprendre de Gabriel AXA : tu le <b>donnes à ton IA</b>. Copie ces quelques lignes,
+    colle-les dans ton assistant, puis pose tes questions normalement. <b>L'IA découvre seule Gabriel AXA</b>,
+    lit ses instructions et choisit le bon parcours pour te répondre — sources à l'appui.</p>
 
+    <h3 class="day-h">Étape 1 · Copiez ces instructions</h3>
     <div class="card">
-      <div class="fiche-retenir-h">L'adresse à coller à ton IA</div>
-      <div class="btns" style="align-items:center">
-        <code style="font-size:14px;padding:5px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2)">${IA_URL}</code>
-        <button class="btn gold" id="ia_copy">📋 Copier l'adresse</button>
-        <a class="btn ghost" href="${IA_URL}" target="_blank" rel="noopener">↗ Ouvrir</a>
-      </div>
-      <p class="muted" style="margin-top:8px">Colle cette adresse dans ta conversation, puis pose ta question. L'IA y trouve
-      les contrats, garanties, exclusions, définitions, sources et une méthode pour répondre sans inventer.</p>
+      <pre class="prompt" style="white-space:pre-wrap;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:12px;font-size:13px;margin:0 0 10px">${esc(MINI_PROMPT)}</pre>
+      <div class="btns"><button class="btn gold" id="mini_copy">📋 Copier les instructions</button></div>
     </div>
 
-    <h3 class="day-h">Démarrer en moins de 2 minutes</h3>
-    <div class="grid kpis">
-      <div class="tile"><span class="tile-l">1 · Ouvre ton IA</span><span class="tile-s">ChatGPT, Claude, Gemini, Mistral, Copilot… une IA capable de lire une page web.</span></div>
-      <div class="tile"><span class="tile-l">2 · Colle l'adresse</span><span class="tile-s">${IA_URL}</span></div>
-      <div class="tile"><span class="tile-l">3 · Pose ta question</span><span class="tile-s">« Compare l'invalidité entre Avizen Pro et MasterLife, avec les sources. »</span></div>
-    </div>
+    <h3 class="day-h">Étape 2 · Ouvrez votre IA</h3>
+    <div class="filters">${["ChatGPT", "Claude", "Gemini", "Copilot", "Mistral", "DeepSeek", "Qwen"].map(n => `<span class="chip">${n}</span>`).join("")}</div>
+    <p class="muted" style="margin-top:6px">N'importe quelle IA capable de lire une page web convient. Le protocole ne dépend d'aucune d'elles.</p>
 
-    <h3 class="day-h">Pourquoi c'est mieux que télécharger des fichiers</h3>
-    <ul class="hlist">
-      <li><b>Toujours à jour</b> : l'IA lit la version en ligne, jamais un fichier périmé.</li>
-      <li><b>Rien à gérer</b> : aucune pièce jointe, aucun JSON, aucune clé.</li>
-      <li><b>Déjà structuré</b> : contrats, catégories, concepts, sources, méthode — pensés pour une IA.</li>
-      <li><b>Sourcé</b> : chaque élément renvoie à sa notice et sa page.</li>
-    </ul>
+    <h3 class="day-h">Étape 3 · Collez les instructions</h3>
+    <p class="muted">Dans une <b>nouvelle conversation</b>, collez ce que vous venez de copier.</p>
 
-    <h3 class="day-h">Prompts prêts à copier</h3>
-    ${IA_PROMPTS.map((p, i) => `<article class="card"><div class="card-h"><strong>${esc(p[0])}</strong>
-      <button class="btn ghost" data-p="${i}" style="min-height:30px;padding:0 10px;margin-left:auto">📋 Copier</button></div>
-      <pre class="prompt" style="white-space:pre-wrap;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:10px;font-size:12.5px">${esc(p[1])}</pre></article>`).join("")}
+    <h3 class="day-h">Étape 4 · Posez vos questions</h3>
+    <p class="muted">Écrivez votre question à la suite, <b>normalement</b>. L'IA applique le protocole Gabriel AXA :
+    elle classe la question, consulte les bons outils et répond en citant contrat, notice et page.</p>
 
-    <div class="warnbox">⚠ Limites : une IA peut se tromper — <b>vérifie toujours la notice PDF</b> (elle fait foi). Pour une matière
-    réglementaire (fiscalité, retraite, succession), l'IA renvoie aux sources officielles ; ne reprends pas un chiffre non vérifié.</div>`;
-  bindCopy(body.querySelector("#ia_copy"), () => IA_URL, "✓ Adresse copiée");
-  IA_PROMPTS.forEach((p, i) => bindCopy(body.querySelector(`[data-p="${i}"]`), () => p[1]));
+    <div class="warnbox">⚠ La <b>notice PDF fait foi</b>. Selon ses capacités web, une IA peut ne pas ouvrir les liens — vérifiez
+    toujours la source avant d'utiliser une réponse avec un client. Ne saisissez <b>aucune donnée client nominative</b>.</div>
+
+    <p class="muted" style="margin-top:16px">Votre IA n'ouvre pas les liens ?
+      <button class="btn ghost" id="full_copy" style="min-height:30px;padding:0 10px">📋 Copier les instructions complètes</button>
+      <a class="btn ghost" href="${IA_INSTRUCTIONS_URL}" target="_blank" rel="noopener" style="min-height:30px;padding:0 10px">↗ Voir les instructions</a>
+      <span id="full_state" class="ok" style="font-size:12.5px"></span></p>
+    <p class="muted" style="font-size:12px">C'est un secours — le parcours recommandé reste le mini-prompt ci-dessus.</p>`;
+
+  bindCopy(body.querySelector("#mini_copy"), () => MINI_PROMPT, "✓ Instructions copiées");
+
+  // Secours : copie le prompt maître complet, récupéré depuis la Vue IA (même origine). Repli : ouvrir la page.
+  body.querySelector("#full_copy").addEventListener("click", async () => {
+    const st = body.querySelector("#full_state");
+    try {
+      const r = await fetch(IA_TXT_REL, { cache: "no-cache" });
+      if (!r.ok) throw new Error(String(r.status));
+      await navigator.clipboard.writeText(await r.text());
+      st.textContent = " ✓ Instructions complètes copiées";
+    } catch (e) {
+      window.open(IA_INSTRUCTIONS_URL, "_blank", "noopener");
+      st.textContent = " ↗ Page ouverte — copiez le texte manuellement";
+    }
+  });
 }
 
 /* ---------- Découvrir Gabriel AXA (onboarding) ---------- */

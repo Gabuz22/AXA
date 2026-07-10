@@ -1,7 +1,7 @@
 {
   "produit": "Gabriel AXA",
-  "version": "2.0.0",
-  "nom": "Produit distribuable pour conseillers : onboarding (Découvrir, Que puis-je faire), « Utiliser avec une IA » réécrit (coller l'adresse de la Vue IA), portail Vue IA, Sources officielles, page Tester, navigation regroupée, accueil-promesse",
-  "date": "2026-07-09",
-  "note": "Application métier autonome, prête à être testée par des conseillers AXA. Documents de sources publiques, aucune donnée client, données dérivées, masters jamais modifiés. La Vue IA (/ia) s'utilise en collant son adresse à une IA. La notice PDF fait toujours foi."
+  "version": "2.1.0",
+  "nom": "Protocole d'interaction IA : le conseiller colle un mini-prompt, l'IA découvre seule Gabriel AXA via la page « Instructions maîtres » (/ia/instructions-maitres.html) et applique le protocole. Page « Utiliser avec une IA » simplifiée en 4 étapes + secours « instructions complètes ». Fin des prompts multiples et des packs côté conseiller.",
+  "date": "2026-07-10",
+  "note": "Toute l'intelligence est centralisée dans les Instructions maîtres (Vue IA) : les évolutions futures se font là, sans changer les habitudes des conseillers. Documents de sources publiques, aucune donnée client, données dérivées, masters jamais modifiés. La notice PDF fait toujours foi."
 }

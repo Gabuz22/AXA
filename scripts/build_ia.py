@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 IA = "ia"
 DATE = datetime.date.today().isoformat()
-VERSION = "1.2.0"
+VERSION = "2.1.0"
 SITE = "https://gabuz22.github.io/AXA"
 
 def load(p, d=None):
@@ -150,7 +150,7 @@ for g in GLOSSAIRE:
     for en in (g.get("entrees") or []): add_src(en.get("source"), (en.get("contrat"), "definition"))
 
 # ------------------------------------------------------------------ gabarit HTML / MD
-CATS_NAV = [("index", "Index"), ("guide-ia", "Guide IA"), ("outils", "Outils"), ("routage", "Routage"), ("pertinence", "Pertinence"),
+CATS_NAV = [("index", "Index"), ("instructions-maitres", "Instructions maîtres"), ("guide-ia", "Guide IA"), ("outils", "Outils"), ("routage", "Routage"), ("pertinence", "Pertinence"),
             ("qualite-routage", "Qualité routage"), ("hierarchie", "Hiérarchie"), ("choix-sources", "Choix sources"),
             ("methode-question-complexe", "Méthode"), ("contrats", "Contrats"), ("garanties", "Garanties"), ("exclusions", "Exclusions"),
             ("definitions", "Définitions"), ("conditions", "Conditions"), ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
@@ -413,6 +413,7 @@ def build_packs():
 GUIDE_MD = """# Guide IA — comment utiliser Gabriel AXA
 
 > Page destinée à une IA ou un agent. Explique comment travailler à partir de la Vue IA seule.
+> **Commence par les [Instructions maîtres](instructions-maitres.html)** : c'est le protocole à appliquer avant de répondre. Ce guide en détaille la navigation.
 
 ## Comment utiliser Gabriel AXA
 La Vue IA est la **projection complète et sourcée** de la base contractuelle AXA. Tu peux travailler
@@ -460,12 +461,92 @@ Suis la hiérarchie : **Index → Contrat/Catégorie/Thème → Élément → No
 « Oui, remboursé à 100 %. » — aucune source, non vérifiable, invention possible.
 """
 
+# ------------------------------------------------------------------ INSTRUCTIONS MAÎTRES (cerveau du protocole IA)
+# Page destinée aux IA. Le conseiller colle un mini-prompt qui pointe ici ; l'IA lit ces règles et les applique
+# seule, sans que le conseiller ait à choisir un outil ou un parcours. Toute l'intelligence vit dans cette page :
+# les évolutions futures se font ici, sans changer les habitudes des conseillers.
+_IU = SITE + "/ia/"
+INSTRUCTIONS_MAITRES_MD = ("""# Instructions maîtres — Gabriel AXA
+
+> **À lire par l'intelligence artificielle avant de répondre.** Un conseiller AXA t'a demandé d'utiliser Gabriel AXA.
+> Applique intégralement ce protocole — quel que soit ton modèle (ChatGPT, Claude, Gemini, Copilot, Mistral, DeepSeek, Qwen…) — **avant** de répondre à sa question.
+
+## Ce qu'est Gabriel AXA
+Gabriel AXA est la **projection statique, complète et sourcée** de la base contractuelle AXA (garanties, exclusions,
+définitions, conditions, plafonds, franchises…), issue de **documents publics** (notices d'information, conditions
+générales). Tu peux tout lire depuis les pages HTML/Markdown, **sans exécuter de code**. Point d'entrée : @IU@.
+Chaque fait contractuel porte sa source (notice + page) et un identifiant stable réutilisable (`#id`).
+
+## Étape 1 — Comprendre et classer la question
+Déduis toi-même le(s) type(s) de la question. **Ne demande pas au conseiller de choisir.**
+- **Contrat précis** — la question nomme un contrat → travaille sur sa fiche.
+- **Comparaison** — deux contrats ou plus à mettre en regard.
+- **Recherche multi-contrats** — un besoin pouvant concerner plusieurs contrats.
+- **Recherche transversale** — une catégorie ou un thème à travers tous les contrats.
+- **Réglementation** — fiscalité, retraite, succession, sécurité sociale, droit.
+- **Profil client** — la réponse dépend d'informations sur le client (âge, statut, objectif…).
+- **Informations manquantes** — des éléments nécessaires ne sont pas fournis.
+
+## Étape 2 — Utiliser les outils Gabriel AXA (sans rien demander)
+Selon le type détecté, consulte **d'office** les pages utiles. Tu choisis seul lesquelles ouvrir ; n'attends aucune consigne.
+- **Routage** : @IU@routage.html — décomposer la question, choisir les bons contrats.
+- **Concepts** : @IU@concepts.html — synonymes métier (IPT, PTIA…) reliés aux contrats et catégories.
+- **Comparateur** : @IU@comparateur.html — un sujet, tous les contrats côte à côte.
+- **Matrices** : @IU@matrices.html — contrats × catégories, concepts × contrats.
+- **Preuves** : @IU@preuves.html — éléments citables (contrat, notice, page).
+- **Couverture** : @IU@couverture-recherche.html — ce qui est présent / absent / à vérifier dans la base.
+- **Méthode** : @IU@methode-question-complexe.html — les parcours d'une question complexe.
+- **Qualité** : @IU@qualite-routage.html — le niveau de confiance du routage.
+- **Sources officielles** : @IU@sources-officielles.html — les autorités publiques par thème réglementaire.
+- Données brutes : contrats @IU@contrats.html, catégories (@IU@garanties.html, @IU@exclusions.html, @IU@definitions.html…), glossaire @IU@glossaire.html, notices @IU@notices.html.
+
+## Étape 3 — Construire la réponse
+- **Toujours citer** le contrat, la notice et la page pour chaque fait contractuel : `[Contrat — Notice, p.X]`.
+- **Ne jamais inventer, extrapoler ni généraliser** au-delà des sources.
+- **Toujours distinguer** ce qui relève du **contrat** (sourcé notice) de ce qui relève de la **réglementation** (règle légale/fiscale/sociale, évolutive).
+- **Toujours signaler explicitement** : information **absente** de la base · information **non trouvée** · information **nécessitant la notice PDF** · information **nécessitant une source officielle**.
+
+## Étape 4 — Raisonner
+- **Assemble plusieurs contrats** si le besoin le justifie.
+- Explique les **avantages et les limites** de chaque option.
+- Si des **informations client manquent** (âge, statut, objectif, situation familiale…), **demande-les AVANT de conclure**.
+- Lorsqu'il existe plusieurs solutions, **présente plusieurs hypothèses** plutôt qu'une réponse unique.
+
+## Étape 5 — Réglementation
+Si la question touche **fiscalité, retraite, succession, sécurité sociale ou droit** :
+- consulte les **sources officielles** recommandées par Gabriel AXA (@IU@sources-officielles.html) ;
+- **ne donne jamais un chiffre, un barème ou un plafond sans vérification** à sa source officielle ;
+- rappelle que **ces règles évoluent**.
+
+## Hiérarchie documentaire (ordre d'autorité)
+**Contrat → Notice → Documents AXA → Sources officielles → Réponse.**
+La **notice PDF fait foi**. Ne conserve **aucune donnée client nominative**.
+
+## Format de réponse attendu
+- Une réponse **directe, prudente et sourcée**.
+- Pour chaque fait contractuel : `[Contrat — Notice, p.X]`.
+- Une séparation nette **contractuel / réglementaire**.
+- La liste de ce qui **manque** ou **reste à vérifier**.
+- Une conclusion rappelant : « **La notice PDF fait foi.** »
+""").replace("@IU@", _IU)
+
+# Prompt maître complet, en texte brut : c'est le SECOURS que le conseiller colle si son IA ne suit pas les liens.
+INSTRUCTIONS_MAITRES_TXT = (INSTRUCTIONS_MAITRES_MD
+    + "\n\n---\nApplique tout ce qui précède, puis réponds à ma question ci-dessous. "
+      "Si tu peux ouvrir des liens, pars de " + _IU + " ; sinon, applique ces règles de mémoire et signale toute information que tu n'as pas pu vérifier.\n\nMa question : ")
+
+def build_instructions_maitres():
+    depth = 0
+    write("instructions-maitres.md", INSTRUCTIONS_MAITRES_MD)
+    write("instructions-maitres.html", page_html("Instructions maîtres", renderish(INSTRUCTIONS_MAITRES_MD), depth, SITE + "/ia/instructions-maitres.html"))
+    write("instructions-maitres.txt", INSTRUCTIONS_MAITRES_TXT)
+
 def build_static_pages(theme_counts):
     depth = 0
     write("guide-ia.md", GUIDE_MD)
     write("guide-ia.html", page_html("Guide IA", renderish(GUIDE_MD), depth, SITE + "/ia/guide-ia.html"))
     # Manifeste lisible + ai-manifest.json
-    pages = ["index", "guide-ia", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
+    pages = ["index", "instructions-maitres", "guide-ia", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
              "planificateur", "concepts", "couverture-recherche",
              "comparateur", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
              "sources-officielles", "reglementation", "surveillance", "connaissances-dynamiques", "matrices",
@@ -484,7 +565,9 @@ def build_static_pages(theme_counts):
         "rules": ["Pack A = preuve", "Pack B = raisonnement (jamais une preuve seule)", "Toujours citer la source",
                   "Ne jamais inventer ; signaler l'absence", "La notice PDF fait foi"],
         "data_origin": "Documents publics (notices / CG AXA). Aucune donnée client. Couches dérivées ; masters non modifiés.",
-        "entry_point": SITE + "/ia/guide-ia.html",
+        "entry_point": SITE + "/ia/instructions-maitres.html",
+        "ai_protocol": "Toute IA : 1) lire /ia/instructions-maitres.html ; 2) appliquer ces règles (classer la question, "
+                       "utiliser les outils utiles, citer contrat+notice+page, distinguer contractuel/réglementaire, signaler les absences) ; 3) répondre.",
         "pages": [{"id": p, "html": SITE + "/ia/%s.html" % p, "md": SITE + "/ia/%s.md" % p} for p in pages if p != "manifeste"],
         "contracts": [{"slug": cm["slug"], "id": cm["id"], "nom": cm["nom"], "famille": cm["famille"],
                        "html": SITE + "/ia/contrat/%s.html" % cm["slug"], "md": SITE + "/ia/contrat/%s.md" % cm["slug"]} for cm in CONTRACT_META],
@@ -537,8 +620,14 @@ Index → (Contrat | Catégorie | Thème) → Élément `#id` → Notice → Pag
     write("robots.txt", "User-agent: *\nAllow: /\nSitemap: %s/ia/sitemap-ia.xml\n" % SITE)
     # index global
     idx_md = md_hdr("Gabriel AXA — Vue IA", "Point d'entrée de la couche IA : commencer ici, puis naviguer.") + """
-## Commencer (pour une IA)
-- **[Guide IA](guide-ia.html)** — comment utiliser Gabriel AXA (règles, arbitrage, absence, liens).
+## Pour toute IA (ChatGPT, Claude, Gemini, Copilot, Mistral, DeepSeek, Qwen…)
+Un conseiller t'a demandé d'utiliser Gabriel AXA. Procède dans cet ordre, sans rien demander de plus :
+- **1. Lis les [Instructions maîtres](instructions-maitres.html)** — le protocole complet à appliquer avant de répondre.
+- **2. Utilise les outils nécessaires** — routage, concepts, comparateur, matrices, preuves, couverture, méthode, sources officielles.
+- **3. Réponds** — en citant contrat + notice + page, en distinguant contractuel et réglementaire, en signalant toute absence.
+
+## Repères (pour approfondir)
+- **[Guide IA](guide-ia.html)** — comment naviguer la Vue IA (règles, arbitrage, absence, liens).
 - **[Outils IA](outils.html)** — planificateur, concepts, couverture, comparateur, preuves, méthode.
 - **[Manifeste IA](manifeste.html)** — organisation, citation, hiérarchie, autorité.
 
@@ -1629,6 +1718,7 @@ def build():
     build_qualite(metrics)
     build_graphe()
     build_outils()
+    build_instructions_maitres()   # cerveau du protocole IA (mini-prompt conseiller → cette page)
     build_static_pages(tc)
     rows, allok = build_coverage(coverage())
     build_maturite(rows)

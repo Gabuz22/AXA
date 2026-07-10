@@ -1,6 +1,6 @@
 {
  "meta": {
-  "version": "1.2.0",
+  "version": "2.1.0",
   "genere_le": "2026-07-10",
   "note": "Analyse dérivée (détection d'entités + routage) des questions de validation. Sans LLM."
  },

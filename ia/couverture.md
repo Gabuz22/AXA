@@ -1,6 +1,6 @@
 # Rapport de couverture — Vue IA vs JSON
 
-> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v1.2.0).
+> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v2.1.0).
 > Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
 
 **Objectif.** Comparaison automatique : chaque catégorie des JSON est-elle présente dans la Vue IA générée ?

@@ -47,7 +47,7 @@ const HELP = {
   pdf: { what: "Les notices contractuelles — la source qui fait foi.", how: ["Ouvre une notice, si possible à la bonne page."] },
   decouvrir: { what: "Ce qu'est Gabriel AXA, à qui il s'adresse et ce qu'il change — en moins de 5 minutes.", how: ["Lis la promesse et les exemples.", "Puis lance une recherche."] },
   cas_usage: { what: "Des exemples concrets et cliquables de ce que tu peux faire aujourd'hui.", how: ["Clique un exemple pour l'essayer directement."] },
-  assistants: { what: "Utiliser Gabriel AXA avec une IA (ChatGPT, Claude, Gemini) : il suffit de coller l'adresse de la Vue IA.", how: ["Copie l'URL de la Vue IA.", "Colle-la dans ton assistant, puis pose ta question."] },
+  assistants: { what: "Donner Gabriel AXA à ton IA : un mini-prompt à copier, et l'IA découvre et applique seule le protocole.", how: ["Copie le mini-prompt.", "Colle-le dans ton IA (ChatGPT, Claude, Gemini…), puis pose ta question."] },
   portail_ia: { what: "Le portail de la Vue IA : tout ce qu'une IA peut exploiter (guide, concepts, routage, méthode, sources…).", how: ["Ouvre une brique pour comprendre à quoi elle sert.", "Copie l'URL pour la donner à une IA."] },
   confiance: { what: "D'où viennent les données et pourquoi s'y fier : documents publics, traçabilité, notice qui fait foi.", how: ["Chaque information renvoie à sa notice PDF.", "Rien n'est inventé."] },
   tester: { what: "La phase de test : ce qu'on attend de toi pour construire la prochaine version.", how: ["Note les erreurs et les manques.", "Compare avec ta pratique."] },

@@ -1,6 +1,6 @@
 # Moteur — choix des sources
 
-> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v1.2.0).
+> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v2.1.0).
 > Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
 
 **Objectif.** Avant toute réponse : quel document consulter, dans quel ordre, pourquoi, quand passer au suivant, quand s'arrêter, quand dire « je ne peux pas conclure ».

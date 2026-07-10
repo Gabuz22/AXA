@@ -1,6 +1,7 @@
 # Guide IA — comment utiliser Gabriel AXA
 
 > Page destinée à une IA ou un agent. Explique comment travailler à partir de la Vue IA seule.
+> **Commence par les [Instructions maîtres](instructions-maitres.html)** : c'est le protocole à appliquer avant de répondre. Ce guide en détaille la navigation.
 
 ## Comment utiliser Gabriel AXA
 La Vue IA est la **projection complète et sourcée** de la base contractuelle AXA. Tu peux travailler

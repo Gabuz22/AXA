@@ -1,6 +1,6 @@
 {
  "name": "Gabriel AXA — Vue IA",
- "version": "1.2.0",
+ "version": "2.1.0",
  "generated": "2026-07-10",
  "base_url": "https://gabuz22.github.io/AXA/ia/",
  "authority": "La notice PDF fait foi. Ordre : notice PDF > Pack A > glossaire > Pack B.",
@@ -21,12 +21,18 @@
   "La notice PDF fait foi"
  ],
  "data_origin": "Documents publics (notices / CG AXA). Aucune donnée client. Couches dérivées ; masters non modifiés.",
- "entry_point": "https://gabuz22.github.io/AXA/ia/guide-ia.html",
+ "entry_point": "https://gabuz22.github.io/AXA/ia/instructions-maitres.html",
+ "ai_protocol": "Toute IA : 1) lire /ia/instructions-maitres.html ; 2) appliquer ces règles (classer la question, utiliser les outils utiles, citer contrat+notice+page, distinguer contractuel/réglementaire, signaler les absences) ; 3) répondre.",
  "pages": [
   {
    "id": "index",
    "html": "https://gabuz22.github.io/AXA/ia/index.html",
    "md": "https://gabuz22.github.io/AXA/ia/index.md"
+  },
+  {
+   "id": "instructions-maitres",
+   "html": "https://gabuz22.github.io/AXA/ia/instructions-maitres.html",
+   "md": "https://gabuz22.github.io/AXA/ia/instructions-maitres.md"
   },
   {
    "id": "guide-ia",
