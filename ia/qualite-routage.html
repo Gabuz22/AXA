@@ -1,30 +1,47 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Connaissances dynamiques — Gabriel AXA (Vue IA)</title><meta name="description" content="Vue IA de Gabriel AXA — projection statique, sourcée, lisible sans JavaScript."><link rel="canonical" href="https://gabuz22.github.io/AXA/ia/connaissances-dynamiques.html"><link rel="stylesheet" href="ia.css"></head>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Qualité du routage — Gabriel AXA (Vue IA)</title><meta name="description" content="Vue IA de Gabriel AXA — projection statique, sourcée, lisible sans JavaScript."><link rel="canonical" href="https://gabuz22.github.io/AXA/ia/qualite-routage.html"><link rel="stylesheet" href="ia.css"></head>
 <body>
 <nav class="ianav"><a href="index.html">Index</a> · <a href="guide-ia.html">Guide IA</a> · <a href="outils.html">Outils</a> · <a href="routage.html">Routage</a> · <a href="pertinence.html">Pertinence</a> · <a href="qualite-routage.html">Qualité routage</a> · <a href="hierarchie.html">Hiérarchie</a> · <a href="choix-sources.html">Choix sources</a> · <a href="methode-question-complexe.html">Méthode</a> · <a href="contrats.html">Contrats</a> · <a href="garanties.html">Garanties</a> · <a href="exclusions.html">Exclusions</a> · <a href="definitions.html">Définitions</a> · <a href="conditions.html">Conditions</a> · <a href="declencheurs.html">Déclencheurs</a> · <a href="plafonds.html">Plafonds</a> · <a href="franchises.html">Franchises</a> · <a href="glossaire.html">Glossaire</a> · <a href="concepts.html">Concepts</a> · <a href="themes.html">Thèmes</a> · <a href="comparateur.html">Comparateur</a> · <a href="matrices.html">Matrices</a> · <a href="graphe.html">Graphe</a> · <a href="notices.html">Notices</a> · <a href="sources.html">Sources</a> · <a href="sources-officielles.html">Sources officielles</a> · <a href="reglementation.html">Réglementation</a> · <a href="surveillance.html">Surveillance</a> · <a href="pack-a.html">Pack A</a> · <a href="pack-b.html">Pack B</a> · <a href="couverture.html">Couverture</a> · <a href="maturite.html">Maturité</a></nav>
 <main>
-<h1>Connaissances dynamiques</h1>
+<h1>Qualité du routage — mesures de précision</h1>
 
 <blockquote><strong>Vue IA de Gabriel AXA</strong> — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v1.2.0).</blockquote>
 <blockquote>Masters non modifiés ; données de sources publiques ; <strong>la notice PDF fait foi.</strong></blockquote>
 
-<p><strong>Objectif.</strong> Infrastructure (chaîne) prête pour intégrer, plus tard et manuellement, des règles réglementaires validées. Aucune intégration automatique.</p>
+<p><strong>Objectif.</strong> Précision du moteur de détection/routage : contrats, périmètre, sources officielles, statut. Les erreurs restantes sont listées par famille.</p>
 
 <p><strong>Règles.</strong> Pack A = preuve contractuelle. Pack B = raisonnement (jamais une preuve seule). Toujours citer la source (notice, page). Ne jamais inventer ; si une information est absente, le dire. La notice PDF fait foi.</p>
 
 <p><strong>Limites.</strong> Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.</p>
 
-<h2>Chaîne de validation (jamais automatique)</h2>
-<p><code>Source officielle → Règle actuelle → Date → Historique → Validation humaine → Publication</code></p>
 
-<ul>
-<li>La chaîne est <strong>prête</strong> mais <strong>vide</strong> : aucune règle réglementaire n&#x27;est stockée dans la base.</li>
-<li>Aucune mise à jour ne modifie directement les connaissances : <strong>validation humaine obligatoire</strong> avant publication.</li>
-<li>Les concepts en <strong>matière évolutive</strong> disposent d&#x27;un emplacement prêt (voir <a href="connaissances-dynamiques.json">connaissances-dynamiques.json</a>).</li>
-</ul>
+<h2>Métriques globales (76 tests)</h2>
+<p>| Mesure | Valeur |</p>
+<p>|---|--:|</p>
+<p>| Tests passés | 76 / 76 |</p>
+<p>| Précision contrats | 100 % |</p>
+<p>| Rappel contrats | 100 % |</p>
+<p>| Faux positifs (contrats interdits apparus) | 0 |</p>
+<p>| Faux négatifs (contrats obligatoires manquants) | 0 |</p>
+<p>| Exactitude périmètre mono/multi | 100 % |</p>
+<p>| Exactitude déclenchement source officielle | 100 % |</p>
+<p>| Exactitude statut de conclusion | 83 % |</p>
+<p>| Exactitude catégories | 98 % |</p>
 
-<p>_But : préparer l&#x27;infrastructure sans jamais inventer ni intégrer automatiquement une donnée réglementaire._</p>
+<h2>Par famille</h2>
+<p>| Famille | Passés |</p>
+<p>|---|--:|</p>
+<p>| ambigu | 3/3 |</p>
+<p>| comparaison | 2/2 |</p>
+<p>| contractuel_strict | 9/9 |</p>
+<p>| reglementaire | 6/6 |</p>
+<p>| sans_reponse | 4/4 |</p>
+<p>| transversale | 15/15 |</p>
+<p>| validation | 10/10 |</p>
+<p>| verrou_contrat | 27/27 |</p>
 
+<h2>Erreurs restantes (0)</h2>
+<p>_Aucune erreur : tous les parcours sont corrects._</p>
 </main>
 <footer><p>Gabriel AXA — Vue IA v1.2.0 (2026-07-10). Projection des JSON (source de vérité) ; masters non modifiés ; données de sources publiques. La notice PDF fait foi. <a href="../">← Application</a></p></footer>
 </body></html>

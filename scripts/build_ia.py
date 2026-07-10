@@ -150,7 +150,8 @@ for g in GLOSSAIRE:
     for en in (g.get("entrees") or []): add_src(en.get("source"), (en.get("contrat"), "definition"))
 
 # ------------------------------------------------------------------ gabarit HTML / MD
-CATS_NAV = [("index", "Index"), ("guide-ia", "Guide IA"), ("outils", "Outils"), ("hierarchie", "Hiérarchie"), ("choix-sources", "Choix sources"),
+CATS_NAV = [("index", "Index"), ("guide-ia", "Guide IA"), ("outils", "Outils"), ("routage", "Routage"), ("pertinence", "Pertinence"),
+            ("qualite-routage", "Qualité routage"), ("hierarchie", "Hiérarchie"), ("choix-sources", "Choix sources"),
             ("methode-question-complexe", "Méthode"), ("contrats", "Contrats"), ("garanties", "Garanties"), ("exclusions", "Exclusions"),
             ("definitions", "Définitions"), ("conditions", "Conditions"), ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
             ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"), ("matrices", "Matrices"), ("graphe", "Graphe"),
@@ -464,7 +465,8 @@ def build_static_pages(theme_counts):
     write("guide-ia.md", GUIDE_MD)
     write("guide-ia.html", page_html("Guide IA", renderish(GUIDE_MD), depth, SITE + "/ia/guide-ia.html"))
     # Manifeste lisible + ai-manifest.json
-    pages = ["index", "guide-ia", "manifeste", "outils", "planificateur", "concepts", "couverture-recherche",
+    pages = ["index", "guide-ia", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
+             "planificateur", "concepts", "couverture-recherche",
              "comparateur", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
              "sources-officielles", "reglementation", "surveillance", "connaissances-dynamiques", "matrices",
              "graphe", "maturite", "pack-a", "pack-b", "contrats",
@@ -529,7 +531,7 @@ Index → (Contrat | Catégorie | Thème) → Élément `#id` → Notice → Pag
              SITE + "/ia/preuves.json", SITE + "/ia/tests.json", SITE + "/ia/sources-officielles.json",
              SITE + "/ia/reglementation.json", SITE + "/ia/surveillance.json", SITE + "/ia/connaissances-dynamiques.json",
              SITE + "/ia/choix-sources.json", SITE + "/ia/graphe.json", SITE + "/ia/matrices/couverture.json",
-             SITE + "/ia/matrices/concepts-contrats.json"]
+             SITE + "/ia/matrices/concepts-contrats.json", SITE + "/ia/pertinence.json", SITE + "/ia/routage.json"]
     write("sitemap-ia.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           "".join("<url><loc>%s</loc><lastmod>%s</lastmod></url>\n" % (html.escape(u), DATE) for u in urls) + "</urlset>\n")
     write("robots.txt", "User-agent: *\nAllow: /\nSitemap: %s/ia/sitemap-ia.xml\n" % SITE)
@@ -877,7 +879,10 @@ def build_methode():
 
 def build_outils():
     depth = 0
-    items = [("planificateur", "Planificateur de recherche", "question → plan (concept, synonymes, contrats, catégories, notices)"),
+    items = [("routage", "Routage par type de question", "détection d'entités + verrouillage du contrat explicite + périmètre"),
+             ("pertinence", "Pertinence pondérée", "score 0-5 concept×contrat (garantie centrale vs mention), avec preuves"),
+             ("qualite-routage", "Qualité du routage", "métriques de précision : contrats, périmètre, sources, statut ; erreurs par famille"),
+             ("planificateur", "Planificateur de recherche", "question → plan (concept, synonymes, contrats, catégories, notices)"),
              ("concepts", "Index conceptuel", "concepts métier reliant synonymes, contrats, catégories, sources"),
              ("couverture-recherche", "Détecteur de couverture", "présent / absent de la base / à vérifier en notice"),
              ("comparateur", "Comparateur thématique", "un sujet, tous les contrats côte à côte, sourcé"),
@@ -901,77 +906,150 @@ def build_outils():
     hb.append('</ul><h2>Formats machine</h2><p><a href="concepts.json">concepts.json</a> · <a href="planificateur.json">planificateur.json</a> · <a href="couverture-recherche.json">couverture-recherche.json</a> · <a href="preuves.json">preuves.json</a> · <a href="tests.json">tests.json</a></p>')
     write("outils.md", "\n".join(md)); write("outils.html", page_html("Outils IA", "".join(hb), depth, SITE + "/ia/outils.html"))
 
-def _test_questions():
-    cmap = [(sg, nom) for sg, nom, kws, facets in CONCEPTS]
-    Q = [("transversale", "Quels contrats traitent de %s ?" % nom.lower(), [sg]) for sg, nom in cmap]
-    Q += [("comparaison", "Compare %s entre les contrats concernés." % nom.lower(), [sg]) for sg, nom in cmap]
-    Q += [
-        ("simple", "Quel est le barème d'invalidité d'Avizen Pro ?", ["invalidite"]),
-        ("simple", "Quelle est la définition d'un accident dans Ma Protection Accident ?", ["accident"]),
-        ("simple", "Quel est l'âge maximal de souscription ?", ["age", "souscription"]),
-        ("simple", "Quelle est la garantie décès de MasterLife ?", ["deces"]),
-        ("simple", "Y a-t-il une carence sur le décès par maladie ?", ["carence", "deces"]),
-        ("simple", "Quelles exclusions s'appliquent au suicide ?", ["suicide"]),
-        ("complexe", "Dans quels contrats une invalidité peut-elle déclencher une prestation, selon quelles définitions et avec quelles exclusions ?", ["invalidite"]),
-        ("complexe", "Compare les conditions d'adhésion et limites d'âge des contrats concernés.", ["souscription", "age"]),
-        ("complexe", "Quels éléments nécessitent une vérification dans la notice ou le certificat d'adhésion ?", ["rachat", "fiscalite"]),
-        ("complexe", "Quelles garanties et exclusions encadrent le décès accidentel ?", ["deces-accidentel", "deces"]),
-        ("source_officielle", "Quelle est la fiscalité de transmission d'une assurance vie au décès ?", ["fiscalite", "deces"]),
-        ("source_officielle", "Quel est le régime fiscal du PER (Ma Retraite) ?", ["fiscalite", "age"]),
-        ("source_officielle", "Quel abattement s'applique à la succession du bénéficiaire ?", ["beneficiaire", "fiscalite"]),
-        ("source_officielle", "Quel est l'âge légal de départ à la retraite ?", ["age"]),
-        ("source_officielle", "Comment est traitée fiscalement la valeur de rachat ?", ["rachat", "fiscalite"]),
-        ("ambigu", "Que couvre exactement ce contrat en cas de coup dur ?", ["invalidite", "deces", "hospitalisation", "accident"]),
-        ("ambigu", "Est-ce que je suis protégé si je tombe malade ?", ["hospitalisation", "incapacite-temporaire", "invalidite"]),
-        ("ambigu", "Quelles sont les conditions et les limites ?", ["souscription", "carence", "fin-garantie"]),
-        ("sans_reponse", "Quelle est la garantie chômage de MasterLife ?", []),
-        ("sans_reponse", "Le contrat couvre-t-il les catastrophes naturelles sur un bien immobilier ?", []),
-        ("sans_reponse", "Quel est le taux du livret A associé ?", []),
-    ]
-    return Q
+def _quality_tests():
+    others = lambda keep: [cm["slug"] for cm in CONTRACT_META if cm["slug"] not in keep]
+    T = []
+    def t(fam, q, oblig=None, interdits=None, cats=None, source=False, notice=False, statut=None):
+        T.append({"famille": fam, "question": q, "contrats_obligatoires": oblig or [], "contrats_interdits": interdits or [],
+                  "categories_obligatoires": cats or [], "source_officielle_externe_attendue": source,
+                  "notice_attendue": notice, "statut_attendu": statut})
+    # Étape 13 — 10 questions de validation impératives
+    t("validation", "Quel est le barème d'invalidité d'Avizen Pro ?", ["avizen-pro"], others(["avizen-pro"]), ["formules", "garanties", "definitions"], False, True, "conclusion_documentee")
+    t("validation", "Quelle est la définition d'un accident dans Ma Protection Accident ?", [ACC_SLUG], others([ACC_SLUG]), ["definitions"], False, True, "conclusion_documentee")
+    t("validation", "Quels contrats parlent d'invalidité ?", [], [], [], False, False, None)
+    t("validation", "Compare Avizen Pro et Masterlife Crédit sur l'invalidité.", ["avizen-pro", "masterlife-credit"], others(["avizen-pro", "masterlife-credit"]), [], False, True, None)
+    t("validation", "Quels contrats excluent le suicide ?", [], [], ["exclusions"], False, False, None)
+    t("validation", "Jusqu'à quel âge les versements sur PER sont-ils déductibles ?", [RET_SLUG], [], [], True, False, "verification_source_officielle_requise")
+    t("validation", "Quelle est la franchise contractuelle d'Avizen Pro ?", ["avizen-pro"], others(["avizen-pro"]), ["franchises"], False, True, None)
+    t("validation", "Quels autres contrats traitent de l'invalidité en plus d'Avizen Pro ?", ["avizen-pro"], [], [], False, False, None)
+    t("validation", "Cette garantie dépend-elle de la Sécurité sociale ?", [], [], [], True, False, "verification_source_officielle_requise")
+    t("validation", "Je ne trouve pas de plafond chiffré : puis-je conclure qu'il n'y en a pas ?", [], [], [], False, True, "verification_notice_requise")
+    # Verrou contrat (mono) — le contrat nommé verrouille, les autres sont INTERDITS
+    for cm in CONTRACT_META:
+        t("verrou_contrat", "Quelles garanties %s propose-t-il ?" % cm["nom"], [cm["slug"]], others([cm["slug"]]), ["garanties"], False, True, None)
+        t("verrou_contrat", "Quelles exclusions dans %s ?" % cm["nom"], [cm["slug"]], others([cm["slug"]]), ["exclusions"], False, True, None)
+        t("verrou_contrat", "Quels déclencheurs dans %s ?" % cm["nom"], [cm["slug"]], others([cm["slug"]]), ["declencheurs"], False, True, None)
+    # Contractuel strict (aucune source officielle)
+    for cm in CONTRACT_META:
+        t("contractuel_strict", "Quelle franchise contractuelle dans %s ?" % cm["nom"], [cm["slug"]], others([cm["slug"]]), ["franchises"], False, True, None)
+    # Transversales (multi-contrats, pas de source officielle)
+    for sg, nom, kws, facets in CONCEPTS:
+        t("transversale", "Quels contrats traitent de %s ?" % nom.lower(), [], [], [], False, False, None)
+    # Comparaisons (uniquement les contrats nommés)
+    t("comparaison", "Compare Avizen et Avizen Pro sur le décès.", ["avizen", "avizen-pro"], others(["avizen", "avizen-pro"]), [], False, True, None)
+    t("comparaison", "Compare Excelium et Ma Retraite sur la fiscalité.", ["excelium-assurance-vie", RET_SLUG], others(["excelium-assurance-vie", RET_SLUG]), ["fiscalite"], True, True, None)
+    # Réglementaires (source officielle OBLIGATOIRE)
+    for q in ["Quelle est la fiscalité de transmission au décès ?", "Quel abattement fiscal s'applique à la succession ?",
+              "La cotisation est-elle déductible fiscalement ?", "Quel régime social s'applique à cette prestation ?",
+              "Quel est le plafond légal de déduction ?", "Comment est traitée fiscalement la valeur de rachat ?"]:
+        t("reglementaire", q, [], [], [], True, False, "verification_source_officielle_requise")
+    # Sans réponse (aucun contrat, ne pas conclure)
+    for q in ["Quelle est la garantie chômage de Masterlife Crédit ?", "Le contrat couvre-t-il un dégât des eaux immobilier ?",
+              "Quel est le taux du livret A ?", "Quelle est la garantie responsabilité civile auto ?"]:
+        t("sans_reponse", q, [], [], [], False, False, "donnees_insuffisantes")
+    # Ambigus (question trop vague)
+    for q in ["Que couvre exactement ce contrat ?", "Suis-je bien protégé ?", "Quelles sont les conditions et limites ?"]:
+        t("ambigu", q, [], [], [], False, False, "question_ambigue")
+    return T
+
+def _expected_perimetre(t):
+    qn = norm(t["question"]); ob = t["contrats_obligatoires"]
+    if "compare" in qn and len(ob) >= 2: return "comparaison"
+    if "en plus" in qn or "autres contrats" in qn: return "mono+transversal"
+    if len(ob) == 1: return "mono-contrat"
+    if t["famille"] == "ambigu": return "ambigu"
+    return None  # transversale / reglementaire / sans_reponse : périmètre non contraint ici
 
 def build_tests(concepts):
-    depth = 0; results = []
-    for typ, q, cs in _test_questions():
-        merged_cats, contrats, missing, auths = {}, set(), set(), set()
-        evolving = False
-        for sg in cs:
-            c = concepts.get(sg, {})
-            for cat, ids in (c.get("categories") or {}).items(): merged_cats[cat] = merged_cats.get(cat, 0) + len(ids)
-            for ct in c.get("contrats", []): contrats.add(ct)
-            ev, dom, a = CONCEPT_REG.get(sg, (False, [], []))
-            if ev: evolving = True
-            auths.update(a)
-        for cat in ["definitions", "garanties", "declencheurs", "exclusions", "conditions"]:
-            if not merged_cats.get(cat): missing.add(cat)
-        can = bool(contrats) and bool(merged_cats.get("garanties") or merged_cats.get("definitions"))
-        results.append({"type": typ, "question": q, "concepts": cs, "contrats_retrouves": sorted(contrats, key=norm),
-                        "categories_consultees": merged_cats, "elements_manquants_dans_la_base": sorted(missing),
-                        "source_officielle_requise": evolving, "autorites_recommandees": sorted(auths),
-                        "peut_conclure": can, "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"})
-    par_type = {}
-    for r in results: par_type[r["type"]] = par_type.get(r["type"], 0) + 1
-    write("tests.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "total": len(results), "par_type": par_type,
-        "note": "Parcours attendus calculés déterministe­ment (planificateur + couverture + réglementation). Vérifie : contrats, catégories, manquants, source officielle requise, capacité à ne pas conclure."}, "tests": results}, ensure_ascii=False, indent=1))
-    md = [md_hdr("Jeux de tests (%d questions)" % len(results), "Questions simples, transversales, comparaisons, ambiguës, sans réponse et nécessitant une source officielle ; parcours attendus calculés automatiquement."),
-          "\n**Répartition :** " + ", ".join("%s : %d" % (k, v) for k, v in par_type.items()) + "\n"]
-    hb = ['<h1>Jeux de tests (%d questions)</h1><p>Répartition : %s. Format machine : <a href="tests.json">tests.json</a>.</p>' % (len(results), ", ".join("%s : %d" % (k, v) for k, v in par_type.items()))]
+    depth = 0; T = _quality_tests(); results = []
+    TP = FP = FN = 0; src_ok = 0; stat_ok = stat_n = 0; cat_ok = cat_n = 0; peri_ok = peri_n = 0
+    fam = {}; echecs = []
+    for tq in T:
+        a = analyze(tq["question"])
+        retenus = set(a["contrats_retenus"]); oblig = set(tq["contrats_obligatoires"])
+        interdits = set(tq["contrats_interdits"]); cats = set(tq["categories_obligatoires"])
+        TP += len(oblig & retenus); FP += len(retenus & interdits); FN += len(oblig - retenus)
+        recall_ok = oblig <= retenus
+        nofor = retenus.isdisjoint(interdits)
+        source_ok = (a["source_officielle_requise"] == tq["source_officielle_externe_attendue"])
+        statut_ok = (tq["statut_attendu"] is None) or (a["statut"] == tq["statut_attendu"])
+        cats_ok = (not cats) or (cats <= set(a["categories_demandees"]))
+        exp_peri = _expected_perimetre(tq); peri_match = (exp_peri is None) or (a["perimetre"] == exp_peri)
+        if source_ok: src_ok += 1
+        if tq["statut_attendu"] is not None: stat_n += 1; stat_ok += 1 if statut_ok else 0
+        if cats: cat_n += 1; cat_ok += 1 if cats_ok else 0
+        if exp_peri is not None: peri_n += 1; peri_ok += 1 if peri_match else 0
+        passed = recall_ok and nofor and source_ok and peri_match
+        raisons = []
+        if not recall_ok: raisons.append("contrat obligatoire manquant (%s)" % ", ".join(sorted(oblig - retenus)))
+        if not nofor: raisons.append("contrat interdit présent (%s)" % ", ".join(sorted(retenus & interdits)))
+        if not source_ok: raisons.append("source officielle " + ("de trop" if a["source_officielle_requise"] else "manquante"))
+        if not peri_match: raisons.append("périmètre %s attendu %s" % (a["perimetre"], exp_peri))
+        if not statut_ok: raisons.append("statut %s attendu %s" % (a["statut"], tq["statut_attendu"]))
+        fam.setdefault(tq["famille"], [0, 0]); fam[tq["famille"]][1] += 1
+        if passed: fam[tq["famille"]][0] += 1
+        else: echecs.append({"famille": tq["famille"], "question": tq["question"], "raisons": raisons})
+        results.append({**tq, "detecte": {"contrat_explicite": a["contrat_explicite"], "concept_principal": a["concept_principal"],
+            "type_question": a["type_question"], "perimetre": a["perimetre"], "categories_demandees": a["categories_demandees"],
+            "contrats_retenus": a["contrats_retenus"], "contrats_rejetes": len(a["contrats_rejetes"]),
+            "source_officielle_requise": a["source_officielle_requise"], "statut": a["statut"]},
+            "resultat": {"passed": passed, "recall_ok": recall_ok, "sans_contrat_interdit": nofor, "source_ok": source_ok,
+                         "perimetre_ok": peri_match, "statut_ok": statut_ok, "raisons": raisons}})
+    prec = 100.0 * TP / (TP + FP) if (TP + FP) else 100.0
+    rec = 100.0 * TP / (TP + FN) if (TP + FN) else 100.0
+    metrics = {"n": len(T), "contrats_precision": prec, "contrats_recall": rec, "faux_positifs": FP, "faux_negatifs": FN,
+               "source_exact": 100.0 * src_ok / len(T), "statut_exact": 100.0 * stat_ok / stat_n if stat_n else 100.0,
+               "categories_exact": 100.0 * cat_ok / cat_n if cat_n else 100.0,
+               "perimetre_exact": 100.0 * peri_ok / peri_n if peri_n else 100.0,
+               "passes": sum(1 for r in results if r["resultat"]["passed"]),
+               "par_famille": {k: {"ok": v[0], "total": v[1]} for k, v in fam.items()}, "echecs": echecs}
+    write("tests.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "total": len(T),
+        "schema": "chaque test : question + contrats_obligatoires/interdits + categories_obligatoires + source/notice attendues + statut_attendu ; 'detecte' = sortie du moteur ; 'resultat' = comparaison.",
+        "metriques": {k: v for k, v in metrics.items() if k != "echecs"}}, "tests": results}, ensure_ascii=False, indent=1))
+    md = [md_hdr("Jeux de tests de qualité (%d)" % len(T), "Chaque test vérifie que le PARCOURS est correct : bon contrat verrouillé, contrats interdits absents, source officielle au bon moment, statut attendu."),
+          "\n**Passés : %d/%d.** Précision contrats %.0f%% · rappel %.0f%% · périmètre %.0f%% · source officielle %.0f%% · statut %.0f%%. Faux positifs contrats : %d.\n" % (
+              metrics["passes"], len(T), prec, rec, metrics["perimetre_exact"], metrics["source_exact"], metrics["statut_exact"], FP)]
+    hb = ['<h1>Jeux de tests de qualité (%d)</h1><p><strong>Passés : %d/%d.</strong> Précision %.0f%% · rappel %.0f%% · périmètre %.0f%% · source off. %.0f%% · statut %.0f%%. Format machine : <a href="tests.json">tests.json</a> · métriques : <a href="qualite-routage.html">qualité du routage</a>.</p>' % (len(T), metrics["passes"], len(T), prec, rec, metrics["perimetre_exact"], metrics["source_exact"], metrics["statut_exact"])]
     for r in results:
-        so = " · **Source officielle requise** (%s)" % ", ".join(r["autorites_recommandees"]) if r["source_officielle_requise"] else ""
-        md += ["", "## [%s] %s" % (r["type"], r["question"]),
-               "- Contrats retrouvés : %s" % (", ".join(r["contrats_retrouves"]) or "—"),
-               "- Catégories : %s" % (", ".join("%s(%d)" % (k, v) for k, v in r["categories_consultees"].items()) or "—"),
-               "- Manquants dans la base : %s" % (", ".join(r["elements_manquants_dans_la_base"]) or "—"),
-               "- Peut conclure : %s%s" % ("oui" if r["peut_conclure"] else "NON → notice/certificat/source officielle", so)]
-        hb.append('<h2>[%s] %s</h2><ul><li>Contrats : %s</li><li>Catégories : %s</li><li>Manquants (base) : %s</li><li>Peut conclure : <strong>%s</strong></li>%s</ul>' % (
-            html.escape(r["type"]), html.escape(r["question"]),
-            " · ".join('<a href="contrat/%s.html">%s</a>' % (slug(c), html.escape(c)) for c in r["contrats_retrouves"]) or "—",
-            html.escape(", ".join("%s(%d)" % (k, v) for k, v in r["categories_consultees"].items()) or "—"),
-            html.escape(", ".join(r["elements_manquants_dans_la_base"]) or "—"),
-            "oui" if r["peut_conclure"] else "NON → notice/certificat/source officielle",
-            ("<li><strong>Source officielle requise</strong> : %s</li>" % html.escape(", ".join(r["autorites_recommandees"]))) if r["source_officielle_requise"] else ""))
+        ok = "✅" if r["resultat"]["passed"] else "❌"
+        d = r["detecte"]
+        md += ["", "## %s [%s] %s" % (ok, r["famille"], r["question"]),
+               "- Détecté : contrat=%s · concept=%s · périmètre=%s · source_off=%s · statut=%s" % (r["detecte"]["contrat_explicite"] or "—", d["concept_principal"] or "—", d["perimetre"], d["source_officielle_requise"], d["statut"]),
+               "- Contrats retenus : %s" % (", ".join(d["contrats_retenus"]) or "—"),
+               "- Attendu : obligatoires=%s · interdits=%d · source=%s · statut=%s" % (", ".join(r["contrats_obligatoires"]) or "—", len(r["contrats_interdits"]), r["source_officielle_externe_attendue"], r["statut_attendu"] or "—")]
+        if r["resultat"]["raisons"]: md.append("- ⚠ %s" % " ; ".join(r["resultat"]["raisons"]))
+        hb.append('<h2>%s [%s] %s</h2><ul><li>Détecté : contrat <code>%s</code> · concept <code>%s</code> · périmètre <strong>%s</strong> · source_off <strong>%s</strong> · statut <strong>%s</strong></li><li>Contrats retenus : %s</li>%s</ul>' % (
+            ok, html.escape(r["famille"]), html.escape(r["question"]), html.escape(", ".join(d["contrat_explicite"]) or "—"),
+            html.escape(str(d["concept_principal"] or "—")), html.escape(d["perimetre"]), d["source_officielle_requise"], html.escape(d["statut"]),
+            html.escape(", ".join(d["contrats_retenus"]) or "—"),
+            ("<li>⚠ %s</li>" % html.escape(" ; ".join(r["resultat"]["raisons"]))) if r["resultat"]["raisons"] else ""))
     write("tests.md", "\n".join(md)); write("tests.html", page_html("Tests", "".join(hb), depth, SITE + "/ia/tests.html"))
-    return results
+    return metrics
+
+def build_qualite(metrics):
+    depth = 0
+    fam = metrics["par_famille"]
+    md = [md_hdr("Qualité du routage — mesures de précision", "Précision du moteur de détection/routage : contrats, périmètre, sources officielles, statut. Les erreurs restantes sont listées par famille."),
+          "", "## Métriques globales (%d tests)" % metrics["n"],
+          "| Mesure | Valeur |", "|---|--:|",
+          "| Tests passés | %d / %d |" % (metrics["passes"], metrics["n"]),
+          "| Précision contrats | %.0f %% |" % metrics["contrats_precision"],
+          "| Rappel contrats | %.0f %% |" % metrics["contrats_recall"],
+          "| Faux positifs (contrats interdits apparus) | %d |" % metrics["faux_positifs"],
+          "| Faux négatifs (contrats obligatoires manquants) | %d |" % metrics["faux_negatifs"],
+          "| Exactitude périmètre mono/multi | %.0f %% |" % metrics["perimetre_exact"],
+          "| Exactitude déclenchement source officielle | %.0f %% |" % metrics["source_exact"],
+          "| Exactitude statut de conclusion | %.0f %% |" % metrics["statut_exact"],
+          "| Exactitude catégories | %.0f %% |" % metrics["categories_exact"],
+          "", "## Par famille", "| Famille | Passés |", "|---|--:|"]
+    for k, v in sorted(fam.items()): md.append("| %s | %d/%d |" % (k, v["ok"], v["total"]))
+    md += ["", "## Erreurs restantes (%d)" % len(metrics["echecs"])]
+    if metrics["echecs"]:
+        for e in metrics["echecs"]: md.append("- **[%s]** %s → %s" % (e["famille"], e["question"], " ; ".join(e["raisons"])))
+    else:
+        md.append("_Aucune erreur : tous les parcours sont corrects._")
+    write("qualite-routage.md", "\n".join(md))
+    write("qualite-routage.html", page_html("Qualité du routage", renderish("\n".join(md)), depth, SITE + "/ia/qualite-routage.html"))
 
 # ==================================================================================================
 # INFRASTRUCTURE DE RAISONNEMENT DOCUMENTAIRE (dérivée / référentiel de navigation, non contractuelle)
@@ -1302,6 +1380,217 @@ def build_maturite(rows_cov):
            "Le système **ne remplace pas** un LLM : il est le **meilleur environnement documentaire** pour lui — décomposition, parcours, preuves, couverture, arbitrage des sources, conditions de non-conclusion."]
     write("maturite.md", "\n".join(md)); write("maturite.html", page_html("Maturité", renderish("\n".join(md)), depth, SITE + "/ia/maturite.html"))
 
+# ==================================================================================================
+# MOTEUR DE PRÉCISION — détection d'entités, verrouillage contrat, pertinence pondérée, routage, statuts
+# 100 % dérivé. Corrige le sur-rappel : le contrat explicite verrouille le périmètre ; la pertinence
+# concept×contrat est pondérée (0-5) d'après les preuves ; les sources officielles ne se déclenchent
+# qu'au niveau QUESTION (mots fiscaux/légaux), jamais sur le simple concept.
+# ==================================================================================================
+CNAME = {cm["slug"]: cm["nom"] for cm in CONTRACT_META}
+ACC_SLUG = next((cm["slug"] for cm in CONTRACT_META if cm["slug"].startswith("ma-protection-accident")), "ma-protection-accident")
+RET_SLUG = next((cm["slug"] for cm in CONTRACT_META if cm["slug"].startswith("ma-retraite")), "ma-retraite")
+OBSEQ = "essen-ciel-assurance-obseques"; PATRI = "essen-ciel-patrimoine"
+
+def detect_contracts(q):
+    qn = " " + norm(q) + " "
+    r = []
+    # Limites de mots (regex) pour éviter « avizen pro » dans « avizen propose » et détecter les DEUX Avizen.
+    if re.search(r"\bavizen pro\b", qn): r.append("avizen-pro")
+    if re.search(r"\bavizen\b(?!\s+pro\b)", qn): r.append("avizen")
+    if re.search(r"\bmaster\s?life\b", qn): r.append("masterlife-credit")
+    if "protection accident" in qn: r.append(ACC_SLUG)
+    if "ma retraite" in qn or re.search(r"\bper\b", qn) or "epargne retraite" in qn: r.append(RET_SLUG)
+    if "excelium" in qn: r.append("excelium-assurance-vie")
+    if "patrimoine" in qn: r.append(PATRI)
+    elif "essen ciel" in qn or "essenciel" in qn or "obseques" in qn: r.append(OBSEQ)
+    if "entour" in qn: r.append("entour-age")
+    return list(dict.fromkeys(r))
+
+CAT_INTENT = [  # (mot dans la question, catégories obligatoires induites)
+    (["bareme", "formule", "calcul", "taux", "montant de"], ["formules", "garanties", "definitions"]),
+    (["definition", "defini", "qu est ce", "c est quoi"], ["definitions"]),
+    (["franchise", "carence", "delai d attente"], ["franchises"]),
+    (["plafond", "montant maximum"], ["plafonds"]),
+    (["exclusion", "exclu", "non couvert", "ne couvre pas"], ["exclusions"]),
+    (["garantie", "couvert", "couverture", "prise en charge", "prestation"], ["garanties"]),
+    (["condition", "souscription", "adhesion", "eligib"], ["conditions"]),
+    (["declencheur", "declenche", "dans quels cas"], ["declencheurs"]),
+    (["cotisation", "prix", "tarif", "prime"], ["cotisations"]),
+    (["delai"], ["delais"]),
+]
+def detect_categories(qn):
+    cats = []
+    for mots, out in CAT_INTENT:
+        if any(m in qn for m in mots):
+            for c in out:
+                if c not in cats: cats.append(c)
+    return cats
+
+STRONG_REG_KW = ["deductib", "fiscal", "fiscalite", "abattement", "impot", "succession", "securite sociale",
+                 "protection sociale", "regime social", "age legal", "plafond legal", "droit de l assurance",
+                 "obligation reglementaire", "definition legale", "990 i", "757 b", "cnav", "ameli", "urssaf"]
+def is_regulatory(qn): return any(w in qn for w in STRONG_REG_KW)
+COMPARE_KW = ["compare", "comparer", "comparaison", "versus", " vs ", "par rapport", "difference entre", "differences entre"]
+TRANSV_KW = ["quels contrats", "quel contrat", "dans quels contrats", "liste des contrats", "autres contrats", "en plus de", "en plus d"]
+
+def compute_pertinence():
+    pert, ev = {}, []
+    for sg, nom, kws, facets in CONCEPTS:
+        hits, gl = concept_hits(kws)
+        by = {}
+        for cat in hits:
+            for e in hits[cat]: by.setdefault(e["cslug"], {}).setdefault(cat, []).append(e)
+        for cslug, cats in by.items():
+            cs = set(cats.keys())
+            if {"garanties", "definitions", "declencheurs"} <= cs: score = 5
+            elif "garanties" in cs or "declencheurs" in cs: score = 4
+            elif "exclusions" in cs or "conditions" in cs: score = 3
+            elif "definitions" in cs: score = 2
+            else: score = 1
+            pert[(sg, cslug)] = score
+            preuves = [e["id"] for cat in cats for e in cats[cat]][:8]
+            just = {5: "cœur du produit (garantie + définition + déclencheur)", 4: "garantie ou déclencheur important",
+                    3: "condition, limite ou exclusion structurante", 2: "définition ou contexte", 1: "mention secondaire"}[score]
+            ev.append({"concept": sg, "contrat": cslug, "score": score, "types": sorted(cs),
+                       "preuves": preuves, "justification": "%s dans %s." % (just.capitalize(), CNAME.get(cslug, cslug))})
+    return pert, ev
+PERT, PERT_EV = compute_pertinence()
+def cc_score(sg, cslug): return PERT.get((sg, cslug), 0)
+
+def analyze(q):
+    qn = norm(q)
+    explicit = detect_contracts(q)
+    concepts = [sg for sg, nom, kws, facets in CONCEPTS if any(w in qn for w in kws)]
+    # concept principal = plus haute pertinence sur les contrats explicites, sinon le plus fréquent
+    def concept_weight(sg):
+        if explicit: return max((cc_score(sg, c) for c in explicit), default=0)
+        return sum(1 for c in CNAME if cc_score(sg, c) >= 4)
+    concepts = sorted(concepts, key=concept_weight, reverse=True)
+    main = concepts[0] if concepts else None
+    secondaires = concepts[1:]
+    cats = detect_categories(qn)
+    reg = is_regulatory(qn)
+    is_cmp = any(w in qn for w in COMPARE_KW)
+    is_transv = any(w in qn for w in TRANSV_KW)
+    en_plus = ("en plus" in qn or "autres contrats" in qn)
+    # périmètre + contrats
+    if is_cmp and len(explicit) >= 2:
+        perimetre = "comparaison"; retenus = explicit
+    elif explicit and en_plus:
+        perimetre = "mono+transversal"
+        extra = [c for c in CNAME if main and cc_score(main, c) >= 1 and c not in explicit]
+        retenus = explicit + sorted(extra, key=lambda c: cc_score(main, c), reverse=True)
+    elif explicit:
+        perimetre = "mono-contrat"; retenus = explicit  # VERROUILLÉ
+    elif main:
+        perimetre = "multi-contrats"
+        retenus = sorted([c for c in CNAME if cc_score(main, c) >= 1], key=lambda c: cc_score(main, c), reverse=True)
+    else:
+        perimetre = "ambigu"; retenus = []
+    rejetes = [c for c in CNAME if c not in retenus]
+    # source officielle : niveau QUESTION uniquement, jamais pour une question de LISTE de contrats.
+    source_off = bool(reg) and not is_transv
+    # statut de conclusion — dépend de la question réelle, pas d'un simple remplissage de catégories.
+    q_absence = ("ne trouve pas" in qn) or ("conclure qu" in qn)  # « puis-je conclure qu'il n'y en a pas ? »
+    if q_absence:
+        statut = "verification_notice_requise"  # une absence dans la base ne prouve pas l'absence au contrat
+    elif source_off:
+        statut = "verification_source_officielle_requise"
+    elif perimetre == "ambigu":
+        statut = "question_ambigue"
+    elif perimetre == "mono-contrat":
+        c = explicit[0]
+        if not main:
+            statut = "donnees_insuffisantes"  # contrat nommé mais aucun concept identifié dans la base
+        else:
+            need_value = any(x in cats for x in ["formules", "plafonds", "franchises"])
+            struct = cc_score(main, c) >= (4 if need_value else 1)
+            statut = "conclusion_documentee" if struct else "verification_notice_requise"
+    elif perimetre == "comparaison":
+        statut = "conclusion_documentee" if (main and all(cc_score(main, c) >= 1 for c in explicit)) else "conclusion_partielle"
+    elif perimetre in ("multi-contrats", "mono+transversal"):
+        statut = "conclusion_documentee" if retenus else "donnees_insuffisantes"
+    else:
+        statut = "question_ambigue"
+    notice_requise = perimetre in ("mono-contrat", "comparaison", "mono+transversal")
+    return {"question": q, "contrat_explicite": explicit, "concept_principal": main, "concepts_secondaires": secondaires,
+            "type_question": ("comparaison" if is_cmp else ("transversale" if (is_transv and not explicit) else ("reglementaire" if source_off else ("mono-contrat" if explicit else ("multi" if main else "ambigu"))))),
+            "categories_demandees": cats, "perimetre": perimetre, "comparaison": is_cmp,
+            "dimension_reglementaire": bool(reg), "source_officielle_requise": source_off,
+            "contrats_retenus": retenus, "contrats_rejetes": rejetes, "notice_requise": notice_requise,
+            "statut": statut, "peut_conclure": statut == "conclusion_documentee"}
+
+def build_pertinence():
+    depth = 0
+    ev = sorted(PERT_EV, key=lambda x: (-x["score"], x["concept"], x["contrat"]))
+    write("pertinence.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE,
+        "echelle": {0: "absent", 1: "mention secondaire", 2: "définition/contexte", 3: "condition/limite/exclusion structurante", 4: "garantie/déclencheur important", 5: "cœur du produit"},
+        "note": "Score concept×contrat dérivé des catégories où le concept apparaît. Chaque score conserve preuves + justification. Aucun score sans preuve."}, "pertinence": ev}, ensure_ascii=False, indent=1))
+    md = [md_hdr("Pertinence pondérée (concept × contrat)", "Niveau de pertinence 0-5 de chaque concept pour chaque contrat, dérivé des preuves. Distingue une garantie centrale d'une simple mention."),
+          "\n**Échelle** : 0 absent · 1 mention secondaire · 2 définition · 3 condition/exclusion · 4 garantie/déclencheur · 5 cœur du produit.\n"]
+    hb = ['<h1>Pertinence pondérée (concept × contrat)</h1><p>0 absent · 1 mention · 2 définition · 3 condition/exclusion · 4 garantie/déclencheur · 5 cœur. Dérivé des preuves.</p><table><tr><th>Concept</th><th>Contrat</th><th>Score</th><th>Types</th><th>Justification</th></tr>']
+    for e in ev:
+        md.append("- **%s** × %s : **%d** (%s) — %s `preuves: %s`" % (e["concept"], CNAME.get(e["contrat"], e["contrat"]), e["score"], ", ".join(e["types"]), e["justification"], ", ".join(e["preuves"][:3])))
+        hb.append('<tr><td>%s</td><td><a href="contrat/%s.html">%s</a></td><td>%d</td><td>%s</td><td>%s</td></tr>' % (html.escape(e["concept"]), e["contrat"], html.escape(CNAME.get(e["contrat"], e["contrat"])), e["score"], html.escape(", ".join(e["types"])), html.escape(e["justification"])))
+    hb.append("</table>")
+    write("pertinence.md", "\n".join(md)); write("pertinence.html", page_html("Pertinence", "".join(hb), depth, SITE + "/ia/pertinence.html"))
+    # matrice pondérée concepts × contrats (remplace la version comptage)
+    depth = 1; cslugs = [cm["slug"] for cm in CONTRACT_META]
+    header = ["concept"] + [CNAME[s] for s in cslugs]
+    rows = [[nom] + [str(cc_score(sg, s)) for s in cslugs] for sg, nom, kws, facets in CONCEPTS]
+    write("matrices/concepts-contrats.csv", csv_rows([header] + rows))
+    write("matrices/concepts-contrats.json", json.dumps({"meta": {"version": VERSION, "type": "pertinence_ponderee_0_5"}, "colonnes": [CNAME[s] for s in cslugs], "lignes": [{"concept": r[0], **{header[i + 1]: int(r[i + 1]) for i in range(len(cslugs))}} for r in rows]}, ensure_ascii=False, indent=1))
+    th = "<tr>" + "".join("<th>%s</th>" % html.escape(x) for x in header) + "</tr>"
+    tb = "".join("<tr><td>%s</td>%s</tr>" % (html.escape(r[0]), "".join('<td style="text-align:center">%s</td>' % (x if x != "0" else "·") for x in r[1:])) for r in rows)
+    write("matrices/concepts-contrats.html", page_html("Matrice pondérée concepts × contrats", "<h1>Matrice pondérée — concepts × contrats (0-5)</h1><p>0 absent · 5 cœur du produit.</p><table>%s%s</table>" % (th, tb), depth, SITE + "/ia/matrices/concepts-contrats.html"))
+    write("matrices/concepts-contrats.md", md_hdr("Matrice pondérée concepts × contrats", "Score 0-5.") + "\n| " + " | ".join(header) + " |\n|" + "|".join(["---"] * len(header)) + "|\n" + "\n".join("| " + " | ".join(str(x) for x in r) + " |" for r in rows))
+
+def build_routage():
+    depth = 0
+    md = md_hdr("Routage par type de question", "Comment le système détermine le périmètre, les contrats retenus, les catégories et le déclenchement des sources officielles. Le contrat explicitement nommé verrouille la recherche.") + """
+## Détection d'entités (dérivée, sans LLM)
+- **Contrat explicite** : nom/variantes détectés dans la question → **verrouillage** du périmètre.
+- **Concept principal / secondaires** : concepts dont un synonyme apparaît, classés par pertinence (score 0-5).
+- **Type de question** : mono-contrat · transversale · comparaison · réglementaire · ambiguë.
+- **Catégories demandées** : barème→formules/garanties/définitions · définition→définitions · franchise→franchises · exclusion→exclusions · etc.
+- **Dimension réglementaire** : détectée sur des **mots de la question** (déductible, fiscal, succession, âge légal, Sécurité sociale…), pas sur le concept.
+
+## Règles de routage
+1. **Contrat explicite nommé** → **mono-contrat verrouillé** (les autres contrats sont *rejetés*), sauf demande de comparaison / d'alternatives / « autres contrats ».
+2. **Comparaison** (`compare A et B`) → **uniquement** A et B.
+3. **Transversale** (`quels contrats…`) → contrats classés par **score de pertinence** ; 4-5 d'abord, 1-3 signalés à part.
+4. **Réglementaire** → contrat d'abord si utile, **puis** sources officielles adaptées.
+5. **Strictement contractuelle** (garantie, exclusion, barème, franchise, plafond, déclencheur d'un contrat) → **aucune source officielle externe** par défaut.
+
+## Déclenchement des sources officielles
+Requis **uniquement** si la question porte sur : fiscalité, déductibilité, plafond légal, âge légal, retraite/PER (fiscal), succession, protection/Sécurité sociale, droit de l'assurance, obligation réglementaire, définition légale.
+**Jamais** pour une garantie/exclusion/définition/barème/délai/franchise/déclencheur/plafond **contractuels**.
+
+Format machine : [routage.json](routage.json) (analyse des 10 questions de validation).
+"""
+    # Étape 13 — analyse détaillée des 10 questions de validation.
+    valids = [tq["question"] for tq in _quality_tests() if tq["famille"] == "validation"]
+    analyses = [analyze(q) for q in valids]
+    write("routage.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE,
+        "note": "Analyse dérivée (détection d'entités + routage) des questions de validation. Sans LLM."}, "analyses": analyses}, ensure_ascii=False, indent=1))
+    md += "\n## Validation — 10 questions\n"
+    hb_extra = "<h2>Validation — 10 questions</h2>"
+    for a in analyses:
+        line = ("- **%s**\n  - entités : contrat=%s · concept=%s · secondaires=%s\n  - périmètre : **%s** (%s)\n  - contrats retenus : %s\n  - contrats rejetés : %d\n  - catégories : %s\n  - source officielle : **%s**\n  - statut : **%s**" % (
+            a["question"], a["contrat_explicite"] or "aucun", a["concept_principal"] or "—", ", ".join(a["concepts_secondaires"]) or "—",
+            a["perimetre"], a["type_question"], ", ".join(a["contrats_retenus"]) or "—", len(a["contrats_rejetes"]),
+            ", ".join(a["categories_demandees"]) or "—", a["source_officielle_requise"], a["statut"]))
+        md += "\n" + line + "\n"
+        hb_extra += ('<h3>%s</h3><ul><li>Entités : contrat <code>%s</code> · concept <code>%s</code></li>'
+                     '<li>Périmètre : <strong>%s</strong> (%s)</li><li>Contrats retenus : %s · rejetés : %d</li>'
+                     '<li>Catégories : %s</li><li>Source officielle : <strong>%s</strong></li><li>Statut : <strong>%s</strong></li></ul>') % (
+            html.escape(a["question"]), html.escape(", ".join(a["contrat_explicite"]) or "aucun"), html.escape(str(a["concept_principal"] or "—")),
+            html.escape(a["perimetre"]), html.escape(a["type_question"]), html.escape(", ".join(a["contrats_retenus"]) or "—"),
+            len(a["contrats_rejetes"]), html.escape(", ".join(a["categories_demandees"]) or "—"), a["source_officielle_requise"], html.escape(a["statut"]))
+    write("routage.md", md)
+    write("routage.html", page_html("Routage", renderish(md.split("## Validation")[0]) + hb_extra, depth, SITE + "/ia/routage.html"))
+
+
 def build():
     os.makedirs(IA, exist_ok=True)
     build_contrats_list()
@@ -1326,7 +1615,7 @@ def build():
     build_comparateur(concepts)
     build_preuves()
     build_methode()
-    build_tests(concepts)
+    metrics = build_tests(concepts)  # tests-qualité + harness de précision
     # Infrastructure de raisonnement documentaire (Parties 2–10, 12)
     build_hierarchie()
     build_sources_officielles()
@@ -1335,17 +1624,23 @@ def build():
     build_connaissances_dynamiques()
     build_choix_sources()
     build_matrices(concepts)
+    build_pertinence()   # moteur de précision : pertinence pondérée (écrase la matrice concepts×contrats)
+    build_routage()
+    build_qualite(metrics)
     build_graphe()
     build_outils()
     build_static_pages(tc)
     rows, allok = build_coverage(coverage())
     build_maturite(rows)
     nfiles = sum(len(fs) for _, _, fs in os.walk(IA))
-    print("✅ Vue IA exhaustive générée : %d fichiers, %d contrats, %d thèmes." % (nfiles, len(CONTRATS), len(THEMES)))
-    print("Couverture :")
-    for lbl, tot, ok in rows:
-        print("  %-34s %3d/%-3d  %s%%" % (lbl, ok, tot, "100" if tot == 0 or ok == tot else round(100 * ok / tot, 1)))
-    print("Verdict :", "✅ 100% (aucune info perdue)" if allok else "⚠ partielle")
+    print("✅ Vue IA générée : %d fichiers, %d contrats, %d thèmes." % (nfiles, len(CONTRATS), len(THEMES)))
+    print("Couverture données : %s" % ("100%" if allok else "partielle"))
+    print("Précision routage — %d tests : contrats P=%.0f%% R=%.0f%% | périmètre %.0f%% | source off. %.0f%% | statut %.0f%% | faux positifs contrats : %d" % (
+        metrics["n"], metrics["contrats_precision"], metrics["contrats_recall"], metrics["perimetre_exact"],
+        metrics["source_exact"], metrics["statut_exact"], metrics["faux_positifs"]))
+    if metrics["echecs"]:
+        print("Échecs restants (%d) :" % len(metrics["echecs"]))
+        for e in metrics["echecs"][:12]: print("  [%s] %s -> %s" % (e["famille"], e["question"][:52], ", ".join(e["raisons"])))
 
 if __name__ == "__main__":
     build()

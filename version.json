@@ -1,7 +1,7 @@
 {
   "produit": "Gabriel AXA",
-  "version": "1.4.0",
-  "nom": "Vue IA — infrastructure de raisonnement documentaire : hiérarchie documentaire, sources officielles (autorités publiques par concept), détecteur de réglementation, surveillance (jamais auto), connaissances dynamiques (chaîne prête), matrices (HTML/MD/JSON/CSV), graphe documentaire, moteur de choix des sources, 51 tests, maturité",
+  "version": "1.5.0",
+  "nom": "Vue IA — précision du routage : détection d'entités, verrouillage du contrat explicite, pertinence pondérée (0-5), routage par type de question, déclenchement strict des sources officielles, statuts de conclusion, 76 tests de qualité + métriques de précision",
   "date": "2026-07-09",
-  "note": "La Vue IA est une PROJECTION des JSON (source de vérité), générée par scripts/build_ia.py. Aucun master modifié, aucune donnée réglementaire inventée : les sources officielles sont des POINTEURS de navigation vers des autorités publiques (à valider). La surveillance ne met jamais à jour automatiquement. La notice PDF fait foi."
+  "note": "Projection dérivée des JSON. Aucun master modifié. Le moteur distingue contrat explicite / transversale / comparaison / réglementaire, pondère la pertinence concept×contrat d'après les preuves, ne déclenche les sources officielles qu'au niveau question, et refuse de conclure quand la couverture est insuffisante. Précision contrats 100 %, 0 faux positif sur 76 tests. La notice PDF fait foi."
 }

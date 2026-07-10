@@ -10,6 +10,9 @@
 **Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
 
 
+- **[Routage par type de question](routage.html)** — détection d'entités + verrouillage du contrat explicite + périmètre
+- **[Pertinence pondérée](pertinence.html)** — score 0-5 concept×contrat (garantie centrale vs mention), avec preuves
+- **[Qualité du routage](qualite-routage.html)** — métriques de précision : contrats, périmètre, sources, statut ; erreurs par famille
 - **[Planificateur de recherche](planificateur.html)** — question → plan (concept, synonymes, contrats, catégories, notices)
 - **[Index conceptuel](concepts.html)** — concepts métier reliant synonymes, contrats, catégories, sources
 - **[Détecteur de couverture](couverture-recherche.html)** — présent / absent de la base / à vérifier en notice

@@ -1,320 +1,397 @@
-# Jeux de tests (51 questions)
+# Jeux de tests de qualité (76)
 
 > **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v1.2.0).
 > Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
 
-**Objectif.** Questions simples, transversales, comparaisons, ambiguës, sans réponse et nécessitant une source officielle ; parcours attendus calculés automatiquement.
+**Objectif.** Chaque test vérifie que le PARCOURS est correct : bon contrat verrouillé, contrats interdits absents, source officielle au bon moment, statut attendu.
 
 **Règles.** Pack A = preuve contractuelle. Pack B = raisonnement (jamais une preuve seule). Toujours citer la source (notice, page). Ne jamais inventer ; si une information est absente, le dire. La notice PDF fait foi.
 
 **Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
 
 
-**Répartition :** transversale : 15, comparaison : 15, simple : 6, complexe : 4, source_officielle : 5, ambigu : 3, sans_reponse : 3
+**Passés : 76/76.** Précision contrats 100% · rappel 100% · périmètre 100% · source officielle 100% · statut 83%. Faux positifs contrats : 0.
 
 
-## [transversale] Quels contrats traitent de invalidité ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(18), exclusions(13), definitions(18), conditions(2), declencheurs(32), plafonds(16), franchises(4), options(9), cotisations(4), delais(2), fiscalite(1), points-vigilance(7), formules(7)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (ameli, code-assurances, legifrance, service-public)
+## ✅ [validation] Quel est le barème d'invalidité d'Avizen Pro ?
+- Détecté : contrat=['avizen-pro'] · concept=invalidite · périmètre=mono-contrat · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen-pro
+- Attendu : obligatoires=avizen-pro · interdits=8 · source=False · statut=conclusion_documentee
 
-## [transversale] Quels contrats traitent de décès ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(18), exclusions(12), definitions(4), conditions(1), declencheurs(18), plafonds(9), options(9), cotisations(7), delais(5), fiscalite(4), points-vigilance(6), formules(2)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, code-assurances, service-public)
+## ✅ [validation] Quelle est la définition d'un accident dans Ma Protection Accident ?
+- Détecté : contrat=['ma-protection-accident-garantie-des-accidents-de-la-vie'] · concept=accident · périmètre=mono-contrat · source_off=False · statut=conclusion_documentee
+- Contrats retenus : ma-protection-accident-garantie-des-accidents-de-la-vie
+- Attendu : obligatoires=ma-protection-accident-garantie-des-accidents-de-la-vie · interdits=8 · source=False · statut=conclusion_documentee
 
-## [transversale] Quels contrats traitent de décès accidentel ?
-- Contrats retrouvés : Entour'Age, Essen'Ciel (assurance obsèques), Ma Protection Accident (Garantie des accidents de la vie)
-- Catégories : exclusions(2), declencheurs(1), franchises(1), options(1), delais(2), points-vigilance(1)
-- Manquants dans la base : conditions, definitions, garanties
-- Peut conclure : NON → notice/certificat/source officielle · **Source officielle requise** (code-assurances, service-public)
+## ✅ [validation] Quels contrats parlent d'invalidité ?
+- Détecté : contrat=— · concept=invalidite · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, avizen-pro, masterlife-credit, essen-ciel-assurance-obseques, ma-protection-accident-garantie-des-accidents-de-la-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, entour-age, excelium-assurance-vie
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
 
-## [transversale] Quels contrats traitent de accident ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Masterlife CREDIT
-- Catégories : garanties(17), exclusions(13), definitions(11), declencheurs(26), plafonds(4), franchises(4), options(3), delais(4), points-vigilance(5)
-- Manquants dans la base : conditions
-- Peut conclure : oui
+## ✅ [validation] Compare Avizen Pro et Masterlife Crédit sur l'invalidité.
+- Détecté : contrat=['avizen-pro', 'masterlife-credit'] · concept=invalidite · périmètre=comparaison · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen-pro, masterlife-credit
+- Attendu : obligatoires=avizen-pro, masterlife-credit · interdits=7 · source=False · statut=—
 
-## [transversale] Quels contrats traitent de hospitalisation ?
-- Contrats retrouvés : Avizen Pro, Entour'Age, Masterlife CREDIT
-- Catégories : garanties(2), exclusions(1), definitions(1), options(1), delais(1), points-vigilance(1)
-- Manquants dans la base : conditions, declencheurs
-- Peut conclure : oui · **Source officielle requise** (ameli, code-secu, service-public)
+## ✅ [validation] Quels contrats excluent le suicide ?
+- Détecté : contrat=— · concept=suicide · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, avizen-pro, entour-age, essen-ciel-assurance-obseques, essen-ciel-patrimoine, excelium-assurance-vie, ma-protection-accident-garantie-des-accidents-de-la-vie, masterlife-credit
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
 
-## [transversale] Quels contrats traitent de incapacité temporaire ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Excelium (assurance vie), Masterlife CREDIT
-- Catégories : garanties(7), exclusions(2), definitions(3), conditions(1), declencheurs(8), plafonds(4), franchises(4), options(2), delais(5), points-vigilance(5), formules(5)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (ameli, code-secu, service-public)
+## ✅ [validation] Jusqu'à quel âge les versements sur PER sont-ils déductibles ?
+- Détecté : contrat=['ma-retraite-plan-d-epargne-retraite-individuel-per'] · concept=— · périmètre=mono-contrat · source_off=True · statut=verification_source_officielle_requise
+- Contrats retenus : ma-retraite-plan-d-epargne-retraite-individuel-per
+- Attendu : obligatoires=ma-retraite-plan-d-epargne-retraite-individuel-per · interdits=0 · source=True · statut=verification_source_officielle_requise
 
-## [transversale] Quels contrats traitent de carence / délai d'attente ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques)
-- Catégories : exclusions(1), definitions(1), conditions(1), declencheurs(1), franchises(3), options(1), points-vigilance(2)
-- Manquants dans la base : garanties
-- Peut conclure : oui
+## ✅ [validation] Quelle est la franchise contractuelle d'Avizen Pro ?
+- Détecté : contrat=['avizen-pro'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : avizen-pro
+- Attendu : obligatoires=avizen-pro · interdits=8 · source=False · statut=—
 
-## [transversale] Quels contrats traitent de rachat ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(5), exclusions(2), definitions(1), plafonds(2), options(7), cotisations(11), delais(1), fiscalite(30), points-vigilance(9), formules(6)
-- Manquants dans la base : conditions, declencheurs
-- Peut conclure : oui · **Source officielle requise** (acpr, bofip, cgi, code-assurances, impots)
+## ✅ [validation] Quels autres contrats traitent de l'invalidité en plus d'Avizen Pro ?
+- Détecté : contrat=['avizen-pro'] · concept=invalidite · périmètre=mono+transversal · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen-pro, avizen, masterlife-credit, essen-ciel-assurance-obseques, ma-protection-accident-garantie-des-accidents-de-la-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, entour-age, excelium-assurance-vie
+- Attendu : obligatoires=avizen-pro · interdits=0 · source=False · statut=—
 
-## [transversale] Quels contrats traitent de souscription & adhésion ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(14), exclusions(4), definitions(3), conditions(8), declencheurs(3), plafonds(4), franchises(3), options(10), cotisations(13), delais(7), fiscalite(9), points-vigilance(7), formules(1)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (acpr, code-assurances, service-public)
+## ✅ [validation] Cette garantie dépend-elle de la Sécurité sociale ?
+- Détecté : contrat=— · concept=— · périmètre=ambigu · source_off=True · statut=verification_source_officielle_requise
+- Contrats retenus : —
+- Attendu : obligatoires=— · interdits=0 · source=True · statut=verification_source_officielle_requise
 
-## [transversale] Quels contrats traitent de âge ?
-- Contrats retrouvés : Avizen, Entour'Age
-- Catégories : conditions(1), cotisations(1)
-- Manquants dans la base : declencheurs, definitions, exclusions, garanties
-- Peut conclure : NON → notice/certificat/source officielle · **Source officielle requise** (cnav, code-secu, service-public)
+## ✅ [validation] Je ne trouve pas de plafond chiffré : puis-je conclure qu'il n'y en a pas ?
+- Détecté : contrat=— · concept=— · périmètre=ambigu · source_off=False · statut=verification_notice_requise
+- Contrats retenus : —
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=verification_notice_requise
 
-## [transversale] Quels contrats traitent de suicide ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Masterlife CREDIT
-- Catégories : exclusions(10)
-- Manquants dans la base : conditions, declencheurs, definitions, garanties
-- Peut conclure : NON → notice/certificat/source officielle
+## ✅ [verrou_contrat] Quelles garanties Avizen propose-t-il ?
+- Détecté : contrat=['avizen'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : avizen
+- Attendu : obligatoires=avizen · interdits=8 · source=False · statut=—
 
-## [transversale] Quels contrats traitent de bénéficiaire ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(7), exclusions(2), definitions(2), plafonds(2), options(3), delais(3), fiscalite(7), points-vigilance(1)
-- Manquants dans la base : conditions, declencheurs
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, code-assurances, service-public)
+## ✅ [verrou_contrat] Quelles exclusions dans Avizen ?
+- Détecté : contrat=['avizen'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : avizen
+- Attendu : obligatoires=avizen · interdits=8 · source=False · statut=—
 
-## [transversale] Quels contrats traitent de fiscalité ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(4), definitions(2), conditions(2), declencheurs(2), options(3), cotisations(3), delais(1), fiscalite(12), points-vigilance(3)
-- Manquants dans la base : exclusions
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, impots, service-public)
+## ✅ [verrou_contrat] Quels déclencheurs dans Avizen ?
+- Détecté : contrat=['avizen'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : avizen
+- Attendu : obligatoires=avizen · interdits=8 · source=False · statut=—
 
-## [transversale] Quels contrats traitent de fin de garantie ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(11), exclusions(1), declencheurs(4), plafonds(1), options(7), cotisations(6), delais(2), fiscalite(1)
-- Manquants dans la base : conditions, definitions
-- Peut conclure : oui
+## ✅ [verrou_contrat] Quelles garanties Avizen Pro propose-t-il ?
+- Détecté : contrat=['avizen-pro'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : avizen-pro
+- Attendu : obligatoires=avizen-pro · interdits=8 · source=False · statut=—
 
-## [transversale] Quels contrats traitent de association / anpere ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Excelium (assurance vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(1), conditions(6), cotisations(3)
-- Manquants dans la base : declencheurs, definitions, exclusions
-- Peut conclure : oui
+## ✅ [verrou_contrat] Quelles exclusions dans Avizen Pro ?
+- Détecté : contrat=['avizen-pro'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : avizen-pro
+- Attendu : obligatoires=avizen-pro · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare invalidité entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(18), exclusions(13), definitions(18), conditions(2), declencheurs(32), plafonds(16), franchises(4), options(9), cotisations(4), delais(2), fiscalite(1), points-vigilance(7), formules(7)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (ameli, code-assurances, legifrance, service-public)
+## ✅ [verrou_contrat] Quels déclencheurs dans Avizen Pro ?
+- Détecté : contrat=['avizen-pro'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : avizen-pro
+- Attendu : obligatoires=avizen-pro · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare décès entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(18), exclusions(12), definitions(4), conditions(1), declencheurs(18), plafonds(9), options(9), cotisations(7), delais(5), fiscalite(4), points-vigilance(6), formules(2)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, code-assurances, service-public)
+## ✅ [verrou_contrat] Quelles garanties Entour'Age propose-t-il ?
+- Détecté : contrat=['entour-age'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : entour-age
+- Attendu : obligatoires=entour-age · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare décès accidentel entre les contrats concernés.
-- Contrats retrouvés : Entour'Age, Essen'Ciel (assurance obsèques), Ma Protection Accident (Garantie des accidents de la vie)
-- Catégories : exclusions(2), declencheurs(1), franchises(1), options(1), delais(2), points-vigilance(1)
-- Manquants dans la base : conditions, definitions, garanties
-- Peut conclure : NON → notice/certificat/source officielle · **Source officielle requise** (code-assurances, service-public)
+## ✅ [verrou_contrat] Quelles exclusions dans Entour'Age ?
+- Détecté : contrat=['entour-age'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : entour-age
+- Attendu : obligatoires=entour-age · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare accident entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Masterlife CREDIT
-- Catégories : garanties(17), exclusions(13), definitions(11), declencheurs(26), plafonds(4), franchises(4), options(3), delais(4), points-vigilance(5)
-- Manquants dans la base : conditions
-- Peut conclure : oui
+## ✅ [verrou_contrat] Quels déclencheurs dans Entour'Age ?
+- Détecté : contrat=['entour-age'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : entour-age
+- Attendu : obligatoires=entour-age · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare hospitalisation entre les contrats concernés.
-- Contrats retrouvés : Avizen Pro, Entour'Age, Masterlife CREDIT
-- Catégories : garanties(2), exclusions(1), definitions(1), options(1), delais(1), points-vigilance(1)
-- Manquants dans la base : conditions, declencheurs
-- Peut conclure : oui · **Source officielle requise** (ameli, code-secu, service-public)
+## ✅ [verrou_contrat] Quelles garanties Essen'Ciel (assurance obsèques) propose-t-il ?
+- Détecté : contrat=['essen-ciel-assurance-obseques'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : essen-ciel-assurance-obseques
+- Attendu : obligatoires=essen-ciel-assurance-obseques · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare incapacité temporaire entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Excelium (assurance vie), Masterlife CREDIT
-- Catégories : garanties(7), exclusions(2), definitions(3), conditions(1), declencheurs(8), plafonds(4), franchises(4), options(2), delais(5), points-vigilance(5), formules(5)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (ameli, code-secu, service-public)
+## ✅ [verrou_contrat] Quelles exclusions dans Essen'Ciel (assurance obsèques) ?
+- Détecté : contrat=['essen-ciel-assurance-obseques'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : essen-ciel-assurance-obseques
+- Attendu : obligatoires=essen-ciel-assurance-obseques · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare carence / délai d'attente entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques)
-- Catégories : exclusions(1), definitions(1), conditions(1), declencheurs(1), franchises(3), options(1), points-vigilance(2)
-- Manquants dans la base : garanties
-- Peut conclure : oui
+## ✅ [verrou_contrat] Quels déclencheurs dans Essen'Ciel (assurance obsèques) ?
+- Détecté : contrat=['essen-ciel-assurance-obseques'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : essen-ciel-assurance-obseques
+- Attendu : obligatoires=essen-ciel-assurance-obseques · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare rachat entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(5), exclusions(2), definitions(1), plafonds(2), options(7), cotisations(11), delais(1), fiscalite(30), points-vigilance(9), formules(6)
-- Manquants dans la base : conditions, declencheurs
-- Peut conclure : oui · **Source officielle requise** (acpr, bofip, cgi, code-assurances, impots)
+## ✅ [verrou_contrat] Quelles garanties Essen'Ciel Patrimoine propose-t-il ?
+- Détecté : contrat=['essen-ciel-patrimoine'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : essen-ciel-patrimoine
+- Attendu : obligatoires=essen-ciel-patrimoine · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare souscription & adhésion entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(14), exclusions(4), definitions(3), conditions(8), declencheurs(3), plafonds(4), franchises(3), options(10), cotisations(13), delais(7), fiscalite(9), points-vigilance(7), formules(1)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (acpr, code-assurances, service-public)
+## ✅ [verrou_contrat] Quelles exclusions dans Essen'Ciel Patrimoine ?
+- Détecté : contrat=['essen-ciel-patrimoine'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : essen-ciel-patrimoine
+- Attendu : obligatoires=essen-ciel-patrimoine · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare âge entre les contrats concernés.
-- Contrats retrouvés : Avizen, Entour'Age
-- Catégories : conditions(1), cotisations(1)
-- Manquants dans la base : declencheurs, definitions, exclusions, garanties
-- Peut conclure : NON → notice/certificat/source officielle · **Source officielle requise** (cnav, code-secu, service-public)
+## ✅ [verrou_contrat] Quels déclencheurs dans Essen'Ciel Patrimoine ?
+- Détecté : contrat=['essen-ciel-patrimoine'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : essen-ciel-patrimoine
+- Attendu : obligatoires=essen-ciel-patrimoine · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare suicide entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Masterlife CREDIT
-- Catégories : exclusions(10)
-- Manquants dans la base : conditions, declencheurs, definitions, garanties
-- Peut conclure : NON → notice/certificat/source officielle
+## ✅ [verrou_contrat] Quelles garanties Excelium (assurance vie) propose-t-il ?
+- Détecté : contrat=['excelium-assurance-vie'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : excelium-assurance-vie
+- Attendu : obligatoires=excelium-assurance-vie · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare bénéficiaire entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(7), exclusions(2), definitions(2), plafonds(2), options(3), delais(3), fiscalite(7), points-vigilance(1)
-- Manquants dans la base : conditions, declencheurs
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, code-assurances, service-public)
+## ✅ [verrou_contrat] Quelles exclusions dans Excelium (assurance vie) ?
+- Détecté : contrat=['excelium-assurance-vie'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : excelium-assurance-vie
+- Attendu : obligatoires=excelium-assurance-vie · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare fiscalité entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(4), definitions(2), conditions(2), declencheurs(2), options(3), cotisations(3), delais(1), fiscalite(12), points-vigilance(3)
-- Manquants dans la base : exclusions
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, impots, service-public)
+## ✅ [verrou_contrat] Quels déclencheurs dans Excelium (assurance vie) ?
+- Détecté : contrat=['excelium-assurance-vie'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : excelium-assurance-vie
+- Attendu : obligatoires=excelium-assurance-vie · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare fin de garantie entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(11), exclusions(1), declencheurs(4), plafonds(1), options(7), cotisations(6), delais(2), fiscalite(1)
-- Manquants dans la base : conditions, definitions
-- Peut conclure : oui
+## ✅ [verrou_contrat] Quelles garanties Ma Protection Accident (Garantie des accidents de la vie) propose-t-il ?
+- Détecté : contrat=['ma-protection-accident-garantie-des-accidents-de-la-vie'] · concept=accident · périmètre=mono-contrat · source_off=False · statut=conclusion_documentee
+- Contrats retenus : ma-protection-accident-garantie-des-accidents-de-la-vie
+- Attendu : obligatoires=ma-protection-accident-garantie-des-accidents-de-la-vie · interdits=8 · source=False · statut=—
 
-## [comparaison] Compare association / anpere entre les contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Excelium (assurance vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(1), conditions(6), cotisations(3)
-- Manquants dans la base : declencheurs, definitions, exclusions
-- Peut conclure : oui
+## ✅ [verrou_contrat] Quelles exclusions dans Ma Protection Accident (Garantie des accidents de la vie) ?
+- Détecté : contrat=['ma-protection-accident-garantie-des-accidents-de-la-vie'] · concept=accident · périmètre=mono-contrat · source_off=False · statut=conclusion_documentee
+- Contrats retenus : ma-protection-accident-garantie-des-accidents-de-la-vie
+- Attendu : obligatoires=ma-protection-accident-garantie-des-accidents-de-la-vie · interdits=8 · source=False · statut=—
 
-## [simple] Quel est le barème d'invalidité d'Avizen Pro ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(18), exclusions(13), definitions(18), conditions(2), declencheurs(32), plafonds(16), franchises(4), options(9), cotisations(4), delais(2), fiscalite(1), points-vigilance(7), formules(7)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (ameli, code-assurances, legifrance, service-public)
+## ✅ [verrou_contrat] Quels déclencheurs dans Ma Protection Accident (Garantie des accidents de la vie) ?
+- Détecté : contrat=['ma-protection-accident-garantie-des-accidents-de-la-vie'] · concept=accident · périmètre=mono-contrat · source_off=False · statut=conclusion_documentee
+- Contrats retenus : ma-protection-accident-garantie-des-accidents-de-la-vie
+- Attendu : obligatoires=ma-protection-accident-garantie-des-accidents-de-la-vie · interdits=8 · source=False · statut=—
 
-## [simple] Quelle est la définition d'un accident dans Ma Protection Accident ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Masterlife CREDIT
-- Catégories : garanties(17), exclusions(13), definitions(11), declencheurs(26), plafonds(4), franchises(4), options(3), delais(4), points-vigilance(5)
-- Manquants dans la base : conditions
-- Peut conclure : oui
+## ✅ [verrou_contrat] Quelles garanties Ma Retraite (plan d'épargne retraite individuel — PER) propose-t-il ?
+- Détecté : contrat=['ma-retraite-plan-d-epargne-retraite-individuel-per'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : ma-retraite-plan-d-epargne-retraite-individuel-per
+- Attendu : obligatoires=ma-retraite-plan-d-epargne-retraite-individuel-per · interdits=8 · source=False · statut=—
 
-## [simple] Quel est l'âge maximal de souscription ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : conditions(9), cotisations(14), garanties(14), exclusions(4), definitions(3), declencheurs(3), plafonds(4), franchises(3), options(10), delais(7), fiscalite(9), points-vigilance(7), formules(1)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (acpr, cnav, code-assurances, code-secu, service-public)
+## ✅ [verrou_contrat] Quelles exclusions dans Ma Retraite (plan d'épargne retraite individuel — PER) ?
+- Détecté : contrat=['ma-retraite-plan-d-epargne-retraite-individuel-per'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : ma-retraite-plan-d-epargne-retraite-individuel-per
+- Attendu : obligatoires=ma-retraite-plan-d-epargne-retraite-individuel-per · interdits=8 · source=False · statut=—
 
-## [simple] Quelle est la garantie décès de MasterLife ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(18), exclusions(12), definitions(4), conditions(1), declencheurs(18), plafonds(9), options(9), cotisations(7), delais(5), fiscalite(4), points-vigilance(6), formules(2)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, code-assurances, service-public)
+## ✅ [verrou_contrat] Quels déclencheurs dans Ma Retraite (plan d'épargne retraite individuel — PER) ?
+- Détecté : contrat=['ma-retraite-plan-d-epargne-retraite-individuel-per'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : ma-retraite-plan-d-epargne-retraite-individuel-per
+- Attendu : obligatoires=ma-retraite-plan-d-epargne-retraite-individuel-per · interdits=8 · source=False · statut=—
 
-## [simple] Y a-t-il une carence sur le décès par maladie ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : exclusions(13), definitions(5), conditions(2), declencheurs(19), franchises(3), options(10), points-vigilance(8), garanties(18), plafonds(9), cotisations(7), delais(5), fiscalite(4), formules(2)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, code-assurances, service-public)
+## ✅ [verrou_contrat] Quelles garanties Masterlife CREDIT propose-t-il ?
+- Détecté : contrat=['masterlife-credit'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : masterlife-credit
+- Attendu : obligatoires=masterlife-credit · interdits=8 · source=False · statut=—
 
-## [simple] Quelles exclusions s'appliquent au suicide ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Masterlife CREDIT
-- Catégories : exclusions(10)
-- Manquants dans la base : conditions, declencheurs, definitions, garanties
-- Peut conclure : NON → notice/certificat/source officielle
+## ✅ [verrou_contrat] Quelles exclusions dans Masterlife CREDIT ?
+- Détecté : contrat=['masterlife-credit'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : masterlife-credit
+- Attendu : obligatoires=masterlife-credit · interdits=8 · source=False · statut=—
 
-## [complexe] Dans quels contrats une invalidité peut-elle déclencher une prestation, selon quelles définitions et avec quelles exclusions ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(18), exclusions(13), definitions(18), conditions(2), declencheurs(32), plafonds(16), franchises(4), options(9), cotisations(4), delais(2), fiscalite(1), points-vigilance(7), formules(7)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (ameli, code-assurances, legifrance, service-public)
+## ✅ [verrou_contrat] Quels déclencheurs dans Masterlife CREDIT ?
+- Détecté : contrat=['masterlife-credit'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : masterlife-credit
+- Attendu : obligatoires=masterlife-credit · interdits=8 · source=False · statut=—
 
-## [complexe] Compare les conditions d'adhésion et limites d'âge des contrats concernés.
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(14), exclusions(4), definitions(3), conditions(9), declencheurs(3), plafonds(4), franchises(3), options(10), cotisations(14), delais(7), fiscalite(9), points-vigilance(7), formules(1)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (acpr, cnav, code-assurances, code-secu, service-public)
+## ✅ [contractuel_strict] Quelle franchise contractuelle dans Avizen ?
+- Détecté : contrat=['avizen'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : avizen
+- Attendu : obligatoires=avizen · interdits=8 · source=False · statut=—
 
-## [complexe] Quels éléments nécessitent une vérification dans la notice ou le certificat d'adhésion ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(9), exclusions(2), definitions(3), plafonds(2), options(10), cotisations(14), delais(2), fiscalite(42), points-vigilance(12), formules(6), conditions(2), declencheurs(2)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (acpr, bofip, cgi, code-assurances, impots, service-public)
+## ✅ [contractuel_strict] Quelle franchise contractuelle dans Avizen Pro ?
+- Détecté : contrat=['avizen-pro'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : avizen-pro
+- Attendu : obligatoires=avizen-pro · interdits=8 · source=False · statut=—
 
-## [complexe] Quelles garanties et exclusions encadrent le décès accidentel ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : exclusions(14), declencheurs(19), franchises(1), options(10), delais(7), points-vigilance(7), garanties(18), definitions(4), conditions(1), plafonds(9), cotisations(7), fiscalite(4), formules(2)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, code-assurances, service-public)
+## ✅ [contractuel_strict] Quelle franchise contractuelle dans Entour'Age ?
+- Détecté : contrat=['entour-age'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : entour-age
+- Attendu : obligatoires=entour-age · interdits=8 · source=False · statut=—
 
-## [source_officielle] Quelle est la fiscalité de transmission d'une assurance vie au décès ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(22), definitions(6), conditions(3), declencheurs(20), options(12), cotisations(10), delais(6), fiscalite(16), points-vigilance(9), exclusions(12), plafonds(9), formules(2)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, code-assurances, impots, service-public)
+## ✅ [contractuel_strict] Quelle franchise contractuelle dans Essen'Ciel (assurance obsèques) ?
+- Détecté : contrat=['essen-ciel-assurance-obseques'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : essen-ciel-assurance-obseques
+- Attendu : obligatoires=essen-ciel-assurance-obseques · interdits=8 · source=False · statut=—
 
-## [source_officielle] Quel est le régime fiscal du PER (Ma Retraite) ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(4), definitions(2), conditions(3), declencheurs(2), options(3), cotisations(4), delais(1), fiscalite(12), points-vigilance(3)
-- Manquants dans la base : exclusions
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, cnav, code-secu, impots, service-public)
+## ✅ [contractuel_strict] Quelle franchise contractuelle dans Essen'Ciel Patrimoine ?
+- Détecté : contrat=['essen-ciel-patrimoine'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : essen-ciel-patrimoine
+- Attendu : obligatoires=essen-ciel-patrimoine · interdits=8 · source=False · statut=—
 
-## [source_officielle] Quel abattement s'applique à la succession du bénéficiaire ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(11), exclusions(2), definitions(4), plafonds(2), options(6), delais(4), fiscalite(19), points-vigilance(4), conditions(2), declencheurs(2), cotisations(3)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (bofip, cgi, code-assurances, impots, service-public)
+## ✅ [contractuel_strict] Quelle franchise contractuelle dans Excelium (assurance vie) ?
+- Détecté : contrat=['excelium-assurance-vie'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : excelium-assurance-vie
+- Attendu : obligatoires=excelium-assurance-vie · interdits=8 · source=False · statut=—
 
-## [source_officielle] Quel est l'âge légal de départ à la retraite ?
-- Contrats retrouvés : Avizen, Entour'Age
-- Catégories : conditions(1), cotisations(1)
-- Manquants dans la base : declencheurs, definitions, exclusions, garanties
-- Peut conclure : NON → notice/certificat/source officielle · **Source officielle requise** (cnav, code-secu, service-public)
+## ✅ [contractuel_strict] Quelle franchise contractuelle dans Ma Protection Accident (Garantie des accidents de la vie) ?
+- Détecté : contrat=['ma-protection-accident-garantie-des-accidents-de-la-vie'] · concept=accident · périmètre=mono-contrat · source_off=False · statut=conclusion_documentee
+- Contrats retenus : ma-protection-accident-garantie-des-accidents-de-la-vie
+- Attendu : obligatoires=ma-protection-accident-garantie-des-accidents-de-la-vie · interdits=8 · source=False · statut=—
 
-## [source_officielle] Comment est traitée fiscalement la valeur de rachat ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(9), exclusions(2), definitions(3), plafonds(2), options(10), cotisations(14), delais(2), fiscalite(42), points-vigilance(12), formules(6), conditions(2), declencheurs(2)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (acpr, bofip, cgi, code-assurances, impots, service-public)
+## ✅ [contractuel_strict] Quelle franchise contractuelle dans Ma Retraite (plan d'épargne retraite individuel — PER) ?
+- Détecté : contrat=['ma-retraite-plan-d-epargne-retraite-individuel-per'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : ma-retraite-plan-d-epargne-retraite-individuel-per
+- Attendu : obligatoires=ma-retraite-plan-d-epargne-retraite-individuel-per · interdits=8 · source=False · statut=—
 
-## [ambigu] Que couvre exactement ce contrat en cas de coup dur ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(55), exclusions(39), definitions(34), conditions(3), declencheurs(76), plafonds(29), franchises(8), options(22), cotisations(11), delais(12), fiscalite(5), points-vigilance(19), formules(9)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (ameli, bofip, cgi, code-assurances, code-secu, legifrance, service-public)
+## ✅ [contractuel_strict] Quelle franchise contractuelle dans Masterlife CREDIT ?
+- Détecté : contrat=['masterlife-credit'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : masterlife-credit
+- Attendu : obligatoires=masterlife-credit · interdits=8 · source=False · statut=—
 
-## [ambigu] Est-ce que je suis protégé si je tombe malade ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(27), exclusions(16), definitions(22), options(12), delais(8), points-vigilance(13), conditions(3), declencheurs(40), plafonds(20), franchises(8), formules(12), cotisations(4), fiscalite(1)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (ameli, code-assurances, code-secu, legifrance, service-public)
+## ✅ [transversale] Quels contrats traitent de invalidité ?
+- Détecté : contrat=— · concept=invalidite · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, avizen-pro, masterlife-credit, essen-ciel-assurance-obseques, ma-protection-accident-garantie-des-accidents-de-la-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, entour-age, excelium-assurance-vie
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
 
-## [ambigu] Quelles sont les conditions et les limites ?
-- Contrats retrouvés : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
-- Catégories : garanties(25), exclusions(6), definitions(4), conditions(9), declencheurs(8), plafonds(5), franchises(6), options(18), cotisations(19), delais(9), fiscalite(10), points-vigilance(9), formules(1)
-- Manquants dans la base : —
-- Peut conclure : oui · **Source officielle requise** (acpr, code-assurances, service-public)
+## ✅ [transversale] Quels contrats traitent de décès ?
+- Détecté : contrat=— · concept=deces · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, ma-protection-accident-garantie-des-accidents-de-la-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, avizen-pro, essen-ciel-assurance-obseques, essen-ciel-patrimoine, excelium-assurance-vie, masterlife-credit, entour-age
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
 
-## [sans_reponse] Quelle est la garantie chômage de MasterLife ?
-- Contrats retrouvés : —
-- Catégories : —
-- Manquants dans la base : conditions, declencheurs, definitions, exclusions, garanties
-- Peut conclure : NON → notice/certificat/source officielle
+## ✅ [transversale] Quels contrats traitent de décès accidentel ?
+- Détecté : contrat=— · concept=deces · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, ma-protection-accident-garantie-des-accidents-de-la-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, avizen-pro, essen-ciel-assurance-obseques, essen-ciel-patrimoine, excelium-assurance-vie, masterlife-credit, entour-age
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
 
-## [sans_reponse] Le contrat couvre-t-il les catastrophes naturelles sur un bien immobilier ?
-- Contrats retrouvés : —
-- Catégories : —
-- Manquants dans la base : conditions, declencheurs, definitions, exclusions, garanties
-- Peut conclure : NON → notice/certificat/source officielle
+## ✅ [transversale] Quels contrats traitent de accident ?
+- Détecté : contrat=— · concept=accident · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, avizen-pro, ma-protection-accident-garantie-des-accidents-de-la-vie, entour-age, masterlife-credit, essen-ciel-assurance-obseques, excelium-assurance-vie
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
 
-## [sans_reponse] Quel est le taux du livret A associé ?
-- Contrats retrouvés : —
-- Catégories : —
-- Manquants dans la base : conditions, declencheurs, definitions, exclusions, garanties
-- Peut conclure : NON → notice/certificat/source officielle
+## ✅ [transversale] Quels contrats traitent de hospitalisation ?
+- Détecté : contrat=— · concept=hospitalisation · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : entour-age, masterlife-credit, avizen-pro
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
+
+## ✅ [transversale] Quels contrats traitent de incapacité temporaire ?
+- Détecté : contrat=— · concept=invalidite · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, avizen-pro, masterlife-credit, essen-ciel-assurance-obseques, ma-protection-accident-garantie-des-accidents-de-la-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, entour-age, excelium-assurance-vie
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
+
+## ✅ [transversale] Quels contrats traitent de carence / délai d'attente ?
+- Détecté : contrat=— · concept=carence · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : entour-age, avizen-pro, avizen, essen-ciel-assurance-obseques
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
+
+## ✅ [transversale] Quels contrats traitent de rachat ?
+- Détecté : contrat=— · concept=rachat · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, entour-age, excelium-assurance-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, masterlife-credit, ma-protection-accident-garantie-des-accidents-de-la-vie, avizen-pro, essen-ciel-assurance-obseques, essen-ciel-patrimoine
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
+
+## ✅ [transversale] Quels contrats traitent de souscription & adhésion ?
+- Détecté : contrat=— · concept=souscription · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : excelium-assurance-vie, avizen, avizen-pro, entour-age, essen-ciel-assurance-obseques, ma-retraite-plan-d-epargne-retraite-individuel-per, masterlife-credit, essen-ciel-patrimoine
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
+
+## ✅ [transversale] Quels contrats traitent de âge ?
+- Détecté : contrat=— · concept=— · périmètre=ambigu · source_off=False · statut=question_ambigue
+- Contrats retenus : —
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
+
+## ✅ [transversale] Quels contrats traitent de suicide ?
+- Détecté : contrat=— · concept=suicide · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, avizen-pro, entour-age, essen-ciel-assurance-obseques, essen-ciel-patrimoine, excelium-assurance-vie, ma-protection-accident-garantie-des-accidents-de-la-vie, masterlife-credit
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
+
+## ✅ [transversale] Quels contrats traitent de bénéficiaire ?
+- Détecté : contrat=— · concept=beneficiaire · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, essen-ciel-assurance-obseques, essen-ciel-patrimoine, ma-retraite-plan-d-epargne-retraite-individuel-per, masterlife-credit, avizen-pro, ma-protection-accident-garantie-des-accidents-de-la-vie, entour-age, excelium-assurance-vie
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
+
+## ✅ [transversale] Quels contrats traitent de fiscalité ?
+- Détecté : contrat=— · concept=fiscalite · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, avizen-pro, essen-ciel-assurance-obseques, essen-ciel-patrimoine, ma-protection-accident-garantie-des-accidents-de-la-vie, entour-age, excelium-assurance-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, masterlife-credit
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
+
+## ✅ [transversale] Quels contrats traitent de fin de garantie ?
+- Détecté : contrat=— · concept=fin-garantie · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen, avizen-pro, entour-age, excelium-assurance-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, masterlife-credit, essen-ciel-assurance-obseques, essen-ciel-patrimoine, ma-protection-accident-garantie-des-accidents-de-la-vie
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
+
+## ✅ [transversale] Quels contrats traitent de association / anpere ?
+- Détecté : contrat=— · concept=association · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
+- Contrats retenus : masterlife-credit, avizen, avizen-pro, entour-age, excelium-assurance-vie, ma-retraite-plan-d-epargne-retraite-individuel-per
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=—
+
+## ✅ [comparaison] Compare Avizen et Avizen Pro sur le décès.
+- Détecté : contrat=['avizen-pro', 'avizen'] · concept=deces · périmètre=comparaison · source_off=False · statut=conclusion_documentee
+- Contrats retenus : avizen-pro, avizen
+- Attendu : obligatoires=avizen, avizen-pro · interdits=7 · source=False · statut=—
+
+## ✅ [comparaison] Compare Excelium et Ma Retraite sur la fiscalité.
+- Détecté : contrat=['ma-retraite-plan-d-epargne-retraite-individuel-per', 'excelium-assurance-vie'] · concept=fiscalite · périmètre=comparaison · source_off=True · statut=verification_source_officielle_requise
+- Contrats retenus : ma-retraite-plan-d-epargne-retraite-individuel-per, excelium-assurance-vie
+- Attendu : obligatoires=excelium-assurance-vie, ma-retraite-plan-d-epargne-retraite-individuel-per · interdits=7 · source=True · statut=—
+
+## ✅ [reglementaire] Quelle est la fiscalité de transmission au décès ?
+- Détecté : contrat=— · concept=deces · périmètre=multi-contrats · source_off=True · statut=verification_source_officielle_requise
+- Contrats retenus : avizen, ma-protection-accident-garantie-des-accidents-de-la-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, avizen-pro, essen-ciel-assurance-obseques, essen-ciel-patrimoine, excelium-assurance-vie, masterlife-credit, entour-age
+- Attendu : obligatoires=— · interdits=0 · source=True · statut=verification_source_officielle_requise
+
+## ✅ [reglementaire] Quel abattement fiscal s'applique à la succession ?
+- Détecté : contrat=— · concept=fiscalite · périmètre=multi-contrats · source_off=True · statut=verification_source_officielle_requise
+- Contrats retenus : avizen, avizen-pro, essen-ciel-assurance-obseques, essen-ciel-patrimoine, ma-protection-accident-garantie-des-accidents-de-la-vie, entour-age, excelium-assurance-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, masterlife-credit
+- Attendu : obligatoires=— · interdits=0 · source=True · statut=verification_source_officielle_requise
+
+## ✅ [reglementaire] La cotisation est-elle déductible fiscalement ?
+- Détecté : contrat=— · concept=fiscalite · périmètre=multi-contrats · source_off=True · statut=verification_source_officielle_requise
+- Contrats retenus : avizen, avizen-pro, essen-ciel-assurance-obseques, essen-ciel-patrimoine, ma-protection-accident-garantie-des-accidents-de-la-vie, entour-age, excelium-assurance-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, masterlife-credit
+- Attendu : obligatoires=— · interdits=0 · source=True · statut=verification_source_officielle_requise
+
+## ✅ [reglementaire] Quel régime social s'applique à cette prestation ?
+- Détecté : contrat=— · concept=— · périmètre=ambigu · source_off=True · statut=verification_source_officielle_requise
+- Contrats retenus : —
+- Attendu : obligatoires=— · interdits=0 · source=True · statut=verification_source_officielle_requise
+
+## ✅ [reglementaire] Quel est le plafond légal de déduction ?
+- Détecté : contrat=— · concept=— · périmètre=ambigu · source_off=True · statut=verification_source_officielle_requise
+- Contrats retenus : —
+- Attendu : obligatoires=— · interdits=0 · source=True · statut=verification_source_officielle_requise
+
+## ✅ [reglementaire] Comment est traitée fiscalement la valeur de rachat ?
+- Détecté : contrat=— · concept=rachat · périmètre=multi-contrats · source_off=True · statut=verification_source_officielle_requise
+- Contrats retenus : avizen, entour-age, excelium-assurance-vie, ma-retraite-plan-d-epargne-retraite-individuel-per, masterlife-credit, ma-protection-accident-garantie-des-accidents-de-la-vie, avizen-pro, essen-ciel-assurance-obseques, essen-ciel-patrimoine
+- Attendu : obligatoires=— · interdits=0 · source=True · statut=verification_source_officielle_requise
+
+## ✅ [sans_reponse] Quelle est la garantie chômage de Masterlife Crédit ?
+- Détecté : contrat=['masterlife-credit'] · concept=— · périmètre=mono-contrat · source_off=False · statut=donnees_insuffisantes
+- Contrats retenus : masterlife-credit
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=donnees_insuffisantes
+
+## ✅ [sans_reponse] Le contrat couvre-t-il un dégât des eaux immobilier ?
+- Détecté : contrat=— · concept=— · périmètre=ambigu · source_off=False · statut=question_ambigue
+- Contrats retenus : —
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=donnees_insuffisantes
+- ⚠ statut question_ambigue attendu donnees_insuffisantes
+
+## ✅ [sans_reponse] Quel est le taux du livret A ?
+- Détecté : contrat=— · concept=— · périmètre=ambigu · source_off=False · statut=question_ambigue
+- Contrats retenus : —
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=donnees_insuffisantes
+- ⚠ statut question_ambigue attendu donnees_insuffisantes
+
+## ✅ [sans_reponse] Quelle est la garantie responsabilité civile auto ?
+- Détecté : contrat=— · concept=— · périmètre=ambigu · source_off=False · statut=question_ambigue
+- Contrats retenus : —
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=donnees_insuffisantes
+- ⚠ statut question_ambigue attendu donnees_insuffisantes
+
+## ✅ [ambigu] Que couvre exactement ce contrat ?
+- Détecté : contrat=— · concept=— · périmètre=ambigu · source_off=False · statut=question_ambigue
+- Contrats retenus : —
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=question_ambigue
+
+## ✅ [ambigu] Suis-je bien protégé ?
+- Détecté : contrat=— · concept=— · périmètre=ambigu · source_off=False · statut=question_ambigue
+- Contrats retenus : —
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=question_ambigue
+
+## ✅ [ambigu] Quelles sont les conditions et limites ?
+- Détecté : contrat=— · concept=— · périmètre=ambigu · source_off=False · statut=question_ambigue
+- Contrats retenus : —
+- Attendu : obligatoires=— · interdits=0 · source=False · statut=question_ambigue

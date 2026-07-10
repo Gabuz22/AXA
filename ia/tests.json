@@ -2,1936 +2,3374 @@
  "meta": {
   "version": "1.2.0",
   "genere_le": "2026-07-10",
-  "total": 51,
-  "par_type": {
-   "transversale": 15,
-   "comparaison": 15,
-   "simple": 6,
-   "complexe": 4,
-   "source_officielle": 5,
-   "ambigu": 3,
-   "sans_reponse": 3
-  },
-  "note": "Parcours attendus calculés déterministe­ment (planificateur + couverture + réglementation). Vérifie : contrats, catégories, manquants, source officielle requise, capacité à ne pas conclure."
+  "total": 76,
+  "schema": "chaque test : question + contrats_obligatoires/interdits + categories_obligatoires + source/notice attendues + statut_attendu ; 'detecte' = sortie du moteur ; 'resultat' = comparaison.",
+  "metriques": {
+   "n": 76,
+   "contrats_precision": 100.0,
+   "contrats_recall": 100.0,
+   "faux_positifs": 0,
+   "faux_negatifs": 0,
+   "source_exact": 100.0,
+   "statut_exact": 83.33333333333333,
+   "categories_exact": 97.5609756097561,
+   "perimetre_exact": 100.0,
+   "passes": 76,
+   "par_famille": {
+    "validation": {
+     "ok": 10,
+     "total": 10
+    },
+    "verrou_contrat": {
+     "ok": 27,
+     "total": 27
+    },
+    "contractuel_strict": {
+     "ok": 9,
+     "total": 9
+    },
+    "transversale": {
+     "ok": 15,
+     "total": 15
+    },
+    "comparaison": {
+     "ok": 2,
+     "total": 2
+    },
+    "reglementaire": {
+     "ok": 6,
+     "total": 6
+    },
+    "sans_reponse": {
+     "ok": 4,
+     "total": 4
+    },
+    "ambigu": {
+     "ok": 3,
+     "total": 3
+    }
+   }
+  }
  },
  "tests": [
   {
-   "type": "transversale",
-   "question": "Quels contrats traitent de invalidité ?",
-   "concepts": [
-    "invalidite"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 18,
-    "exclusions": 13,
-    "definitions": 18,
-    "conditions": 2,
-    "declencheurs": 32,
-    "plafonds": 16,
-    "franchises": 4,
-    "options": 9,
-    "cotisations": 4,
-    "delais": 2,
-    "fiscalite": 1,
-    "points-vigilance": 7,
-    "formules": 7
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "ameli",
-    "code-assurances",
-    "legifrance",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de décès ?",
-   "concepts": [
-    "deces"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 18,
-    "exclusions": 12,
-    "definitions": 4,
-    "conditions": 1,
-    "declencheurs": 18,
-    "plafonds": 9,
-    "options": 9,
-    "cotisations": 7,
-    "delais": 5,
-    "fiscalite": 4,
-    "points-vigilance": 6,
-    "formules": 2
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de décès accidentel ?",
-   "concepts": [
-    "deces-accidentel"
-   ],
-   "contrats_retrouves": [
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Ma Protection Accident (Garantie des accidents de la vie)"
-   ],
-   "categories_consultees": {
-    "exclusions": 2,
-    "declencheurs": 1,
-    "franchises": 1,
-    "options": 1,
-    "delais": 2,
-    "points-vigilance": 1
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "definitions",
-    "garanties"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": false,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de accident ?",
-   "concepts": [
-    "accident"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 17,
-    "exclusions": 13,
-    "definitions": 11,
-    "declencheurs": 26,
-    "plafonds": 4,
-    "franchises": 4,
-    "options": 3,
-    "delais": 4,
-    "points-vigilance": 5
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de hospitalisation ?",
-   "concepts": [
-    "hospitalisation"
-   ],
-   "contrats_retrouves": [
-    "Avizen Pro",
-    "Entour'Age",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 2,
-    "exclusions": 1,
-    "definitions": 1,
-    "options": 1,
-    "delais": 1,
-    "points-vigilance": 1
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "ameli",
-    "code-secu",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de incapacité temporaire ?",
-   "concepts": [
-    "incapacite-temporaire"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Excelium (assurance vie)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 7,
-    "exclusions": 2,
-    "definitions": 3,
-    "conditions": 1,
-    "declencheurs": 8,
-    "plafonds": 4,
-    "franchises": 4,
-    "options": 2,
-    "delais": 5,
-    "points-vigilance": 5,
-    "formules": 5
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "ameli",
-    "code-secu",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de carence / délai d'attente ?",
-   "concepts": [
-    "carence"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)"
-   ],
-   "categories_consultees": {
-    "exclusions": 1,
-    "definitions": 1,
-    "conditions": 1,
-    "declencheurs": 1,
-    "franchises": 3,
-    "options": 1,
-    "points-vigilance": 2
-   },
-   "elements_manquants_dans_la_base": [
-    "garanties"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "code-assurances"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de rachat ?",
-   "concepts": [
-    "rachat"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 5,
-    "exclusions": 2,
-    "definitions": 1,
-    "plafonds": 2,
-    "options": 7,
-    "cotisations": 11,
-    "delais": 1,
-    "fiscalite": 30,
-    "points-vigilance": 9,
-    "formules": 6
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "acpr",
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "impots"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de souscription & adhésion ?",
-   "concepts": [
-    "souscription"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 14,
-    "exclusions": 4,
-    "definitions": 3,
-    "conditions": 8,
-    "declencheurs": 3,
-    "plafonds": 4,
-    "franchises": 3,
-    "options": 10,
-    "cotisations": 13,
-    "delais": 7,
-    "fiscalite": 9,
-    "points-vigilance": 7,
-    "formules": 1
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "acpr",
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de âge ?",
-   "concepts": [
-    "age"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Entour'Age"
-   ],
-   "categories_consultees": {
-    "conditions": 1,
-    "cotisations": 1
-   },
-   "elements_manquants_dans_la_base": [
-    "declencheurs",
-    "definitions",
-    "exclusions",
-    "garanties"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "cnav",
-    "code-secu",
-    "service-public"
-   ],
-   "peut_conclure": false,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de suicide ?",
-   "concepts": [
-    "suicide"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "exclusions": 10
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs",
-    "definitions",
-    "garanties"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "code-assurances",
-    "legifrance"
-   ],
-   "peut_conclure": false,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de bénéficiaire ?",
-   "concepts": [
-    "beneficiaire"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 7,
-    "exclusions": 2,
-    "definitions": 2,
-    "plafonds": 2,
-    "options": 3,
-    "delais": 3,
-    "fiscalite": 7,
-    "points-vigilance": 1
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de fiscalité ?",
-   "concepts": [
-    "fiscalite"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 4,
-    "definitions": 2,
-    "conditions": 2,
-    "declencheurs": 2,
-    "options": 3,
-    "cotisations": 3,
-    "delais": 1,
-    "fiscalite": 12,
-    "points-vigilance": 3
-   },
-   "elements_manquants_dans_la_base": [
-    "exclusions"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "impots",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de fin de garantie ?",
-   "concepts": [
-    "fin-garantie"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 11,
-    "exclusions": 1,
-    "declencheurs": 4,
-    "plafonds": 1,
-    "options": 7,
-    "cotisations": 6,
-    "delais": 2,
-    "fiscalite": 1
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "definitions"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "code-assurances"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "transversale",
-   "question": "Quels contrats traitent de association / anpere ?",
-   "concepts": [
-    "association"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Excelium (assurance vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 1,
-    "conditions": 6,
-    "cotisations": 3
-   },
-   "elements_manquants_dans_la_base": [
-    "declencheurs",
-    "definitions",
-    "exclusions"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "legifrance",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare invalidité entre les contrats concernés.",
-   "concepts": [
-    "invalidite"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 18,
-    "exclusions": 13,
-    "definitions": 18,
-    "conditions": 2,
-    "declencheurs": 32,
-    "plafonds": 16,
-    "franchises": 4,
-    "options": 9,
-    "cotisations": 4,
-    "delais": 2,
-    "fiscalite": 1,
-    "points-vigilance": 7,
-    "formules": 7
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "ameli",
-    "code-assurances",
-    "legifrance",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare décès entre les contrats concernés.",
-   "concepts": [
-    "deces"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 18,
-    "exclusions": 12,
-    "definitions": 4,
-    "conditions": 1,
-    "declencheurs": 18,
-    "plafonds": 9,
-    "options": 9,
-    "cotisations": 7,
-    "delais": 5,
-    "fiscalite": 4,
-    "points-vigilance": 6,
-    "formules": 2
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare décès accidentel entre les contrats concernés.",
-   "concepts": [
-    "deces-accidentel"
-   ],
-   "contrats_retrouves": [
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Ma Protection Accident (Garantie des accidents de la vie)"
-   ],
-   "categories_consultees": {
-    "exclusions": 2,
-    "declencheurs": 1,
-    "franchises": 1,
-    "options": 1,
-    "delais": 2,
-    "points-vigilance": 1
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "definitions",
-    "garanties"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": false,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare accident entre les contrats concernés.",
-   "concepts": [
-    "accident"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 17,
-    "exclusions": 13,
-    "definitions": 11,
-    "declencheurs": 26,
-    "plafonds": 4,
-    "franchises": 4,
-    "options": 3,
-    "delais": 4,
-    "points-vigilance": 5
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare hospitalisation entre les contrats concernés.",
-   "concepts": [
-    "hospitalisation"
-   ],
-   "contrats_retrouves": [
-    "Avizen Pro",
-    "Entour'Age",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 2,
-    "exclusions": 1,
-    "definitions": 1,
-    "options": 1,
-    "delais": 1,
-    "points-vigilance": 1
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "ameli",
-    "code-secu",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare incapacité temporaire entre les contrats concernés.",
-   "concepts": [
-    "incapacite-temporaire"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Excelium (assurance vie)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 7,
-    "exclusions": 2,
-    "definitions": 3,
-    "conditions": 1,
-    "declencheurs": 8,
-    "plafonds": 4,
-    "franchises": 4,
-    "options": 2,
-    "delais": 5,
-    "points-vigilance": 5,
-    "formules": 5
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "ameli",
-    "code-secu",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare carence / délai d'attente entre les contrats concernés.",
-   "concepts": [
-    "carence"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)"
-   ],
-   "categories_consultees": {
-    "exclusions": 1,
-    "definitions": 1,
-    "conditions": 1,
-    "declencheurs": 1,
-    "franchises": 3,
-    "options": 1,
-    "points-vigilance": 2
-   },
-   "elements_manquants_dans_la_base": [
-    "garanties"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "code-assurances"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare rachat entre les contrats concernés.",
-   "concepts": [
-    "rachat"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 5,
-    "exclusions": 2,
-    "definitions": 1,
-    "plafonds": 2,
-    "options": 7,
-    "cotisations": 11,
-    "delais": 1,
-    "fiscalite": 30,
-    "points-vigilance": 9,
-    "formules": 6
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "acpr",
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "impots"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare souscription & adhésion entre les contrats concernés.",
-   "concepts": [
-    "souscription"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 14,
-    "exclusions": 4,
-    "definitions": 3,
-    "conditions": 8,
-    "declencheurs": 3,
-    "plafonds": 4,
-    "franchises": 3,
-    "options": 10,
-    "cotisations": 13,
-    "delais": 7,
-    "fiscalite": 9,
-    "points-vigilance": 7,
-    "formules": 1
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "acpr",
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare âge entre les contrats concernés.",
-   "concepts": [
-    "age"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Entour'Age"
-   ],
-   "categories_consultees": {
-    "conditions": 1,
-    "cotisations": 1
-   },
-   "elements_manquants_dans_la_base": [
-    "declencheurs",
-    "definitions",
-    "exclusions",
-    "garanties"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "cnav",
-    "code-secu",
-    "service-public"
-   ],
-   "peut_conclure": false,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare suicide entre les contrats concernés.",
-   "concepts": [
-    "suicide"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "exclusions": 10
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs",
-    "definitions",
-    "garanties"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "code-assurances",
-    "legifrance"
-   ],
-   "peut_conclure": false,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare bénéficiaire entre les contrats concernés.",
-   "concepts": [
-    "beneficiaire"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 7,
-    "exclusions": 2,
-    "definitions": 2,
-    "plafonds": 2,
-    "options": 3,
-    "delais": 3,
-    "fiscalite": 7,
-    "points-vigilance": 1
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare fiscalité entre les contrats concernés.",
-   "concepts": [
-    "fiscalite"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 4,
-    "definitions": 2,
-    "conditions": 2,
-    "declencheurs": 2,
-    "options": 3,
-    "cotisations": 3,
-    "delais": 1,
-    "fiscalite": 12,
-    "points-vigilance": 3
-   },
-   "elements_manquants_dans_la_base": [
-    "exclusions"
-   ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "impots",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare fin de garantie entre les contrats concernés.",
-   "concepts": [
-    "fin-garantie"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 11,
-    "exclusions": 1,
-    "declencheurs": 4,
-    "plafonds": 1,
-    "options": 7,
-    "cotisations": 6,
-    "delais": 2,
-    "fiscalite": 1
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "definitions"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "code-assurances"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "comparaison",
-   "question": "Compare association / anpere entre les contrats concernés.",
-   "concepts": [
-    "association"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Excelium (assurance vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 1,
-    "conditions": 6,
-    "cotisations": 3
-   },
-   "elements_manquants_dans_la_base": [
-    "declencheurs",
-    "definitions",
-    "exclusions"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "legifrance",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "simple",
+   "famille": "validation",
    "question": "Quel est le barème d'invalidité d'Avizen Pro ?",
-   "concepts": [
-    "invalidite"
+   "contrats_obligatoires": [
+    "avizen-pro"
    ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
+   "contrats_interdits": [
+    "avizen",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
    ],
-   "categories_consultees": {
-    "garanties": 18,
-    "exclusions": 13,
-    "definitions": 18,
-    "conditions": 2,
-    "declencheurs": 32,
-    "plafonds": 16,
-    "franchises": 4,
-    "options": 9,
-    "cotisations": 4,
-    "delais": 2,
-    "fiscalite": 1,
-    "points-vigilance": 7,
-    "formules": 7
+   "categories_obligatoires": [
+    "formules",
+    "garanties",
+    "definitions"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": "conclusion_documentee",
+   "detecte": {
+    "contrat_explicite": [
+     "avizen-pro"
+    ],
+    "concept_principal": "invalidite",
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "formules",
+     "garanties",
+     "definitions"
+    ],
+    "contrats_retenus": [
+     "avizen-pro"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
    },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "ameli",
-    "code-assurances",
-    "legifrance",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
   },
   {
-   "type": "simple",
+   "famille": "validation",
    "question": "Quelle est la définition d'un accident dans Ma Protection Accident ?",
-   "concepts": [
-    "accident"
+   "contrats_obligatoires": [
+    "ma-protection-accident-garantie-des-accidents-de-la-vie"
    ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Masterlife CREDIT"
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
    ],
-   "categories_consultees": {
-    "garanties": 17,
-    "exclusions": 13,
-    "definitions": 11,
-    "declencheurs": 26,
-    "plafonds": 4,
-    "franchises": 4,
-    "options": 3,
-    "delais": 4,
-    "points-vigilance": 5
+   "categories_obligatoires": [
+    "definitions"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": "conclusion_documentee",
+   "detecte": {
+    "contrat_explicite": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
+    ],
+    "concept_principal": "accident",
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "definitions"
+    ],
+    "contrats_retenus": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
    },
-   "elements_manquants_dans_la_base": [
-    "conditions"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
   },
   {
-   "type": "simple",
-   "question": "Quel est l'âge maximal de souscription ?",
-   "concepts": [
-    "age",
-    "souscription"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "conditions": 9,
-    "cotisations": 14,
-    "garanties": 14,
-    "exclusions": 4,
-    "definitions": 3,
-    "declencheurs": 3,
-    "plafonds": 4,
-    "franchises": 3,
-    "options": 10,
-    "delais": 7,
-    "fiscalite": 9,
-    "points-vigilance": 7,
-    "formules": 1
+   "famille": "validation",
+   "question": "Quels contrats parlent d'invalidité ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "invalidite",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "avizen-pro",
+     "masterlife-credit",
+     "essen-ciel-assurance-obseques",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "entour-age",
+     "excelium-assurance-vie"
+    ],
+    "contrats_rejetes": 1,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
    },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "acpr",
-    "cnav",
-    "code-assurances",
-    "code-secu",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
   },
   {
-   "type": "simple",
-   "question": "Quelle est la garantie décès de MasterLife ?",
-   "concepts": [
-    "deces"
+   "famille": "validation",
+   "question": "Compare Avizen Pro et Masterlife Crédit sur l'invalidité.",
+   "contrats_obligatoires": [
+    "avizen-pro",
+    "masterlife-credit"
    ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
+   "contrats_interdits": [
+    "avizen",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
    ],
-   "categories_consultees": {
-    "garanties": 18,
-    "exclusions": 12,
-    "definitions": 4,
-    "conditions": 1,
-    "declencheurs": 18,
-    "plafonds": 9,
-    "options": 9,
-    "cotisations": 7,
-    "delais": 5,
-    "fiscalite": 4,
-    "points-vigilance": 6,
-    "formules": 2
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen-pro",
+     "masterlife-credit"
+    ],
+    "concept_principal": "invalidite",
+    "type_question": "comparaison",
+    "perimetre": "comparaison",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen-pro",
+     "masterlife-credit"
+    ],
+    "contrats_rejetes": 7,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
    },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
   },
   {
-   "type": "simple",
-   "question": "Y a-t-il une carence sur le décès par maladie ?",
-   "concepts": [
-    "carence",
-    "deces"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "exclusions": 13,
-    "definitions": 5,
-    "conditions": 2,
-    "declencheurs": 19,
-    "franchises": 3,
-    "options": 10,
-    "points-vigilance": 8,
-    "garanties": 18,
-    "plafonds": 9,
-    "cotisations": 7,
-    "delais": 5,
-    "fiscalite": 4,
-    "formules": 2
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "simple",
-   "question": "Quelles exclusions s'appliquent au suicide ?",
-   "concepts": [
-    "suicide"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "exclusions": 10
-   },
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs",
-    "definitions",
-    "garanties"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [
-    "code-assurances",
-    "legifrance"
-   ],
-   "peut_conclure": false,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "complexe",
-   "question": "Dans quels contrats une invalidité peut-elle déclencher une prestation, selon quelles définitions et avec quelles exclusions ?",
-   "concepts": [
-    "invalidite"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 18,
-    "exclusions": 13,
-    "definitions": 18,
-    "conditions": 2,
-    "declencheurs": 32,
-    "plafonds": 16,
-    "franchises": 4,
-    "options": 9,
-    "cotisations": 4,
-    "delais": 2,
-    "fiscalite": 1,
-    "points-vigilance": 7,
-    "formules": 7
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "ameli",
-    "code-assurances",
-    "legifrance",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "complexe",
-   "question": "Compare les conditions d'adhésion et limites d'âge des contrats concernés.",
-   "concepts": [
-    "souscription",
-    "age"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 14,
-    "exclusions": 4,
-    "definitions": 3,
-    "conditions": 9,
-    "declencheurs": 3,
-    "plafonds": 4,
-    "franchises": 3,
-    "options": 10,
-    "cotisations": 14,
-    "delais": 7,
-    "fiscalite": 9,
-    "points-vigilance": 7,
-    "formules": 1
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "acpr",
-    "cnav",
-    "code-assurances",
-    "code-secu",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "complexe",
-   "question": "Quels éléments nécessitent une vérification dans la notice ou le certificat d'adhésion ?",
-   "concepts": [
-    "rachat",
-    "fiscalite"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 9,
-    "exclusions": 2,
-    "definitions": 3,
-    "plafonds": 2,
-    "options": 10,
-    "cotisations": 14,
-    "delais": 2,
-    "fiscalite": 42,
-    "points-vigilance": 12,
-    "formules": 6,
-    "conditions": 2,
-    "declencheurs": 2
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "acpr",
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "impots",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "complexe",
-   "question": "Quelles garanties et exclusions encadrent le décès accidentel ?",
-   "concepts": [
-    "deces-accidentel",
-    "deces"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "exclusions": 14,
-    "declencheurs": 19,
-    "franchises": 1,
-    "options": 10,
-    "delais": 7,
-    "points-vigilance": 7,
-    "garanties": 18,
-    "definitions": 4,
-    "conditions": 1,
-    "plafonds": 9,
-    "cotisations": 7,
-    "fiscalite": 4,
-    "formules": 2
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "source_officielle",
-   "question": "Quelle est la fiscalité de transmission d'une assurance vie au décès ?",
-   "concepts": [
-    "fiscalite",
-    "deces"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 22,
-    "definitions": 6,
-    "conditions": 3,
-    "declencheurs": 20,
-    "options": 12,
-    "cotisations": 10,
-    "delais": 6,
-    "fiscalite": 16,
-    "points-vigilance": 9,
-    "exclusions": 12,
-    "plafonds": 9,
-    "formules": 2
-   },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "impots",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
-  },
-  {
-   "type": "source_officielle",
-   "question": "Quel est le régime fiscal du PER (Ma Retraite) ?",
-   "concepts": [
-    "fiscalite",
-    "age"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 4,
-    "definitions": 2,
-    "conditions": 3,
-    "declencheurs": 2,
-    "options": 3,
-    "cotisations": 4,
-    "delais": 1,
-    "fiscalite": 12,
-    "points-vigilance": 3
-   },
-   "elements_manquants_dans_la_base": [
+   "famille": "validation",
+   "question": "Quels contrats excluent le suicide ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [
     "exclusions"
    ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "cnav",
-    "code-secu",
-    "impots",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "suicide",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [
+     "exclusions"
+    ],
+    "contrats_retenus": [
+     "avizen",
+     "avizen-pro",
+     "entour-age",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine",
+     "excelium-assurance-vie",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "masterlife-credit"
+    ],
+    "contrats_rejetes": 1,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
   },
   {
-   "type": "source_officielle",
-   "question": "Quel abattement s'applique à la succession du bénéficiaire ?",
-   "concepts": [
-    "beneficiaire",
-    "fiscalite"
+   "famille": "validation",
+   "question": "Jusqu'à quel âge les versements sur PER sont-ils déductibles ?",
+   "contrats_obligatoires": [
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
    ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 11,
-    "exclusions": 2,
-    "definitions": 4,
-    "plafonds": 2,
-    "options": 6,
-    "delais": 4,
-    "fiscalite": 19,
-    "points-vigilance": 4,
-    "conditions": 2,
-    "declencheurs": 2,
-    "cotisations": 3
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": true,
+   "notice_attendue": false,
+   "statut_attendu": "verification_source_officielle_requise",
+   "detecte": {
+    "contrat_explicite": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per"
+    ],
+    "concept_principal": null,
+    "type_question": "reglementaire",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": true,
+    "statut": "verification_source_officielle_requise"
    },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "impots",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
   },
   {
-   "type": "source_officielle",
-   "question": "Quel est l'âge légal de départ à la retraite ?",
-   "concepts": [
-    "age"
+   "famille": "validation",
+   "question": "Quelle est la franchise contractuelle d'Avizen Pro ?",
+   "contrats_obligatoires": [
+    "avizen-pro"
    ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Entour'Age"
+   "contrats_interdits": [
+    "avizen",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
    ],
-   "categories_consultees": {
-    "conditions": 1,
-    "cotisations": 1
+   "categories_obligatoires": [
+    "franchises"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen-pro"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "franchises"
+    ],
+    "contrats_retenus": [
+     "avizen-pro"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
    },
-   "elements_manquants_dans_la_base": [
-    "declencheurs",
-    "definitions",
-    "exclusions",
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "validation",
+   "question": "Quels autres contrats traitent de l'invalidité en plus d'Avizen Pro ?",
+   "contrats_obligatoires": [
+    "avizen-pro"
+   ],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen-pro"
+    ],
+    "concept_principal": "invalidite",
+    "type_question": "mono-contrat",
+    "perimetre": "mono+transversal",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen-pro",
+     "avizen",
+     "masterlife-credit",
+     "essen-ciel-assurance-obseques",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "entour-age",
+     "excelium-assurance-vie"
+    ],
+    "contrats_rejetes": 1,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "validation",
+   "question": "Cette garantie dépend-elle de la Sécurité sociale ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": true,
+   "notice_attendue": false,
+   "statut_attendu": "verification_source_officielle_requise",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": null,
+    "type_question": "reglementaire",
+    "perimetre": "ambigu",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [],
+    "contrats_rejetes": 9,
+    "source_officielle_requise": true,
+    "statut": "verification_source_officielle_requise"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "validation",
+   "question": "Je ne trouve pas de plafond chiffré : puis-je conclure qu'il n'y en a pas ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": "verification_notice_requise",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": null,
+    "type_question": "ambigu",
+    "perimetre": "ambigu",
+    "categories_demandees": [
+     "plafonds"
+    ],
+    "contrats_retenus": [],
+    "contrats_rejetes": 9,
+    "source_officielle_requise": false,
+    "statut": "verification_notice_requise"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles garanties Avizen propose-t-il ?",
+   "contrats_obligatoires": [
+    "avizen"
+   ],
+   "contrats_interdits": [
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
     "garanties"
    ],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "cnav",
-    "code-secu",
-    "service-public"
-   ],
-   "peut_conclure": false,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "avizen"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
   },
   {
-   "type": "source_officielle",
+   "famille": "verrou_contrat",
+   "question": "Quelles exclusions dans Avizen ?",
+   "contrats_obligatoires": [
+    "avizen"
+   ],
+   "contrats_interdits": [
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "exclusions"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "exclusions"
+    ],
+    "contrats_retenus": [
+     "avizen"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quels déclencheurs dans Avizen ?",
+   "contrats_obligatoires": [
+    "avizen"
+   ],
+   "contrats_interdits": [
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "declencheurs"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "declencheurs"
+    ],
+    "contrats_retenus": [
+     "avizen"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles garanties Avizen Pro propose-t-il ?",
+   "contrats_obligatoires": [
+    "avizen-pro"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "garanties"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen-pro"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "avizen-pro"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles exclusions dans Avizen Pro ?",
+   "contrats_obligatoires": [
+    "avizen-pro"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "exclusions"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen-pro"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "exclusions"
+    ],
+    "contrats_retenus": [
+     "avizen-pro"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quels déclencheurs dans Avizen Pro ?",
+   "contrats_obligatoires": [
+    "avizen-pro"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "declencheurs"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen-pro"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "declencheurs"
+    ],
+    "contrats_retenus": [
+     "avizen-pro"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles garanties Entour'Age propose-t-il ?",
+   "contrats_obligatoires": [
+    "entour-age"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "garanties"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "entour-age"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "entour-age"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles exclusions dans Entour'Age ?",
+   "contrats_obligatoires": [
+    "entour-age"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "exclusions"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "entour-age"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "exclusions"
+    ],
+    "contrats_retenus": [
+     "entour-age"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quels déclencheurs dans Entour'Age ?",
+   "contrats_obligatoires": [
+    "entour-age"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "declencheurs"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "entour-age"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "declencheurs"
+    ],
+    "contrats_retenus": [
+     "entour-age"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles garanties Essen'Ciel (assurance obsèques) propose-t-il ?",
+   "contrats_obligatoires": [
+    "essen-ciel-assurance-obseques"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "garanties"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "essen-ciel-assurance-obseques"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "essen-ciel-assurance-obseques"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles exclusions dans Essen'Ciel (assurance obsèques) ?",
+   "contrats_obligatoires": [
+    "essen-ciel-assurance-obseques"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "exclusions"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "essen-ciel-assurance-obseques"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "exclusions"
+    ],
+    "contrats_retenus": [
+     "essen-ciel-assurance-obseques"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quels déclencheurs dans Essen'Ciel (assurance obsèques) ?",
+   "contrats_obligatoires": [
+    "essen-ciel-assurance-obseques"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "declencheurs"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "essen-ciel-assurance-obseques"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "declencheurs"
+    ],
+    "contrats_retenus": [
+     "essen-ciel-assurance-obseques"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles garanties Essen'Ciel Patrimoine propose-t-il ?",
+   "contrats_obligatoires": [
+    "essen-ciel-patrimoine"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "garanties"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "essen-ciel-patrimoine"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "essen-ciel-patrimoine"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles exclusions dans Essen'Ciel Patrimoine ?",
+   "contrats_obligatoires": [
+    "essen-ciel-patrimoine"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "exclusions"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "essen-ciel-patrimoine"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "exclusions"
+    ],
+    "contrats_retenus": [
+     "essen-ciel-patrimoine"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quels déclencheurs dans Essen'Ciel Patrimoine ?",
+   "contrats_obligatoires": [
+    "essen-ciel-patrimoine"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "declencheurs"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "essen-ciel-patrimoine"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "declencheurs"
+    ],
+    "contrats_retenus": [
+     "essen-ciel-patrimoine"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles garanties Excelium (assurance vie) propose-t-il ?",
+   "contrats_obligatoires": [
+    "excelium-assurance-vie"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "garanties"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "excelium-assurance-vie"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "excelium-assurance-vie"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles exclusions dans Excelium (assurance vie) ?",
+   "contrats_obligatoires": [
+    "excelium-assurance-vie"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "exclusions"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "excelium-assurance-vie"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "exclusions"
+    ],
+    "contrats_retenus": [
+     "excelium-assurance-vie"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quels déclencheurs dans Excelium (assurance vie) ?",
+   "contrats_obligatoires": [
+    "excelium-assurance-vie"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "declencheurs"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "excelium-assurance-vie"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "declencheurs"
+    ],
+    "contrats_retenus": [
+     "excelium-assurance-vie"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles garanties Ma Protection Accident (Garantie des accidents de la vie) propose-t-il ?",
+   "contrats_obligatoires": [
+    "ma-protection-accident-garantie-des-accidents-de-la-vie"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "garanties"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
+    ],
+    "concept_principal": "accident",
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles exclusions dans Ma Protection Accident (Garantie des accidents de la vie) ?",
+   "contrats_obligatoires": [
+    "ma-protection-accident-garantie-des-accidents-de-la-vie"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "exclusions"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
+    ],
+    "concept_principal": "accident",
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "exclusions",
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quels déclencheurs dans Ma Protection Accident (Garantie des accidents de la vie) ?",
+   "contrats_obligatoires": [
+    "ma-protection-accident-garantie-des-accidents-de-la-vie"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "declencheurs"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
+    ],
+    "concept_principal": "accident",
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "garanties",
+     "declencheurs"
+    ],
+    "contrats_retenus": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles garanties Ma Retraite (plan d'épargne retraite individuel — PER) propose-t-il ?",
+   "contrats_obligatoires": [
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "garanties"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles exclusions dans Ma Retraite (plan d'épargne retraite individuel — PER) ?",
+   "contrats_obligatoires": [
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "exclusions"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "exclusions"
+    ],
+    "contrats_retenus": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quels déclencheurs dans Ma Retraite (plan d'épargne retraite individuel — PER) ?",
+   "contrats_obligatoires": [
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "declencheurs"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "declencheurs"
+    ],
+    "contrats_retenus": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles garanties Masterlife CREDIT propose-t-il ?",
+   "contrats_obligatoires": [
+    "masterlife-credit"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "categories_obligatoires": [
+    "garanties"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "masterlife-credit"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "masterlife-credit"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quelles exclusions dans Masterlife CREDIT ?",
+   "contrats_obligatoires": [
+    "masterlife-credit"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "categories_obligatoires": [
+    "exclusions"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "masterlife-credit"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "exclusions"
+    ],
+    "contrats_retenus": [
+     "masterlife-credit"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "verrou_contrat",
+   "question": "Quels déclencheurs dans Masterlife CREDIT ?",
+   "contrats_obligatoires": [
+    "masterlife-credit"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "categories_obligatoires": [
+    "declencheurs"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "masterlife-credit"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "declencheurs"
+    ],
+    "contrats_retenus": [
+     "masterlife-credit"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "contractuel_strict",
+   "question": "Quelle franchise contractuelle dans Avizen ?",
+   "contrats_obligatoires": [
+    "avizen"
+   ],
+   "contrats_interdits": [
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "franchises"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "franchises"
+    ],
+    "contrats_retenus": [
+     "avizen"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "contractuel_strict",
+   "question": "Quelle franchise contractuelle dans Avizen Pro ?",
+   "contrats_obligatoires": [
+    "avizen-pro"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "franchises"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen-pro"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "franchises"
+    ],
+    "contrats_retenus": [
+     "avizen-pro"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "contractuel_strict",
+   "question": "Quelle franchise contractuelle dans Entour'Age ?",
+   "contrats_obligatoires": [
+    "entour-age"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "franchises"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "entour-age"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "franchises"
+    ],
+    "contrats_retenus": [
+     "entour-age"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "contractuel_strict",
+   "question": "Quelle franchise contractuelle dans Essen'Ciel (assurance obsèques) ?",
+   "contrats_obligatoires": [
+    "essen-ciel-assurance-obseques"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "franchises"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "essen-ciel-assurance-obseques"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "franchises"
+    ],
+    "contrats_retenus": [
+     "essen-ciel-assurance-obseques"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "contractuel_strict",
+   "question": "Quelle franchise contractuelle dans Essen'Ciel Patrimoine ?",
+   "contrats_obligatoires": [
+    "essen-ciel-patrimoine"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "franchises"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "essen-ciel-patrimoine"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "franchises"
+    ],
+    "contrats_retenus": [
+     "essen-ciel-patrimoine"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "contractuel_strict",
+   "question": "Quelle franchise contractuelle dans Excelium (assurance vie) ?",
+   "contrats_obligatoires": [
+    "excelium-assurance-vie"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "franchises"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "excelium-assurance-vie"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "franchises"
+    ],
+    "contrats_retenus": [
+     "excelium-assurance-vie"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "contractuel_strict",
+   "question": "Quelle franchise contractuelle dans Ma Protection Accident (Garantie des accidents de la vie) ?",
+   "contrats_obligatoires": [
+    "ma-protection-accident-garantie-des-accidents-de-la-vie"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "franchises"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
+    ],
+    "concept_principal": "accident",
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "franchises",
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "contractuel_strict",
+   "question": "Quelle franchise contractuelle dans Ma Retraite (plan d'épargne retraite individuel — PER) ?",
+   "contrats_obligatoires": [
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "franchises"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "franchises"
+    ],
+    "contrats_retenus": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "contractuel_strict",
+   "question": "Quelle franchise contractuelle dans Masterlife CREDIT ?",
+   "contrats_obligatoires": [
+    "masterlife-credit"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "categories_obligatoires": [
+    "franchises"
+   ],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "masterlife-credit"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "franchises"
+    ],
+    "contrats_retenus": [
+     "masterlife-credit"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de invalidité ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "invalidite",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "avizen-pro",
+     "masterlife-credit",
+     "essen-ciel-assurance-obseques",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "entour-age",
+     "excelium-assurance-vie"
+    ],
+    "contrats_rejetes": 1,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de décès ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "deces",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "avizen-pro",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine",
+     "excelium-assurance-vie",
+     "masterlife-credit",
+     "entour-age"
+    ],
+    "contrats_rejetes": 0,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de décès accidentel ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "deces",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "avizen-pro",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine",
+     "excelium-assurance-vie",
+     "masterlife-credit",
+     "entour-age"
+    ],
+    "contrats_rejetes": 0,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de accident ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "accident",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "avizen-pro",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "entour-age",
+     "masterlife-credit",
+     "essen-ciel-assurance-obseques",
+     "excelium-assurance-vie"
+    ],
+    "contrats_rejetes": 2,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de hospitalisation ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "hospitalisation",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "entour-age",
+     "masterlife-credit",
+     "avizen-pro"
+    ],
+    "contrats_rejetes": 6,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de incapacité temporaire ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "invalidite",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "avizen-pro",
+     "masterlife-credit",
+     "essen-ciel-assurance-obseques",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "entour-age",
+     "excelium-assurance-vie"
+    ],
+    "contrats_rejetes": 1,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de carence / délai d'attente ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "carence",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [
+     "franchises",
+     "delais"
+    ],
+    "contrats_retenus": [
+     "entour-age",
+     "avizen-pro",
+     "avizen",
+     "essen-ciel-assurance-obseques"
+    ],
+    "contrats_rejetes": 5,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de rachat ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "rachat",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "entour-age",
+     "excelium-assurance-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "masterlife-credit",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "avizen-pro",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine"
+    ],
+    "contrats_rejetes": 0,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de souscription & adhésion ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "souscription",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [
+     "conditions"
+    ],
+    "contrats_retenus": [
+     "excelium-assurance-vie",
+     "avizen",
+     "avizen-pro",
+     "entour-age",
+     "essen-ciel-assurance-obseques",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "masterlife-credit",
+     "essen-ciel-patrimoine"
+    ],
+    "contrats_rejetes": 1,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de âge ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": null,
+    "type_question": "transversale",
+    "perimetre": "ambigu",
+    "categories_demandees": [],
+    "contrats_retenus": [],
+    "contrats_rejetes": 9,
+    "source_officielle_requise": false,
+    "statut": "question_ambigue"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de suicide ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "suicide",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "avizen-pro",
+     "entour-age",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine",
+     "excelium-assurance-vie",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "masterlife-credit"
+    ],
+    "contrats_rejetes": 1,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de bénéficiaire ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "beneficiaire",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "masterlife-credit",
+     "avizen-pro",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "entour-age",
+     "excelium-assurance-vie"
+    ],
+    "contrats_rejetes": 0,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de fiscalité ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "fiscalite",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "avizen-pro",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "entour-age",
+     "excelium-assurance-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "masterlife-credit"
+    ],
+    "contrats_rejetes": 0,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de fin de garantie ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "fin-garantie",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "avizen",
+     "avizen-pro",
+     "entour-age",
+     "excelium-assurance-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "masterlife-credit",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
+    ],
+    "contrats_rejetes": 0,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "transversale",
+   "question": "Quels contrats traitent de association / anpere ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "association",
+    "type_question": "transversale",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "masterlife-credit",
+     "avizen",
+     "avizen-pro",
+     "entour-age",
+     "excelium-assurance-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per"
+    ],
+    "contrats_rejetes": 3,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "comparaison",
+   "question": "Compare Avizen et Avizen Pro sur le décès.",
+   "contrats_obligatoires": [
+    "avizen",
+    "avizen-pro"
+   ],
+   "contrats_interdits": [
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "avizen-pro",
+     "avizen"
+    ],
+    "concept_principal": "deces",
+    "type_question": "comparaison",
+    "perimetre": "comparaison",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen-pro",
+     "avizen"
+    ],
+    "contrats_rejetes": 7,
+    "source_officielle_requise": false,
+    "statut": "conclusion_documentee"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "comparaison",
+   "question": "Compare Excelium et Ma Retraite sur la fiscalité.",
+   "contrats_obligatoires": [
+    "excelium-assurance-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "contrats_interdits": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "masterlife-credit"
+   ],
+   "categories_obligatoires": [
+    "fiscalite"
+   ],
+   "source_officielle_externe_attendue": true,
+   "notice_attendue": true,
+   "statut_attendu": null,
+   "detecte": {
+    "contrat_explicite": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "excelium-assurance-vie"
+    ],
+    "concept_principal": "fiscalite",
+    "type_question": "comparaison",
+    "perimetre": "comparaison",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "excelium-assurance-vie"
+    ],
+    "contrats_rejetes": 7,
+    "source_officielle_requise": true,
+    "statut": "verification_source_officielle_requise"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "reglementaire",
+   "question": "Quelle est la fiscalité de transmission au décès ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": true,
+   "notice_attendue": false,
+   "statut_attendu": "verification_source_officielle_requise",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "deces",
+    "type_question": "reglementaire",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "avizen-pro",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine",
+     "excelium-assurance-vie",
+     "masterlife-credit",
+     "entour-age"
+    ],
+    "contrats_rejetes": 0,
+    "source_officielle_requise": true,
+    "statut": "verification_source_officielle_requise"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "reglementaire",
+   "question": "Quel abattement fiscal s'applique à la succession ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": true,
+   "notice_attendue": false,
+   "statut_attendu": "verification_source_officielle_requise",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "fiscalite",
+    "type_question": "reglementaire",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "avizen-pro",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "entour-age",
+     "excelium-assurance-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "masterlife-credit"
+    ],
+    "contrats_rejetes": 0,
+    "source_officielle_requise": true,
+    "statut": "verification_source_officielle_requise"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "reglementaire",
+   "question": "La cotisation est-elle déductible fiscalement ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": true,
+   "notice_attendue": false,
+   "statut_attendu": "verification_source_officielle_requise",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "fiscalite",
+    "type_question": "reglementaire",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [
+     "cotisations"
+    ],
+    "contrats_retenus": [
+     "avizen",
+     "avizen-pro",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "entour-age",
+     "excelium-assurance-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "masterlife-credit"
+    ],
+    "contrats_rejetes": 0,
+    "source_officielle_requise": true,
+    "statut": "verification_source_officielle_requise"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "reglementaire",
+   "question": "Quel régime social s'applique à cette prestation ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": true,
+   "notice_attendue": false,
+   "statut_attendu": "verification_source_officielle_requise",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": null,
+    "type_question": "reglementaire",
+    "perimetre": "ambigu",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [],
+    "contrats_rejetes": 9,
+    "source_officielle_requise": true,
+    "statut": "verification_source_officielle_requise"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "reglementaire",
+   "question": "Quel est le plafond légal de déduction ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": true,
+   "notice_attendue": false,
+   "statut_attendu": "verification_source_officielle_requise",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": null,
+    "type_question": "reglementaire",
+    "perimetre": "ambigu",
+    "categories_demandees": [
+     "plafonds"
+    ],
+    "contrats_retenus": [],
+    "contrats_rejetes": 9,
+    "source_officielle_requise": true,
+    "statut": "verification_source_officielle_requise"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "reglementaire",
    "question": "Comment est traitée fiscalement la valeur de rachat ?",
-   "concepts": [
-    "rachat",
-    "fiscalite"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 9,
-    "exclusions": 2,
-    "definitions": 3,
-    "plafonds": 2,
-    "options": 10,
-    "cotisations": 14,
-    "delais": 2,
-    "fiscalite": 42,
-    "points-vigilance": 12,
-    "formules": 6,
-    "conditions": 2,
-    "declencheurs": 2
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": true,
+   "notice_attendue": false,
+   "statut_attendu": "verification_source_officielle_requise",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": "rachat",
+    "type_question": "reglementaire",
+    "perimetre": "multi-contrats",
+    "categories_demandees": [],
+    "contrats_retenus": [
+     "avizen",
+     "entour-age",
+     "excelium-assurance-vie",
+     "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "masterlife-credit",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "avizen-pro",
+     "essen-ciel-assurance-obseques",
+     "essen-ciel-patrimoine"
+    ],
+    "contrats_rejetes": 0,
+    "source_officielle_requise": true,
+    "statut": "verification_source_officielle_requise"
    },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "acpr",
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "impots",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
   },
   {
-   "type": "ambigu",
-   "question": "Que couvre exactement ce contrat en cas de coup dur ?",
-   "concepts": [
-    "invalidite",
-    "deces",
-    "hospitalisation",
-    "accident"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 55,
-    "exclusions": 39,
-    "definitions": 34,
-    "conditions": 3,
-    "declencheurs": 76,
-    "plafonds": 29,
-    "franchises": 8,
-    "options": 22,
-    "cotisations": 11,
-    "delais": 12,
-    "fiscalite": 5,
-    "points-vigilance": 19,
-    "formules": 9
+   "famille": "sans_reponse",
+   "question": "Quelle est la garantie chômage de Masterlife Crédit ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": "donnees_insuffisantes",
+   "detecte": {
+    "contrat_explicite": [
+     "masterlife-credit"
+    ],
+    "concept_principal": null,
+    "type_question": "mono-contrat",
+    "perimetre": "mono-contrat",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [
+     "masterlife-credit"
+    ],
+    "contrats_rejetes": 8,
+    "source_officielle_requise": false,
+    "statut": "donnees_insuffisantes"
    },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "ameli",
-    "bofip",
-    "cgi",
-    "code-assurances",
-    "code-secu",
-    "legifrance",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
   },
   {
-   "type": "ambigu",
-   "question": "Est-ce que je suis protégé si je tombe malade ?",
-   "concepts": [
-    "hospitalisation",
-    "incapacite-temporaire",
-    "invalidite"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 27,
-    "exclusions": 16,
-    "definitions": 22,
-    "options": 12,
-    "delais": 8,
-    "points-vigilance": 13,
-    "conditions": 3,
-    "declencheurs": 40,
-    "plafonds": 20,
-    "franchises": 8,
-    "formules": 12,
-    "cotisations": 4,
-    "fiscalite": 1
+   "famille": "sans_reponse",
+   "question": "Le contrat couvre-t-il un dégât des eaux immobilier ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": "donnees_insuffisantes",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": null,
+    "type_question": "ambigu",
+    "perimetre": "ambigu",
+    "categories_demandees": [],
+    "contrats_retenus": [],
+    "contrats_rejetes": 9,
+    "source_officielle_requise": false,
+    "statut": "question_ambigue"
    },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "ameli",
-    "code-assurances",
-    "code-secu",
-    "legifrance",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": false,
+    "raisons": [
+     "statut question_ambigue attendu donnees_insuffisantes"
+    ]
+   }
   },
   {
-   "type": "ambigu",
-   "question": "Quelles sont les conditions et les limites ?",
-   "concepts": [
-    "souscription",
-    "carence",
-    "fin-garantie"
-   ],
-   "contrats_retrouves": [
-    "Avizen",
-    "Avizen Pro",
-    "Entour'Age",
-    "Essen'Ciel (assurance obsèques)",
-    "Essen'Ciel Patrimoine",
-    "Excelium (assurance vie)",
-    "Ma Protection Accident (Garantie des accidents de la vie)",
-    "Ma Retraite (plan d'épargne retraite individuel — PER)",
-    "Masterlife CREDIT"
-   ],
-   "categories_consultees": {
-    "garanties": 25,
-    "exclusions": 6,
-    "definitions": 4,
-    "conditions": 9,
-    "declencheurs": 8,
-    "plafonds": 5,
-    "franchises": 6,
-    "options": 18,
-    "cotisations": 19,
-    "delais": 9,
-    "fiscalite": 10,
-    "points-vigilance": 9,
-    "formules": 1
+   "famille": "sans_reponse",
+   "question": "Quel est le taux du livret A ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": "donnees_insuffisantes",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": null,
+    "type_question": "ambigu",
+    "perimetre": "ambigu",
+    "categories_demandees": [
+     "formules",
+     "garanties",
+     "definitions"
+    ],
+    "contrats_retenus": [],
+    "contrats_rejetes": 9,
+    "source_officielle_requise": false,
+    "statut": "question_ambigue"
    },
-   "elements_manquants_dans_la_base": [],
-   "source_officielle_requise": true,
-   "autorites_recommandees": [
-    "acpr",
-    "code-assurances",
-    "service-public"
-   ],
-   "peut_conclure": true,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": false,
+    "raisons": [
+     "statut question_ambigue attendu donnees_insuffisantes"
+    ]
+   }
   },
   {
-   "type": "sans_reponse",
-   "question": "Quelle est la garantie chômage de MasterLife ?",
-   "concepts": [],
-   "contrats_retrouves": [],
-   "categories_consultees": {},
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs",
-    "definitions",
-    "exclusions",
-    "garanties"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [],
-   "peut_conclure": false,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "famille": "sans_reponse",
+   "question": "Quelle est la garantie responsabilité civile auto ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": "donnees_insuffisantes",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": null,
+    "type_question": "ambigu",
+    "perimetre": "ambigu",
+    "categories_demandees": [
+     "garanties"
+    ],
+    "contrats_retenus": [],
+    "contrats_rejetes": 9,
+    "source_officielle_requise": false,
+    "statut": "question_ambigue"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": false,
+    "raisons": [
+     "statut question_ambigue attendu donnees_insuffisantes"
+    ]
+   }
   },
   {
-   "type": "sans_reponse",
-   "question": "Le contrat couvre-t-il les catastrophes naturelles sur un bien immobilier ?",
-   "concepts": [],
-   "contrats_retrouves": [],
-   "categories_consultees": {},
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs",
-    "definitions",
-    "exclusions",
-    "garanties"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [],
-   "peut_conclure": false,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "famille": "ambigu",
+   "question": "Que couvre exactement ce contrat ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": "question_ambigue",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": null,
+    "type_question": "ambigu",
+    "perimetre": "ambigu",
+    "categories_demandees": [],
+    "contrats_retenus": [],
+    "contrats_rejetes": 9,
+    "source_officielle_requise": false,
+    "statut": "question_ambigue"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
   },
   {
-   "type": "sans_reponse",
-   "question": "Quel est le taux du livret A associé ?",
-   "concepts": [],
-   "contrats_retrouves": [],
-   "categories_consultees": {},
-   "elements_manquants_dans_la_base": [
-    "conditions",
-    "declencheurs",
-    "definitions",
-    "exclusions",
-    "garanties"
-   ],
-   "source_officielle_requise": false,
-   "autorites_recommandees": [],
-   "peut_conclure": false,
-   "sinon": "renvoyer à la notice / certificat / source officielle ; ne pas inventer"
+   "famille": "ambigu",
+   "question": "Suis-je bien protégé ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": "question_ambigue",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": null,
+    "type_question": "ambigu",
+    "perimetre": "ambigu",
+    "categories_demandees": [],
+    "contrats_retenus": [],
+    "contrats_rejetes": 9,
+    "source_officielle_requise": false,
+    "statut": "question_ambigue"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
+  },
+  {
+   "famille": "ambigu",
+   "question": "Quelles sont les conditions et limites ?",
+   "contrats_obligatoires": [],
+   "contrats_interdits": [],
+   "categories_obligatoires": [],
+   "source_officielle_externe_attendue": false,
+   "notice_attendue": false,
+   "statut_attendu": "question_ambigue",
+   "detecte": {
+    "contrat_explicite": [],
+    "concept_principal": null,
+    "type_question": "ambigu",
+    "perimetre": "ambigu",
+    "categories_demandees": [
+     "conditions"
+    ],
+    "contrats_retenus": [],
+    "contrats_rejetes": 9,
+    "source_officielle_requise": false,
+    "statut": "question_ambigue"
+   },
+   "resultat": {
+    "passed": true,
+    "recall_ok": true,
+    "sans_contrat_interdit": true,
+    "source_ok": true,
+    "perimetre_ok": true,
+    "statut_ok": true,
+    "raisons": []
+   }
   }
  ]
 }

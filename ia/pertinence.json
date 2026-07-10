@@ -1,0 +1,1789 @@
+{
+ "meta": {
+  "version": "1.2.0",
+  "genere_le": "2026-07-10",
+  "echelle": {
+   "0": "absent",
+   "1": "mention secondaire",
+   "2": "définition/contexte",
+   "3": "condition/limite/exclusion structurante",
+   "4": "garantie/déclencheur important",
+   "5": "cœur du produit"
+  },
+  "note": "Score concept×contrat dérivé des catégories où le concept apparaît. Chaque score conserve preuves + justification. Aucun score sans preuve."
+ },
+ "pertinence": [
+  {
+   "concept": "accident",
+   "contrat": "avizen",
+   "score": 5,
+   "types": [
+    "declencheurs",
+    "definitions",
+    "delais",
+    "exclusions",
+    "franchises",
+    "garanties",
+    "options",
+    "plafonds",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_2025_04_garanties_1aaadbb8226d_knowledge_89bf645880bb",
+    "axa_axa_axa_avizen_2025_04_garanties_1f8e343ca6c1_knowledge_5a79ea84fd80",
+    "axa_axa_axa_avizen_2025_04_garanties_298583bbdc55_knowledge_6df41afcc8cc",
+    "axa_axa_axa_avizen_2025_04_garanties_2bf2b4989e80_knowledge_8e3e075241c0",
+    "axa_axa_axa_avizen_2025_04_garanties_4273eec96de1_knowledge_d37557b53e34",
+    "axa_axa_axa_avizen_2025_04_garanties_4e17c4643abb_knowledge_de5880e82d5e",
+    "axa_axa_axa_avizen_2025_04_exclusions_2bc5e30f05f7_knowledge_31ea614f0cd8",
+    "axa_axa_axa_avizen_2025_04_exclusions_896982b4e3b0_knowledge_584c5c70a769"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Avizen."
+  },
+  {
+   "concept": "accident",
+   "contrat": "avizen-pro",
+   "score": 5,
+   "types": [
+    "declencheurs",
+    "definitions",
+    "exclusions",
+    "franchises",
+    "garanties",
+    "plafonds",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_pro_2025_04_garanties_036eb3e36d25_knowledge_8069455b86f2",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_42d478ba7b57_knowledge_6a98e41528ba",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_77887a191541_knowledge_14a294237c21",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_80c6d0464d00_knowledge_c65eda8b8ce7",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_80ee94d21420_knowledge_bea1d352bf2a",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_8c3742b8bbe7_knowledge_18dcafdf9510",
+    "axa_axa_axa_avizen_pro_2025_04_exclusions_d5d0437a216c_knowledge_7f1038606936",
+    "avizen-pro:def:bc84b360bb"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Avizen Pro."
+  },
+  {
+   "concept": "accident",
+   "contrat": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "score": 5,
+   "types": [
+    "declencheurs",
+    "definitions",
+    "exclusions",
+    "franchises",
+    "garanties",
+    "options",
+    "plafonds",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_protection_accident_2024_03_garanties_26e5f14dc994_knowledge_debe9a9a0e38",
+    "axa_axa_axa_ma_protection_accident_2024_03_garanties_72021e69b219_knowledge_0bef033c84e0",
+    "axa_axa_axa_ma_protection_accident_2024_03_garanties_e1f5f51c7ef1_knowledge_b9e1422d7074",
+    "axa_axa_axa_ma_protection_accident_2024_03_garanties_f523b50de602_knowledge_daf339abe06e",
+    "axa_axa_axa_ma_protection_accident_2024_03_exclusions_22210ec1a6d2_knowledge_47d6f96ffc4b",
+    "axa_axa_axa_ma_protection_accident_2024_03_exclusions_2ac1c308b745_knowledge_ddebe98b7f99",
+    "axa_axa_axa_ma_protection_accident_2024_03_exclusions_2bbf501d56a0_knowledge_9283aa6a94cd",
+    "axa_axa_axa_ma_protection_accident_2024_03_exclusions_30878c977dde_knowledge_bd99bda85a24"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Ma Protection Accident (Garantie des accidents de la vie)."
+  },
+  {
+   "concept": "deces",
+   "contrat": "avizen",
+   "score": 5,
+   "types": [
+    "cotisations",
+    "declencheurs",
+    "definitions",
+    "delais",
+    "exclusions",
+    "fiscalite",
+    "garanties",
+    "options",
+    "plafonds"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_2025_04_garanties_338c6fd6176a_knowledge_8938e101c7dc",
+    "axa_axa_axa_avizen_2025_04_exclusions_2e814add9402_knowledge_a66ece2859b1",
+    "axa_axa_axa_avizen_2025_04_exclusions_88792af8010e_knowledge_7a2869e7f5a6",
+    "axa_axa_axa_avizen_2025_04_exclusions_896982b4e3b0_knowledge_584c5c70a769",
+    "avizen:def:714f512e9e",
+    "avizen:fait:2cbcc3adad:declencheur:0",
+    "avizen:fait:2cbcc3adad:declencheur:1",
+    "avizen:fait:d2f8ad4663:declencheur:0"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Avizen."
+  },
+  {
+   "concept": "deces",
+   "contrat": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "score": 5,
+   "types": [
+    "declencheurs",
+    "definitions",
+    "delais",
+    "garanties",
+    "plafonds"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_protection_accident_2024_03_garanties_ab5b155c98dd_knowledge_f44230ee79a8",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:def:bc84b360bb",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:def:11cbeb7842",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:2bd15a813d:declencheur:0",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:2bd15a813d:plafond:0",
+    "axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_37393853f687_knowledge_961d22bd6d10"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Ma Protection Accident (Garantie des accidents de la vie)."
+  },
+  {
+   "concept": "deces",
+   "contrat": "ma-retraite-plan-d-epargne-retraite-individuel-per",
+   "score": 5,
+   "types": [
+    "declencheurs",
+    "definitions",
+    "exclusions",
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_retraite_2026_05_garanties_2a82507190c0_knowledge_a3e9a5052e25",
+    "axa_axa_axa_ma_retraite_2026_05_garanties_2f0464c0cd48_knowledge_500bf61880f1",
+    "axa_axa_axa_ma_retraite_2026_05_garanties_dd10b98b0d62_knowledge_5506ae497daf",
+    "axa_axa_axa_ma_retraite_2026_05_exclusions_e6de09eaf132_knowledge_bb7640d6ac46",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per:def:ac7dc65e58",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:2aa29d9978:declencheur:0",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:75fb2b014a:declencheur:0",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:75fb2b014a:declencheur:1"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Ma Retraite (plan d'épargne retraite individuel — PER)."
+  },
+  {
+   "concept": "fiscalite",
+   "contrat": "avizen",
+   "score": 5,
+   "types": [
+    "cotisations",
+    "declencheurs",
+    "definitions",
+    "fiscalite",
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_2025_04_garanties_338c6fd6176a_knowledge_8938e101c7dc",
+    "avizen:def:714f512e9e",
+    "avizen:fait:9893112dc5:declencheur:1",
+    "axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db",
+    "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Avizen."
+  },
+  {
+   "concept": "incapacite-temporaire",
+   "contrat": "avizen",
+   "score": 5,
+   "types": [
+    "declencheurs",
+    "definitions",
+    "delais",
+    "exclusions",
+    "formules",
+    "franchises",
+    "garanties",
+    "options",
+    "plafonds",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_2025_04_garanties_298583bbdc55_knowledge_6df41afcc8cc",
+    "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+    "axa_axa_axa_avizen_2025_04_garanties_4e17c4643abb_knowledge_de5880e82d5e",
+    "axa_axa_axa_avizen_2025_04_exclusions_2bc5e30f05f7_knowledge_31ea614f0cd8",
+    "avizen:def:26ab92ad8c",
+    "avizen:def:5f15e6a842",
+    "avizen:fait:89a1ca75b5:declencheur:0",
+    "avizen:fait:89a1ca75b5:declencheur:1"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Avizen."
+  },
+  {
+   "concept": "invalidite",
+   "contrat": "avizen",
+   "score": 5,
+   "types": [
+    "cotisations",
+    "declencheurs",
+    "definitions",
+    "delais",
+    "exclusions",
+    "fiscalite",
+    "formules",
+    "franchises",
+    "garanties",
+    "options",
+    "plafonds"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_2025_04_garanties_1aaadbb8226d_knowledge_89bf645880bb",
+    "axa_axa_axa_avizen_2025_04_garanties_1f8e343ca6c1_knowledge_5a79ea84fd80",
+    "axa_axa_axa_avizen_2025_04_garanties_2bf2b4989e80_knowledge_8e3e075241c0",
+    "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+    "axa_axa_axa_avizen_2025_04_garanties_338c6fd6176a_knowledge_8938e101c7dc",
+    "axa_axa_axa_avizen_2025_04_garanties_4273eec96de1_knowledge_d37557b53e34",
+    "axa_axa_axa_avizen_2025_04_garanties_4e17c4643abb_knowledge_de5880e82d5e",
+    "axa_axa_axa_avizen_2025_04_exclusions_2bc5e30f05f7_knowledge_31ea614f0cd8"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Avizen."
+  },
+  {
+   "concept": "invalidite",
+   "contrat": "avizen-pro",
+   "score": 5,
+   "types": [
+    "conditions",
+    "cotisations",
+    "declencheurs",
+    "definitions",
+    "delais",
+    "exclusions",
+    "formules",
+    "franchises",
+    "garanties",
+    "options",
+    "plafonds",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_pro_2025_04_garanties_42d478ba7b57_knowledge_6a98e41528ba",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_466534853a69_knowledge_ee3565d5451c",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_5aa626eed35e_knowledge_7d96fb0fa4eb",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_77887a191541_knowledge_14a294237c21",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_8c3742b8bbe7_knowledge_18dcafdf9510",
+    "axa_axa_axa_avizen_pro_2025_04_exclusions_2aef8f17ca9c_knowledge_1c8e77582d69",
+    "axa_axa_axa_avizen_pro_2025_04_exclusions_d519dc75ce41_knowledge_62b80b2e93fe",
+    "axa_axa_axa_avizen_pro_2025_04_exclusions_d5d0437a216c_knowledge_7f1038606936"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Avizen Pro."
+  },
+  {
+   "concept": "invalidite",
+   "contrat": "masterlife-credit",
+   "score": 5,
+   "types": [
+    "declencheurs",
+    "definitions",
+    "exclusions",
+    "formules",
+    "franchises",
+    "garanties",
+    "options",
+    "plafonds",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_7fecd8ae9f79_knowledge_d0af30a9aaf6",
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_93963eb93de3_knowledge_9f59cb6de90f",
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_9542660c76a0_knowledge_3dd8f3ed7869",
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_adf30e38133e_knowledge_9073a4080125",
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_d491c9d8dfde_knowledge_32a7d6cd89bf",
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_e995610a6cfc_knowledge_bb8b7f487fe1",
+    "axa_axa_axa_masterlife_credit_2024_10_exclusions_1d2b077cf406_knowledge_ceaaab562fc8",
+    "axa_axa_axa_masterlife_credit_2024_10_exclusions_2bcaeda3d931_knowledge_1b55e7e978ee"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Masterlife CREDIT."
+  },
+  {
+   "concept": "souscription",
+   "contrat": "excelium-assurance-vie",
+   "score": 5,
+   "types": [
+    "conditions",
+    "cotisations",
+    "declencheurs",
+    "definitions",
+    "fiscalite",
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_excelium_vie_2026_05_garanties_646ff8db73da_knowledge_44cff956d072",
+    "axa_axa_axa_excelium_vie_2026_05_garanties_74ce8a266629_knowledge_ea183a5624f4",
+    "axa_axa_axa_excelium_vie_2026_05_garanties_d4df6041404f_knowledge_6cd775321f12",
+    "excelium-assurance-vie:def:260046ebea",
+    "excelium-assurance-vie:cond:04d661bd25",
+    "excelium-assurance-vie:fait:0b27383ed4:declencheur:1",
+    "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_58fc69bea0e9_knowledge_6dce3bffa380",
+    "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_ee50e7e2015b_knowledge_076ec1b062c1"
+   ],
+   "justification": "Cœur du produit (garantie + définition + déclencheur) dans Excelium (assurance vie)."
+  },
+  {
+   "concept": "accident",
+   "contrat": "entour-age",
+   "score": 4,
+   "types": [
+    "declencheurs",
+    "delais",
+    "exclusions",
+    "franchises"
+   ],
+   "preuves": [
+    "axa_axa_axa_entourage_2025_06_exclusions_e6da0a9fdb2b_knowledge_39cbc1ab1739",
+    "entour-age:fait:52eb8f16a6:declencheur:1",
+    "entour-age:fait:52eb8f16a6:franchise:1",
+    "axa_axa_axa_entourage_2025_06_delais_carences_franchises_1c5ace0d0983_knowledge_9039b861f674",
+    "axa_axa_axa_entourage_2025_06_delais_carences_franchises_ad16ac0bce02_knowledge_035d6a65dfdf"
+   ],
+   "justification": "Garantie ou déclencheur important dans Entour'Age."
+  },
+  {
+   "concept": "accident",
+   "contrat": "masterlife-credit",
+   "score": 4,
+   "types": [
+    "definitions",
+    "exclusions",
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_e995610a6cfc_knowledge_bb8b7f487fe1",
+    "axa_axa_axa_masterlife_credit_2024_10_exclusions_1d2b077cf406_knowledge_ceaaab562fc8",
+    "masterlife-credit:def:bc84b360bb",
+    "masterlife-credit:def:79f88b32e2"
+   ],
+   "justification": "Garantie ou déclencheur important dans Masterlife CREDIT."
+  },
+  {
+   "concept": "association",
+   "contrat": "masterlife-credit",
+   "score": 4,
+   "types": [
+    "conditions",
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_adf30e38133e_knowledge_9073a4080125",
+    "masterlife-credit:cond:1ed4ab0baf"
+   ],
+   "justification": "Garantie ou déclencheur important dans Masterlife CREDIT."
+  },
+  {
+   "concept": "beneficiaire",
+   "contrat": "avizen",
+   "score": 4,
+   "types": [
+    "delais",
+    "exclusions",
+    "fiscalite",
+    "garanties",
+    "options",
+    "plafonds"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_2025_04_garanties_338c6fd6176a_knowledge_8938e101c7dc",
+    "axa_axa_axa_avizen_2025_04_exclusions_2e814add9402_knowledge_a66ece2859b1",
+    "avizen:fait:a1589f2d75:plafond:0",
+    "axa_axa_axa_avizen_2025_04_options_9f4385ee345a_knowledge_219241330066",
+    "axa_axa_axa_avizen_2025_04_delais_carences_franchises_064d54938164_knowledge_e46b76d2bea0",
+    "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5"
+   ],
+   "justification": "Garantie ou déclencheur important dans Avizen."
+  },
+  {
+   "concept": "beneficiaire",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 4,
+   "types": [
+    "fiscalite",
+    "garanties",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb",
+    "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_10b11fed39d8_knowledge_81a9d27bb02d",
+    "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_622c88ea9f4b_knowledge_9e5bc789bca2",
+    "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641",
+    "axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c"
+   ],
+   "justification": "Garantie ou déclencheur important dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "beneficiaire",
+   "contrat": "essen-ciel-patrimoine",
+   "score": 4,
+   "types": [
+    "garanties"
+   ],
+   "preuves": [
+    "axa_essenciel_patrimoine_2023-09_garantie_e7d9ed7ecece"
+   ],
+   "justification": "Garantie ou déclencheur important dans Essen'Ciel Patrimoine."
+  },
+  {
+   "concept": "beneficiaire",
+   "contrat": "ma-retraite-plan-d-epargne-retraite-individuel-per",
+   "score": 4,
+   "types": [
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_retraite_2026_05_garanties_2f0464c0cd48_knowledge_500bf61880f1",
+    "axa_axa_axa_ma_retraite_2026_05_garanties_dd10b98b0d62_knowledge_5506ae497daf"
+   ],
+   "justification": "Garantie ou déclencheur important dans Ma Retraite (plan d'épargne retraite individuel — PER)."
+  },
+  {
+   "concept": "beneficiaire",
+   "contrat": "masterlife-credit",
+   "score": 4,
+   "types": [
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_7fecd8ae9f79_knowledge_d0af30a9aaf6",
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_f9f69ff37530_knowledge_4f246d649228"
+   ],
+   "justification": "Garantie ou déclencheur important dans Masterlife CREDIT."
+  },
+  {
+   "concept": "carence",
+   "contrat": "entour-age",
+   "score": 4,
+   "types": [
+    "conditions",
+    "declencheurs",
+    "franchises",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "entour-age:cond:2a7fe9c4fc",
+    "entour-age:fait:52eb8f16a6:declencheur:1",
+    "entour-age:fait:52eb8f16a6:franchise:1",
+    "axa_axa_axa_entourage_2025_06_points_de_vigilance_8eb68cebc424_knowledge_c2ef0572d645",
+    "axa_axa_axa_entourage_2025_06_points_de_vigilance_e441d358bb4c_knowledge_b70fb02a5650"
+   ],
+   "justification": "Garantie ou déclencheur important dans Entour'Age."
+  },
+  {
+   "concept": "deces",
+   "contrat": "avizen-pro",
+   "score": 4,
+   "types": [
+    "conditions",
+    "cotisations",
+    "declencheurs",
+    "exclusions",
+    "fiscalite",
+    "garanties",
+    "options",
+    "plafonds",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_pro_2025_04_garanties_466534853a69_knowledge_ee3565d5451c",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_5aa626eed35e_knowledge_7d96fb0fa4eb",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_77887a191541_knowledge_14a294237c21",
+    "axa_axa_axa_avizen_pro_2025_04_exclusions_2aef8f17ca9c_knowledge_1c8e77582d69",
+    "axa_axa_axa_avizen_pro_2025_04_exclusions_d5d0437a216c_knowledge_7f1038606936",
+    "avizen-pro:cond:7f172f0e1e",
+    "avizen-pro:fait:e6e92c4b61:declencheur:0",
+    "avizen-pro:fait:cfb98375a0:declencheur:0"
+   ],
+   "justification": "Garantie ou déclencheur important dans Avizen Pro."
+  },
+  {
+   "concept": "deces",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "delais",
+    "exclusions",
+    "fiscalite",
+    "garanties",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb",
+    "axa_axa_axa_essenciel_2025_06_garanties_e42b591edf9f_knowledge_8cbfa291bbd8",
+    "axa_axa_axa_essenciel_2025_06_garanties_e659d22109db_knowledge_887ac2922e7f",
+    "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
+    "axa_axa_axa_essenciel_2025_06_exclusions_e72bdb32890b_knowledge_17f7b1238668",
+    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+    "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8",
+    "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d54c486f45e6_knowledge_9b690d586091"
+   ],
+   "justification": "Garantie ou déclencheur important dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "deces",
+   "contrat": "essen-ciel-patrimoine",
+   "score": 4,
+   "types": [
+    "exclusions",
+    "garanties",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_essenciel_patrimoine_2023-09_garantie_e7d9ed7ecece",
+    "axa_essenciel_patrimoine_2023-09_garantie_382e69377b50",
+    "axa_essenciel_patrimoine_2023-09_exclusion_90a4216e1cb7",
+    "axa_essenciel_patrimoine_2023-09_option_1c3ca5ad4e41",
+    "axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0"
+   ],
+   "justification": "Garantie ou déclencheur important dans Essen'Ciel Patrimoine."
+  },
+  {
+   "concept": "deces",
+   "contrat": "excelium-assurance-vie",
+   "score": 4,
+   "types": [
+    "declencheurs",
+    "formules",
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_excelium_vie_2026_05_garanties_646ff8db73da_knowledge_44cff956d072",
+    "axa_axa_axa_excelium_vie_2026_05_garanties_74ce8a266629_knowledge_ea183a5624f4",
+    "axa_axa_axa_excelium_vie_2026_05_garanties_c32aff3d329b_knowledge_f37b388cf816",
+    "axa_axa_axa_excelium_vie_2026_05_garanties_d4df6041404f_knowledge_6cd775321f12",
+    "excelium-assurance-vie:fait:48e4ad06df:declencheur:0",
+    "axa_excelium_vie_2026-05_formule_04"
+   ],
+   "justification": "Garantie ou déclencheur important dans Excelium (assurance vie)."
+  },
+  {
+   "concept": "deces",
+   "contrat": "masterlife-credit",
+   "score": 4,
+   "types": [
+    "declencheurs",
+    "exclusions",
+    "garanties",
+    "plafonds"
+   ],
+   "preuves": [
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_f9f69ff37530_knowledge_4f246d649228",
+    "axa_axa_axa_masterlife_credit_2024_10_exclusions_7d71c356f084_knowledge_8c611c90bc41",
+    "axa_axa_axa_masterlife_credit_2024_10_exclusions_84dc965c3cbd_knowledge_e316f16d3470",
+    "masterlife-credit:fait:d958e52a0c:declencheur:0",
+    "masterlife-credit:fait:fbdb2c83d4:declencheur:0",
+    "masterlife-credit:fait:d958e52a0c:plafond:0"
+   ],
+   "justification": "Garantie ou déclencheur important dans Masterlife CREDIT."
+  },
+  {
+   "concept": "deces-accidentel",
+   "contrat": "entour-age",
+   "score": 4,
+   "types": [
+    "declencheurs",
+    "delais",
+    "franchises"
+   ],
+   "preuves": [
+    "entour-age:fait:52eb8f16a6:declencheur:1",
+    "entour-age:fait:52eb8f16a6:franchise:1",
+    "axa_axa_axa_entourage_2025_06_delais_carences_franchises_ad16ac0bce02_knowledge_035d6a65dfdf"
+   ],
+   "justification": "Garantie ou déclencheur important dans Entour'Age."
+  },
+  {
+   "concept": "fin-garantie",
+   "contrat": "avizen",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "delais",
+    "garanties",
+    "options"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+    "axa_axa_axa_avizen_2025_04_garanties_4273eec96de1_knowledge_d37557b53e34",
+    "axa_axa_axa_avizen_2025_04_garanties_4e17c4643abb_knowledge_de5880e82d5e",
+    "axa_axa_axa_avizen_2025_04_options_8f4ee5536c39_knowledge_566df5b56ec5",
+    "axa_axa_axa_avizen_2025_04_options_9548821c6b3a_knowledge_3c980033add3",
+    "axa_axa_axa_avizen_2025_04_cotisations_et_prix_b516c9e6cfb0_knowledge_09a0e053a243",
+    "axa_axa_axa_avizen_2025_04_delais_carences_franchises_848a468470d5_knowledge_44d4257a68c3"
+   ],
+   "justification": "Garantie ou déclencheur important dans Avizen."
+  },
+  {
+   "concept": "fin-garantie",
+   "contrat": "avizen-pro",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_pro_2025_04_garanties_036eb3e36d25_knowledge_8069455b86f2",
+    "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_759b89f27c1f_knowledge_d18add8ca1f6"
+   ],
+   "justification": "Garantie ou déclencheur important dans Avizen Pro."
+  },
+  {
+   "concept": "fin-garantie",
+   "contrat": "entour-age",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "declencheurs",
+    "fiscalite",
+    "garanties",
+    "options"
+   ],
+   "preuves": [
+    "axa_axa_axa_entourage_2025_06_garanties_d34d924c6410_knowledge_ac2f1209e317",
+    "entour-age:fait:52eb8f16a6:declencheur:1",
+    "axa_axa_axa_entourage_2025_06_options_c09b72c9c8a5_knowledge_4cd76c6d196f",
+    "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d",
+    "axa_axa_axa_entourage_2025_06_cotisations_et_prix_d8f6e55152e0_knowledge_4ce4ee258710",
+    "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_933bb6edae6e_knowledge_55a3c4fbd645"
+   ],
+   "justification": "Garantie ou déclencheur important dans Entour'Age."
+  },
+  {
+   "concept": "fin-garantie",
+   "contrat": "excelium-assurance-vie",
+   "score": 4,
+   "types": [
+    "declencheurs",
+    "delais",
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_excelium_vie_2026_05_garanties_74ce8a266629_knowledge_ea183a5624f4",
+    "axa_axa_axa_excelium_vie_2026_05_garanties_c32aff3d329b_knowledge_f37b388cf816",
+    "axa_axa_axa_excelium_vie_2026_05_garanties_d4df6041404f_knowledge_6cd775321f12",
+    "excelium-assurance-vie:fait:4475e2a358:declencheur:0",
+    "excelium-assurance-vie:fait:4475e2a358:declencheur:1",
+    "excelium-assurance-vie:fait:48e4ad06df:declencheur:0",
+    "axa_axa_axa_excelium_vie_2026_05_delais_carences_franchises_263e9fdfb993_knowledge_59f8e985663a"
+   ],
+   "justification": "Garantie ou déclencheur important dans Excelium (assurance vie)."
+  },
+  {
+   "concept": "fin-garantie",
+   "contrat": "ma-retraite-plan-d-epargne-retraite-individuel-per",
+   "score": 4,
+   "types": [
+    "exclusions",
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_retraite_2026_05_garanties_dd10b98b0d62_knowledge_5506ae497daf",
+    "axa_axa_axa_ma_retraite_2026_05_exclusions_e6de09eaf132_knowledge_bb7640d6ac46"
+   ],
+   "justification": "Garantie ou déclencheur important dans Ma Retraite (plan d'épargne retraite individuel — PER)."
+  },
+  {
+   "concept": "fin-garantie",
+   "contrat": "masterlife-credit",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "garanties",
+    "options",
+    "plafonds"
+   ],
+   "preuves": [
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_7fecd8ae9f79_knowledge_d0af30a9aaf6",
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_adf30e38133e_knowledge_9073a4080125",
+    "masterlife-credit:fait:48d0f52caf:plafond:0",
+    "axa_axa_axa_masterlife_credit_2024_10_options_cd4d91e29f75_knowledge_d0c39ab9e6b2",
+    "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_fcc33a37f235_knowledge_bdaff89df963"
+   ],
+   "justification": "Garantie ou déclencheur important dans Masterlife CREDIT."
+  },
+  {
+   "concept": "fiscalite",
+   "contrat": "avizen-pro",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "declencheurs",
+    "fiscalite",
+    "garanties",
+    "options"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_pro_2025_04_garanties_5aa626eed35e_knowledge_7d96fb0fa4eb",
+    "avizen-pro:fait:6354ec813b:declencheur:0",
+    "axa_axa_axa_avizen_pro_2025_04_options_30367f970ec3_knowledge_9b700659935b",
+    "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
+    "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_a9a1ff6e4623_knowledge_b16b93a33ab5"
+   ],
+   "justification": "Garantie ou déclencheur important dans Avizen Pro."
+  },
+  {
+   "concept": "fiscalite",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 4,
+   "types": [
+    "delais",
+    "fiscalite",
+    "garanties",
+    "options"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_garanties_c0b7532da10b_knowledge_580dd13f2d14",
+    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+    "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73",
+    "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_6b52755aa9bc_knowledge_bf8cc347b759",
+    "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641"
+   ],
+   "justification": "Garantie ou déclencheur important dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "fiscalite",
+   "contrat": "essen-ciel-patrimoine",
+   "score": 4,
+   "types": [
+    "fiscalite",
+    "garanties",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_essenciel_patrimoine_2023-09_garantie_e7d9ed7ecece",
+    "axa_essenciel_patrimoine_2023-09_fiscalite_d81aa98e400a",
+    "axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753"
+   ],
+   "justification": "Garantie ou déclencheur important dans Essen'Ciel Patrimoine."
+  },
+  {
+   "concept": "hospitalisation",
+   "contrat": "entour-age",
+   "score": 4,
+   "types": [
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_entourage_2025_06_garanties_23a00d124ec2_knowledge_1b9ff505ee1c",
+    "axa_axa_axa_entourage_2025_06_garanties_7df9dcef291e_knowledge_8602bccd2ff7"
+   ],
+   "justification": "Garantie ou déclencheur important dans Entour'Age."
+  },
+  {
+   "concept": "incapacite-temporaire",
+   "contrat": "avizen-pro",
+   "score": 4,
+   "types": [
+    "conditions",
+    "declencheurs",
+    "delais",
+    "exclusions",
+    "formules",
+    "franchises",
+    "garanties",
+    "options",
+    "plafonds",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_pro_2025_04_garanties_036eb3e36d25_knowledge_8069455b86f2",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_80c6d0464d00_knowledge_c65eda8b8ce7",
+    "axa_axa_axa_avizen_pro_2025_04_garanties_80ee94d21420_knowledge_bea1d352bf2a",
+    "axa_axa_axa_avizen_pro_2025_04_exclusions_d519dc75ce41_knowledge_62b80b2e93fe",
+    "avizen-pro:cond:7f172f0e1e",
+    "avizen-pro:fait:e4f8ae15eb:declencheur:0",
+    "avizen-pro:fait:e4f8ae15eb:declencheur:1",
+    "avizen-pro:fait:b98f6e974d:declencheur:0"
+   ],
+   "justification": "Garantie ou déclencheur important dans Avizen Pro."
+  },
+  {
+   "concept": "incapacite-temporaire",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 4,
+   "types": [
+    "formules",
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb",
+    "axa_essenciel_2025-06_formule_01"
+   ],
+   "justification": "Garantie ou déclencheur important dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "rachat",
+   "contrat": "avizen",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "fiscalite",
+    "garanties",
+    "plafonds"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+    "avizen:fait:a1589f2d75:plafond:0",
+    "axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db",
+    "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09",
+    "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_23f113174dd4_knowledge_0ecf20a9cf62",
+    "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_906eb3ee9913_knowledge_306ed551c6e9",
+    "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_d15d09b28f2a_knowledge_f7005bf2d30b"
+   ],
+   "justification": "Garantie ou déclencheur important dans Avizen."
+  },
+  {
+   "concept": "rachat",
+   "contrat": "entour-age",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "fiscalite",
+    "formules",
+    "garanties",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_entourage_2025_06_garanties_d34d924c6410_knowledge_ac2f1209e317",
+    "axa_axa_axa_entourage_2025_06_options_1e769dd60f47_knowledge_1f9477b5236e",
+    "axa_axa_axa_entourage_2025_06_options_a965668d36e4_knowledge_28f942a2bdaa",
+    "axa_axa_axa_entourage_2025_06_cotisations_et_prix_df0f22fdd097_knowledge_21a4375ed5e3",
+    "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_6e3dedbb6c6b_knowledge_e47bdf2e7075",
+    "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_933bb6edae6e_knowledge_55a3c4fbd645",
+    "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117",
+    "axa_axa_axa_entourage_2025_06_points_de_vigilance_6f230082ba39_knowledge_79617a24203d"
+   ],
+   "justification": "Garantie ou déclencheur important dans Entour'Age."
+  },
+  {
+   "concept": "rachat",
+   "contrat": "excelium-assurance-vie",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "fiscalite",
+    "formules",
+    "garanties",
+    "options",
+    "plafonds",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_excelium_vie_2026_05_garanties_74ce8a266629_knowledge_ea183a5624f4",
+    "axa_axa_axa_excelium_vie_2026_05_garanties_c32aff3d329b_knowledge_f37b388cf816",
+    "excelium-assurance-vie:fait:62d6fd5c2d:plafond:0",
+    "axa_axa_axa_excelium_vie_2026_05_options_a2272a8885f5_knowledge_cdbcbea03f9e",
+    "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_171c5a3a4b19_knowledge_833f37b8be6f",
+    "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674",
+    "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_3dfb729787c5_knowledge_8280ed50233d",
+    "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_85bea04ba9d3_knowledge_ad9b384335e5"
+   ],
+   "justification": "Garantie ou déclencheur important dans Excelium (assurance vie)."
+  },
+  {
+   "concept": "rachat",
+   "contrat": "ma-retraite-plan-d-epargne-retraite-individuel-per",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "delais",
+    "exclusions",
+    "fiscalite",
+    "garanties"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_retraite_2026_05_garanties_2a82507190c0_knowledge_a3e9a5052e25",
+    "axa_axa_axa_ma_retraite_2026_05_exclusions_e6de09eaf132_knowledge_bb7640d6ac46",
+    "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_9ba03053e69a_knowledge_d8f10c7d1ce0",
+    "axa_axa_axa_ma_retraite_2026_05_delais_carences_franchises_de86b07410c8_knowledge_9957db1025ba",
+    "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1c74300ec161_knowledge_7796cf78275b",
+    "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_30d289ee955a_knowledge_7c124417b8b5",
+    "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_58efaba51d48_knowledge_4b450012844f",
+    "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_78d2a3fea36c_knowledge_b714c809e8b8"
+   ],
+   "justification": "Garantie ou déclencheur important dans Ma Retraite (plan d'épargne retraite individuel — PER)."
+  },
+  {
+   "concept": "souscription",
+   "contrat": "avizen",
+   "score": 4,
+   "types": [
+    "conditions",
+    "cotisations",
+    "definitions",
+    "delais",
+    "fiscalite",
+    "franchises",
+    "garanties",
+    "options",
+    "plafonds",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_2025_04_garanties_2ff339490df0_knowledge_b9439f7afea1",
+    "avizen:def:5f15e6a842",
+    "avizen:def:216df9ed2f",
+    "avizen:cond:94ec71256c",
+    "avizen:cond:df91ea5e02",
+    "avizen:fait:2cbcc3adad:plafond:0",
+    "avizen:fait:d2f8ad4663:plafond:0",
+    "avizen:fait:89a1ca75b5:franchise:0"
+   ],
+   "justification": "Garantie ou déclencheur important dans Avizen."
+  },
+  {
+   "concept": "souscription",
+   "contrat": "avizen-pro",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "declencheurs",
+    "delais",
+    "exclusions",
+    "fiscalite",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_pro_2025_04_exclusions_d5d0437a216c_knowledge_7f1038606936",
+    "avizen-pro:fait:e4f8ae15eb:declencheur:0",
+    "axa_axa_axa_avizen_pro_2025_04_options_30367f970ec3_knowledge_9b700659935b",
+    "axa_axa_axa_avizen_pro_2025_04_options_cd5baa4496f8_knowledge_48ad072d3fa9",
+    "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_759b89f27c1f_knowledge_d18add8ca1f6",
+    "axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_32baffb6fabd_knowledge_480adab7336d",
+    "axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_4c3eda7401a0_knowledge_41719d2a39ff",
+    "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_a9a1ff6e4623_knowledge_b16b93a33ab5"
+   ],
+   "justification": "Garantie ou déclencheur important dans Avizen Pro."
+  },
+  {
+   "concept": "souscription",
+   "contrat": "entour-age",
+   "score": 4,
+   "types": [
+    "conditions",
+    "cotisations",
+    "declencheurs",
+    "delais",
+    "fiscalite",
+    "formules",
+    "franchises",
+    "garanties",
+    "options",
+    "plafonds",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_entourage_2025_06_garanties_7df9dcef291e_knowledge_8602bccd2ff7",
+    "axa_axa_axa_entourage_2025_06_garanties_d34d924c6410_knowledge_ac2f1209e317",
+    "axa_axa_axa_entourage_2025_06_garanties_ef6ab638bf32_knowledge_7c02f4cdceb0",
+    "entour-age:cond:0757925f45",
+    "entour-age:cond:2a7fe9c4fc",
+    "entour-age:fait:2a25013e7a:declencheur:0",
+    "entour-age:fait:2a25013e7a:plafond:0",
+    "entour-age:fait:2094e3a95e:plafond:1"
+   ],
+   "justification": "Garantie ou déclencheur important dans Entour'Age."
+  },
+  {
+   "concept": "souscription",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 4,
+   "types": [
+    "cotisations",
+    "exclusions",
+    "fiscalite",
+    "garanties",
+    "options"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb",
+    "axa_axa_axa_essenciel_2025_06_garanties_9ebc6fa82294_knowledge_6e72c2b48f79",
+    "axa_axa_axa_essenciel_2025_06_garanties_c0b7532da10b_knowledge_580dd13f2d14",
+    "axa_axa_axa_essenciel_2025_06_exclusions_e72bdb32890b_knowledge_17f7b1238668",
+    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+    "axa_axa_axa_essenciel_2025_06_options_de0a3dff8347_knowledge_6e47ac594507",
+    "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0fdc19816413_knowledge_010612cb7537",
+    "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8"
+   ],
+   "justification": "Garantie ou déclencheur important dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "souscription",
+   "contrat": "ma-retraite-plan-d-epargne-retraite-individuel-per",
+   "score": 4,
+   "types": [
+    "conditions",
+    "cotisations",
+    "exclusions",
+    "garanties",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_retraite_2026_05_garanties_2f0464c0cd48_knowledge_500bf61880f1",
+    "axa_axa_axa_ma_retraite_2026_05_exclusions_e6de09eaf132_knowledge_bb7640d6ac46",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per:cond:c956e63a5d",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per:cond:e8e8e580d8",
+    "axa_axa_axa_ma_retraite_2026_05_options_eeb5b0c6e766_knowledge_6af0d458d009",
+    "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_0d373eee8846_knowledge_4a70ecf97022",
+    "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_949c0d6b1fe0_knowledge_868134057060",
+    "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_db274a95a51e_knowledge_af2979bd8634"
+   ],
+   "justification": "Garantie ou déclencheur important dans Ma Retraite (plan d'épargne retraite individuel — PER)."
+  },
+  {
+   "concept": "souscription",
+   "contrat": "masterlife-credit",
+   "score": 4,
+   "types": [
+    "conditions",
+    "cotisations",
+    "exclusions",
+    "fiscalite",
+    "garanties",
+    "options"
+   ],
+   "preuves": [
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_93963eb93de3_knowledge_9f59cb6de90f",
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_adf30e38133e_knowledge_9073a4080125",
+    "axa_axa_axa_masterlife_credit_2024_10_garanties_d491c9d8dfde_knowledge_32a7d6cd89bf",
+    "axa_axa_axa_masterlife_credit_2024_10_exclusions_84dc965c3cbd_knowledge_e316f16d3470",
+    "masterlife-credit:cond:1ed4ab0baf",
+    "axa_axa_axa_masterlife_credit_2024_10_options_cd4d91e29f75_knowledge_d0c39ab9e6b2",
+    "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_317921e2cd84_knowledge_8dcd710beb80",
+    "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_965709e14702_knowledge_59bba4ded7e7"
+   ],
+   "justification": "Garantie ou déclencheur important dans Masterlife CREDIT."
+  },
+  {
+   "concept": "accident",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 3,
+   "types": [
+    "delais",
+    "exclusions",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
+    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+    "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73",
+    "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "accident",
+   "contrat": "excelium-assurance-vie",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_axa_axa_excelium_vie_2026_05_exclusions_54ca499b394e_knowledge_1e79d12cb875"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Excelium (assurance vie)."
+  },
+  {
+   "concept": "age",
+   "contrat": "entour-age",
+   "score": 3,
+   "types": [
+    "conditions"
+   ],
+   "preuves": [
+    "entour-age:cond:0757925f45"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Entour'Age."
+  },
+  {
+   "concept": "association",
+   "contrat": "avizen",
+   "score": 3,
+   "types": [
+    "conditions"
+   ],
+   "preuves": [
+    "avizen:cond:94ec71256c"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Avizen."
+  },
+  {
+   "concept": "association",
+   "contrat": "avizen-pro",
+   "score": 3,
+   "types": [
+    "conditions"
+   ],
+   "preuves": [
+    "avizen-pro:cond:7f172f0e1e"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Avizen Pro."
+  },
+  {
+   "concept": "association",
+   "contrat": "entour-age",
+   "score": 3,
+   "types": [
+    "conditions",
+    "cotisations"
+   ],
+   "preuves": [
+    "entour-age:cond:0757925f45",
+    "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Entour'Age."
+  },
+  {
+   "concept": "association",
+   "contrat": "excelium-assurance-vie",
+   "score": 3,
+   "types": [
+    "conditions",
+    "cotisations"
+   ],
+   "preuves": [
+    "excelium-assurance-vie:cond:04d661bd25",
+    "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_58fc69bea0e9_knowledge_6dce3bffa380"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Excelium (assurance vie)."
+  },
+  {
+   "concept": "association",
+   "contrat": "ma-retraite-plan-d-epargne-retraite-individuel-per",
+   "score": 3,
+   "types": [
+    "conditions",
+    "cotisations"
+   ],
+   "preuves": [
+    "ma-retraite-plan-d-epargne-retraite-individuel-per:cond:c956e63a5d",
+    "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_949c0d6b1fe0_knowledge_868134057060"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Ma Retraite (plan d'épargne retraite individuel — PER)."
+  },
+  {
+   "concept": "beneficiaire",
+   "contrat": "avizen-pro",
+   "score": 3,
+   "types": [
+    "definitions",
+    "exclusions",
+    "plafonds"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_pro_2025_04_exclusions_2aef8f17ca9c_knowledge_1c8e77582d69",
+    "avizen-pro:def:095b5fb514",
+    "avizen-pro:fait:cf7576de07:plafond:0"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Avizen Pro."
+  },
+  {
+   "concept": "carence",
+   "contrat": "avizen-pro",
+   "score": 3,
+   "types": [
+    "exclusions",
+    "franchises"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_pro_2025_04_exclusions_d519dc75ce41_knowledge_62b80b2e93fe",
+    "avizen-pro:fait:45763a5331:franchise:0"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Avizen Pro."
+  },
+  {
+   "concept": "deces",
+   "contrat": "entour-age",
+   "score": 3,
+   "types": [
+    "cotisations",
+    "delais",
+    "exclusions",
+    "fiscalite",
+    "formules",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_entourage_2025_06_exclusions_edcf6ad19ae4_knowledge_404409f6a74a",
+    "axa_axa_axa_entourage_2025_06_options_adbaa1191be7_knowledge_35cafcbd6d53",
+    "axa_axa_axa_entourage_2025_06_options_c09b72c9c8a5_knowledge_4cd76c6d196f",
+    "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b71f718b3818_knowledge_2ceb18ba5d21",
+    "axa_axa_axa_entourage_2025_06_delais_carences_franchises_1c5ace0d0983_knowledge_9039b861f674",
+    "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22",
+    "axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119",
+    "axa_entourage_2025-06_formule_02"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Entour'Age."
+  },
+  {
+   "concept": "deces-accidentel",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 3,
+   "types": [
+    "delais",
+    "exclusions",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
+    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+    "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73",
+    "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "deces-accidentel",
+   "contrat": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_protection_accident_2024_03_exclusions_30878c977dde_knowledge_bd99bda85a24"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Ma Protection Accident (Garantie des accidents de la vie)."
+  },
+  {
+   "concept": "fiscalite",
+   "contrat": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "score": 3,
+   "types": [
+    "conditions",
+    "definitions",
+    "fiscalite"
+   ],
+   "preuves": [
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:def:890b9fbc67",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:cond:88e167c83f",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:cond:1158f219d0",
+    "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_12a04ea57d41_knowledge_347f5f4fe5ab"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Ma Protection Accident (Garantie des accidents de la vie)."
+  },
+  {
+   "concept": "hospitalisation",
+   "contrat": "masterlife-credit",
+   "score": 3,
+   "types": [
+    "exclusions",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_masterlife_credit_2024_10_exclusions_2bcaeda3d931_knowledge_1b55e7e978ee",
+    "axa_axa_axa_masterlife_credit_2024_10_options_bb2687eed056_knowledge_8805759d2325",
+    "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_c3162986a52f_knowledge_df9e127805c0"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Masterlife CREDIT."
+  },
+  {
+   "concept": "invalidite",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "invalidite",
+   "contrat": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "score": 3,
+   "types": [
+    "conditions",
+    "definitions"
+   ],
+   "preuves": [
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:def:65b635209b",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:def:45633cfa34",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:def:890b9fbc67",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:cond:88e167c83f"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Ma Protection Accident (Garantie des accidents de la vie)."
+  },
+  {
+   "concept": "invalidite",
+   "contrat": "ma-retraite-plan-d-epargne-retraite-individuel-per",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_retraite_2026_05_exclusions_e6de09eaf132_knowledge_bb7640d6ac46"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Ma Retraite (plan d'épargne retraite individuel — PER)."
+  },
+  {
+   "concept": "rachat",
+   "contrat": "masterlife-credit",
+   "score": 3,
+   "types": [
+    "cotisations",
+    "exclusions",
+    "fiscalite",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_masterlife_credit_2024_10_exclusions_2bcaeda3d931_knowledge_1b55e7e978ee",
+    "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_8936eebaa5cc_knowledge_85eab19f89d6",
+    "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6184af0ed0bb_knowledge_d2b949a61e4b",
+    "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_8d6684edc0fe_knowledge_549556fde47d",
+    "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_965709e14702_knowledge_59bba4ded7e7",
+    "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_14236254decd_knowledge_8c4dc54fa7d1"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Masterlife CREDIT."
+  },
+  {
+   "concept": "suicide",
+   "contrat": "avizen",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_2025_04_exclusions_2bc5e30f05f7_knowledge_31ea614f0cd8",
+    "axa_axa_axa_avizen_2025_04_exclusions_88792af8010e_knowledge_7a2869e7f5a6"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Avizen."
+  },
+  {
+   "concept": "suicide",
+   "contrat": "avizen-pro",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_pro_2025_04_exclusions_2aef8f17ca9c_knowledge_1c8e77582d69"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Avizen Pro."
+  },
+  {
+   "concept": "suicide",
+   "contrat": "entour-age",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_axa_axa_entourage_2025_06_exclusions_edcf6ad19ae4_knowledge_404409f6a74a"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Entour'Age."
+  },
+  {
+   "concept": "suicide",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_exclusions_e72bdb32890b_knowledge_17f7b1238668"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "suicide",
+   "contrat": "essen-ciel-patrimoine",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_essenciel_patrimoine_2023-09_exclusion_90a4216e1cb7"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Essen'Ciel Patrimoine."
+  },
+  {
+   "concept": "suicide",
+   "contrat": "excelium-assurance-vie",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_axa_axa_excelium_vie_2026_05_exclusions_54ca499b394e_knowledge_1e79d12cb875"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Excelium (assurance vie)."
+  },
+  {
+   "concept": "suicide",
+   "contrat": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_protection_accident_2024_03_exclusions_056b97629881_knowledge_04ae4fbde1d2"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Ma Protection Accident (Garantie des accidents de la vie)."
+  },
+  {
+   "concept": "suicide",
+   "contrat": "masterlife-credit",
+   "score": 3,
+   "types": [
+    "exclusions"
+   ],
+   "preuves": [
+    "axa_axa_axa_masterlife_credit_2024_10_exclusions_3388797f1d90_knowledge_3dcf66148710",
+    "axa_axa_axa_masterlife_credit_2024_10_exclusions_84dc965c3cbd_knowledge_e316f16d3470"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Masterlife CREDIT."
+  },
+  {
+   "concept": "beneficiaire",
+   "contrat": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "score": 2,
+   "types": [
+    "definitions",
+    "delais"
+   ],
+   "preuves": [
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:def:11cbeb7842",
+    "axa_axa_axa_ma_protection_accident_2024_03_delais_carences_franchises_53a94ed30feb_knowledge_86f7a15c46f1"
+   ],
+   "justification": "Définition ou contexte dans Ma Protection Accident (Garantie des accidents de la vie)."
+  },
+  {
+   "concept": "carence",
+   "contrat": "avizen",
+   "score": 2,
+   "types": [
+    "definitions",
+    "franchises"
+   ],
+   "preuves": [
+    "avizen:def:216df9ed2f",
+    "avizen:fait:3d298b99e0:franchise:0"
+   ],
+   "justification": "Définition ou contexte dans Avizen."
+  },
+  {
+   "concept": "hospitalisation",
+   "contrat": "avizen-pro",
+   "score": 2,
+   "types": [
+    "definitions",
+    "delais"
+   ],
+   "preuves": [
+    "avizen-pro:def:4ce8507e31",
+    "axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_467720c3c6b2_knowledge_992f5f813b44"
+   ],
+   "justification": "Définition ou contexte dans Avizen Pro."
+  },
+  {
+   "concept": "incapacite-temporaire",
+   "contrat": "masterlife-credit",
+   "score": 2,
+   "types": [
+    "definitions"
+   ],
+   "preuves": [
+    "masterlife-credit:def:79f88b32e2"
+   ],
+   "justification": "Définition ou contexte dans Masterlife CREDIT."
+  },
+  {
+   "concept": "invalidite",
+   "contrat": "entour-age",
+   "score": 2,
+   "types": [
+    "definitions"
+   ],
+   "preuves": [
+    "entour-age:def:81f0a11726",
+    "entour-age:def:8934291cab",
+    "entour-age:def:dd8cd4544e"
+   ],
+   "justification": "Définition ou contexte dans Entour'Age."
+  },
+  {
+   "concept": "rachat",
+   "contrat": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "score": 2,
+   "types": [
+    "cotisations",
+    "definitions",
+    "fiscalite"
+   ],
+   "preuves": [
+    "ma-protection-accident-garantie-des-accidents-de-la-vie:def:4aa801f469",
+    "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
+    "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_23df485b165e_knowledge_a358e165a171",
+    "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_243bf8cd8a2e_knowledge_fd2afdcc6a20",
+    "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_72c35224482f_knowledge_a9a24a4c6a38",
+    "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_d7a8988e5d19_knowledge_70abebba0cab"
+   ],
+   "justification": "Définition ou contexte dans Ma Protection Accident (Garantie des accidents de la vie)."
+  },
+  {
+   "concept": "age",
+   "contrat": "avizen",
+   "score": 1,
+   "types": [
+    "cotisations"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_2025_04_cotisations_et_prix_abc3375d4853_knowledge_811b06665e8e"
+   ],
+   "justification": "Mention secondaire dans Avizen."
+  },
+  {
+   "concept": "beneficiaire",
+   "contrat": "entour-age",
+   "score": 1,
+   "types": [
+    "delais",
+    "fiscalite",
+    "options"
+   ],
+   "preuves": [
+    "axa_axa_axa_entourage_2025_06_options_adbaa1191be7_knowledge_35cafcbd6d53",
+    "axa_axa_axa_entourage_2025_06_options_c09b72c9c8a5_knowledge_4cd76c6d196f",
+    "axa_axa_axa_entourage_2025_06_delais_carences_franchises_1c5ace0d0983_knowledge_9039b861f674",
+    "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22"
+   ],
+   "justification": "Mention secondaire dans Entour'Age."
+  },
+  {
+   "concept": "beneficiaire",
+   "contrat": "excelium-assurance-vie",
+   "score": 1,
+   "types": [
+    "fiscalite"
+   ],
+   "preuves": [
+    "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_85bea04ba9d3_knowledge_ad9b384335e5",
+    "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_ee50e7e2015b_knowledge_076ec1b062c1"
+   ],
+   "justification": "Mention secondaire dans Excelium (assurance vie)."
+  },
+  {
+   "concept": "carence",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 1,
+   "types": [
+    "options"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad"
+   ],
+   "justification": "Mention secondaire dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "fin-garantie",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 1,
+   "types": [
+    "options"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_options_de0a3dff8347_knowledge_6e47ac594507"
+   ],
+   "justification": "Mention secondaire dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "fin-garantie",
+   "contrat": "essen-ciel-patrimoine",
+   "score": 1,
+   "types": [
+    "options"
+   ],
+   "preuves": [
+    "axa_essenciel_patrimoine_2023-09_option_d5aed7e8f30b",
+    "axa_essenciel_patrimoine_2023-09_option_4c8a4bdf86b1"
+   ],
+   "justification": "Mention secondaire dans Essen'Ciel Patrimoine."
+  },
+  {
+   "concept": "fin-garantie",
+   "contrat": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "score": 1,
+   "types": [
+    "cotisations"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_0abf98aa5778_knowledge_445e279cef50"
+   ],
+   "justification": "Mention secondaire dans Ma Protection Accident (Garantie des accidents de la vie)."
+  },
+  {
+   "concept": "fiscalite",
+   "contrat": "entour-age",
+   "score": 1,
+   "types": [
+    "fiscalite"
+   ],
+   "preuves": [
+    "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22"
+   ],
+   "justification": "Mention secondaire dans Entour'Age."
+  },
+  {
+   "concept": "fiscalite",
+   "contrat": "excelium-assurance-vie",
+   "score": 1,
+   "types": [
+    "fiscalite",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_excelium_vie_2026_05_options_a2272a8885f5_knowledge_cdbcbea03f9e",
+    "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba",
+    "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_c0f287ca10a5_knowledge_4b1481c5d49d",
+    "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_33113b1f8da2_knowledge_5731bc2dd8df"
+   ],
+   "justification": "Mention secondaire dans Excelium (assurance vie)."
+  },
+  {
+   "concept": "fiscalite",
+   "contrat": "ma-retraite-plan-d-epargne-retraite-individuel-per",
+   "score": 1,
+   "types": [
+    "cotisations",
+    "fiscalite",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_5f78886419a6_knowledge_e1c82020b80b",
+    "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779",
+    "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_78d2a3fea36c_knowledge_b714c809e8b8",
+    "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_4638a08834d5_knowledge_0ba923dcc369"
+   ],
+   "justification": "Mention secondaire dans Ma Retraite (plan d'épargne retraite individuel — PER)."
+  },
+  {
+   "concept": "fiscalite",
+   "contrat": "masterlife-credit",
+   "score": 1,
+   "types": [
+    "fiscalite"
+   ],
+   "preuves": [
+    "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_a579030f51e4_knowledge_6b6563df11b1"
+   ],
+   "justification": "Mention secondaire dans Masterlife CREDIT."
+  },
+  {
+   "concept": "incapacite-temporaire",
+   "contrat": "entour-age",
+   "score": 1,
+   "types": [
+    "formules"
+   ],
+   "preuves": [
+    "axa_entourage_2025-06_formule_02"
+   ],
+   "justification": "Mention secondaire dans Entour'Age."
+  },
+  {
+   "concept": "incapacite-temporaire",
+   "contrat": "excelium-assurance-vie",
+   "score": 1,
+   "types": [
+    "formules"
+   ],
+   "preuves": [
+    "axa_excelium_vie_2026-05_formule_04"
+   ],
+   "justification": "Mention secondaire dans Excelium (assurance vie)."
+  },
+  {
+   "concept": "invalidite",
+   "contrat": "excelium-assurance-vie",
+   "score": 1,
+   "types": [
+    "formules"
+   ],
+   "preuves": [
+    "axa_excelium_vie_2026-05_formule_04"
+   ],
+   "justification": "Mention secondaire dans Excelium (assurance vie)."
+  },
+  {
+   "concept": "rachat",
+   "contrat": "avizen-pro",
+   "score": 1,
+   "types": [
+    "cotisations",
+    "fiscalite"
+   ],
+   "preuves": [
+    "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
+    "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2b1334381d5d_knowledge_1ed566556524",
+    "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2db09360e436_knowledge_a3a809ae7819",
+    "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_43a1be7843ad_knowledge_c5adf18d1814",
+    "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_98ed4e335a5b_knowledge_6bb9408ea279"
+   ],
+   "justification": "Mention secondaire dans Avizen Pro."
+  },
+  {
+   "concept": "rachat",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 1,
+   "types": [
+    "cotisations",
+    "fiscalite",
+    "formules",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_options_de0a3dff8347_knowledge_6e47ac594507",
+    "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0d109ff2f1ce_knowledge_b64c3388e76a",
+    "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0fdc19816413_knowledge_010612cb7537",
+    "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8",
+    "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_10b11fed39d8_knowledge_81a9d27bb02d",
+    "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_622c88ea9f4b_knowledge_9e5bc789bca2",
+    "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641",
+    "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_94c8368f6856_knowledge_d80119f3d2ae"
+   ],
+   "justification": "Mention secondaire dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "rachat",
+   "contrat": "essen-ciel-patrimoine",
+   "score": 1,
+   "types": [
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_essenciel_patrimoine_2023-09_option_d5aed7e8f30b",
+    "axa_essenciel_patrimoine_2023-09_option_4c8a4bdf86b1",
+    "axa_essenciel_patrimoine_2023-09_option_133833a39642",
+    "axa_essenciel_patrimoine_2023-09_point_vigilance_09cc2c565c43",
+    "axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c"
+   ],
+   "justification": "Mention secondaire dans Essen'Ciel Patrimoine."
+  },
+  {
+   "concept": "souscription",
+   "contrat": "essen-ciel-patrimoine",
+   "score": 1,
+   "types": [
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_essenciel_patrimoine_2023-09_option_4c8a4bdf86b1",
+    "axa_essenciel_patrimoine_2023-09_option_133833a39642",
+    "axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f"
+   ],
+   "justification": "Mention secondaire dans Essen'Ciel Patrimoine."
+  }
+ ]
+}

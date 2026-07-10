@@ -1,0 +1,314 @@
+{
+ "meta": {
+  "version": "1.2.0",
+  "genere_le": "2026-07-10",
+  "note": "Analyse dérivée (détection d'entités + routage) des questions de validation. Sans LLM."
+ },
+ "analyses": [
+  {
+   "question": "Quel est le barème d'invalidité d'Avizen Pro ?",
+   "contrat_explicite": [
+    "avizen-pro"
+   ],
+   "concept_principal": "invalidite",
+   "concepts_secondaires": [],
+   "type_question": "mono-contrat",
+   "categories_demandees": [
+    "formules",
+    "garanties",
+    "definitions"
+   ],
+   "perimetre": "mono-contrat",
+   "comparaison": false,
+   "dimension_reglementaire": false,
+   "source_officielle_requise": false,
+   "contrats_retenus": [
+    "avizen-pro"
+   ],
+   "contrats_rejetes": [
+    "avizen",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "notice_requise": true,
+   "statut": "conclusion_documentee",
+   "peut_conclure": true
+  },
+  {
+   "question": "Quelle est la définition d'un accident dans Ma Protection Accident ?",
+   "contrat_explicite": [
+    "ma-protection-accident-garantie-des-accidents-de-la-vie"
+   ],
+   "concept_principal": "accident",
+   "concepts_secondaires": [],
+   "type_question": "mono-contrat",
+   "categories_demandees": [
+    "definitions"
+   ],
+   "perimetre": "mono-contrat",
+   "comparaison": false,
+   "dimension_reglementaire": false,
+   "source_officielle_requise": false,
+   "contrats_retenus": [
+    "ma-protection-accident-garantie-des-accidents-de-la-vie"
+   ],
+   "contrats_rejetes": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "notice_requise": true,
+   "statut": "conclusion_documentee",
+   "peut_conclure": true
+  },
+  {
+   "question": "Quels contrats parlent d'invalidité ?",
+   "contrat_explicite": [],
+   "concept_principal": "invalidite",
+   "concepts_secondaires": [],
+   "type_question": "transversale",
+   "categories_demandees": [],
+   "perimetre": "multi-contrats",
+   "comparaison": false,
+   "dimension_reglementaire": false,
+   "source_officielle_requise": false,
+   "contrats_retenus": [
+    "avizen",
+    "avizen-pro",
+    "masterlife-credit",
+    "essen-ciel-assurance-obseques",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "entour-age",
+    "excelium-assurance-vie"
+   ],
+   "contrats_rejetes": [
+    "essen-ciel-patrimoine"
+   ],
+   "notice_requise": false,
+   "statut": "conclusion_documentee",
+   "peut_conclure": true
+  },
+  {
+   "question": "Compare Avizen Pro et Masterlife Crédit sur l'invalidité.",
+   "contrat_explicite": [
+    "avizen-pro",
+    "masterlife-credit"
+   ],
+   "concept_principal": "invalidite",
+   "concepts_secondaires": [],
+   "type_question": "comparaison",
+   "categories_demandees": [],
+   "perimetre": "comparaison",
+   "comparaison": true,
+   "dimension_reglementaire": false,
+   "source_officielle_requise": false,
+   "contrats_retenus": [
+    "avizen-pro",
+    "masterlife-credit"
+   ],
+   "contrats_rejetes": [
+    "avizen",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "notice_requise": true,
+   "statut": "conclusion_documentee",
+   "peut_conclure": true
+  },
+  {
+   "question": "Quels contrats excluent le suicide ?",
+   "contrat_explicite": [],
+   "concept_principal": "suicide",
+   "concepts_secondaires": [],
+   "type_question": "transversale",
+   "categories_demandees": [
+    "exclusions"
+   ],
+   "perimetre": "multi-contrats",
+   "comparaison": false,
+   "dimension_reglementaire": false,
+   "source_officielle_requise": false,
+   "contrats_retenus": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "masterlife-credit"
+   ],
+   "contrats_rejetes": [
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "notice_requise": false,
+   "statut": "conclusion_documentee",
+   "peut_conclure": true
+  },
+  {
+   "question": "Jusqu'à quel âge les versements sur PER sont-ils déductibles ?",
+   "contrat_explicite": [
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "concept_principal": null,
+   "concepts_secondaires": [],
+   "type_question": "reglementaire",
+   "categories_demandees": [],
+   "perimetre": "mono-contrat",
+   "comparaison": false,
+   "dimension_reglementaire": true,
+   "source_officielle_requise": true,
+   "contrats_retenus": [
+    "ma-retraite-plan-d-epargne-retraite-individuel-per"
+   ],
+   "contrats_rejetes": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "masterlife-credit"
+   ],
+   "notice_requise": true,
+   "statut": "verification_source_officielle_requise",
+   "peut_conclure": false
+  },
+  {
+   "question": "Quelle est la franchise contractuelle d'Avizen Pro ?",
+   "contrat_explicite": [
+    "avizen-pro"
+   ],
+   "concept_principal": null,
+   "concepts_secondaires": [],
+   "type_question": "mono-contrat",
+   "categories_demandees": [
+    "franchises"
+   ],
+   "perimetre": "mono-contrat",
+   "comparaison": false,
+   "dimension_reglementaire": false,
+   "source_officielle_requise": false,
+   "contrats_retenus": [
+    "avizen-pro"
+   ],
+   "contrats_rejetes": [
+    "avizen",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "notice_requise": true,
+   "statut": "donnees_insuffisantes",
+   "peut_conclure": false
+  },
+  {
+   "question": "Quels autres contrats traitent de l'invalidité en plus d'Avizen Pro ?",
+   "contrat_explicite": [
+    "avizen-pro"
+   ],
+   "concept_principal": "invalidite",
+   "concepts_secondaires": [],
+   "type_question": "mono-contrat",
+   "categories_demandees": [],
+   "perimetre": "mono+transversal",
+   "comparaison": false,
+   "dimension_reglementaire": false,
+   "source_officielle_requise": false,
+   "contrats_retenus": [
+    "avizen-pro",
+    "avizen",
+    "masterlife-credit",
+    "essen-ciel-assurance-obseques",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "entour-age",
+    "excelium-assurance-vie"
+   ],
+   "contrats_rejetes": [
+    "essen-ciel-patrimoine"
+   ],
+   "notice_requise": true,
+   "statut": "conclusion_documentee",
+   "peut_conclure": true
+  },
+  {
+   "question": "Cette garantie dépend-elle de la Sécurité sociale ?",
+   "contrat_explicite": [],
+   "concept_principal": null,
+   "concepts_secondaires": [],
+   "type_question": "reglementaire",
+   "categories_demandees": [
+    "garanties"
+   ],
+   "perimetre": "ambigu",
+   "comparaison": false,
+   "dimension_reglementaire": true,
+   "source_officielle_requise": true,
+   "contrats_retenus": [],
+   "contrats_rejetes": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "notice_requise": false,
+   "statut": "verification_source_officielle_requise",
+   "peut_conclure": false
+  },
+  {
+   "question": "Je ne trouve pas de plafond chiffré : puis-je conclure qu'il n'y en a pas ?",
+   "contrat_explicite": [],
+   "concept_principal": null,
+   "concepts_secondaires": [],
+   "type_question": "ambigu",
+   "categories_demandees": [
+    "plafonds"
+   ],
+   "perimetre": "ambigu",
+   "comparaison": false,
+   "dimension_reglementaire": false,
+   "source_officielle_requise": false,
+   "contrats_retenus": [],
+   "contrats_rejetes": [
+    "avizen",
+    "avizen-pro",
+    "entour-age",
+    "essen-ciel-assurance-obseques",
+    "essen-ciel-patrimoine",
+    "excelium-assurance-vie",
+    "ma-protection-accident-garantie-des-accidents-de-la-vie",
+    "ma-retraite-plan-d-epargne-retraite-individuel-per",
+    "masterlife-credit"
+   ],
+   "notice_requise": false,
+   "statut": "verification_notice_requise",
+   "peut_conclure": false
+  }
+ ]
+}
