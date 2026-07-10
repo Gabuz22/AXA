@@ -1,0 +1,62 @@
+{
+  "proposal_id": "adversarial_tests_20260710_194416_002",
+  "agent_id": "adversarial-tests",
+  "run_id": "run_adversarial-tests_20260710_194416",
+  "created_at": "2026-07-10T19:44:16Z",
+  "status": "pending_review",
+  "origin": "example_fixture",
+  "task": {
+    "id": "task_adversarial_routing_batch1",
+    "type": "adversarial-test",
+    "scope": "Générer 3-5 questions adversariales (négation, comparaison implicite, langage oral, faute de frappe)."
+  },
+  "target": {
+    "file": "ia/tests.json",
+    "section": "comparaison_implicite"
+  },
+  "source": {
+    "type": "derived",
+    "document": "ia/routage.html + ia/contrats.json",
+    "excerpt": "entre Avizen et Avizen Pro, lequel couvre le mieux l'invalidite ?"
+  },
+  "proposed_change": {
+    "operation": "test",
+    "payload": {
+      "question": "entre Avizen et Avizen Pro, lequel couvre le mieux l'invalidite ?",
+      "famille": "comparaison_implicite",
+      "contrats_obligatoires": [
+        "Avizen",
+        "Avizen Pro"
+      ],
+      "contrats_autorises": [
+        "Avizen",
+        "Avizen Pro"
+      ],
+      "contrats_interdits": [],
+      "concepts_attendus": [
+        "invalidite"
+      ],
+      "categories_attendues": [
+        "garantie"
+      ],
+      "source_officielle_attendue": false,
+      "statut_conclusion_attendu": "conclusion_partielle",
+      "justification": "Comparaison implicite : les deux contrats doivent etre routes.",
+      "confidence": 0.78
+    }
+  },
+  "reasoning_summary": "Question adversariale pour eprouver le routage (comparaison_implicite). Resultat attendu fourni ; moteur non modifie.",
+  "confidence": 0.78,
+  "ambiguities": [],
+  "risks": [
+    "a executer contre le moteur pour confirmer un eventuel echec"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

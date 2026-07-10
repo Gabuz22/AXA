@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://gabuz22.github.io/AXA/agent-work/schemas/backlog.schema.json",
+  "title": "Backlog de micro-tâches",
+  "type": "object",
+  "required": ["version", "tasks"],
+  "properties": {
+    "version": { "type": "string" },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "recommended_agent", "priority", "scope", "status", "budget", "done_criteria"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^task_[a-z0-9_\\-]+$" },
+          "recommended_agent": { "type": "string" },
+          "priority": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "scope": { "type": "string" },
+          "read_paths": { "type": "array", "items": { "type": "string" } },
+          "read_urls": { "type": "array", "items": { "type": "string" } },
+          "budget": {
+            "type": "object",
+            "properties": {
+              "max_pages": { "type": "integer" },
+              "max_proposals": { "type": "integer" },
+              "max_tokens": { "type": "integer" }
+            }
+          },
+          "done_criteria": { "type": "string" },
+          "status": { "type": "string", "enum": ["todo", "in_progress", "done", "blocked"] },
+          "attempts": { "type": "integer", "minimum": 0 },
+          "last_attempt": { "type": ["string", "null"] },
+          "blocked_reason": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "proposal_id": "ux_ai_20260710_194418_001",
+  "agent_id": "ux-ai",
+  "run_id": "run_ux-ai_20260710_194417",
+  "created_at": "2026-07-10T19:44:18Z",
+  "status": "pending_review",
+  "origin": "example_fixture",
+  "task": {
+    "id": "task_ux_navigation_audit",
+    "type": "ux",
+    "scope": "Auditer la navigation statique de la Vue IA : pages orphelines, liens profonds, redondances."
+  },
+  "target": {
+    "file": "ia/index.html",
+    "section": "navigation"
+  },
+  "source": {
+    "type": "repo",
+    "document": "ia/",
+    "excerpt": "[EXEMPLE] aucune page orpheline detectee"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "issue": "exemple",
+      "suggestion": "aucune amelioration UX critique"
+    }
+  },
+  "reasoning_summary": "Exemple : navigation /ia coherente (aucune page orpheline). Format de suggestion UX.",
+  "confidence": 0.6,
+  "ambiguities": [],
+  "risks": [],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

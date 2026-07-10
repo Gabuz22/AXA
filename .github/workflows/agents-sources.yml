@@ -1,0 +1,21 @@
+name: agents-sources
+
+# Agent Sources officielles (déterministe, réseau). DÉSACTIVÉ par défaut : lancement manuel uniquement.
+# Pour l'activer en planifié : décommenter le bloc schedule ci-dessous ET mettre AGENTS_ENABLED='true'.
+on:
+  # schedule:
+  #   - cron: "13 5 * * 1"
+  workflow_dispatch:
+    inputs:
+      force_dry_run:
+        description: "Exécuter en dry-run (aucun commit)"
+        type: boolean
+        default: true
+
+jobs:
+  sources:
+    uses: ./.github/workflows/_agents-run.yml
+    with:
+      agent: official-sources
+      force_dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.force_dry_run || false }}
+    secrets: inherit

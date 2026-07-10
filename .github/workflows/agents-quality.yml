@@ -1,0 +1,21 @@
+name: agents-quality
+
+# Agent Qualité documentaire (déterministe). Quotidien. Activé par défaut dans le trio prioritaire,
+# mais ne tourne en planifié que si la variable de dépôt AGENTS_ENABLED == 'true'.
+on:
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+    inputs:
+      force_dry_run:
+        description: "Exécuter en dry-run (aucun commit)"
+        type: boolean
+        default: true
+
+jobs:
+  quality:
+    uses: ./.github/workflows/_agents-run.yml
+    with:
+      agent: quality
+      force_dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.force_dry_run || false }}
+    secrets: inherit

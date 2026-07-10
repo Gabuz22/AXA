@@ -1,0 +1,21 @@
+name: agents-ux
+
+# Agent UX de la Vue IA (déterministe). DÉSACTIVÉ par défaut : lancement manuel uniquement.
+# Pour l'activer : décommenter schedule ET mettre AGENTS_ENABLED='true'.
+on:
+  # schedule:
+  #   - cron: "51 7 * * 6"
+  workflow_dispatch:
+    inputs:
+      force_dry_run:
+        description: "Exécuter en dry-run (aucun commit)"
+        type: boolean
+        default: true
+
+jobs:
+  ux:
+    uses: ./.github/workflows/_agents-run.yml
+    with:
+      agent: ux-ai
+      force_dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.force_dry_run || false }}
+    secrets: inherit

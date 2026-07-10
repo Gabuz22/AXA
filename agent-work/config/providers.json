@@ -1,0 +1,68 @@
+{
+  "_comment": "Fournisseurs LLM a quota gratuit. RIEN n'est code en dur ailleurs : quotas, modeles, limites, base_url sont ici. Le routeur n'utilise un fournisseur QUE si free_tier=true, requires_paid=false, enabled=true et sa cle est presente dans l'environnement. allow_paid_usage (policies.json) doit rester false.",
+  "version": "1.0.0",
+  "default_order": ["github-models", "gemini", "groq", "cloudflare", "openrouter"],
+  "providers": {
+    "github-models": {
+      "enabled": true,
+      "free_tier": true,
+      "requires_paid": false,
+      "style": "openai",
+      "base_url": "https://models.inference.ai.azure.com",
+      "path": "/chat/completions",
+      "api_key_env": "GITHUB_MODELS_TOKEN",
+      "model": "gpt-4o-mini",
+      "max_output_tokens": 1024,
+      "notes": "GitHub Models — quota gratuit journalier par compte. base_url a ajuster si GitHub change d'endpoint."
+    },
+    "gemini": {
+      "enabled": true,
+      "free_tier": true,
+      "requires_paid": false,
+      "style": "gemini",
+      "base_url": "https://generativelanguage.googleapis.com",
+      "path": "/v1beta/models/{model}:generateContent",
+      "api_key_env": "GEMINI_API_KEY",
+      "model": "gemini-1.5-flash",
+      "max_output_tokens": 1024,
+      "notes": "Google Gemini API — palier gratuit avec limites de requetes/minute et /jour."
+    },
+    "groq": {
+      "enabled": true,
+      "free_tier": true,
+      "requires_paid": false,
+      "style": "openai",
+      "base_url": "https://api.groq.com/openai/v1",
+      "path": "/chat/completions",
+      "api_key_env": "GROQ_API_KEY",
+      "model": "llama-3.1-8b-instant",
+      "max_output_tokens": 1024,
+      "notes": "Groq — palier gratuit rapide, limites par minute."
+    },
+    "cloudflare": {
+      "enabled": true,
+      "free_tier": true,
+      "requires_paid": false,
+      "style": "cloudflare",
+      "base_url": "https://api.cloudflare.com/client/v4",
+      "path": "/accounts/{account_id}/ai/run/{model}",
+      "api_key_env": "CLOUDFLARE_API_TOKEN",
+      "account_id_env": "CLOUDFLARE_ACCOUNT_ID",
+      "model": "@cf/meta/llama-3.1-8b-instruct",
+      "max_output_tokens": 1024,
+      "notes": "Cloudflare Workers AI — allocation quotidienne gratuite (neurons)."
+    },
+    "openrouter": {
+      "enabled": false,
+      "free_tier": true,
+      "requires_paid": false,
+      "style": "openai",
+      "base_url": "https://openrouter.ai/api/v1",
+      "path": "/chat/completions",
+      "api_key_env": "OPENROUTER_API_KEY",
+      "model": "meta-llama/llama-3.1-8b-instruct:free",
+      "max_output_tokens": 1024,
+      "notes": "OpenRouter — UNIQUEMENT les modeles suffixes ':free'. Desactive par defaut ; n'activer qu'avec un modele gratuit explicite."
+    }
+  }
+}

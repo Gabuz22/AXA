@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://gabuz22.github.io/AXA/agent-work/schemas/proposal.schema.json",
+  "title": "Proposition d'agent Gabriel AXA",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "proposal_id", "agent_id", "run_id", "created_at", "status",
+    "task", "target", "source", "proposed_change", "reasoning_summary",
+    "confidence", "validation_required", "automatic_checks"
+  ],
+  "properties": {
+    "proposal_id": { "type": "string", "minLength": 3, "pattern": "^[a-z0-9_\\-]+$" },
+    "agent_id": { "type": "string", "enum": ["quality", "extraction-cg", "official-sources", "concepts", "adversarial-tests", "ux-ai", "coordinator"] },
+    "run_id": { "type": "string", "minLength": 3 },
+    "created_at": { "type": "string", "minLength": 10 },
+    "status": { "type": "string", "enum": ["pending_review", "reviewed", "rejected", "blocked"] },
+    "origin": { "type": "string", "enum": ["llm", "deterministic", "example_fixture", "mock"] },
+    "task": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string", "enum": ["extraction", "official-source", "concept", "relation", "adversarial-test", "ux", "quality"] },
+        "scope": { "type": "string" }
+      }
+    },
+    "target": {
+      "type": "object",
+      "properties": {
+        "contract": { "type": "string" },
+        "file": { "type": "string" },
+        "section": { "type": "string" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["pdf", "url", "repo", "derived", "none"] },
+        "document": { "type": "string" },
+        "page": { "type": ["integer", "null"] },
+        "url": { "type": ["string", "null"] },
+        "excerpt": { "type": "string" }
+      }
+    },
+    "proposed_change": {
+      "type": "object",
+      "required": ["operation"],
+      "properties": {
+        "operation": { "type": "string", "enum": ["add", "update", "flag", "test", "relation", "report", "review"] },
+        "payload": { "type": "object" }
+      }
+    },
+    "reasoning_summary": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "ambiguities": { "type": "array", "items": { "type": "string" } },
+    "risks": { "type": "array", "items": { "type": "string" } },
+    "validation_required": { "type": "boolean" },
+    "regulatory_status": {
+      "type": "string",
+      "enum": ["none", "changement_technique", "changement_editorial", "changement_potentiellement_reglementaire", "source_indisponible", "validation_humaine_requise"]
+    },
+    "automatic_checks": {
+      "type": "object",
+      "required": ["schema_valid", "source_resolves", "duplicate_detected", "scope_allowed"],
+      "properties": {
+        "schema_valid": { "type": "boolean" },
+        "source_resolves": { "type": "boolean" },
+        "duplicate_detected": { "type": "boolean" },
+        "scope_allowed": { "type": "boolean" }
+      }
+    }
+  }
+}

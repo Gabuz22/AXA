@@ -1,0 +1,18 @@
+# Propriété du code — Gabriel AXA
+# main est protégé : toute modification passe par une revue humaine. Les agents autonomes n'écrivent
+# que dans agent-work/ via la branche agents/proposals et une PR NON fusionnée automatiquement.
+
+# Tout le dépôt : revue du mainteneur par défaut.
+*                                   @Gabuz22
+
+# Zones sensibles : ne jamais laisser un agent (ni une PR automatique) les modifier sans revue explicite.
+/data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json        @Gabuz22
+/data/AXA/AXA_MASTER_DONNEES_PACK_B_MATRICES_EXPERIMENTAL.json  @Gabuz22
+/app/                               @Gabuz22
+/ia/                                @Gabuz22
+/scripts/build_ia.py                @Gabuz22
+/version.json                       @Gabuz22
+
+# L'atelier d'agents lui-même : revue humaine des propositions et de la config.
+/agent-work/                        @Gabuz22
+/.github/workflows/                 @Gabuz22

@@ -1,0 +1,84 @@
+{
+  "run_id": "run_quality_20260710_195503",
+  "agent_id": "quality",
+  "generated_at": "2026-07-10T19:55:11Z",
+  "summary": {
+    "total": 11,
+    "passed": 9,
+    "failed": 2
+  },
+  "metrics": {
+    "coverage": null,
+    "routage_faux_positifs": 0,
+    "pdfs_resolved": 0,
+    "pdfs_total": 11
+  },
+  "checks": [
+    {
+      "name": "version.json présent",
+      "ok": true,
+      "detail": "version.json=2.1.0",
+      "severity": "high"
+    },
+    {
+      "name": "build_ia VERSION lisible",
+      "ok": true,
+      "detail": "build_ia VERSION=2.1.0",
+      "severity": "warn"
+    },
+    {
+      "name": "cohérence version build_ia vs footer /ia",
+      "ok": true,
+      "detail": "build=2.1.0 footer=2.1.0",
+      "severity": "high"
+    },
+    {
+      "name": "générateur /ia s'exécute",
+      "ok": true,
+      "detail": "ok",
+      "severity": "high"
+    },
+    {
+      "name": "routage sans faux positif contrat",
+      "ok": true,
+      "detail": "faux_positifs=0 statut=83%",
+      "severity": "high"
+    },
+    {
+      "name": "sorties /ia publiées synchronisées",
+      "ok": true,
+      "detail": "fichiers /ia désynchronisés: 0",
+      "severity": "high"
+    },
+    {
+      "name": "liens internes /ia valides",
+      "ok": false,
+      "detail": "cassés: 19 ['glossaire.html -> contrat/essenciel.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/essenciel.html']",
+      "severity": "high"
+    },
+    {
+      "name": "notices PDF résolues sur disque",
+      "ok": false,
+      "detail": "0/11 notices résolues",
+      "severity": "warn"
+    },
+    {
+      "name": "IDs contrats présents et uniques",
+      "ok": true,
+      "detail": "manquants=0 doublons=0 sur 9",
+      "severity": "high"
+    },
+    {
+      "name": "pages IA attendues présentes",
+      "ok": true,
+      "detail": "manquantes: []",
+      "severity": "high"
+    },
+    {
+      "name": "matrices JSON parseables",
+      "ok": true,
+      "detail": "invalides: []",
+      "severity": "warn"
+    }
+  ]
+}

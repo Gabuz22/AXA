@@ -1,0 +1,24 @@
+{
+  "run_id": "run_quality_20260710_195503",
+  "agent_id": "quality",
+  "started_at": "2026-07-10T19:55:03Z",
+  "finished_at": "2026-07-10T19:55:12Z",
+  "dry_run": true,
+  "status": "ok",
+  "task_id": "task_quality_daily_scan",
+  "provider_used": null,
+  "model_used": null,
+  "counters": {
+    "llm_calls": 0,
+    "tokens_in_est": 0,
+    "tokens_out_est": 0,
+    "proposals_generated": 2,
+    "proposals_written": 2,
+    "proposals_deduplicated": 0,
+    "proposals_rejected_auto": 0
+  },
+  "notes": [
+    "qualité: 9/11 contrôles OK",
+    "dry-run: incidents non persistés (rapport écrit dans quality/reports)"
+  ]
+}

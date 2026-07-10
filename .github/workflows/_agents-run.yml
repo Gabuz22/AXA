@@ -1,0 +1,133 @@
+name: _agents-run (reusable)
+
+# Workflow réutilisable : exécute UN agent, valide le périmètre, commit UNIQUEMENT agent-work/
+# sur la branche dédiée, et met à jour une PR de synthèse. Jamais de fusion automatique dans main.
+#
+# Sécurité (protection compensatoire, cf. CONTRAINTE GITHUB) :
+#  - travail sur la branche `agents/proposals`, jamais sur main ;
+#  - validate_scope.py refuse tout fichier hors agent-work/ avant commit ;
+#  - fail-closed : au moindre doute, aucun commit ;
+#  - dry-run (input force_dry_run OU variable AGENTS_DRY_RUN=true) => aucun git ;
+#  - runs planifiés désactivés tant que la variable AGENTS_ENABLED != 'true'.
+
+on:
+  workflow_call:
+    inputs:
+      agent:
+        required: false
+        type: string
+        default: ""
+      mode:
+        required: false
+        type: string
+        default: "agent"
+      force_dry_run:
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: agents-proposals
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      AGENT_BRANCH: agents/proposals
+      # Secrets fournisseurs (facultatifs). Absents => aucun appel LLM, l'agent s'arrête proprement.
+      GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Portail d'activation (schedules)
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ vars.AGENTS_ENABLED }}" != "true" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Schedules désactivés (vars.AGENTS_ENABLED != 'true'). Aucun run."
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout main
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Python
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Déterminer le mode dry-run
+        if: steps.gate.outputs.run == 'true'
+        id: mode
+        run: |
+          DRY=false
+          if [ "${{ inputs.force_dry_run }}" = "true" ] || [ "${{ vars.AGENTS_DRY_RUN }}" = "true" ]; then DRY=true; fi
+          echo "dry=$DRY" >> "$GITHUB_OUTPUT"
+          echo "Mode dry-run = $DRY"
+
+      - name: Préparer la branche dédiée (code frais de main + agent-work accumulé)
+        if: steps.gate.outputs.run == 'true' && steps.mode.outputs.dry == 'false'
+        run: |
+          git config user.name "gabriel-axa-agents[bot]"
+          git config user.email "agents@users.noreply.github.com"
+          git fetch origin "$AGENT_BRANCH" || true
+          git switch -C "$AGENT_BRANCH" origin/main
+          # Réintègre les propositions déjà accumulées (agent-work/ uniquement) depuis la branche.
+          if git rev-parse --verify "origin/$AGENT_BRANCH" >/dev/null 2>&1; then
+            git checkout "origin/$AGENT_BRANCH" -- agent-work 2>/dev/null || true
+          fi
+
+      - name: Exécuter l'agent (${{ inputs.agent }})
+        if: steps.gate.outputs.run == 'true' && inputs.mode == 'agent' && inputs.agent != ''
+        run: |
+          ARGS="--agent ${{ inputs.agent }}"
+          if [ "${{ steps.mode.outputs.dry }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          python agent-work/scripts/orchestrator.py $ARGS
+
+      - name: Rafraîchir la synthèse coordinateur
+        if: steps.gate.outputs.run == 'true' && steps.mode.outputs.dry == 'false'
+        run: python agent-work/scripts/build_review_summary.py
+
+      - name: Contrôle de périmètre (fail-closed)
+        if: steps.gate.outputs.run == 'true' && steps.mode.outputs.dry == 'false'
+        run: python agent-work/scripts/validate_scope.py
+
+      - name: Commit + push sur la branche dédiée
+        if: steps.gate.outputs.run == 'true' && steps.mode.outputs.dry == 'false'
+        run: |
+          git add agent-work
+          if git diff --cached --quiet; then
+            echo "Aucun changement à committer."
+            exit 0
+          fi
+          git commit -m "chore(agents): ${{ inputs.agent }} — propositions ($(date -u +%FT%TZ))"
+          git push origin "HEAD:$AGENT_BRANCH" --force-with-lease || git push origin "HEAD:$AGENT_BRANCH" --force
+
+      - name: Mettre à jour la PR de synthèse (jamais de merge)
+        if: steps.gate.outputs.run == 'true' && steps.mode.outputs.dry == 'false'
+        run: |
+          set -e
+          EXISTING=$(gh pr list --head "$AGENT_BRANCH" --base main --state open --json number --jq '.[0].number' || echo "")
+          if [ -z "$EXISTING" ]; then
+            gh pr create --base main --head "$AGENT_BRANCH" \
+              --title "Propositions des agents (revue humaine)" \
+              --body "PR persistante alimentée par l'atelier d'agents. **Ne pas fusionner automatiquement.** Commencer par \`agent-work/coordinator/READY_FOR_REVIEW.md\`." \
+              || echo "Création PR ignorée (déjà existante ou permissions)."
+          else
+            echo "PR #$EXISTING déjà ouverte — mise à jour par le push."
+          fi

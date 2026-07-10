@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://gabuz22.github.io/AXA/agent-work/schemas/run-manifest.schema.json",
+  "title": "Manifeste de run d'agent",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["run_id", "agent_id", "started_at", "finished_at", "dry_run", "status", "counters"],
+  "properties": {
+    "run_id": { "type": "string" },
+    "agent_id": { "type": "string" },
+    "started_at": { "type": "string" },
+    "finished_at": { "type": "string" },
+    "dry_run": { "type": "boolean" },
+    "status": { "type": "string", "enum": ["ok", "no_work", "stopped_quota", "stopped_low_confidence", "refused_preflight", "error"] },
+    "task_id": { "type": ["string", "null"] },
+    "provider_used": { "type": ["string", "null"] },
+    "model_used": { "type": ["string", "null"] },
+    "counters": {
+      "type": "object",
+      "properties": {
+        "llm_calls": { "type": "integer" },
+        "tokens_in_est": { "type": "integer" },
+        "tokens_out_est": { "type": "integer" },
+        "proposals_generated": { "type": "integer" },
+        "proposals_written": { "type": "integer" },
+        "proposals_deduplicated": { "type": "integer" },
+        "proposals_rejected_auto": { "type": "integer" }
+      }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

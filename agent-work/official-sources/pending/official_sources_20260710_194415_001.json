@@ -1,0 +1,45 @@
+{
+  "proposal_id": "official_sources_20260710_194415_001",
+  "agent_id": "official-sources",
+  "run_id": "run_official-sources_20260710_194414",
+  "created_at": "2026-07-10T19:44:15Z",
+  "status": "pending_review",
+  "origin": "example_fixture",
+  "task": {
+    "id": "task_sources_check_authorities",
+    "type": "official-source",
+    "scope": "Vérifier la disponibilité et l'empreinte des 10 autorités officielles suivies."
+  },
+  "target": {
+    "file": "ia/sources-officielles.json",
+    "section": "autorites"
+  },
+  "source": {
+    "type": "url",
+    "url": "https://www.service-public.fr/",
+    "document": "service-public.fr",
+    "excerpt": "[EXEMPLE] empreinte de page — comparaison avant/apres"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "status": "changement_technique",
+      "before_hash": "abc123",
+      "after_hash": "def456"
+    }
+  },
+  "reasoning_summary": "Exemple de detection de changement d'empreinte (aucun reseau). Aucune interpretation reglementaire.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "ne jamais interpreter une regle ; validation humaine requise si contenu reglementaire"
+  ],
+  "validation_required": true,
+  "regulatory_status": "changement_technique",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

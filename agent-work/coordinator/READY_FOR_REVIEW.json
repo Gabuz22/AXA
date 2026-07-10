@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-07-10T19:56:14Z",
+  "high_priority": [
+    {
+      "proposal_id": "official_sources_20260710_194415_001",
+      "agent": "official-sources",
+      "score": 0.93,
+      "type": "official-source",
+      "confidence": 0.9,
+      "target_file": "ia/sources-officielles.json",
+      "regulatory_status": "changement_technique",
+      "validation_required": true,
+      "file": "agent-work/official-sources/pending/official_sources_20260710_194415_001.json",
+      "summary": "Exemple de detection de changement d'empreinte (aucun reseau). Aucune interpretation reglementaire."
+    },
+    {
+      "proposal_id": "quality_20260710_194449_001",
+      "agent": "quality",
+      "score": 0.775,
+      "type": "quality",
+      "confidence": 0.99,
+      "target_file": "ia/",
+      "regulatory_status": "none",
+      "validation_required": true,
+      "file": "agent-work/quality/incidents/quality_20260710_194449_001.json",
+      "summary": "Contrôle qualité déterministe en échec : liens internes /ia valides — cassés: 19 ['glossaire.html -> contrat/essenciel.html', 'glossaire.html -> contrat/ma-protection-accident.html"
+    },
+    {
+      "proposal_id": "quality_20260710_194449_002",
+      "agent": "quality",
+      "score": 0.775,
+      "type": "quality",
+      "confidence": 0.99,
+      "target_file": "ia/",
+      "regulatory_status": "none",
+      "validation_required": true,
+      "file": "agent-work/quality/incidents/quality_20260710_194449_002.json",
+      "summary": "Contrôle qualité déterministe en échec : notices PDF résolues sur disque — 0/11 notices résolues"
+    },
+    {
+      "proposal_id": "adversarial_tests_20260710_194416_001",
+      "agent": "adversarial-tests",
+      "score": 0.68,
+      "type": "adversarial-test",
+      "confidence": 0.8,
+      "target_file": "ia/tests.json",
+      "regulatory_status": "none",
+      "validation_required": true,
+      "file": "agent-work/tests/pending/adversarial_tests_20260710_194416_001.json",
+      "summary": "Question adversariale pour eprouver le routage (negation). Resultat attendu fourni ; moteur non modifie."
+    },
+    {
+      "proposal_id": "adversarial_tests_20260710_194416_002",
+      "agent": "adversarial-tests",
+      "score": 0.67,
+      "type": "adversarial-test",
+      "confidence": 0.78,
+      "target_file": "ia/tests.json",
+      "regulatory_status": "none",
+      "validation_required": true,
+      "file": "agent-work/tests/pending/adversarial_tests_20260710_194416_002.json",
+      "summary": "Question adversariale pour eprouver le routage (comparaison_implicite). Resultat attendu fourni ; moteur non modifie."
+    }
+  ],
+  "new_failing_tests": [
+    {
+      "proposal_id": "adversarial_tests_20260710_194416_001",
+      "famille": "negation",
+      "file": "agent-work/tests/pending/adversarial_tests_20260710_194416_001.json"
+    },
+    {
+      "proposal_id": "adversarial_tests_20260710_194416_002",
+      "famille": "comparaison_implicite",
+      "file": "agent-work/tests/pending/adversarial_tests_20260710_194416_002.json"
+    }
+  ],
+  "official_source_changes": [
+    {
+      "proposal_id": "official_sources_20260710_194415_001",
+      "status": "changement_technique",
+      "url": "https://www.service-public.fr/",
+      "file": "agent-work/official-sources/pending/official_sources_20260710_194415_001.json"
+    }
+  ],
+  "conflicts": [],
+  "recommended_order": [
+    "official_sources_20260710_194415_001",
+    "quality_20260710_194449_001",
+    "quality_20260710_194449_002",
+    "adversarial_tests_20260710_194416_001",
+    "adversarial_tests_20260710_194416_002"
+  ],
+  "counts": {
+    "pending_total": 8,
+    "by_agent": {
+      "official-sources": 1,
+      "quality": 2,
+      "adversarial-tests": 2,
+      "extraction-cg": 1,
+      "concepts": 1,
+      "ux-ai": 1
+    },
+    "summary_bytes": 2764
+  },
+  "estimated_work_saved": "8 micro-zones déjà transformées en propositions sourcées et structurées : Claude examine ces 5 éléments prioritaires au lieu de refaire l'analyse préparatoire."
+}

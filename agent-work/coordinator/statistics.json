@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-07-10T19:56:14Z",
+  "totals": {
+    "runs": 16,
+    "llm_calls": 0,
+    "tokens_in_est": 0,
+    "tokens_out_est": 0,
+    "proposals_generated": 19,
+    "proposals_pending": 8,
+    "proposals_deduplicated": 0,
+    "proposals_rejected_auto": 0,
+    "summary_bytes": 2764,
+    "generated_at": "2026-07-10T19:56:14Z"
+  },
+  "per_agent": {
+    "adversarial-tests": {
+      "runs": 5,
+      "proposals_generated": 8,
+      "proposals_rejected_auto": 0,
+      "llm_calls": 0
+    },
+    "concepts": {
+      "runs": 1,
+      "proposals_generated": 1,
+      "proposals_rejected_auto": 0,
+      "llm_calls": 0
+    },
+    "extraction-cg": {
+      "runs": 3,
+      "proposals_generated": 1,
+      "proposals_rejected_auto": 0,
+      "llm_calls": 0
+    },
+    "official-sources": {
+      "runs": 1,
+      "proposals_generated": 1,
+      "proposals_rejected_auto": 0,
+      "llm_calls": 0
+    },
+    "quality": {
+      "runs": 2,
+      "proposals_generated": 4,
+      "proposals_rejected_auto": 0,
+      "llm_calls": 0
+    },
+    "ux-ai": {
+      "runs": 4,
+      "proposals_generated": 4,
+      "proposals_rejected_auto": 0,
+      "llm_calls": 0
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "_comment": "Registre des agents de l'atelier. 'enabled' = autorise le run autonome (schedule). Les agents desactives restent lançables manuellement en dry-run.",
+  "version": "1.0.0",
+  "agents": [
+    {
+      "id": "quality",
+      "name": "Agent Qualité documentaire",
+      "kind": "deterministic",
+      "uses_llm": false,
+      "output_dir": "agent-work/quality/reports",
+      "incident_dir": "agent-work/quality/incidents",
+      "enabled": true,
+      "priority_default": 3,
+      "description": "Vérifie couverture, liens morts, notices, IDs, versions, pages IA, matrices, tests de routage. Ne corrige jamais l'application."
+    },
+    {
+      "id": "extraction-cg",
+      "name": "Agent Extraction CG",
+      "kind": "llm",
+      "uses_llm": true,
+      "output_dir": "agent-work/extraction/pending",
+      "enabled": true,
+      "priority_default": 4,
+      "max_pages_per_run": 5,
+      "max_proposals_per_run": 5,
+      "description": "Analyse une micro-zone d'une notice, compare aux donnees presentes, propose des elements potentiellement absents. Ne modifie jamais les masters."
+    },
+    {
+      "id": "official-sources",
+      "name": "Agent Sources officielles",
+      "kind": "llm",
+      "uses_llm": false,
+      "output_dir": "agent-work/official-sources/pending",
+      "changes_dir": "agent-work/official-sources/changes",
+      "snapshots_dir": "agent-work/official-sources/snapshots",
+      "enabled": false,
+      "priority_default": 3,
+      "description": "Verifie les liens officiels, detecte les changements (empreintes), sans jamais interpreter une regle juridique."
+    },
+    {
+      "id": "concepts",
+      "name": "Agent Concepts et relations",
+      "kind": "llm",
+      "uses_llm": true,
+      "output_dir": "agent-work/concepts/pending",
+      "enabled": false,
+      "priority_default": 2,
+      "description": "Propose synonymes/relations uniquement avec preuve textuelle (contrat, notice, page). Aucune relation par intuition."
+    },
+    {
+      "id": "adversarial-tests",
+      "name": "Agent Tests adversariaux",
+      "kind": "llm",
+      "uses_llm": true,
+      "output_dir": "agent-work/tests/pending",
+      "enabled": true,
+      "priority_default": 3,
+      "description": "Genere des questions inedites pour trouver les failles du routage, avec resultat attendu. Ne modifie pas le moteur."
+    },
+    {
+      "id": "ux-ai",
+      "name": "Agent UX de la Vue IA",
+      "kind": "llm",
+      "uses_llm": false,
+      "output_dir": "agent-work/ux-ai/pending",
+      "enabled": false,
+      "priority_default": 2,
+      "description": "Analyse la navigation statique de la Vue IA (liens profonds, pages orphelines, redondances). Ne modifie pas la Vue IA."
+    },
+    {
+      "id": "coordinator",
+      "name": "Coordinateur",
+      "kind": "deterministic",
+      "uses_llm": false,
+      "output_dir": "agent-work/coordinator",
+      "enabled": true,
+      "priority_default": 5,
+      "description": "Agrege, valide, deduplique, detecte les conflits, score, produit READY_FOR_REVIEW pour Claude. Ne fait pas le travail des agents."
+    }
+  ]
+}

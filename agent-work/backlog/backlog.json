@@ -1,0 +1,137 @@
+{
+  "version": "1.0.0",
+  "tasks": [
+    {
+      "id": "task_quality_daily_scan",
+      "recommended_agent": "quality",
+      "priority": 3,
+      "scope": "Scan qualité complet déterministe (couverture, liens, notices, IDs, versions, pages IA, matrices, routage).",
+      "read_paths": [
+        "ia/**",
+        "data/AXA/**",
+        "version.json",
+        "scripts/build_ia.py"
+      ],
+      "read_urls": [],
+      "budget": {
+        "max_pages": 0,
+        "max_proposals": 0,
+        "max_tokens": 0
+      },
+      "done_criteria": "Un rapport quality/reports/*.json produit ; incidents éventuels enregistrés.",
+      "status": "todo",
+      "attempts": 0,
+      "last_attempt": null,
+      "blocked_reason": null
+    },
+    {
+      "id": "task_extraction_avizen_pro_18_20",
+      "recommended_agent": "extraction-cg",
+      "priority": 4,
+      "scope": "pages 18-20 de la notice Avizen Pro — vérifier garanties/exclusions potentiellement absentes",
+      "read_paths": [
+        "ia/contrat/avizen-pro.html",
+        "ia/axa_pdf_index.json"
+      ],
+      "read_urls": [],
+      "budget": {
+        "max_pages": 3,
+        "max_proposals": 5,
+        "max_tokens": 20000
+      },
+      "done_criteria": "0 à 5 propositions d'extraction sourcées (contrat, doc, page, extrait).",
+      "status": "todo",
+      "attempts": 1,
+      "last_attempt": "2026-07-10T19:55:15Z",
+      "blocked_reason": null
+    },
+    {
+      "id": "task_adversarial_routing_batch1",
+      "recommended_agent": "adversarial-tests",
+      "priority": 3,
+      "scope": "Générer 3-5 questions adversariales (négation, comparaison implicite, langage oral, faute de frappe).",
+      "read_paths": [
+        "ia/routage.html",
+        "ia/contrats.html",
+        "ia/concepts.html"
+      ],
+      "read_urls": [],
+      "budget": {
+        "max_pages": 0,
+        "max_proposals": 5,
+        "max_tokens": 15000
+      },
+      "done_criteria": "0 à 5 tests structurés avec résultat attendu.",
+      "status": "todo",
+      "attempts": 2,
+      "last_attempt": "2026-07-10T19:56:14Z",
+      "blocked_reason": null
+    },
+    {
+      "id": "task_sources_check_authorities",
+      "recommended_agent": "official-sources",
+      "priority": 3,
+      "scope": "Vérifier la disponibilité et l'empreinte des 10 autorités officielles suivies.",
+      "read_paths": [
+        "ia/sources-officielles.json"
+      ],
+      "read_urls": [
+        "https://www.legifrance.gouv.fr/",
+        "https://bofip.impots.gouv.fr/",
+        "https://www.service-public.fr/"
+      ],
+      "budget": {
+        "max_pages": 0,
+        "max_proposals": 5,
+        "max_tokens": 0
+      },
+      "done_criteria": "Snapshots/empreintes mis à jour ; changements classés par statut.",
+      "status": "todo",
+      "attempts": 0,
+      "last_attempt": null,
+      "blocked_reason": null
+    },
+    {
+      "id": "task_concepts_low_coverage",
+      "recommended_agent": "concepts",
+      "priority": 2,
+      "scope": "Repérer 1 concept peu couvert et proposer synonymes/relations avec preuve textuelle.",
+      "read_paths": [
+        "ia/concepts.json",
+        "ia/matrices/concepts-contrats.json",
+        "ia/preuves.json"
+      ],
+      "read_urls": [],
+      "budget": {
+        "max_pages": 0,
+        "max_proposals": 5,
+        "max_tokens": 15000
+      },
+      "done_criteria": "0 à 5 propositions de relation, chacune avec preuve (contrat, notice, page).",
+      "status": "todo",
+      "attempts": 0,
+      "last_attempt": null,
+      "blocked_reason": null
+    },
+    {
+      "id": "task_ux_navigation_audit",
+      "recommended_agent": "ux-ai",
+      "priority": 2,
+      "scope": "Auditer la navigation statique de la Vue IA : pages orphelines, liens profonds, redondances.",
+      "read_paths": [
+        "ia/**"
+      ],
+      "read_urls": [],
+      "budget": {
+        "max_pages": 0,
+        "max_proposals": 5,
+        "max_tokens": 10000
+      },
+      "done_criteria": "0 à 5 suggestions UX déterministes/sourcées.",
+      "status": "todo",
+      "attempts": 0,
+      "last_attempt": null,
+      "blocked_reason": null
+    }
+  ]
+}
