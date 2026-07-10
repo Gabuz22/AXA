@@ -211,6 +211,11 @@ li.diff{color:var(--gold)}
   .sidebar{position:fixed;top:54px;left:0;bottom:0;width:250px;transform:translateX(-100%);transition:transform .18s;z-index:30}
   body.nav-open .sidebar{transform:none}
   #burger{display:block}
+  /* Topbar compacte : évite le débordement horizontal sur mobile (la marque descriptive et la
+     largeur mini de la recherche poussaient les boutons hors de l'écran). */
+  .topbar{gap:8px;padding:0 10px}
+  .brand small{display:none}
+  #globalSearch{min-width:0;margin:0}
 }
 
 /* ============================================================================
