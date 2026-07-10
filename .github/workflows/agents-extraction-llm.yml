@@ -1,0 +1,24 @@
+name: agents-extraction-llm
+
+# Agent Extraction documentaire LLM (premier agent IA). DÉSACTIVÉ par défaut : nécessite une API
+# gratuite (GitHub Models > Gemini > Groq) ET installe pypdf. Lancement manuel ; sans secret
+# fournisseur, l'agent s'arrête proprement. Pour l'activer en planifié : décommenter schedule,
+# configurer un secret fournisseur, et mettre AGENTS_ENABLED='true'.
+on:
+  # schedule:
+  #   - cron: "47 3 * * 2,5"   # 2 micro-zones max par exécution
+  workflow_dispatch:
+    inputs:
+      force_dry_run:
+        description: "Exécuter en dry-run (aucun commit)"
+        type: boolean
+        default: true
+
+jobs:
+  extraction-llm:
+    uses: ./.github/workflows/_agents-run.yml
+    with:
+      agent: extraction-llm
+      extra_pip: pypdf
+      force_dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.force_dry_run || false }}
+    secrets: inherit

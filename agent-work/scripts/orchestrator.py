@@ -20,6 +20,7 @@ import validate_proposal as VP
 AGENT_MODULES = {
     "quality": "agents.quality",
     "coverage-gaps": "agents.coverage_gaps",
+    "extraction-llm": "agents.extraction_llm",
     "extraction-cg": "agents.extraction_cg",
     "official-sources": "agents.official_sources",
     "concepts": "agents.concepts",

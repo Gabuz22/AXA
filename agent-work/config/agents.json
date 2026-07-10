@@ -24,8 +24,20 @@
       "description": "Repère, sur DONNÉES STRUCTURÉES uniquement, les trous : catégories absentes, contrats sans notice, concepts non reliés, écarts de couverture. N'affirme jamais qu'une donnée manque dans le contrat."
     },
     {
+      "id": "extraction-llm",
+      "name": "Agent Extraction documentaire (LLM)",
+      "kind": "llm",
+      "uses_llm": true,
+      "output_dir": "agent-work/extraction/pending",
+      "enabled": false,
+      "priority_default": 4,
+      "max_pages_per_run": 6,
+      "max_proposals_per_run": 5,
+      "description": "Premier agent IA : par micro-zones (2-5 pages) d'une notice PDF, propose des faits ABSENTS avec citation exacte VERIFIEE sur la page. Porte deterministe anti-hallucination. Ne modifie jamais masters/Vue IA/app/JSON ; ecrit seulement dans extraction/pending. API gratuite requise (GitHub Models > Gemini > Groq)."
+    },
+    {
       "id": "extraction-cg",
-      "name": "Agent Extraction CG",
+      "name": "Agent Extraction CG (legacy, remplacé par extraction-llm)",
       "kind": "llm",
       "uses_llm": true,
       "output_dir": "agent-work/extraction/pending",
@@ -33,7 +45,7 @@
       "priority_default": 4,
       "max_pages_per_run": 5,
       "max_proposals_per_run": 5,
-      "description": "Analyse une micro-zone d'une notice, compare aux donnees presentes, propose des elements potentiellement absents. Ne modifie jamais les masters."
+      "description": "Ancien squelette d'extraction (conservé pour compatibilité). Utiliser extraction-llm."
     },
     {
       "id": "official-sources",

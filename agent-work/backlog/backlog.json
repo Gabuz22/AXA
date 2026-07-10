@@ -25,21 +25,23 @@
       "blocked_reason": null
     },
     {
-      "id": "task_extraction_avizen_pro_18_20",
-      "recommended_agent": "extraction-cg",
+      "id": "task_extraction_llm_micro_zones",
+      "recommended_agent": "extraction-llm",
       "priority": 4,
-      "scope": "pages 18-20 de la notice Avizen Pro — vérifier garanties/exclusions potentiellement absentes",
+      "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire.",
       "read_paths": [
-        "ia/contrat/avizen-pro.html",
-        "ia/axa_pdf_index.json"
+        "data/AXA/ia/axa_pdf_index.json",
+        "ia/matrices/couverture.json",
+        "ia/contrats.json",
+        "ia/concepts.json"
       ],
       "read_urls": [],
       "budget": {
-        "max_pages": 3,
+        "max_pages": 6,
         "max_proposals": 5,
         "max_tokens": 20000
       },
-      "done_criteria": "0 à 5 propositions d'extraction sourcées (contrat, doc, page, extrait).",
+      "done_criteria": "0 a 5 propositions d'extraction, chaque citation verifiee presente sur la page citee.",
       "status": "todo",
       "attempts": 0,
       "last_attempt": null,
@@ -63,8 +65,8 @@
       },
       "done_criteria": "0 à 5 tests structurés avec résultat attendu.",
       "status": "todo",
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 1,
+      "last_attempt": "2026-07-10T21:34:07Z",
       "blocked_reason": null
     },
     {

@@ -74,6 +74,32 @@ manifeste**. Le commit, le contrôle de périmètre et la PR sont gérés par le
   **nouvelle / connue / corrigée / régression**, produit la synthèse compacte pour Claude.
 - **Extraction / Concepts** (API requise) : désactivés tant qu'aucune clé n'est configurée.
 
+## Agent Extraction documentaire (premier agent IA)
+
+`extraction-llm` est un **agent de production**, pas un assistant : il ne répond à personne et ne modifie
+jamais le produit. Il prépare des propositions d'ajout **vérifiables**, écrites uniquement dans
+`agent-work/extraction/pending/`.
+
+- **Fiabilité avant volume.** Chaque item passe une **porte déterministe anti-hallucination** : la
+  `citation` doit réellement figurer sur la **page citée** de la notice (vérifié par lecture du PDF),
+  sinon l'item est **rejeté**. Rejets aussi si : hors catégorie, mauvaise page, texte/citation absents,
+  doublon, confiance trop faible. Mieux vaut 2 excellentes propositions/semaine que 50 médiocres.
+- **Micro-zones.** 2 à 5 pages par zone, **≤ 2 zones par exécution**. Une **mémoire**
+  (`agent-work/extraction/memory.json`) retient pages traitées / refusées / zone suivante par contrat —
+  aucune relecture inutile ; progression lente et réelle sur des mois.
+- **Tokens minimaux.** Le LLM ne reçoit que : les pages de la zone (tronquées), les libellés déjà
+  présents, les concepts et catégories, et rien d'autre. Il répond en **JSON strict** (aucune rédaction
+  libre). Estimation ~1,5–3 k tokens d'entrée + ~0,5–1 k de sortie **par zone** → **coût nul** (paliers
+  gratuits GitHub Models > Gemini > Groq). Budget par run borné ; **arrêt propre** si aucun fournisseur
+  gratuit ou quota épuisé.
+- **Pipeline de contrôle.** Les propositions passent ensuite les agents **déterministes** (Quality =
+  JSON/format/source/page/doublon ; Coverage = comble-t-elle un vrai trou ?) puis le **Coordinateur** les
+  classe (nouvelle / doublon / incertaine / rejetée / prioritaire). Les déterministes peuvent invalider l'IA.
+- **Dépendance** : `pypdf` (gratuit), installé par le workflow. Sans clé LLM **ou** sans `pypdf`,
+  l'agent s'arrête proprement (`no_work`).
+- **Activation** : `.github/workflows/agents-extraction-llm.yml` (manuel ; décommenter `schedule` +
+  configurer un secret fournisseur + `AGENTS_ENABLED=true` pour l'autonomie).
+
 ## Fournisseurs gratuits
 
 Couche multi-fournisseurs configurable dans `config/providers.json` (aucun quota/modèle/URL codé en dur).
