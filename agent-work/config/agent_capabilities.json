@@ -82,6 +82,19 @@
       "min_quality_history": 40,
       "allow_smaller_model": true
     },
+    "knowledge-builder": {
+      "kind": "llm",
+      "required_capabilities": ["json_strict", "reasoning"],
+      "json_strict": true,
+      "min_context_tokens": 2000,
+      "reasoning_min": "moyen",
+      "vision": false,
+      "max_cost": 0,
+      "compatible_providers": ["gemini", "groq", "openrouter", "cloudflare"],
+      "compatible_models": [],
+      "min_quality_history": 45,
+      "allow_smaller_model": true
+    },
     "quality": { "kind": "deterministic" },
     "knowledge-curator": { "kind": "deterministic" },
     "coverage-gaps": { "kind": "deterministic" },

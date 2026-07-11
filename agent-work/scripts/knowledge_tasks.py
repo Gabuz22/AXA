@@ -51,8 +51,12 @@ def generate(graph, domain, subjects, threshold=0.6):
 
 
 def persist(tasks, load_json, write_json, now, base_path=BACKLOG, dry_run=False):
-    """Fusionne dans le backlog persistant (dédup par task_id, conserve first_seen). Ne touche à rien
-    d'autre. Retourne (total, nouveaux)."""
+    """Réconcilie le backlog avec les LACUNES ACTUELLES (le backlog est une vue VIVANTE des manques) :
+      • une tâche générée ce passage = manque courant → status 'pending' ;
+      • une tâche du backlog qui n'est PLUS générée = manque comblé → status 'resolved'.
+    Ainsi une lacune réapparue (nouvelle entité) redevient 'pending' automatiquement, et une lacune
+    comblée (relation/explication ajoutée) se marque 'resolved' seule. Dédup par task_id, conserve
+    first_seen. Retourne (total, nouveaux)."""
     cur = None
     try:
         cur = load_json(base_path, default=None)
@@ -60,6 +64,7 @@ def persist(tasks, load_json, write_json, now, base_path=BACKLOG, dry_run=False)
         cur = None
     cur = cur or {"version": "1.0.0", "tasks": []}
     by_id = {t["task_id"]: t for t in cur.get("tasks", [])}
+    current_ids = {t["task_id"] for t in tasks}
     new = 0
     for t in tasks:
         prev = by_id.get(t["task_id"])
@@ -67,12 +72,36 @@ def persist(tasks, load_json, write_json, now, base_path=BACKLOG, dry_run=False)
             new += 1
         t["first_seen"] = (prev or {}).get("first_seen") or now()
         t["updated_at"] = now()
+        t["status"] = "pending"
         by_id[t["task_id"]] = t
+    for tid, t in by_id.items():
+        if tid not in current_ids and t.get("status") != "resolved":
+            t["status"] = "resolved"
+            t["updated_at"] = now()
     cur["tasks"] = list(by_id.values())
     cur["updated_at"] = now()
     if not dry_run:
         write_json(base_path, cur)
     return len(cur["tasks"]), new
+
+
+def pending(backlog_data, types=None):
+    """Tâches du backlog encore à traiter (status 'pending'), éventuellement filtrées par type."""
+    out = []
+    for t in (backlog_data or {}).get("tasks", []):
+        if t.get("status") != "pending":
+            continue
+        if types and t.get("type") not in types:
+            continue
+        out.append(t)
+    return out
+
+
+def load_backlog(load_json, base_path=BACKLOG):
+    try:
+        return load_json(base_path, default=None) or {"version": "1.0.0", "tasks": []}
+    except Exception:
+        return {"version": "1.0.0", "tasks": []}
 
 
 def summary(tasks):

@@ -1,0 +1,32 @@
+name: agents-knowledge-builder
+
+# Bâtisseur de connaissances (v2.8 phase 3) — capacité LLM d'approfondissement. Puise dans le backlog
+# déterministe (tâches relier/expliquer produites par knowledge-curator dans le cycle) et ajoute au graphe
+# des relations (L3) et des explications (L4). N'appelle le LLM que là où c'est utile (garde déterministe
+# + budget + cost-ledger hebdomadaire). Fail-open sans clé. Ne modifie ni produit ni agents existants.
+#
+# Code = main ; état restauré depuis agents/proposals ; commit confiné à agent-work/ ; jamais de fusion
+# auto. Runs planifiés gatés par AGENTS_ENABLED == 'true'. Concurrency dédiée + 'agents-proposals'
+# (partagée) => jamais en parallèle du cycle (écritures de graphe sûres).
+on:
+  schedule:
+    - cron: "47 */12 * * *"   # deux fois par jour à la minute 47 (UTC), après le curateur
+  workflow_dispatch:
+    inputs:
+      force_dry_run:
+        description: "Exécuter en dry-run (aucun commit, aucune écriture d'état)"
+        type: boolean
+        default: true
+
+concurrency:
+  group: agents-knowledge-builder
+  cancel-in-progress: false
+
+jobs:
+  knowledge-builder:
+    uses: ./.github/workflows/_agents-run.yml
+    with:
+      agent: knowledge-builder
+      mode: agent
+      force_dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.force_dry_run || false }}
+    secrets: inherit

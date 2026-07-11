@@ -120,6 +120,17 @@
       "enabled": true,
       "priority_default": 3,
       "description": "DETERMINISTE, zero token. Ingere le domaine (connaissance structuree + propositions extraction) dans le graphe de connaissances en 4 couches, calcule la couverture de PROFONDEUR de chaque sujet, et genere le backlog de taches deterministes (approfondissement : relier/expliquer/comparer/environnement/sourcer/normaliser ; operations : doublons/contradiction-candidats/fraicheur). Le systeme decouvre ainsi lui-meme son travail sans consommer de tokens. Generique via DomainAdapter. Ecrit seulement dans agent-work/knowledge/."
+    },
+    {
+      "id": "knowledge-builder",
+      "name": "Agent Bâtisseur de connaissances (LLM)",
+      "kind": "llm",
+      "uses_llm": true,
+      "output_dir": "agent-work/knowledge/pending",
+      "enabled": false,
+      "priority_default": 3,
+      "max_proposals_per_run": 5,
+      "description": "Capacite LLM d'APPROFONDISSEMENT : puise dans le backlog (taches relier/expliquer du knowledge-curator) et ajoute au graphe des relations typees (L3) et des explications ancrees dans les preuves (L4). N'appelle le LLM que si utile (garde deterministe 'deja fait'), borne par le budget de run et un cost-ledger hebdomadaire par domaine. N'invente aucune entite. Fail-open sans cle. Routage multi-fournisseurs reutilise. Ecrit seulement dans agent-work/knowledge/."
     }
   ]
 }

@@ -29,6 +29,7 @@ AGENT_MODULES = {
     "ux-ai": "agents.ux_ai",
     "corpus-explorer": "agents.corpus_explorer",
     "knowledge-curator": "agents.knowledge_curator",
+    "knowledge-builder": "agents.knowledge_builder",
 }
 
 
