@@ -499,7 +499,9 @@ def run(ctx):
         if not ctx.mock:
             data = base.llm_json(ctx, prompt, max_tokens=1000)
             if data is None and ctx.provider_used is None:
-                notes.append("aucun fournisseur LLM gratuit — arrêt propre"); break
+                # jamais silencieux : on remonte la cause EXACTE (provider indispo / budget / exception / vide)
+                notes.append("LLM non exécuté — cause: %s" % (getattr(ctx, "last_llm_cause", None) or "aucun fournisseur gratuit"))
+                break
             llm_calls += 1
         items = (data or {}).get("items", []) if data else []
 
@@ -565,6 +567,8 @@ def run(ctx):
         "Pourquoi": why_load,
         "Fournisseur": ctx.provider_used or "aucun",
         "Modèle": ctx.model_used or "—",
+        "Forçage orchestrateur": ("%s/%s" % (os.environ.get("AXA_FORCE_PROVIDER"), os.environ.get("AXA_FORCE_MODEL"))) if os.environ.get("AXA_FORCE_PROVIDER") else "—",
+        "Cause LLM (si aucun)": (getattr(ctx, "last_llm_cause", None) or "—") if not ctx.provider_used else "—",
         "Conso moyenne récente": "%d tok/run, %.1f retenues/run" % (avg["tokens_per_run"], avg["kept_per_run"]),
         "Contexte envoyé (est.)": "%d tokens" % ctx_sent_tok,
         "Contexte économisé (est.)": "%d tokens" % ctx_saved_tok,

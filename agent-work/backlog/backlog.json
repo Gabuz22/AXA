@@ -65,8 +65,8 @@
       },
       "done_criteria": "0 à 5 tests structurés avec résultat attendu.",
       "status": "todo",
-      "attempts": 1,
-      "last_attempt": "2026-07-11T12:55:16Z",
+      "attempts": 0,
+      "last_attempt": null,
       "blocked_reason": null
     },
     {

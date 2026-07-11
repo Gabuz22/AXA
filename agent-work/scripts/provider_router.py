@@ -31,6 +31,9 @@ class ProviderRouter:
         self.policies = policies
         self.log = logger or (lambda m: print(m))
         self.state_dir = state_dir or os.path.join(S.AGENT_WORK)
+        self.log("[router] init: AXA_FORCE_PROVIDER present: %s | AXA_FORCE_MODEL present: %s" % (
+            "true" if os.environ.get("AXA_FORCE_PROVIDER") else "false",
+            "true" if os.environ.get("AXA_FORCE_MODEL") else "false"))
 
     # ------------------------------------------------------------------ éligibilité & clés
     def _key_for(self, p):
@@ -96,7 +99,15 @@ class ProviderRouter:
         forced = self.forced_provider()
         if forced:
             p = self.cfg.get("providers", {}).get(forced)
-            return [forced] if (p and self._eligible(p)) else []
+            elig = bool(p and self._eligible(p))
+            self.log("[router] available(): forcé=%s présent_config=%s éligible=%s -> %s" % (
+                forced, bool(p), elig, [forced] if elig else []))
+            if p and not elig:
+                # pourquoi non éligible ? (jamais de clé affichée)
+                self.log("[router] %s non éligible : active=%s free=%s key=%s style=%s" % (
+                    forced, p.get("active", p.get("enabled")), p.get("free_tier"),
+                    bool(self._key_for(p)), p.get("style")))
+            return [forced] if elig else []
         scores = self._scores()
         elig = [(pid, p) for pid, p in self.cfg.get("providers", {}).items()
                 if self._eligible(p) and not Q.provider_in_cooldown(pid)]
@@ -154,6 +165,8 @@ class ProviderRouter:
                 if pid == "openrouter" and ":free" not in model:
                     continue  # OpenRouter : jamais un modèle payant, même en dernier recours
                 pcfg = dict(p); pcfg["model"] = model
+                self.log("[router] appel adaptateur -> provider=%s model=%s (clé présente=%s)" % (
+                    pid, model, bool(key)))
                 t0 = time.time()
                 try:
                     text, tin, tout = style(pcfg, key, account_id, messages, max_tokens, timeout)

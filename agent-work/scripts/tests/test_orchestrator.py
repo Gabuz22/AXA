@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Tests du chef d'orchestre (Partie 15) — 20 scénarios, adaptateurs/état factices, aucun réseau."""
-import os, sys, json, time, tempfile, shutil, datetime, unittest
+import os, sys, json, time, tempfile, shutil, datetime, subprocess, unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SCRIPTS = os.path.abspath(os.path.join(HERE, ".."))
@@ -357,6 +357,62 @@ class TestIntegrationChain(unittest.TestCase):
         self.assertGreaterEqual(ctx.budget.llm_calls, 1)  # Appels LLM > 0
         self.assertGreaterEqual(len(proposals), 1)        # une proposition générée
         self.assertEqual(proposals[0]["proposed_change"]["payload"]["categorie"], "garanties")
+
+
+class TestSubprocessForcing(unittest.TestCase):
+    """VRAI test de sous-processus : lance orchestrator.py dans un process séparé avec AXA_FORCE_* dans
+    l'environnement + adaptateur Gemini factice. Prouve que le sous-processus voit les variables, qu'un
+    seul appel adaptateur a lieu, et que le résumé contient 'Fournisseur : gemini' et 'Appels LLM : 1'."""
+    PDF = os.path.join(S.REPO_ROOT, "data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04 Notice d'information Avizen.pdf")
+
+    def test_subprocess_sees_force_and_calls_once(self):
+        try:
+            import pypdf  # noqa
+        except Exception:
+            self.skipTest("pypdf requis")
+        if not os.path.isfile(self.PDF):
+            self.skipTest("notice Avizen absente")
+        from agents import extraction_llm as EX
+        pages = EX._read_pdf_pages(self.PDF, 4, 4)
+        cite = " ".join(pages[4].split())[60:130]
+
+        harness = (
+            "import sys, os, json\n"
+            "sys.path.insert(0, @SCRIPTS@)\n"
+            "from providers import adapters\n"
+            "CITE = @CITE@\nPDF = @PDF@\n"
+            "def fake(cfg, key, acc, msgs, mx, to):\n"
+            "    print('ADAPTER_CALLED', cfg.get('model'))\n"
+            "    return json.dumps({'items':[{'categorie':'garanties','texte':'x','page':4,'citation':CITE,'confidence':0.9,'importance':'forte','why_missing':'categorie vide'}]}), 120, 40\n"
+            "adapters.STYLES['gemini'] = fake\n"
+            "from agents import extraction_llm as EX\n"
+            "def sel(mem, n, l):\n"
+            "    mem.setdefault('contracts', {}).setdefault('avizen', {'pages_done':[], 'pages_refused':[], 'next_page':4, 'total_pages':50, 'zones_done':0, 'proposed_fingerprints':[], 'last_processed_at':None, 'nom_contrat':'Avizen'})\n"
+            "    return [{'slug':'avizen','contrat':'Avizen','entry':{'nom_fichier':os.path.basename(PDF)},'start':4,'end':4,'gap_categories':['garanties']}]\n"
+            "EX._select_zones = sel\n"
+            "EX._resolve_pdf = lambda e: PDF\n"
+            "EX._remaining_daily_calls = lambda m, p: (50, 0, 50, '2026-07-11')\n"
+            "import orchestrator\n"
+            "sys.argv = ['orchestrator.py', '--agent', 'extraction-llm', '--dry-run']\n"
+            "orchestrator.main()\n"
+        ).replace("@SCRIPTS@", repr(SCRIPTS)).replace("@CITE@", repr(cite)).replace("@PDF@", repr(self.PDF))
+
+        hpath = os.path.join(tempfile.mkdtemp(), "harness.py")
+        with open(hpath, "w", encoding="utf-8") as f:
+            f.write(harness)
+        env = dict(os.environ, GEMINI_API_KEY="x", AXA_FORCE_PROVIDER="gemini", AXA_FORCE_MODEL="gemini-2.5-flash-lite")
+        r = subprocess.run([sys.executable, hpath], cwd=S.REPO_ROOT, capture_output=True, text=True, timeout=120, env=env)
+        out = r.stdout + r.stderr
+        # 1) le sous-processus voit bien la variable forcée
+        self.assertIn("AXA_FORCE_PROVIDER present: true", out, out[-800:])
+        # 2) exactement un appel adaptateur, sur le modèle imposé
+        self.assertEqual(out.count("ADAPTER_CALLED"), 1, out[-800:])
+        self.assertIn("ADAPTER_CALLED gemini-2.5-flash-lite", out)
+        # 3) le résumé montre le fournisseur réellement utilisé + un appel
+        self.assertIn("Fournisseur : gemini", out, out[-800:])
+        self.assertIn("Appels LLM : 1", out, out[-800:])
+        # 4) aucun secret affiché
+        self.assertNotIn("GEMINI_API_KEY=x", out)
 
 
 def orch_Q_budget():

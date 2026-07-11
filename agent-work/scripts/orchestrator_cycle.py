@@ -38,6 +38,10 @@ def _run_agent(agent, dry_run, force_provider=None, force_model=None):
         env["AXA_FORCE_PROVIDER"] = force_provider
         if force_model:
             env["AXA_FORCE_MODEL"] = force_model
+    # Diag non sensible (parent) : ce que l'on transmet au sous-processus.
+    print("[cycle] _run_agent(%s): env AXA_FORCE_PROVIDER present: %s | AXA_FORCE_MODEL present: %s" % (
+        agent, "true" if env.get("AXA_FORCE_PROVIDER") else "false",
+        "true" if env.get("AXA_FORCE_MODEL") else "false"))
     try:
         r = subprocess.run(args, cwd=S.REPO_ROOT, capture_output=True, timeout=300, env=env)
         out = (r.stdout or b"").decode("utf-8", "replace")

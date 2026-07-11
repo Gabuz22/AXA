@@ -78,10 +78,26 @@ def llm_json(ctx, user_prompt, max_tokens=800):
         {"role": "user", "content": user_prompt},
     ]
     import provider_router as PR
+    import quota_manager as Q
+    cfg = getattr(ctx.router, "cfg", {"providers": {}})
+    # Diag non sensible : le forçage de l'orchestrateur est-il visible ici (dans le sous-processus) ?
+    print("[llm] AXA_FORCE_PROVIDER present: %s | AXA_FORCE_MODEL present: %s" % (
+        "true" if os.environ.get("AXA_FORCE_PROVIDER") else "false",
+        "true" if os.environ.get("AXA_FORCE_MODEL") else "false"))
     try:
         res = ctx.router.chat(messages, max_tokens, ctx.budget, dry_run=ctx.dry_run)
-    except PR.NoProviderAvailable:
-        return None  # aucun fournisseur gratuit : arrêt propre (aucun travail), pas une erreur
-    ctx.provider_used = res.get("provider")
-    ctx.model_used = res.get("model")
-    return extract_json_block(res.get("text"))
+    except PR.NoProviderAvailable as e:
+        ctx.last_llm_cause = "provider_indisponible: %s" % S.redact_secrets(str(e), cfg)
+        print("[llm] STOP -> %s" % ctx.last_llm_cause); return None
+    except Q.QuotaExhausted as e:
+        ctx.last_llm_cause = "budget_bloque: %s" % e
+        print("[llm] STOP -> %s" % ctx.last_llm_cause); return None
+    except Exception as e:                      # jamais silencieux : on enregistre la cause exacte
+        ctx.last_llm_cause = "exception: %s" % S.redact_secrets(str(e), cfg)
+        print("[llm] STOP -> %s" % ctx.last_llm_cause); return None
+    ctx.provider_used = res.get("provider"); ctx.model_used = res.get("model")
+    data = extract_json_block(res.get("text"))
+    if data is None:
+        ctx.last_llm_cause = "reponse_vide_ou_non_json (provider=%s model=%s)" % (ctx.provider_used, ctx.model_used)
+        print("[llm] %s" % ctx.last_llm_cause)
+    return data

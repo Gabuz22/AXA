@@ -36,6 +36,7 @@ class Ctx:
         self.model_used = None
         self.self_wrote = False
         self.summary = {}
+        self.last_llm_cause = None
 
     def seq_next(self):
         self._seq += 1
@@ -43,6 +44,10 @@ class Ctx:
 
 
 def build_router(policies, providers_cfg, need_llm, dry_run, logf):
+    # Diag non sensible (sous-processus) : le forçage de l'orchestrateur est-il présent avant build_router ?
+    logf("[orch] before build_router: AXA_FORCE_PROVIDER present: %s | AXA_FORCE_MODEL present: %s | need_llm=%s" % (
+        "true" if os.environ.get("AXA_FORCE_PROVIDER") else "false",
+        "true" if os.environ.get("AXA_FORCE_MODEL") else "false", need_llm))
     if not need_llm:
         return None
     import provider_router as PR
