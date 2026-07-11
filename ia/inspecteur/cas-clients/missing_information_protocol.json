@@ -1,0 +1,9 @@
+{
+  "principe": "un cas incomplet -> conclusion CONDITIONNELLE + questions à poser",
+  "produire": [
+    "informations_manquantes",
+    "questions_client",
+    "reserves",
+    "validation_humaine_requise"
+  ]
+}

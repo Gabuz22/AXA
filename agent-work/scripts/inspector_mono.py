@@ -16,6 +16,7 @@ import knowledge_graph as KG
 import coverage_model as CM
 import inspector_case as IC
 import inspector_needs as INn
+import knowledge_status as KS
 
 _PRINCIPAL = ("principal", "principale", "obligatoire", "socle")
 
@@ -84,7 +85,11 @@ def reasoning_sheet(graph, subject, domain="axa-contrat", expected=None):
         "confusions_frequentes": "à approfondir (LLM)" if not understanding else None,
         "incertitudes": [i for i in report["explanations"] if i["axis"] in ("understanding", "relations")],
         "profondeur": report["depth_score"], "couverture_semantique": report["semantic_coverage"],
-        "avertissement": "Fiche dérivée du graphe (lecture seule). Interprétations séparées du prouvé ; vérifier les preuves avant tout usage client.",
+        "validation": KS.partition(graph, subject, domain),
+        "avertissement": "Fiche dérivée du graphe (lecture seule). Blocs de validation SÉPARÉS : "
+                         "'validated_knowledge' (masters validés) exposable comme vérité ; "
+                         "'pending_interpretations'/'simulated_claude'/'stale'/'contradictory' visibles "
+                         "UNIQUEMENT étiquetés, jamais comme clause/règle certaine. Vérifier les preuves.",
     }
 
 

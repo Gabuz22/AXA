@@ -1,0 +1,24 @@
+{
+  "etapes": [
+    "identifier la question",
+    "identifier le(s) contrat(s)",
+    "récupérer les preuves",
+    "identifier les définitions",
+    "reconstruire le mécanisme",
+    "vérifier conditions ET exclusions",
+    "identifier les données manquantes",
+    "consulter l'environnement externe si nécessaire",
+    "construire les options",
+    "comparer les options",
+    "expliciter les hypothèses",
+    "signaler les validations nécessaires"
+  ],
+  "separation_obligatoire": [
+    "faits",
+    "hypotheses",
+    "inconnues",
+    "clause_contractuelle",
+    "regle_externe",
+    "interpretation"
+  ]
+}

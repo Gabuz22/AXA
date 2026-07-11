@@ -1,0 +1,44 @@
+{
+  "description": "Modèle de cas client. Chaque donnée porte un STATUT ; une hypothèse n'est jamais un fait.",
+  "statuts_donnee": [
+    "confirme",
+    "declare",
+    "deduit",
+    "hypothese",
+    "inconnu",
+    "a_verifier"
+  ],
+  "statuts_faits": [
+    "confirme",
+    "declare"
+  ],
+  "champs": [
+    "age",
+    "statut_professionnel",
+    "profession",
+    "revenus",
+    "patrimoine",
+    "situation_familiale",
+    "enfants",
+    "dettes",
+    "emprunts",
+    "regime_social",
+    "horizon",
+    "budget",
+    "tolerance_risque",
+    "priorite",
+    "evenements_recents"
+  ],
+  "listes": [
+    "besoins_exprimes",
+    "besoins_deduits",
+    "objectifs",
+    "contraintes",
+    "contrats_existants",
+    "documents_disponibles",
+    "evenements",
+    "inconnues",
+    "demandes_explicites"
+  ],
+  "regle": "besoins EXPRIMÉS et DÉDUITS séparés ; ne jamais utiliser une hypothèse comme un fait."
+}

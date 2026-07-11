@@ -1,0 +1,78 @@
+{
+  "note": "EXEMPLE SYNTHÉTIQUE (aucune donnée réelle)",
+  "case_id": "case_e08c2c3de3cf",
+  "besoins": [
+    "se proteger en cas d invalidite"
+  ],
+  "besoins_par_contrat_candidat": {
+    "Avizen": [
+      "se proteger en cas d invalidite"
+    ],
+    "Avizen Pro": [
+      "se proteger en cas d invalidite"
+    ],
+    "Masterlife CREDIT": [
+      "se proteger en cas d invalidite"
+    ]
+  },
+  "scenarios": [
+    {
+      "nom": "mono-contrat (couverture max)",
+      "contrats_envisages": [
+        "Avizen"
+      ],
+      "besoins_couverts": [
+        "se proteger en cas d invalidite"
+      ],
+      "besoins_non_couverts": [],
+      "doublons": [],
+      "nb_contrats": 1,
+      "avantages": [
+        "simplicité (un seul contrat à gérer)",
+        "couvre l'ensemble des besoins identifiés",
+        "pas de redondance"
+      ],
+      "inconvenients": [
+        "à évaluer"
+      ],
+      "donnees_manquantes": [
+        "statut_professionnel",
+        "situation_familiale"
+      ],
+      "hypotheses": {},
+      "validation_requise": true,
+      "note": "un seul contrat, le plus couvrant"
+    },
+    {
+      "nom": "renforcé (tous les candidats)",
+      "contrats_envisages": [
+        "Avizen",
+        "Avizen Pro",
+        "Masterlife CREDIT"
+      ],
+      "besoins_couverts": [
+        "se proteger en cas d invalidite"
+      ],
+      "besoins_non_couverts": [],
+      "doublons": [
+        "se proteger en cas d invalidite"
+      ],
+      "nb_contrats": 3,
+      "avantages": [
+        "couvre l'ensemble des besoins identifiés"
+      ],
+      "inconvenients": [
+        "redondance possible : se proteger en cas d invalidite",
+        "complexité de gestion (3 contrats)"
+      ],
+      "donnees_manquantes": [
+        "statut_professionnel",
+        "situation_familiale"
+      ],
+      "hypotheses": {},
+      "validation_requise": true,
+      "note": "couverture maximale au prix de la complexité/redondance"
+    }
+  ],
+  "avertissement": "Scénarios déterministes conditionnels. Aucun coût/fiscalité/rendement inventé. Distinction faits/hypothèses/inconnues conservée. Validation humaine requise."
+}

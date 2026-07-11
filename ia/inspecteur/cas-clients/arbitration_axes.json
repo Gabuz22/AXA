@@ -1,0 +1,8 @@
+{
+  "axes": [
+    "couverture",
+    "simplicite",
+    "redondance"
+  ],
+  "regle": "jamais de 'meilleur' absolu : meilleur POUR quel objectif, SOUS quelles hypothèses, à quel horizon ; aucun coût/fiscalité inventé."
+}

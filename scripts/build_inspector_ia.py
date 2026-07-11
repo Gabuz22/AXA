@@ -26,6 +26,8 @@ import domain_adapter
 import inspector_mono as IM
 import inspector_multi as IX
 import inspector_projection as IP
+import inspector_case as ICase
+import inspector_solution as ISol
 
 OUT = os.path.join(REPO, "ia", "inspecteur")
 DOMAIN = "axa-contrat"
@@ -128,6 +130,35 @@ def tools_detailed():
     return out
 
 
+def _write_case_artifacts(graph, subjects):
+    """Vues CAS CLIENTS exposées (schémas + protocoles + exemple synthétique). Aucune donnée réelle."""
+    _write_json("cas-clients/case_schema.json", {
+        "description": "Modèle de cas client. Chaque donnée porte un STATUT ; une hypothèse n'est jamais un fait.",
+        "statuts_donnee": list(ICase.FACT_STATUS), "statuts_faits": list(ICase.FACT_LIKE),
+        "champs": list(ICase.CASE_FIELDS),
+        "listes": ["besoins_exprimes", "besoins_deduits", "objectifs", "contraintes",
+                   "contrats_existants", "documents_disponibles", "evenements", "inconnues", "demandes_explicites"],
+        "regle": "besoins EXPRIMÉS et DÉDUITS séparés ; ne jamais utiliser une hypothèse comme un fait."})
+    _write_json("cas-clients/case_reasoning_protocol.json", {
+        "etapes": ["identifier la question", "identifier le(s) contrat(s)", "récupérer les preuves",
+                   "identifier les définitions", "reconstruire le mécanisme", "vérifier conditions ET exclusions",
+                   "identifier les données manquantes", "consulter l'environnement externe si nécessaire",
+                   "construire les options", "comparer les options", "expliciter les hypothèses",
+                   "signaler les validations nécessaires"],
+        "separation_obligatoire": ["faits", "hypotheses", "inconnues", "clause_contractuelle",
+                                   "regle_externe", "interpretation"]})
+    _write_json("cas-clients/arbitration_axes.json", {"axes": list(ISol._AXES),
+        "regle": "jamais de 'meilleur' absolu : meilleur POUR quel objectif, SOUS quelles hypothèses, à quel horizon ; aucun coût/fiscalité inventé."})
+    _write_json("cas-clients/missing_information_protocol.json", {
+        "principe": "un cas incomplet -> conclusion CONDITIONNELLE + questions à poser",
+        "produire": ["informations_manquantes", "questions_client", "reserves", "validation_humaine_requise"]})
+    # exemple SYNTHÉTIQUE de scénarios (aucune donnée réelle)
+    ex = ICase.new_case(besoins_exprimes=["se proteger en cas d invalidite"],
+                        fields={"age": ICase.new_datum(42, "declare")}, objectifs=["proteger la famille"])
+    scen = ISol.build_scenarios(ex, graph, DOMAIN)
+    _write_json("cas-clients/solution_scenarios.example.json", {"note": "EXEMPLE SYNTHÉTIQUE (aucune donnée réelle)", **scen})
+
+
 def main():
     adapter, graph = build_graph()
     subjects = sorted({n.get("subject") for n in graph.nodes(layer=2, domain=DOMAIN) if n.get("subject")})
@@ -149,13 +180,21 @@ def main():
         "concept_definitions": IP.matrix_concept_definitions(graph, subjects, DOMAIN),
     })
     _write_json("tools.json", {"version": VERSION, "tools": tools_detailed()})
+    _write_case_artifacts(graph, subjects)
     _write_text("GUIDE_IA.md", GUIDE)
     fp = IP.graph_fingerprint(graph)
     _write_json("index.json", {"projection": "inspecteur", "version": VERSION, "domain": DOMAIN,
                                "generated_at": S.now_iso(), "graph_fingerprint": fp,
                                "stats": graph.stats(), "contrats": subjects,
                                "fichiers": ["GUIDE_IA.md", "contrats/index.json", "contrats/<slug>.json",
-                                            "comparison.json", "matrices.json", "tools.json"],
+                                            "comparison.json", "matrices.json", "tools.json",
+                                            "cas-clients/case_schema.json", "cas-clients/case_reasoning_protocol.json",
+                                            "cas-clients/arbitration_axes.json", "cas-clients/missing_information_protocol.json",
+                                            "cas-clients/solution_scenarios.example.json"],
+                               "statuts_validation": {
+                                   "exposable_comme_verite": ["validated", "derived_deterministic"],
+                                   "visible_si_etiquete": ["pending_review", "simulated_claude", "uncertain", "stale", "contradictory"],
+                                   "jamais_expose": ["rejected"]},
                                "avertissement": "Zone DÉRIVÉE du graphe (lecture seule). Ni master, ni proposition. Preuves conservées ; interprétations séparées ; validation humaine pour toute sortie sensible."})
     _write_text("index.html", _index_html(subjects, fp))
     _update_manifest(fp, len(subjects))
