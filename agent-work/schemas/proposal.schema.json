@@ -11,7 +11,7 @@
   ],
   "properties": {
     "proposal_id": { "type": "string", "minLength": 3, "pattern": "^[a-z0-9_\\-]+$" },
-    "agent_id": { "type": "string", "enum": ["quality", "coverage-gaps", "extraction-cg", "extraction-llm", "official-sources", "concepts", "adversarial-tests", "ux-ai", "coordinator"] },
+    "agent_id": { "type": "string", "enum": ["quality", "coverage-gaps", "extraction-cg", "extraction-llm", "official-sources", "concepts", "adversarial-tests", "ux-ai", "coordinator", "corpus-explorer"] },
     "run_id": { "type": "string", "minLength": 3 },
     "created_at": { "type": "string", "minLength": 10 },
     "status": { "type": "string", "enum": ["pending_review", "reviewed", "rejected", "blocked"] },

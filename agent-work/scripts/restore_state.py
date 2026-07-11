@@ -23,6 +23,9 @@ PERSISTENT = [
     "agent-work/tests/pending", "agent-work/tests/reviewed", "agent-work/tests/rejected",
     "agent-work/tests/metrics_history.json", "agent-work/tests/last_metrics.json",
     "agent-work/ux-ai/pending", "agent-work/ux-ai/reviewed", "agent-work/ux-ai/rejected",
+    # corpus-explorer : carte de couverture persistante + backlog de tâches typées + propositions.
+    "agent-work/exploration/coverage_map.json", "agent-work/exploration/tasks.json",
+    "agent-work/corpus-explorer/pending", "agent-work/corpus-explorer/reviewed", "agent-work/corpus-explorer/rejected",
     "agent-work/quality/reports", "agent-work/quality/incidents",
     "agent-work/coordinator", "agent-work/runs/manifests",
     "agent-work/runs/provider_metrics.json", "agent-work/runs/provider_scores.json", "agent-work/runs/benchmark.json",

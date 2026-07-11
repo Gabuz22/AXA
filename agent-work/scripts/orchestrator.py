@@ -27,6 +27,7 @@ AGENT_MODULES = {
     "concepts": "agents.concepts",
     "adversarial-tests": "agents.adversarial_tests",
     "ux-ai": "agents.ux_ai",
+    "corpus-explorer": "agents.corpus_explorer",
 }
 
 

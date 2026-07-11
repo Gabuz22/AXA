@@ -69,6 +69,19 @@
       "require_different_provider": true,
       "run_only_when": "important_or_ambiguous"
     },
+    "corpus-explorer": {
+      "kind": "llm",
+      "required_capabilities": ["document_reading", "json_strict"],
+      "json_strict": true,
+      "min_context_tokens": 3000,
+      "reasoning_min": "moyen",
+      "vision": false,
+      "max_cost": 0,
+      "compatible_providers": ["gemini", "groq", "cloudflare", "openrouter"],
+      "compatible_models": [],
+      "min_quality_history": 40,
+      "allow_smaller_model": true
+    },
     "quality": { "kind": "deterministic" },
     "coverage-gaps": { "kind": "deterministic" },
     "adversarial-tests": { "kind": "deterministic" },

@@ -1,0 +1,35 @@
+name: agents-corpus-explorer
+
+# Explorateur autonome de corpus (v2.7) — un passage par exécution. Cartographie les notices, découpe en
+# zones, compare chaque zone à la connaissance existante, met à jour la carte de couverture persistante
+# (agent-work/exploration/coverage_map.json), produit un backlog de tâches typées ET enfile les tâches
+# EXÉCUTABLES (extraction-llm) dans la file de l'orchestrateur. Au fil des semaines, la couverture tend
+# vers 100 % et l'agent lit de MOINS EN MOINS (zonage caché par hash, zones inchangées ignorées).
+#
+# Code exécuté = main ; état restauré depuis agents/proposals ; commit confiné à agent-work/ ; jamais de
+# fusion auto. Runs planifiés gatés par la variable de dépôt AGENTS_ENABLED == 'true'.
+# Anti-concurrence : concurrency dédiée ici + 'agents-proposals' (réutilisable, partagé avec l'orchestrateur)
+# => corpus-explorer et le cycle d'orchestration ne tournent JAMAIS en parallèle (écritures de file sûres).
+on:
+  schedule:
+    - cron: "37 */12 * * *"   # deux fois par jour à la minute 37 (UTC), prudent
+  workflow_dispatch:
+    inputs:
+      force_dry_run:
+        description: "Exécuter en dry-run (aucun commit, aucune écriture d'état)"
+        type: boolean
+        default: true
+
+concurrency:
+  group: agents-corpus-explorer
+  cancel-in-progress: false
+
+jobs:
+  corpus-explorer:
+    uses: ./.github/workflows/_agents-run.yml
+    with:
+      agent: corpus-explorer
+      mode: agent
+      extra_pip: pypdf
+      force_dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.force_dry_run || false }}
+    secrets: inherit
