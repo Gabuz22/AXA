@@ -110,6 +110,16 @@
       "max_pages_per_run": 12,
       "max_proposals_per_run": 5,
       "description": "Explorateur autonome : cartographie chaque notice, la decoupe en zones logiques, compare chaque zone a toute la connaissance existante et cherche ce que Gabriel AXA NE CONNAIT PAS encore. Met a jour une carte de couverture persistante (exploration/coverage_map.json) et produit des taches typees (definition/condition/declencheur/comparaison/verification/contradiction/complement/relecture/mise_a_jour). LLM optionnel (raffinement) via le routage existant ; sans cle, reste deterministe. Ecrit seulement dans agent-work/. Coeur generique reutilisable (corpus_intel.py)."
+    },
+    {
+      "id": "knowledge-curator",
+      "name": "Agent Curateur de connaissances",
+      "kind": "deterministic",
+      "uses_llm": false,
+      "output_dir": "agent-work/knowledge/pending",
+      "enabled": true,
+      "priority_default": 3,
+      "description": "DETERMINISTE, zero token. Ingere le domaine (connaissance structuree + propositions extraction) dans le graphe de connaissances en 4 couches, calcule la couverture de PROFONDEUR de chaque sujet, et genere le backlog de taches deterministes (approfondissement : relier/expliquer/comparer/environnement/sourcer/normaliser ; operations : doublons/contradiction-candidats/fraicheur). Le systeme decouvre ainsi lui-meme son travail sans consommer de tokens. Generique via DomainAdapter. Ecrit seulement dans agent-work/knowledge/."
     }
   ]
 }

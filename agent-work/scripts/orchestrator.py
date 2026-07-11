@@ -28,6 +28,7 @@ AGENT_MODULES = {
     "adversarial-tests": "agents.adversarial_tests",
     "ux-ai": "agents.ux_ai",
     "corpus-explorer": "agents.corpus_explorer",
+    "knowledge-curator": "agents.knowledge_curator",
 }
 
 

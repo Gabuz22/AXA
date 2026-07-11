@@ -83,6 +83,7 @@
       "allow_smaller_model": true
     },
     "quality": { "kind": "deterministic" },
+    "knowledge-curator": { "kind": "deterministic" },
     "coverage-gaps": { "kind": "deterministic" },
     "adversarial-tests": { "kind": "deterministic" },
     "official-sources": { "kind": "deterministic" },

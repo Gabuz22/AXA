@@ -13,7 +13,7 @@ import safety_checks as S
 import orch
 
 ORCH_DIR = os.path.join(S.AGENT_WORK, "orchestrator")
-DEFAULT_DETERMINISTIC = ["coverage-gaps", "quality"]
+DEFAULT_DETERMINISTIC = ["knowledge-curator", "coverage-gaps", "quality"]
 MAX_LLM_TASKS_PER_CYCLE = 2
 CYCLE_TIME_BUDGET_S = 600
 
