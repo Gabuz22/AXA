@@ -16,6 +16,7 @@ import quota_manager as Q
 import select_task as ST
 import deduplicate as DD
 import validate_proposal as VP
+import json
 
 AGENT_MODULES = {
     "quality": "agents.quality",
@@ -55,6 +56,18 @@ def build_router(policies, providers_cfg, need_llm, dry_run, logf):
 
 
 def main():
+    result = {
+        "agent_status": "failed_retryable",
+        "provider_used": None,
+        "model_used": None,
+        "llm_calls": 0,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "proposals_written": 0,
+        "last_llm_cause": None,
+        "task_outcome": "execution_incomplete",
+    }
+
     ap = argparse.ArgumentParser()
     ap.add_argument("--agent", required=True, choices=list(AGENT_MODULES.keys()))
     ap.add_argument("--dry-run", action="store_true")
@@ -118,11 +131,27 @@ def main():
         manifest["provider_used"] = ctx.provider_used; manifest["model_used"] = ctx.model_used
         manifest["counters"].update(ctx.budget.as_counters())
         manifest["finished_at"] = S.now_iso(); _finish(manifest, log_lines, args.dry_run)
-        logf("[orch] arrêt propre (quota) : %s" % e); return 0
+        logf("[orch] arrêt propre (quota) : %s" % e);
+        result.update({
+        "agent_status": "failed_retryable",
+        "last_llm_cause": f"quota: {e}",
+        "task_outcome": "quota_exhausted",
+        })
+        return 0
     except Exception as e:
         manifest["notes"].append("erreur agent: %s" % e)
         logf("[orch] ERREUR agent: %s\n%s" % (e, traceback.format_exc()))
-        manifest["finished_at"] = S.now_iso(); _finish(manifest, log_lines, args.dry_run); return 1
+    
+        result.update({
+            "agent_status": "failed_retryable",
+            "last_llm_cause": f"exception: {type(e).__name__}: {e}",
+            "task_outcome": "exception",
+        })
+    
+        manifest["finished_at"] = S.now_iso()
+        _finish(manifest, log_lines, args.dry_run)
+
+        return 1
 
     manifest["provider_used"] = ctx.provider_used
     manifest["model_used"] = ctx.model_used
@@ -174,8 +203,22 @@ def main():
     logf("[orch] terminé: écrites=%d dédupliquées=%d rejetées=%d status=%s" %
          (written, deduped, rejected, manifest["status"]))
     _emit_summary(args.agent, ctx, manifest, written, deduped, rejected)
-    return 0
 
+    result.update({
+    "agent_status": manifest["status"],
+    "provider_used": ctx.provider_used,
+    "model_used": ctx.model_used,
+    "llm_calls": manifest["counters"]["llm_calls"],
+    "tokens_in": manifest["counters"]["tokens_in_est"],
+    "tokens_out": manifest["counters"]["tokens_out_est"],
+    "proposals_written": written,
+    "last_llm_cause": ctx.last_llm_cause,
+    "task_outcome": manifest["status"],
+    })
+
+    print("AGENT_RESULT_JSON=" + json.dumps(result, ensure_ascii=False))
+
+    return 0
 
 def _emit_summary(agent, ctx, manifest, written, deduped, rejected):
     """Résumé lisible sur la page du run GitHub Actions (aucun secret)."""
