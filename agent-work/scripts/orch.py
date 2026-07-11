@@ -247,6 +247,34 @@ class TaskQueue:
                 task["next_attempt_at"] = _iso(_now() + datetime.timedelta(seconds=max(1, retry_delay_s)))
                 task["status"] = "waiting_reset" if retry_delay_s > 300 else "ready"
 
+    def apply_outcome(self, task, outcome, provider=None, model=None, cause=None):
+        """Traduit un RÉSULTAT MÉTIER (jamais un simple exit code) en statut de tâche.
+        Règle stricte : 'completed' UNIQUEMENT si la zone a été réellement analysée par le LLM sans
+        donnée utile (analyzed_no_data). Une proposition écrite => revue humaine. Un no_work causé par
+        un fournisseur/modèle indisponible, un quota ou l'absence d'appel => réessai, jamais 'completed'."""
+        task["owner_cycle"] = None
+        task["last_provider"] = provider or task.get("last_provider")
+        task["last_model"] = model or task.get("last_model")
+        if cause:
+            task["last_error"] = str(cause)[:200]
+        task.pop("completion_reason", None)
+        if outcome == "produced":
+            task["status"] = "blocked_human_review"          # travail réel -> validation humaine (jamais 'completed' silencieux)
+        elif outcome == "analyzed_no_data":
+            task["status"] = "completed"; task["completion_reason"] = "analyzed_no_data"
+        elif outcome == "auth_error":
+            task["status"] = "failed_terminal"               # 401/403 -> intervention humaine, pas de boucle
+        elif outcome == "quota":
+            if int(task.get("attempts", 0)) >= int(task.get("max_attempts", 4)):
+                task["status"] = "failed_terminal"
+            else:
+                task["status"] = "waiting_reset"
+                task["next_attempt_at"] = _iso(_now() + datetime.timedelta(hours=6))
+        else:                                                 # waiting_provider / no_work / inconnu -> JAMAIS completed
+            task["status"] = "waiting_provider"
+            task["next_attempt_at"] = _iso(_now() + datetime.timedelta(minutes=30))
+        return task["status"]
+
     def counts(self):
         c = {}
         for t in self.data["tasks"]:
@@ -257,6 +285,58 @@ class TaskQueue:
         if dry_run:
             return
         S.write_json(self.path, self.data)
+
+
+# ------------------------------------------------------------------ migration d'état (idempotente)
+def _valid_extraction_index(policies=None):
+    """Ensemble {(contract_slug, categorie)} des propositions d'extraction VALIDES (pending + reviewed).
+    Une confiance > 0.95 (ancienne version) est INVALIDE => exclue : elle ne compte pas comme travail réel."""
+    import glob as _glob
+    try:
+        import validate_proposal as VP
+    except Exception:
+        VP = None
+    idx = set()
+    for sub in ("pending", "reviewed"):
+        for f in _glob.glob(os.path.join(S.AGENT_WORK, "extraction", sub, "*.json")):
+            try:
+                p = S.load_json(f)
+            except Exception:
+                continue
+            if p.get("agent_id") != "extraction-llm":
+                continue
+            if VP is not None:
+                ok, _errs = VP.validate(p, policies)
+                if not ok:
+                    continue
+            slug = (p.get("target") or {}).get("contract")
+            cat = ((p.get("proposed_change") or {}).get("payload") or {}).get("categorie")
+            if slug and cat:
+                idx.add((slug, cat))
+    return idx
+
+
+def unstick_burned_tasks(queue, policies=None):
+    """Migration idempotente. Réactive UNIQUEMENT les tâches 'completed' BRÛLÉES : celles qui n'ont
+    jamais produit de proposition VALIDE et ne portent pas completion_reason='analyzed_no_data'.
+    Ne rouvre JAMAIS une tâche réellement terminée. Rejouable : une tâche déjà réactivée est 'ready'
+    (plus 'completed') et n'est donc plus concernée. Retourne la liste des task_id réactivés."""
+    idx = _valid_extraction_index(policies)
+    reopened = []
+    for t in queue.data["tasks"]:
+        if t.get("status") != "completed":
+            continue
+        if t.get("completion_reason") == "analyzed_no_data":
+            continue                                          # réellement analysée sans donnée -> ne pas rouvrir
+        slug = S.sanitize_filename(t.get("contract") or "").lower()
+        if (slug, t.get("category")) in idx:
+            continue                                          # proposition valide liée -> réellement terminée
+        t["status"] = "ready"; t["attempts"] = 0; t["owner_cycle"] = None
+        t["next_attempt_at"] = _iso()
+        t["reopened_reason"] = "completed sans proposition valide ni appel LLM utile (migration no_work)"
+        t["reopened_at"] = _iso()
+        reopened.append(t.get("task_id"))
+    return reopened
 
 
 # ------------------------------------------------------------------ politique zéro-coût

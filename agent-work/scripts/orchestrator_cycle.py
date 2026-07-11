@@ -45,10 +45,57 @@ def _run_agent(agent, dry_run, force_provider=None, force_model=None):
     try:
         r = subprocess.run(args, cwd=S.REPO_ROOT, capture_output=True, timeout=300, env=env)
         out = (r.stdout or b"").decode("utf-8", "replace")
+        result = _parse_agent_result(out)        # résultat MÉTIER (parsé sur le stdout complet, pas seulement la queue)
         status = "ok" if r.returncode == 0 else "error"
-        return status, out[-400:]
+        return status, out[-400:], result
     except Exception as e:
-        return "error", str(e)
+        return "error", str(e), {}
+
+
+def _parse_agent_result(stdout):
+    """Extrait la DERNIÈRE ligne 'AGENT_RESULT_JSON=...' (résultat métier machine-readable). Robuste :
+    tolère l'absence, une ligne tronquée ou un JSON invalide (retourne alors {})."""
+    result = {}
+    for line in (stdout or "").splitlines():
+        s = line.strip()
+        if s.startswith("AGENT_RESULT_JSON="):
+            try:
+                result = json.loads(s[len("AGENT_RESULT_JSON="):])
+            except Exception:
+                pass
+    return result
+
+
+def _latest_manifest_status(agent):
+    """Statut du dernier manifeste de l'agent (repli quand AGENT_RESULT_JSON n'est pas émis :
+    orchestrator.py ne l'imprime que sur le chemin succès ; sur quota/exception on lit le manifeste)."""
+    mans = sorted(glob.glob(os.path.join(S.AGENT_WORK, "runs", "manifests", "run_%s_*.json" % agent)))
+    if not mans:
+        return None
+    return (S.load_json(mans[-1]) or {}).get("status")
+
+
+def _derive_outcome(result):
+    """Traduit le AGENT_RESULT_JSON de l'agent (contrat orchestrator.py : task_outcome ∈ ok/no_work/
+    quota_exhausted/exception/…) en RÉSULTAT CANONIQUE pour TaskQueue.apply_outcome. Jamais le seul
+    exit code. Retourne : produced | analyzed_no_data | quota | auth_error | failed | waiting_provider."""
+    r = result or {}
+    pw = int(r.get("proposals_written") or 0)
+    lc = int(r.get("llm_calls") or 0)
+    cause = (r.get("last_llm_cause") or "").lower()
+    outc = (r.get("task_outcome") or "").lower()
+    status = (r.get("agent_status") or "").lower()
+    if any(k in cause for k in ("auth", "401", "403")):
+        return "auth_error"
+    if "quota" in outc or "quota" in cause or "429" in cause or "rate" in cause or status == "stopped_quota":
+        return "quota"
+    if outc in ("exception", "execution_incomplete", "error") or status in ("error", "failed_terminal"):
+        return "failed"
+    if pw > 0 or outc == "ok" or status == "ok":
+        return "produced"                        # travail réel écrit -> revue humaine
+    if lc > 0:
+        return "analyzed_no_data"                # le LLM a tourné, rien retenu -> zone analysée
+    return "waiting_provider"                     # no_work sans appel LLM (provider/modèle indispo) -> réessai
 
 
 def _build_llm_tasks(queue):
@@ -103,11 +150,18 @@ def run_cycle(dry_run=False, deterministic=None, base_dir=ORCH_DIR):
             registry.set_key_detected(pid, present)
         _preflight_keys(keys, L)
         queue = orch.TaskQueue(base_dir).recover_stale()
+        # MIGRATION idempotente : réactive les tâches 'completed' brûlées par l'ancien bug (no_work
+        # marqué 'completed' sans proposition valide). Ne touche jamais une tâche réellement terminée.
+        reopened = orch.unstick_burned_tasks(queue, policies)
+        if reopened:
+            L("[cycle] migration: %d tâche(s) 'completed' brûlée(s) réactivée(s): %s" % (len(reopened), ", ".join(reopened)))
+            manifest["notes"].append("migration_reopened=%d" % len(reopened))
+            manifest["reopened_tasks"] = reopened
         cost = orch.CostPolicy(policies, per_provider_cycle_cap=policies.get("limits", {}).get("max_llm_calls_per_run", 6))
 
         # 2) agents déterministes (toujours du travail utile, même sans LLM)
         for agent in (deterministic or DEFAULT_DETERMINISTIC):
-            st, tail = _run_agent(agent, dry_run)
+            st, tail, _res = _run_agent(agent, dry_run)
             manifest["deterministic_ran"].append({"agent": agent, "status": st})
             L("[cycle] déterministe %s -> %s" % (agent, st))
 
@@ -151,14 +205,30 @@ def run_cycle(dry_run=False, deterministic=None, base_dir=ORCH_DIR):
             if not queue.claim(task, cid):
                 continue
             # exécution réelle : le moteur choisi est IMPOSÉ à l'agent (pas de second routage).
-            st, tail = _run_agent(agent, dry_run, force_provider=decision["provider"], force_model=decision["model"])
+            st, tail, result = _run_agent(agent, dry_run, force_provider=decision["provider"], force_model=decision["model"])
             cost.record(decision["provider"]); ran_agents.add(agent); idem_done.add(ikey)
             _sync_provider_state_from_run(registry, agent)
-            queue.finish(task, "completed" if st == "ok" else "failed_retryable",
-                         provider=decision["provider"], model=decision["model"],
-                         error=None if st == "ok" else tail, retry_delay_s=120)
+            # STATUT MÉTIER (jamais le seul returncode). orchestrator.py n'émet AGENT_RESULT_JSON que sur
+            # le chemin succès ; sur quota/exception on retombe sur le statut du manifeste.
+            result = result or {}
+            if not result:
+                ms = _latest_manifest_status(agent)
+                result = {"agent_status": ms, "task_outcome": ms}
+            outcome = _derive_outcome(result)
+            if outcome == "failed":
+                # échec réel (exception/erreur) -> réessai borné, jamais 'completed'
+                queue.finish(task, "failed_retryable", provider=decision["provider"], model=decision["model"],
+                             error=result.get("last_llm_cause") or tail, retry_delay_s=120)
+            else:
+                queue.apply_outcome(task, outcome,
+                                    provider=result.get("provider_used") or decision["provider"],
+                                    model=result.get("model_used") or decision["model"],
+                                    cause=result.get("last_llm_cause"))
             manifest["tasks_executed"].append({"task_id": task["task_id"], "provider": decision["provider"],
-                                               "model": decision["model"], "status": task["status"]})
+                                               "model": decision["model"], "status": task["status"],
+                                               "agent_status": result.get("agent_status"),
+                                               "task_outcome": outcome, "llm_calls": result.get("llm_calls"),
+                                               "proposals_written": result.get("proposals_written")})
             executed += 1
         if not dry_run:
             S.write_json(os.path.join(base_dir, "idempotency.json"), {"done": list(idem_done)[-300:], "updated_at": orch._iso()})

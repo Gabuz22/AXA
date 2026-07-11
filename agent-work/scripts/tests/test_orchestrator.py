@@ -251,7 +251,7 @@ class TestSecretsAndIdempotency(Base):
         os.environ["GEMINI_API_KEY"] = "x"
         calls = {"extraction-llm": 0}
         orig_run, orig_coord, orig_sync = OC._run_agent, OC._run_coordinator, OC._sync_provider_state_from_run
-        OC._run_agent = lambda agent, dry, force_provider=None, force_model=None: (calls.__setitem__(agent, calls.get(agent, 0) + 1), ("ok", ""))[1]
+        OC._run_agent = lambda agent, dry, force_provider=None, force_model=None: (calls.__setitem__(agent, calls.get(agent, 0) + 1), ("ok", "", {"task_outcome": "analyzed_no_data", "agent_status": "no_work"}))[1]
         OC._run_coordinator = lambda dry: None
         OC._sync_provider_state_from_run = lambda reg, agent: None
         try:
@@ -422,6 +422,173 @@ class TestSubprocessForcing(unittest.TestCase):
 def orch_Q_budget():
     import quota_manager as Q
     return Q.Budget(max_llm_calls=6, max_tokens=40000)
+
+
+class TestAgentResultParsing(unittest.TestCase):
+    """Le parent lit le RÉSULTAT MÉTIER via AGENT_RESULT_JSON, jamais via le seul returncode."""
+    def setUp(self):
+        import orchestrator_cycle as OC
+        self.OC = OC
+
+    def test_parse_extracts_last_json(self):
+        out = "bruit\nAGENT_RESULT_JSON=" + json.dumps({"agent_status": "no_work", "task_outcome": "waiting_provider"}) + "\nfin\n"
+        r = self.OC._parse_agent_result(out)
+        self.assertEqual(r["agent_status"], "no_work")
+        self.assertEqual(r["task_outcome"], "waiting_provider")
+
+    def test_parse_robust_to_missing_or_broken(self):
+        self.assertEqual(self.OC._parse_agent_result("aucun marqueur ici"), {})
+        self.assertEqual(self.OC._parse_agent_result("AGENT_RESULT_JSON={cassé"), {})
+
+    def test_parse_takes_last_occurrence(self):
+        out = ("AGENT_RESULT_JSON=" + json.dumps({"task_outcome": "produced"}) + "\n"
+               "AGENT_RESULT_JSON=" + json.dumps({"task_outcome": "analyzed_no_data"}) + "\n")
+        self.assertEqual(self.OC._parse_agent_result(out)["task_outcome"], "analyzed_no_data")
+
+
+class TestTaskOutcomeMapping(unittest.TestCase):
+    """apply_outcome : un exit 0 ne suffit jamais à passer 'completed'."""
+    def setUp(self):
+        self.q = orch.TaskQueue(tempfile.mkdtemp())
+        self.t, _ = self.q.add("extraction-llm", contract="avizen", category="definitions", max_attempts=2)
+        self.q.claim(self.t, "c")   # simule une exécution (attempts=1)
+
+    def test_no_work_provider_becomes_waiting_provider_not_completed(self):
+        self.q.apply_outcome(self.t, "waiting_provider", provider="gemini", model="m")
+        self.assertEqual(self.t["status"], "waiting_provider")
+        self.assertNotEqual(self.t["status"], "completed")
+        self.assertTrue(self.t.get("next_attempt_at"))
+
+    def test_analyzed_no_data_completes_with_reason(self):
+        self.q.apply_outcome(self.t, "analyzed_no_data", provider="gemini", model="m")
+        self.assertEqual(self.t["status"], "completed")
+        self.assertEqual(self.t["completion_reason"], "analyzed_no_data")
+
+    def test_produced_goes_to_human_review_not_completed(self):
+        self.q.apply_outcome(self.t, "produced", provider="gemini", model="m")
+        self.assertEqual(self.t["status"], "blocked_human_review")
+        self.assertNotIn("completion_reason", self.t)
+
+    def test_quota_defers_then_terminal(self):
+        self.q.apply_outcome(self.t, "quota")               # attempts=1 < 2 -> waiting_reset
+        self.assertEqual(self.t["status"], "waiting_reset")
+        self.q.claim(self.t, "c")                           # attempts=2
+        self.q.apply_outcome(self.t, "quota")               # atteint max_attempts -> terminal
+        self.assertEqual(self.t["status"], "failed_terminal")
+
+    def test_auth_error_is_terminal(self):
+        self.q.apply_outcome(self.t, "auth_error", cause="401 unauthorized")
+        self.assertEqual(self.t["status"], "failed_terminal")
+
+
+class TestDeriveOutcome(unittest.TestCase):
+    """orchestrator_cycle._derive_outcome : traduit le contrat AGENT_RESULT_JSON d'orchestrator.py
+    (task_outcome ∈ ok/no_work/quota_exhausted/exception/…) en résultat canonique. Jamais le returncode."""
+    def setUp(self):
+        import orchestrator_cycle as OC
+        self.f = OC._derive_outcome
+
+    def test_ok_with_proposals_is_produced(self):
+        self.assertEqual(self.f({"task_outcome": "ok", "proposals_written": 2, "llm_calls": 1}), "produced")
+
+    def test_no_work_after_llm_is_analyzed(self):
+        self.assertEqual(self.f({"task_outcome": "no_work", "proposals_written": 0, "llm_calls": 3}), "analyzed_no_data")
+
+    def test_no_work_without_call_is_waiting_provider(self):
+        self.assertEqual(self.f({"task_outcome": "no_work", "proposals_written": 0, "llm_calls": 0}), "waiting_provider")
+
+    def test_quota_exhausted_is_quota(self):
+        self.assertEqual(self.f({"task_outcome": "quota_exhausted", "agent_status": "failed_retryable"}), "quota")
+
+    def test_429_cause_is_quota(self):
+        self.assertEqual(self.f({"task_outcome": "no_work", "last_llm_cause": "HTTP 429 rate limit"}), "quota")
+
+    def test_auth_cause_is_auth_error(self):
+        self.assertEqual(self.f({"task_outcome": "exception", "last_llm_cause": "401 unauthorized"}), "auth_error")
+
+    def test_exception_is_failed(self):
+        self.assertEqual(self.f({"task_outcome": "exception", "agent_status": "failed_retryable"}), "failed")
+
+    def test_empty_result_is_waiting_provider(self):
+        self.assertEqual(self.f({}), "waiting_provider")
+
+
+class TestBurnedTaskMigration(unittest.TestCase):
+    """Migration idempotente : réactive UNIQUEMENT les 'completed' brûlées, une seule fois."""
+    def setUp(self):
+        self.q = orch.TaskQueue(tempfile.mkdtemp())
+        # 6 tâches 'brûlées' : completed, attempts=1, aucune proposition, aucun completion_reason
+        for c in ("Essen'Ciel (assurance obsèques)", "Essen'Ciel Patrimoine"):
+            for cat in ("definitions", "conditions", "declencheurs"):
+                t, _ = self.q.add("extraction-llm", contract=c, category=cat)
+                t["status"] = "completed"; t["attempts"] = 1
+        # 1 tâche réellement terminée (analyse LLM sans donnée) -> ne doit PAS être rouverte
+        done, _ = self.q.add("extraction-llm", contract="Avizen", category="garanties")
+        done["status"] = "completed"; done["completion_reason"] = "analyzed_no_data"
+        self._orig_index = orch._valid_extraction_index
+        orch._valid_extraction_index = lambda policies=None: set()   # aucune proposition valide
+
+    def tearDown(self):
+        orch._valid_extraction_index = self._orig_index
+
+    def test_six_burned_reopened_once_and_idempotent(self):
+        reopened = orch.unstick_burned_tasks(self.q)
+        self.assertEqual(len(reopened), 6)
+        for tid in reopened:
+            t = self.q._by_id(tid)
+            self.assertEqual(t["status"], "ready")
+            self.assertEqual(t["attempts"], 0)
+            self.assertTrue(t.get("reopened_at"))
+        # idempotent : un second passage ne rouvre plus rien
+        self.assertEqual(orch.unstick_burned_tasks(self.q), [])
+
+    def test_really_completed_not_reopened(self):
+        orch.unstick_burned_tasks(self.q)
+        done = next(t for t in self.q.data["tasks"] if t.get("completion_reason") == "analyzed_no_data")
+        self.assertEqual(done["status"], "completed")
+
+    def test_task_with_valid_proposal_not_reopened(self):
+        # une proposition VALIDE pour (slug, catégorie) marque la tâche comme réellement terminée
+        slug = S.sanitize_filename("Essen'Ciel Patrimoine").lower()
+        orch._valid_extraction_index = lambda policies=None: {(slug, "definitions")}
+        reopened = orch.unstick_burned_tasks(self.q)
+        self.assertEqual(len(reopened), 5)   # 6 brûlées - 1 couverte par une proposition valide
+        kept = next(t for t in self.q.data["tasks"]
+                    if t.get("contract") == "Essen'Ciel Patrimoine" and t.get("category") == "definitions")
+        self.assertEqual(kept["status"], "completed")
+
+
+class TestSubprocessNoWorkNotCompleted(unittest.TestCase):
+    """VRAI sous-processus : un run 'no_work' (exit 0, aucune zone, aucun appel LLM) émet un
+    AGENT_RESULT_JSON dont task_outcome n'est PAS completable -> la tâche ne passe pas 'completed'."""
+    def test_exit0_no_work_maps_to_not_completed(self):
+        import orchestrator_cycle as OC
+        harness = (
+            "import sys\n"
+            "sys.path.insert(0, @SCRIPTS@)\n"
+            "from agents import extraction_llm as EX\n"
+            "EX._select_zones = lambda mem, n, l: []\n"      # aucune zone -> no_work, 0 appel LLM
+            "import orchestrator\n"
+            "sys.argv = ['orchestrator.py', '--agent', 'extraction-llm', '--dry-run']\n"
+            "raise SystemExit(orchestrator.main())\n"
+        ).replace("@SCRIPTS@", repr(SCRIPTS))
+        hpath = os.path.join(tempfile.mkdtemp(), "harness_nowork.py")
+        with open(hpath, "w", encoding="utf-8") as f:
+            f.write(harness)
+        r = subprocess.run([sys.executable, hpath], cwd=S.REPO_ROOT, capture_output=True, text=True, timeout=120)
+        self.assertEqual(r.returncode, 0, (r.stdout + r.stderr)[-800:])         # exit 0 malgré no_work
+        result = OC._parse_agent_result(r.stdout)
+        self.assertTrue(result, (r.stdout + r.stderr)[-800:])                   # AGENT_RESULT_JSON présent (chemin succès)
+        self.assertEqual(result.get("task_outcome"), "no_work")                 # contrat : status manifeste
+        # traduit puis appliqué : un no_work sans appel LLM ne doit PAS passer 'completed'
+        outcome = OC._derive_outcome(result)
+        self.assertEqual(outcome, "waiting_provider")
+        q = orch.TaskQueue(tempfile.mkdtemp())
+        t, _ = q.add("extraction-llm", contract="Avizen", category="garanties")
+        q.claim(t, "c")
+        q.apply_outcome(t, outcome)
+        self.assertNotEqual(t["status"], "completed")
+        self.assertEqual(t["status"], "waiting_provider")
 
 
 if __name__ == "__main__":
