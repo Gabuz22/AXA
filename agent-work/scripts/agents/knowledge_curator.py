@@ -52,6 +52,7 @@ def run(ctx):
         import knowledge_projection as KP
         projected = KP.write_projections(graph, domain_id, subjects, adapter, write, S.now_iso, dry_run=ctx.dry_run)
         review = _write_review(graph, domain_id, write, ctx.dry_run)
+        _write_comparisons(graph, domain_id, adapter, subjects, write, ctx.dry_run)
         _write_manager(domain_id, write, ctx.dry_run)
         depth = _avg_depth(graph, domain_id, subjects)
         per_domain[domain_id] = {"subjects": len(subjects), "tasks": total, "new": new,
@@ -101,6 +102,19 @@ def _write_review(graph, domain, write, dry_run):
     rep = KR.review_graph(graph, domain)
     if not dry_run and write is not None:
         write(base.repo_path(REVIEW), {"version": "1.0.0", "domain": domain, "generated_at": S.now_iso(), **rep})
+    return rep
+
+
+COMPARISONS = "agent-work/knowledge/comparisons.json"
+
+
+def _write_comparisons(graph, domain, adapter, subjects, write, dry_run):
+    """Comparaison inter-contrats + candidats de contradiction (déterministe, prudent)."""
+    import knowledge_compare as KC
+    expected = adapter.expected_categories() if hasattr(adapter, "expected_categories") else []
+    rep = KC.build_report(graph, subjects, domain, expected)
+    if not dry_run and write is not None:
+        write(base.repo_path(COMPARISONS), {"version": "1.0.0", "domain": domain, "generated_at": S.now_iso(), **rep})
     return rep
 
 
