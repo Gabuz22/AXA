@@ -105,7 +105,7 @@ class KnowledgeGraph:
             "freshness": {"as_of": as_of or now, "ttl_days": ttl_days, "checked_at": now},
             "content_hash": content_hash({"document": document, "page": page, "citation": _norm(citation)}),
             "status": "active", "provenance_agent": agent, "created_at": now, "updated_at": now,
-            "times_seen": 1,
+            "times_seen": 1, "version": 1, "validations": [], "ambiguities": [], "risks": [],
         }
         self.data["nodes"][nid] = node
         return node
@@ -125,7 +125,8 @@ class KnowledgeGraph:
                 "confidence": round(float(confidence), 3),
                 "freshness": {"as_of": as_of or now, "ttl_days": ttl_days, "checked_at": now},
                 "content_hash": chash, "status": "active", "provenance_agent": agent,
-                "created_at": now, "updated_at": now, "revision": 1,
+                "created_at": now, "updated_at": now, "revision": 1, "version": 1,
+                "validations": [], "ambiguities": [], "risks": [],
             }
             self.data["nodes"][nid] = node
             return node, True
@@ -142,12 +143,18 @@ class KnowledgeGraph:
         if changed:
             node["updated_at"] = now
             node["revision"] = node.get("revision", 1) + 1
+            node["version"] = node["revision"]
         return node, changed
 
     # ------------------------------------------------------------------ L3 : relation typée (arête)
-    def add_relation(self, rtype, src, dst, agent="", confidence=0.6, evidence_ids=None):
+    def add_relation(self, rtype, src, dst, agent="", confidence=0.6, evidence_ids=None,
+                     directed=True, validation_required=None):
+        """Ajoute une arête typée. `directed` = sens (src -> dst) ; `validation_required` par défaut True
+        pour les relations INTERPRÉTÉES (LLM), à passer False pour les liens structurels déterministes."""
         if rtype not in RELATION_TYPES:
             raise ValueError("relation inconnue: %s" % rtype)
+        if validation_required is None:
+            validation_required = True
         eid = relation_id(rtype, src, dst)
         now = self._now()
         prev = self.data["edges"].get(eid)
@@ -156,9 +163,10 @@ class KnowledgeGraph:
             prev["updated_at"] = now
             return prev, False
         edge = {
-            "id": eid, "layer": 3, "type": rtype, "src": src, "dst": dst,
+            "id": eid, "layer": 3, "type": rtype, "src": src, "dst": dst, "directed": bool(directed),
             "sources": [{"evidence": e} for e in (evidence_ids or [])],
             "confidence": round(float(confidence), 3), "status": "active",
+            "validation_required": bool(validation_required),
             "provenance_agent": agent, "created_at": now, "updated_at": now,
         }
         self.data["edges"][eid] = edge
@@ -181,11 +189,13 @@ class KnowledgeGraph:
                 "confidence": round(float(confidence), 3),
                 "freshness": {"as_of": now, "ttl_days": None, "checked_at": now},
                 "content_hash": chash, "status": "active", "provenance_agent": agent,
-                "created_at": now, "updated_at": now, "revision": 1,
+                "created_at": now, "updated_at": now, "revision": 1, "version": 1,
+                "validations": [], "ambiguities": [], "risks": [],
             }
             self.data["nodes"][nid] = node
-            # rattachement explicite entité -> explication
-            self.add_relation("explains", nid, target_id, agent=agent, confidence=confidence)
+            # rattachement structurel entité -> explication (déterministe, pas de validation requise)
+            self.add_relation("explains", nid, target_id, agent=agent, confidence=confidence,
+                              validation_required=False)
             return node, True
         changed = node.get("content_hash") != chash
         node["content"] = payload
@@ -273,3 +283,82 @@ def _parse(iso):
         return _dt.datetime.fromisoformat((iso or "").replace("Z", "+00:00"))
     except Exception:
         return None
+
+
+# ------------------------------------------------------------------ validation & migration (idempotentes)
+_NODE_REQUIRED = ("id", "layer", "type", "domain", "subject", "confidence", "freshness", "status",
+                  "created_at", "content_hash", "version", "validations", "ambiguities", "risks")
+_EDGE_REQUIRED = ("id", "layer", "type", "src", "dst", "confidence", "status", "created_at",
+                  "directed", "validation_required")
+
+
+def validate_node(node):
+    """(ok, errors) — le nœud respecte-t-il le contrat minimal ? Ne modifie rien."""
+    errs = []
+    for k in _NODE_REQUIRED:
+        if k not in node:
+            errs.append("champ manquant: %s" % k)
+    if node.get("layer") not in (1, 2, 4):
+        errs.append("layer invalide: %r" % node.get("layer"))
+    if node.get("status") not in NODE_STATUS:
+        errs.append("status invalide: %r" % node.get("status"))
+    c = node.get("confidence")
+    if not isinstance(c, (int, float)) or not (0.0 <= float(c) <= 1.0):
+        errs.append("confidence hors [0,1]: %r" % c)
+    if node.get("layer") in (1, 2) and not node.get("domain"):
+        errs.append("domaine requis pour L1/L2")
+    return (not errs, errs)
+
+
+def validate_edge(edge):
+    errs = []
+    for k in _EDGE_REQUIRED:
+        if k not in edge:
+            errs.append("champ manquant: %s" % k)
+    if edge.get("type") not in RELATION_TYPES:
+        errs.append("relation inconnue: %r" % edge.get("type"))
+    if edge.get("status") not in NODE_STATUS:
+        errs.append("status invalide: %r" % edge.get("status"))
+    return (not errs, errs)
+
+
+def validate_graph(graph, limit=20):
+    """Retourne {ok, node_errors, edge_errors, sample} — ne modifie rien. Sert de garde-fou/observabilité."""
+    ne, ee, sample = 0, 0, []
+    for n in graph.data.get("nodes", {}).values():
+        ok, errs = validate_node(n)
+        if not ok:
+            ne += 1
+            if len(sample) < limit:
+                sample.append({"id": n.get("id"), "errors": errs})
+    for e in graph.data.get("edges", {}).values():
+        ok, errs = validate_edge(e)
+        if not ok:
+            ee += 1
+            if len(sample) < limit:
+                sample.append({"id": e.get("id"), "errors": errs})
+    return {"ok": (ne == 0 and ee == 0), "node_errors": ne, "edge_errors": ee, "sample": sample}
+
+
+def migrate(graph):
+    """Migration IDEMPOTENTE : complète les champs manquants des nœuds/arêtes anciens (validations/
+    ambiguities/risks/version ; directed/validation_required). N'écrase aucune valeur existante. Retourne
+    le nombre d'éléments modifiés. Réversible (n'ajoute que des champs neutres)."""
+    changed = 0
+    for n in graph.data.get("nodes", {}).values():
+        touched = False
+        for k, default in (("validations", []), ("ambiguities", []), ("risks", [])):
+            if k not in n:
+                n[k] = list(default); touched = True
+        if "version" not in n:
+            n["version"] = n.get("revision", 1); touched = True
+        changed += int(touched)
+    for e in graph.data.get("edges", {}).values():
+        touched = False
+        if "directed" not in e:
+            e["directed"] = True; touched = True
+        if "validation_required" not in e:
+            # les liens structurels 'explains' sont déterministes ; les autres requièrent revue par défaut
+            e["validation_required"] = (e.get("type") != "explains"); touched = True
+        changed += int(touched)
+    return changed

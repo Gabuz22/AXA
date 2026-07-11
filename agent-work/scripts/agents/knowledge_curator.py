@@ -41,6 +41,7 @@ def run(ctx):
         except Exception as e:
             return [], ["knowledge-curator: adaptateur %s indisponible: %s" % (domain_id, e)]
         graph = KG.KnowledgeGraph(base.repo_path(GRAPH), load_json=S.load_json, write_json=write)
+        migrated = KG.migrate(graph)            # met à niveau les anciens nœuds/arêtes (idempotent)
         ing = KI.ingest(adapter, graph)         # déterministe, 0 token
         env = EI.ingest_environment(adapter, graph)   # ancrage réglementaire/fiscal (domaines séparés), 0 token/réseau
         subjects = ing.get("subjects", [])
@@ -56,14 +57,16 @@ def run(ctx):
         totals["tasks_new"] += new
 
     st = KT.summary(tasks)
+    graph_check = KG.validate_graph(graph)      # observabilité : le graphe respecte-t-il son contrat ?
+    gs = graph.stats()                          # stats FINALES (après ingestion + environnement)
     ctx.summary = {
         "Domaines curés": len(DOMAINS),
         "Sujets": totals["subjects"],
-        "Graphe (L1/L2/L3/L4)": "%d/%d/%d/%d" % (
-            per_domain[DOMAINS[0]]["graph"].get("evidence", 0),
-            per_domain[DOMAINS[0]]["graph"].get("normalized", 0),
-            per_domain[DOMAINS[0]]["graph"].get("relations", 0),
-            per_domain[DOMAINS[0]]["graph"].get("understanding", 0)),
+        "Schema graphe OK": "oui" if graph_check["ok"] else "NON (%d noeuds/%d aretes)" % (
+            graph_check["node_errors"], graph_check["edge_errors"]),
+        "Migres (compat)": migrated,
+        "Graphe (L1/L2/L3/L4)": "%d/%d/%d/%d" % (gs["evidence"], gs["normalized"],
+                                                 gs["relations"], gs["understanding"]),
         "Profondeur moyenne": "%.2f" % per_domain[DOMAINS[0]]["depth_moyenne"],
         "Backlog de connaissance": totals["tasks_total"],
         "Nouvelles tâches": totals["tasks_new"],

@@ -46,7 +46,11 @@
         "created_at": { "type": "string" },
         "updated_at": { "type": ["string", "null"] },
         "revision": { "type": ["integer", "null"] },
-        "times_seen": { "type": ["integer", "null"] }
+        "version": { "type": ["integer", "null"] },
+        "times_seen": { "type": ["integer", "null"] },
+        "validations": { "type": "array", "items": { "type": "object" }, "description": "revues passées (niveau, agent, date, verdict)" },
+        "ambiguities": { "type": "array", "items": { "type": ["string", "object"] } },
+        "risks": { "type": "array", "items": { "type": ["string", "object"] } }
       }
     },
     "edge": {
@@ -58,6 +62,8 @@
         "type": { "type": "string", "enum": ["depends_on", "excludes", "complements", "triggers", "requires", "limits", "replaces", "comparable_to", "governed_by", "explains", "refines", "contradicts"] },
         "src": { "type": "string" },
         "dst": { "type": "string" },
+        "directed": { "type": "boolean", "description": "sens de la relation (src -> dst)" },
+        "validation_required": { "type": "boolean", "description": "true si la relation est interprétée (LLM) et doit être revue" },
         "sources": { "type": "array", "items": { "$ref": "#/definitions/source" } },
         "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
         "status": { "type": "string", "enum": ["active", "superseded", "contested"] },
