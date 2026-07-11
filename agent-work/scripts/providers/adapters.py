@@ -108,4 +108,28 @@ def discover_gemini_models(base_url, api_key, timeout):
     return out
 
 
-STYLES = {"openai": openai_chat, "gemini": gemini_chat, "cloudflare": cloudflare_chat}
+def claude_assisted_chat(cfg, api_key, account_id, messages, max_tokens, timeout):
+    """Fournisseur de TEST 'simulation_assistee_par_claude' — AUCUN réseau. Retourne une réponse
+    PRÉ-ENREGISTRÉE (produite par le raisonnement de Claude via le harnais), indexée par le hash du prompt
+    utilisateur. Jamais actif en production (clé AXA_CLAUDE_ASSISTED absente). Si aucune réponse n'est
+    enregistrée, remonte une ProviderError (le harnais collecte alors le prompt à répondre)."""
+    import os, hashlib
+    store = os.environ.get("AXA_CLAUDE_RESPONSES") or os.path.join(
+        os.getcwd(), "agent-work", "tests", "claude_assisted", "responses.json")
+    user = next((m.get("content", "") for m in reversed(messages) if m.get("role") == "user"), "")
+    h = "h_" + hashlib.sha256(user.encode("utf-8")).hexdigest()[:20]
+    data = {}
+    try:
+        with open(store, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception:
+        data = {}
+    rec = (data.get("responses") or {}).get(h)
+    if rec is None:
+        raise ProviderError("claude-assisted: reponse non enregistree (hash %s) [simulation_assistee_par_claude]" % h, code=0)
+    text = rec if isinstance(rec, str) else json.dumps(rec, ensure_ascii=False)
+    return text, max(1, len(user) // 4), max(1, len(text) // 4)
+
+
+STYLES = {"openai": openai_chat, "gemini": gemini_chat, "cloudflare": cloudflare_chat,
+          "claude_assisted": claude_assisted_chat}

@@ -64,6 +64,23 @@ def _explain_prompt(entity, evidences):
     )
 
 
+def _entity_evidence(graph, entity):
+    """Preuves PROPRES de l'entité : son résumé structuré + les citations L1 qu'elle référence. Meilleur
+    ancrage que les libellés voisins (correction Phase 16)."""
+    ev = []
+    resume = (entity.get("content") or {}).get("resume")
+    if resume:
+        ev.append(resume)
+    for s in entity.get("sources", []):
+        if s.get("evidence"):
+            n = graph.get_node(s["evidence"])
+            if n:
+                cit = (n.get("content") or {}).get("citation")
+                if cit:
+                    ev.append(cit)
+    return [x for x in ev if x]
+
+
 def build_understanding(graph, domain, subject, llm_call, max_entities=4, agent="knowledge-builder"):
     """Ajoute des explications L4 aux entités d'un sujet qui n'en ont pas. Budget borné par max_entities.
     Rien à faire (0 appel) si toutes les entités sont déjà expliquées."""
@@ -71,10 +88,10 @@ def build_understanding(graph, domain, subject, llm_call, max_entities=4, agent=
             if not graph.has_understanding(e["id"])]
     if not todo:
         return {"added": 0, "skipped": "all_explained"}
-    evid_all = [n.get("content", {}).get("citation") for n in graph.nodes(layer=1, subject=subject, domain=domain)]
+    neighbours = [n.get("content", {}).get("citation") for n in graph.nodes(layer=1, subject=subject, domain=domain)]
     added = 0
     for e in todo[:max_entities]:
-        data = llm_call(_explain_prompt(e, evid_all))
+        data = llm_call(_explain_prompt(e, _entity_evidence(graph, e) or neighbours))
         if isinstance(data, dict) and (data.get("explanation") or "").strip():
             conf = data.get("confidence", 0.5)
             conf = float(conf) if isinstance(conf, (int, float)) else 0.5

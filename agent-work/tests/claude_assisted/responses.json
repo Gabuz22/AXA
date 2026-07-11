@@ -1,0 +1,162 @@
+{
+  "origin": "simulation_assistee_par_claude",
+  "generated_by": "Claude (raisonnement manuel, harnais)",
+  "responses": {
+    "h_8690ef51604bc25b743e": {
+      "relations": [
+        {
+          "src": 8,
+          "dst": 0,
+          "type": "excludes",
+          "confidence": 0.55
+        },
+        {
+          "src": 8,
+          "dst": 2,
+          "type": "excludes",
+          "confidence": 0.55
+        },
+        {
+          "src": 8,
+          "dst": 4,
+          "type": "excludes",
+          "confidence": 0.55
+        },
+        {
+          "src": 9,
+          "dst": 5,
+          "type": "excludes",
+          "confidence": 0.5
+        },
+        {
+          "src": 10,
+          "dst": 5,
+          "type": "excludes",
+          "confidence": 0.5
+        },
+        {
+          "src": 11,
+          "dst": 2,
+          "type": "excludes",
+          "confidence": 0.5
+        },
+        {
+          "src": 0,
+          "dst": 6,
+          "type": "comparable_to",
+          "confidence": 0.55
+        },
+        {
+          "src": 1,
+          "dst": 3,
+          "type": "comparable_to",
+          "confidence": 0.6
+        },
+        {
+          "src": 2,
+          "dst": 4,
+          "type": "comparable_to",
+          "confidence": 0.6
+        },
+        {
+          "src": 7,
+          "dst": 5,
+          "type": "complements",
+          "confidence": 0.5
+        }
+      ]
+    },
+    "h_dc8f5188c8da7d820e28": {
+      "relations": [
+        {
+          "src": 4,
+          "dst": 2,
+          "type": "limits",
+          "confidence": 0.55
+        },
+        {
+          "src": 5,
+          "dst": 2,
+          "type": "excludes",
+          "confidence": 0.55
+        },
+        {
+          "src": 6,
+          "dst": 2,
+          "type": "excludes",
+          "confidence": 0.5
+        },
+        {
+          "src": 6,
+          "dst": 11,
+          "type": "excludes",
+          "confidence": 0.5
+        },
+        {
+          "src": 8,
+          "dst": 2,
+          "type": "refines",
+          "confidence": 0.55
+        },
+        {
+          "src": 10,
+          "dst": 11,
+          "type": "comparable_to",
+          "confidence": 0.6
+        },
+        {
+          "src": 0,
+          "dst": 3,
+          "type": "complements",
+          "confidence": 0.55
+        },
+        {
+          "src": 1,
+          "dst": 0,
+          "type": "complements",
+          "confidence": 0.5
+        }
+      ]
+    },
+    "h_d5519b8b823fb8c4bf47": {
+      "aspect": "role",
+      "confidence": 0.6,
+      "explanation": "Cette garantie optionnelle verse une rente à l'assuré dont l'invalidité permanente, partielle ou totale, resulte d'un accident. Son declenchement est limite aux causes accidentelles, a la difference des garanties toutes causes."
+    },
+    "h_df56146c6724e567d3bd": {
+      "aspect": "role",
+      "confidence": 0.6,
+      "explanation": "Cette garantie optionnelle verse un capital en cas d'invalidite permanente, partielle ou totale, quelle qu'en soit la cause (accident ou maladie). Elle couvre plus largement que la variante limitee a l'accident."
+    },
+    "h_e461d782dea78098bab1": {
+      "aspect": "role",
+      "confidence": 0.6,
+      "explanation": "Cette garantie optionnelle verse des indemnites journalieres en cas d'incapacite temporaire totale de travail consecutive a un accident, pour compenser la perte de revenus pendant l'arret."
+    },
+    "h_b0123168f8bbd2fcb053": {
+      "aspect": "role",
+      "confidence": 0.6,
+      "explanation": "Cette garantie optionnelle verse un capital lorsque l'assure subit une invalidite permanente, partielle ou totale, a la suite d'un accident. Elle se distingue de la version toutes causes par la restriction aux accidents."
+    },
+    "h_cdc2cb301d0591b496d8": {
+      "aspect": "role",
+      "confidence": 0.6,
+      "explanation": "Cette garantie optionnelle verse des indemnites journalieres, toutes causes, en complement des prestations des regimes obligatoires, afin de reduire la perte de revenus pendant un arret de travail."
+    },
+    "h_a8785507b1028177b460": {
+      "aspect": "role",
+      "confidence": 0.55,
+      "explanation": "Cette garantie optionnelle verse une rente en cas d'invalidite consecutive a un accident, assurant un revenu regulier a l'assure invalide."
+    },
+    "h_36908a758af516618108": {
+      "aspect": "role",
+      "confidence": 0.55,
+      "explanation": "Cette garantie optionnelle verse un capital en cas d'invalidite permanente, partielle ou totale, de l'assure."
+    },
+    "h_96202af8354adb901e57": {
+      "aspect": "role",
+      "confidence": 0.55,
+      "explanation": "Cette garantie verse une rente destinee a financer l'education des enfants en cas de deces ou d'invalidite permanente et totale de l'assure ; la clause de double effet en etend le benefice au deces ulterieur du second parent."
+    }
+  }
+}

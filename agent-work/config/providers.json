@@ -13,7 +13,12 @@
       "base_url": "https://generativelanguage.googleapis.com",
       "path": "/v1beta/models/{model}:generateContent",
       "api_key_env": "GEMINI_API_KEY",
-      "models": ["gemini-3.1-flash-lite", "gemini-3.1-flash", "gemini-flash-latest", "gemini-flash-lite-latest"],
+      "models": [
+        "gemini-3.1-flash-lite",
+        "gemini-3.1-flash",
+        "gemini-flash-latest",
+        "gemini-flash-lite-latest"
+      ],
       "max_output_tokens": 1024,
       "cost_per_1k": 0.0,
       "json_capable": true,
@@ -31,7 +36,10 @@
       "base_url": "https://api.groq.com/openai/v1",
       "path": "/chat/completions",
       "api_key_env": "GROQ_API_KEY",
-      "models": ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"],
+      "models": [
+        "llama-3.3-70b-versatile",
+        "llama-3.1-8b-instant"
+      ],
       "max_output_tokens": 1024,
       "cost_per_1k": 0.0,
       "json_capable": true,
@@ -50,7 +58,10 @@
       "path": "/accounts/{account_id}/ai/run/{model}",
       "api_key_env": "CLOUDFLARE_API_TOKEN",
       "account_id_env": "CLOUDFLARE_ACCOUNT_ID",
-      "models": ["@cf/meta/llama-3.1-8b-instruct", "@cf/meta/llama-3.3-70b-instruct-fp8-fast"],
+      "models": [
+        "@cf/meta/llama-3.1-8b-instruct",
+        "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
+      ],
       "max_output_tokens": 1024,
       "cost_per_1k": 0.0,
       "json_capable": true,
@@ -68,13 +79,36 @@
       "base_url": "https://openrouter.ai/api/v1",
       "path": "/chat/completions",
       "api_key_env": "OPENROUTER_API_KEY",
-      "models": ["meta-llama/llama-3.3-70b-instruct:free", "google/gemma-2-9b-it:free"],
+      "models": [
+        "meta-llama/llama-3.3-70b-instruct:free",
+        "google/gemma-2-9b-it:free"
+      ],
       "max_output_tokens": 1024,
       "cost_per_1k": 0.0,
       "json_capable": true,
       "reasoning": "moyen",
       "quota_free": "UNIQUEMENT les modèles suffixés ':free' (quota partagé limité). Désactivé par défaut : n'activer qu'avec des modèles ':free' explicites.",
       "docs": "https://openrouter.ai/keys"
+    },
+    "claude-assisted-test": {
+      "active": true,
+      "priority": 99,
+      "free_tier": true,
+      "requires_paid": false,
+      "requires_card": false,
+      "style": "claude_assisted",
+      "base_url": "",
+      "path": "",
+      "api_key_env": "AXA_CLAUDE_ASSISTED",
+      "models": [
+        "claude-assisted"
+      ],
+      "max_output_tokens": 1200,
+      "cost_per_1k": 0,
+      "json_capable": true,
+      "reasoning": "eleve",
+      "quota_free": "Mode de TEST manuel (harnais). Jamais en production : cle AXA_CLAUDE_ASSISTED absente des schedules.",
+      "docs": "simulation_assistee_par_claude — voir claude_harness.py. Ne jamais activer dans un schedule de production."
     }
   }
 }
