@@ -28,6 +28,11 @@ class DomainAdapter:
         """[{subject, subtype, label, content}] — connaissance déjà structurée (amorce L2, provenance dérivée)."""
         return []
 
+    def expected_categories(self):
+        """[str] — catégories de connaissance attendues du domaine (mesure de couverture SÉMANTIQUE).
+        Vide = couverture sémantique non évaluée pour ce domaine."""
+        return []
+
     def known_terms(self, subject):
         """set[str] — vocabulaire déjà connu pour ce sujet."""
         return set()

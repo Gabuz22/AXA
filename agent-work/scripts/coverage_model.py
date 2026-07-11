@@ -80,6 +80,79 @@ def weakest_dimensions(vector, threshold=0.6):
     return [d for d, _ in sorted(weak, key=lambda x: x[1])]
 
 
+# ------------------------------------------------------------------ couverture SÉMANTIQUE (par catégorie)
+def category_presence(graph, subject, domain, expected):
+    """{catégorie: bool} — pour chaque catégorie attendue du domaine, une entité existe-t-elle ? Mesure
+    la couverture SÉMANTIQUE (garanties/exclusions/conditions/déclencheurs/définitions/limites…)."""
+    subs = {KG._norm(n.get("subtype")) for n in graph.nodes(layer=2, subject=subject, domain=domain)}
+    out = {}
+    for cat in (expected or []):
+        cn = KG._norm(cat)
+        out[cat] = any(cn and (cn in s or s in cn) for s in subs)
+    return out
+
+
+def quality_rates(graph, subject, domain=None, low_conf=0.5):
+    """Taux qualitatifs sur les entités L2 d'un sujet : preuve, non-relié, incertitude, contradiction."""
+    ents = graph.nodes(layer=2, subject=subject, domain=domain)
+    n = len(ents)
+    if not n:
+        return {"proof": 0.0, "unrelated": 0.0, "uncertainty": 0.0, "contradiction": 0.0, "n_entities": 0}
+    contradicted = set()
+    for e in graph.data["edges"].values():
+        if e.get("status") == "active" and e.get("type") == "contradicts":
+            contradicted.add(e.get("src")); contradicted.add(e.get("dst"))
+    proof = sum(1 for e in ents if e.get("sources")) / n
+    unrelated = sum(1 for e in ents if not graph.edges_of(e["id"], direction="any")) / n
+    uncertainty = sum(1 for e in ents if float(e.get("confidence", 0)) < low_conf or e.get("ambiguities")) / n
+    contradiction = sum(1 for e in ents if e["id"] in contradicted) / n
+    return {"proof": round(proof, 3), "unrelated": round(unrelated, 3),
+            "uncertainty": round(uncertainty, 3), "contradiction": round(contradiction, 3), "n_entities": n}
+
+
+def depth_counts(graph, subject, domain=None):
+    ev = len(graph.nodes(layer=1, subject=subject, domain=domain))
+    ents = graph.nodes(layer=2, subject=subject, domain=domain)
+    rel = sum(len(graph.edges_of(e["id"], direction="out")) for e in ents)
+    l4 = sum(1 for e in ents if graph.has_understanding(e["id"]))
+    return {"L1": ev, "L2": len(ents), "L3": rel, "L4": l4}
+
+
+_AXIS_WHY = {
+    "evidence": ("aucune preuve documentaire sourcée", "sourcer"),
+    "normalized": ("preuves non converties en entités canoniques", "normaliser"),
+    "relations": ("entités isolées (peu ou pas de relations)", "relier"),
+    "understanding": ("entités sans explication (finalité/logique)", "expliquer"),
+    "environment": ("aucun ancrage réglementaire/fiscal", "environnement"),
+    "freshness": ("connaissances potentiellement périmées", "rafraichir"),
+}
+
+
+def explain(graph, subject, domain=None, expected=None, threshold=0.6):
+    """Rapport EXPLICABLE : pour chaque axe faible, pourquoi il est faible et quel travail l'améliorerait.
+    Déterministe, 0 token. C'est ce qui permet à la plateforme de justifier ses priorités."""
+    vec = coverage_vector(graph, subject, domain)
+    cats = category_presence(graph, subject, domain, expected) if expected else {}
+    rates = quality_rates(graph, subject, domain)
+    dc = depth_counts(graph, subject, domain)
+    explanations = []
+    for axis in weakest_dimensions(vec, threshold):
+        why, task = _AXIS_WHY.get(axis, ("axe faible", "approfondir"))
+        explanations.append({"axis": axis, "current": vec.get(axis, 0.0),
+                             "why": why, "recommended_task": task})
+    missing_cats = [c for c, present in cats.items() if not present]
+    if missing_cats:
+        explanations.append({"axis": "semantic", "current": round(1 - len(missing_cats) / max(1, len(cats)), 3),
+                             "why": "catégories absentes : %s" % ", ".join(missing_cats),
+                             "recommended_task": "extraire"})
+    return {
+        "subject": subject, "domain": domain, "vector": vec, "depth_score": depth_score(vec),
+        "categories": cats, "semantic_coverage": round(sum(1 for v in cats.values() if v) / len(cats), 3) if cats else None,
+        "rates": rates, "depth": dc, "weak_axes": weakest_dimensions(vec, threshold),
+        "explanations": explanations,
+    }
+
+
 def generate_deepening_tasks(graph, subject, domain=None, threshold=0.6, origin_agent="coverage-model"):
     """Tâches d'APPROFONDISSEMENT déterministes pour les axes faibles d'un sujet. Ids stables (dédup,
     idempotence). Ne relit rien : décide uniquement d'après l'état du graphe. Le fait qu'une entité soit

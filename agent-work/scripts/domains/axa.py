@@ -111,6 +111,11 @@ class AXAAdapter(DomainAdapter):
     def label_rules(self):
         return LABEL_RULES
 
+    def expected_categories(self):
+        # catégories de connaissance attendues d'un contrat d'assurance (couverture sémantique).
+        return ["garantie", "definition", "condition", "declencheur", "exclusion", "limite",
+                "plafond", "delai", "beneficiaire", "formalite", "option", "formule", "point_vigilance"]
+
     # -------------------------------------------------------------- environnement (couche séparée)
     def _fiscal(self, domaines):
         return "fiscalite" if any("fiscal" in CI_norm(d) for d in (domaines or [])) else "reglementation"

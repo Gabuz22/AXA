@@ -20,6 +20,7 @@ import environment_ingest as EI
 AGENT_CODE_VERSION = "2.8.0"
 
 GRAPH = "agent-work/knowledge/graph.json"
+COVERAGE = "agent-work/knowledge/coverage.json"
 DOMAINS = ("axa-contrat",)                     # domaines curés (ajouter un adaptateur suffit à en couvrir un nouveau)
 
 
@@ -47,6 +48,7 @@ def run(ctx):
         subjects = ing.get("subjects", [])
         tasks = KT.generate(graph, domain_id, subjects)
         total, new = KT.persist(tasks, S.load_json, write, S.now_iso, dry_run=ctx.dry_run)
+        _write_coverage_report(graph, domain_id, adapter, subjects, write, ctx.dry_run)
         depth = _avg_depth(graph, domain_id, subjects)
         per_domain[domain_id] = {"subjects": len(subjects), "tasks": total, "new": new,
                                  "graph": ing.get("graph", {}), "depth_moyenne": depth}
@@ -81,3 +83,14 @@ def _avg_depth(graph, domain, subjects):
     if not subjects:
         return 0.0
     return round(sum(CM.depth_score(CM.coverage_vector(graph, s, domain)) for s in subjects) / len(subjects), 3)
+
+
+def _write_coverage_report(graph, domain, adapter, subjects, write, dry_run):
+    """Rapport de couverture EXPLICABLE par sujet (observabilité + entrée du manager stratégique)."""
+    if dry_run or write is None:
+        return
+    import coverage_model as CM
+    expected = adapter.expected_categories() if hasattr(adapter, "expected_categories") else []
+    reports = {s: CM.explain(graph, s, domain, expected) for s in subjects}
+    write(base.repo_path(COVERAGE), {"version": "1.0.0", "domain": domain, "generated_at": S.now_iso(),
+                                     "subjects": reports})
