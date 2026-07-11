@@ -29,7 +29,7 @@ PERSISTENT = [
     # plateforme de connaissances : le graphe unifié (source de vérité) + backlog de tâches déterministes.
     "agent-work/knowledge/graph.json", "agent-work/knowledge/tasks.json",
     "agent-work/knowledge/cost_ledger.json", "agent-work/knowledge/coverage.json",
-    "agent-work/knowledge/projection",
+    "agent-work/knowledge/projection", "agent-work/knowledge/review.json", "agent-work/knowledge/manager.json",
     "agent-work/quality/reports", "agent-work/quality/incidents",
     "agent-work/coordinator", "agent-work/runs/manifests",
     "agent-work/runs/provider_metrics.json", "agent-work/runs/provider_scores.json", "agent-work/runs/benchmark.json",

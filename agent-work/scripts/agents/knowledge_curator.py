@@ -51,6 +51,8 @@ def run(ctx):
         _write_coverage_report(graph, domain_id, adapter, subjects, write, ctx.dry_run)
         import knowledge_projection as KP
         projected = KP.write_projections(graph, domain_id, subjects, adapter, write, S.now_iso, dry_run=ctx.dry_run)
+        review = _write_review(graph, domain_id, write, ctx.dry_run)
+        _write_manager(domain_id, write, ctx.dry_run)
         depth = _avg_depth(graph, domain_id, subjects)
         per_domain[domain_id] = {"subjects": len(subjects), "tasks": total, "new": new,
                                  "graph": ing.get("graph", {}), "depth_moyenne": depth}
@@ -75,6 +77,7 @@ def run(ctx):
         "Backlog de connaissance": totals["tasks_total"],
         "Nouvelles tâches": totals["tasks_new"],
         "Projections IA écrites": projected,
+        "Revue (auto/modele/humain)": "%d/%d/%d" % (review["auto"], review["second_model"], review["human"]),
         "Types de tâches": ", ".join("%s:%d" % (k, v) for k, v in sorted(st["by_type"].items())),
     }
     return [], ["knowledge-curator: %d sujet(s), %d tâche(s) au backlog (%d nouvelle(s)), 0 token"
@@ -86,6 +89,29 @@ def _avg_depth(graph, domain, subjects):
     if not subjects:
         return 0.0
     return round(sum(CM.depth_score(CM.coverage_vector(graph, s, domain)) for s in subjects) / len(subjects), 3)
+
+
+REVIEW = "agent-work/knowledge/review.json"
+MANAGER = "agent-work/knowledge/manager.json"
+
+
+def _write_review(graph, domain, write, dry_run):
+    """Revue hiérarchisée (déterministe) : ne présente à l'humain que le sensible/ambigu."""
+    import knowledge_review as KR
+    rep = KR.review_graph(graph, domain)
+    if not dry_run and write is not None:
+        write(base.repo_path(REVIEW), {"version": "1.0.0", "domain": domain, "generated_at": S.now_iso(), **rep})
+    return rep
+
+
+def _write_manager(domain, write, dry_run):
+    """Recommandations stratégiques (déterministe) — ne modifie jamais la connaissance."""
+    import knowledge_manager as KM
+    rep = KM.analyze(S.load_json, base.repo_path, domain)
+    rep["generated_at"] = S.now_iso()
+    if not dry_run and write is not None:
+        write(base.repo_path(MANAGER), rep)
+    return rep
 
 
 def _write_coverage_report(graph, domain, adapter, subjects, write, dry_run):
