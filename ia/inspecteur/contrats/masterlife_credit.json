@@ -1,7 +1,60 @@
 {
   "subject": "Masterlife CREDIT",
   "domain": "axa-contrat",
-  "finalite": "à approfondir (LLM)",
+  "finalite": {
+    "texte": "Assurance emprunteur : garantir le remboursement d'un crédit en cas de décès, PTIA, invalidité ou incapacité de travail de l'assuré — protéger simultanément le prêteur (remboursement) et la famille (dette éteinte ou échéances prises en charge).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "Les prestations sont adossées au CRÉDIT (capital restant dû ou échéances) à hauteur de la quotité assurée : elles éteignent la dette, elles ne versent pas un revenu. Le dispositif AERAS (garantie invalidité spécifique GIS) ouvre l'accès aux profils médicaux aggravés. Les exclusions santé sensibles (affections psychologiques, dorso-vertébrales) peuvent être RACHETÉES par l'option Psy/Dos+.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Tout emprunteur ; co-emprunteurs devant arbitrer les quotités ; profils AERAS.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Attente d'un revenu complémentaire pour la famille (voir prévoyance) ; états antérieurs non couverts ; arrêts psy/dos sans l'option dédiée.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [
+    {
+      "type": "complements",
+      "de": "Option Psy/Dos+",
+      "vers": "Incapacité de travail (IJ)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)",
+      "vers": "Incapacité de travail (IJ)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "États antérieurs",
+      "vers": "Invalidité totale ou partielle",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
   "architecture_garanties": {
     "principales": [],
     "secondaires": [
@@ -58,7 +111,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -67,7 +120,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -76,7 +129,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -85,7 +138,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -94,7 +147,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -103,7 +156,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -112,7 +165,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -121,7 +174,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -130,7 +183,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -139,7 +192,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -148,7 +201,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -157,7 +210,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -166,7 +219,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -175,7 +228,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -184,7 +237,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -193,7 +246,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -202,7 +255,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -211,7 +264,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -220,7 +273,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -229,7 +282,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -238,7 +291,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -247,7 +300,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -256,7 +309,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -265,7 +318,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -274,7 +327,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -283,7 +336,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -292,7 +345,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -301,7 +354,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -310,7 +363,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -319,7 +372,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -328,7 +381,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -337,7 +390,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     }
   ],
@@ -443,17 +496,84 @@
       "citation": "Exonération incapacité"
     }
   ],
-  "comprehension": [],
-  "confusions_frequentes": "à approfondir (LLM)",
+  "comprehension": [
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "finalite",
+      "explication": "Assurance emprunteur : garantir le remboursement d'un crédit en cas de décès, PTIA, invalidité ou incapacité de travail de l'assuré — protéger simultanément le prêteur (remboursement) et la famille (dette éteinte ou échéances prises en charge).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "logique_contractuelle",
+      "explication": "Les prestations sont adossées au CRÉDIT (capital restant dû ou échéances) à hauteur de la quotité assurée : elles éteignent la dette, elles ne versent pas un revenu. Le dispositif AERAS (garantie invalidité spécifique GIS) ouvre l'accès aux profils médicaux aggravés. Les exclusions santé sensibles (affections psychologiques, dorso-vertébrales) peuvent être RACHETÉES par l'option Psy/Dos+.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "confusions_frequentes",
+      "explication": "L'assurance emprunteur ne remplace pas la prévoyance : elle paie la banque, pas la famille. La quotité choisie détermine la part de dette couverte par assuré. Sans l'option Psy/Dos+, les arrêts pour affections psychologiques ou dorsales peuvent n'être pas couverts — point de vigilance majeur en pratique.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "situations_favorables",
+      "explication": "Tout emprunteur ; co-emprunteurs devant arbitrer les quotités ; profils AERAS.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "situations_defavorables",
+      "explication": "Attente d'un revenu complémentaire pour la famille (voir prévoyance) ; états antérieurs non couverts ; arrêts psy/dos sans l'option dédiée.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "relation_complements_avizen",
+      "explication": "L'emprunteur éteint la dette envers la banque ; la prévoyance procure un revenu/capital à la famille : deux besoins distincts en cas de décès/invalidité.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "L'assurance emprunteur ne remplace pas la prévoyance : elle paie la banque, pas la famille. La quotité choisie détermine la part de dette couverte par assuré. Sans l'option Psy/Dos+, les arrêts pour affections psychologiques ou dorsales peuvent n'être pas couverts — point de vigilance majeur en pratique.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
   "incertitudes": [
     {
       "axis": "understanding",
-      "current": 0.0,
+      "current": 0.036,
       "why": "entités sans explication (finalité/logique)",
       "recommended_task": "expliquer"
     }
   ],
-  "profondeur": 0.741,
+  "profondeur": 0.75,
   "couverture_semantique": 0.385,
   "validation": {
     "blocks": {
@@ -816,14 +936,77 @@
         }
       ],
       "pending_interpretations": [],
-      "simulated_claude": [],
+      "simulated_claude": [
+        {
+          "label": "Masterlife CREDIT",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "complements",
+          "src": "k_9eab79cb65245f6dd94c",
+          "dst": "k_37ab0952f721df7c5920",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_7ff09e96a0ea82902da2",
+          "dst": "k_37ab0952f721df7c5920",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_b8c346a3582d8a8ce9b6",
+          "dst": "k_0d1403c5963097a7cead",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_b79787e5e1124b9ad420",
+          "dst": "k_530d1688fe8357355f83",
+          "statut": "simulated_claude"
+        }
+      ],
       "uncertainties": [],
-      "human_review_required": [],
+      "human_review_required": [
+        {
+          "label": "Masterlife CREDIT",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "complements",
+          "src": "k_9eab79cb65245f6dd94c",
+          "dst": "k_37ab0952f721df7c5920",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_7ff09e96a0ea82902da2",
+          "dst": "k_37ab0952f721df7c5920",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_b8c346a3582d8a8ce9b6",
+          "dst": "k_0d1403c5963097a7cead",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_b79787e5e1124b9ad420",
+          "dst": "k_530d1688fe8357355f83",
+          "statut": "simulated_claude"
+        }
+      ],
       "stale": [],
       "contradictory": []
     },
     "counts": {
       "validated": 27,
+      "simulated_claude": 5,
       "derived_deterministic": 32
     },
     "legend": {

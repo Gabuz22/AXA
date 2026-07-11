@@ -4,55 +4,55 @@
     {
       "contrat": "Avizen",
       "fichier": "contrats/avizen.json",
-      "profondeur": 0.719,
+      "profondeur": 0.743,
       "couverture_semantique": 0.385
     },
     {
       "contrat": "Avizen Pro",
       "fichier": "contrats/avizen_pro.json",
-      "profondeur": 0.727,
+      "profondeur": 0.735,
       "couverture_semantique": 0.385
     },
     {
       "contrat": "Entour'Age",
-      "fichier": "contrats/entourage.json",
-      "profondeur": 0.682,
+      "fichier": "contrats/entour_age.json",
+      "profondeur": 0.713,
       "couverture_semantique": 0.385
     },
     {
       "contrat": "Essen'Ciel (assurance obsèques)",
-      "fichier": "contrats/essenciel_(assurance_obsèques).json",
-      "profondeur": 0.733,
+      "fichier": "contrats/essen_ciel_assurance_obseques.json",
+      "profondeur": 0.745,
       "couverture_semantique": 0.385
     },
     {
       "contrat": "Essen'Ciel Patrimoine",
-      "fichier": "contrats/essenciel_patrimoine.json",
-      "profondeur": 0.629,
+      "fichier": "contrats/essen_ciel_patrimoine.json",
+      "profondeur": 0.675,
       "couverture_semantique": 0.231
     },
     {
       "contrat": "Excelium (assurance vie)",
-      "fichier": "contrats/excelium_(assurance_vie).json",
-      "profondeur": 0.684,
+      "fichier": "contrats/excelium_assurance_vie.json",
+      "profondeur": 0.7,
       "couverture_semantique": 0.385
     },
     {
       "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
-      "fichier": "contrats/ma_protection_accident_(garantie_des_accidents_de_la_vie).json",
-      "profondeur": 0.609,
+      "fichier": "contrats/ma_protection_accident_garantie_des_accidents_de_la_vie.json",
+      "profondeur": 0.625,
       "couverture_semantique": 0.385
     },
     {
       "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
-      "fichier": "contrats/ma_retraite_(plan_dépargne_retraite_individuel_—_per).json",
-      "profondeur": 0.64,
+      "fichier": "contrats/ma_retraite_plan_d_epargne_retraite_individuel_per.json",
+      "profondeur": 0.657,
       "couverture_semantique": 0.385
     },
     {
       "contrat": "Masterlife CREDIT",
       "fichier": "contrats/masterlife_credit.json",
-      "profondeur": 0.741,
+      "profondeur": 0.75,
       "couverture_semantique": 0.385
     }
   ]

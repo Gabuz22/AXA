@@ -57,6 +57,10 @@ def build_graph():
     graph = KG.KnowledgeGraph(path=None, load_json=S.load_json, write_json=None)   # en mémoire
     KI.ingest(adapter, graph)
     EI.ingest_environment(adapter, graph)
+    # couche sémantique/métier raisonnée par Claude — TOUJOURS étiquetée simulation_assistee_par_claude,
+    # jamais exposée comme vérité (statuts + blocs séparés).
+    import claude_enrichment as CE
+    CE.ingest_from_repo(graph, REPO, DOMAIN)
     return adapter, graph
 
 
@@ -96,7 +100,16 @@ remplacer une validation humaine ni engager AXA.
   non_comparables + trous de couverture). Preuves conservées par contrat.
 - `matrices.json` : mécanisme→contrats, contrat→garanties/conditions/exclusions, concept→définitions par contrat.
 - `tools.json` : outils/protocoles utilisables (entrée/sortie/contraintes).
+- `metier/matrice_risques.json` : risques → contrats à examiner + questions d'inspecteur (heuristique
+  étiquetée `simulation_assistee_par_claude`, à confirmer — commencez ici pour un cas client).
+- `metier/evenements_vie.json` : événement de vie → risques accrus → contrats/questions.
 - `index.json` : inventaire + empreinte de reconstruction.
+
+## Statuts de validation (dans chaque fiche, bloc `validation`)
+La compréhension (finalité, logique, confusions) et les articulations peuvent provenir du raisonnement de
+Claude (`origine: simulation_assistee_par_claude`, `statut: simulated_claude`) : ce sont des
+INTERPRÉTATIONS à confirmer, jamais des clauses. Seuls les blocs `validated_knowledge` (masters) et
+`derived_relations` (dérivation déterministe) sont exposables comme vérité.
 
 ## Limites
 La charpente est déterministe (structure, comparaison, garde-fous). La PRÉCISION sémantique (écarter un
@@ -152,11 +165,27 @@ def _write_case_artifacts(graph, subjects):
     _write_json("cas-clients/missing_information_protocol.json", {
         "principe": "un cas incomplet -> conclusion CONDITIONNELLE + questions à poser",
         "produire": ["informations_manquantes", "questions_client", "reserves", "validation_humaine_requise"]})
-    # exemple SYNTHÉTIQUE de scénarios (aucune donnée réelle)
+    # exemple SYNTHÉTIQUE de scénarios (aucune donnée réelle), avec la matrice de risques métier
+    import claude_enrichment as CE
+    metier = CE.load_metier(REPO)
     ex = ICase.new_case(besoins_exprimes=["se proteger en cas d invalidite"],
                         fields={"age": ICase.new_datum(42, "declare")}, objectifs=["proteger la famille"])
-    scen = ISol.build_scenarios(ex, graph, DOMAIN)
+    scen = ISol.build_scenarios(ex, graph, DOMAIN, metier=metier)
     _write_json("cas-clients/solution_scenarios.example.json", {"note": "EXEMPLE SYNTHÉTIQUE (aucune donnée réelle)", **scen})
+
+
+def _write_metier(graph):
+    """Expose la matrice risques→contrats + événements de vie (heuristiques Claude, étiquetées)."""
+    import claude_enrichment as CE
+    metier = CE.load_metier(REPO)
+    if not metier:
+        return
+    _write_json("metier/matrice_risques.json", {
+        "avertissement": metier.get("_avertissement"), "origin": metier.get("origin"),
+        "risques": metier.get("risques", {})})
+    _write_json("metier/evenements_vie.json", {
+        "avertissement": metier.get("_avertissement"), "origin": metier.get("origin"),
+        "evenements": metier.get("evenements_vie", {})})
 
 
 def main():
@@ -181,6 +210,7 @@ def main():
     })
     _write_json("tools.json", {"version": VERSION, "tools": tools_detailed()})
     _write_case_artifacts(graph, subjects)
+    _write_metier(graph)
     _write_text("GUIDE_IA.md", GUIDE)
     fp = IP.graph_fingerprint(graph)
     _write_json("index.json", {"projection": "inspecteur", "version": VERSION, "domain": DOMAIN,
@@ -190,7 +220,8 @@ def main():
                                             "comparison.json", "matrices.json", "tools.json",
                                             "cas-clients/case_schema.json", "cas-clients/case_reasoning_protocol.json",
                                             "cas-clients/arbitration_axes.json", "cas-clients/missing_information_protocol.json",
-                                            "cas-clients/solution_scenarios.example.json"],
+                                            "cas-clients/solution_scenarios.example.json",
+                                            "metier/matrice_risques.json", "metier/evenements_vie.json"],
                                "statuts_validation": {
                                    "exposable_comme_verite": ["validated", "derived_deterministic"],
                                    "visible_si_etiquete": ["pending_review", "simulated_claude", "uncertain", "stale", "contradictory"],

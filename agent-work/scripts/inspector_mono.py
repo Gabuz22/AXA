@@ -33,16 +33,44 @@ def _labels(nodes):
 
 
 def _understanding(graph, subject, domain):
-    """Explications L4 disponibles (interprétation, séparée). Vide => à approfondir par LLM."""
+    """Explications L4 disponibles (interprétation, séparée, ÉTIQUETÉE origine+statut). Vide => à approfondir."""
     txt = []
     ent_ids = {e["id"] for e in graph.nodes(layer=2, subject=subject, domain=domain)}
     for edge in graph.data["edges"].values():
         if edge.get("status") == "active" and edge.get("type") == "explains" and edge.get("dst") in ent_ids:
             u = graph.get_node(edge["src"])
             if u:
-                txt.append({"element": _label_of(graph, edge["dst"]), "explication": (u.get("content") or {}).get("text"),
-                            "confidence": u.get("confidence"), "nature": "interpretation"})
+                txt.append({"element": _label_of(graph, edge["dst"]),
+                            "aspect": (u.get("content") or {}).get("aspect"),
+                            "explication": (u.get("content") or {}).get("text"),
+                            "confidence": u.get("confidence"), "nature": "interpretation",
+                            "origine": u.get("provenance_agent"),
+                            "statut": KS.node_status(graph, u), "validation_required": True})
     return txt
+
+
+def _aspect_of(understanding, subject, aspect):
+    """Compréhension contrat-niveau (portée par l'ancre subtype='contrat', element == subject)."""
+    for u in understanding:
+        if KG._norm(u.get("element")) == KG._norm(subject) and u.get("aspect") == aspect:
+            return {"texte": u["explication"], "nature": "interpretation", "origine": u.get("origine"),
+                    "statut": u.get("statut"), "validation_required": True}
+    return None
+
+
+def _articulations(graph, subject, domain):
+    """Relations L3 INTERNES au contrat (hors explains/governed_by), étiquetées origine+statut."""
+    ents = {e["id"]: e for e in graph.nodes(layer=2, subject=subject, domain=domain)}
+    out = []
+    for edge in graph.data["edges"].values():
+        if edge.get("status") != "active" or edge.get("type") in ("explains", "governed_by"):
+            continue
+        if edge.get("src") in ents and edge.get("dst") in ents:
+            out.append({"type": edge["type"], "de": ents[edge["src"]].get("label"),
+                        "vers": ents[edge["dst"]].get("label"),
+                        "origine": edge.get("provenance_agent"), "statut": KS.edge_status(graph, edge),
+                        "validation_required": edge.get("validation_required", True)})
+    return out
 
 
 def _label_of(graph, nid):
@@ -65,9 +93,15 @@ def reasoning_sheet(graph, subject, domain="axa-contrat", expected=None):
             cn = graph.get_node(edge["dst"])
             if cn:
                 env.append({"concept": cn.get("label"), "domaine": cn.get("domain"), "fraicheur": cn.get("freshness")})
+    fin = _aspect_of(understanding, subject, "finalite")
+    conf = _aspect_of(understanding, subject, "confusions_frequentes")
     return {
         "subject": subject, "domain": domain,
-        "finalite": (understanding[0]["explication"] if understanding else None) or "à approfondir (LLM)",
+        "finalite": fin or "à approfondir (LLM)",
+        "logique_contractuelle": _aspect_of(understanding, subject, "logique_contractuelle"),
+        "situations_favorables": _aspect_of(understanding, subject, "situations_favorables"),
+        "situations_defavorables": _aspect_of(understanding, subject, "situations_defavorables"),
+        "articulations": _articulations(graph, subject, domain),
         "architecture_garanties": {"principales": principal, "secondaires": secondaire, "total": len(gar)},
         "declencheurs": _labels(subs.get("declencheur", [])),
         "conditions": _labels(subs.get("condition", [])),
@@ -82,7 +116,7 @@ def reasoning_sheet(graph, subject, domain="axa-contrat", expected=None):
                      "citation": (n.get("content") or {}).get("citation")}
                     for n in graph.nodes(layer=1, subject=subject, domain=domain)][:30],
         "comprehension": understanding,
-        "confusions_frequentes": "à approfondir (LLM)" if not understanding else None,
+        "confusions_frequentes": conf or "à approfondir (LLM)",
         "incertitudes": [i for i in report["explanations"] if i["axis"] in ("understanding", "relations")],
         "profondeur": report["depth_score"], "couverture_semantique": report["semantic_coverage"],
         "validation": KS.partition(graph, subject, domain),

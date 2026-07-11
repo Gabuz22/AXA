@@ -1,7 +1,35 @@
 {
   "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
   "domain": "axa-contrat",
-  "finalite": "à approfondir (LLM)",
+  "finalite": {
+    "texte": "Préparer un revenu de retraite : épargne dédiée, en principe indisponible jusqu'à la retraite, avec sortie en capital et/ou en rente viagère, et une protection décès (garantie plancher « Sérénité », capital en cas de décès avant liquidation).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "La contrepartie de l'avantage retraite est l'INDISPONIBILITÉ de l'épargne (listée comme telle) hors cas de déblocage prévus par la réglementation (règles externes à vérifier). Au terme, l'assuré arbitre entre capital et rente viagère. Avant liquidation, le décès déclenche le versement aux bénéficiaires.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Horizon retraite long, revenus imposables (intérêt fiscal éventuel à vérifier), discipline d'épargne souhaitée.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Besoin de liquidité à moyen terme, horizon court avant retraite, situation fiscale non imposable (l'avantage à l'entrée disparaît — à vérifier).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [],
   "architecture_garanties": {
     "principales": [],
     "secondaires": [
@@ -52,7 +80,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -61,7 +89,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -70,7 +98,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -79,7 +107,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -88,7 +116,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -97,7 +125,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -106,7 +134,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -115,7 +143,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -124,7 +152,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -133,7 +161,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -142,7 +170,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     }
   ],
@@ -208,23 +236,80 @@
       "citation": "Rente initiale"
     }
   ],
-  "comprehension": [],
-  "confusions_frequentes": "à approfondir (LLM)",
+  "comprehension": [
+    {
+      "element": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "aspect": "finalite",
+      "explication": "Préparer un revenu de retraite : épargne dédiée, en principe indisponible jusqu'à la retraite, avec sortie en capital et/ou en rente viagère, et une protection décès (garantie plancher « Sérénité », capital en cas de décès avant liquidation).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "aspect": "logique_contractuelle",
+      "explication": "La contrepartie de l'avantage retraite est l'INDISPONIBILITÉ de l'épargne (listée comme telle) hors cas de déblocage prévus par la réglementation (règles externes à vérifier). Au terme, l'assuré arbitre entre capital et rente viagère. Avant liquidation, le décès déclenche le versement aux bénéficiaires.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "aspect": "confusions_frequentes",
+      "explication": "Le PER n'est pas une assurance vie : pas de rachat libre avant la retraite (hors cas légaux). La déductibilité éventuelle des versements et la fiscalité de sortie relèvent de règles fiscales EXTERNES et évolutives — toujours à vérifier à jour. La « sortie en rente » est irréversible une fois choisie.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "aspect": "situations_favorables",
+      "explication": "Horizon retraite long, revenus imposables (intérêt fiscal éventuel à vérifier), discipline d'épargne souhaitée.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "aspect": "situations_defavorables",
+      "explication": "Besoin de liquidité à moyen terme, horizon court avant retraite, situation fiscale non imposable (l'avantage à l'entrée disparaît — à vérifier).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "Le PER n'est pas une assurance vie : pas de rachat libre avant la retraite (hors cas légaux). La déductibilité éventuelle des versements et la fiscalité de sortie relèvent de règles fiscales EXTERNES et évolutives — toujours à vérifier à jour. La « sortie en rente » est irréversible une fois choisie.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
   "incertitudes": [
     {
       "axis": "understanding",
-      "current": 0.0,
+      "current": 0.048,
       "why": "entités sans explication (finalité/logique)",
       "recommended_task": "expliquer"
     },
     {
       "axis": "relations",
-      "current": 0.2,
+      "current": 0.238,
       "why": "entités isolées (peu ou pas de relations)",
       "recommended_task": "relier"
     }
   ],
-  "profondeur": 0.64,
+  "profondeur": 0.657,
   "couverture_semantique": 0.385,
   "validation": {
     "blocks": {
@@ -419,14 +504,53 @@
         }
       ],
       "pending_interpretations": [],
-      "simulated_claude": [],
+      "simulated_claude": [
+        {
+          "label": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_cddb58e5374c53e28382",
+          "dst": "k_ec75024e03dc18706ce1",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_eaaa1549fb44fb646c15",
+          "dst": "k_ec75024e03dc18706ce1",
+          "statut": "simulated_claude"
+        }
+      ],
       "uncertainties": [],
-      "human_review_required": [],
+      "human_review_required": [
+        {
+          "label": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_cddb58e5374c53e28382",
+          "dst": "k_ec75024e03dc18706ce1",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_eaaa1549fb44fb646c15",
+          "dst": "k_ec75024e03dc18706ce1",
+          "statut": "simulated_claude"
+        }
+      ],
       "stale": [],
       "contradictory": []
     },
     "counts": {
       "validated": 20,
+      "simulated_claude": 3,
       "derived_deterministic": 11
     },
     "legend": {

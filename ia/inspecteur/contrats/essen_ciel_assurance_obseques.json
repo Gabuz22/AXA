@@ -1,7 +1,35 @@
 {
   "subject": "Essen'Ciel (assurance obsèques)",
   "domain": "axa-contrat",
-  "finalite": "à approfondir (LLM)",
+  "finalite": {
+    "texte": "Financer et faciliter l'organisation des obsèques : constituer un capital dédié, versé rapidement au décès, pour soulager les proches de la charge financière et pratique des funérailles.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "Logique de capital affecté : le capital vise le financement des obsèques et son versement est conçu pour être rapide. Les prestations d'assistance accompagnent les proches dans les démarches.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Volonté d'épargner aux proches la charge financière et organisationnelle du décès.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Objectif principalement patrimonial (voir Essen'Ciel Patrimoine ou l'assurance vie) ; besoin de liquidité du vivant.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [],
   "architecture_garanties": {
     "principales": [],
     "secondaires": [
@@ -52,7 +80,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -61,7 +89,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -70,7 +98,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -79,7 +107,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -88,7 +116,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -97,7 +125,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -106,7 +134,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -115,7 +143,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -124,7 +152,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -133,7 +161,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -142,7 +170,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -151,7 +179,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -160,7 +188,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -169,7 +197,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -178,7 +206,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -187,7 +215,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -196,7 +224,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -205,7 +233,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -214,7 +242,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -223,7 +251,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -232,7 +260,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -241,7 +269,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -250,7 +278,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -259,7 +287,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -268,7 +296,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -277,7 +305,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -286,7 +314,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -295,7 +323,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     }
   ],
@@ -371,17 +399,84 @@
       "citation": "Valeur de rachat"
     }
   ],
-  "comprehension": [],
-  "confusions_frequentes": "à approfondir (LLM)",
+  "comprehension": [
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "finalite",
+      "explication": "Financer et faciliter l'organisation des obsèques : constituer un capital dédié, versé rapidement au décès, pour soulager les proches de la charge financière et pratique des funérailles.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "logique_contractuelle",
+      "explication": "Logique de capital affecté : le capital vise le financement des obsèques et son versement est conçu pour être rapide. Les prestations d'assistance accompagnent les proches dans les démarches.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "confusions_frequentes",
+      "explication": "Un contrat obsèques n'est pas une assurance vie d'épargne : le capital est dimensionné et destiné aux funérailles, pas à la transmission patrimoniale. Vérifier ce qui relève du financement (capital) et des services (assistance).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "situations_favorables",
+      "explication": "Volonté d'épargner aux proches la charge financière et organisationnelle du décès.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "situations_defavorables",
+      "explication": "Objectif principalement patrimonial (voir Essen'Ciel Patrimoine ou l'assurance vie) ; besoin de liquidité du vivant.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "relation_comparable_to_essen_ciel_patrimoine",
+      "explication": "Même univers (décès) mais finalités différentes : financement des obsèques vs capital décès viager patrimonial avec rachat.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "Un contrat obsèques n'est pas une assurance vie d'épargne : le capital est dimensionné et destiné aux funérailles, pas à la transmission patrimoniale. Vérifier ce qui relève du financement (capital) et des services (assistance).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
   "incertitudes": [
     {
       "axis": "understanding",
-      "current": 0.0,
+      "current": 0.045,
       "why": "entités sans explication (finalité/logique)",
       "recommended_task": "expliquer"
     }
   ],
-  "profondeur": 0.733,
+  "profondeur": 0.745,
   "couverture_semantique": 0.385,
   "validation": {
     "blocks": {
@@ -684,14 +779,41 @@
         }
       ],
       "pending_interpretations": [],
-      "simulated_claude": [],
+      "simulated_claude": [
+        {
+          "label": "Essen'Ciel (assurance obsèques)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_9ad0bdf56e38a944f23e",
+          "dst": "k_76439d714f95c0e6faef",
+          "statut": "simulated_claude"
+        }
+      ],
       "uncertainties": [],
-      "human_review_required": [],
+      "human_review_required": [
+        {
+          "label": "Essen'Ciel (assurance obsèques)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_9ad0bdf56e38a944f23e",
+          "dst": "k_76439d714f95c0e6faef",
+          "statut": "simulated_claude"
+        }
+      ],
       "stale": [],
       "contradictory": []
     },
     "counts": {
       "validated": 21,
+      "simulated_claude": 2,
       "derived_deterministic": 28
     },
     "legend": {

@@ -52,6 +52,17 @@
       "Ma Protection Accident (Garantie des accidents de la vie)",
       "Ma Retraite (plan d'épargne retraite individuel — PER)",
       "Masterlife CREDIT"
+    ],
+    "contrat": [
+      "Avizen",
+      "Avizen Pro",
+      "Entour'Age",
+      "Essen'Ciel (assurance obsèques)",
+      "Essen'Ciel Patrimoine",
+      "Excelium (assurance vie)",
+      "Ma Protection Accident (Garantie des accidents de la vie)",
+      "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "Masterlife CREDIT"
     ]
   },
   "contrat_mecanismes": {

@@ -45,6 +45,8 @@ def run(ctx):
         migrated = KG.migrate(graph)            # met à niveau les anciens nœuds/arêtes (idempotent)
         ing = KI.ingest(adapter, graph)         # déterministe, 0 token
         env = EI.ingest_environment(adapter, graph)   # ancrage réglementaire/fiscal (domaines séparés), 0 token/réseau
+        import claude_enrichment as CE
+        CE.ingest_from_repo(graph, S.REPO_ROOT, domain_id)   # couche Claude étiquetée (jamais 'validée')
         subjects = ing.get("subjects", [])
         tasks = KT.generate(graph, domain_id, subjects)
         total, new = KT.persist(tasks, S.load_json, write, S.now_iso, dry_run=ctx.dry_run)

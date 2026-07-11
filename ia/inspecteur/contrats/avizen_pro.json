@@ -1,7 +1,35 @@
 {
   "subject": "Avizen Pro",
   "domain": "axa-contrat",
-  "finalite": "à approfondir (LLM)",
+  "finalite": {
+    "texte": "Déclinaison professionnelle de la prévoyance : compléter les prestations des régimes obligatoires du travailleur indépendant ou du professionnel en cas d'arrêt de travail, d'invalidité ou de décès (IJ complémentaires aux régimes obligatoires, rentes d'invalidité, rente éducation avec double effet).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "Les indemnités journalières sont pensées comme un COMPLÉMENT des régimes obligatoires du professionnel : la prestation s'ajoute au régime de base sans viser le remplacement intégral du revenu. La clause de double effet prolonge la protection des enfants si le second parent décède à son tour.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Travailleur non salarié, profession libérale ou dirigeant dont les régimes obligatoires couvrent mal l'arrêt de travail.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Salarié déjà couvert par un contrat collectif riche ; états antérieurs ; activités exclues.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [],
   "architecture_garanties": {
     "principales": [
       "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)"
@@ -62,7 +90,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -71,7 +99,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -80,7 +108,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -89,7 +117,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -98,7 +126,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -107,7 +135,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -116,7 +144,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -125,7 +153,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -134,7 +162,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -143,7 +171,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -152,7 +180,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -161,7 +189,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -170,7 +198,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -179,7 +207,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -188,7 +216,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -197,7 +225,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -206,7 +234,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -215,7 +243,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -224,7 +252,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -233,7 +261,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -242,7 +270,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -251,7 +279,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -260,7 +288,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -269,7 +297,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -278,7 +306,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -287,7 +315,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -296,7 +324,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -305,7 +333,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -314,7 +342,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -323,7 +351,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -332,7 +360,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -341,7 +369,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -350,7 +378,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     }
   ],
@@ -471,17 +499,74 @@
       "citation": "Exonération ITT"
     }
   ],
-  "comprehension": [],
-  "confusions_frequentes": "à approfondir (LLM)",
+  "comprehension": [
+    {
+      "element": "Avizen Pro",
+      "aspect": "finalite",
+      "explication": "Déclinaison professionnelle de la prévoyance : compléter les prestations des régimes obligatoires du travailleur indépendant ou du professionnel en cas d'arrêt de travail, d'invalidité ou de décès (IJ complémentaires aux régimes obligatoires, rentes d'invalidité, rente éducation avec double effet).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen Pro",
+      "aspect": "logique_contractuelle",
+      "explication": "Les indemnités journalières sont pensées comme un COMPLÉMENT des régimes obligatoires du professionnel : la prestation s'ajoute au régime de base sans viser le remplacement intégral du revenu. La clause de double effet prolonge la protection des enfants si le second parent décède à son tour.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen Pro",
+      "aspect": "confusions_frequentes",
+      "explication": "« Complémentaire aux régimes obligatoires » ne signifie pas « revenu garanti intégral ». Le double effet concerne la rente éducation, pas l'ensemble des garanties. Ne pas confondre avec Avizen (particulier) : mécanismes proches, public et assiettes différents.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen Pro",
+      "aspect": "situations_favorables",
+      "explication": "Travailleur non salarié, profession libérale ou dirigeant dont les régimes obligatoires couvrent mal l'arrêt de travail.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen Pro",
+      "aspect": "situations_defavorables",
+      "explication": "Salarié déjà couvert par un contrat collectif riche ; états antérieurs ; activités exclues.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "« Complémentaire aux régimes obligatoires » ne signifie pas « revenu garanti intégral ». Le double effet concerne la rente éducation, pas l'ensemble des garanties. Ne pas confondre avec Avizen (particulier) : mécanismes proches, public et assiettes différents.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
   "incertitudes": [
     {
       "axis": "understanding",
-      "current": 0.0,
+      "current": 0.032,
       "why": "entités sans explication (finalité/logique)",
       "recommended_task": "expliquer"
     }
   ],
-  "profondeur": 0.727,
+  "profondeur": 0.735,
   "couverture_semantique": 0.385,
   "validation": {
     "blocks": {
@@ -868,14 +953,41 @@
         }
       ],
       "pending_interpretations": [],
-      "simulated_claude": [],
+      "simulated_claude": [
+        {
+          "label": "Avizen Pro",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_8da8e410671884c2f1ef",
+          "statut": "simulated_claude"
+        }
+      ],
       "uncertainties": [],
-      "human_review_required": [],
+      "human_review_required": [
+        {
+          "label": "Avizen Pro",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_8da8e410671884c2f1ef",
+          "statut": "simulated_claude"
+        }
+      ],
       "stale": [],
       "contradictory": []
     },
     "counts": {
       "validated": 30,
+      "simulated_claude": 2,
       "derived_deterministic": 33
     },
     "legend": {

@@ -1,0 +1,209 @@
+{
+  "avertissement": "Heuristiques MÉTIER produites par le raisonnement de Claude, fondées sur les garanties structurées des masters. Ce sont des AIDES AU RAISONNEMENT (quels contrats examiner pour quel risque, quelles questions poser), jamais des affirmations d'éligibilité ni des règles. Validation humaine requise avant tout usage engageant.",
+  "origin": "simulation_assistee_par_claude",
+  "risques": {
+    "deces_protection_famille": {
+      "libelle": "Décès — protéger la famille (revenu/capital aux proches)",
+      "mots_cles": [
+        "deces",
+        "proteger la famille",
+        "conjoint",
+        "enfants",
+        "orphelin",
+        "veuvage",
+        "capital deces"
+      ],
+      "contrats": [
+        "Avizen",
+        "Avizen Pro",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)"
+      ],
+      "questions": [
+        "Qui dépend financièrement de l'assuré ?",
+        "Quels capitaux/rentes existent déjà (collectif, autres contrats) ?",
+        "Le besoin est-il un capital, une rente, ou l'éducation des enfants ?"
+      ]
+    },
+    "arret_travail_itt": {
+      "libelle": "Arrêt de travail (ITT) — maintenir le revenu",
+      "mots_cles": [
+        "arret de travail",
+        "itt",
+        "incapacite",
+        "indemnites journalieres",
+        "revenu",
+        "maladie",
+        "salaire"
+      ],
+      "contrats": [
+        "Avizen",
+        "Avizen Pro",
+        "Masterlife CREDIT"
+      ],
+      "questions": [
+        "Quel est le statut professionnel (salarié/TNS) et que verse le régime obligatoire ?",
+        "Quelles charges fixes courent pendant l'arrêt (dont crédit) ?",
+        "Y a-t-il des antécédents médicaux, notamment psy/dos (exclusions rachetables côté emprunteur) ?"
+      ]
+    },
+    "invalidite": {
+      "libelle": "Invalidité permanente — compenser la perte durable",
+      "mots_cles": [
+        "invalidite",
+        "ipt",
+        "ptia",
+        "handicap",
+        "taux",
+        "permanente"
+      ],
+      "contrats": [
+        "Avizen",
+        "Avizen Pro",
+        "Ma Protection Accident (Garantie des accidents de la vie)",
+        "Masterlife CREDIT"
+      ],
+      "questions": [
+        "L'origine visée est-elle toutes causes ou accidentelle seulement ?",
+        "Quel taux d'invalidité déclencherait le besoin ?",
+        "Préférence capital ou rente ?"
+      ]
+    },
+    "accident_vie_privee": {
+      "libelle": "Accident de la vie privée — réparer le préjudice",
+      "mots_cles": [
+        "accident",
+        "vie privee",
+        "domestique",
+        "loisir",
+        "agression",
+        "accident medical",
+        "nosocomiale"
+      ],
+      "contrats": [
+        "Ma Protection Accident (Garantie des accidents de la vie)",
+        "Avizen"
+      ],
+      "questions": [
+        "Le foyer entier doit-il être couvert ?",
+        "Des sports à risque sont-ils pratiqués (option dédiée) ?",
+        "Souhait d'indemnisation du préjudice réel (GAV) ou de montants forfaitaires (prévoyance) ?"
+      ]
+    },
+    "dependance": {
+      "libelle": "Dépendance / perte d'autonomie",
+      "mots_cles": [
+        "dependance",
+        "autonomie",
+        "gir",
+        "aidant",
+        "grand age",
+        "ehpad"
+      ],
+      "contrats": [
+        "Entour'Age"
+      ],
+      "questions": [
+        "Couvrir la dépendance totale seule ou aussi partielle (choix de formule) ?",
+        "Qui seraient les aidants ?",
+        "Un capital immédiat (premiers frais) est-il souhaité ?"
+      ]
+    },
+    "obseques": {
+      "libelle": "Obsèques — financer et organiser",
+      "mots_cles": [
+        "obseques",
+        "funerailles",
+        "enterrement",
+        "deces frais"
+      ],
+      "contrats": [
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine"
+      ],
+      "questions": [
+        "L'objectif est-il le financement des funérailles ou une transmission plus large (Patrimoine) ?",
+        "Des volontés d'organisation doivent-elles être enregistrées ?"
+      ]
+    },
+    "retraite_revenu": {
+      "libelle": "Retraite — se constituer un revenu",
+      "mots_cles": [
+        "retraite",
+        "per",
+        "pension",
+        "revenu futur",
+        "rente viagere"
+      ],
+      "contrats": [
+        "Ma Retraite (plan d'épargne retraite individuel — PER)",
+        "Excelium (assurance vie)"
+      ],
+      "questions": [
+        "Horizon avant la retraite ?",
+        "L'indisponibilité de l'épargne du PER est-elle acceptable, ou faut-il la liquidité de l'assurance vie ?",
+        "Situation fiscale actuelle (l'intérêt de la déductibilité est une règle externe à vérifier) ?"
+      ]
+    },
+    "epargne_transmission": {
+      "libelle": "Épargne et transmission de capital",
+      "mots_cles": [
+        "epargne",
+        "placer",
+        "capital",
+        "transmission",
+        "succession",
+        "beneficiaire",
+        "valoriser"
+      ],
+      "contrats": [
+        "Excelium (assurance vie)",
+        "Essen'Ciel Patrimoine",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ],
+      "questions": [
+        "Horizon et besoin de liquidité ?",
+        "Tolérance au risque (fonds euros vs unités de compte) ?",
+        "Objectif de transmission : à qui, dans quel cadre (clause bénéficiaire) ?"
+      ]
+    },
+    "emprunt": {
+      "libelle": "Crédit — sécuriser le remboursement",
+      "mots_cles": [
+        "credit",
+        "emprunt",
+        "pret",
+        "immobilier",
+        "quotite",
+        "emprunteur",
+        "banque"
+      ],
+      "contrats": [
+        "Masterlife CREDIT"
+      ],
+      "questions": [
+        "Capital restant dû, durée, quotités entre co-emprunteurs ?",
+        "Antécédents psy/dos (option Psy/Dos+ à considérer) ?",
+        "Profil AERAS ?"
+      ]
+    },
+    "education_enfants": {
+      "libelle": "Éducation des enfants en cas de coup dur",
+      "mots_cles": [
+        "education",
+        "enfants",
+        "etudes",
+        "rente education",
+        "scolarite"
+      ],
+      "contrats": [
+        "Avizen",
+        "Avizen Pro"
+      ],
+      "questions": [
+        "Âges des enfants et durée d'études envisagée ?",
+        "Le double effet (décès du second parent) est-il pertinent ?"
+      ]
+    }
+  }
+}

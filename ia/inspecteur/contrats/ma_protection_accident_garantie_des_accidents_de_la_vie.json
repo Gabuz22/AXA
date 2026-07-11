@@ -1,7 +1,35 @@
 {
   "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
   "domain": "axa-contrat",
-  "finalite": "à approfondir (LLM)",
+  "finalite": {
+    "texte": "Indemniser les préjudices corporels consécutifs aux accidents de la vie privée (activités courantes, accidents médicaux, infections nosocomiales, certains accidents de la route par dérogation) selon une logique INDEMNITAIRE de droit commun.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "À la différence de la prévoyance forfaitaire, la GAV répare le PRÉJUDICE réel (barème type AQV, postes de préjudices du droit commun) : l'indemnisation dépend des séquelles évaluées, pas d'un capital fixé à l'avance. Elle intervient là où il n'y a pas de tiers responsable identifiable ou solvable.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Famille exposée aux accidents domestiques/loisirs, complément indemnitaire d'une prévoyance forfaitaire, accidents médicaux.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Attente de couverture maladie ; préjudices légers sous les seuils d'intervention ; faits intentionnels.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [],
   "architecture_garanties": {
     "principales": [],
     "secondaires": [
@@ -49,7 +77,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -58,7 +86,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     }
   ],
@@ -154,23 +182,80 @@
       "citation": "Renonciation vente à distance — cotisation due"
     }
   ],
-  "comprehension": [],
-  "confusions_frequentes": "à approfondir (LLM)",
+  "comprehension": [
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "finalite",
+      "explication": "Indemniser les préjudices corporels consécutifs aux accidents de la vie privée (activités courantes, accidents médicaux, infections nosocomiales, certains accidents de la route par dérogation) selon une logique INDEMNITAIRE de droit commun.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "logique_contractuelle",
+      "explication": "À la différence de la prévoyance forfaitaire, la GAV répare le PRÉJUDICE réel (barème type AQV, postes de préjudices du droit commun) : l'indemnisation dépend des séquelles évaluées, pas d'un capital fixé à l'avance. Elle intervient là où il n'y a pas de tiers responsable identifiable ou solvable.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "confusions_frequentes",
+      "explication": "La GAV ne couvre PAS la maladie (les affections, même consécutives à un accident garanti, sont exclues). Elle est indemnitaire (préjudice évalué) là où Avizen est forfaitaire (montants souscrits) : les deux logiques se complètent et peuvent se cumuler dans les limites contractuelles. Les accidents de la circulation ne sont couverts que par dérogations précises.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "situations_favorables",
+      "explication": "Famille exposée aux accidents domestiques/loisirs, complément indemnitaire d'une prévoyance forfaitaire, accidents médicaux.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "situations_defavorables",
+      "explication": "Attente de couverture maladie ; préjudices légers sous les seuils d'intervention ; faits intentionnels.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "La GAV ne couvre PAS la maladie (les affections, même consécutives à un accident garanti, sont exclues). Elle est indemnitaire (préjudice évalué) là où Avizen est forfaitaire (montants souscrits) : les deux logiques se complètent et peuvent se cumuler dans les limites contractuelles. Les accidents de la circulation ne sont couverts que par dérogations précises.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
   "incertitudes": [
     {
       "axis": "understanding",
-      "current": 0.0,
+      "current": 0.042,
       "why": "entités sans explication (finalité/logique)",
       "recommended_task": "expliquer"
     },
     {
       "axis": "relations",
-      "current": 0.043,
+      "current": 0.083,
       "why": "entités isolées (peu ou pas de relations)",
       "recommended_task": "relier"
     }
   ],
-  "profondeur": 0.609,
+  "profondeur": 0.625,
   "couverture_semantique": 0.385,
   "validation": {
     "blocks": {
@@ -329,14 +414,41 @@
         }
       ],
       "pending_interpretations": [],
-      "simulated_claude": [],
+      "simulated_claude": [
+        {
+          "label": "Ma Protection Accident (Garantie des accidents de la vie)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "complements",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_87e655fa31a3bd0c6020",
+          "statut": "simulated_claude"
+        }
+      ],
       "uncertainties": [],
-      "human_review_required": [],
+      "human_review_required": [
+        {
+          "label": "Ma Protection Accident (Garantie des accidents de la vie)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "complements",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_87e655fa31a3bd0c6020",
+          "statut": "simulated_claude"
+        }
+      ],
       "stale": [],
       "contradictory": []
     },
     "counts": {
       "validated": 23,
+      "simulated_claude": 2,
       "derived_deterministic": 2
     },
     "legend": {

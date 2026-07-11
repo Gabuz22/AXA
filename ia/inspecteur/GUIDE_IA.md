@@ -34,7 +34,16 @@ remplacer une validation humaine ni engager AXA.
   non_comparables + trous de couverture). Preuves conservées par contrat.
 - `matrices.json` : mécanisme→contrats, contrat→garanties/conditions/exclusions, concept→définitions par contrat.
 - `tools.json` : outils/protocoles utilisables (entrée/sortie/contraintes).
+- `metier/matrice_risques.json` : risques → contrats à examiner + questions d'inspecteur (heuristique
+  étiquetée `simulation_assistee_par_claude`, à confirmer — commencez ici pour un cas client).
+- `metier/evenements_vie.json` : événement de vie → risques accrus → contrats/questions.
 - `index.json` : inventaire + empreinte de reconstruction.
+
+## Statuts de validation (dans chaque fiche, bloc `validation`)
+La compréhension (finalité, logique, confusions) et les articulations peuvent provenir du raisonnement de
+Claude (`origine: simulation_assistee_par_claude`, `statut: simulated_claude`) : ce sont des
+INTERPRÉTATIONS à confirmer, jamais des clauses. Seuls les blocs `validated_knowledge` (masters) et
+`derived_relations` (dérivation déterministe) sont exposables comme vérité.
 
 ## Limites
 La charpente est déterministe (structure, comparaison, garde-fous). La PRÉCISION sémantique (écarter un

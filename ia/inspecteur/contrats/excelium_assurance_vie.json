@@ -1,7 +1,35 @@
 {
   "subject": "Excelium (assurance vie)",
   "domain": "axa-contrat",
-  "finalite": "à approfondir (LLM)",
+  "finalite": {
+    "texte": "Assurance vie d'épargne multi-supports : constituer et valoriser un capital (garantie en cas de vie au terme, rachats), tout en protégeant les bénéficiaires en cas de décès (garantie décès, variantes « Revalorisée » et « Sérénité » plancher).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "Double nature vie/décès : en cas de vie, l'épargne appartient à l'assuré (rachats partiels ou programmés, types de gestion) ; en cas de décès, les garanties déterminent ce que reçoivent les bénéficiaires — la garantie plancher « Sérénité » protège contre une baisse des supports, la « Revalorisée » applique sa propre mécanique (avec ses exclusions propres).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Épargne de long terme avec disponibilité, transmission encadrée par le régime propre de l'assurance vie (à vérifier selon les règles en vigueur).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Besoin d'un revenu garanti à la retraite sans discipline d'épargne (comparer au PER) ; aversion totale au risque si supports en unités de compte.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [],
   "architecture_garanties": {
     "principales": [],
     "secondaires": [
@@ -49,7 +77,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -58,7 +86,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -67,7 +95,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -76,7 +104,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -85,7 +113,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -94,7 +122,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -103,7 +131,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -112,7 +140,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -121,7 +149,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -130,7 +158,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -139,7 +167,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -148,7 +176,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -157,7 +185,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -166,7 +194,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -175,7 +203,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     }
   ],
@@ -241,23 +269,90 @@
       "citation": "Montant garanti Revalorisée"
     }
   ],
-  "comprehension": [],
-  "confusions_frequentes": "à approfondir (LLM)",
+  "comprehension": [
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "finalite",
+      "explication": "Assurance vie d'épargne multi-supports : constituer et valoriser un capital (garantie en cas de vie au terme, rachats), tout en protégeant les bénéficiaires en cas de décès (garantie décès, variantes « Revalorisée » et « Sérénité » plancher).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "logique_contractuelle",
+      "explication": "Double nature vie/décès : en cas de vie, l'épargne appartient à l'assuré (rachats partiels ou programmés, types de gestion) ; en cas de décès, les garanties déterminent ce que reçoivent les bénéficiaires — la garantie plancher « Sérénité » protège contre une baisse des supports, la « Revalorisée » applique sa propre mécanique (avec ses exclusions propres).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "confusions_frequentes",
+      "explication": "La garantie plancher protège les BÉNÉFICIAIRES en cas de décès, pas la valeur de rachat du vivant. Les exclusions de la garantie « Revalorisée » ne s'appliquent qu'à cette garantie, pas au contrat entier. L'assurance vie n'est pas un PER : l'épargne reste disponible (rachat), la fiscalité diffère (règles externes à vérifier).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "situations_favorables",
+      "explication": "Épargne de long terme avec disponibilité, transmission encadrée par le régime propre de l'assurance vie (à vérifier selon les règles en vigueur).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "situations_defavorables",
+      "explication": "Besoin d'un revenu garanti à la retraite sans discipline d'épargne (comparer au PER) ; aversion totale au risque si supports en unités de compte.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "relation_comparable_to_ma_retraite_plan_d_eparg",
+      "explication": "Deux épargnes longues aux liquidités opposées : assurance vie rachetable à tout moment vs PER en principe indisponible jusqu'à la retraite ; fiscalités externes distinctes (à vérifier).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "La garantie plancher protège les BÉNÉFICIAIRES en cas de décès, pas la valeur de rachat du vivant. Les exclusions de la garantie « Revalorisée » ne s'appliquent qu'à cette garantie, pas au contrat entier. L'assurance vie n'est pas un PER : l'épargne reste disponible (rachat), la fiscalité diffère (règles externes à vérifier).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
   "incertitudes": [
     {
       "axis": "understanding",
-      "current": 0.0,
+      "current": 0.05,
       "why": "entités sans explication (finalité/logique)",
       "recommended_task": "expliquer"
     },
     {
       "axis": "relations",
-      "current": 0.421,
+      "current": 0.45,
       "why": "entités isolées (peu ou pas de relations)",
       "recommended_task": "relier"
     }
   ],
-  "profondeur": 0.684,
+  "profondeur": 0.7,
   "couverture_semantique": 0.385,
   "validation": {
     "blocks": {
@@ -470,14 +565,41 @@
         }
       ],
       "pending_interpretations": [],
-      "simulated_claude": [],
+      "simulated_claude": [
+        {
+          "label": "Excelium (assurance vie)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_cddb58e5374c53e28382",
+          "dst": "k_ec75024e03dc18706ce1",
+          "statut": "simulated_claude"
+        }
+      ],
       "uncertainties": [],
-      "human_review_required": [],
+      "human_review_required": [
+        {
+          "label": "Excelium (assurance vie)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_cddb58e5374c53e28382",
+          "dst": "k_ec75024e03dc18706ce1",
+          "statut": "simulated_claude"
+        }
+      ],
       "stale": [],
       "contradictory": []
     },
     "counts": {
       "validated": 19,
+      "simulated_claude": 2,
       "derived_deterministic": 15
     },
     "legend": {

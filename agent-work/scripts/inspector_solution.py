@@ -24,13 +24,18 @@ def _needs_of(case):
     return exp + ded
 
 
-def _need_to_contracts(graph, domain, needs):
-    """{besoin: [contrats candidats]} + {contrat: set(besoins couverts)}."""
+def _need_to_contracts(graph, domain, needs, metier=None):
+    """{besoin: [contrats candidats]} + {contrat: set(besoins couverts)}. Matrice de risques (précise)
+    quand `metier` est fourni ; recoupement lexical sinon."""
     by_need, by_contract = {}, {}
     for nd in needs:
-        matches = INn._match_contracts(graph, domain, nd["besoin"])
-        by_need[nd["besoin"]] = sorted(matches.keys())
-        for c in matches:
+        risks = INn.match_risks(nd["besoin"], metier)
+        if risks:
+            contracts = sorted({c for _rid, spec in risks for c in spec.get("contrats", [])})
+        else:
+            contracts = sorted(INn._match_contracts(graph, domain, nd["besoin"]).keys())
+        by_need[nd["besoin"]] = contracts
+        for c in contracts:
             by_contract.setdefault(c, set()).add(nd["besoin"])
     return by_need, by_contract
 
@@ -81,10 +86,10 @@ def _drawbacks(name, contracts, non_couverts, doublons):
     return dr or ["à évaluer"]
 
 
-def build_scenarios(case, graph, domain="axa-contrat"):
+def build_scenarios(case, graph, domain="axa-contrat", metier=None):
     needs_struct = _needs_of(case)
     all_needs = [n["besoin"] for n in needs_struct]
-    by_need, by_contract = _need_to_contracts(graph, domain, needs_struct)
+    by_need, by_contract = _need_to_contracts(graph, domain, needs_struct, metier)
     ranked = sorted(by_contract.items(), key=lambda kv: -len(kv[1]))   # contrats par nb de besoins couverts
 
     scenarios = []

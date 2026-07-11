@@ -1,0 +1,68 @@
+{
+  "avertissement": "Heuristiques MÉTIER produites par le raisonnement de Claude, fondées sur les garanties structurées des masters. Ce sont des AIDES AU RAISONNEMENT (quels contrats examiner pour quel risque, quelles questions poser), jamais des affirmations d'éligibilité ni des règles. Validation humaine requise avant tout usage engageant.",
+  "origin": "simulation_assistee_par_claude",
+  "evenements": {
+    "naissance": {
+      "risques": [
+        "deces_protection_famille",
+        "education_enfants",
+        "arret_travail_itt"
+      ],
+      "note": "L'arrivée d'un enfant crée une dépendance financière longue : vérifier rente éducation et maintien de revenu."
+    },
+    "achat_immobilier": {
+      "risques": [
+        "emprunt",
+        "deces_protection_famille",
+        "invalidite"
+      ],
+      "note": "Le crédit crée une dette longue : assurance emprunteur (quotités !) + impact d'un arrêt sur les échéances."
+    },
+    "passage_independant": {
+      "risques": [
+        "arret_travail_itt",
+        "invalidite",
+        "retraite_revenu"
+      ],
+      "note": "Le TNS perd la couverture collective : régimes obligatoires plus faibles, prévoyance pro et retraite individuelle à examiner."
+    },
+    "mariage_pacs": {
+      "risques": [
+        "deces_protection_famille",
+        "epargne_transmission"
+      ],
+      "note": "Revoir clauses bénéficiaires et protection croisée du couple."
+    },
+    "divorce": {
+      "risques": [
+        "deces_protection_famille",
+        "epargne_transmission",
+        "emprunt"
+      ],
+      "note": "Revoir bénéficiaires, quotités emprunteur, et besoins propres de chaque foyer."
+    },
+    "approche_retraite": {
+      "risques": [
+        "retraite_revenu",
+        "dependance",
+        "obseques",
+        "epargne_transmission"
+      ],
+      "note": "Bascule du revenu d'activité vers la rente ; fenêtre pour la dépendance tant que l'assurabilité est bonne."
+    },
+    "deces_proche": {
+      "risques": [
+        "obseques",
+        "epargne_transmission"
+      ],
+      "note": "Événement révélateur : organiser ses propres volontés et vérifier la protection du survivant."
+    },
+    "sport_a_risque": {
+      "risques": [
+        "accident_vie_privee",
+        "invalidite"
+      ],
+      "note": "Vérifier les exclusions « sports à risque » de chaque contrat et les options dédiées."
+    }
+  }
+}

@@ -1,7 +1,84 @@
 {
   "subject": "Avizen",
   "domain": "axa-contrat",
-  "finalite": "à approfondir (LLM)",
+  "finalite": {
+    "texte": "Contrat de prévoyance individuelle : protéger le revenu et la famille de l'assuré contre les conséquences financières d'un arrêt de travail (ITT), d'une invalidité ou d'un décès, via des indemnités journalières, des capitaux ou rentes d'invalidité et une rente éducation pour les enfants.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "Architecture modulaire : une garantie principale (rente éducation en cas de décès ou d'IPT) entourée de garanties optionnelles à combiner (IJ ITT toutes causes ou par accident ; capital ou rente d'invalidité, toutes causes ou par accident). Les prestations d'invalidité sont proportionnelles au taux d'invalidité (barème d'indemnisation, seuil et plafond définis dans la notice). L'option d'exonération des cotisations maintient les garanties pendant une ITT indemnisée.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Actif avec enfants à charge (rente éducation), besoin de compléter le revenu en cas d'arrêt de travail long, indépendance vis-à-vis d'un contrat collectif d'entreprise.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Antécédents médicaux antérieurs à l'adhésion (exclusion des états antérieurs non déclarés), pratique régulière de sports ou activités à risque (exclusions communes), invalidité inférieure au seuil du barème.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [
+    {
+      "type": "excludes",
+      "de": "ITT/Invalidité — exclusions spécifiques",
+      "vers": "Indemnités journalières ITT toutes causes (optionnelle)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "ITT/Invalidité — exclusions spécifiques",
+      "vers": "Indemnités journalières ITT par accident (optionnelle)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Décès/IPT toutes causes — suicide 1re année",
+      "vers": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Exclusions communes — activités et sports à risque",
+      "vers": "Indemnités journalières ITT par accident (optionnelle)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "type": "comparable_to",
+      "de": "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)",
+      "vers": "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "type": "comparable_to",
+      "de": "Indemnités journalières ITT toutes causes (optionnelle)",
+      "vers": "Indemnités journalières ITT par accident (optionnelle)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
   "architecture_garanties": {
     "principales": [
       "Rente éducation décès / Rente éducation IPT (garantie principale)"
@@ -59,7 +136,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -68,7 +145,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -77,7 +154,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -86,7 +163,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -95,7 +172,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -104,7 +181,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -113,7 +190,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -122,7 +199,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -131,7 +208,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -140,7 +217,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -149,7 +226,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -158,7 +235,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -167,7 +244,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -176,7 +253,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -185,7 +262,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -194,7 +271,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -203,7 +280,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -212,7 +289,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -221,7 +298,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -230,7 +307,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -239,7 +316,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -248,7 +325,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -257,7 +334,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -266,7 +343,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -275,7 +352,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     },
     {
@@ -284,7 +361,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:31:05Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     }
   ],
@@ -395,23 +472,94 @@
       "citation": "Taux d'indemnisation zone linéaire 11-30 %"
     }
   ],
-  "comprehension": [],
-  "confusions_frequentes": "à approfondir (LLM)",
+  "comprehension": [
+    {
+      "element": "Avizen",
+      "aspect": "finalite",
+      "explication": "Contrat de prévoyance individuelle : protéger le revenu et la famille de l'assuré contre les conséquences financières d'un arrêt de travail (ITT), d'une invalidité ou d'un décès, via des indemnités journalières, des capitaux ou rentes d'invalidité et une rente éducation pour les enfants.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "logique_contractuelle",
+      "explication": "Architecture modulaire : une garantie principale (rente éducation en cas de décès ou d'IPT) entourée de garanties optionnelles à combiner (IJ ITT toutes causes ou par accident ; capital ou rente d'invalidité, toutes causes ou par accident). Les prestations d'invalidité sont proportionnelles au taux d'invalidité (barème d'indemnisation, seuil et plafond définis dans la notice). L'option d'exonération des cotisations maintient les garanties pendant une ITT indemnisée.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "confusions_frequentes",
+      "explication": "Ne pas confondre les variantes « toutes causes » et « par accident » : les secondes ne couvrent pas la maladie. Les rentes toutes causes et par accident ne se cumulent pas entre elles. L'IPT (invalidité permanente totale) n'est pas l'ITT (incapacité temporaire de travail).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "situations_favorables",
+      "explication": "Actif avec enfants à charge (rente éducation), besoin de compléter le revenu en cas d'arrêt de travail long, indépendance vis-à-vis d'un contrat collectif d'entreprise.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "situations_defavorables",
+      "explication": "Antécédents médicaux antérieurs à l'adhésion (exclusion des états antérieurs non déclarés), pratique régulière de sports ou activités à risque (exclusions communes), invalidité inférieure au seuil du barème.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "relation_comparable_to_avizen_pro",
+      "explication": "Mécanismes de prévoyance proches ; publics différents (particulier vs professionnel/TNS) et articulation aux régimes obligatoires différente.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "relation_complements_ma_protection_accident_g",
+      "explication": "Logiques complémentaires sur un même accident : prévoyance FORFAITAIRE (montants souscrits) + GAV INDEMNITAIRE (préjudice réel de droit commun).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "Ne pas confondre les variantes « toutes causes » et « par accident » : les secondes ne couvrent pas la maladie. Les rentes toutes causes et par accident ne se cumulent pas entre elles. L'IPT (invalidité permanente totale) n'est pas l'ITT (incapacité temporaire de travail).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
   "incertitudes": [
     {
       "axis": "understanding",
-      "current": 0.0,
+      "current": 0.036,
       "why": "entités sans explication (finalité/logique)",
       "recommended_task": "expliquer"
-    },
-    {
-      "axis": "relations",
-      "current": 0.593,
-      "why": "entités isolées (peu ou pas de relations)",
-      "recommended_task": "relier"
     }
   ],
-  "profondeur": 0.719,
+  "profondeur": 0.743,
   "couverture_semantique": 0.385,
   "validation": {
     "blocks": {
@@ -738,14 +886,137 @@
         }
       ],
       "pending_interpretations": [],
-      "simulated_claude": [],
+      "simulated_claude": [
+        {
+          "label": "Avizen",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "excludes",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_7aeb68bed77896c62bc4",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_07af5d2477d6ef20a18d",
+          "dst": "k_cce0a9b49efbf2bb1541",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_3beab745a27e18349fc2",
+          "dst": "k_2ec238864e5a789612eb",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_7aeb68bed77896c62bc4",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_8da8e410671884c2f1ef",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_87e655fa31a3bd0c6020",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_b79787e5e1124b9ad420",
+          "dst": "k_530d1688fe8357355f83",
+          "statut": "simulated_claude"
+        }
+      ],
       "uncertainties": [],
-      "human_review_required": [],
+      "human_review_required": [
+        {
+          "label": "Avizen",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "excludes",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_7aeb68bed77896c62bc4",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_07af5d2477d6ef20a18d",
+          "dst": "k_cce0a9b49efbf2bb1541",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_3beab745a27e18349fc2",
+          "dst": "k_2ec238864e5a789612eb",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_7aeb68bed77896c62bc4",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_8da8e410671884c2f1ef",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_87e655fa31a3bd0c6020",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_b79787e5e1124b9ad420",
+          "dst": "k_530d1688fe8357355f83",
+          "statut": "simulated_claude"
+        }
+      ],
       "stale": [],
       "contradictory": []
     },
     "counts": {
       "validated": 27,
+      "simulated_claude": 10,
       "derived_deterministic": 26
     },
     "legend": {

@@ -1,7 +1,35 @@
 {
   "subject": "Essen'Ciel Patrimoine",
   "domain": "axa-contrat",
-  "finalite": "à approfondir (LLM)",
+  "finalite": {
+    "texte": "Garantir un capital décès aux bénéficiaires dans une logique viagère et patrimoniale : protection décès permanente avec revalorisation/participation aux bénéfices, faculté de rachat et valeur de réduction — à la frontière entre prévoyance décès et transmission.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "Contrat de type « vie entière » : le capital décès est dû quel que soit le moment du décès, la valeur du contrat se constitue dans le temps (revalorisation), et l'assuré conserve des droits du vivant (rachat total/partiel selon tableau de valeurs, mise en réduction si arrêt des cotisations).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Transmission d'un capital certain aux bénéficiaires, souhait de conserver une porte de sortie (rachat).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Recherche de rendement d'épargne pure (voir assurance vie) ; horizon très court.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [],
   "architecture_garanties": {
     "principales": [],
     "secondaires": [
@@ -33,7 +61,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:52:19Z"
+        "checked_at": "2026-07-11T23:32:02Z"
       }
     }
   ],
@@ -74,23 +102,80 @@
       "citation": "Prestations d'assistance (suite au décès)"
     }
   ],
-  "comprehension": [],
-  "confusions_frequentes": "à approfondir (LLM)",
+  "comprehension": [
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "finalite",
+      "explication": "Garantir un capital décès aux bénéficiaires dans une logique viagère et patrimoniale : protection décès permanente avec revalorisation/participation aux bénéfices, faculté de rachat et valeur de réduction — à la frontière entre prévoyance décès et transmission.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "logique_contractuelle",
+      "explication": "Contrat de type « vie entière » : le capital décès est dû quel que soit le moment du décès, la valeur du contrat se constitue dans le temps (revalorisation), et l'assuré conserve des droits du vivant (rachat total/partiel selon tableau de valeurs, mise en réduction si arrêt des cotisations).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "confusions_frequentes",
+      "explication": "Ne pas confondre avec Essen'Ciel « obsèques » : ici la logique est patrimoniale (capital transmis, rachat possible), pas seulement le financement des funérailles. La mise en réduction diminue la garantie mais ne l'annule pas ; le rachat, lui, met fin au contrat.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "situations_favorables",
+      "explication": "Transmission d'un capital certain aux bénéficiaires, souhait de conserver une porte de sortie (rachat).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "situations_defavorables",
+      "explication": "Recherche de rendement d'épargne pure (voir assurance vie) ; horizon très court.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "Ne pas confondre avec Essen'Ciel « obsèques » : ici la logique est patrimoniale (capital transmis, rachat possible), pas seulement le financement des funérailles. La mise en réduction diminue la garantie mais ne l'annule pas ; le rachat, lui, met fin au contrat.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
   "incertitudes": [
     {
       "axis": "understanding",
-      "current": 0.0,
+      "current": 0.125,
       "why": "entités sans explication (finalité/logique)",
       "recommended_task": "expliquer"
     },
     {
       "axis": "relations",
-      "current": 0.143,
+      "current": 0.25,
       "why": "entités isolées (peu ou pas de relations)",
       "recommended_task": "relier"
     }
   ],
-  "profondeur": 0.629,
+  "profondeur": 0.675,
   "couverture_semantique": 0.231,
   "validation": {
     "blocks": {
@@ -147,14 +232,41 @@
         }
       ],
       "pending_interpretations": [],
-      "simulated_claude": [],
+      "simulated_claude": [
+        {
+          "label": "Essen'Ciel Patrimoine",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_9ad0bdf56e38a944f23e",
+          "dst": "k_76439d714f95c0e6faef",
+          "statut": "simulated_claude"
+        }
+      ],
       "uncertainties": [],
-      "human_review_required": [],
+      "human_review_required": [
+        {
+          "label": "Essen'Ciel Patrimoine",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_9ad0bdf56e38a944f23e",
+          "dst": "k_76439d714f95c0e6faef",
+          "statut": "simulated_claude"
+        }
+      ],
       "stale": [],
       "contradictory": []
     },
     "counts": {
       "validated": 7,
+      "simulated_claude": 2,
       "derived_deterministic": 1
     },
     "legend": {

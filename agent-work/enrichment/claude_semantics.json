@@ -1,0 +1,99 @@
+{
+  "_avertissement": "Couche sémantique produite par le RAISONNEMENT DE CLAUDE (à la place des appels API LLM). Chaque élément est une INTERPRÉTATION fondée sur les garanties/exclusions structurées des masters : jamais une clause. Statut pending_review, validation humaine requise avant tout usage engageant. Ne contient aucun montant, taux ou règle fiscale chiffrée.",
+  "origin": "simulation_assistee_par_claude",
+  "version": "1.0.0",
+  "domain": "axa-contrat",
+  "comprehension": {
+    "Avizen": {
+      "finalite": "Contrat de prévoyance individuelle : protéger le revenu et la famille de l'assuré contre les conséquences financières d'un arrêt de travail (ITT), d'une invalidité ou d'un décès, via des indemnités journalières, des capitaux ou rentes d'invalidité et une rente éducation pour les enfants.",
+      "logique_contractuelle": "Architecture modulaire : une garantie principale (rente éducation en cas de décès ou d'IPT) entourée de garanties optionnelles à combiner (IJ ITT toutes causes ou par accident ; capital ou rente d'invalidité, toutes causes ou par accident). Les prestations d'invalidité sont proportionnelles au taux d'invalidité (barème d'indemnisation, seuil et plafond définis dans la notice). L'option d'exonération des cotisations maintient les garanties pendant une ITT indemnisée.",
+      "confusions_frequentes": "Ne pas confondre les variantes « toutes causes » et « par accident » : les secondes ne couvrent pas la maladie. Les rentes toutes causes et par accident ne se cumulent pas entre elles. L'IPT (invalidité permanente totale) n'est pas l'ITT (incapacité temporaire de travail).",
+      "situations_favorables": "Actif avec enfants à charge (rente éducation), besoin de compléter le revenu en cas d'arrêt de travail long, indépendance vis-à-vis d'un contrat collectif d'entreprise.",
+      "situations_defavorables": "Antécédents médicaux antérieurs à l'adhésion (exclusion des états antérieurs non déclarés), pratique régulière de sports ou activités à risque (exclusions communes), invalidité inférieure au seuil du barème."
+    },
+    "Avizen Pro": {
+      "finalite": "Déclinaison professionnelle de la prévoyance : compléter les prestations des régimes obligatoires du travailleur indépendant ou du professionnel en cas d'arrêt de travail, d'invalidité ou de décès (IJ complémentaires aux régimes obligatoires, rentes d'invalidité, rente éducation avec double effet).",
+      "logique_contractuelle": "Les indemnités journalières sont pensées comme un COMPLÉMENT des régimes obligatoires du professionnel : la prestation s'ajoute au régime de base sans viser le remplacement intégral du revenu. La clause de double effet prolonge la protection des enfants si le second parent décède à son tour.",
+      "confusions_frequentes": "« Complémentaire aux régimes obligatoires » ne signifie pas « revenu garanti intégral ». Le double effet concerne la rente éducation, pas l'ensemble des garanties. Ne pas confondre avec Avizen (particulier) : mécanismes proches, public et assiettes différents.",
+      "situations_favorables": "Travailleur non salarié, profession libérale ou dirigeant dont les régimes obligatoires couvrent mal l'arrêt de travail.",
+      "situations_defavorables": "Salarié déjà couvert par un contrat collectif riche ; états antérieurs ; activités exclues."
+    },
+    "Entour'Age": {
+      "finalite": "Anticiper la perte d'autonomie : verser une rente viagère lorsque l'assuré devient dépendant (dépendance totale, ou totale et partielle selon la formule), avec des services d'assistance pour l'assuré et ses aidants, et des options de capital (premiers frais, capital décès).",
+      "logique_contractuelle": "Le déclencheur est l'état de dépendance médicalement constaté selon les grilles du contrat ; les niveaux de dépendance légère (GIR 5 et 6) sont hors garantie. La formule choisie (totale seule, ou totale + partielle) détermine l'étendue du déclenchement. Les services d'assistance existent dès l'adhésion, avant tout sinistre.",
+      "confusions_frequentes": "La rente dépendance n'est ni une assurance santé ni une prise en charge d'établissement : c'est un revenu viager déclenché par la dépendance reconnue. GIR 5-6 exclus : une perte d'autonomie légère ne déclenche rien. La réduction couple est tarifaire, pas une extension de garantie.",
+      "situations_favorables": "Préparation de la dépendance à un âge où les cotisations restent accessibles ; présence d'aidants familiaux (services ENTREAIDANTS).",
+      "situations_defavorables": "Dépendance déjà installée ou imminente ; attentes de prise en charge médicale complète ; dépendance légère."
+    },
+    "Essen'Ciel (assurance obsèques)": {
+      "finalite": "Financer et faciliter l'organisation des obsèques : constituer un capital dédié, versé rapidement au décès, pour soulager les proches de la charge financière et pratique des funérailles.",
+      "logique_contractuelle": "Logique de capital affecté : le capital vise le financement des obsèques et son versement est conçu pour être rapide. Les prestations d'assistance accompagnent les proches dans les démarches.",
+      "confusions_frequentes": "Un contrat obsèques n'est pas une assurance vie d'épargne : le capital est dimensionné et destiné aux funérailles, pas à la transmission patrimoniale. Vérifier ce qui relève du financement (capital) et des services (assistance).",
+      "situations_favorables": "Volonté d'épargner aux proches la charge financière et organisationnelle du décès.",
+      "situations_defavorables": "Objectif principalement patrimonial (voir Essen'Ciel Patrimoine ou l'assurance vie) ; besoin de liquidité du vivant."
+    },
+    "Essen'Ciel Patrimoine": {
+      "finalite": "Garantir un capital décès aux bénéficiaires dans une logique viagère et patrimoniale : protection décès permanente avec revalorisation/participation aux bénéfices, faculté de rachat et valeur de réduction — à la frontière entre prévoyance décès et transmission.",
+      "logique_contractuelle": "Contrat de type « vie entière » : le capital décès est dû quel que soit le moment du décès, la valeur du contrat se constitue dans le temps (revalorisation), et l'assuré conserve des droits du vivant (rachat total/partiel selon tableau de valeurs, mise en réduction si arrêt des cotisations).",
+      "confusions_frequentes": "Ne pas confondre avec Essen'Ciel « obsèques » : ici la logique est patrimoniale (capital transmis, rachat possible), pas seulement le financement des funérailles. La mise en réduction diminue la garantie mais ne l'annule pas ; le rachat, lui, met fin au contrat.",
+      "situations_favorables": "Transmission d'un capital certain aux bénéficiaires, souhait de conserver une porte de sortie (rachat).",
+      "situations_defavorables": "Recherche de rendement d'épargne pure (voir assurance vie) ; horizon très court."
+    },
+    "Excelium (assurance vie)": {
+      "finalite": "Assurance vie d'épargne multi-supports : constituer et valoriser un capital (garantie en cas de vie au terme, rachats), tout en protégeant les bénéficiaires en cas de décès (garantie décès, variantes « Revalorisée » et « Sérénité » plancher).",
+      "logique_contractuelle": "Double nature vie/décès : en cas de vie, l'épargne appartient à l'assuré (rachats partiels ou programmés, types de gestion) ; en cas de décès, les garanties déterminent ce que reçoivent les bénéficiaires — la garantie plancher « Sérénité » protège contre une baisse des supports, la « Revalorisée » applique sa propre mécanique (avec ses exclusions propres).",
+      "confusions_frequentes": "La garantie plancher protège les BÉNÉFICIAIRES en cas de décès, pas la valeur de rachat du vivant. Les exclusions de la garantie « Revalorisée » ne s'appliquent qu'à cette garantie, pas au contrat entier. L'assurance vie n'est pas un PER : l'épargne reste disponible (rachat), la fiscalité diffère (règles externes à vérifier).",
+      "situations_favorables": "Épargne de long terme avec disponibilité, transmission encadrée par le régime propre de l'assurance vie (à vérifier selon les règles en vigueur).",
+      "situations_defavorables": "Besoin d'un revenu garanti à la retraite sans discipline d'épargne (comparer au PER) ; aversion totale au risque si supports en unités de compte."
+    },
+    "Ma Retraite (plan d'épargne retraite individuel — PER)": {
+      "finalite": "Préparer un revenu de retraite : épargne dédiée, en principe indisponible jusqu'à la retraite, avec sortie en capital et/ou en rente viagère, et une protection décès (garantie plancher « Sérénité », capital en cas de décès avant liquidation).",
+      "logique_contractuelle": "La contrepartie de l'avantage retraite est l'INDISPONIBILITÉ de l'épargne (listée comme telle) hors cas de déblocage prévus par la réglementation (règles externes à vérifier). Au terme, l'assuré arbitre entre capital et rente viagère. Avant liquidation, le décès déclenche le versement aux bénéficiaires.",
+      "confusions_frequentes": "Le PER n'est pas une assurance vie : pas de rachat libre avant la retraite (hors cas légaux). La déductibilité éventuelle des versements et la fiscalité de sortie relèvent de règles fiscales EXTERNES et évolutives — toujours à vérifier à jour. La « sortie en rente » est irréversible une fois choisie.",
+      "situations_favorables": "Horizon retraite long, revenus imposables (intérêt fiscal éventuel à vérifier), discipline d'épargne souhaitée.",
+      "situations_defavorables": "Besoin de liquidité à moyen terme, horizon court avant retraite, situation fiscale non imposable (l'avantage à l'entrée disparaît — à vérifier)."
+    },
+    "Ma Protection Accident (Garantie des accidents de la vie)": {
+      "finalite": "Indemniser les préjudices corporels consécutifs aux accidents de la vie privée (activités courantes, accidents médicaux, infections nosocomiales, certains accidents de la route par dérogation) selon une logique INDEMNITAIRE de droit commun.",
+      "logique_contractuelle": "À la différence de la prévoyance forfaitaire, la GAV répare le PRÉJUDICE réel (barème type AQV, postes de préjudices du droit commun) : l'indemnisation dépend des séquelles évaluées, pas d'un capital fixé à l'avance. Elle intervient là où il n'y a pas de tiers responsable identifiable ou solvable.",
+      "confusions_frequentes": "La GAV ne couvre PAS la maladie (les affections, même consécutives à un accident garanti, sont exclues). Elle est indemnitaire (préjudice évalué) là où Avizen est forfaitaire (montants souscrits) : les deux logiques se complètent et peuvent se cumuler dans les limites contractuelles. Les accidents de la circulation ne sont couverts que par dérogations précises.",
+      "situations_favorables": "Famille exposée aux accidents domestiques/loisirs, complément indemnitaire d'une prévoyance forfaitaire, accidents médicaux.",
+      "situations_defavorables": "Attente de couverture maladie ; préjudices légers sous les seuils d'intervention ; faits intentionnels."
+    },
+    "Masterlife CREDIT": {
+      "finalite": "Assurance emprunteur : garantir le remboursement d'un crédit en cas de décès, PTIA, invalidité ou incapacité de travail de l'assuré — protéger simultanément le prêteur (remboursement) et la famille (dette éteinte ou échéances prises en charge).",
+      "logique_contractuelle": "Les prestations sont adossées au CRÉDIT (capital restant dû ou échéances) à hauteur de la quotité assurée : elles éteignent la dette, elles ne versent pas un revenu. Le dispositif AERAS (garantie invalidité spécifique GIS) ouvre l'accès aux profils médicaux aggravés. Les exclusions santé sensibles (affections psychologiques, dorso-vertébrales) peuvent être RACHETÉES par l'option Psy/Dos+.",
+      "confusions_frequentes": "L'assurance emprunteur ne remplace pas la prévoyance : elle paie la banque, pas la famille. La quotité choisie détermine la part de dette couverte par assuré. Sans l'option Psy/Dos+, les arrêts pour affections psychologiques ou dorsales peuvent n'être pas couverts — point de vigilance majeur en pratique.",
+      "situations_favorables": "Tout emprunteur ; co-emprunteurs devant arbitrer les quotités ; profils AERAS.",
+      "situations_defavorables": "Attente d'un revenu complémentaire pour la famille (voir prévoyance) ; états antérieurs non couverts ; arrêts psy/dos sans l'option dédiée."
+    }
+  },
+  "relations_internes": [
+    {"subject": "Avizen", "src": "ITT/Invalidité — exclusions spécifiques", "type": "excludes", "dst": "Indemnités journalières ITT toutes causes (optionnelle)"},
+    {"subject": "Avizen", "src": "ITT/Invalidité — exclusions spécifiques", "type": "excludes", "dst": "Indemnités journalières ITT par accident (optionnelle)"},
+    {"subject": "Avizen", "src": "Décès/IPT toutes causes — suicide 1re année", "type": "excludes", "dst": "Rente éducation décès / Rente éducation IPT (garantie principale)"},
+    {"subject": "Avizen", "src": "Exclusions communes — activités et sports à risque", "type": "excludes", "dst": "Indemnités journalières ITT par accident (optionnelle)"},
+    {"subject": "Avizen", "src": "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)", "type": "comparable_to", "dst": "Capital invalidité permanente partielle ou totale par accident (optionnelle)"},
+    {"subject": "Avizen", "src": "Indemnités journalières ITT toutes causes (optionnelle)", "type": "comparable_to", "dst": "Indemnités journalières ITT par accident (optionnelle)"},
+    {"subject": "Entour'Age", "src": "GIR 5 et 6", "type": "limits", "dst": "Rente viagère dépendance (garantie principale obligatoire)"},
+    {"subject": "Entour'Age", "src": "Formule Dépendance Totale et Partielle", "type": "refines", "dst": "Rente viagère dépendance (garantie principale obligatoire)"},
+    {"subject": "Entour'Age", "src": "Services pour l'aidant de l'assuré", "type": "complements", "dst": "Rente viagère dépendance (garantie principale obligatoire)"},
+    {"subject": "Masterlife CREDIT", "src": "Option Psy/Dos+", "type": "complements", "dst": "Incapacité de travail (IJ)"},
+    {"subject": "Masterlife CREDIT", "src": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion rachetable)", "type": "excludes", "dst": "Incapacité de travail (IJ)"},
+    {"subject": "Masterlife CREDIT", "src": "États antérieurs", "type": "excludes", "dst": "Invalidité totale ou partielle"}
+  ],
+  "relations_inter_contrats": [
+    {"src_subject": "Avizen", "type": "comparable_to", "dst_subject": "Avizen Pro",
+     "explication": "Mécanismes de prévoyance proches ; publics différents (particulier vs professionnel/TNS) et articulation aux régimes obligatoires différente."},
+    {"src_subject": "Avizen", "type": "complements", "dst_subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+     "explication": "Logiques complémentaires sur un même accident : prévoyance FORFAITAIRE (montants souscrits) + GAV INDEMNITAIRE (préjudice réel de droit commun)."},
+    {"src_subject": "Masterlife CREDIT", "type": "complements", "dst_subject": "Avizen",
+     "explication": "L'emprunteur éteint la dette envers la banque ; la prévoyance procure un revenu/capital à la famille : deux besoins distincts en cas de décès/invalidité."},
+    {"src_subject": "Essen'Ciel (assurance obsèques)", "type": "comparable_to", "dst_subject": "Essen'Ciel Patrimoine",
+     "explication": "Même univers (décès) mais finalités différentes : financement des obsèques vs capital décès viager patrimonial avec rachat."},
+    {"src_subject": "Excelium (assurance vie)", "type": "comparable_to", "dst_subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+     "explication": "Deux épargnes longues aux liquidités opposées : assurance vie rachetable à tout moment vs PER en principe indisponible jusqu'à la retraite ; fiscalités externes distinctes (à vérifier)."},
+    {"src_subject": "Entour'Age", "type": "complements", "dst_subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+     "explication": "Préparation du grand âge sous deux angles : revenu de retraite (PER) et risque de dépendance (rente viagère dédiée)."}
+  ]
+}
