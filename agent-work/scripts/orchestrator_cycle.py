@@ -18,6 +18,16 @@ MAX_LLM_TASKS_PER_CYCLE = 2
 CYCLE_TIME_BUDGET_S = 600
 
 
+def _preflight_keys(keys, L):
+    """Affiche la détection des clés (true/false uniquement) — jamais de valeur, longueur ou préfixe."""
+    def b(x):
+        return "true" if x else "false"
+    L("Gemini key detected: %s" % b(keys.get("gemini")))
+    L("Groq key detected: %s" % b(keys.get("groq")))
+    L("OpenRouter key detected: %s" % b(keys.get("openrouter")))
+    L("Cloudflare credentials detected: %s" % b(keys.get("cloudflare")))
+
+
 def _run_agent(agent, dry_run):
     args = [sys.executable, os.path.join(S.AGENT_WORK, "scripts", "orchestrator.py"), "--agent", agent]
     if dry_run:
@@ -77,11 +87,12 @@ def run_cycle(dry_run=False, deterministic=None, base_dir=ORCH_DIR):
                 "deterministic_ran": [], "llm_decisions": [], "tasks_executed": [], "tasks_deferred": [],
                 "provider_changes": [], "notes": []}
     try:
-        # 1) état persistant
+        # 1) état persistant + RE-DÉTECTION des clés à CHAQUE cycle (une absence ancienne ne bloque plus)
         registry = orch.ProviderRegistry(base_dir).reactivate_expired()
-        for pid, p in providers_cfg.items():
-            registry.set_key_detected(pid, bool(os.environ.get(p.get("api_key_env", "")))
-                                      and (p.get("style") != "cloudflare" or bool(os.environ.get(p.get("account_id_env", "")))))
+        keys = orch.detect_keys(providers_cfg)
+        for pid, present in keys.items():
+            registry.set_key_detected(pid, present)
+        _preflight_keys(keys, L)
         queue = orch.TaskQueue(base_dir).recover_stale()
         cost = orch.CostPolicy(policies, per_provider_cycle_cap=policies.get("limits", {}).get("max_llm_calls_per_run", 6))
 
@@ -95,20 +106,32 @@ def run_cycle(dry_run=False, deterministic=None, base_dir=ORCH_DIR):
         created = _build_llm_tasks(queue)
         L("[cycle] file: %d nouvelle(s) tâche(s) d'extraction depuis les trous de couverture" % created)
 
-        # 4) routage + exécution bornée des tâches LLM
+        # 4) routage + exécution bornée des tâches LLM.
+        # IDEMPOTENCE : un agent LLM (qui auto-batch ses zones) n'est exécuté qu'UNE fois par cycle ;
+        # une même (cycle_id, task_id, agent_type) n'est jamais rejouée (anti double-exécution/crash).
         scores = S.load_json(os.path.join(S.AGENT_WORK, "runs", "provider_scores.json"), default={}).get("providers", {})
-        executed = 0
+        idem = S.load_json(os.path.join(base_dir, "idempotency.json"), default={"done": []})
+        idem_done = set(idem.get("done", []))
+        ran_agents, executed = set(), 0
         for task in queue.ready_tasks():
             if executed >= MAX_LLM_TASKS_PER_CYCLE or (time.time() - t0) > CYCLE_TIME_BUDGET_S:
                 break
-            if caps.get("agents", {}).get(task["agent_type"], {}).get("kind") != "llm":
+            agent = task["agent_type"]
+            if caps.get("agents", {}).get(agent, {}).get("kind") != "llm":
                 continue
-            agent_caps = caps.get("agents", {}).get(task["agent_type"], {})
+            ikey = orch.idempotency_key(cid, task["task_id"], agent)
+            agent_caps = caps.get("agents", {}).get(agent, {})
             decision, why = orch.choose_engine(task, agent_caps, providers_cfg, registry, scores, ranks)
             if not decision:
                 task["status"] = "waiting_provider"
                 manifest["tasks_deferred"].append({"task_id": task["task_id"], "raison": why.get("reason")})
                 L("[cycle] tâche %s reportée: %s" % (task["task_id"], why.get("reason")))
+                continue
+            # Un seul run de cet agent par cycle : les autres tâches du même agent restent 'ready'
+            # (l'agent traite son lot de zones en un seul run — évite la double exécution).
+            if agent in ran_agents or ikey in idem_done:
+                task["status"] = "ready"
+                manifest["tasks_deferred"].append({"task_id": task["task_id"], "raison": "regroupé avec le run unique de %s ce cycle" % agent})
                 continue
             if not cost.can_call(decision["provider"]):
                 task["status"] = "waiting_reset"
@@ -118,17 +141,17 @@ def run_cycle(dry_run=False, deterministic=None, base_dir=ORCH_DIR):
             L("[cycle] ROUTAGE %s -> %s/%s (%s)" % (task["task_id"], decision["provider"], decision["model"], decision["reason"]))
             if not queue.claim(task, cid):
                 continue
-            # exécution réelle : extraction-llm (réutilise le routeur/quota existants)
-            st, tail = _run_agent(task["agent_type"], dry_run)
-            cost.record(decision["provider"])
-            # met à jour l'état fournisseur d'après le dernier run de l'agent
-            _sync_provider_state_from_run(registry, task["agent_type"])
+            st, tail = _run_agent(agent, dry_run)     # exécution réelle (réutilise routeur/quota)
+            cost.record(decision["provider"]); ran_agents.add(agent); idem_done.add(ikey)
+            _sync_provider_state_from_run(registry, agent)
             queue.finish(task, "completed" if st == "ok" else "failed_retryable",
                          provider=decision["provider"], model=decision["model"],
                          error=None if st == "ok" else tail, retry_delay_s=120)
             manifest["tasks_executed"].append({"task_id": task["task_id"], "provider": decision["provider"],
                                                "model": decision["model"], "status": task["status"]})
             executed += 1
+        if not dry_run:
+            S.write_json(os.path.join(base_dir, "idempotency.json"), {"done": list(idem_done)[-300:], "updated_at": orch._iso()})
 
         manifest["provider_changes"] = registry.snapshot()
 

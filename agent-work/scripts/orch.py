@@ -20,6 +20,23 @@ AUTH_COOLDOWN_SECONDS = 24 * 3600         # 401/403 : ne pas re-tenter en boucle
 STALE_RUNNING_SECONDS = 30 * 60           # une tâche 'running' plus vieille = crash -> requeue
 
 
+def detect_keys(providers_cfg):
+    """Détection RÉELLE des clés depuis l'environnement COURANT (recalculée à chaque cycle).
+    Retourne {provider: bool}. Ne lit ni ne révèle aucune valeur."""
+    out = {}
+    for pid, p in (providers_cfg or {}).items():
+        present = bool(os.environ.get(p.get("api_key_env", "")))
+        if p.get("style") == "cloudflare":
+            present = present and bool(os.environ.get(p.get("account_id_env", "")))
+        out[pid] = present
+    return out
+
+
+def idempotency_key(cycle_id, task_id, agent_type):
+    """Clé d'idempotence : une tâche donnée n'est exécutée qu'une fois par cycle."""
+    return "%s|%s|%s" % (cycle_id, task_id, agent_type)
+
+
 def _now():
     return datetime.datetime.now(datetime.timezone.utc)
 

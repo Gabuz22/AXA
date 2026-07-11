@@ -28,6 +28,7 @@ PERSISTENT = [
     "agent-work/runs/provider_metrics.json", "agent-work/runs/provider_scores.json", "agent-work/runs/benchmark.json",
     "agent-work/orchestrator/task_queue.json", "agent-work/orchestrator/provider_state.json",
     "agent-work/orchestrator/cycle_summary.json", "agent-work/orchestrator/cycles",
+    "agent-work/orchestrator/idempotency.json",
     "agent-work/backlog/completed.json", "agent-work/backlog/blocked.json",
 ]
 # CODE / DÉFINITIONS : jamais restaurés depuis la branche ; forcés depuis main.
