@@ -16,6 +16,8 @@ import deduplicate as DD
 import quota_manager as Q
 from agents import base
 
+AGENT_CODE_VERSION = "2.4.1"   # marqueur d'intégrité vérifié par le workflow (le code doit venir de main)
+
 CATEGORIES = ["garanties", "exclusions", "definitions", "conditions", "declencheurs", "plafonds",
               "franchises", "options", "cotisations", "delais", "fiscalite", "points-vigilance", "formules"]
 IMPORTANCE = {"mineure", "moyenne", "forte", "critique"}
@@ -42,6 +44,27 @@ def _norm(t):
     return re.sub(r"\s+", " ", t).strip().lower()
 
 
+def looks_like_summary(cite):
+    """True si la citation ressemble à une ligne de SOMMAIRE ou un RENVOI (preuve insuffisante).
+
+    Ex. « 5. La garantie décès p.20 », « Objet du contrat .......... 3 », « voir article 4 p.12 ».
+    Ces lignes ne prouvent pas le contenu contractuel : il faut analyser la page cible.
+    """
+    c = (cite or "").strip()
+    cl = c.lower()
+    if re.search(r"\.{4,}\s*\d{1,3}", c):                       # points de conduite « ...... 20 »
+        return True
+    if re.search(r"^\s*\d{1,3}[\.\)]\s+\S", c) and re.search(r"\bp\.?\s?\d{1,3}\b", cl):  # « 5. ... p.20 »
+        return True
+    if re.search(r"\b(voir|cf\.?|se reporter|reportez|renvoi|article)\b", cl) and re.search(r"\bp\.?\s?\d{1,3}\b", cl):
+        return True
+    if len(c) < 55 and re.search(r"\bp\.?\s?\d{1,3}\s*$", cl):   # court + n° de page en fin
+        return True
+    if re.search(r"^\s*(sommaire|table des matieres|table des mati\w+)\b", cl):
+        return True
+    return False
+
+
 def check_extraction(item, page_texts, categories, existing_excerpts):
     """Porte déterministe (aucun LLM) : preuve vérifiable seulement. Retourne (ok, raison)."""
     if not isinstance(item, dict):
@@ -59,6 +82,8 @@ def check_extraction(item, page_texts, categories, existing_excerpts):
     ncite = _norm(cite)
     if len(ncite) < 12:
         return False, "citation_trop_courte"
+    if looks_like_summary(cite):
+        return False, "sommaire_ou_renvoi_insuffisant"   # exige l'analyse de la page cible
     if ncite[:60] not in _norm(page_texts.get(page, "")):
         return False, "citation_introuvable_sur_page"
     if ncite in existing_excerpts:

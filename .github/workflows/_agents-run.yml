@@ -91,17 +91,32 @@ jobs:
           echo "dry=$DRY" >> "$GITHUB_OUTPUT"
           echo "Mode dry-run = $DRY"
 
-      - name: Préparer la branche dédiée (code frais de main + agent-work accumulé)
+      - name: Préparer la branche dédiée (CODE de main + état persistant de la branche)
         if: steps.gate.outputs.run == 'true' && steps.mode.outputs.dry == 'false'
         run: |
           git config user.name "gabriel-axa-agents[bot]"
           git config user.email "agents@users.noreply.github.com"
           git fetch origin "$AGENT_BRANCH" || true
           git switch -C "$AGENT_BRANCH" origin/main
-          # Réintègre les propositions déjà accumulées (agent-work/ uniquement) depuis la branche.
-          if git rev-parse --verify "origin/$AGENT_BRANCH" >/dev/null 2>&1; then
-            git checkout "origin/$AGENT_BRANCH" -- agent-work 2>/dev/null || true
+          # Réintègre UNIQUEMENT l'état persistant (allowlist) ; le code/config/schemas restent ceux de main.
+          python agent-work/scripts/restore_state.py
+
+      - name: Intégrité du code exécuté (fail-closed)
+        if: steps.gate.outputs.run == 'true' && steps.mode.outputs.dry == 'false'
+        run: |
+          echo "Commit main exécuté : $(git rev-parse origin/main)"
+          WORK=$(git hash-object agent-work/scripts/agents/extraction_llm.py)
+          MAINH=$(git rev-parse "origin/main:agent-work/scripts/agents/extraction_llm.py")
+          echo "hash extraction_llm.py exécuté=$WORK attendu(main)=$MAINH"
+          if [ "$WORK" != "$MAINH" ]; then
+            echo "::error::Le code de l'agent diffère de main (remplacé par la branche de propositions ?) — arrêt fail-closed."
+            exit 1
           fi
+          if ! grep -q 'AGENT_CODE_VERSION = "2\.4' agent-work/scripts/agents/extraction_llm.py; then
+            echo "::error::Marqueur de version v2.4 absent du code exécuté — arrêt fail-closed."
+            exit 1
+          fi
+          echo "Intégrité OK : code = main, marqueur v2.4 présent."
 
       - name: Exécuter l'agent (${{ inputs.agent }})
         if: steps.gate.outputs.run == 'true' && inputs.mode == 'agent' && inputs.agent != ''

@@ -50,6 +50,23 @@ class TestExtractionGate(unittest.TestCase):
         ok, why = EX.check_extraction(item(categorie="banane"), PAGE_TEXTS, CATS, set())
         self.assertFalse(ok); self.assertEqual(why, "categorie_hors_liste")
 
+    def test_summary_line_rejected(self):
+        # Une ligne de sommaire/renvoi ne suffit pas comme preuve.
+        pt = {20: "5. La garantie deces p.20 et autres rubriques du sommaire de la notice."}
+        it = {"categorie": "garanties", "texte": "garantie deces", "page": 20, "citation": "5. La garantie deces p.20", "confidence": 0.9}
+        ok, why = EX.check_extraction(it, pt, CATS, set())
+        self.assertFalse(ok); self.assertEqual(why, "sommaire_ou_renvoi_insuffisant")
+
+    def test_dot_leader_summary_rejected(self):
+        self.assertTrue(EX.looks_like_summary("Objet du contrat .......... 3"))
+        self.assertTrue(EX.looks_like_summary("voir article 4 p.12"))
+
+    def test_normal_citation_with_number_ok(self):
+        # Une vraie phrase contractuelle avec un montant ne doit PAS être prise pour un sommaire.
+        ok, why = EX.check_extraction(item(), PAGE_TEXTS, CATS, set())
+        self.assertTrue(ok, why)
+        self.assertFalse(EX.looks_like_summary("verse un capital de 10000 euros en cas de deces"))
+
     def test_absent_source_rejected_by_schema(self):
         # Une proposition d'extraction sans source (ni excerpt ni document) est rejetée par le validateur.
         prop = {
