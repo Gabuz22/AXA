@@ -251,7 +251,7 @@ class TestSecretsAndIdempotency(Base):
         os.environ["GEMINI_API_KEY"] = "x"
         calls = {"extraction-llm": 0}
         orig_run, orig_coord, orig_sync = OC._run_agent, OC._run_coordinator, OC._sync_provider_state_from_run
-        OC._run_agent = lambda agent, dry: (calls.__setitem__(agent, calls.get(agent, 0) + 1), ("ok", ""))[1]
+        OC._run_agent = lambda agent, dry, force_provider=None, force_model=None: (calls.__setitem__(agent, calls.get(agent, 0) + 1), ("ok", ""))[1]
         OC._run_coordinator = lambda dry: None
         OC._sync_provider_state_from_run = lambda reg, agent: None
         try:
@@ -274,6 +274,94 @@ class TestSecretsAndIdempotency(Base):
         blob = "\n".join(lines)
         self.assertIn("Gemini key detected: true", blob)
         self.assertNotIn("SUPERSECRETVALUE", blob)         # jamais la valeur
+
+
+class TestIntegrationChain(unittest.TestCase):
+    """Chaîne complète : fournisseur imposé par l'orchestrateur -> extraction-llm l'utilise réellement,
+    exactement un appel LLM, fournisseur=gemini, une proposition générée. Adaptateur gemini factice."""
+    PDF = os.path.join(S.REPO_ROOT, "data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04 Notice d'information Avizen.pdf")
+
+    def setUp(self):
+        import quota_manager as Q
+        from agents import extraction_llm as EX
+        try:
+            import pypdf  # noqa
+        except Exception:
+            self.skipTest("pypdf requis")
+        if not os.path.isfile(self.PDF):
+            self.skipTest("notice Avizen absente")
+        from providers import adapters
+        self.adapters = adapters
+        self.EX = EX; self.Q = Q
+        self.pages = EX._read_pdf_pages(self.PDF, 4, 4)
+        self.cite = " ".join(self.pages[4].split())[60:130]     # citation RÉELLE
+        self.calls = {"n": 0, "providers": []}
+
+        def fake_gemini(cfg, key, acc, msgs, mx, to):
+            self.calls["n"] += 1; self.calls["providers"].append("gemini")
+            item = {"categorie": "garanties", "texte": "element garantie", "page": 4, "citation": self.cite,
+                    "confidence": 0.9, "importance": "forte", "why_missing": "categorie vide"}
+            return json.dumps({"items": [item]}), 120, 40
+        self._orig = adapters.STYLES.get("gemini")
+        adapters.STYLES["gemini"] = fake_gemini
+        # gemini est en COOLDOWN local -> prouve que le forçage le contourne
+        self._old_cd = Q.provider_in_cooldown
+        Q.provider_in_cooldown = lambda pid: (pid == "gemini")
+        os.environ["GEMINI_API_KEY"] = "x"
+        os.environ["AXA_FORCE_PROVIDER"] = "gemini"
+        os.environ["AXA_FORCE_MODEL"] = "gemini-2.5-flash-lite"
+        # zone fixe pointant sur la vraie notice
+        self._old_sel = EX._select_zones
+        self._old_res = EX._resolve_pdf
+        self._old_rem = EX._remaining_daily_calls
+        def _sel(mem, n, learning):
+            mem.setdefault("contracts", {}).setdefault("avizen", {"pages_done": [], "pages_refused": [],
+                "next_page": 4, "total_pages": 50, "zones_done": 0, "proposed_fingerprints": [],
+                "last_processed_at": None, "nom_contrat": "Avizen"})
+            return [{"slug": "avizen", "contrat": "Avizen", "entry": {"nom_fichier": os.path.basename(self.PDF)},
+                     "start": 4, "end": 4, "gap_categories": ["garanties"]}]
+        EX._select_zones = _sel
+        EX._resolve_pdf = lambda entry: self.PDF
+        EX._remaining_daily_calls = lambda mem, pol: (50, 0, 50, "2026-07-11")
+
+    def tearDown(self):
+        if self._orig:
+            self.adapters.STYLES["gemini"] = self._orig
+        self.Q.provider_in_cooldown = self._old_cd
+        self.EX._select_zones = self._old_sel
+        self.EX._resolve_pdf = self._old_res
+        self.EX._remaining_daily_calls = self._old_rem
+        for k in ("GEMINI_API_KEY", "AXA_FORCE_PROVIDER", "AXA_FORCE_MODEL"):
+            os.environ.pop(k, None)
+
+    def _ctx(self):
+        import provider_router as PR
+        pol = S.load_policies(); pcfg = S.load_providers_config()
+        class Ctx:
+            def __init__(s):
+                s.agent_id = "extraction-llm"; s.run_id = "run_it"; s.mock = False; s.uses_llm = True
+                s.policies = pol; s.providers_cfg = pcfg; s.dry_run = True
+                s.limits = pol.get("limits", {}); s.task = {"id": "t", "scope": "", "type": "extraction"}
+                s.budget = orch_Q_budget(); s.router = PR.ProviderRouter(pcfg, pol, logger=lambda m: None)
+                s.provider_used = None; s.model_used = None; s.self_wrote = False; s._n = 0
+            def seq_next(s):
+                s._n += 1; return "%03d" % s._n
+        return Ctx()
+
+    def test_forced_provider_single_call_one_proposal(self):
+        ctx = self._ctx()
+        proposals, notes = self.EX.run(ctx)
+        self.assertEqual(self.calls["n"], 1, "exactement un appel LLM")
+        self.assertEqual(self.calls["providers"], ["gemini"])
+        self.assertEqual(ctx.provider_used, "gemini")     # fournisseur imposé réellement utilisé
+        self.assertGreaterEqual(ctx.budget.llm_calls, 1)  # Appels LLM > 0
+        self.assertGreaterEqual(len(proposals), 1)        # une proposition générée
+        self.assertEqual(proposals[0]["proposed_change"]["payload"]["categorie"], "garanties")
+
+
+def orch_Q_budget():
+    import quota_manager as Q
+    return Q.Budget(max_llm_calls=6, max_tokens=40000)
 
 
 if __name__ == "__main__":

@@ -28,15 +28,20 @@ def _preflight_keys(keys, L):
     L("Cloudflare credentials detected: %s" % b(keys.get("cloudflare")))
 
 
-def _run_agent(agent, dry_run):
+def _run_agent(agent, dry_run, force_provider=None, force_model=None):
     args = [sys.executable, os.path.join(S.AGENT_WORK, "scripts", "orchestrator.py"), "--agent", agent]
     if dry_run:
         args.append("--dry-run")
+    env = dict(os.environ)
+    env.pop("AXA_FORCE_PROVIDER", None); env.pop("AXA_FORCE_MODEL", None)
+    if force_provider:                       # impose le moteur choisi par l'orchestrateur (pas de second routage)
+        env["AXA_FORCE_PROVIDER"] = force_provider
+        if force_model:
+            env["AXA_FORCE_MODEL"] = force_model
     try:
-        r = subprocess.run(args, cwd=S.REPO_ROOT, capture_output=True, timeout=300)
+        r = subprocess.run(args, cwd=S.REPO_ROOT, capture_output=True, timeout=300, env=env)
         out = (r.stdout or b"").decode("utf-8", "replace")
         status = "ok" if r.returncode == 0 else "error"
-        # récupère le statut réel depuis le dernier manifeste de l'agent
         return status, out[-400:]
     except Exception as e:
         return "error", str(e)
@@ -141,7 +146,8 @@ def run_cycle(dry_run=False, deterministic=None, base_dir=ORCH_DIR):
             L("[cycle] ROUTAGE %s -> %s/%s (%s)" % (task["task_id"], decision["provider"], decision["model"], decision["reason"]))
             if not queue.claim(task, cid):
                 continue
-            st, tail = _run_agent(agent, dry_run)     # exécution réelle (réutilise routeur/quota)
+            # exécution réelle : le moteur choisi est IMPOSÉ à l'agent (pas de second routage).
+            st, tail = _run_agent(agent, dry_run, force_provider=decision["provider"], force_model=decision["model"])
             cost.record(decision["provider"]); ran_agents.add(agent); idem_done.add(ikey)
             _sync_provider_state_from_run(registry, agent)
             queue.finish(task, "completed" if st == "ok" else "failed_retryable",

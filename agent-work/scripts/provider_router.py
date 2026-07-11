@@ -83,8 +83,20 @@ class ProviderRouter:
             })
         return report
 
+    def forced_provider(self):
+        """Fournisseur imposé par le chef d'orchestre (AXA_FORCE_PROVIDER) : PAS de second routage."""
+        return os.environ.get("AXA_FORCE_PROVIDER") or None
+
     def available(self):
-        """Chaîne de secours : fournisseurs éligibles, hors cooldown, ordonnés par score appris puis priorité."""
+        """Chaîne de secours : fournisseurs éligibles, hors cooldown, ordonnés par score appris puis priorité.
+
+        Si un fournisseur est IMPOSÉ (AXA_FORCE_PROVIDER), le routeur ne fait PAS de second routage : il
+        retourne uniquement ce fournisseur (s'il est éligible), en IGNORANT le cooldown local — car
+        l'orchestrateur, autoritaire, l'a déjà jugé disponible via son propre registre d'état."""
+        forced = self.forced_provider()
+        if forced:
+            p = self.cfg.get("providers", {}).get(forced)
+            return [forced] if (p and self._eligible(p)) else []
         scores = self._scores()
         elig = [(pid, p) for pid, p in self.cfg.get("providers", {}).items()
                 if self._eligible(p) and not Q.provider_in_cooldown(pid)]
@@ -135,6 +147,9 @@ class ProviderRouter:
             key = self._key_for(p)
             account_id = self._account_for(p)
             models = p.get("models") or ([p.get("model")] if p.get("model") else [])
+            fmodel = os.environ.get("AXA_FORCE_MODEL")
+            if self.forced_provider() == pid and fmodel:
+                models = [fmodel]   # modèle imposé par l'orchestrateur : un seul essai, pas de second routage
             for model in models:
                 if pid == "openrouter" and ":free" not in model:
                     continue  # OpenRouter : jamais un modèle payant, même en dernier recours
