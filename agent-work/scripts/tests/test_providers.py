@@ -143,5 +143,121 @@ class TestRealConfig(unittest.TestCase):
         S.preflight(S.load_policies(), S.load_providers_config(), need_llm=True)
 
 
+class TestGeminiDiscovery(unittest.TestCase):
+    """Découverte des modèles Gemini + résilience au retrait d'un modèle (404)."""
+    def setUp(self):
+        self.tmp = tempfile.mkdtemp()
+        self.calls = []
+        self.discover_calls = {"n": 0}
+        self._old_cd = Q.provider_in_cooldown
+        Q.provider_in_cooldown = lambda pid: False
+        os.environ["GEMINI_API_KEY"] = "x"
+        self._old_style = adapters.STYLES.get("gemini")
+        self._old_disc = adapters.discover_gemini_models
+
+        def fake_gemini(cfg, key, acc, msgs, mx, to):
+            m = cfg.get("model"); self.calls.append(m)
+            if m == "gemini-2.5-flash-lite":
+                raise adapters.ProviderError("HTTP 404 : no longer available", code=404)
+            return "{}", 50, 20
+        adapters.STYLES["gemini"] = fake_gemini
+        self._discovered = {"gemini-2.5-flash-lite", "gemini-3.1-flash-lite", "gemini-3.1-flash"}
+
+        def fake_discover(base_url, key, timeout):
+            self.discover_calls["n"] += 1
+            return set(self._discovered)
+        adapters.discover_gemini_models = fake_discover
+
+    def tearDown(self):
+        Q.provider_in_cooldown = self._old_cd
+        adapters.STYLES["gemini"] = self._old_style
+        adapters.discover_gemini_models = self._old_disc
+        for k in ("GEMINI_API_KEY", "AXA_FORCE_PROVIDER", "AXA_FORCE_MODEL"):
+            os.environ.pop(k, None)
+        shutil.rmtree(self.tmp, ignore_errors=True)
+
+    def _cfg(self, models):
+        return {"version": "t", "providers": {"gemini": {
+            "active": True, "free_tier": True, "requires_paid": False, "requires_card": False,
+            "style": "gemini", "base_url": "https://x", "path": "/v1beta/models/{model}:generateContent",
+            "api_key_env": "GEMINI_API_KEY", "models": models, "priority": 1}}}
+
+    def _router(self, models):
+        return PR.ProviderRouter(self._cfg(models), S.load_policies(), logger=lambda m: None, state_dir=self.tmp)
+
+    def test_1_2_404_fallbacks_and_provider_stays_gemini(self):
+        os.environ["AXA_FORCE_PROVIDER"] = "gemini"; os.environ["AXA_FORCE_MODEL"] = "gemini-2.5-flash-lite"
+        r = self._router(["gemini-2.5-flash-lite", "gemini-3.1-flash-lite", "gemini-3.1-flash"])
+        res = r.chat([{"role": "user", "content": "hi"}], 100, Q.Budget(6, 100000))
+        self.assertEqual(res["provider"], "gemini")                 # 2. reste Gemini
+        self.assertEqual(res["model"], "gemini-3.1-flash-lite")     # 1. bascule vers 3.1-flash-lite
+        disc = json.load(open(os.path.join(self.tmp, "orchestrator/model_discovery.json"), encoding="utf-8"))
+        self.assertIn("gemini-2.5-flash-lite", disc["providers"]["gemini"]["disabled"])  # retiré désactivé
+
+    def test_3_model_absent_from_listing_ignored(self):
+        self._discovered = {"gemini-3.1-flash"}                     # 2.5 et 3.1-flash-lite absents du listing réel
+        r = self._router(["gemini-2.5-flash-lite", "gemini-3.1-flash-lite", "gemini-3.1-flash"])
+        res = r.chat([{"role": "user", "content": "hi"}], 100, Q.Budget(6, 100000))
+        self.assertEqual(res["model"], "gemini-3.1-flash")
+        self.assertNotIn("gemini-2.5-flash-lite", self.calls)       # jamais appelé
+        self.assertNotIn("gemini-3.1-flash-lite", self.calls)
+
+    def test_4_generatecontent_filter(self):
+        # discover_gemini_models réel : un modèle sans generateContent est exclu.
+        adapters.discover_gemini_models = self._old_disc            # vraie fonction
+        import io
+        class Resp:
+            def __enter__(s): return s
+            def __exit__(s, *a): return False
+            def read(s):
+                return json.dumps({"models": [
+                    {"name": "models/gemini-3.1-flash-lite", "supportedGenerationMethods": ["generateContent"]},
+                    {"name": "models/embedding-x", "supportedGenerationMethods": ["embedContent"]}]}).encode()
+        old = adapters.urllib.request.urlopen
+        adapters.urllib.request.urlopen = lambda req, timeout=0: Resp()
+        try:
+            got = adapters.discover_gemini_models("https://x", "key", 5)
+        finally:
+            adapters.urllib.request.urlopen = old
+        self.assertIn("gemini-3.1-flash-lite", got)
+        self.assertNotIn("embedding-x", got)                        # pas de generateContent -> exclu
+
+    def test_5_no_compatible_model_raises(self):
+        self._discovered = set()                                    # aucun modèle listé
+        r = self._router(["gemini-3.1-flash-lite"])
+        with self.assertRaises(PR.NoProviderAvailable):             # -> l'orchestrateur mettra waiting_provider
+            r.chat([{"role": "user", "content": "hi"}], 100, Q.Budget(6, 100000))
+
+    def test_6_no_paid_model_openrouter(self):
+        cfg = {"version": "t", "providers": {"openrouter": {
+            "active": True, "free_tier": True, "requires_paid": False, "requires_card": False,
+            "style": "openai", "base_url": "https://o", "api_key_env": "GEMINI_API_KEY",
+            "models": ["paid-model"], "priority": 4}}}
+        adapters.STYLES["openai"] = lambda *a, **k: (_ for _ in ()).throw(AssertionError("ne doit pas appeler un modèle payant"))
+        os.environ["AXA_FORCE_PROVIDER"] = "openrouter"
+        r = PR.ProviderRouter(cfg, S.load_policies(), logger=lambda m: None, state_dir=self.tmp)
+        with self.assertRaises(PR.NoProviderAvailable):
+            r.chat([{"role": "user", "content": "hi"}], 100, Q.Budget(6, 100000))
+
+    def test_7_discovery_once_per_cycle(self):
+        r = self._router(["gemini-3.1-flash-lite"])
+        r.chat([{"role": "user", "content": "a"}], 100, Q.Budget(6, 100000))
+        r.chat([{"role": "user", "content": "b"}], 100, Q.Budget(6, 100000))
+        self.assertEqual(self.discover_calls["n"], 1)               # cache : une seule découverte
+
+    def test_8_used_model_in_metrics(self):
+        r = self._router(["gemini-3.1-flash-lite"])
+        r.chat([{"role": "user", "content": "a"}], 100, Q.Budget(6, 100000))
+        met = json.load(open(os.path.join(self.tmp, PR.METRICS_FILE), encoding="utf-8"))
+        self.assertIn("gemini-3.1-flash-lite", met["providers"]["gemini"]["models"])
+
+
+class TestRealConfigModels(unittest.TestCase):
+    def test_no_obsolete_gemini_2_5_flash_lite(self):
+        cfg = S.load_providers_config()
+        self.assertNotIn("gemini-2.5-flash-lite", cfg["providers"]["gemini"]["models"])
+        self.assertEqual(cfg["providers"]["gemini"]["models"][0], "gemini-3.1-flash-lite")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

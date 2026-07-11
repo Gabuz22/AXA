@@ -193,6 +193,11 @@ def _sync_provider_state_from_run(registry, agent):
     if pid:
         c = m.get("counters", {})
         registry.record_success(pid, m.get("model_used"), c.get("tokens_in_est", 0), c.get("tokens_out_est", 0), 1.0)
+    # Reflète les modèles retirés (404) découverts par le routeur dans provider_state.json.
+    disc = S.load_json(os.path.join(S.AGENT_WORK, "orchestrator", "model_discovery.json"), default={"providers": {}})
+    for dpid, pd in disc.get("providers", {}).items():
+        for model in pd.get("disabled", []):
+            registry.disable_model(dpid, model)
 
 
 def _run_coordinator(dry_run):

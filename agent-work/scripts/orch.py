@@ -148,6 +148,13 @@ class ProviderRegistry:
                 p["next_available_at"] = _iso(_now() + datetime.timedelta(seconds=cooldown))
         return cat
 
+    def disable_model(self, provider, model):
+        """Reflète un modèle retiré (404) dans provider_state.json sans mettre le fournisseur en erreur."""
+        p = self._p(provider)
+        if model and model not in p["disabled_models"]:
+            p["disabled_models"].append(model)
+            p.setdefault("disabled_models_meta", {})[model] = {"cause": "model_unavailable", "at": _iso()}
+
     def snapshot(self):
         out = []
         for pid, p in self.data["providers"].items():

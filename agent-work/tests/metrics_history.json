@@ -337,6 +337,32 @@
         "statut": 83,
         "faux_positifs": 0
       }
+    },
+    {
+      "at": "2026-07-11T13:29:35Z",
+      "run_id": "run_adversarial-tests_20260711_132931",
+      "metrics": {
+        "n_tests": 76,
+        "contrats_precision": 100,
+        "contrats_recall": 100,
+        "perimetre": 100,
+        "source": 100,
+        "statut": 83,
+        "faux_positifs": 0
+      }
+    },
+    {
+      "at": "2026-07-11T13:31:48Z",
+      "run_id": "run_adversarial-tests_20260711_133144",
+      "metrics": {
+        "n_tests": 76,
+        "contrats_precision": 100,
+        "contrats_recall": 100,
+        "perimetre": 100,
+        "source": 100,
+        "statut": 83,
+        "faux_positifs": 0
+      }
     }
   ]
 }

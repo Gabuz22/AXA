@@ -83,4 +83,29 @@ def cloudflare_chat(cfg, api_key, account_id, messages, max_tokens, timeout):
     return text, 0, 0
 
 
+def discover_gemini_models(base_url, api_key, timeout):
+    """Liste RÉELLE des modèles Gemini accessibles à la clé qui supportent generateContent.
+    Retourne un set de noms courts (ex. 'gemini-3.1-flash-lite'). La clé n'est jamais journalisée."""
+    url = base_url.rstrip("/") + "/v1beta/models?key=" + api_key
+    req = urllib.request.Request(url, headers={"Content-Type": "application/json"}, method="GET")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            data = json.loads(r.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        code = getattr(e, "code", 0)
+        if code == 429:
+            raise RateLimited("HTTP 429 (listing)", code=429)
+        raise ProviderError("HTTP %d (listing)" % code, code=code)
+    except urllib.error.URLError as e:
+        raise ProviderError("réseau (listing): %s" % e, code=0)
+    out = set()
+    for m in data.get("models", []):
+        methods = m.get("supportedGenerationMethods") or m.get("supportedActions") or []
+        if "generateContent" in methods:
+            name = (m.get("name") or "").split("/")[-1]
+            if name:
+                out.add(name)
+    return out
+
+
 STYLES = {"openai": openai_chat, "gemini": gemini_chat, "cloudflare": cloudflare_chat}

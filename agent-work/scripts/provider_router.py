@@ -19,6 +19,8 @@ from providers import adapters
 
 METRICS_FILE = "runs/provider_metrics.json"
 SCORES_FILE = "runs/provider_scores.json"
+DISCOVERY_FILE = "orchestrator/model_discovery.json"
+DISCOVERY_TTL_S = 1800   # cache de découverte des modèles pour la durée d'un cycle
 
 
 class NoProviderAvailable(Exception):
@@ -141,6 +143,58 @@ class ProviderRouter:
         sc["updated_at"] = S.now_iso()
         S.write_json(spath, sc)
 
+    # ------------------------------------------------------------------ découverte & modèles retirés
+    def _discovery(self):
+        return S.load_json(os.path.join(self.state_dir, DISCOVERY_FILE), default={"providers": {}})
+
+    def _discovery_save(self, data, dry_run):
+        if dry_run:
+            return
+        data["updated_at"] = S.now_iso()
+        S.write_json(os.path.join(self.state_dir, DISCOVERY_FILE), data)
+
+    def disable_model(self, pid, model, code, dry_run=False):
+        """Modèle retiré (404/NOT_FOUND) : ne plus le réessayer à chaque tâche. Le fournisseur reste actif."""
+        data = self._discovery()
+        pd = data["providers"].setdefault(pid, {})
+        if model not in pd.setdefault("disabled", []):
+            pd["disabled"].append(model)
+        pd.setdefault("disabled_meta", {})[model] = {"code": code, "at": S.now_iso()}
+        self._discovery_save(data, dry_run)
+
+    def _discover_available(self, pid, p, key, timeout, dry_run):
+        """Modèles réellement accessibles (generateContent) pour la clé, en CACHE pour le cycle.
+        None => découverte indisponible (on ne bloque pas : repli sur la liste statique). Un seul appel/cycle."""
+        data = self._discovery()
+        pd = data["providers"].setdefault(pid, {})
+        epoch, avail = pd.get("available_epoch"), pd.get("available")
+        if avail is not None and epoch and (time.time() - float(epoch)) < DISCOVERY_TTL_S:
+            return set(avail)                        # cache frais : pas de second appel de découverte
+        if p.get("style") != "gemini":
+            return None
+        try:
+            found = adapters.discover_gemini_models(p["base_url"], key, timeout)
+        except Exception as e:
+            self.log("[router] découverte modèles indisponible (%s) -> repli liste statique" % S.redact_secrets(str(e), self.cfg))
+            return set(avail) if avail is not None else None
+        pd["available"] = sorted(found); pd["available_epoch"] = time.time()
+        self._discovery_save(data, dry_run)
+        self.log("[router] découverte %s : %d modèle(s) generateContent" % (pid, len(found)))
+        return found
+
+    def _models_for(self, pid, p, key, timeout, dry_run):
+        """Liste ordonnée des modèles candidats : statique - retirés, croisée avec le listing réel,
+        modèle imposé en tête s'il reste candidat. Ne choisit jamais un modèle absent du listing."""
+        disabled = set(self._discovery()["providers"].get(pid, {}).get("disabled", []))
+        base = [m for m in (p.get("models") or ([p.get("model")] if p.get("model") else [])) if m not in disabled]
+        avail = self._discover_available(pid, p, key, timeout, dry_run)
+        if avail is not None:
+            base = [m for m in base if m in avail]
+        fmodel = os.environ.get("AXA_FORCE_MODEL")
+        if self.forced_provider() == pid and fmodel and fmodel in base:
+            base = [fmodel] + [m for m in base if m != fmodel]
+        return base
+
     # ------------------------------------------------------------------ appel
     def chat(self, messages, max_tokens, budget, dry_run=False):
         est_in = Q.estimate_tokens("\n".join(m.get("content", "") for m in messages))
@@ -157,10 +211,7 @@ class ProviderRouter:
             style = adapters.STYLES[p["style"]]
             key = self._key_for(p)
             account_id = self._account_for(p)
-            models = p.get("models") or ([p.get("model")] if p.get("model") else [])
-            fmodel = os.environ.get("AXA_FORCE_MODEL")
-            if self.forced_provider() == pid and fmodel:
-                models = [fmodel]   # modèle imposé par l'orchestrateur : un seul essai, pas de second routage
+            models = self._models_for(pid, p, key, timeout, dry_run)  # découverte + retirés exclus, imposé en tête
             for model in models:
                 if pid == "openrouter" and ":free" not in model:
                     continue  # OpenRouter : jamais un modèle payant, même en dernier recours
@@ -185,10 +236,16 @@ class ProviderRouter:
                     break  # 429 : inutile d'essayer les autres modèles de ce fournisseur
                 except adapters.ProviderError as e:
                     dt = time.time() - t0
+                    code = getattr(e, "code", 0)
                     outcome = "timeout" if "timeout" in str(e).lower() or "réseau" in str(e).lower() else "error"
                     self._record(pid, model, outcome, 0, 0, dt, dry_run)
-                    self.log("[provider] used=%s model=%s status=%s (%s) -> modèle/fournisseur suivant" % (
-                        pid, model, outcome, S.redact_secrets(str(e), self.cfg)))
+                    if code == 404 or "not_found" in str(e).lower() or "no longer available" in str(e).lower():
+                        # modèle retiré : le désactiver (plus réessayé) et passer IMMÉDIATEMENT au modèle suivant
+                        self.disable_model(pid, model, 404, dry_run)
+                        self.log("[provider] used=%s model=%s status=model_unavailable (404) -> désactivé, modèle suivant" % (pid, model))
+                    else:
+                        self.log("[provider] used=%s model=%s status=%s (%s) -> modèle/fournisseur suivant" % (
+                            pid, model, outcome, S.redact_secrets(str(e), self.cfg)))
                     last_err = e
                     continue
         raise NoProviderAvailable("tous les fournisseurs gratuits ont échoué : %s" % (last_err or "inconnu"))

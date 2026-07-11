@@ -13,7 +13,7 @@
       "base_url": "https://generativelanguage.googleapis.com",
       "path": "/v1beta/models/{model}:generateContent",
       "api_key_env": "GEMINI_API_KEY",
-      "models": ["gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"],
+      "models": ["gemini-3.1-flash-lite", "gemini-3.1-flash", "gemini-flash-latest", "gemini-flash-lite-latest"],
       "max_output_tokens": 1024,
       "cost_per_1k": 0.0,
       "json_capable": true,

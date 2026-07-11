@@ -304,12 +304,14 @@ class TestIntegrationChain(unittest.TestCase):
             return json.dumps({"items": [item]}), 120, 40
         self._orig = adapters.STYLES.get("gemini")
         adapters.STYLES["gemini"] = fake_gemini
+        self._orig_disc = adapters.discover_gemini_models     # évite tout appel réseau réel de découverte
+        adapters.discover_gemini_models = lambda b, k, t: {"gemini-3.1-flash-lite"}
         # gemini est en COOLDOWN local -> prouve que le forçage le contourne
         self._old_cd = Q.provider_in_cooldown
         Q.provider_in_cooldown = lambda pid: (pid == "gemini")
         os.environ["GEMINI_API_KEY"] = "x"
         os.environ["AXA_FORCE_PROVIDER"] = "gemini"
-        os.environ["AXA_FORCE_MODEL"] = "gemini-2.5-flash-lite"
+        os.environ["AXA_FORCE_MODEL"] = "gemini-3.1-flash-lite"
         # zone fixe pointant sur la vraie notice
         self._old_sel = EX._select_zones
         self._old_res = EX._resolve_pdf
@@ -327,6 +329,7 @@ class TestIntegrationChain(unittest.TestCase):
     def tearDown(self):
         if self._orig:
             self.adapters.STYLES["gemini"] = self._orig
+        self.adapters.discover_gemini_models = self._orig_disc
         self.Q.provider_in_cooldown = self._old_cd
         self.EX._select_zones = self._old_sel
         self.EX._resolve_pdf = self._old_res
@@ -385,6 +388,7 @@ class TestSubprocessForcing(unittest.TestCase):
             "    print('ADAPTER_CALLED', cfg.get('model'))\n"
             "    return json.dumps({'items':[{'categorie':'garanties','texte':'x','page':4,'citation':CITE,'confidence':0.9,'importance':'forte','why_missing':'categorie vide'}]}), 120, 40\n"
             "adapters.STYLES['gemini'] = fake\n"
+            "adapters.discover_gemini_models = lambda b, k, t: {'gemini-3.1-flash-lite'}\n"
             "from agents import extraction_llm as EX\n"
             "def sel(mem, n, l):\n"
             "    mem.setdefault('contracts', {}).setdefault('avizen', {'pages_done':[], 'pages_refused':[], 'next_page':4, 'total_pages':50, 'zones_done':0, 'proposed_fingerprints':[], 'last_processed_at':None, 'nom_contrat':'Avizen'})\n"
@@ -400,14 +404,14 @@ class TestSubprocessForcing(unittest.TestCase):
         hpath = os.path.join(tempfile.mkdtemp(), "harness.py")
         with open(hpath, "w", encoding="utf-8") as f:
             f.write(harness)
-        env = dict(os.environ, GEMINI_API_KEY="x", AXA_FORCE_PROVIDER="gemini", AXA_FORCE_MODEL="gemini-2.5-flash-lite")
+        env = dict(os.environ, GEMINI_API_KEY="x", AXA_FORCE_PROVIDER="gemini", AXA_FORCE_MODEL="gemini-3.1-flash-lite")
         r = subprocess.run([sys.executable, hpath], cwd=S.REPO_ROOT, capture_output=True, text=True, timeout=120, env=env)
         out = r.stdout + r.stderr
         # 1) le sous-processus voit bien la variable forcée
         self.assertIn("AXA_FORCE_PROVIDER present: true", out, out[-800:])
         # 2) exactement un appel adaptateur, sur le modèle imposé
         self.assertEqual(out.count("ADAPTER_CALLED"), 1, out[-800:])
-        self.assertIn("ADAPTER_CALLED gemini-2.5-flash-lite", out)
+        self.assertIn("ADAPTER_CALLED gemini-3.1-flash-lite", out)
         # 3) le résumé montre le fournisseur réellement utilisé + un appel
         self.assertIn("Fournisseur : gemini", out, out[-800:])
         self.assertIn("Appels LLM : 1", out, out[-800:])
