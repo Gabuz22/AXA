@@ -16,16 +16,22 @@ import safety_checks as S
 
 
 def changed_files(root):
-    """Union des fichiers modifiés : indexés, non indexés, non suivis."""
+    """Union des fichiers modifiés : indexés, non indexés, non suivis.
+
+    IMPORTANT : sortie `-z` (séparateur NUL), qui n'est JAMAIS quotée ni échappée par git. Sans cela, git
+    entoure de guillemets et échappe en octal les noms contenant des caractères non-ASCII/spéciaux (accents,
+    parenthèses, tiret cadratin), ce qui faisait échouer à tort le contrôle de périmètre sur des fichiers
+    pourtant sous agent-work/ (ex. les fiches Inspecteur « essenciel_(assurance_obsèques).json »)."""
     files = set()
-    for cmd in (["git", "diff", "--cached", "--name-only"],
-                ["git", "diff", "--name-only"],
-                ["git", "ls-files", "--others", "--exclude-standard"]):
+    for cmd in (["git", "diff", "--cached", "--name-only", "-z"],
+                ["git", "diff", "--name-only", "-z"],
+                ["git", "ls-files", "--others", "--exclude-standard", "-z"]):
         try:
-            out = subprocess.run(cmd, cwd=root, capture_output=True, text=True, timeout=60)
+            out = subprocess.run(cmd, cwd=root, capture_output=True, timeout=60)   # bytes (pas text=)
         except Exception as e:
             raise S.SafetyError("git indisponible pour le contrôle de périmètre : %s" % e)
-        for line in out.stdout.splitlines():
+        # décodage UTF-8 explicite (les noms de fichiers git sont en UTF-8 ; ne pas dépendre de la locale).
+        for line in out.stdout.decode("utf-8", "surrogateescape").split("\0"):
             line = line.strip()
             if line:
                 files.add(line)
