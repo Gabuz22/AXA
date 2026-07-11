@@ -29,3 +29,7 @@ tout cas incomplet reste conditionnel. Isolé du produit.
 
 ## Journal
 - **Phase 1 — Audit** : ✅ (ce document).
+- **Phase 2 — Modèle de cas client** : ✅ `inspector_case.py` (statuts confirmé/déclaré/déduit/hypothèse/inconnu/à_vérifier ; hypothèse jamais un fait ; besoins exprimés≠déduits ; validate/completeness).
+- **Phase 3 — Décomposition du besoin** : ✅ `inspector_needs.py` (cas → besoins → contrats/garanties possibles → données nécessaires → arbitrages ; candidats prudents, jamais d'éligibilité).
+- **Phase 4 — Raisonnement mono-contrat** : ✅ `inspector_mono.py` (`reasoning_sheet` : finalité/architecture/déclencheurs/conditions/exclusions/environnement/incertitudes ; `apply_case` : conclusion PROVISOIRE conditionnelle, confiance bornée par complétude, validation requise). Trous L4 signalés « à approfondir (LLM) ».
+- **Phase 5 — Raisonnement multi-contrats** : ✅ `inspector_multi.py` (comparaison par mécanisme + classification substituables/complémentaires/doublon/non_comparables ; trous de couverture ; échoue proprement si aucun mécanisme partagé ; preuves par contrat, jamais mélangées).
