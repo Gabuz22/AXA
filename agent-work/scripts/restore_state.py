@@ -30,7 +30,7 @@ PERSISTENT = [
     "agent-work/knowledge/graph.json", "agent-work/knowledge/tasks.json",
     "agent-work/knowledge/cost_ledger.json", "agent-work/knowledge/coverage.json",
     "agent-work/knowledge/projection", "agent-work/knowledge/review.json", "agent-work/knowledge/manager.json",
-    "agent-work/knowledge/comparisons.json",
+    "agent-work/knowledge/comparisons.json", "agent-work/knowledge/inspector",
     "agent-work/quality/reports", "agent-work/quality/incidents",
     "agent-work/coordinator", "agent-work/runs/manifests",
     "agent-work/runs/provider_metrics.json", "agent-work/runs/provider_scores.json", "agent-work/runs/benchmark.json",

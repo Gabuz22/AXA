@@ -53,6 +53,7 @@ def run(ctx):
         projected = KP.write_projections(graph, domain_id, subjects, adapter, write, S.now_iso, dry_run=ctx.dry_run)
         review = _write_review(graph, domain_id, write, ctx.dry_run)
         _write_comparisons(graph, domain_id, adapter, subjects, write, ctx.dry_run)
+        _write_inspector(graph, domain_id, adapter, subjects, write, ctx.dry_run)
         _write_manager(domain_id, write, ctx.dry_run)
         depth = _avg_depth(graph, domain_id, subjects)
         per_domain[domain_id] = {"subjects": len(subjects), "tasks": total, "new": new,
@@ -106,6 +107,20 @@ def _write_review(graph, domain, write, dry_run):
 
 
 COMPARISONS = "agent-work/knowledge/comparisons.json"
+
+
+def _write_text(path, text):
+    import os
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
+
+
+def _write_inspector(graph, domain, adapter, subjects, write, dry_run):
+    """Projection Inspecteur (fiches + comparaison + matrices + outils + guide IA), isolée sous knowledge/inspector/."""
+    import inspector_projection as IP
+    wt = None if dry_run else _write_text
+    return IP.write_inspector(graph, subjects, domain, adapter, write, wt, S.now_iso, dry_run=dry_run)
 
 
 def _write_comparisons(graph, domain, adapter, subjects, write, dry_run):
