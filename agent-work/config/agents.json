@@ -131,6 +131,16 @@
       "priority_default": 3,
       "max_proposals_per_run": 5,
       "description": "Capacite LLM d'APPROFONDISSEMENT : puise dans le backlog (taches relier/expliquer du knowledge-curator) et ajoute au graphe des relations typees (L3) et des explications ancrees dans les preuves (L4). N'appelle le LLM que si utile (garde deterministe 'deja fait'), borne par le budget de run et un cost-ledger hebdomadaire par domaine. N'invente aucune entite. Fail-open sans cle. Routage multi-fournisseurs reutilise. Ecrit seulement dans agent-work/knowledge/."
+    },
+    {
+      "id": "inspector-evaluator",
+      "name": "Agent Évaluateur Inspecteur",
+      "kind": "deterministic",
+      "uses_llm": false,
+      "output_dir": "agent-work/knowledge/inspector",
+      "enabled": true,
+      "priority_default": 2,
+      "description": "DETERMINISTE, zero token. Execute le banc d'essai Inspecteur (mono/multi/cas client) via les moteurs, evalue les reponses par des controles deterministes (aucune invention, pas de melange de contrats, donnees manquantes signalees, prudence, je-ne-sais-pas), suit les scores et alimente le backlog en taches correctives. Ne modifie jamais la connaissance."
     }
   ]
 }

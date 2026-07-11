@@ -30,6 +30,7 @@ AGENT_MODULES = {
     "corpus-explorer": "agents.corpus_explorer",
     "knowledge-curator": "agents.knowledge_curator",
     "knowledge-builder": "agents.knowledge_builder",
+    "inspector-evaluator": "agents.inspector_evaluator",
 }
 
 

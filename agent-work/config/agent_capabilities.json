@@ -4,11 +4,20 @@
   "second_review": {
     "enabled": true,
     "triggers": {
-      "importance_in": ["forte", "critique"],
+      "importance_in": [
+        "forte",
+        "critique"
+      ],
       "confidence_below": 0.7,
       "documentary_contradiction": true,
       "grouped_bloc": true,
-      "sensitive_categories": ["exclusions", "plafonds", "franchises", "conditions", "fiscalite"],
+      "sensitive_categories": [
+        "exclusions",
+        "plafonds",
+        "franchises",
+        "conditions",
+        "fiscalite"
+      ],
       "guardrail_contested": true
     },
     "require_different_provider": true
@@ -16,39 +25,62 @@
   "agents": {
     "extraction-llm": {
       "kind": "llm",
-      "required_capabilities": ["document_reading", "json_strict", "exact_citation"],
+      "required_capabilities": [
+        "document_reading",
+        "json_strict",
+        "exact_citation"
+      ],
       "json_strict": true,
       "min_context_tokens": 4000,
       "reasoning_min": "moyen",
       "vision": false,
       "max_cost": 0,
-      "compatible_providers": ["gemini", "groq", "cloudflare", "openrouter"],
+      "compatible_providers": [
+        "gemini",
+        "groq",
+        "cloudflare",
+        "openrouter"
+      ],
       "compatible_models": [],
       "min_quality_history": 55,
       "allow_smaller_model": true
     },
     "concepts": {
       "kind": "llm",
-      "required_capabilities": ["json_strict", "reasoning"],
+      "required_capabilities": [
+        "json_strict",
+        "reasoning"
+      ],
       "json_strict": true,
       "min_context_tokens": 2000,
       "reasoning_min": "moyen",
       "vision": false,
       "max_cost": 0,
-      "compatible_providers": ["gemini", "groq", "openrouter"],
+      "compatible_providers": [
+        "gemini",
+        "groq",
+        "openrouter"
+      ],
       "compatible_models": [],
       "min_quality_history": 50,
       "allow_smaller_model": true
     },
     "classification": {
       "kind": "llm",
-      "required_capabilities": ["json_strict"],
+      "required_capabilities": [
+        "json_strict"
+      ],
       "json_strict": true,
       "min_context_tokens": 1000,
       "reasoning_min": "faible",
       "vision": false,
       "max_cost": 0,
-      "compatible_providers": ["cloudflare", "groq", "gemini", "openrouter"],
+      "compatible_providers": [
+        "cloudflare",
+        "groq",
+        "gemini",
+        "openrouter"
+      ],
       "compatible_models": [],
       "min_quality_history": 0,
       "allow_smaller_model": true,
@@ -56,13 +88,21 @@
     },
     "second-review": {
       "kind": "llm",
-      "required_capabilities": ["json_strict", "reasoning"],
+      "required_capabilities": [
+        "json_strict",
+        "reasoning"
+      ],
       "json_strict": true,
       "min_context_tokens": 4000,
       "reasoning_min": "eleve",
       "vision": false,
       "max_cost": 0,
-      "compatible_providers": ["gemini", "groq", "openrouter", "cloudflare"],
+      "compatible_providers": [
+        "gemini",
+        "groq",
+        "openrouter",
+        "cloudflare"
+      ],
       "compatible_models": [],
       "min_quality_history": 60,
       "allow_smaller_model": false,
@@ -71,37 +111,75 @@
     },
     "corpus-explorer": {
       "kind": "llm",
-      "required_capabilities": ["document_reading", "json_strict"],
+      "required_capabilities": [
+        "document_reading",
+        "json_strict"
+      ],
       "json_strict": true,
       "min_context_tokens": 3000,
       "reasoning_min": "moyen",
       "vision": false,
       "max_cost": 0,
-      "compatible_providers": ["gemini", "groq", "cloudflare", "openrouter"],
+      "compatible_providers": [
+        "gemini",
+        "groq",
+        "cloudflare",
+        "openrouter"
+      ],
       "compatible_models": [],
       "min_quality_history": 40,
       "allow_smaller_model": true
     },
     "knowledge-builder": {
       "kind": "llm",
-      "required_capabilities": ["json_strict", "reasoning"],
+      "required_capabilities": [
+        "json_strict",
+        "reasoning"
+      ],
       "json_strict": true,
       "min_context_tokens": 2000,
       "reasoning_min": "moyen",
       "vision": false,
       "max_cost": 0,
-      "compatible_providers": ["gemini", "groq", "openrouter", "cloudflare"],
+      "compatible_providers": [
+        "gemini",
+        "groq",
+        "openrouter",
+        "cloudflare"
+      ],
       "compatible_models": [],
       "min_quality_history": 45,
       "allow_smaller_model": true
     },
-    "quality": { "kind": "deterministic" },
-    "knowledge-curator": { "kind": "deterministic" },
-    "coverage-gaps": { "kind": "deterministic" },
-    "adversarial-tests": { "kind": "deterministic" },
-    "official-sources": { "kind": "deterministic" },
-    "ux-ai": { "kind": "deterministic" },
-    "coordinator": { "kind": "deterministic" }
+    "quality": {
+      "kind": "deterministic"
+    },
+    "knowledge-curator": {
+      "kind": "deterministic"
+    },
+    "coverage-gaps": {
+      "kind": "deterministic"
+    },
+    "adversarial-tests": {
+      "kind": "deterministic"
+    },
+    "official-sources": {
+      "kind": "deterministic"
+    },
+    "ux-ai": {
+      "kind": "deterministic"
+    },
+    "coordinator": {
+      "kind": "deterministic"
+    },
+    "inspector-evaluator": {
+      "kind": "deterministic"
+    }
   },
-  "reasoning_rank": { "faible": 1, "moyen": 2, "bon": 3, "eleve": 4 }
+  "reasoning_rank": {
+    "faible": 1,
+    "moyen": 2,
+    "bon": 3,
+    "eleve": 4
+  }
 }
