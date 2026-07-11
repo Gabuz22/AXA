@@ -1,6 +1,6 @@
 # Prêt pour examen
 
-_Généré le 2026-07-11T00:33:11Z. Lire CE fichier d'abord ; n'examiner que les éléments ci-dessous._
+_Généré le 2026-07-11T00:51:27Z. Lire CE fichier d'abord ; n'examiner que les éléments ci-dessous._
 
 **Réel en attente : 7.** 7 contrôle(s)/trou(s) déjà transformé(s) en incidents structurés et sourcés : Claude examine les 5 éléments prioritaires (~21 min économisées) au lieu de refaire l'analyse.
 
@@ -42,6 +42,13 @@ _Généré le 2026-07-11T00:33:11Z. Lire CE fichier d'abord ; n'examiner que les
 
 ## Ordre recommandé
 quality__liens_internes_ia_valides, quality__notices_pdf_r_solues_sur_disque, quality__preuves_avec_source_document_notice, coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques, coverage__categorie_absente_donnees_essen_ciel_patrimoine
+
+## Extraction — tri de validation
+- aucune proposition d'extraction en attente
+
+## Extraction — rentabilité
+Cette semaine : 0 pages analysées · 0 propositions · 0 retenues · ~0 min économisées.
+Coût moyen : — tok/proposition utile · — tok/proposition acceptée. Contrat le + rentable : — · fournisseur : —.
 
 ---
 Reprise : voir `agent-work/README.md` § « Reprise avec Claude ». Ne jamais relire tous les logs.

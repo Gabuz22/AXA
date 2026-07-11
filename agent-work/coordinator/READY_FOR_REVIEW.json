@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T00:33:11Z",
+  "generated_at": "2026-07-11T00:51:27Z",
   "high_priority": [
     {
       "proposal_id": "quality__liens_internes_ia_valides",
@@ -98,7 +98,7 @@
       "quality": 3,
       "coverage-gaps": 4
     },
-    "summary_bytes": 3571
+    "summary_bytes": 3901
   },
   "fixtures_note": "0 fixture(s) de démonstration exclue(s) de la priorisation (origin example_fixture/mock).",
   "estimated_work_saved": "7 contrôle(s)/trou(s) déjà transformé(s) en incidents structurés et sourcés : Claude examine les 5 éléments prioritaires (~21 min économisées) au lieu de refaire l'analyse."

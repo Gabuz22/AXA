@@ -114,7 +114,10 @@ def build():
     fixtures = [p for p in allp if p.get("origin") in FIXTURE_ORIGINS]
     real, deduped = _dedupe(real)
     for p in real:
-        p["_score"] = _score(p, agents_cfg)
+        s = _score(p, agents_cfg)
+        vs = p.get("proposed_change", {}).get("payload", {}).get("value_score")
+        # Les propositions d'extraction portent un score de valeur documentaire : on le mélange.
+        p["_score"] = round(0.5 * s + 0.5 * float(vs), 4) if isinstance(vs, (int, float)) else s
     real.sort(key=lambda p: -p["_score"])
 
     conflicts = _conflicts(real)
@@ -214,9 +217,54 @@ def _render_md(rj, top, anomalies, regressions, sources, conflicts, saved, n_fix
     else:
         L.append("- aucun")
     L += ["", "## Conflits", ("- " + "; ".join(str(c) for c in conflicts)) if conflicts else "- aucun",
-          "", "## Ordre recommandé", ", ".join(rj["recommended_order"]) or "—", "",
-          "---", "Reprise : voir `agent-work/README.md` § « Reprise avec Claude ». Ne jamais relire tous les logs."]
+          "", "## Ordre recommandé", ", ".join(rj["recommended_order"]) or "—"]
+    L.append(_extraction_addendum())
+    L += ["", "---", "Reprise : voir `agent-work/README.md` § « Reprise avec Claude ». Ne jamais relire tous les logs."]
     return "\n".join(L) + "\n"
+
+
+def _extraction_addendum():
+    """Tri de validation (rapide/moyenne/longue) + rentabilité hebdo de l'agent d'extraction."""
+    fast = {"5 s", "15 s", "30 s"}
+    triage = {"rapide (<30 s)": [], "moyenne": [], "longue": []}
+    for d in ("agent-work/extraction/pending",):
+        for f in glob.glob(os.path.join(S.REPO_ROOT, d, "*.json")):
+            try:
+                p = S.load_json(f)
+            except Exception:
+                continue
+            pl = p.get("proposed_change", {}).get("payload", {})
+            rc = pl.get("review_cost", "30 s")
+            key = "rapide (<30 s)" if rc in fast else ("longue" if rc == "2 min" else "moyenne")
+            triage[key].append("%s (%s, prio %s)" % (p.get("proposal_id"), rc, pl.get("priority_level", "?")))
+    out = ["", "## Extraction — tri de validation"]
+    any_ext = any(triage.values())
+    if not any_ext:
+        out.append("- aucune proposition d'extraction en attente")
+    else:
+        for k in ("rapide (<30 s)", "moyenne", "longue"):
+            if triage[k]:
+                out.append("- **%s** : %s" % (k, " ; ".join(triage[k][:6])))
+    try:
+        import sys as _sys
+        _sys.path.insert(0, os.path.join(S.REPO_ROOT, "agent-work/scripts"))
+        from agents import extraction_llm as EX
+        st = EX.production_stats()
+        w = st["week"]
+        out += ["", "## Extraction — rentabilité",
+                "Cette semaine : %d pages analysées · %d propositions · %d retenues · ~%s économisées." % (
+                    w["pages"], w["produced"], w["kept"], _hm(w["time_saved_min"])),
+                "Coût moyen : %s tok/proposition utile · %s tok/proposition acceptée. Contrat le + rentable : %s · fournisseur : %s." % (
+                    st["cost_per_useful_tokens"] or "—", st["cost_per_accepted_tokens"] or "—",
+                    st["best_contract"] or "—", st["best_provider"] or "—")]
+    except Exception:
+        pass
+    return "\n".join(out)
+
+
+def _hm(minutes):
+    h, m = divmod(int(minutes or 0), 60)
+    return ("%dh%02d" % (h, m)) if h else ("%d min" % m)
 
 
 if __name__ == "__main__":

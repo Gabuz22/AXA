@@ -83,14 +83,6 @@ class TestConfidenceAndLoad(unittest.TestCase):
         c, _ = EX.realistic_confidence({"confidence": 0.1, "citation": "ab"})
         self.assertGreaterEqual(c, 0.30)
 
-    def test_adaptive_zone_count(self):
-        self.assertEqual(EX.adaptive_zone_count(0), 0)
-        self.assertEqual(EX.adaptive_zone_count(3), 1)
-        self.assertEqual(EX.adaptive_zone_count(10), 2)
-        self.assertEqual(EX.adaptive_zone_count(25), 3)
-        self.assertEqual(EX.adaptive_zone_count(50), 4)
-        self.assertEqual(EX.adaptive_zone_count(200), 5)
-
     def test_enum_cleaning(self):
         self.assertEqual(EX._clean_enum("Critique", EX.IMPORTANCE), "critique")
         self.assertEqual(EX._clean_enum("inventé", EX.IMPORTANCE), "")   # jamais inventé
@@ -100,6 +92,41 @@ class TestConfidenceAndLoad(unittest.TestCase):
         tp = EX._target_path("Avizen", "garanties")
         self.assertIn("Avizen", tp)
         self.assertIn("garanties", tp)
+
+
+class TestValueAndQuota(unittest.TestCase):
+    def test_quota_percent(self):
+        self.assertEqual(EX.quota_percent(50, 50), 100)
+        self.assertEqual(EX.quota_percent(0, 50), 0)
+        self.assertEqual(EX.quota_percent(25, 50), 50)
+
+    def test_decide_load_follows_quota(self):
+        self.assertEqual(EX.decide_load(0, 10)[0], 0)
+        self.assertEqual(EX.decide_load(85, 10)[0], 5)   # quota confortable
+        self.assertEqual(EX.decide_load(65, 10)[0], 4)
+        self.assertEqual(EX.decide_load(45, 10)[0], 3)
+        self.assertEqual(EX.decide_load(25, 10)[0], 2)
+        self.assertEqual(EX.decide_load(10, 10)[0], 1)   # quota faible
+
+    def test_decide_load_capped_by_remaining_calls(self):
+        z, why = EX.decide_load(90, 2)   # confortable mais 2 appels restants
+        self.assertEqual(z, 2)
+
+    def test_value_score_monotonic(self):
+        low = EX.value_score("mineure", "2 min", 0.4, 1.0, 0.6)
+        high = EX.value_score("critique", "5 s", 1.0, 1.4, 0.95)
+        self.assertLess(low, high)
+        self.assertLessEqual(high, 1.0)
+
+    def test_category_weight_learning(self):
+        lg = {"definitions": {"accepted": 8, "rejected": 0}, "formules": {"accepted": 0, "rejected": 6}}
+        self.assertGreater(EX.category_weight("definitions", lg), EX.category_weight("formules", lg))
+        self.assertEqual(EX.category_weight("garanties", {"garanties": {"accepted": 0, "rejected": 0}}), 1.0)
+
+    def test_priority_level(self):
+        self.assertEqual(EX._priority_level(0.7), "haute")
+        self.assertEqual(EX._priority_level(0.5), "moyenne")
+        self.assertEqual(EX._priority_level(0.2), "basse")
 
 
 if __name__ == "__main__":
