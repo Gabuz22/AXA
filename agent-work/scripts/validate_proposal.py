@@ -113,6 +113,13 @@ def validate(proposal, policies=None):
         if proposal.get("validation_required") is not True:
             errors.append("changement réglementaire sans validation_required=true")
 
+    # extraction-llm : la confiance ne doit jamais dépasser 0.95 (v2.4). Une valeur supérieure trahit une
+    # proposition produite par une ANCIENNE version du code (bug « ancien code réexécuté ») => rejetée.
+    if proposal.get("agent_id") == "extraction-llm":
+        conf = proposal.get("confidence")
+        if isinstance(conf, (int, float)) and not isinstance(conf, bool) and conf > 0.95:
+            errors.append("extraction-llm : confidence %.2f > 0.95 (proposition d'ancienne version, rejetée)" % conf)
+
     # Source obligatoire pour les types factuels
     ptype = (proposal.get("task") or {}).get("type")
     if ptype in ("extraction", "concept", "relation"):

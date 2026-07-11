@@ -155,6 +155,45 @@
         "statut": 83,
         "faux_positifs": 0
       }
+    },
+    {
+      "at": "2026-07-11T01:30:42Z",
+      "run_id": "run_adversarial-tests_20260711_013037",
+      "metrics": {
+        "n_tests": 76,
+        "contrats_precision": 100,
+        "contrats_recall": 100,
+        "perimetre": 100,
+        "source": 100,
+        "statut": 83,
+        "faux_positifs": 0
+      }
+    },
+    {
+      "at": "2026-07-11T01:33:08Z",
+      "run_id": "run_adversarial-tests_20260711_013304",
+      "metrics": {
+        "n_tests": 76,
+        "contrats_precision": 100,
+        "contrats_recall": 100,
+        "perimetre": 100,
+        "source": 100,
+        "statut": 83,
+        "faux_positifs": 0
+      }
+    },
+    {
+      "at": "2026-07-11T01:34:10Z",
+      "run_id": "run_adversarial-tests_20260711_013405",
+      "metrics": {
+        "n_tests": 76,
+        "contrats_precision": 100,
+        "contrats_recall": 100,
+        "perimetre": 100,
+        "source": 100,
+        "statut": 83,
+        "faux_positifs": 0
+      }
     }
   ]
 }

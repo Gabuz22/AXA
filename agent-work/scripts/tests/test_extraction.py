@@ -67,6 +67,25 @@ class TestExtractionGate(unittest.TestCase):
         self.assertTrue(ok, why)
         self.assertFalse(EX.looks_like_summary("verse un capital de 10000 euros en cas de deces"))
 
+    def test_extraction_confidence_over_095_rejected(self):
+        # Une proposition extraction-llm à confidence 1.0 = ancienne version => rejetée par le validateur.
+        base = {
+            "proposal_id": "extraction_llm_old", "agent_id": "extraction-llm", "run_id": "run_x",
+            "created_at": "2026-01-01T00:00:00Z", "status": "pending_review",
+            "task": {"id": "t", "type": "extraction", "scope": ""},
+            "target": {"contract": "avizen", "file": EX.MASTER_A, "section": "garanties"},
+            "source": {"type": "pdf", "document": "notice.pdf", "page": 20, "excerpt": "5. La garantie deces p.20"},
+            "proposed_change": {"operation": "add", "payload": {"categorie": "garanties", "texte": "x"}},
+            "reasoning_summary": "x", "confidence": 1.0, "validation_required": True,
+            "automatic_checks": {"schema_valid": True, "source_resolves": True, "duplicate_detected": False, "scope_allowed": True},
+        }
+        ok, errs = VP.validate(base)
+        self.assertFalse(ok)
+        self.assertTrue(any("0.95" in e for e in errs))
+        base2 = dict(base); base2["confidence"] = 0.95
+        ok2, _ = VP.validate(base2)
+        self.assertTrue(ok2)
+
     def test_absent_source_rejected_by_schema(self):
         # Une proposition d'extraction sans source (ni excerpt ni document) est rejetée par le validateur.
         prop = {
