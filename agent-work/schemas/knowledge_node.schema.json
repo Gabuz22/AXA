@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Knowledge graph node & edge (générique, multi-domaine, multi-couche)",
+  "description": "Contrat durable du graphe de connaissances. Un nœud appartient à une COUCHE (1 evidence, 2 normalized, 4 understanding) ; une arête = couche 3 (relation typée). Chaque élément porte provenance, fraîcheur et confiance. Générique : aucun domaine codé en dur.",
+  "definitions": {
+    "source": {
+      "type": "object",
+      "properties": {
+        "document": { "type": ["string", "null"] },
+        "page": { "type": ["integer", "string", "null"] },
+        "citation": { "type": ["string", "null"] },
+        "url": { "type": ["string", "null"] },
+        "as_of": { "type": ["string", "null"] },
+        "evidence": { "type": ["string", "null"], "description": "id d'un nœud L1 (référence de preuve)" }
+      },
+      "additionalProperties": true
+    },
+    "freshness": {
+      "type": "object",
+      "properties": {
+        "as_of": { "type": ["string", "null"] },
+        "ttl_days": { "type": ["integer", "null"] },
+        "checked_at": { "type": ["string", "null"] }
+      },
+      "required": ["as_of", "checked_at"]
+    },
+    "node": {
+      "type": "object",
+      "required": ["id", "layer", "type", "domain", "subject", "confidence", "freshness", "status", "created_at"],
+      "properties": {
+        "id": { "type": "string" },
+        "layer": { "type": "integer", "enum": [1, 2, 4] },
+        "type": { "type": "string", "enum": ["evidence", "entity", "understanding"] },
+        "domain": { "type": ["string", "null"], "description": "ex: axa-contrat, fiscalite, reglementation. JAMAIS mélangé." },
+        "subject": { "type": ["string", "null"] },
+        "subtype": { "type": ["string", "null"] },
+        "label": { "type": ["string", "null"] },
+        "content": { "type": "object" },
+        "sources": { "type": "array", "items": { "$ref": "#/definitions/source" } },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "freshness": { "$ref": "#/definitions/freshness" },
+        "content_hash": { "type": "string" },
+        "status": { "type": "string", "enum": ["active", "superseded", "contested"] },
+        "superseded_by": { "type": ["string", "null"] },
+        "provenance_agent": { "type": ["string", "null"] },
+        "created_at": { "type": "string" },
+        "updated_at": { "type": ["string", "null"] },
+        "revision": { "type": ["integer", "null"] },
+        "times_seen": { "type": ["integer", "null"] }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "required": ["id", "layer", "type", "src", "dst", "confidence", "status", "created_at"],
+      "properties": {
+        "id": { "type": "string" },
+        "layer": { "type": "integer", "enum": [3] },
+        "type": { "type": "string", "enum": ["depends_on", "excludes", "complements", "triggers", "requires", "limits", "replaces", "comparable_to", "governed_by", "explains", "refines", "contradicts"] },
+        "src": { "type": "string" },
+        "dst": { "type": "string" },
+        "sources": { "type": "array", "items": { "$ref": "#/definitions/source" } },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "status": { "type": "string", "enum": ["active", "superseded", "contested"] },
+        "provenance_agent": { "type": ["string", "null"] },
+        "created_at": { "type": "string" },
+        "updated_at": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "version": { "type": "string" },
+    "nodes": { "type": "object", "additionalProperties": { "$ref": "#/definitions/node" } },
+    "edges": { "type": "object", "additionalProperties": { "$ref": "#/definitions/edge" } },
+    "updated_at": { "type": ["string", "null"] }
+  },
+  "required": ["version", "nodes", "edges"]
+}
