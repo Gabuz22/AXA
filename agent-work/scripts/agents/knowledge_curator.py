@@ -49,6 +49,8 @@ def run(ctx):
         tasks = KT.generate(graph, domain_id, subjects)
         total, new = KT.persist(tasks, S.load_json, write, S.now_iso, dry_run=ctx.dry_run)
         _write_coverage_report(graph, domain_id, adapter, subjects, write, ctx.dry_run)
+        import knowledge_projection as KP
+        projected = KP.write_projections(graph, domain_id, subjects, adapter, write, S.now_iso, dry_run=ctx.dry_run)
         depth = _avg_depth(graph, domain_id, subjects)
         per_domain[domain_id] = {"subjects": len(subjects), "tasks": total, "new": new,
                                  "graph": ing.get("graph", {}), "depth_moyenne": depth}
@@ -72,6 +74,7 @@ def run(ctx):
         "Profondeur moyenne": "%.2f" % per_domain[DOMAINS[0]]["depth_moyenne"],
         "Backlog de connaissance": totals["tasks_total"],
         "Nouvelles tâches": totals["tasks_new"],
+        "Projections IA écrites": projected,
         "Types de tâches": ", ".join("%s:%d" % (k, v) for k, v in sorted(st["by_type"].items())),
     }
     return [], ["knowledge-curator: %d sujet(s), %d tâche(s) au backlog (%d nouvelle(s)), 0 token"
