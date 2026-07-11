@@ -164,14 +164,14 @@ def preflight(policies, providers_cfg, need_llm):
         raise SafetyError("allow_paid_usage=true est interdit dans cet atelier : refus de démarrer.")
     problems = []
     for pid, p in (providers_cfg.get("providers") or {}).items():
-        if not p.get("enabled"):
+        if not p.get("active", p.get("enabled")):   # 'active' (nouveau) ou 'enabled' (compat)
             continue
-        if not p.get("free_tier", False) or p.get("requires_paid", False):
+        if (not p.get("free_tier", False)) or p.get("requires_paid", False) or p.get("requires_card", False):
             problems.append(pid)
     if problems:
         raise SafetyError(
-            "Fournisseur(s) activé(s) sans gratuité garantie alors que allow_paid_usage=false : %s. "
-            "Refus de démarrer (fail-closed)." % ", ".join(problems))
+            "Fournisseur(s) activé(s) non conformes (payant / carte bancaire / sans gratuité) alors que "
+            "allow_paid_usage=false : %s. Refus de démarrer (fail-closed)." % ", ".join(problems))
     return True
 
 

@@ -33,7 +33,7 @@
       "priority_default": 4,
       "max_pages_per_run": 6,
       "max_proposals_per_run": 5,
-      "description": "Premier agent IA : par micro-zones (2-5 pages) d'une notice PDF, propose des faits ABSENTS avec citation exacte VERIFIEE sur la page. Porte deterministe anti-hallucination. Ne modifie jamais masters/Vue IA/app/JSON ; ecrit seulement dans extraction/pending. API gratuite requise (GitHub Models > Gemini > Groq)."
+      "description": "Premier agent IA : par micro-zones (2-5 pages) d'une notice PDF, propose des faits ABSENTS avec citation exacte VERIFIEE sur la page. Porte deterministe anti-hallucination. Ne modifie jamais masters/Vue IA/app/JSON ; ecrit seulement dans extraction/pending. API gratuite requise (Gemini > Groq > Cloudflare > OpenRouter:free)."
     },
     {
       "id": "extraction-cg",

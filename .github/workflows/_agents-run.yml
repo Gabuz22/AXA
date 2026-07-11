@@ -33,7 +33,6 @@ on:
 permissions:
   contents: write        # uniquement pour la branche confinée agents/proposals
   pull-requests: write   # uniquement pour la PR de synthèse (jamais de merge auto)
-  models: read           # permet à GitHub Models d'accepter le GITHUB_TOKEN natif (gratuit, sans secret)
 
 concurrency:
   group: agents-proposals
@@ -44,16 +43,14 @@ jobs:
     runs-on: ubuntu-latest
     env:
       AGENT_BRANCH: agents/proposals
-      # GitHub Models via le jeton NATIF (gratuit, aucun secret à créer) — repli si GITHUB_MODELS_TOKEN absent.
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # Secrets fournisseurs (facultatifs). Absents => repli natif ci-dessus, sinon arrêt propre.
-      GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
+      # Fournisseurs LLM GRATUITS (facultatifs). Aucune clé => agents LLM en arrêt propre (no_work).
+      # GitHub Models a été retiré définitivement. Voir agent-work/README_API_CONFIGURATION.md.
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # uniquement pour gh (PR de synthèse), PAS un fournisseur LLM
     steps:
       - name: Portail d'activation (schedules)
         id: gate

@@ -25,6 +25,7 @@ PERSISTENT = [
     "agent-work/ux-ai/pending", "agent-work/ux-ai/reviewed", "agent-work/ux-ai/rejected",
     "agent-work/quality/reports", "agent-work/quality/incidents",
     "agent-work/coordinator", "agent-work/runs/manifests",
+    "agent-work/runs/provider_metrics.json", "agent-work/runs/provider_scores.json", "agent-work/runs/benchmark.json",
     "agent-work/backlog/completed.json", "agent-work/backlog/blocked.json",
 ]
 # CODE / DÉFINITIONS : jamais restaurés depuis la branche ; forcés depuis main.

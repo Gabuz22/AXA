@@ -1,0 +1,23 @@
+{
+  "run_id": "run_adversarial-tests_20260711_115926",
+  "agent_id": "adversarial-tests",
+  "started_at": "2026-07-11T11:59:26Z",
+  "finished_at": "2026-07-11T11:59:30Z",
+  "dry_run": false,
+  "status": "ok",
+  "task_id": "task_adversarial_routing_batch1",
+  "provider_used": null,
+  "model_used": null,
+  "counters": {
+    "llm_calls": 0,
+    "tokens_in_est": 0,
+    "tokens_out_est": 0,
+    "proposals_generated": 1,
+    "proposals_written": 1,
+    "proposals_deduplicated": 0,
+    "proposals_rejected_auto": 0
+  },
+  "notes": [
+    "tests: métriques=ok régressions=0"
+  ]
+}

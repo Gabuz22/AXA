@@ -92,8 +92,8 @@ jamais le produit. Il prépare des propositions d'ajout **vérifiables**, écrit
 - **Tokens minimaux.** Le LLM ne reçoit que les **pages de la zone** + les **catégories en trou** (pas les
   13) + quelques concepts + libellés existants **des seules catégories concernées**. JSON strict, aucune
   rédaction libre. Le résumé affiche **tokens économisés estimés**. **Coût nul** (paliers gratuits).
-- **Fournisseur (gratuit, sans secret).** GitHub Models via le **`GITHUB_TOKEN` natif** d'Actions
-  (permission `models: read`) — aucun secret à créer. Repli configurable Gemini / Groq. `allow_paid_usage:false`.
+- **Fournisseur (gratuit).** Plateforme multi-fournisseurs (voir `README_API_CONFIGURATION.md`) :
+  **Gemini** (principal) → Groq → Cloudflare → OpenRouter `:free`. Une clé suffit. `allow_paid_usage:false`.
   **Arrêt propre** si aucun fournisseur gratuit ou quota épuisé.
 - **Format enrichi.** Chaque proposition porte : `confidence_reason`, `importance`, `review_cost`,
   `target_path`, `citation_exacte`, `why_missing` (déduits ou vides — jamais inventés). Confiance
@@ -108,25 +108,35 @@ jamais le produit. Il prépare des propositions d'ajout **vérifiables**, écrit
 - **Activation** : `.github/workflows/agents-extraction-llm.yml` (manuel ; décommenter `schedule` +
   configurer un secret fournisseur + `AGENTS_ENABLED=true` pour l'autonomie).
 
-## Fournisseurs gratuits
+## Fournisseurs gratuits (plateforme multi-fournisseurs, sans GitHub Models)
 
-Couche multi-fournisseurs configurable dans `config/providers.json` (aucun quota/modèle/URL codé en dur).
-Adaptateurs : **GitHub Models, Gemini, Groq, Cloudflare Workers AI, OpenRouter (modèles `:free` uniquement)**.
-Le routeur choisit un fournisseur gratuit disponible, respecte un budget par run, gère les 429 (cooldown +
-bascule), et **s'arrête proprement** si aucun quota gratuit n'est disponible.
+Couche **entièrement déclarative** dans `config/providers.json` : le routeur ne lit que ce fichier
+(aucun quota/modèle/URL codé en dur). Ajouter/retirer un fournisseur = éditer le JSON, sans toucher au code.
+Détail et configuration en < 2 min : **[`README_API_CONFIGURATION.md`](README_API_CONFIGURATION.md)**.
+
+Fournisseurs supportés (tous **gratuits, sans carte bancaire**) — **GitHub Models a été retiré définitivement** :
+1. **Gemini** (principal, `gemini-2.5-flash-lite` → `flash` → …) · 2. **Groq** · 3. **Cloudflare Workers AI** ·
+4. **OpenRouter** (`:free` uniquement, désactivé par défaut).
+
+Le routeur : **auto-détecte** les clés présentes, construit la **chaîne de secours** ordonnée par un
+**score appris** (qualité mesurée + fiabilité) puis par la priorité, essaie **plusieurs modèles** par
+fournisseur, **bascule** sur 429/erreur/timeout, enregistre des **métriques par fournisseur**
+(`runs/provider_metrics.json`), et **s'arrête proprement** si aucun quota gratuit. Un **benchmark**
+(`scripts/benchmark_providers.py`, mesure seule) compare les fournisseurs et met à jour les scores.
 
 `policies.json` impose `"allow_paid_usage": false`. Le **préflight refuse de démarrer** si un fournisseur
-activé n'est pas `free_tier` / est `requires_paid`. ⚠️ On ne peut pas **garantir** qu'une API restera
-gratuite : la gratuité est traitée comme une capacité configurable, revérifiée à l'exécution via les erreurs de quota.
+actif est `requires_paid`, `requires_card`, ou non `free_tier`. Jamais OpenAI, jamais de carte bancaire.
+⚠️ On ne peut pas garantir qu'une API restera gratuite : la gratuité est une capacité configurable,
+revérifiée à l'exécution (429 → bascule). Vérifier : `python scripts/provider_router.py`.
 
 ## Secrets (à ajouter par vous)
 
-Dans **Settings → Secrets and variables → Actions → Secrets** du dépôt (aucun n'est obligatoire ; sans
-secret, les agents LLM s'arrêtent proprement) :
+Dans **Settings → Secrets and variables → Actions → Secrets** (aucun obligatoire ; sans secret, les agents
+LLM s'arrêtent proprement). **Une** clé suffit (Gemini recommandé) — voir `README_API_CONFIGURATION.md` :
 
 ```
-GITHUB_MODELS_TOKEN     GEMINI_API_KEY     GROQ_API_KEY
-CLOUDFLARE_ACCOUNT_ID   CLOUDFLARE_API_TOKEN   OPENROUTER_API_KEY
+GEMINI_API_KEY     GROQ_API_KEY
+CLOUDFLARE_API_TOKEN   CLOUDFLARE_ACCOUNT_ID   OPENROUTER_API_KEY
 ```
 
 Et dans **Variables** :

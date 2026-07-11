@@ -37,7 +37,7 @@ def _post(url, headers, payload, timeout):
 
 
 def openai_chat(cfg, api_key, account_id, messages, max_tokens, timeout):
-    """Style OpenAI-compatible : GitHub Models, Groq, OpenRouter."""
+    """Style OpenAI-compatible : Groq, OpenRouter (modèles ':free' uniquement)."""
     url = cfg["base_url"].rstrip("/") + cfg.get("path", "/chat/completions")
     headers = {"Authorization": "Bearer %s" % api_key, "Content-Type": "application/json"}
     payload = {"model": cfg["model"], "messages": messages,

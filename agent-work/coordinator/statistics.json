@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-11T01:34:11Z",
+  "generated_at": "2026-07-11T12:01:35Z",
   "totals": {
-    "runs": 57,
+    "runs": 63,
     "llm_calls": 0,
     "tokens_in_est": 0,
     "tokens_out_est": 0,
-    "proposals_generated": 74,
+    "proposals_generated": 80,
     "proposals_pending_real": 7,
     "proposals_fixtures": 0,
     "proposals_deduplicated": 0,
@@ -14,8 +14,8 @@
   },
   "per_agent": {
     "adversarial-tests": {
-      "runs": 21,
-      "proposals_generated": 22
+      "runs": 24,
+      "proposals_generated": 25
     },
     "concepts": {
       "runs": 1,
@@ -42,8 +42,8 @@
       "proposals_generated": 19
     },
     "ux-ai": {
-      "runs": 18,
-      "proposals_generated": 18
+      "runs": 21,
+      "proposals_generated": 21
     }
   }
 }

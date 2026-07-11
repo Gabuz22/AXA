@@ -259,6 +259,18 @@ def _extraction_addendum():
                     st["best_contract"] or "—", st["best_provider"] or "—")]
     except Exception:
         pass
+    # Récapitulatif fournisseurs LLM (auto-détection + métriques), si disponible.
+    try:
+        m = S.load_json(os.path.join(S.REPO_ROOT, "agent-work/runs/provider_metrics.json"), default={"providers": {}})
+        if m.get("providers"):
+            out += ["", "## Fournisseurs LLM (métriques)"]
+            for pid, d in m["providers"].items():
+                avg = (d.get("total_time_s", 0) / d["calls"]) if d.get("calls") else 0
+                out.append("- **%s** : appels %d · succès %d · erreurs %d · tok %d/%d · temps moy %.2fs" % (
+                    pid, d.get("calls", 0), d.get("success", 0), d.get("error", 0),
+                    d.get("tokens_in", 0), d.get("tokens_out", 0), avg))
+    except Exception:
+        pass
     return "\n".join(out)
 
 
