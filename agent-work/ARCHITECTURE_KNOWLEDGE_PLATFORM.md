@@ -139,8 +139,8 @@ HAS → adaptateur ┘
 | Phase | Contenu | État |
 |---|---|---|
 | **0 — Fondation** | `knowledge_graph.py` (4 couches, provenance/fraîcheur/dédup) + `coverage_model.py` (profondeur) + schéma + tests | **✅ livré (v2.8)** |
-| **1 — Adaptateur & alimentation** | `DomainAdapter` + adaptateur AXA ; `corpus-explorer` et `extraction-llm` écrivent en L1/L2 dans le graphe (additif, en parallèle de l'existant) | à valider |
-| **2 — Passes déterministes** | gap/task-generator sur le graphe, duplicate/contradiction/freshness, cost-ledger ; branchées dans le cycle d'orchestration | à valider |
+| **1 — Adaptateur & alimentation** | `domain_adapter.py` (interface + registre) + `domains/axa.py` + `knowledge_ingest.py` (ingestion DÉTERMINISTE : connaissance structurée → L2+L1, propositions extraction → L1+L2 ; idempotent, 0 token). Vérifié : 196 entités L2 + 140 preuves L1 sur 9 contrats | **✅ livré (v2.8)** |
+| **2 — Passes déterministes** | gap/task-generator sur le graphe (branché au cycle) → tâches de profondeur dans task_queue ; duplicate/contradiction/freshness ; cost-ledger | à construire |
 | **3 — Capacités LLM ciblées** | relation-builder (L3), understanding-builder (L4) — appelées seulement sur axes faibles | à valider |
 | **4 — Environnement** | environment/official-sources-builder : fiscalité/réglementation en domaines séparés, reliés par `governed_by` | à valider |
 | **5 — Projection produit** | export lecture seule du graphe vers une future Vue IA enrichie (jamais d'écriture produit auto) | à valider |
@@ -158,5 +158,10 @@ Chaque phase est **additive** (nouveaux fichiers), **rétrocompatible** (l'exist
 - `scripts/tests/test_knowledge_platform.py` — 12 tests (couches, domaines séparés + relations transverses,
   dédup/idempotence, évidence append-only, profondeur, tâches d'approfondissement sur entité connue).
 
-Aucun agent/workflow/produit existant n'est modifié. La fondation est inerte tant que la phase 1 ne la
-branche pas : **rien ne peut casser**.
+**Phase 1 (livrée) :** `scripts/domain_adapter.py`, `scripts/domains/axa.py`, `scripts/knowledge_ingest.py`,
+`scripts/tests/test_domain_ingest.py`. L'ingestion déterministe peuple le graphe depuis la connaissance
+structurée (avec provenance) et les propositions d'extraction — **0 token**, idempotent, additif.
+
+Aucun agent/workflow/produit existant n'est modifié. Le graphe est alimenté par une passe déterministe
+en lecture seule des sorties existantes : **rien ne peut casser**. La prochaine étape (phase 2) branche le
+`gap/task-generator` sur le cycle pour que la profondeur manquante devienne des tâches exécutables.
