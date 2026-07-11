@@ -122,6 +122,13 @@ jobs:
           if [ "${{ steps.mode.outputs.dry }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
           python agent-work/scripts/orchestrator.py $ARGS
 
+      - name: Exécuter le cycle d'orchestration
+        if: steps.gate.outputs.run == 'true' && inputs.mode == 'cycle'
+        run: |
+          ARGS=""
+          if [ "${{ steps.mode.outputs.dry }}" = "true" ]; then ARGS="--dry-run"; fi
+          python agent-work/scripts/orchestrator_cycle.py $ARGS
+
       - name: Rafraîchir la synthèse coordinateur
         if: steps.gate.outputs.run == 'true' && steps.mode.outputs.dry == 'false'
         run: python agent-work/scripts/build_review_summary.py

@@ -1,8 +1,8 @@
 # Prêt pour examen
 
-_Généré le 2026-07-11T12:01:35Z. Lire CE fichier d'abord ; n'examiner que les éléments ci-dessous._
+_Généré le 2026-07-11T12:21:15Z. Lire CE fichier d'abord ; n'examiner que les éléments ci-dessous._
 
-**Réel en attente : 7.** 7 contrôle(s)/trou(s) déjà transformé(s) en incidents structurés et sourcés : Claude examine les 5 éléments prioritaires (~21 min économisées) au lieu de refaire l'analyse.
+**Réel en attente : 8.** 8 contrôle(s)/trou(s) déjà transformé(s) en incidents structurés et sourcés : Claude examine les 5 éléments prioritaires (~24 min économisées) au lieu de refaire l'analyse.
 
 ## Haute priorité (résultats réels)
 1. **quality** — quality__liens_internes_ia_valides (score 0.78)
@@ -17,18 +17,18 @@ _Généré le 2026-07-11T12:01:35Z. Lire CE fichier d'abord ; n'examiner que les
    - fichier : `agent-work/quality/incidents/quality__preuves_avec_source_document_notice.json` · cible : `ia/`
    - risque : signal de qualité ; aucune correction appliquée automatiquement · action : vérification documentaire / correction manuelle
    - Contrôle qualité déterministe en échec (connue) : preuves avec source (document/notice) — sans source: 6 /616
-4. **coverage** — coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques (score 0.73)
+4. **quality** — quality__sorties_ia_publi_es_synchronis_es (score 0.78)
+   - fichier : `agent-work/quality/incidents/quality__sorties_ia_publi_es_synchronis_es.json` · cible : `ia/`
+   - risque : signal de qualité ; aucune correction appliquée automatiquement · action : vérification documentaire / correction manuelle
+   - Contrôle qualité déterministe en échec (connue) : sorties /ia publiées synchronisées — désynchronisés: 146
+5. **coverage** — coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques (score 0.73)
    - fichier : `agent-work/quality/incidents/coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques.json` · cible : `ia/matrices/couverture.json`
    - risque : ne signifie pas que la donnée manque dans le contrat : seulement absen · action : vérification documentaire humaine (donnée structurée manquante)
    - Contrat « Essen'Ciel (assurance obsèques) » : catégorie(s) definitions, conditions, declencheurs absente(s) des données structurées. — Constat sur DON
-5. **coverage** — coverage__categorie_absente_donnees_essen_ciel_patrimoine (score 0.73)
-   - fichier : `agent-work/quality/incidents/coverage__categorie_absente_donnees_essen_ciel_patrimoine.json` · cible : `ia/matrices/couverture.json`
-   - risque : ne signifie pas que la donnée manque dans le contrat : seulement absen · action : vérification documentaire humaine (donnée structurée manquante)
-   - Contrat « Essen'Ciel Patrimoine » : catégorie(s) definitions, conditions, declencheurs absente(s) des données structurées. — Constat sur DONNÉES STRUC
 
 ## Anomalies qualité
 - **Nouvelles** : aucune
-- **Connues** : liens internes /ia valides, notices PDF résolues sur disque, preuves avec source (document/notice)
+- **Connues** : sorties /ia publiées synchronisées, liens internes /ia valides, notices PDF résolues sur disque, preuves avec source (document/notice)
 - **Corrigées** : aucune
 
 ## Régressions (tests de routage)
@@ -41,7 +41,7 @@ _Généré le 2026-07-11T12:01:35Z. Lire CE fichier d'abord ; n'examiner que les
 - aucun
 
 ## Ordre recommandé
-quality__liens_internes_ia_valides, quality__notices_pdf_r_solues_sur_disque, quality__preuves_avec_source_document_notice, coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques, coverage__categorie_absente_donnees_essen_ciel_patrimoine
+quality__liens_internes_ia_valides, quality__notices_pdf_r_solues_sur_disque, quality__preuves_avec_source_document_notice, quality__sorties_ia_publi_es_synchronis_es, coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques
 
 ## Extraction — tri de validation
 - aucune proposition d'extraction en attente

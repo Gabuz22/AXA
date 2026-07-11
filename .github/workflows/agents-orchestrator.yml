@@ -1,0 +1,28 @@
+name: agents-orchestrator
+
+# Chef d'orchestre autonome — un CYCLE par exécution (pas un processus permanent). Réveil périodique.
+# À chaque cycle : agents déterministes (travail utile sans LLM) + tâches LLM si un moteur gratuit est
+# dispo, routage explicable, repos/reset des fournisseurs, métriques, READY_FOR_REVIEW, état persisté sur
+# agents/proposals. Aucune fusion auto, aucun fichier produit modifié, zéro coût.
+#
+# DÉSACTIVÉ en planifié par défaut (schedule commenté) : activation prudente après validation manuelle
+# (voir README). Concurrence : group 'agents-proposals' (partagé) + verrou d'état interne => un seul cycle
+# à la fois. Planifié uniquement si AGENTS_ENABLED == 'true'.
+on:
+  # schedule:
+  #   - cron: "5 */6 * * *"   # toutes les 6 h, prudent
+  workflow_dispatch:
+    inputs:
+      force_dry_run:
+        description: "Exécuter en dry-run (aucun commit)"
+        type: boolean
+        default: true
+
+jobs:
+  orchestrator:
+    uses: ./.github/workflows/_agents-run.yml
+    with:
+      mode: cycle
+      extra_pip: pypdf
+      force_dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.force_dry_run || false }}
+    secrets: inherit

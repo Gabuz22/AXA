@@ -136,6 +136,8 @@ class ProviderRouter:
             account_id = self._account_for(p)
             models = p.get("models") or ([p.get("model")] if p.get("model") else [])
             for model in models:
+                if pid == "openrouter" and ":free" not in model:
+                    continue  # OpenRouter : jamais un modèle payant, même en dernier recours
                 pcfg = dict(p); pcfg["model"] = model
                 t0 = time.time()
                 try:

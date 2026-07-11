@@ -59,7 +59,7 @@
       "docs": "https://dash.cloudflare.com/profile/api-tokens"
     },
     "openrouter": {
-      "active": false,
+      "active": true,
       "priority": 4,
       "free_tier": true,
       "requires_paid": false,

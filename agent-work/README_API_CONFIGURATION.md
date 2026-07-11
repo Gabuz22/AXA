@@ -14,6 +14,35 @@ Pour ajouter/retirer un fournisseur, éditez ce JSON — **aucun code à modifie
 3. Dans `providers.json`, mettre le fournisseur `"active": true` (et ajuster `priority`/`models` si besoin).
 4. (Optionnel) lancer un run manuel `agents-extraction-llm` : le routeur détecte la clé et l'ajoute à la chaîne de secours.
 
+## Ordre de configuration recommandé (Gemini déjà en place)
+`GEMINI_API_KEY` existe déjà. Ajouter ensuite, dans cet ordre, ces secrets GitHub :
+
+**1. `GROQ_API_KEY`** — secours rapide.
+- Lien : https://console.groq.com/keys · Étapes : se connecter → *Create API Key* → copier.
+- Permissions minimales : lecture d'inférence (clé standard). · Secret GitHub : **`GROQ_API_KEY`**.
+- Vérifier : `python agent-work/scripts/provider_router.py` (doit montrer `groq … clé=True éligible=True`).
+- Révoquer : console Groq → supprimer la clé. · Risque facturation : **aucun** (palier gratuit, sans carte).
+- Garantie zéro-coût côté code : `requires_paid:false`, `allow_paid_usage:false`, budget par cycle borné, arrêt avant dépassement.
+
+**2. `OPENROUTER_API_KEY`** — réserve flexible (`:free` uniquement).
+- Lien : https://openrouter.ai/keys · Étapes : se connecter → *Create Key* → copier.
+- Permissions minimales : clé standard. · Secret GitHub : **`OPENROUTER_API_KEY`**.
+- Vérifier : le routeur montre `openrouter … éligible=True` ; seuls les modèles `…:free` sont appelés (garde `:free` dans le code).
+- Révoquer : dashboard OpenRouter → supprimer la clé. · Risque facturation : **aucun tant qu'on reste sur `:free`** —
+  le code **refuse tout modèle sans `:free`** (routeur + orchestrateur), budget = 0.
+
+**3. `CLOUDFLARE_API_TOKEN`** — secours indépendant de Google.
+- Lien : https://dash.cloudflare.com/profile/api-tokens · Étapes : *Create Token* → gabarit **Workers AI** (lecture) → créer → copier.
+- Permissions minimales : **Workers AI : Read/Run** uniquement. · Secret GitHub : **`CLOUDFLARE_API_TOKEN`**.
+- Vérifier : routeur `cloudflare … éligible=True` (nécessite aussi l'Account ID ci-dessous).
+- Révoquer : page API Tokens → *Delete*. · Risque facturation : **aucun** (allocation quotidienne gratuite).
+- Garantie zéro-coût : `requires_card:false`, budget borné, arrêt avant dépassement.
+
+**4. `CLOUDFLARE_ACCOUNT_ID`** — complément obligatoire de Cloudflare.
+- Où : dashboard Cloudflare → la page d'accueil/URL contient l'Account ID (32 hex). · Secret GitHub : **`CLOUDFLARE_ACCOUNT_ID`**.
+- Vérifier : sans lui, Cloudflare reste `éligible=False`. · Révoquer : non applicable (identifiant, pas un secret sensible).
+- Risque facturation : aucun (identifiant seul).
+
 ## Ordre recommandé (priorité)
 1. **Gemini** — 2. **Groq** — 3. **Cloudflare Workers AI** — 4. **OpenRouter** (`:free` uniquement).
 Le routeur affine cet ordre automatiquement selon la **qualité mesurée** (benchmark) et la **fiabilité** observée.

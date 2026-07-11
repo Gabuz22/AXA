@@ -1,8 +1,8 @@
 {
   "proposal_id": "quality__liens_internes_ia_valides",
   "agent_id": "quality",
-  "run_id": "run_quality_20260710_205933",
-  "created_at": "2026-07-10T20:59:36Z",
+  "run_id": "run_quality_20260711_121914",
+  "created_at": "2026-07-11T12:19:20Z",
   "status": "pending_review",
   "origin": "deterministic",
   "task": {

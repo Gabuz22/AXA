@@ -129,6 +129,23 @@ actif est `requires_paid`, `requires_card`, ou non `free_tier`. Jamais OpenAI, j
 ⚠️ On ne peut pas garantir qu'une API restera gratuite : la gratuité est une capacité configurable,
 revérifiée à l'exécution (429 → bascule). Vérifier : `python scripts/provider_router.py`.
 
+## Chef d'orchestre (cycles autonomes)
+
+`agents-orchestrator.yml` réveille l'atelier **par cycles** (pas de processus permanent). Chaque cycle :
+restaure l'état → réactive les fournisseurs dont le repos est échu → exécute les **agents déterministes**
+(travail utile même sans LLM) → alimente la **file de tâches** (`orchestrator/task_queue.json`) depuis les
+trous de couverture → **route** chaque tâche LLM vers un moteur gratuit disponible (décision **explicable**)
+→ exécute un nombre **borné** de tâches → met à jour les **métriques/état fournisseurs**
+(`orchestrator/provider_state.json`) → rafraîchit `READY_FOR_REVIEW` → écrit un **manifeste de cycle**
+(`orchestrator/cycles/`) → s'arrête. Verrou de concurrence (state + `concurrency` GitHub) : **un seul cycle
+à la fois**. Repos/reset par fournisseur : quota minute / quota jour (reset minuit UTC) / indispo / **401-403
+= désactivé jusqu'à intervention** / **404 = modèle désactivé**. Zéro coût, jamais de fusion, aucun fichier produit modifié.
+
+- Config déclarative : `config/agent_capabilities.json` (agent × capacités × moteurs — modifiable sans code).
+- Lancer un cycle en local : `python agent-work/scripts/orchestrator_cycle.py [--dry-run]`.
+- État & décisions : `orchestrator/` (file, état fournisseurs, résumés, manifestes). Détails techniques dans les JSON.
+- **Désactivé en planifié par défaut** ; activation prudente après validation manuelle (décommenter `schedule` + `AGENTS_ENABLED=true`).
+
 ## Secrets (à ajouter par vous)
 
 Dans **Settings → Secrets and variables → Actions → Secrets** (aucun obligatoire ; sans secret, les agents

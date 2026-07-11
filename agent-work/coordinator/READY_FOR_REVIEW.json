@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T12:01:35Z",
+  "generated_at": "2026-07-11T12:21:15Z",
   "high_priority": [
     {
       "proposal_id": "quality__liens_internes_ia_valides",
@@ -44,6 +44,20 @@
       "summary": "Contrôle qualité déterministe en échec (connue) : preuves avec source (document/notice) — sans source: 6 /616"
     },
     {
+      "proposal_id": "quality__sorties_ia_publi_es_synchronis_es",
+      "agent": "quality",
+      "score": 0.775,
+      "type": "quality",
+      "confidence": 0.99,
+      "origin": "deterministic",
+      "target_file": "ia/",
+      "regulatory_status": "none",
+      "risk": "signal de qualité ; aucune correction appliquée automatiquement",
+      "human_action": "vérification documentaire / correction manuelle",
+      "file": "agent-work/quality/incidents/quality__sorties_ia_publi_es_synchronis_es.json",
+      "summary": "Contrôle qualité déterministe en échec (connue) : sorties /ia publiées synchronisées — désynchronisés: 146"
+    },
+    {
       "proposal_id": "coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques",
       "agent": "coverage-gaps",
       "score": 0.73,
@@ -56,25 +70,12 @@
       "human_action": "vérification documentaire humaine (donnée structurée manquante)",
       "file": "agent-work/quality/incidents/coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques.json",
       "summary": "Contrat « Essen'Ciel (assurance obsèques) » : catégorie(s) definitions, conditions, declencheurs absente(s) des données structurées. — Constat sur DONNÉES STRUC"
-    },
-    {
-      "proposal_id": "coverage__categorie_absente_donnees_essen_ciel_patrimoine",
-      "agent": "coverage-gaps",
-      "score": 0.73,
-      "type": "coverage",
-      "confidence": 0.9,
-      "origin": "deterministic",
-      "target_file": "ia/matrices/couverture.json",
-      "regulatory_status": "none",
-      "risk": "ne signifie pas que la donnée manque dans le contrat : seulement absente des don",
-      "human_action": "vérification documentaire humaine (donnée structurée manquante)",
-      "file": "agent-work/quality/incidents/coverage__categorie_absente_donnees_essen_ciel_patrimoine.json",
-      "summary": "Contrat « Essen'Ciel Patrimoine » : catégorie(s) definitions, conditions, declencheurs absente(s) des données structurées. — Constat sur DONNÉES STRUCTURÉES uni"
     }
   ],
   "anomalies": {
     "new": [],
     "known": [
+      "sorties /ia publiées synchronisées",
       "liens internes /ia valides",
       "notices PDF résolues sur disque",
       "preuves avec source (document/notice)"
@@ -88,18 +89,18 @@
     "quality__liens_internes_ia_valides",
     "quality__notices_pdf_r_solues_sur_disque",
     "quality__preuves_avec_source_document_notice",
-    "coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques",
-    "coverage__categorie_absente_donnees_essen_ciel_patrimoine"
+    "quality__sorties_ia_publi_es_synchronis_es",
+    "coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques"
   ],
   "counts": {
-    "real_pending": 7,
+    "real_pending": 8,
     "fixtures": 0,
     "by_agent": {
-      "quality": 3,
+      "quality": 4,
       "coverage-gaps": 4
     },
-    "summary_bytes": 3901
+    "summary_bytes": 3803
   },
   "fixtures_note": "0 fixture(s) de démonstration exclue(s) de la priorisation (origin example_fixture/mock).",
-  "estimated_work_saved": "7 contrôle(s)/trou(s) déjà transformé(s) en incidents structurés et sourcés : Claude examine les 5 éléments prioritaires (~21 min économisées) au lieu de refaire l'analyse."
+  "estimated_work_saved": "8 contrôle(s)/trou(s) déjà transformé(s) en incidents structurés et sourcés : Claude examine les 5 éléments prioritaires (~24 min économisées) au lieu de refaire l'analyse."
 }

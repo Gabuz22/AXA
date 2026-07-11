@@ -271,6 +271,21 @@ def _extraction_addendum():
                     d.get("tokens_in", 0), d.get("tokens_out", 0), avg))
     except Exception:
         pass
+    # Cycle d'orchestration (Partie 13) — court, l'essentiel ; détails dans les JSON.
+    try:
+        cs = S.load_json(os.path.join(S.REPO_ROOT, "agent-work/orchestrator/cycle_summary.json"), default=None)
+        if cs:
+            resting = "; ".join("%s→%s (reprise %s)" % (r["provider"], r["state"], r.get("reprise") or "?")
+                                for r in cs.get("providers_resting", [])) or "aucun"
+            out += ["", "## Cycle d'orchestration (dernier)",
+                    "- Déterministes exécutés : %s" % (", ".join(cs.get("deterministic_ran", [])) or "—"),
+                    "- Tâches faites ce cycle : %d · en attente : %d" % (cs.get("tasks_done_this_cycle", 0), cs.get("tasks_waiting", 0)),
+                    "- Fournisseurs disponibles : %s" % (", ".join(cs.get("providers_available", [])) or "aucun (LLM au repos)"),
+                    "- Fournisseurs au repos : %s" % resting]
+            if cs.get("incidents_human"):
+                out.append("- ⚠ Intervention humaine requise : %s (401/403 — clé à vérifier)" % ", ".join(cs["incidents_human"]))
+    except Exception:
+        pass
     return "\n".join(out)
 
 

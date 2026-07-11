@@ -10,10 +10,14 @@ import json, urllib.request, urllib.error
 
 class RateLimited(Exception):
     """429 ou quota épuisé côté fournisseur."""
+    def __init__(self, msg, code=429):
+        super().__init__(msg); self.code = code
 
 
 class ProviderError(Exception):
-    """Autre erreur (réseau, 4xx/5xx) — le routeur peut tenter un fournisseur de secours."""
+    """Autre erreur (réseau, 4xx/5xx). `.code` = statut HTTP (0 si réseau/timeout)."""
+    def __init__(self, msg, code=0):
+        super().__init__(msg); self.code = code
 
 
 def _post(url, headers, payload, timeout):
@@ -30,10 +34,10 @@ def _post(url, headers, payload, timeout):
         except Exception:
             pass
         if code == 429 or "quota" in body.lower() or "rate" in body.lower():
-            raise RateLimited("HTTP %d" % code)
-        raise ProviderError("HTTP %d: %s" % (code, body))
+            raise RateLimited("HTTP %d" % code, code=429)
+        raise ProviderError("HTTP %d: %s" % (code, body), code=code)
     except urllib.error.URLError as e:
-        raise ProviderError("réseau: %s" % e)
+        raise ProviderError("réseau: %s" % e, code=0)
 
 
 def openai_chat(cfg, api_key, account_id, messages, max_tokens, timeout):
