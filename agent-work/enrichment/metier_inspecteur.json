@@ -5,81 +5,402 @@
   "risques": {
     "deces_protection_famille": {
       "libelle": "Décès — protéger la famille (revenu/capital aux proches)",
-      "mots_cles": ["deces", "proteger la famille", "conjoint", "enfants", "orphelin", "veuvage", "capital deces"],
-      "contrats": ["Avizen", "Avizen Pro", "Essen'Ciel Patrimoine", "Excelium (assurance vie)"],
-      "questions": ["Qui dépend financièrement de l'assuré ?", "Quels capitaux/rentes existent déjà (collectif, autres contrats) ?", "Le besoin est-il un capital, une rente, ou l'éducation des enfants ?"]
+      "mots_cles": [
+        "deces",
+        "proteger la famille",
+        "conjoint",
+        "enfants",
+        "orphelin",
+        "veuvage",
+        "capital deces"
+      ],
+      "contrats": [
+        "Avizen",
+        "Avizen Pro",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)"
+      ],
+      "questions": [
+        "Qui dépend financièrement de l'assuré ?",
+        "Quels capitaux/rentes existent déjà (collectif, autres contrats) ?",
+        "Le besoin est-il un capital, une rente, ou l'éducation des enfants ?"
+      ]
     },
     "arret_travail_itt": {
       "libelle": "Arrêt de travail (ITT) — maintenir le revenu",
-      "mots_cles": ["arret de travail", "itt", "incapacite", "indemnites journalieres", "revenu", "maladie", "salaire"],
-      "contrats": ["Avizen", "Avizen Pro", "Masterlife CREDIT"],
-      "questions": ["Quel est le statut professionnel (salarié/TNS) et que verse le régime obligatoire ?", "Quelles charges fixes courent pendant l'arrêt (dont crédit) ?", "Y a-t-il des antécédents médicaux, notamment psy/dos (exclusions rachetables côté emprunteur) ?"]
+      "mots_cles": [
+        "arret de travail",
+        "itt",
+        "incapacite",
+        "indemnites journalieres",
+        "revenu",
+        "maladie",
+        "salaire"
+      ],
+      "contrats": [
+        "Avizen",
+        "Avizen Pro",
+        "Masterlife CREDIT"
+      ],
+      "questions": [
+        "Quel est le statut professionnel (salarié/TNS) et que verse le régime obligatoire ?",
+        "Quelles charges fixes courent pendant l'arrêt (dont crédit) ?",
+        "Y a-t-il des antécédents médicaux, notamment psy/dos (exclusions rachetables côté emprunteur) ?"
+      ]
     },
     "invalidite": {
       "libelle": "Invalidité permanente — compenser la perte durable",
-      "mots_cles": ["invalidite", "ipt", "ptia", "handicap", "taux", "permanente"],
-      "contrats": ["Avizen", "Avizen Pro", "Ma Protection Accident (Garantie des accidents de la vie)", "Masterlife CREDIT"],
-      "questions": ["L'origine visée est-elle toutes causes ou accidentelle seulement ?", "Quel taux d'invalidité déclencherait le besoin ?", "Préférence capital ou rente ?"]
+      "mots_cles": [
+        "invalidite",
+        "ipt",
+        "ptia",
+        "handicap",
+        "taux",
+        "permanente"
+      ],
+      "contrats": [
+        "Avizen",
+        "Avizen Pro",
+        "Ma Protection Accident (Garantie des accidents de la vie)",
+        "Masterlife CREDIT"
+      ],
+      "questions": [
+        "L'origine visée est-elle toutes causes ou accidentelle seulement ?",
+        "Quel taux d'invalidité déclencherait le besoin ?",
+        "Préférence capital ou rente ?"
+      ]
     },
     "accident_vie_privee": {
       "libelle": "Accident de la vie privée — réparer le préjudice",
-      "mots_cles": ["accident", "vie privee", "domestique", "loisir", "agression", "accident medical", "nosocomiale"],
-      "contrats": ["Ma Protection Accident (Garantie des accidents de la vie)", "Avizen"],
-      "questions": ["Le foyer entier doit-il être couvert ?", "Des sports à risque sont-ils pratiqués (option dédiée) ?", "Souhait d'indemnisation du préjudice réel (GAV) ou de montants forfaitaires (prévoyance) ?"]
+      "mots_cles": [
+        "accident",
+        "vie privee",
+        "domestique",
+        "loisir",
+        "agression",
+        "accident medical",
+        "nosocomiale"
+      ],
+      "contrats": [
+        "Ma Protection Accident (Garantie des accidents de la vie)",
+        "Avizen"
+      ],
+      "questions": [
+        "Le foyer entier doit-il être couvert ?",
+        "Des sports à risque sont-ils pratiqués (option dédiée) ?",
+        "Souhait d'indemnisation du préjudice réel (GAV) ou de montants forfaitaires (prévoyance) ?"
+      ]
     },
     "dependance": {
       "libelle": "Dépendance / perte d'autonomie",
-      "mots_cles": ["dependance", "autonomie", "gir", "aidant", "grand age", "ehpad"],
-      "contrats": ["Entour'Age"],
-      "questions": ["Couvrir la dépendance totale seule ou aussi partielle (choix de formule) ?", "Qui seraient les aidants ?", "Un capital immédiat (premiers frais) est-il souhaité ?"]
+      "mots_cles": [
+        "dependance",
+        "autonomie",
+        "gir",
+        "aidant",
+        "grand age",
+        "ehpad"
+      ],
+      "contrats": [
+        "Entour'Age"
+      ],
+      "questions": [
+        "Couvrir la dépendance totale seule ou aussi partielle (choix de formule) ?",
+        "Qui seraient les aidants ?",
+        "Un capital immédiat (premiers frais) est-il souhaité ?"
+      ]
     },
     "obseques": {
       "libelle": "Obsèques — financer et organiser",
-      "mots_cles": ["obseques", "funerailles", "enterrement", "deces frais"],
-      "contrats": ["Essen'Ciel (assurance obsèques)", "Essen'Ciel Patrimoine"],
-      "questions": ["L'objectif est-il le financement des funérailles ou une transmission plus large (Patrimoine) ?", "Des volontés d'organisation doivent-elles être enregistrées ?"]
+      "mots_cles": [
+        "obseques",
+        "funerailles",
+        "enterrement",
+        "deces frais"
+      ],
+      "contrats": [
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine"
+      ],
+      "questions": [
+        "L'objectif est-il le financement des funérailles ou une transmission plus large (Patrimoine) ?",
+        "Des volontés d'organisation doivent-elles être enregistrées ?"
+      ]
     },
     "retraite_revenu": {
       "libelle": "Retraite — se constituer un revenu",
-      "mots_cles": ["retraite", "per", "pension", "revenu futur", "rente viagere"],
-      "contrats": ["Ma Retraite (plan d'épargne retraite individuel — PER)", "Excelium (assurance vie)"],
-      "questions": ["Horizon avant la retraite ?", "L'indisponibilité de l'épargne du PER est-elle acceptable, ou faut-il la liquidité de l'assurance vie ?", "Situation fiscale actuelle (l'intérêt de la déductibilité est une règle externe à vérifier) ?"]
+      "mots_cles": [
+        "retraite",
+        "per",
+        "pension",
+        "revenu futur",
+        "rente viagere"
+      ],
+      "contrats": [
+        "Ma Retraite (plan d'épargne retraite individuel — PER)",
+        "Excelium (assurance vie)"
+      ],
+      "questions": [
+        "Horizon avant la retraite ?",
+        "L'indisponibilité de l'épargne du PER est-elle acceptable, ou faut-il la liquidité de l'assurance vie ?",
+        "Situation fiscale actuelle (l'intérêt de la déductibilité est une règle externe à vérifier) ?"
+      ]
     },
     "epargne_transmission": {
       "libelle": "Épargne et transmission de capital",
-      "mots_cles": ["epargne", "placer", "capital", "transmission", "succession", "beneficiaire", "valoriser"],
-      "contrats": ["Excelium (assurance vie)", "Essen'Ciel Patrimoine", "Ma Retraite (plan d'épargne retraite individuel — PER)"],
-      "questions": ["Horizon et besoin de liquidité ?", "Tolérance au risque (fonds euros vs unités de compte) ?", "Objectif de transmission : à qui, dans quel cadre (clause bénéficiaire) ?"]
+      "mots_cles": [
+        "epargne",
+        "placer",
+        "capital",
+        "transmission",
+        "succession",
+        "beneficiaire",
+        "valoriser"
+      ],
+      "contrats": [
+        "Excelium (assurance vie)",
+        "Essen'Ciel Patrimoine",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ],
+      "questions": [
+        "Horizon et besoin de liquidité ?",
+        "Tolérance au risque (fonds euros vs unités de compte) ?",
+        "Objectif de transmission : à qui, dans quel cadre (clause bénéficiaire) ?"
+      ]
     },
     "emprunt": {
       "libelle": "Crédit — sécuriser le remboursement",
-      "mots_cles": ["credit", "emprunt", "pret", "immobilier", "quotite", "emprunteur", "banque"],
-      "contrats": ["Masterlife CREDIT"],
-      "questions": ["Capital restant dû, durée, quotités entre co-emprunteurs ?", "Antécédents psy/dos (option Psy/Dos+ à considérer) ?", "Profil AERAS ?"]
+      "mots_cles": [
+        "credit",
+        "emprunt",
+        "pret",
+        "immobilier",
+        "quotite",
+        "emprunteur",
+        "banque"
+      ],
+      "contrats": [
+        "Masterlife CREDIT"
+      ],
+      "questions": [
+        "Capital restant dû, durée, quotités entre co-emprunteurs ?",
+        "Antécédents psy/dos (option Psy/Dos+ à considérer) ?",
+        "Profil AERAS ?"
+      ]
     },
     "education_enfants": {
       "libelle": "Éducation des enfants en cas de coup dur",
-      "mots_cles": ["education", "enfants", "etudes", "rente education", "scolarite"],
-      "contrats": ["Avizen", "Avizen Pro"],
-      "questions": ["Âges des enfants et durée d'études envisagée ?", "Le double effet (décès du second parent) est-il pertinent ?"]
+      "mots_cles": [
+        "education",
+        "enfants",
+        "etudes",
+        "rente education",
+        "scolarite"
+      ],
+      "contrats": [
+        "Avizen",
+        "Avizen Pro"
+      ],
+      "questions": [
+        "Âges des enfants et durée d'études envisagée ?",
+        "Le double effet (décès du second parent) est-il pertinent ?"
+      ]
     }
   },
   "evenements_vie": {
-    "naissance": {"risques": ["deces_protection_famille", "education_enfants", "arret_travail_itt"],
-                  "note": "L'arrivée d'un enfant crée une dépendance financière longue : vérifier rente éducation et maintien de revenu."},
-    "achat_immobilier": {"risques": ["emprunt", "deces_protection_famille", "invalidite"],
-                         "note": "Le crédit crée une dette longue : assurance emprunteur (quotités !) + impact d'un arrêt sur les échéances."},
-    "passage_independant": {"risques": ["arret_travail_itt", "invalidite", "retraite_revenu"],
-                            "note": "Le TNS perd la couverture collective : régimes obligatoires plus faibles, prévoyance pro et retraite individuelle à examiner."},
-    "mariage_pacs": {"risques": ["deces_protection_famille", "epargne_transmission"],
-                     "note": "Revoir clauses bénéficiaires et protection croisée du couple."},
-    "divorce": {"risques": ["deces_protection_famille", "epargne_transmission", "emprunt"],
-                "note": "Revoir bénéficiaires, quotités emprunteur, et besoins propres de chaque foyer."},
-    "approche_retraite": {"risques": ["retraite_revenu", "dependance", "obseques", "epargne_transmission"],
-                          "note": "Bascule du revenu d'activité vers la rente ; fenêtre pour la dépendance tant que l'assurabilité est bonne."},
-    "deces_proche": {"risques": ["obseques", "epargne_transmission"],
-                     "note": "Événement révélateur : organiser ses propres volontés et vérifier la protection du survivant."},
-    "sport_a_risque": {"risques": ["accident_vie_privee", "invalidite"],
-                       "note": "Vérifier les exclusions « sports à risque » de chaque contrat et les options dédiées."}
+    "naissance": {
+      "risques": [
+        "deces_protection_famille",
+        "education_enfants",
+        "arret_travail_itt"
+      ],
+      "note": "L'arrivée d'un enfant crée une dépendance financière longue : vérifier rente éducation et maintien de revenu."
+    },
+    "achat_immobilier": {
+      "risques": [
+        "emprunt",
+        "deces_protection_famille",
+        "invalidite"
+      ],
+      "note": "Le crédit crée une dette longue : assurance emprunteur (quotités !) + impact d'un arrêt sur les échéances."
+    },
+    "passage_independant": {
+      "risques": [
+        "arret_travail_itt",
+        "invalidite",
+        "retraite_revenu"
+      ],
+      "note": "Le TNS perd la couverture collective : régimes obligatoires plus faibles, prévoyance pro et retraite individuelle à examiner."
+    },
+    "mariage_pacs": {
+      "risques": [
+        "deces_protection_famille",
+        "epargne_transmission"
+      ],
+      "note": "Revoir clauses bénéficiaires et protection croisée du couple."
+    },
+    "divorce": {
+      "risques": [
+        "deces_protection_famille",
+        "epargne_transmission",
+        "emprunt"
+      ],
+      "note": "Revoir bénéficiaires, quotités emprunteur, et besoins propres de chaque foyer."
+    },
+    "approche_retraite": {
+      "risques": [
+        "retraite_revenu",
+        "dependance",
+        "obseques",
+        "epargne_transmission"
+      ],
+      "note": "Bascule du revenu d'activité vers la rente ; fenêtre pour la dépendance tant que l'assurabilité est bonne."
+    },
+    "deces_proche": {
+      "risques": [
+        "obseques",
+        "epargne_transmission"
+      ],
+      "note": "Événement révélateur : organiser ses propres volontés et vérifier la protection du survivant."
+    },
+    "sport_a_risque": {
+      "risques": [
+        "accident_vie_privee",
+        "invalidite"
+      ],
+      "note": "Vérifier les exclusions « sports à risque » de chaque contrat et les options dédiées."
+    }
+  },
+  "priorites_risques": {
+    "principe": "Protéger avant d'épargner ; le catastrophique avant le probable ; les dettes d'abord ; l'assurabilité se perd avec l'âge.",
+    "ordre_socle": [
+      "emprunt",
+      "deces_protection_famille",
+      "arret_travail_itt",
+      "invalidite",
+      "accident_vie_privee",
+      "education_enfants",
+      "dependance",
+      "obseques",
+      "retraite_revenu",
+      "epargne_transmission"
+    ],
+    "regles": [
+      {
+        "si": "credit",
+        "risques": [
+          "emprunt"
+        ],
+        "pourquoi": "une dette longue non (ou mal) assurée est le risque catastrophique n°1 du foyer : au décès ou en invalidité, la dette reste."
+      },
+      {
+        "si": "tns",
+        "risques": [
+          "arret_travail_itt",
+          "invalidite"
+        ],
+        "pourquoi": "les régimes obligatoires du TNS couvrent mal l'arrêt de travail : la perte de revenu est immédiate et durable."
+      },
+      {
+        "si": "enfants",
+        "risques": [
+          "deces_protection_famille",
+          "education_enfants"
+        ],
+        "pourquoi": "des enfants à charge créent une dépendance financière longue : le décès ou l'IPT d'un parent doit financer leur éducation."
+      },
+      {
+        "si": "senior",
+        "risques": [
+          "dependance",
+          "obseques",
+          "retraite_revenu"
+        ],
+        "pourquoi": "après 55 ans, l'assurabilité dépendance se dégrade et la bascule revenu d'activité→rente approche."
+      },
+      {
+        "si": "salarie",
+        "risques": [
+          "deces_protection_famille"
+        ],
+        "pourquoi": "le collectif d'entreprise couvre souvent l'arrêt de travail mais rarement assez le décès/l'éducation : vérifier les plafonds du collectif."
+      }
+    ]
+  },
+  "pieges_frequents": {
+    "Masterlife CREDIT": [
+      "Quotités mal réparties entre co-emprunteurs (100/100 vs 50/50) : au décès d'un seul, la moitié de la dette peut rester.",
+      "Arrêts psy/dos NON couverts sans l'option Psy/Dos+ — première cause réelle d'arrêts longs.",
+      "Croire que l'assurance emprunteur protège la famille : elle paie la banque, pas un revenu."
+    ],
+    "Avizen": [
+      "Confondre les variantes « par accident » (moins chères) et « toutes causes » : la maladie n'est pas couverte par les premières.",
+      "Invalidité sous le seuil du barème = aucune prestation.",
+      "Sports/activités à risque exclus : vérifier les pratiques réelles du client."
+    ],
+    "Avizen Pro": [
+      "Croire que les IJ complémentaires remplacent le revenu entier : elles COMPLÈTENT le régime obligatoire.",
+      "Oublier le double effet (protection si le second parent décède)."
+    ],
+    "Entour'Age": [
+      "Attendre trop tard : la dépendance déjà installée n'est plus assurable.",
+      "GIR 5-6 exclus : la dépendance légère ne déclenche rien.",
+      "Choisir « totale seule » et découvrir que la dépendance partielle n'ouvre aucun droit."
+    ],
+    "Ma Retraite (plan d'épargne retraite individuel — PER)": [
+      "Épargne INDISPONIBLE jusqu'à la retraite (hors cas légaux) : ne pas y placer l'épargne de précaution.",
+      "Client non imposable : l'avantage fiscal à l'entrée disparaît (règle externe à vérifier).",
+      "La sortie en rente est irréversible."
+    ],
+    "Excelium (assurance vie)": [
+      "Clause bénéficiaire jamais mise à jour (ex-conjoint encore désigné).",
+      "La garantie plancher protège les bénéficiaires au décès, PAS la valeur de rachat du vivant.",
+      "Unités de compte : le capital peut baisser."
+    ],
+    "Ma Protection Accident (Garantie des accidents de la vie)": [
+      "La MALADIE n'est jamais couverte, même consécutive à un accident garanti.",
+      "Sous les seuils d'intervention, pas d'indemnisation.",
+      "Accidents de la route couverts seulement par dérogations précises."
+    ],
+    "Essen'Ciel (assurance obsèques)": [
+      "Vérifier l'adéquation du capital au coût réel des obsèques (aucun montant standard : à chiffrer localement).",
+      "Ce n'est pas un produit d'épargne : pas de valorisation patrimoniale."
+    ],
+    "Essen'Ciel Patrimoine": [
+      "Le rachat met FIN à la protection décès : à n'utiliser qu'en dernier recours.",
+      "La mise en réduction diminue le capital garanti."
+    ]
+  },
+  "objections": {
+    "emprunt": [
+      {
+        "objection": "« La banque m'impose déjà son assurance »",
+        "reponse": "La délégation d'assurance est un droit : comparer garanties (psy/dos !) et quotités, pas seulement le tarif."
+      }
+    ],
+    "arret_travail_itt": [
+      {
+        "objection": "« J'ai la Sécurité sociale »",
+        "reponse": "Pour un TNS, les IJ obligatoires sont faibles et plafonnées : chiffrer le différentiel avec les charges réelles du foyer."
+      }
+    ],
+    "deces_protection_famille": [
+      {
+        "objection": "« J'ai déjà une assurance par mon travail »",
+        "reponse": "Le collectif s'arrête avec le contrat de travail et ses capitaux sont souvent standardisés : vérifier montants et portabilité."
+      }
+    ],
+    "dependance": [
+      {
+        "objection": "« C'est trop tôt pour y penser »",
+        "reponse": "C'est justement parce que c'est tôt que c'est assurable et abordable : après un certain âge ou un premier signe, c'est trop tard."
+      }
+    ],
+    "retraite_revenu": [
+      {
+        "objection": "« Le PER bloque mon argent »",
+        "reponse": "C'est le prix de l'avantage fiscal éventuel ; l'épargne de précaution reste en assurance vie : les deux se complètent."
+      }
+    ]
   }
 }

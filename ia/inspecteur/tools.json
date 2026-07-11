@@ -98,6 +98,21 @@
       ]
     },
     {
+      "nom": "avis_inspecteur",
+      "moteur": "inspector_advice.advise",
+      "entree": {
+        "case": "objet cas (statuts requis)"
+      },
+      "sortie": "avis structuré : profil, risques PRIORISÉS (protéger avant d'épargner, dettes d'abord), audit de l'existant (couvert/trou/doublon), plan d'action ordonné avec pourquoi + questions + pièges fréquents, objections probables, réserves",
+      "fichier": "cas-clients/avis_inspecteur.example.json",
+      "validation": "HUMAINE (avis conditionnel, heuristiques étiquetées)",
+      "erreurs_possibles": [
+        "contrat introuvable",
+        "cas incomplet",
+        "aucun mécanisme partagé"
+      ]
+    },
+    {
       "nom": "identifier_informations_manquantes",
       "moteur": "inspector_case.completeness",
       "entree": {

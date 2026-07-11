@@ -172,6 +172,18 @@ def _write_case_artifacts(graph, subjects):
                         fields={"age": ICase.new_datum(42, "declare")}, objectifs=["proteger la famille"])
     scen = ISol.build_scenarios(ex, graph, DOMAIN, metier=metier)
     _write_json("cas-clients/solution_scenarios.example.json", {"note": "EXEMPLE SYNTHÉTIQUE (aucune donnée réelle)", **scen})
+    # AVIS D'INSPECTEUR — exemple complet (« que ferais-tu à ma place pour ce client, et pourquoi ? »)
+    if metier and "priorites_risques" in metier:
+        import inspector_advice as IAdv
+        cas = ICase.new_case(
+            fields={"age": ICase.new_datum(42, "confirme"),
+                    "statut_professionnel": ICase.new_datum("travailleur non salarie (artisan)", "declare"),
+                    "situation_familiale": ICase.new_datum("marie, 2 enfants", "declare"),
+                    "emprunts": ICase.new_datum("credit immobilier en cours", "declare")},
+            objectifs=["proteger la famille"], contrats_existants=["Excelium"], evenements=["achat_immobilier"])
+        avis = IAdv.advise(cas, graph, metier)
+        _write_json("cas-clients/avis_inspecteur.example.json",
+                    {"note": "EXEMPLE SYNTHÉTIQUE (aucune donnée réelle). Avis CONDITIONNEL, heuristiques étiquetées.", **avis})
 
 
 def _write_metier(graph):

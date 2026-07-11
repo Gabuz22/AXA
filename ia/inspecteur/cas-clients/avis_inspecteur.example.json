@@ -1,0 +1,257 @@
+{
+  "note": "EXEMPLE SYNTHÉTIQUE (aucune donnée réelle). Avis CONDITIONNEL, heuristiques étiquetées.",
+  "case_id": "case_7fa68e8688ee",
+  "case_valid": true,
+  "case_errors": [],
+  "profil": {
+    "flags": [
+      "couple",
+      "credit",
+      "enfants",
+      "tns"
+    ],
+    "faits": {
+      "age": 42,
+      "statut_professionnel": "travailleur non salarie (artisan)",
+      "situation_familiale": "marie, 2 enfants",
+      "emprunts": "credit immobilier en cours"
+    }
+  },
+  "principe_de_priorisation": "Protéger avant d'épargner ; le catastrophique avant le probable ; les dettes d'abord ; l'assurabilité se perd avec l'âge.",
+  "risques_priorises": [
+    "emprunt",
+    "deces_protection_famille",
+    "arret_travail_itt",
+    "invalidite",
+    "education_enfants"
+  ],
+  "audit_existant": {
+    "contrats_existants": [
+      "Excelium"
+    ],
+    "par_risque": {
+      "deces_protection_famille": {
+        "couvert_par": [
+          "Excelium (assurance vie)"
+        ],
+        "statut": "couvert_a_verifier"
+      },
+      "emprunt": {
+        "couvert_par": [],
+        "statut": "trou_potentiel"
+      },
+      "invalidite": {
+        "couvert_par": [],
+        "statut": "trou_potentiel"
+      },
+      "arret_travail_itt": {
+        "couvert_par": [],
+        "statut": "trou_potentiel"
+      },
+      "education_enfants": {
+        "couvert_par": [],
+        "statut": "trou_potentiel"
+      }
+    },
+    "note": "audit heuristique (rattachement par nom + matrice) : à confirmer sur les contrats réels du client"
+  },
+  "trous_de_couverture_potentiels": [
+    "emprunt",
+    "invalidite",
+    "arret_travail_itt",
+    "education_enfants"
+  ],
+  "doublons_potentiels": [],
+  "plan_action": [
+    {
+      "etape": 1,
+      "risque": "emprunt",
+      "libelle": "Crédit — sécuriser le remboursement",
+      "pourquoi": "événement de vie : achat_immobilier",
+      "statut_existant": "trou_potentiel",
+      "couvert_par": [],
+      "contrats_a_examiner": [
+        "Masterlife CREDIT"
+      ],
+      "questions_a_poser": [
+        "Capital restant dû, durée, quotités entre co-emprunteurs ?",
+        "Antécédents psy/dos (option Psy/Dos+ à considérer) ?",
+        "Profil AERAS ?"
+      ],
+      "pieges_frequents": {
+        "Masterlife CREDIT": [
+          "Quotités mal réparties entre co-emprunteurs (100/100 vs 50/50) : au décès d'un seul, la moitié de la dette peut rester.",
+          "Arrêts psy/dos NON couverts sans l'option Psy/Dos+ — première cause réelle d'arrêts longs.",
+          "Croire que l'assurance emprunteur protège la famille : elle paie la banque, pas un revenu."
+        ]
+      }
+    },
+    {
+      "etape": 2,
+      "risque": "deces_protection_famille",
+      "libelle": "Décès — protéger la famille (revenu/capital aux proches)",
+      "pourquoi": "besoin exprimé/déduit : « proteger la famille »",
+      "statut_existant": "couvert_a_verifier",
+      "couvert_par": [
+        "Excelium (assurance vie)"
+      ],
+      "contrats_a_examiner": [
+        "Avizen",
+        "Avizen Pro",
+        "Essen'Ciel Patrimoine"
+      ],
+      "questions_a_poser": [
+        "Qui dépend financièrement de l'assuré ?",
+        "Quels capitaux/rentes existent déjà (collectif, autres contrats) ?",
+        "Le besoin est-il un capital, une rente, ou l'éducation des enfants ?"
+      ],
+      "pieges_frequents": {
+        "Avizen": [
+          "Confondre les variantes « par accident » (moins chères) et « toutes causes » : la maladie n'est pas couverte par les premières.",
+          "Invalidité sous le seuil du barème = aucune prestation.",
+          "Sports/activités à risque exclus : vérifier les pratiques réelles du client."
+        ],
+        "Avizen Pro": [
+          "Croire que les IJ complémentaires remplacent le revenu entier : elles COMPLÈTENT le régime obligatoire.",
+          "Oublier le double effet (protection si le second parent décède)."
+        ],
+        "Essen'Ciel Patrimoine": [
+          "Le rachat met FIN à la protection décès : à n'utiliser qu'en dernier recours.",
+          "La mise en réduction diminue le capital garanti."
+        ],
+        "Excelium (assurance vie)": [
+          "Clause bénéficiaire jamais mise à jour (ex-conjoint encore désigné).",
+          "La garantie plancher protège les bénéficiaires au décès, PAS la valeur de rachat du vivant.",
+          "Unités de compte : le capital peut baisser."
+        ]
+      }
+    },
+    {
+      "etape": 3,
+      "risque": "arret_travail_itt",
+      "libelle": "Arrêt de travail (ITT) — maintenir le revenu",
+      "pourquoi": "profil tns — les régimes obligatoires du TNS couvrent mal l'arrêt de travail : la perte de revenu est immédiate et durable.",
+      "statut_existant": "trou_potentiel",
+      "couvert_par": [],
+      "contrats_a_examiner": [
+        "Avizen",
+        "Avizen Pro",
+        "Masterlife CREDIT"
+      ],
+      "questions_a_poser": [
+        "Quel est le statut professionnel (salarié/TNS) et que verse le régime obligatoire ?",
+        "Quelles charges fixes courent pendant l'arrêt (dont crédit) ?",
+        "Y a-t-il des antécédents médicaux, notamment psy/dos (exclusions rachetables côté emprunteur) ?"
+      ],
+      "pieges_frequents": {
+        "Avizen": [
+          "Confondre les variantes « par accident » (moins chères) et « toutes causes » : la maladie n'est pas couverte par les premières.",
+          "Invalidité sous le seuil du barème = aucune prestation.",
+          "Sports/activités à risque exclus : vérifier les pratiques réelles du client."
+        ],
+        "Avizen Pro": [
+          "Croire que les IJ complémentaires remplacent le revenu entier : elles COMPLÈTENT le régime obligatoire.",
+          "Oublier le double effet (protection si le second parent décède)."
+        ],
+        "Masterlife CREDIT": [
+          "Quotités mal réparties entre co-emprunteurs (100/100 vs 50/50) : au décès d'un seul, la moitié de la dette peut rester.",
+          "Arrêts psy/dos NON couverts sans l'option Psy/Dos+ — première cause réelle d'arrêts longs.",
+          "Croire que l'assurance emprunteur protège la famille : elle paie la banque, pas un revenu."
+        ]
+      }
+    },
+    {
+      "etape": 4,
+      "risque": "invalidite",
+      "libelle": "Invalidité permanente — compenser la perte durable",
+      "pourquoi": "événement de vie : achat_immobilier",
+      "statut_existant": "trou_potentiel",
+      "couvert_par": [],
+      "contrats_a_examiner": [
+        "Avizen",
+        "Avizen Pro",
+        "Ma Protection Accident (Garantie des accidents de la vie)",
+        "Masterlife CREDIT"
+      ],
+      "questions_a_poser": [
+        "L'origine visée est-elle toutes causes ou accidentelle seulement ?",
+        "Quel taux d'invalidité déclencherait le besoin ?",
+        "Préférence capital ou rente ?"
+      ],
+      "pieges_frequents": {
+        "Avizen": [
+          "Confondre les variantes « par accident » (moins chères) et « toutes causes » : la maladie n'est pas couverte par les premières.",
+          "Invalidité sous le seuil du barème = aucune prestation.",
+          "Sports/activités à risque exclus : vérifier les pratiques réelles du client."
+        ],
+        "Avizen Pro": [
+          "Croire que les IJ complémentaires remplacent le revenu entier : elles COMPLÈTENT le régime obligatoire.",
+          "Oublier le double effet (protection si le second parent décède)."
+        ],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [
+          "La MALADIE n'est jamais couverte, même consécutive à un accident garanti.",
+          "Sous les seuils d'intervention, pas d'indemnisation.",
+          "Accidents de la route couverts seulement par dérogations précises."
+        ],
+        "Masterlife CREDIT": [
+          "Quotités mal réparties entre co-emprunteurs (100/100 vs 50/50) : au décès d'un seul, la moitié de la dette peut rester.",
+          "Arrêts psy/dos NON couverts sans l'option Psy/Dos+ — première cause réelle d'arrêts longs.",
+          "Croire que l'assurance emprunteur protège la famille : elle paie la banque, pas un revenu."
+        ]
+      }
+    },
+    {
+      "etape": 5,
+      "risque": "education_enfants",
+      "libelle": "Éducation des enfants en cas de coup dur",
+      "pourquoi": "profil enfants — des enfants à charge créent une dépendance financière longue : le décès ou l'IPT d'un parent doit financer leur éducation.",
+      "statut_existant": "trou_potentiel",
+      "couvert_par": [],
+      "contrats_a_examiner": [
+        "Avizen",
+        "Avizen Pro"
+      ],
+      "questions_a_poser": [
+        "Âges des enfants et durée d'études envisagée ?",
+        "Le double effet (décès du second parent) est-il pertinent ?"
+      ],
+      "pieges_frequents": {
+        "Avizen": [
+          "Confondre les variantes « par accident » (moins chères) et « toutes causes » : la maladie n'est pas couverte par les premières.",
+          "Invalidité sous le seuil du barème = aucune prestation.",
+          "Sports/activités à risque exclus : vérifier les pratiques réelles du client."
+        ],
+        "Avizen Pro": [
+          "Croire que les IJ complémentaires remplacent le revenu entier : elles COMPLÈTENT le régime obligatoire.",
+          "Oublier le double effet (protection si le second parent décède)."
+        ]
+      }
+    }
+  ],
+  "objections_probables": [
+    {
+      "risque": "emprunt",
+      "objection": "« La banque m'impose déjà son assurance »",
+      "reponse": "La délégation d'assurance est un droit : comparer garanties (psy/dos !) et quotités, pas seulement le tarif."
+    },
+    {
+      "risque": "deces_protection_famille",
+      "objection": "« J'ai déjà une assurance par mon travail »",
+      "reponse": "Le collectif s'arrête avec le contrat de travail et ses capitaux sont souvent standardisés : vérifier montants et portabilité."
+    },
+    {
+      "risque": "arret_travail_itt",
+      "objection": "« J'ai la Sécurité sociale »",
+      "reponse": "Pour un TNS, les IJ obligatoires sont faibles et plafonnées : chiffrer le différentiel avec les charges réelles du foyer."
+    }
+  ],
+  "informations_manquantes": [],
+  "hypotheses": {},
+  "reserves": [
+    "avis CONDITIONNEL fondé sur les faits déclarés : toute donnée manquante peut changer les priorités",
+    "aucune éligibilité, aucun tarif, aucune règle fiscale affirmés : à vérifier sur pièces et sources à jour",
+    "heuristiques métier étiquetées simulation_assistee_par_claude : à confirmer par un inspecteur humain"
+  ],
+  "validation_humaine_requise": true,
+  "origin_heuristiques": "simulation_assistee_par_claude"
+}
