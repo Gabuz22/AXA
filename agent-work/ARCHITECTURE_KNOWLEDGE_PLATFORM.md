@@ -142,7 +142,7 @@ HAS → adaptateur ┘
 | **1 — Adaptateur & alimentation** | `domain_adapter.py` (interface + registre) + `domains/axa.py` + `knowledge_ingest.py` (ingestion DÉTERMINISTE : connaissance structurée → L2+L1, propositions extraction → L1+L2 ; idempotent, 0 token). Vérifié : 196 entités L2 + 140 preuves L1 sur 9 contrats | **✅ livré (v2.8)** |
 | **2 — Passes déterministes** | `knowledge_ops.py` (dup/contradiction/freshness + CostLedger) + `knowledge_tasks.py` (backlog vivant pending↔resolved) + agent `knowledge-curator` branché au cycle (ingest + profondeur + backlog, **0 token**) | **✅ livré (v2.8)** |
 | **3 — Capacités LLM ciblées** | `knowledge_build.py` (relations L3, compréhension L4, LLM injecté) + agent `knowledge-builder` (budget + cost-ledger, fail-open) + workflow dédié. N'appelle le LLM que sur les axes faibles | **✅ livré (v2.8)** |
-| **4 — Environnement** | environment-builder : fiscalité/réglementation en domaines séparés, reliés par `governed_by` (part déterministe depuis `sources-officielles.json`, part réseau via l'agent official-sources existant) | à valider (réseau) |
+| **4 — Environnement** | `environment_ingest.py` : autorités + concepts évolutifs en DOMAINES SÉPARÉS (reglementation/fiscalite), reliés par `governed_by` (concept→autorité, clause→concept). Déterministe, 0 token/réseau, branché au cycle. Live : 3 domaines, 197 arêtes, axe environnement 0→1.0, profondeur 0.50→0.69 | **✅ part déterministe livrée ; part réseau (fraîcheur réelle) à valider** |
 | **5 — Projection produit** | export lecture seule du graphe vers une future Vue IA enrichie (jamais d'écriture produit auto) | à valider (proximité produit) |
 
 Chaque phase est **additive** (nouveaux fichiers), **rétrocompatible** (l'existant continue de tourner),
