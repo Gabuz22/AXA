@@ -113,6 +113,21 @@
       ]
     },
     {
+      "nom": "kit_rendez_vous",
+      "moteur": "commercial_kit.build_kit",
+      "entree": {
+        "case": "objet cas (statuts requis)"
+      },
+      "sortie": "kit d'entretien complet : fiche de préparation, plan en 6 phases, questions de découverte, argumentaires par contrat (accroche + pièges + parades aux objections), trame de compte-rendu/mail. JSON + Markdown copiable.",
+      "fichier": "commercial/kit_rdv.example.json",
+      "validation": "HUMAINE (relire avant usage ; aucun tarif/règle fiscale affirmés)",
+      "erreurs_possibles": [
+        "contrat introuvable",
+        "cas incomplet",
+        "aucun mécanisme partagé"
+      ]
+    },
+    {
       "nom": "identifier_informations_manquantes",
       "moteur": "inspector_case.completeness",
       "entree": {

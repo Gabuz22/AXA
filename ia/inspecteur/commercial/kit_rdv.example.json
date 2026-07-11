@@ -1,0 +1,288 @@
+{
+  "note": "EXEMPLE SYNTHÉTIQUE (aucune donnée réelle).",
+  "kit_version": "1.0.0",
+  "case_id": "case_7fa68e8688ee",
+  "avertissement": "Kit généré automatiquement : les interprétations sont étiquetées (simulation_assistee_par_claude), aucun tarif/éligibilité/règle fiscale affirmés. À relire par le conseiller avant usage.",
+  "preparation": {
+    "profil": {
+      "flags": [
+        "couple",
+        "credit",
+        "enfants",
+        "tns"
+      ],
+      "faits": {
+        "age": 42,
+        "statut_professionnel": "travailleur non salarie (artisan)",
+        "situation_familiale": "marie, 2 enfants",
+        "emprunts": "credit immobilier en cours"
+      }
+    },
+    "principe": "Protéger avant d'épargner ; le catastrophique avant le probable ; les dettes d'abord ; l'assurabilité se perd avec l'âge.",
+    "priorites": [
+      "emprunt",
+      "deces_protection_famille",
+      "arret_travail_itt",
+      "invalidite",
+      "education_enfants"
+    ],
+    "audit_existant": {
+      "contrats_existants": [
+        "Excelium"
+      ],
+      "par_risque": {
+        "deces_protection_famille": {
+          "couvert_par": [
+            "Excelium (assurance vie)"
+          ],
+          "statut": "couvert_a_verifier"
+        },
+        "emprunt": {
+          "couvert_par": [],
+          "statut": "trou_potentiel"
+        },
+        "invalidite": {
+          "couvert_par": [],
+          "statut": "trou_potentiel"
+        },
+        "arret_travail_itt": {
+          "couvert_par": [],
+          "statut": "trou_potentiel"
+        },
+        "education_enfants": {
+          "couvert_par": [],
+          "statut": "trou_potentiel"
+        }
+      },
+      "note": "audit heuristique (rattachement par nom + matrice) : à confirmer sur les contrats réels du client"
+    },
+    "trous_potentiels": [
+      "emprunt",
+      "invalidite",
+      "arret_travail_itt",
+      "education_enfants"
+    ],
+    "doublons_potentiels": [],
+    "contrats_a_presenter": [
+      "Masterlife CREDIT",
+      "Avizen",
+      "Avizen Pro",
+      "Essen'Ciel Patrimoine"
+    ]
+  },
+  "plan_entretien": [
+    {
+      "phase": 1,
+      "nom": "Accueil & cadre",
+      "contenu": "Rappeler l'objet du rendez-vous ; annoncer la démarche : comprendre la situation AVANT de parler produits."
+    },
+    {
+      "phase": 2,
+      "nom": "Découverte",
+      "contenu": "Dérouler les questions de découverte (ci-dessous), en commençant par les informations manquantes."
+    },
+    {
+      "phase": 3,
+      "nom": "Diagnostic partagé",
+      "contenu": "Restituer : priorités (emprunt, deces_protection_famille, arret_travail_itt), trous potentiels (emprunt, invalidite, arret_travail_itt), doublons éventuels (aucun détecté). Faire valider par le client."
+    },
+    {
+      "phase": 4,
+      "nom": "Solutions",
+      "contenu": "Présenter les contrats dans l'ORDRE des priorités (argumentaires ci-dessous) ; une solution simple reste préférable si elle suffit."
+    },
+    {
+      "phase": 5,
+      "nom": "Objections",
+      "contenu": "Utiliser les parades préparées ; ne jamais improviser un chiffre ou une règle fiscale."
+    },
+    {
+      "phase": 6,
+      "nom": "Prochaines étapes",
+      "contenu": "Lister les pièces à fournir, les vérifications (notices, sources officielles à jour), fixer la date du prochain contact."
+    }
+  ],
+  "questions_decouverte": [
+    {
+      "question": "Capital restant dû, durée, quotités entre co-emprunteurs ?",
+      "risque": "emprunt"
+    },
+    {
+      "question": "Antécédents psy/dos (option Psy/Dos+ à considérer) ?",
+      "risque": "emprunt"
+    },
+    {
+      "question": "Profil AERAS ?",
+      "risque": "emprunt"
+    },
+    {
+      "question": "Qui dépend financièrement de l'assuré ?",
+      "risque": "deces_protection_famille"
+    },
+    {
+      "question": "Quels capitaux/rentes existent déjà (collectif, autres contrats) ?",
+      "risque": "deces_protection_famille"
+    },
+    {
+      "question": "Le besoin est-il un capital, une rente, ou l'éducation des enfants ?",
+      "risque": "deces_protection_famille"
+    },
+    {
+      "question": "Quel est le statut professionnel (salarié/TNS) et que verse le régime obligatoire ?",
+      "risque": "arret_travail_itt"
+    },
+    {
+      "question": "Quelles charges fixes courent pendant l'arrêt (dont crédit) ?",
+      "risque": "arret_travail_itt"
+    },
+    {
+      "question": "Y a-t-il des antécédents médicaux, notamment psy/dos (exclusions rachetables côté emprunteur) ?",
+      "risque": "arret_travail_itt"
+    },
+    {
+      "question": "L'origine visée est-elle toutes causes ou accidentelle seulement ?",
+      "risque": "invalidite"
+    },
+    {
+      "question": "Quel taux d'invalidité déclencherait le besoin ?",
+      "risque": "invalidite"
+    },
+    {
+      "question": "Préférence capital ou rente ?",
+      "risque": "invalidite"
+    },
+    {
+      "question": "Âges des enfants et durée d'études envisagée ?",
+      "risque": "education_enfants"
+    },
+    {
+      "question": "Le double effet (décès du second parent) est-il pertinent ?",
+      "risque": "education_enfants"
+    }
+  ],
+  "argumentaires": [
+    {
+      "contrat": "Masterlife CREDIT",
+      "accroche_metier": "Assurance emprunteur : garantir le remboursement d'un crédit en cas de décès, PTIA, invalidité ou incapacité de travail de l'assuré — protéger simultanément le prêteur (remboursement) et la famille (dette éteinte ou échéances prises en charge).",
+      "pour_ce_client": "Tout emprunteur ; co-emprunteurs devant arbitrer les quotités ; profils AERAS.",
+      "repond_aux_risques": [
+        "emprunt",
+        "arret_travail_itt",
+        "invalidite"
+      ],
+      "pieges_a_ne_pas_oublier": [
+        "Quotités mal réparties entre co-emprunteurs (100/100 vs 50/50) : au décès d'un seul, la moitié de la dette peut rester.",
+        "Arrêts psy/dos NON couverts sans l'option Psy/Dos+ — première cause réelle d'arrêts longs.",
+        "Croire que l'assurance emprunteur protège la famille : elle paie la banque, pas un revenu."
+      ],
+      "objections_et_parades": [
+        {
+          "risque": "emprunt",
+          "objection": "« La banque m'impose déjà son assurance »",
+          "reponse": "La délégation d'assurance est un droit : comparer garanties (psy/dos !) et quotités, pas seulement le tarif."
+        },
+        {
+          "risque": "arret_travail_itt",
+          "objection": "« J'ai la Sécurité sociale »",
+          "reponse": "Pour un TNS, les IJ obligatoires sont faibles et plafonnées : chiffrer le différentiel avec les charges réelles du foyer."
+        }
+      ],
+      "origine_interpretations": "simulation_assistee_par_claude"
+    },
+    {
+      "contrat": "Avizen",
+      "accroche_metier": "Contrat de prévoyance individuelle : protéger le revenu et la famille de l'assuré contre les conséquences financières d'un arrêt de travail (ITT), d'une invalidité ou d'un décès, via des indemnités journalières, des capitaux ou rentes d'invalidité et une rente éducation pour les enfants.",
+      "pour_ce_client": "Actif avec enfants à charge (rente éducation), besoin de compléter le revenu en cas d'arrêt de travail long, indépendance vis-à-vis d'un contrat collectif d'entreprise.",
+      "repond_aux_risques": [
+        "deces_protection_famille",
+        "arret_travail_itt",
+        "invalidite",
+        "education_enfants"
+      ],
+      "pieges_a_ne_pas_oublier": [
+        "Confondre les variantes « par accident » (moins chères) et « toutes causes » : la maladie n'est pas couverte par les premières.",
+        "Invalidité sous le seuil du barème = aucune prestation.",
+        "Sports/activités à risque exclus : vérifier les pratiques réelles du client."
+      ],
+      "objections_et_parades": [
+        {
+          "risque": "deces_protection_famille",
+          "objection": "« J'ai déjà une assurance par mon travail »",
+          "reponse": "Le collectif s'arrête avec le contrat de travail et ses capitaux sont souvent standardisés : vérifier montants et portabilité."
+        },
+        {
+          "risque": "arret_travail_itt",
+          "objection": "« J'ai la Sécurité sociale »",
+          "reponse": "Pour un TNS, les IJ obligatoires sont faibles et plafonnées : chiffrer le différentiel avec les charges réelles du foyer."
+        }
+      ],
+      "origine_interpretations": "simulation_assistee_par_claude"
+    },
+    {
+      "contrat": "Avizen Pro",
+      "accroche_metier": "Déclinaison professionnelle de la prévoyance : compléter les prestations des régimes obligatoires du travailleur indépendant ou du professionnel en cas d'arrêt de travail, d'invalidité ou de décès (IJ complémentaires aux régimes obligatoires, rentes d'invalidité, rente éducation avec double effet).",
+      "pour_ce_client": "Travailleur non salarié, profession libérale ou dirigeant dont les régimes obligatoires couvrent mal l'arrêt de travail.",
+      "repond_aux_risques": [
+        "deces_protection_famille",
+        "arret_travail_itt",
+        "invalidite",
+        "education_enfants"
+      ],
+      "pieges_a_ne_pas_oublier": [
+        "Croire que les IJ complémentaires remplacent le revenu entier : elles COMPLÈTENT le régime obligatoire.",
+        "Oublier le double effet (protection si le second parent décède)."
+      ],
+      "objections_et_parades": [
+        {
+          "risque": "deces_protection_famille",
+          "objection": "« J'ai déjà une assurance par mon travail »",
+          "reponse": "Le collectif s'arrête avec le contrat de travail et ses capitaux sont souvent standardisés : vérifier montants et portabilité."
+        },
+        {
+          "risque": "arret_travail_itt",
+          "objection": "« J'ai la Sécurité sociale »",
+          "reponse": "Pour un TNS, les IJ obligatoires sont faibles et plafonnées : chiffrer le différentiel avec les charges réelles du foyer."
+        }
+      ],
+      "origine_interpretations": "simulation_assistee_par_claude"
+    },
+    {
+      "contrat": "Essen'Ciel Patrimoine",
+      "accroche_metier": "Garantir un capital décès aux bénéficiaires dans une logique viagère et patrimoniale : protection décès permanente avec revalorisation/participation aux bénéfices, faculté de rachat et valeur de réduction — à la frontière entre prévoyance décès et transmission.",
+      "pour_ce_client": "Transmission d'un capital certain aux bénéficiaires, souhait de conserver une porte de sortie (rachat).",
+      "repond_aux_risques": [
+        "deces_protection_famille"
+      ],
+      "pieges_a_ne_pas_oublier": [
+        "Le rachat met FIN à la protection décès : à n'utiliser qu'en dernier recours.",
+        "La mise en réduction diminue le capital garanti."
+      ],
+      "objections_et_parades": [
+        {
+          "risque": "deces_protection_famille",
+          "objection": "« J'ai déjà une assurance par mon travail »",
+          "reponse": "Le collectif s'arrête avec le contrat de travail et ses capitaux sont souvent standardisés : vérifier montants et portabilité."
+        }
+      ],
+      "origine_interpretations": "simulation_assistee_par_claude"
+    }
+  ],
+  "compte_rendu_type": {
+    "objet": "Compte-rendu d'entretien — [PRÉNOM NOM] — [DATE]",
+    "corps": [
+      "Situation évoquée : [À COMPLÉTER — reprendre les FAITS confirmés uniquement]",
+      "Priorités identifiées ensemble : emprunt, deces_protection_famille, arret_travail_itt",
+      "Points d'attention abordés : Quotités mal réparties entre co-emprunteurs (100/100 vs 50/50) : au décès d'un seul, la moitié de la dette peut rester.",
+      "Solutions à l'étude : Masterlife CREDIT, Avizen, Avizen Pro (sous réserve d'étude complète et des conditions contractuelles)",
+      "Informations à me transmettre : [À COMPLÉTER]",
+      "Prochaine étape : [À COMPLÉTER — date et objet]"
+    ],
+    "mentions": "Ce compte-rendu ne constitue ni un devis ni un engagement ; les garanties, conditions et exclusions applicables sont celles des notices contractuelles."
+  },
+  "reserves": [
+    "avis CONDITIONNEL fondé sur les faits déclarés : toute donnée manquante peut changer les priorités",
+    "aucune éligibilité, aucun tarif, aucune règle fiscale affirmés : à vérifier sur pièces et sources à jour",
+    "heuristiques métier étiquetées simulation_assistee_par_claude : à confirmer par un inspecteur humain"
+  ],
+  "validation_humaine_requise": true
+}

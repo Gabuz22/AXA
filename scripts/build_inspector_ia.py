@@ -184,6 +184,11 @@ def _write_case_artifacts(graph, subjects):
         avis = IAdv.advise(cas, graph, metier)
         _write_json("cas-clients/avis_inspecteur.example.json",
                     {"note": "EXEMPLE SYNTHÉTIQUE (aucune donnée réelle). Avis CONDITIONNEL, heuristiques étiquetées.", **avis})
+        # KIT DE RENDEZ-VOUS (assistant commercial) : JSON pour l'IA + Markdown copiable pour le conseiller
+        import commercial_kit as CK
+        kit = CK.build_kit(cas, graph, metier)
+        _write_json("commercial/kit_rdv.example.json", {"note": "EXEMPLE SYNTHÉTIQUE (aucune donnée réelle).", **kit})
+        _write_text("commercial/kit_rdv.example.md", CK.to_markdown(kit))
 
 
 def _write_metier(graph):
