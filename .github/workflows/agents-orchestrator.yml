@@ -5,18 +5,26 @@ name: agents-orchestrator
 # dispo, routage explicable, repos/reset des fournisseurs, métriques, READY_FOR_REVIEW, état persisté sur
 # agents/proposals. Aucune fusion auto, aucun fichier produit modifié, zéro coût.
 #
-# DÉSACTIVÉ en planifié par défaut (schedule commenté) : activation prudente après validation manuelle
-# (voir README). Concurrence : group 'agents-proposals' (partagé) + verrou d'état interne => un seul cycle
-# à la fois. Planifié uniquement si AGENTS_ENABLED == 'true'.
+# PLANIFIÉ toutes les 6 h (minute non ronde). Les runs planifiés ne s'exécutent QUE si la variable de
+# dépôt AGENTS_ENABLED == 'true' (portail dans le workflow réutilisable). Triple garde anti-concurrence :
+#  1) concurrency 'agents-orchestrator' ici (sérialise ce workflow, jamais deux cycles en parallèle) ;
+#  2) concurrency 'agents-proposals' dans le réutilisable (partagé avec les autres agents) ;
+#  3) verrou d'état interne (orchestrator/locks) => un seul cycle actif à la fois.
+# Le code exécuté vient toujours de main ; seul l'ÉTAT persistant est restauré depuis agents/proposals.
+# Jamais de fusion auto : la PR de synthèse est persistante et attend une revue humaine.
 on:
-  # schedule:
-  #   - cron: "5 */6 * * *"   # toutes les 6 h, prudent
+  schedule:
+    - cron: "17 */6 * * *"   # toutes les 6 h à la minute 17 (UTC) — non ronde pour éviter les pics
   workflow_dispatch:
     inputs:
       force_dry_run:
         description: "Exécuter en dry-run (aucun commit)"
         type: boolean
         default: true
+
+concurrency:
+  group: agents-orchestrator
+  cancel-in-progress: false   # ne jamais interrompre un cycle en cours (commit/état cohérents)
 
 jobs:
   orchestrator:

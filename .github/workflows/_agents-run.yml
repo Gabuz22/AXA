@@ -41,8 +41,13 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 20        # garde-fou de durée (le budget interne du cycle est ~10 min) ; jamais de boucle
     env:
       AGENT_BRANCH: agents/proposals
+      # Calage de l'estimation « prochain cycle » du résumé (colocalisé avec le cron de agents-orchestrator :
+      # "17 */6 * * *"). Indicatif uniquement — GitHub peut différer/annuler les schedules.
+      AXA_CYCLE_EVERY_HOURS: "6"
+      AXA_CYCLE_MINUTE: "17"
       # Fournisseurs LLM GRATUITS (facultatifs). Aucune clé => agents LLM en arrêt propre (no_work).
       # GitHub Models a été retiré définitivement. Voir agent-work/README_API_CONFIGURATION.md.
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

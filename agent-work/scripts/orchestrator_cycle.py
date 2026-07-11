@@ -228,7 +228,8 @@ def run_cycle(dry_run=False, deterministic=None, base_dir=ORCH_DIR):
                                                "model": decision["model"], "status": task["status"],
                                                "agent_status": result.get("agent_status"),
                                                "task_outcome": outcome, "llm_calls": result.get("llm_calls"),
-                                               "proposals_written": result.get("proposals_written")})
+                                               "proposals_written": result.get("proposals_written"),
+                                               "tokens_in": result.get("tokens_in"), "tokens_out": result.get("tokens_out")})
             executed += 1
         if not dry_run:
             S.write_json(os.path.join(base_dir, "idempotency.json"), {"done": list(idem_done)[-300:], "updated_at": orch._iso()})
@@ -241,6 +242,7 @@ def run_cycle(dry_run=False, deterministic=None, base_dir=ORCH_DIR):
         # 6) persistance de l'état d'orchestration + résumé de cycle
         registry.save(dry_run); queue.save(dry_run)
         summary = _cycle_summary(cid, manifest, queue, registry)
+        _emit_cycle_step_summary(summary)        # page du run (aussi en dry-run) — aucune donnée secrète
         if not dry_run:
             S.write_json(os.path.join(base_dir, "cycle_summary.json"), summary)
             S.write_json(os.path.join(base_dir, "cycles", cid + ".json"), manifest)
@@ -278,26 +280,97 @@ def _run_coordinator(dry_run):
         pass
 
 
+def _next_cycle_iso():
+    """Estimation du prochain cycle planifié (jamais garantie ; GitHub peut différer/annuler les schedules).
+    Se cale sur l'intervalle et la minute du cron via env (colocalisés avec le workflow), défaut 6 h / :17."""
+    try:
+        every = max(1, int(os.environ.get("AXA_CYCLE_EVERY_HOURS", "6")))
+        minute = min(59, max(0, int(os.environ.get("AXA_CYCLE_MINUTE", "17"))))
+    except ValueError:
+        every, minute = 6, 17
+    now = orch._now()
+    cand = now.replace(minute=minute, second=0, microsecond=0)
+    while cand <= now or (cand.hour % every) != 0:
+        cand += __import__("datetime").timedelta(hours=1)
+        cand = cand.replace(minute=minute, second=0, microsecond=0)
+    return orch._iso(cand)
+
+
 def _cycle_summary(cid, manifest, queue, registry):
     counts = queue.counts()
     # « disponible » = clé détectée ET état available (sinon c'est un moteur non utilisable).
     avail = [pid for pid in registry.data["providers"]
              if registry._p(pid).get("key_detected") and registry.is_available(pid)]
+    detected = [pid for pid in registry.data["providers"] if registry._p(pid).get("key_detected")]
     resting = []
     for s in registry.snapshot():
         no_key = not registry._p(s["provider"]).get("key_detected")
         if s["state"] != "available" or no_key:
             state = "cle_absente" if (no_key and s["state"] == "available") else s["state"]
             resting.append({"provider": s["provider"], "state": state, "reprise": s["next_available_at"]})
+    ex = manifest["tasks_executed"]
+    providers_used = sorted({t["provider"] for t in ex if t.get("provider")})
+    llm_calls = sum(int(t.get("llm_calls") or 0) for t in ex)
+    tokens_in = sum(int(t.get("tokens_in") or 0) for t in ex)
+    tokens_out = sum(int(t.get("tokens_out") or 0) for t in ex)
+    # Erreurs (jamais de secret) : tâches en échec réel + fournisseurs nécessitant un humain + causes LLM.
+    errors = []
+    for t in ex:
+        if t.get("status") in ("failed_retryable", "failed_terminal", "waiting_reset"):
+            errors.append({"task_id": t["task_id"], "status": t["status"], "cause": t.get("task_outcome")})
+    for s in registry.snapshot():
+        if s.get("needs_human"):
+            errors.append({"provider": s["provider"], "state": s.get("state"), "needs_human": True})
+    blocked = counts.get("blocked_human_review", 0)
+    ready = counts.get("ready", 0)
+    waiting_provider = counts.get("waiting_provider", 0)
+    waiting_reset = counts.get("waiting_reset", 0)
+    # Quota estimé = compteur prudent d'appels par fournisseur détecté (jamais la clé/valeur).
+    quota_est = {pid: registry._p(pid).get("calls_used_est", 0) for pid in detected}
+    progression = "attente_revue_humaine" if (blocked > 0 and ready == 0 and waiting_provider == 0 and waiting_reset == 0) \
+        else ("attente_fournisseur" if (ready == 0 and (waiting_provider or waiting_reset)) else "en_cours")
     return {
-        "cycle_id": cid, "generated_at": orch._iso(),
+        "cycle_id": cid, "generated_at": orch._iso(), "next_cycle_estimate": _next_cycle_iso(),
         "deterministic_ran": [d["agent"] for d in manifest["deterministic_ran"]],
-        "tasks_done_this_cycle": len(manifest["tasks_executed"]),
-        "tasks_waiting": counts.get("ready", 0) + counts.get("waiting_provider", 0) + counts.get("waiting_reset", 0),
-        "providers_available": avail, "providers_resting": resting,
+        "tasks_done_this_cycle": len(ex),
+        "tasks_ready": ready, "tasks_waiting_provider": waiting_provider, "tasks_waiting_reset": waiting_reset,
+        "tasks_blocked_human_review": blocked, "tasks_completed": counts.get("completed", 0),
+        "tasks_failed_terminal": counts.get("failed_terminal", 0),
+        "tasks_waiting": ready + waiting_provider + waiting_reset,
+        "providers_detected": detected, "providers_available": avail, "providers_resting": resting,
+        "providers_used": providers_used, "quota_estimate_calls": quota_est,
+        "llm_calls": llm_calls, "tokens_in_est": tokens_in, "tokens_out_est": tokens_out,
+        "errors": errors, "progression": progression,
+        "reopened_tasks": manifest.get("reopened_tasks", []),
         "incidents_human": [s["provider"] for s in registry.snapshot() if s.get("needs_human")],
         "next_priority": (manifest["tasks_deferred"][0]["task_id"] if manifest["tasks_deferred"] else None),
     }
+
+
+def _emit_cycle_step_summary(s):
+    """Résumé lisible sur la page du run (aucune donnée secrète : ids de fournisseurs, compteurs, true/false)."""
+    prog = {"attente_revue_humaine": "[PAUSE] En attente de revue humaine (aucun retraitement en boucle)",
+            "attente_fournisseur": "[ATTENTE] En attente d'un fournisseur (réessai automatique au prochain cycle)",
+            "en_cours": "[ACTIF] Progression active"}.get(s["progression"], s["progression"])
+    lines = ["", "### Chef d'orchestre — résumé du cycle", "", "```text",
+             "Prochain cycle estimé : %s (indicatif)" % s["next_cycle_estimate"],
+             "État : %s" % prog,
+             "Déterministes : %s" % (", ".join(s["deterministic_ran"]) or "aucun"),
+             "Tâches — exécutées ce cycle : %d" % s["tasks_done_this_cycle"],
+             "Tâches — ready: %d · waiting_provider: %d · waiting_reset: %d · blocked_human_review: %d · completed: %d · failed_terminal: %d" % (
+                 s["tasks_ready"], s["tasks_waiting_provider"], s["tasks_waiting_reset"],
+                 s["tasks_blocked_human_review"], s["tasks_completed"], s["tasks_failed_terminal"]),
+             "Fournisseurs détectés : %s" % (", ".join(s["providers_detected"]) or "aucun"),
+             "Fournisseurs disponibles : %s" % (", ".join(s["providers_available"]) or "aucun"),
+             "Fournisseur(s) utilisé(s) ce cycle : %s" % (", ".join(s["providers_used"]) or "aucun"),
+             "Quota estimé (appels cumulés/fournisseur) : %s" % (json.dumps(s["quota_estimate_calls"], ensure_ascii=False)),
+             "Appels LLM ce cycle : %d · tokens ~ entrée %d / sortie %d" % (s["llm_calls"], s["tokens_in_est"], s["tokens_out_est"]),
+             "Erreurs : %s" % (json.dumps(s["errors"], ensure_ascii=False) if s["errors"] else "aucune"),
+             "Tâches réactivées (migration) : %s" % (", ".join(s["reopened_tasks"]) if s["reopened_tasks"] else "aucune"),
+             "```", ""]
+    if s["tasks_blocked_human_review"] > 0:
+        lines.append("_%d proposition(s) attendent une revue humaine — voir `agent-work/coordinator/READY_FOR_REVIEW.md`._" % s["tasks_blocked_human_review"])
+    S.github_summary("\n".join(lines))
 
 
 def main():
