@@ -33,7 +33,7 @@
       "fraicheur": {
         "as_of": "2026-07-10",
         "ttl_days": 365,
-        "checked_at": "2026-07-11T22:08:49Z"
+        "checked_at": "2026-07-11T22:31:05Z"
       }
     }
   ],
@@ -92,5 +92,87 @@
   ],
   "profondeur": 0.629,
   "couverture_semantique": 0.231,
-  "avertissement": "Fiche dérivée du graphe (lecture seule). Interprétations séparées du prouvé ; vérifier les preuves avant tout usage client."
+  "validation": {
+    "blocks": {
+      "validated_knowledge": [
+        {
+          "label": "Garantie décès — versement d'un capital aux bénéficiaires",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.92
+        },
+        {
+          "label": "Revalorisation / participation aux bénéfices",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.88
+        },
+        {
+          "label": "Risques exclus de la garantie décès",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Mise en réduction (valeur de réduction)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Réduction tarifaire couple (-10 %)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.92
+        },
+        {
+          "label": "Prestations d'assistance (suite au décès)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.85
+        }
+      ],
+      "derived_relations": [
+        {
+          "type": "governed_by",
+          "src": "k_b8c594a211938f0d3cd2",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        }
+      ],
+      "pending_interpretations": [],
+      "simulated_claude": [],
+      "uncertainties": [],
+      "human_review_required": [],
+      "stale": [],
+      "contradictory": []
+    },
+    "counts": {
+      "validated": 7,
+      "derived_deterministic": 1
+    },
+    "legend": {
+      "exposable_as_truth": [
+        "derived_deterministic",
+        "validated"
+      ],
+      "visible_if_labeled_only": [
+        "contradictory",
+        "pending_review",
+        "simulated_claude",
+        "stale",
+        "uncertain"
+      ],
+      "never_exposed": [
+        "rejected"
+      ]
+    }
+  },
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Blocs de validation SÉPARÉS : 'validated_knowledge' (masters validés) exposable comme vérité ; 'pending_interpretations'/'simulated_claude'/'stale'/'contradictory' visibles UNIQUEMENT étiquetés, jamais comme clause/règle certaine. Vérifier les preuves."
 }

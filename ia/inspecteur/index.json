@@ -2,7 +2,7 @@
   "projection": "inspecteur",
   "version": "1.0.0",
   "domain": "axa-contrat",
-  "generated_at": "2026-07-11T22:08:49Z",
+  "generated_at": "2026-07-11T22:31:05Z",
   "graph_fingerprint": "i_38e212f974438478",
   "stats": {
     "evidence": 140,
@@ -27,7 +27,28 @@
     "contrats/<slug>.json",
     "comparison.json",
     "matrices.json",
-    "tools.json"
+    "tools.json",
+    "cas-clients/case_schema.json",
+    "cas-clients/case_reasoning_protocol.json",
+    "cas-clients/arbitration_axes.json",
+    "cas-clients/missing_information_protocol.json",
+    "cas-clients/solution_scenarios.example.json"
   ],
+  "statuts_validation": {
+    "exposable_comme_verite": [
+      "validated",
+      "derived_deterministic"
+    ],
+    "visible_si_etiquete": [
+      "pending_review",
+      "simulated_claude",
+      "uncertain",
+      "stale",
+      "contradictory"
+    ],
+    "jamais_expose": [
+      "rejected"
+    ]
+  },
   "avertissement": "Zone DÉRIVÉE du graphe (lecture seule). Ni master, ni proposition. Preuves conservées ; interprétations séparées ; validation humaine pour toute sortie sensible."
 }
