@@ -36,6 +36,21 @@ def _contrats():
     return S.load_json(base.repo_path("ia/contrats.json"), default={}).get("contrats", [])
 
 
+def CI_norm(t):
+    import corpus_intel as CI
+    return CI.norm(t)
+
+
+def _concept_keywords(key, c):
+    """Mots-clés d'appariement d'un concept réglementaire (pour relier les entités de contrat concernées)."""
+    kws = {CI_norm(key)}
+    kws.add(CI_norm(c.get("nom") or ""))
+    for w in CI_norm(c.get("nom") or "").split():
+        if len(w) > 3:
+            kws.add(w)
+    return sorted(k for k in kws if k)
+
+
 class AXAAdapter(DomainAdapter):
     domain_id = "axa-contrat"
     environment_domains = ("fiscalite", "reglementation", "droit", "securite-sociale")
@@ -68,7 +83,8 @@ class AXAAdapter(DomainAdapter):
                         "subject": subject, "subtype": subtype, "label": label,
                         "content": {"resume": item.get("resume_humain") or item.get("resume"),
                                     "section": src.get("section"),
-                                    "impact_client": item.get("impact_client")},
+                                    "impact_client": item.get("impact_client"),
+                                    "keywords": [str(k) for k in (item.get("mots_cles") or [])][:30]},
                         "source": {"document": src.get("document_source"), "page": src.get("page"),
                                    "section": src.get("section")} if src.get("document_source") else None,
                         "confidence": round((score / 100.0), 3) if isinstance(score, (int, float)) else 0.6,
@@ -96,14 +112,33 @@ class AXAAdapter(DomainAdapter):
         return LABEL_RULES
 
     # -------------------------------------------------------------- environnement (couche séparée)
+    def _fiscal(self, domaines):
+        return "fiscalite" if any("fiscal" in CI_norm(d) for d in (domaines or [])) else "reglementation"
+
     def official_sources(self):
+        env = self.environment_sources()
+        return [{"id": a["id"], "autorite": a["nom"], "url": a.get("url"), "theme": None}
+                for a in env["authorities"]]
+
+    def environment_sources(self):
+        """Référentiel d'ENVIRONNEMENT (NAVIGATION vers autorités publiques, AUCUN contenu réglementaire).
+        Retourne {authorities:[...], concepts:[...]} normalisé. Domaines séparés (fiscalite/reglementation).
+        `as_of` = date de génération du référentiel (fraîcheur)."""
         data = S.load_json(base.repo_path("ia/sources-officielles.json"), default={})
-        srcs = data.get("sources") or data.get("autorites") or []
-        out = []
-        for s in srcs if isinstance(srcs, list) else []:
-            out.append({"id": s.get("id") or s.get("nom"), "autorite": s.get("autorite") or s.get("nom"),
-                        "url": s.get("url"), "theme": s.get("theme") or s.get("concept")})
-        return out
+        as_of = (data.get("meta") or {}).get("genere_le")
+        authorities = []
+        for key, a in (data.get("autorites") or {}).items():
+            authorities.append({"id": key, "nom": a.get("nom") or key, "url": a.get("url"),
+                                "type": a.get("type"), "role": a.get("role"), "as_of": as_of})
+        concepts = []
+        for key, c in (data.get("concepts") or {}).items():
+            if not c.get("matiere_evolutive"):
+                continue                              # on n'ancre que les matières ÉVOLUTIVES (droit/fiscal)
+            concepts.append({"key": key, "nom": c.get("nom") or key,
+                             "domain": self._fiscal(c.get("domaines")),
+                             "authorities": [x.get("cle") for x in (c.get("autorites") or []) if x.get("cle")],
+                             "keywords": _concept_keywords(key, c), "as_of": as_of})
+        return {"authorities": authorities, "concepts": concepts}
 
     # -------------------------------------------------------------- résolution slug<->nom
     def subject_of(self, ref):

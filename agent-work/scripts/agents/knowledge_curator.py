@@ -15,6 +15,7 @@ import domain_adapter
 import knowledge_graph as KG
 import knowledge_ingest as KI
 import knowledge_tasks as KT
+import environment_ingest as EI
 
 AGENT_CODE_VERSION = "2.8.0"
 
@@ -41,6 +42,7 @@ def run(ctx):
             return [], ["knowledge-curator: adaptateur %s indisponible: %s" % (domain_id, e)]
         graph = KG.KnowledgeGraph(base.repo_path(GRAPH), load_json=S.load_json, write_json=write)
         ing = KI.ingest(adapter, graph)         # déterministe, 0 token
+        env = EI.ingest_environment(adapter, graph)   # ancrage réglementaire/fiscal (domaines séparés), 0 token/réseau
         subjects = ing.get("subjects", [])
         tasks = KT.generate(graph, domain_id, subjects)
         total, new = KT.persist(tasks, S.load_json, write, S.now_iso, dry_run=ctx.dry_run)
