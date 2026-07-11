@@ -84,14 +84,22 @@ jamais le produit. Il prépare des propositions d'ajout **vérifiables**, écrit
   `citation` doit réellement figurer sur la **page citée** de la notice (vérifié par lecture du PDF),
   sinon l'item est **rejeté**. Rejets aussi si : hors catégorie, mauvaise page, texte/citation absents,
   doublon, confiance trop faible. Mieux vaut 2 excellentes propositions/semaine que 50 médiocres.
-- **Micro-zones.** 2 à 5 pages par zone, **≤ 2 zones par exécution**. Une **mémoire**
-  (`agent-work/extraction/memory.json`) retient pages traitées / refusées / zone suivante par contrat —
-  aucune relecture inutile ; progression lente et réelle sur des mois.
-- **Tokens minimaux.** Le LLM ne reçoit que : les pages de la zone (tronquées), les libellés déjà
-  présents, les concepts et catégories, et rien d'autre. Il répond en **JSON strict** (aucune rédaction
-  libre). Estimation ~1,5–3 k tokens d'entrée + ~0,5–1 k de sortie **par zone** → **coût nul** (paliers
-  gratuits GitHub Models > Gemini > Groq). Budget par run borné ; **arrêt propre** si aucun fournisseur
-  gratuit ou quota épuisé.
+- **Charge adaptative.** L'agent décide seul du nombre de micro-zones (**1 → 5**) selon le **quota
+  gratuit restant** estimé (compté dans la mémoire, par jour). Quota faible → 1 zone ; confortable → jusqu'à 5.
+- **Sélection priorisée.** Zones classées : trous de couverture → catégories absentes → contrats
+  récemment modifiés → jamais explorés → relecture ancienne (> 30 j). Mémoire
+  (`agent-work/extraction/memory.json`) : pages traitées / refusées / zone suivante / empreintes proposées / date.
+- **Tokens minimaux.** Le LLM ne reçoit que les **pages de la zone** + les **catégories en trou** (pas les
+  13) + quelques concepts + libellés existants **des seules catégories concernées**. JSON strict, aucune
+  rédaction libre. Le résumé affiche **tokens économisés estimés**. **Coût nul** (paliers gratuits).
+- **Fournisseur (gratuit, sans secret).** GitHub Models via le **`GITHUB_TOKEN` natif** d'Actions
+  (permission `models: read`) — aucun secret à créer. Repli configurable Gemini / Groq. `allow_paid_usage:false`.
+  **Arrêt propre** si aucun fournisseur gratuit ou quota épuisé.
+- **Format enrichi.** Chaque proposition porte : `confidence_reason`, `importance`, `review_cost`,
+  `target_path`, `citation_exacte`, `why_missing` (déduits ou vides — jamais inventés). Confiance
+  **réaliste**, plafonnée à 0.95 (jamais 1.0), pénalisée si citation courte / proximité / ambiguïté.
+- **Anti-doublon renforcé.** Avant écriture : dédup contre `pending/` **et** la mémoire (= contenu de la
+  PR restaurée en CI).
 - **Pipeline de contrôle.** Les propositions passent ensuite les agents **déterministes** (Quality =
   JSON/format/source/page/doublon ; Coverage = comble-t-elle un vrai trou ?) puis le **Coordinateur** les
   classe (nouvelle / doublon / incertaine / rejetée / prioritaire). Les déterministes peuvent invalider l'IA.

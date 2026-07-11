@@ -28,6 +28,8 @@
     "max_proposals_per_run": 5,
     "max_pages_per_run": 5,
     "max_tokens_per_run": 40000,
+    "max_llm_calls_per_run": 6,
+    "free_daily_calls_estimate": 50,
     "max_output_bytes_per_proposal": 65536,
     "min_confidence": 0.55,
     "http_timeout_seconds": 20,

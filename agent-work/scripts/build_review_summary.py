@@ -191,8 +191,15 @@ def _render_md(rj, top, anomalies, regressions, sources, conflicts, saved, n_fix
         L += ["%d. **%s** — %s (score %.2f)%s" % (i, p["task"].get("type"), p["proposal_id"], p["_score"], reg),
               "   - fichier : `%s` · cible : `%s`" % (p.get("_file"), p.get("target", {}).get("file", "?")),
               "   - risque : %s · action : %s" % (
-                  ("réglementaire" if reg else (p.get("risks") or ["faible"])[0])[:70], _human_action(p)),
-              "   - %s" % p.get("reasoning_summary", "")[:150]]
+                  ("réglementaire" if reg else (p.get("risks") or ["faible"])[0])[:70], _human_action(p))]
+        pl = p.get("proposed_change", {}).get("payload", {})
+        if pl.get("review_cost") or pl.get("importance") or pl.get("why_missing"):
+            # Ligne "décision en quelques secondes" pour Claude (propositions d'extraction).
+            L.append("   - ⏱ validation ~%s · importance %s · confiance %.2f · pourquoi : %s" % (
+                pl.get("review_cost", "?"), pl.get("importance") or "?", p.get("confidence", 0), pl.get("why_missing") or "?"))
+            if pl.get("target_path"):
+                L.append("   - cible master : `%s`" % pl["target_path"])
+        L.append("   - %s" % p.get("reasoning_summary", "")[:150])
     L += ["", "## Anomalies qualité",
           "- **Nouvelles** : %s" % (", ".join(anomalies.get("new", [])) or "aucune"),
           "- **Connues** : %s" % (", ".join(anomalies.get("known", [])) or "aucune"),

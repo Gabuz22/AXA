@@ -67,5 +67,40 @@ class TestExtractionGate(unittest.TestCase):
         self.assertTrue(any("source" in e for e in errs))
 
 
+class TestConfidenceAndLoad(unittest.TestCase):
+    def test_confidence_never_one(self):
+        c, reason = EX.realistic_confidence({"confidence": 1.0, "citation": "x" * 60})
+        self.assertLessEqual(c, EX.CONF_CAP)
+        self.assertLess(c, 1.0)
+        self.assertIn("Confiance", reason)
+
+    def test_confidence_penalty_proximity(self):
+        c_far, _ = EX.realistic_confidence({"confidence": 0.9, "citation": "x" * 60})
+        c_near, _ = EX.realistic_confidence({"confidence": 0.9, "citation": "x" * 60, "closest_existing": "deja la"})
+        self.assertLess(c_near, c_far)
+
+    def test_confidence_floor(self):
+        c, _ = EX.realistic_confidence({"confidence": 0.1, "citation": "ab"})
+        self.assertGreaterEqual(c, 0.30)
+
+    def test_adaptive_zone_count(self):
+        self.assertEqual(EX.adaptive_zone_count(0), 0)
+        self.assertEqual(EX.adaptive_zone_count(3), 1)
+        self.assertEqual(EX.adaptive_zone_count(10), 2)
+        self.assertEqual(EX.adaptive_zone_count(25), 3)
+        self.assertEqual(EX.adaptive_zone_count(50), 4)
+        self.assertEqual(EX.adaptive_zone_count(200), 5)
+
+    def test_enum_cleaning(self):
+        self.assertEqual(EX._clean_enum("Critique", EX.IMPORTANCE), "critique")
+        self.assertEqual(EX._clean_enum("inventé", EX.IMPORTANCE), "")   # jamais inventé
+        self.assertEqual(EX._review_cost_for("critique"), "2 min")
+
+    def test_target_path_deterministic(self):
+        tp = EX._target_path("Avizen", "garanties")
+        self.assertIn("Avizen", tp)
+        self.assertIn("garanties", tp)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

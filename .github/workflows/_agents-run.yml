@@ -31,8 +31,9 @@ on:
         default: false
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: write        # uniquement pour la branche confinée agents/proposals
+  pull-requests: write   # uniquement pour la PR de synthèse (jamais de merge auto)
+  models: read           # permet à GitHub Models d'accepter le GITHUB_TOKEN natif (gratuit, sans secret)
 
 concurrency:
   group: agents-proposals
@@ -43,7 +44,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       AGENT_BRANCH: agents/proposals
-      # Secrets fournisseurs (facultatifs). Absents => aucun appel LLM, l'agent s'arrête proprement.
+      # GitHub Models via le jeton NATIF (gratuit, aucun secret à créer) — repli si GITHUB_MODELS_TOKEN absent.
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Secrets fournisseurs (facultatifs). Absents => repli natif ci-dessus, sinon arrêt propre.
       GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}

@@ -25,7 +25,12 @@ class ProviderRouter:
 
     def _key_for(self, p):
         env = p.get("api_key_env")
-        return os.environ.get(env) if env else None
+        val = os.environ.get(env) if env else None
+        if not val:
+            # Repli : jeton natif GitHub Actions (ex. GitHub Models accepte GITHUB_TOKEN + permission models:read).
+            fb = p.get("api_key_env_fallback")
+            val = os.environ.get(fb) if fb else None
+        return val
 
     def available(self):
         """Liste ordonnée des ids de fournisseurs réellement utilisables (sans exposer les clés)."""

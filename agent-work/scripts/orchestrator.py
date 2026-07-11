@@ -98,7 +98,7 @@ def main():
     ctx.mock = bool(args.mock)
     ctx.limits = policies.get("limits", {})
     ctx.task = ST.select(args.agent) or {}
-    ctx.budget = Q.Budget(max_llm_calls=ctx.limits.get("max_agents_per_run", 1) * 4,
+    ctx.budget = Q.Budget(max_llm_calls=ctx.limits.get("max_llm_calls_per_run", 6),
                           max_tokens=ctx.limits.get("max_tokens_per_run", 40000))
     ctx.router = build_router(policies, providers_cfg, need_llm, args.dry_run, logf)
     manifest["task_id"] = ctx.task.get("id")

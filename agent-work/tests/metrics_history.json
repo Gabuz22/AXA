@@ -51,6 +51,32 @@
         "statut": 83,
         "faux_positifs": 0
       }
+    },
+    {
+      "at": "2026-07-11T00:29:18Z",
+      "run_id": "run_adversarial-tests_20260711_002909",
+      "metrics": {
+        "n_tests": 76,
+        "contrats_precision": 100,
+        "contrats_recall": 100,
+        "perimetre": 100,
+        "source": 100,
+        "statut": 83,
+        "faux_positifs": 0
+      }
+    },
+    {
+      "at": "2026-07-11T00:33:09Z",
+      "run_id": "run_adversarial-tests_20260711_003302",
+      "metrics": {
+        "n_tests": 76,
+        "contrats_precision": 100,
+        "contrats_recall": 100,
+        "perimetre": 100,
+        "source": 100,
+        "statut": 83,
+        "faux_positifs": 0
+      }
     }
   ]
 }
