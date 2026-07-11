@@ -1,0 +1,387 @@
+{
+  "subject": "Essen'Ciel (assurance obsèques)",
+  "domain": "axa-contrat",
+  "finalite": "à approfondir (LLM)",
+  "architecture_garanties": {
+    "principales": [],
+    "secondaires": [
+      "Garantie décès (capital obsèques)",
+      "Revalorisation du capital",
+      "Assistance dès l'adhésion",
+      "Assistance au moment du décès",
+      "Assistance après le décès (proches)"
+    ],
+    "total": 5
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "Exclusions assistance",
+    "Décès accidentel exclu",
+    "Décès exclus"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Modification du capital garanti",
+    "Réduction adhésion simultanée (couple)",
+    "Choix de la durée de cotisation"
+  ],
+  "points_vigilance": [
+    "Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).",
+    "Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 € de VR pour 3 907 € versés à 10 ans).",
+    "Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes de frais.",
+    "Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, quelle que soit la formule (avertissement contractuel explici…",
+    "En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiaires (L132-18).",
+    "Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec le capital obsèques.",
+    "La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance."
+  ],
+  "concepts_structurants": [
+    "Décès",
+    "Décès accidentel",
+    "Souscription & adhésion",
+    "Souscription & adhésion",
+    "Souscription & adhésion",
+    "Fiscalité",
+    "Décès",
+    "Décès accidentel"
+  ],
+  "environnement": [
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Fiscalité",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 20,
+      "citation": "Garantie décès (capital obsèques)"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 20,
+      "citation": "Revalorisation du capital"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 23,
+      "citation": "Assistance dès l'adhésion"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 24,
+      "citation": "Assistance au moment du décès"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 27,
+      "citation": "Assistance après le décès (proches)"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 31,
+      "citation": "Exclusions assistance"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 30,
+      "citation": "Décès accidentel exclu"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 30,
+      "citation": "Décès exclus"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 22,
+      "citation": "Modification du capital garanti"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 17,
+      "citation": "Réduction adhésion simultanée (couple)"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 8,
+      "citation": "Choix de la durée de cotisation"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 20,
+      "citation": "Capital revalorisé"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 33,
+      "citation": "Pénalité de rachat"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 35,
+      "citation": "Valeur de rachat"
+    }
+  ],
+  "comprehension": [],
+  "confusions_frequentes": "à approfondir (LLM)",
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.0,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    }
+  ],
+  "profondeur": 0.733,
+  "couverture_semantique": 0.385,
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Interprétations séparées du prouvé ; vérifier les preuves avant tout usage client."
+}

@@ -1,0 +1,153 @@
+{
+  "version": "1.0.0",
+  "tools": [
+    {
+      "nom": "analyser_contrat",
+      "moteur": "inspector_mono.reasoning_sheet",
+      "entree": {
+        "subject": "str"
+      },
+      "sortie": "fiche mono-contrat (finalité, garanties, exclusions, environnement, incertitudes)",
+      "fichier": "contrats/<slug>.json",
+      "cas_usage": "comprendre un contrat en profondeur",
+      "preuve_attendue": "citations des fiches",
+      "validation": "aucune (lecture)",
+      "erreurs_possibles": [
+        "contrat introuvable",
+        "cas incomplet",
+        "aucun mécanisme partagé"
+      ]
+    },
+    {
+      "nom": "comparer_contrats",
+      "moteur": "inspector_multi.compare",
+      "entree": {
+        "subjects": "[str]"
+      },
+      "sortie": "paires classées (substituables/complémentaires/…) + trous",
+      "fichier": "comparison.json",
+      "cas_usage": "différences/complémentarités entre contrats",
+      "preuve_attendue": "par contrat",
+      "validation": "confirmer les paires 'substituables/doublon'",
+      "erreurs_possibles": [
+        "contrat introuvable",
+        "cas incomplet",
+        "aucun mécanisme partagé"
+      ]
+    },
+    {
+      "nom": "analyser_cas_client",
+      "moteur": "inspector_mono.apply_case",
+      "entree": {
+        "subject": "str",
+        "case": "objet cas (statuts requis)"
+      },
+      "sortie": "conclusion PROVISOIRE conditionnelle + données manquantes",
+      "cas_usage": "confronter un contrat à une situation",
+      "preuve_attendue": "clauses citées",
+      "validation": "HUMAINE si sensible/incomplet",
+      "erreurs_possibles": [
+        "contrat introuvable",
+        "cas incomplet",
+        "aucun mécanisme partagé"
+      ]
+    },
+    {
+      "nom": "decomposer_besoin",
+      "moteur": "inspector_needs.decompose",
+      "entree": {
+        "case": "objet cas"
+      },
+      "sortie": "arbre objectifs→besoins→contrats candidats→données nécessaires",
+      "erreurs_possibles": [
+        "contrat introuvable",
+        "cas incomplet",
+        "aucun mécanisme partagé"
+      ]
+    },
+    {
+      "nom": "construire_solutions",
+      "moteur": "inspector_solution.build_scenarios",
+      "entree": {
+        "case": "objet cas"
+      },
+      "sortie": "scénarios (mono/multi/renforcé/existant) + besoins non couverts + doublons",
+      "cas_usage": "proposer plusieurs scénarios conditionnels",
+      "preuve_attendue": "par garantie",
+      "validation": "HUMAINE",
+      "erreurs_possibles": [
+        "contrat introuvable",
+        "cas incomplet",
+        "aucun mécanisme partagé"
+      ]
+    },
+    {
+      "nom": "comparer_solutions",
+      "moteur": "inspector_solution.arbitrate",
+      "entree": {
+        "scenarios": "[...]"
+      },
+      "sortie": "meilleur par axe + compromis, jamais de 'meilleur' absolu",
+      "cas_usage": "arbitrer sans 'meilleur' absolu",
+      "preuve_attendue": "—",
+      "validation": "HUMAINE",
+      "erreurs_possibles": [
+        "contrat introuvable",
+        "cas incomplet",
+        "aucun mécanisme partagé"
+      ]
+    },
+    {
+      "nom": "identifier_informations_manquantes",
+      "moteur": "inspector_case.completeness",
+      "entree": {
+        "case": "objet cas"
+      },
+      "sortie": "champs manquants + score de complétude",
+      "erreurs_possibles": [
+        "contrat introuvable",
+        "cas incomplet",
+        "aucun mécanisme partagé"
+      ]
+    },
+    {
+      "nom": "detecter_doublons_et_trous",
+      "moteur": "inspector_multi.coverage_gaps",
+      "entree": {
+        "subjects": "[str]"
+      },
+      "sortie": "trous de couverture par mécanisme",
+      "erreurs_possibles": [
+        "contrat introuvable",
+        "cas incomplet",
+        "aucun mécanisme partagé"
+      ]
+    },
+    {
+      "nom": "matrices",
+      "moteur": "inspector_projection",
+      "entree": {},
+      "sortie": "mecanisme→contrats, contrat→garanties/conditions/exclusions, concept→définitions",
+      "fichier": "matrices.json",
+      "erreurs_possibles": [
+        "contrat introuvable",
+        "cas incomplet",
+        "aucun mécanisme partagé"
+      ]
+    },
+    {
+      "nom": "distinguer_fait_hypothese_inconnu",
+      "moteur": "inspector_case / projection",
+      "description": "classer chaque donnée d'un cas par statut",
+      "validation": "aucune",
+      "preuve_attendue": "statut/couche explicite"
+    },
+    {
+      "nom": "distinguer_contractuel_externe_interpretatif",
+      "moteur": "inspector_case / projection",
+      "description": "étiqueter la source de chaque affirmation",
+      "validation": "aucune",
+      "preuve_attendue": "statut/couche explicite"
+    }
+  ]
+}

@@ -1,0 +1,459 @@
+{
+  "subject": "Masterlife CREDIT",
+  "domain": "axa-contrat",
+  "finalite": "à approfondir (LLM)",
+  "architecture_garanties": {
+    "principales": [],
+    "secondaires": [
+      "Incapacité de travail (IJ)",
+      "Invalidité totale ou partielle",
+      "Exonération du paiement des cotisations",
+      "Invalidité spécifique AERAS (GIS)",
+      "PTIA",
+      "Garantie Aide à la famille",
+      "Décès"
+    ],
+    "total": 7
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "États antérieurs",
+    "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)",
+    "PTIA/incapacité/invalidité — exclusions",
+    "Sports et activités exclus (sauf acceptation)",
+    "Décès — guerre/émeutes/crimes",
+    "Décès — suicide",
+    "Cures et esthétique"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Option Psy/Dos+",
+    "Tarif constant",
+    "Tarif capital restant dû"
+  ],
+  "points_vigilance": [
+    "Pas de valeur de rachat ni de réduction.",
+    "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+    "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
+    "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
+    "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
+    "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).",
+    "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+."
+  ],
+  "concepts_structurants": [
+    "Incapacité temporaire",
+    "Invalidité",
+    "Invalidité",
+    "Incapacité temporaire",
+    "Invalidité",
+    "Incapacité temporaire",
+    "Souscription & adhésion",
+    "Incapacité temporaire"
+  ],
+  "environnement": [
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 13,
+      "citation": "Incapacité de travail (IJ)"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 14,
+      "citation": "Invalidité totale ou partielle"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 16,
+      "citation": "Exonération du paiement des cotisations"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 16,
+      "citation": "Invalidité spécifique AERAS (GIS)"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 12,
+      "citation": "PTIA"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 14,
+      "citation": "Garantie Aide à la famille"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 12,
+      "citation": "Décès"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 21,
+      "citation": "États antérieurs"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 21,
+      "citation": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "citation": "PTIA/incapacité/invalidité — exclusions"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "citation": "Sports et activités exclus (sauf acceptation)"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "citation": "Décès — guerre/émeutes/crimes"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "citation": "Décès — suicide"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 22,
+      "citation": "Cures et esthétique"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 13,
+      "citation": "Option Psy/Dos+"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 11,
+      "citation": "Tarif constant"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 11,
+      "citation": "Tarif capital restant dû"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 12,
+      "citation": "IJ incapacité (plafond)"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 15,
+      "citation": "IJ invalidité partielle"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 16,
+      "citation": "Exonération incapacité"
+    }
+  ],
+  "comprehension": [],
+  "confusions_frequentes": "à approfondir (LLM)",
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.0,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    }
+  ],
+  "profondeur": 0.741,
+  "couverture_semantique": 0.385,
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Interprétations séparées du prouvé ; vérifier les preuves avant tout usage client."
+}

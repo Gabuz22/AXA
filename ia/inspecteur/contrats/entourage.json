@@ -1,0 +1,265 @@
+{
+  "subject": "Entour'Age",
+  "domain": "axa-contrat",
+  "finalite": "à approfondir (LLM)",
+  "architecture_garanties": {
+    "principales": [
+      "Rente viagère dépendance (garantie principale obligatoire)"
+    ],
+    "secondaires": [
+      "Services pour l'aidant de l'assuré",
+      "Services dès l'adhésion « ENTREAIDANTS »",
+      "Services d'assistance dédiés en perte d'autonomie"
+    ],
+    "total": 4
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "GIR 5 et 6",
+    "Dépendance suite à accidents — cas exclus",
+    "Exclusions générales (dépendance et décès)"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Réduction couple",
+    "Formule Dépendance Totale et Partielle",
+    "Capital Premiers Frais",
+    "Capital décès Remboursement des cotisations",
+    "Capital décès"
+  ],
+  "points_vigilance": [
+    "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €……",
+    "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jam…",
+    "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+    "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).",
+    "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.",
+    "La mise en réduction met fin aux prestations d'assistance.",
+    "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+    "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans)."
+  ],
+  "concepts_structurants": [
+    "Hospitalisation",
+    "Hospitalisation",
+    "Souscription & adhésion",
+    "Souscription & adhésion",
+    "Souscription & adhésion",
+    "Décès",
+    "Décès accidentel",
+    "Décès"
+  ],
+  "environnement": [
+    {
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 25,
+      "citation": "Services pour l'aidant de l'assuré"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 15,
+      "citation": "Services dès l'adhésion « ENTREAIDANTS »"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 21,
+      "citation": "Rente viagère dépendance (garantie principale obligatoire)"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 23,
+      "citation": "Services d'assistance dédiés en perte d'autonomie"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "citation": "GIR 5 et 6"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 29,
+      "citation": "Dépendance suite à accidents — cas exclus"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 29,
+      "citation": "Exclusions générales (dépendance et décès)"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 11,
+      "citation": "Réduction couple"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 6,
+      "citation": "Formule Dépendance Totale et Partielle"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 6,
+      "citation": "Capital Premiers Frais"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 27,
+      "citation": "Capital décès Remboursement des cotisations"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 6,
+      "citation": "Capital décès"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 21,
+      "citation": "Rente dépendance totale"
+    }
+  ],
+  "comprehension": [],
+  "confusions_frequentes": "à approfondir (LLM)",
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.0,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    },
+    {
+      "axis": "relations",
+      "current": 0.409,
+      "why": "entités isolées (peu ou pas de relations)",
+      "recommended_task": "relier"
+    }
+  ],
+  "profondeur": 0.682,
+  "couverture_semantique": 0.385,
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Interprétations séparées du prouvé ; vérifier les preuves avant tout usage client."
+}

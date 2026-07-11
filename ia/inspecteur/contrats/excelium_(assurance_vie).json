@@ -1,0 +1,263 @@
+{
+  "subject": "Excelium (assurance vie)",
+  "domain": "axa-contrat",
+  "finalite": "à approfondir (LLM)",
+  "architecture_garanties": {
+    "principales": [],
+    "secondaires": [
+      "Garantie en cas de décès",
+      "Garantie « Revalorisée »",
+      "Garantie « Sérénité » (plancher, incluse)",
+      "Garantie en cas de vie (au terme)"
+    ],
+    "total": 4
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "Exclusions de la garantie « Revalorisée »"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Prorogation du fonds Croissance",
+    "Types de gestion",
+    "Rachats partiels programmés"
+  ],
+  "points_vigilance": [
+    "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+    "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+    "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
+    "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+    "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
+    "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+    "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant."
+  ],
+  "concepts_structurants": [
+    "Décès",
+    "Décès accidentel",
+    "Souscription & adhésion",
+    "Décès",
+    "Décès accidentel",
+    "Souscription & adhésion",
+    "Décès",
+    "Décès accidentel"
+  ],
+  "environnement": [
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Fiscalité",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Fiscalité",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "citation": "Garantie en cas de décès"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "citation": "Garantie « Revalorisée »"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "citation": "Garantie « Sérénité » (plancher, incluse)"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "citation": "Garantie en cas de vie (au terme)"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "citation": "Exclusions de la garantie « Revalorisée »"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 20,
+      "citation": "Prorogation du fonds Croissance"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 79,
+      "citation": "Types de gestion"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 45,
+      "citation": "Rachats partiels programmés"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 46,
+      "citation": "Valeur de rachat minimale support euros"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 47,
+      "citation": "Nombre d'UC/parts après frais"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 17,
+      "citation": "Prime mensuelle garantie Revalorisée"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "citation": "Montant garanti Revalorisée"
+    }
+  ],
+  "comprehension": [],
+  "confusions_frequentes": "à approfondir (LLM)",
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.0,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    },
+    {
+      "axis": "relations",
+      "current": 0.421,
+      "why": "entités isolées (peu ou pas de relations)",
+      "recommended_task": "relier"
+    }
+  ],
+  "profondeur": 0.684,
+  "couverture_semantique": 0.385,
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Interprétations séparées du prouvé ; vérifier les preuves avant tout usage client."
+}

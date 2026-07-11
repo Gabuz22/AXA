@@ -1,0 +1,230 @@
+{
+  "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+  "domain": "axa-contrat",
+  "finalite": "à approfondir (LLM)",
+  "architecture_garanties": {
+    "principales": [],
+    "secondaires": [
+      "Garantie « Sérénité » (plancher décès, incluse)",
+      "En cas de décès avant liquidation totale",
+      "Garanties de fidélité",
+      "En cas de vie — sortie en capital",
+      "En cas de vie — sortie en rente viagère"
+    ],
+    "total": 5
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "Indisponibilité de l'épargne"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Types de gestion",
+    "Indexation des versements réguliers",
+    "Versements pris en charge par la société",
+    "Transfert individuel sortant"
+  ],
+  "points_vigilance": [
+    "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégré…",
+    "Compartiment 3 : sortie en rente UNIQUEMENT.",
+    "Plus de déductibilité fiscale des versements après 70 ans.",
+    "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).",
+    "Frais de transfert 1 % uniquement les 5 premières années.",
+    "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.",
+    "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).",
+    "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants."
+  ],
+  "concepts_structurants": [
+    "Décès",
+    "Décès accidentel",
+    "Décès",
+    "Décès accidentel",
+    "Incapacité temporaire",
+    "Bénéficiaire",
+    "Invalidité",
+    "Décès"
+  ],
+  "environnement": [
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Bénéficiaire",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 13,
+      "citation": "Garantie « Sérénité » (plancher décès, incluse)"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 12,
+      "citation": "En cas de décès avant liquidation totale"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 26,
+      "citation": "Garanties de fidélité"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 10,
+      "citation": "En cas de vie — sortie en capital"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 10,
+      "citation": "En cas de vie — sortie en rente viagère"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 27,
+      "citation": "Indisponibilité de l'épargne"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 16,
+      "citation": "Types de gestion"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 14,
+      "citation": "Indexation des versements réguliers"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 14,
+      "citation": "Versements pris en charge par la société"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 28,
+      "citation": "Transfert individuel sortant"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 28,
+      "citation": "Valeur de transfert en parts/UC"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 48,
+      "citation": "Rente initiale"
+    }
+  ],
+  "comprehension": [],
+  "confusions_frequentes": "à approfondir (LLM)",
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.0,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    },
+    {
+      "axis": "relations",
+      "current": 0.2,
+      "why": "entités isolées (peu ou pas de relations)",
+      "recommended_task": "relier"
+    }
+  ],
+  "profondeur": 0.64,
+  "couverture_semantique": 0.385,
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Interprétations séparées du prouvé ; vérifier les preuves avant tout usage client."
+}

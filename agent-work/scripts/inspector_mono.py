@@ -76,6 +76,10 @@ def reasoning_sheet(graph, subject, domain="axa-contrat", expected=None):
         "points_vigilance": _labels(subs.get("point_vigilance", [])),
         "concepts_structurants": [e["concept"] for e in env][:8],
         "environnement": env,
+        "preuves": [{"document": (n.get("content") or {}).get("document"),
+                     "page": (n.get("content") or {}).get("page"),
+                     "citation": (n.get("content") or {}).get("citation")}
+                    for n in graph.nodes(layer=1, subject=subject, domain=domain)][:30],
         "comprehension": understanding,
         "confusions_frequentes": "à approfondir (LLM)" if not understanding else None,
         "incertitudes": [i for i in report["explanations"] if i["axis"] in ("understanding", "relations")],

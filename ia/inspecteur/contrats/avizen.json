@@ -1,0 +1,417 @@
+{
+  "subject": "Avizen",
+  "domain": "axa-contrat",
+  "finalite": "à approfondir (LLM)",
+  "architecture_garanties": {
+    "principales": [
+      "Rente éducation décès / Rente éducation IPT (garantie principale)"
+    ],
+    "secondaires": [
+      "Rente invalidité permanente partielle ou totale par accident (optionnelle)",
+      "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)",
+      "Indemnités journalières ITT par accident (optionnelle)",
+      "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+      "Indemnités journalières ITT toutes causes (optionnelle)",
+      "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+      "Garantie aide à la famille"
+    ],
+    "total": 8
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "ITT/Invalidité — exclusions spécifiques",
+    "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire",
+    "Décès/IPT toutes causes — suicide 1re année",
+    "Exclusions communes — activités et sports à risque",
+    "Décès/IPT par accident — exclusions spécifiques"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Exonération des cotisations en cas d'ITT",
+    "Indexation des garanties (option à l'adhésion)",
+    "Exonération des cotisations en cas d'invalidité",
+    "Capital décès double garantie",
+    "Augmentation sans sélection médicale (mariage/naissance/adoption)"
+  ],
+  "points_vigilance": [
+    "Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.",
+    "IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.",
+    "Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).",
+    "Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotif…",
+    "Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en…",
+    "Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie."
+  ],
+  "concepts_structurants": [
+    "Invalidité",
+    "Invalidité",
+    "Invalidité",
+    "Invalidité",
+    "Souscription & adhésion",
+    "Décès",
+    "Décès accidentel",
+    "Invalidité"
+  ],
+  "environnement": [
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Bénéficiaire",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 16,
+      "citation": "Rente invalidité permanente partielle ou totale par accident (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 16,
+      "citation": "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 14,
+      "citation": "Indemnités journalières ITT par accident (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 17,
+      "citation": "Capital invalidité permanente partielle ou totale par accident (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 13,
+      "citation": "Indemnités journalières ITT toutes causes (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 12,
+      "citation": "Rente éducation décès / Rente éducation IPT (garantie principale)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 15,
+      "citation": "Rente invalidité fonctionnelle toutes causes (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 18,
+      "citation": "Garantie aide à la famille"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 27,
+      "citation": "ITT/Invalidité — exclusions spécifiques"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 26,
+      "citation": "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 26,
+      "citation": "Décès/IPT toutes causes — suicide 1re année"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 25,
+      "citation": "Exclusions communes — activités et sports à risque"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 26,
+      "citation": "Décès/IPT par accident — exclusions spécifiques"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 17,
+      "citation": "Exonération des cotisations en cas d'ITT"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 8,
+      "citation": "Indexation des garanties (option à l'adhésion)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 18,
+      "citation": "Exonération des cotisations en cas d'invalidité"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 11,
+      "citation": "Capital décès double garantie"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 9,
+      "citation": "Augmentation sans sélection médicale (mariage/naissance/adoption)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 16,
+      "citation": "Prestation invalidité (rente ou capital)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 17,
+      "citation": "Exonération ITT"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 16,
+      "citation": "Taux d'indemnisation zone linéaire 11-30 %"
+    }
+  ],
+  "comprehension": [],
+  "confusions_frequentes": "à approfondir (LLM)",
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.0,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    },
+    {
+      "axis": "relations",
+      "current": 0.593,
+      "why": "entités isolées (peu ou pas de relations)",
+      "recommended_task": "relier"
+    }
+  ],
+  "profondeur": 0.719,
+  "couverture_semantique": 0.385,
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Interprétations séparées du prouvé ; vérifier les preuves avant tout usage client."
+}

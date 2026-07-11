@@ -1,0 +1,176 @@
+{
+  "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+  "domain": "axa-contrat",
+  "finalite": "à approfondir (LLM)",
+  "architecture_garanties": {
+    "principales": [],
+    "secondaires": [
+      "Accidents lors de la conduite d'un véhicule (dérogations)",
+      "Accidents médicaux et infections nosocomiales",
+      "Préjudices indemnisés selon droit commun",
+      "Indemnisation des préjudices corporels (barème AQV)",
+      "En cas de décès",
+      "Accidents corporels d'activités courantes",
+      "Accidents corporels lors d'événements exceptionnels"
+    ],
+    "total": 7
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "Faits intentionnels, suicide",
+    "Affections même consécutives à un accident garanti",
+    "Délit intentionnel ou crime",
+    "Accidents du travail et activités électives/syndicales",
+    "Alcool, médicaments, stupéfiants",
+    "Sports professionnels, rémunérés, à risques, extrêmes",
+    "Non-respect de réglementation (véhicules motorisés)",
+    "Expérimentations biomédicales"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Mes Sports à risque"
+  ],
+  "points_vigilance": [
+    "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
+    "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+    "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
+    "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (ar…",
+    "Subrogation de l'assureur contre le tiers responsable (6.7)."
+  ],
+  "concepts_structurants": [
+    "Décès",
+    "Décès accidentel"
+  ],
+  "environnement": [
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:08:49Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 5,
+      "citation": "Accidents lors de la conduite d'un véhicule (dérogations)"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "citation": "Accidents médicaux et infections nosocomiales"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 9,
+      "citation": "Préjudices indemnisés selon droit commun"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 7,
+      "citation": "Indemnisation des préjudices corporels (barème AQV)"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 9,
+      "citation": "En cas de décès"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "citation": "Accidents corporels d'activités courantes"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "citation": "Accidents corporels lors d'événements exceptionnels"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Faits intentionnels, suicide"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Affections même consécutives à un accident garanti"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Délit intentionnel ou crime"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Accidents du travail et activités électives/syndicales"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Alcool, médicaments, stupéfiants"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Sports professionnels, rémunérés, à risques, extrêmes"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Non-respect de réglementation (véhicules motorisés)"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Expérimentations biomédicales"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 5,
+      "citation": "Mes Sports à risque"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 8,
+      "citation": "Indice AQV"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 19,
+      "citation": "Renonciation vente à distance — cotisation due"
+    }
+  ],
+  "comprehension": [],
+  "confusions_frequentes": "à approfondir (LLM)",
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.0,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    },
+    {
+      "axis": "relations",
+      "current": 0.043,
+      "why": "entités isolées (peu ou pas de relations)",
+      "recommended_task": "relier"
+    }
+  ],
+  "profondeur": 0.609,
+  "couverture_semantique": 0.385,
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Interprétations séparées du prouvé ; vérifier les preuves avant tout usage client."
+}

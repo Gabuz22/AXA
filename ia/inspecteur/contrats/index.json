@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "contrats": [
+    {
+      "contrat": "Avizen",
+      "fichier": "contrats/avizen.json",
+      "profondeur": 0.719,
+      "couverture_semantique": 0.385
+    },
+    {
+      "contrat": "Avizen Pro",
+      "fichier": "contrats/avizen_pro.json",
+      "profondeur": 0.727,
+      "couverture_semantique": 0.385
+    },
+    {
+      "contrat": "Entour'Age",
+      "fichier": "contrats/entourage.json",
+      "profondeur": 0.682,
+      "couverture_semantique": 0.385
+    },
+    {
+      "contrat": "Essen'Ciel (assurance obsèques)",
+      "fichier": "contrats/essenciel_(assurance_obsèques).json",
+      "profondeur": 0.733,
+      "couverture_semantique": 0.385
+    },
+    {
+      "contrat": "Essen'Ciel Patrimoine",
+      "fichier": "contrats/essenciel_patrimoine.json",
+      "profondeur": 0.629,
+      "couverture_semantique": 0.231
+    },
+    {
+      "contrat": "Excelium (assurance vie)",
+      "fichier": "contrats/excelium_(assurance_vie).json",
+      "profondeur": 0.684,
+      "couverture_semantique": 0.385
+    },
+    {
+      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "fichier": "contrats/ma_protection_accident_(garantie_des_accidents_de_la_vie).json",
+      "profondeur": 0.609,
+      "couverture_semantique": 0.385
+    },
+    {
+      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "fichier": "contrats/ma_retraite_(plan_dépargne_retraite_individuel_—_per).json",
+      "profondeur": 0.64,
+      "couverture_semantique": 0.385
+    },
+    {
+      "contrat": "Masterlife CREDIT",
+      "fichier": "contrats/masterlife_credit.json",
+      "profondeur": 0.741,
+      "couverture_semantique": 0.385
+    }
+  ]
+}
