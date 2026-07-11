@@ -35,7 +35,7 @@ VERSION = "1.0.0"
 
 
 def _slug(s):
-    return (KG._norm(s).replace(" ", "_").replace("'", "") or "sujet")
+    return KG.ascii_slug(s)
 
 
 def _write_json(rel, obj):

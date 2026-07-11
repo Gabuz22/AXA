@@ -1,0 +1,178 @@
+{
+  "subject": "Essen'Ciel Patrimoine",
+  "domain": "axa-contrat",
+  "finalite": "à approfondir (LLM)",
+  "architecture_garanties": {
+    "principales": [],
+    "secondaires": [
+      "Garantie décès — versement d'un capital aux bénéficiaires",
+      "Revalorisation / participation aux bénéfices"
+    ],
+    "total": 2
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "Risques exclus de la garantie décès"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+    "Mise en réduction (valeur de réduction)",
+    "Réduction tarifaire couple (-10 %)",
+    "Prestations d'assistance (suite au décès)"
+  ],
+  "points_vigilance": [],
+  "concepts_structurants": [
+    "Rachat"
+  ],
+  "environnement": [
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "2, 4, 16",
+      "citation": "Garantie décès — versement d'un capital aux bénéficiaires"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "6, 8",
+      "citation": "Revalorisation / participation aux bénéfices"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "6",
+      "citation": "Risques exclus de la garantie décès"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "2, 14, 15",
+      "citation": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "13, 14, 15",
+      "citation": "Mise en réduction (valeur de réduction)"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "13",
+      "citation": "Réduction tarifaire couple (-10 %)"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "7, 9, 10",
+      "citation": "Prestations d'assistance (suite au décès)"
+    }
+  ],
+  "comprehension": [],
+  "confusions_frequentes": "à approfondir (LLM)",
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.0,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    },
+    {
+      "axis": "relations",
+      "current": 0.143,
+      "why": "entités isolées (peu ou pas de relations)",
+      "recommended_task": "relier"
+    }
+  ],
+  "profondeur": 0.629,
+  "couverture_semantique": 0.231,
+  "validation": {
+    "blocks": {
+      "validated_knowledge": [
+        {
+          "label": "Garantie décès — versement d'un capital aux bénéficiaires",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.92
+        },
+        {
+          "label": "Revalorisation / participation aux bénéfices",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.88
+        },
+        {
+          "label": "Risques exclus de la garantie décès",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Mise en réduction (valeur de réduction)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Réduction tarifaire couple (-10 %)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.92
+        },
+        {
+          "label": "Prestations d'assistance (suite au décès)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.85
+        }
+      ],
+      "derived_relations": [
+        {
+          "type": "governed_by",
+          "src": "k_b8c594a211938f0d3cd2",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        }
+      ],
+      "pending_interpretations": [],
+      "simulated_claude": [],
+      "uncertainties": [],
+      "human_review_required": [],
+      "stale": [],
+      "contradictory": []
+    },
+    "counts": {
+      "validated": 7,
+      "derived_deterministic": 1
+    },
+    "legend": {
+      "exposable_as_truth": [
+        "derived_deterministic",
+        "validated"
+      ],
+      "visible_if_labeled_only": [
+        "contradictory",
+        "pending_review",
+        "simulated_claude",
+        "stale",
+        "uncertain"
+      ],
+      "never_exposed": [
+        "rejected"
+      ]
+    }
+  },
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Blocs de validation SÉPARÉS : 'validated_knowledge' (masters validés) exposable comme vérité ; 'pending_interpretations'/'simulated_claude'/'stale'/'contradictory' visibles UNIQUEMENT étiquetés, jamais comme clause/règle certaine. Vérifier les preuves."
+}

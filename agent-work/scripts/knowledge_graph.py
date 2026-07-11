@@ -23,6 +23,8 @@ I/O injectée (load_json/write_json) → testable hors-ligne, sans dépendance p
 import hashlib
 import json as _json
 import datetime as _dt
+import re as _re
+import unicodedata as _unicodedata
 
 LAYERS = {1: "evidence", 2: "normalized", 3: "relation", 4: "understanding"}
 
@@ -49,6 +51,14 @@ def content_hash(obj):
 
 def _norm(t):
     return " ".join((t or "").lower().split())
+
+
+def ascii_slug(t):
+    """Slug de fichier ROBUSTE : ASCII seulement (accents translittérés, non-alphanum -> '_'). Évite les
+    noms fragiles (accents/parenthèses/tiret) qui cassent certains outils (ex. quoting git) et les URLs."""
+    x = _unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode("ascii").lower()
+    x = _re.sub(r"[^a-z0-9]+", "_", x).strip("_")
+    return x or "sujet"
 
 
 def evidence_id(domain, document, page, citation):

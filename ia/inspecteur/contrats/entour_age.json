@@ -1,0 +1,515 @@
+{
+  "subject": "Entour'Age",
+  "domain": "axa-contrat",
+  "finalite": "à approfondir (LLM)",
+  "architecture_garanties": {
+    "principales": [
+      "Rente viagère dépendance (garantie principale obligatoire)"
+    ],
+    "secondaires": [
+      "Services pour l'aidant de l'assuré",
+      "Services dès l'adhésion « ENTREAIDANTS »",
+      "Services d'assistance dédiés en perte d'autonomie"
+    ],
+    "total": 4
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "GIR 5 et 6",
+    "Dépendance suite à accidents — cas exclus",
+    "Exclusions générales (dépendance et décès)"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Réduction couple",
+    "Formule Dépendance Totale et Partielle",
+    "Capital Premiers Frais",
+    "Capital décès Remboursement des cotisations",
+    "Capital décès"
+  ],
+  "points_vigilance": [
+    "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €……",
+    "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jam…",
+    "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+    "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).",
+    "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.",
+    "La mise en réduction met fin aux prestations d'assistance.",
+    "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+    "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans)."
+  ],
+  "concepts_structurants": [
+    "Hospitalisation",
+    "Hospitalisation",
+    "Souscription & adhésion",
+    "Souscription & adhésion",
+    "Souscription & adhésion",
+    "Décès",
+    "Décès accidentel",
+    "Décès"
+  ],
+  "environnement": [
+    {
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-11T22:52:19Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 25,
+      "citation": "Services pour l'aidant de l'assuré"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 15,
+      "citation": "Services dès l'adhésion « ENTREAIDANTS »"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 21,
+      "citation": "Rente viagère dépendance (garantie principale obligatoire)"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 23,
+      "citation": "Services d'assistance dédiés en perte d'autonomie"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "citation": "GIR 5 et 6"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 29,
+      "citation": "Dépendance suite à accidents — cas exclus"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 29,
+      "citation": "Exclusions générales (dépendance et décès)"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 11,
+      "citation": "Réduction couple"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 6,
+      "citation": "Formule Dépendance Totale et Partielle"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 6,
+      "citation": "Capital Premiers Frais"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 27,
+      "citation": "Capital décès Remboursement des cotisations"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 6,
+      "citation": "Capital décès"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 21,
+      "citation": "Rente dépendance totale"
+    }
+  ],
+  "comprehension": [],
+  "confusions_frequentes": "à approfondir (LLM)",
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.0,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    },
+    {
+      "axis": "relations",
+      "current": 0.409,
+      "why": "entités isolées (peu ou pas de relations)",
+      "recommended_task": "relier"
+    }
+  ],
+  "profondeur": 0.682,
+  "couverture_semantique": 0.385,
+  "validation": {
+    "blocks": {
+      "validated_knowledge": [
+        {
+          "label": "Services pour l'aidant de l'assuré",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Services dès l'adhésion « ENTREAIDANTS »",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Rente viagère dépendance (garantie principale obligatoire)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Services d'assistance dédiés en perte d'autonomie",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "GIR 5 et 6",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Dépendance suite à accidents — cas exclus",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Exclusions générales (dépendance et décès)",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Réduction couple",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Formule Dépendance Totale et Partielle",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Capital Premiers Frais",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Capital décès Remboursement des cotisations",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Capital décès",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €……",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jam…",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "La mise en réduction met fin aux prestations d'assistance.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Rente dépendance totale",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        },
+        {
+          "label": "Capital décès remboursement des cotisations",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        }
+      ],
+      "derived_relations": [
+        {
+          "type": "governed_by",
+          "src": "k_4e89c97dd12642e5b63a",
+          "dst": "k_3b78b0e1920767575f57",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_e8592ec6f0dbd9eec7e6",
+          "dst": "k_3b78b0e1920767575f57",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_e8592ec6f0dbd9eec7e6",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_639fdca5b45bcebd0f1b",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7b00ca36e878d88347bb",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_a7fd903a3047bf7880ff",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_a7fd903a3047bf7880ff",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_a479e430b98ff7c2c2fa",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_a479e430b98ff7c2c2fa",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7c3708ca46b66194338c",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7c3708ca46b66194338c",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_d043dea37754054ab95d",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_15870da4e05856d229d8",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_15870da4e05856d229d8",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        }
+      ],
+      "pending_interpretations": [],
+      "simulated_claude": [],
+      "uncertainties": [],
+      "human_review_required": [],
+      "stale": [],
+      "contradictory": []
+    },
+    "counts": {
+      "validated": 22,
+      "derived_deterministic": 14
+    },
+    "legend": {
+      "exposable_as_truth": [
+        "derived_deterministic",
+        "validated"
+      ],
+      "visible_if_labeled_only": [
+        "contradictory",
+        "pending_review",
+        "simulated_claude",
+        "stale",
+        "uncertain"
+      ],
+      "never_exposed": [
+        "rejected"
+      ]
+    }
+  },
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Blocs de validation SÉPARÉS : 'validated_knowledge' (masters validés) exposable comme vérité ; 'pending_interpretations'/'simulated_claude'/'stale'/'contradictory' visibles UNIQUEMENT étiquetés, jamais comme clause/règle certaine. Vérifier les preuves."
+}

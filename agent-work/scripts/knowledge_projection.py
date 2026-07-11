@@ -126,7 +126,7 @@ def write_projections(graph, domain, subjects, adapter, write_json, now, base_di
     n = 0
     for s in subjects:
         proj = project_subject(graph, s, domain, expected)
-        fname = KG._norm(s).replace(" ", "_").replace("'", "") or ("sujet_%d" % n)
+        fname = KG.ascii_slug(s) or ("sujet_%d" % n)
         write_json(base.repo_path(os.path.join(base_dir, fname + ".json")), proj)
         index["subjects"].append({"subject": s, "file": fname + ".json",
                                   "depth_score": proj["synthese"]["depth_score"]})

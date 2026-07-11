@@ -119,7 +119,7 @@ def write_inspector(graph, subjects, domain, adapter, write_json, write_text, no
     n = 0
     for s in subjects:
         sheet = IM.reasoning_sheet(graph, s, domain, expected)
-        fname = (_norm(s).replace(" ", "_").replace("'", "") or "sujet") + ".json"
+        fname = KG.ascii_slug(s) + ".json"
         write_json(base.repo_path(os.path.join(base_dir, "contrats", fname)), sheet)
         n += 1
     write_json(base.repo_path(os.path.join(base_dir, "comparison.json")), IX.compare(graph, subjects, domain, expected))
