@@ -5,19 +5,21 @@ import { get, set } from "./state/store.js";
 
 // Navigation validée (sitemap). id = clé de section du module axa.js.
 const NAV = [
-  { group: "Démarrer", items: [
+  // L'usage quotidien d'abord : un conseiller qui revient chaque jour ne doit pas
+  // re-scanner l'onboarding pour atteindre la recherche (l'accueil garde les liens « Nouveau ici ? »).
+  { group: "Chaque jour", items: [
     { id: "accueil", label: "Accueil", icon: "🏠" },
-    { id: "decouvrir", label: "Découvrir Gabriel AXA", icon: "✨" },
-    { id: "cas_usage", label: "Que puis-je faire ?", icon: "🎯" },
-    { id: "premiers_pas", label: "Premiers pas & FAQ", icon: "🧭" },
-  ]},
-  { group: "Utiliser", items: [
     { id: "recherche", label: "Recherche", icon: "🔎" },
     { id: "contrat", label: "Contrats", icon: "📑" },
     { id: "comparateur", label: "Comparateur", icon: "⚖️" },
     { id: "glossaire", label: "Glossaire", icon: "📖" },
     { id: "copilote", label: "Copilote de réponse", icon: "🧠" },
     { id: "pdf", label: "Notices PDF", icon: "📄" },
+  ]},
+  { group: "Découvrir", items: [
+    { id: "decouvrir", label: "Découvrir Gabriel AXA", icon: "✨" },
+    { id: "cas_usage", label: "Que puis-je faire ?", icon: "🎯" },
+    { id: "premiers_pas", label: "Premiers pas & FAQ", icon: "🧭" },
   ]},
   { group: "Avec une IA", items: [
     { id: "assistants", label: "Utiliser avec une IA", icon: "🤖" },
