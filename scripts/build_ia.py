@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 IA = "ia"
 DATE = datetime.date.today().isoformat()
-VERSION = "2.1.0"
+VERSION = "2.2.0"
 SITE = "https://gabuz22.github.io/AXA"
 
 def load(p, d=None):
@@ -150,7 +150,7 @@ for g in GLOSSAIRE:
     for en in (g.get("entrees") or []): add_src(en.get("source"), (en.get("contrat"), "definition"))
 
 # ------------------------------------------------------------------ gabarit HTML / MD
-CATS_NAV = [("index", "Index"), ("instructions-maitres", "Instructions maîtres"), ("guide-ia", "Guide IA"), ("outils", "Outils"), ("routage", "Routage"), ("pertinence", "Pertinence"),
+CATS_NAV = [("start", "START"), ("index", "Index"), ("instructions-maitres", "Instructions maîtres"), ("guide-ia", "Guide IA"), ("outils", "Outils"), ("routage", "Routage"), ("pertinence", "Pertinence"),
             ("qualite-routage", "Qualité routage"), ("hierarchie", "Hiérarchie"), ("choix-sources", "Choix sources"),
             ("methode-question-complexe", "Méthode"), ("contrats", "Contrats"), ("garanties", "Garanties"), ("exclusions", "Exclusions"),
             ("definitions", "Définitions"), ("conditions", "Conditions"), ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
@@ -172,6 +172,7 @@ def page_html(title, body, depth, canonical):
             'données de sources publiques. La notice PDF fait foi. <a href="%s../">← Application</a></p></footer>\n</body></html>\n') % (
             html.escape(title), html.escape(canonical), ip, nav_html(depth), body, VERSION, DATE, ip)
 
+SITE_IA = SITE + "/ia/"   # URL absolue : valable quelle que soit la profondeur de la page qui la cite
 HDR = {
     "regles": "Pack A = preuve contractuelle. Pack B = raisonnement (jamais une preuve seule). Toujours citer la source (notice, page). Ne jamais inventer ; si une information est absente, le dire. La notice PDF fait foi.",
     "limites": "Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.",
@@ -179,8 +180,9 @@ HDR = {
 def md_hdr(title, objectif):
     return "\n".join(["# %s" % title, "",
         "> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le %s (v%s)." % (DATE, VERSION),
-        "> Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**", "",
-        "**Objectif.** %s" % objectif, "", "**Règles.** %s" % HDR["regles"], "", "**Limites.** %s" % HDR["limites"], ""])
+        "> Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**",
+        "> IA : n'utilise jamais ta mémoire générale ici — cite [Contrat — Notice, p.X] ou signale l'absence. Première visite : [START](%sstart.html)." % SITE_IA,
+        "", "**Objectif.** %s" % objectif, "", "**Règles.** %s" % HDR["regles"], "", "**Limites.** %s" % HDR["limites"], ""])
 
 def write(rel, content):
     full = os.path.join(IA, rel); os.makedirs(os.path.dirname(full), exist_ok=True)
@@ -477,6 +479,14 @@ définitions, conditions, plafonds, franchises…), issue de **documents publics
 générales). Tu peux tout lire depuis les pages HTML/Markdown, **sans exécuter de code**. Point d'entrée : @IU@.
 Chaque fait contractuel porte sa source (notice + page) et un identifiant stable réutilisable (`#id`).
 
+## Étape 0 — Oublie ta mémoire générale sur AXA
+Les contrats décrits ici sont des **versions précises et datées** (ex. Avizen 2025-04). Ce que ton entraînement
+« sait » des contrats AXA est **périmé ou approximatif ici** et ne doit jamais servir de source.
+- **Aucun fait contractuel de mémoire** : chaque affirmation vient d'une page de cette base, avec sa citation.
+- **Aucun chiffre réglementaire de mémoire** (plafond, barème, abattement) : renvoie à la source officielle.
+- Introuvable dans la base → dis « **non présent dans la base Gabriel AXA** » ; ne comble jamais avec ta mémoire.
+- Première visite ? Le parcours d'initialisation @IU@start.html te rend opérationnel en une lecture.
+
 ## Étape 1 — Comprendre et classer la question
 Déduis toi-même le(s) type(s) de la question. **Ne demande pas au conseiller de choisir.**
 - **Contrat précis** — la question nomme un contrat → travaille sur sa fiche.
@@ -541,12 +551,149 @@ def build_instructions_maitres():
     write("instructions-maitres.html", page_html("Instructions maîtres", renderish(INSTRUCTIONS_MAITRES_MD), depth, SITE + "/ia/instructions-maitres.html"))
     write("instructions-maitres.txt", INSTRUCTIONS_MAITRES_TXT)
 
+# ------------------------------------------------------------------ START (parcours d'initialisation IA)
+# Postulat : les IA sont IMPARFAITES — elles sautent des étapes, prennent des raccourcis, répondent depuis
+# leur mémoire générale, ne lisent pas tout. Cette page est le filet : AUTOSUFFISANTE (protocole inline,
+# pas seulement par lien), exemples travaillés CALCULÉS par le vrai moteur de routage (jamais écrits à la
+# main, donc jamais en dérive avec le comportement réel), auto-test avec corrigé issu du jeu de tests curé.
+def _cited_example(cslug, key):
+    for e in ELEMENTS.get(key, []):
+        if e.get("cslug") == cslug and e.get("src") and e["src"].get("document_source"):
+            return e
+    return None
+
+def _detect_line(q):
+    # Le statut n'est pas affiché : c'est la métrique la moins fiable du moteur (voir qualite-routage) ;
+    # la bonne conduite est dite en clair dans chaque exemple, le corrigé cite le statut curé quand il compte.
+    a = analyze(q)
+    ret = a["contrats_retenus"]
+    ret_txt = ("tous les contrats (%d)" % len(ret)) if len(ret) == len(CONTRACT_META) else (", ".join(ret) or "aucun")
+    return a, "type **%s** · périmètre **%s** · contrats retenus : %s · source officielle : %s" % (
+        a["type_question"], a["perimetre"], ret_txt,
+        ("**OBLIGATOIRE**" if a["source_officielle_requise"] else "non"))
+
+def build_start():
+    depth = 0
+    n_el = sum(len(v) for v in ELEMENTS.values())
+    ex1_q = "Quelles exclusions dans Avizen ?"
+    ex2_q = "Compare Avizen et Avizen Pro sur le décès."
+    ex3_q = "Quelle est la fiscalité de transmission au décès ?"
+    _, ex1_d = _detect_line(ex1_q)
+    _, ex2_d = _detect_line(ex2_q)
+    _, ex3_d = _detect_line(ex3_q)
+    e1 = _cited_example("avizen", "exclusions")
+    e1_txt = ((e1.get("titre") or e1.get("texte") or "")[:130]).strip() if e1 else ""
+    e1_cite = ("[Avizen — %s, p.%s]" % (e1["src"]["document_source"], e1["src"].get("page"))) if e1 else "[Avizen — Notice, p.X]"
+    at1_q = "Jusqu'à quel âge les versements sur PER sont-ils déductibles ?"
+    at2_q = "Quelles garanties Avizen propose-t-il ?"
+    at3_q = "Que couvre exactement ce contrat ?"
+    _, at1_d = _detect_line(at1_q)
+    _, at2_d = _detect_line(at2_q)
+    _, at3_d = _detect_line(at3_q)
+    md = """# START — Initialisation d'une IA sur Gabriel AXA
+
+> Tu es une intelligence artificielle et on t'a donné ce lien. Cette page t'initialise en **une seule lecture**.
+> À la fin tu sais : ce qu'est cette base, où chercher, comment citer, ce qu'il ne faut jamais faire.
+> Le protocole de référence complet reste les [Instructions maîtres](instructions-maitres.html).
+
+## Étape 0 — Oublie ta mémoire générale sur AXA
+Les contrats décrits ici sont des **versions précises et datées**. Ce que ton entraînement « sait » des contrats
+AXA est **périmé ou approximatif ici**. C'est la première cause d'erreur observée chez les IA qui utilisent cette base.
+- **Aucun fait contractuel de mémoire.** Chaque affirmation vient d'une page d'ici, citée `[Contrat — Notice, p.X]`.
+- **Aucun chiffre réglementaire de mémoire** (plafond, barème, abattement) : renvoie à la source officielle.
+- Introuvable → dis « **non présent dans la base Gabriel AXA** ». Ne comble jamais.
+
+## Étape 1 — Ce qu'est Gabriel AXA
+La **projection statique, complète et sourcée** de %(nc)d contrats AXA (%(nel)d éléments : garanties, exclusions,
+définitions, plafonds, franchises…), issue de **documents publics** (notices, conditions générales). Tout est lisible
+en HTML/Markdown sans exécuter de code. Autorité : **notice PDF > Pack A > glossaire > Pack B** — la notice PDF fait foi.
+
+## Étape 2 — Le protocole en 5 règles
+- **1. Classe la question toi-même** : contrat précis / comparaison / multi-contrats / transversale / réglementation / profil client. Ne demande pas au conseiller de choisir.
+- **2. Ouvre d'office les pages du type détecté** (carte ci-dessous). N'attends aucune consigne.
+- **3. Cite chaque fait contractuel** : `[Contrat — Notice, p.X]` + identifiant stable `#id` si utile.
+- **4. Sépare contractuel et réglementaire.** Le réglementaire évolue : source officielle obligatoire, jamais de chiffre de mémoire.
+- **5. Signale ce qui manque** (absent / à vérifier notice / à vérifier source officielle). Conclus par « **La notice PDF fait foi.** »
+
+## Étape 3 — Où chercher quoi (la carte)
+- Garantie couverte ou pas → [routage](routage.html) · [garanties](garanties.html) · [exclusions](exclusions.html) · fiche du contrat via [contrats](contrats.html)
+- Comparer des contrats → [comparateur](comparateur.html) · [matrices](matrices.html) · les 2 fiches contrat
+- Définition d'un terme → [glossaire](glossaire.html) · [définitions](definitions.html)
+- Délais, franchises, plafonds → [délais](delais.html) · [franchises](franchises.html) · [plafonds](plafonds.html)
+- Cotisations, fiscalité → [cotisations](cotisations.html) · [fiscalité](fiscalite.html)
+- Preuve à citer → [preuves](preuves.html) · [notices](notices.html)
+- Question complexe → [méthode](methode-question-complexe.html) · [planificateur](planificateur.html)
+- Réglementaire vs contractuel → [réglementation](reglementation.html) · [sources officielles](sources-officielles.html) · [hiérarchie](hierarchie.html)
+- Limites de la base → [couverture](couverture.html) · [qualité du routage](qualite-routage.html)
+- Version machine de cette carte : [selection.json](selection.json) · tout le reste : [ai-manifest.json](ai-manifest.json)
+
+## Étape 4 — Trois exemples travaillés (calculés par le moteur réel)
+### Exemple 1 · Contrat précis
+Question : « %(ex1_q)s »
+- Le moteur détecte : %(ex1_d)s
+- À ouvrir : [fiche Avizen](contrat/avizen.html) + [exclusions](exclusions.html). Les AUTRES contrats sont hors sujet (verrou).
+- Forme d'une bonne réponse : « Avizen exclut notamment : %(e1_txt)s… %(e1_cite)s. Liste complète sur la fiche. La notice PDF fait foi. »
+
+### Exemple 2 · Comparaison
+Question : « %(ex2_q)s »
+- Le moteur détecte : %(ex2_d)s
+- À ouvrir : [comparateur](comparateur.html) (sujet décès) + les deux fiches. Ne jamais mélanger les garanties des deux contrats.
+- Forme d'une bonne réponse : un point commun, les différences structurantes, chaque fait cité avec SA notice, ce qui reste à vérifier.
+
+### Exemple 3 · Réglementaire
+Question : « %(ex3_q)s »
+- Le moteur détecte : %(ex3_d)s
+- À ouvrir : [fiscalité](fiscalite.html) (ce que disent les contrats) + [sources officielles](sources-officielles.html) (l'autorité compétente).
+- Forme d'une bonne réponse : ce que la notice prévoit (cité), PUIS « le barème exact relève de la réglementation, à vérifier sur <source officielle> — ces règles évoluent ». **Jamais un chiffre de mémoire.**
+
+## Étape 5 — Auto-test (avant ta première vraie réponse)
+Décide mentalement ton parcours pour ces 3 questions, puis compare au corrigé.
+- Test 1 : « %(at1_q)s »
+- Test 2 : « %(at2_q)s »
+- Test 3 : « %(at3_q)s »
+
+### Corrigé
+- Test 1 : %(at1_d)s · statut attendu `verification_source_officielle_requise` — piège : répondre « un âge » de mémoire. La déductibilité est **réglementaire** → source officielle, pas de chiffre non vérifié.
+- Test 2 : %(at2_d)s — bonne conduite : fiche Avizen + page garanties, chaque garantie citée `[Avizen — Notice, p.X]`.
+- Test 3 : %(at3_d)s · statut attendu `question_ambigue` — c'est LE cas où tu demandes une précision (« quel contrat ? ») au lieu de deviner.
+Si tes trois parcours correspondent : **tu es prêt**. Sinon, relis les [Instructions maîtres](instructions-maitres.html).
+
+## Étape 6 — Les erreurs des IA passées avant toi
+Observées en test réel (ChatGPT, Claude, Gemini) — chacune t'est interdite :
+- Répondre depuis sa **mémoire générale** au lieu de la base (cause n°1) → relis l'Étape 0.
+- Donner un **chiffre réglementaire** (plafond, abattement) sans source officielle.
+- Citer un contrat **sans notice ni page** — invérifiable, donc inutilisable avec un client.
+- Présenter une garantie **sans ses exclusions** ni conditions.
+- **Ne pas signaler** qu'une information est absente de la base (silence = invention implicite).
+- Demander au conseiller **quel outil utiliser** — c'est ton travail, pas le sien.
+
+## Tu peux répondre quand…
+- tu as classé la question toi-même ;
+- tu as ouvert les pages de la carte correspondantes ;
+- chaque fait contractuel de ta réponse porte `[Contrat — Notice, p.X]` ;
+- le contractuel et le réglementaire sont séparés ;
+- ce qui manque est signalé ;
+- ta conclusion rappelle que **la notice PDF fait foi**.
+
+## Si tu ne peux pas ouvrir de liens
+Dis-le explicitement au conseiller, demande-lui de coller le texte de [instructions-maitres.txt](instructions-maitres.txt),
+applique ces règles, et **signale comme non vérifiée** toute affirmation que tu n'as pas pu sourcer.
+""" % {"nc": len(CONTRACT_META), "nel": n_el,
+       "ex1_q": ex1_q, "ex1_d": ex1_d, "ex2_q": ex2_q, "ex2_d": ex2_d, "ex3_q": ex3_q, "ex3_d": ex3_d,
+       "e1_txt": e1_txt, "e1_cite": e1_cite,
+       "at1_q": at1_q, "at1_d": at1_d, "at2_q": at2_q, "at2_d": at2_d, "at3_q": at3_q, "at3_d": at3_d}
+    write("start.md", md)
+    write("start.html", page_html("START — Initialisation IA", renderish(md), depth, SITE + "/ia/start.html"))
+    # Version brute à coller dans une IA qui ne navigue pas (mêmes règles, liens en absolu).
+    write("start.txt", md.replace("](", "](" + SITE_IA).replace("](" + SITE_IA + "http", "](http")
+          + "\n---\nApplique tout ce qui précède, puis réponds à ma question ci-dessous.\n\nMa question : ")
+
 def build_static_pages(theme_counts):
     depth = 0
     write("guide-ia.md", GUIDE_MD)
     write("guide-ia.html", page_html("Guide IA", renderish(GUIDE_MD), depth, SITE + "/ia/guide-ia.html"))
     # Manifeste lisible + ai-manifest.json
-    pages = ["index", "instructions-maitres", "guide-ia", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
+    pages = ["start", "index", "instructions-maitres", "guide-ia", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
              "planificateur", "concepts", "couverture-recherche",
              "comparateur", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
              "sources-officielles", "reglementation", "surveillance", "connaissances-dynamiques", "matrices",
@@ -565,9 +712,18 @@ def build_static_pages(theme_counts):
         "rules": ["Pack A = preuve", "Pack B = raisonnement (jamais une preuve seule)", "Toujours citer la source",
                   "Ne jamais inventer ; signaler l'absence", "La notice PDF fait foi"],
         "data_origin": "Documents publics (notices / CG AXA). Aucune donnée client. Couches dérivées ; masters non modifiés.",
-        "entry_point": SITE + "/ia/instructions-maitres.html",
-        "ai_protocol": "Toute IA : 1) lire /ia/instructions-maitres.html ; 2) appliquer ces règles (classer la question, "
-                       "utiliser les outils utiles, citer contrat+notice+page, distinguer contractuel/réglementaire, signaler les absences) ; 3) répondre.",
+        "entry_point": SITE + "/ia/start.html",
+        "ai_protocol": "Toute IA : 1) première visite : lire /ia/start.html (initialisation en une lecture : protocole, carte, "
+                       "exemples, auto-test) ; 2) appliquer /ia/instructions-maitres.html (classer la question, utiliser les outils, "
+                       "citer contrat+notice+page, distinguer contractuel/réglementaire, signaler les absences) ; 3) répondre. "
+                       "Jamais de fait contractuel ni de chiffre réglementaire de mémoire.",
+        "ai_onboarding": {
+            "start": SITE + "/ia/start.html",
+            "etapes": ["oublier sa mémoire générale AXA", "comprendre la base", "protocole en 5 règles",
+                       "carte type de question -> pages", "exemples travaillés", "auto-test corrigé", "répondre"],
+            "protocole_de_reference": SITE + "/ia/instructions-maitres.html",
+            "hypothese": "les IA sont imparfaites : chaque page porte un rappel du protocole et renvoie vers start",
+        },
         "pages": [{"id": p, "html": SITE + "/ia/%s.html" % p, "md": SITE + "/ia/%s.md" % p} for p in pages if p != "manifeste"],
         "contracts": [{"slug": cm["slug"], "id": cm["id"], "nom": cm["nom"], "famille": cm["famille"],
                        "html": SITE + "/ia/contrat/%s.html" % cm["slug"], "md": SITE + "/ia/contrat/%s.md" % cm["slug"]} for cm in CONTRACT_META],
@@ -583,9 +739,10 @@ def build_static_pages(theme_counts):
     # Outil de SÉLECTION DE CONTEXTE (rétroporté de Gabriel Virtuel /vue-ia/privee/) :
     # selon le type de question, l'IA sait quelles pages charger — au lieu de tout lire.
     selection = {
-        "regle": "charger d'abord instructions-maitres ; puis les pages du type de question ; "
-                 "citer contrat + notice + page ; signaler les absences au lieu d'inventer",
+        "regle": "première visite : charger start (initialisation complète) ; sinon instructions-maitres ; "
+                 "puis les pages du type de question ; citer contrat + notice + page ; signaler les absences au lieu d'inventer",
         "questions": {
+            "premiere_visite_ou_doute_sur_la_methode": ["start", "instructions-maitres"],
             "garantie_couverte_ou_pas": ["instructions-maitres", "routage", "garanties", "exclusions", "contrats"],
             "comparer_des_contrats": ["comparateur", "matrices", "contrats"],
             "definition_d_un_terme": ["glossaire", "definitions"],
@@ -644,8 +801,8 @@ Index → (Contrat | Catégorie | Thème) → Élément `#id` → Notice → Pag
     idx_md = md_hdr("Gabriel AXA — Vue IA", "Point d'entrée de la couche IA : commencer ici, puis naviguer.") + """
 ## Pour toute IA (ChatGPT, Claude, Gemini, Copilot, Mistral, DeepSeek, Qwen…)
 Un conseiller t'a demandé d'utiliser Gabriel AXA. Procède dans cet ordre, sans rien demander de plus :
-- **1. Lis les [Instructions maîtres](instructions-maitres.html)** — le protocole complet à appliquer avant de répondre.
-- **2. Utilise les outils nécessaires** — routage, concepts, comparateur, matrices, preuves, couverture, méthode, sources officielles.
+- **1. Première visite : lis [START](start.html)** — initialisation en une lecture (protocole, carte, exemples travaillés, auto-test). N'utilise jamais ta mémoire générale sur AXA ici.
+- **2. Applique les [Instructions maîtres](instructions-maitres.html)** — le protocole de référence, avec les outils nécessaires (routage, concepts, comparateur, matrices, preuves, couverture, méthode, sources officielles).
 - **3. Réponds** — en citant contrat + notice + page, en distinguant contractuel et réglementaire, en signalant toute absence.
 
 ## Repères (pour approfondir)
@@ -1741,6 +1898,7 @@ def build():
     build_graphe()
     build_outils()
     build_instructions_maitres()   # cerveau du protocole IA (mini-prompt conseiller → cette page)
+    build_start()                  # parcours d'initialisation IA (après build_pertinence : analyze() prêt)
     build_static_pages(tc)
     rows, allok = build_coverage(coverage())
     build_maturite(rows)

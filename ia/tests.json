@@ -1,6 +1,6 @@
 {
  "meta": {
-  "version": "2.1.0",
+  "version": "2.2.0",
   "genere_le": "2026-07-12",
   "total": 76,
   "schema": "chaque test : question + contrats_obligatoires/interdits + categories_obligatoires + source/notice attendues + statut_attendu ; 'detecte' = sortie du moteur ; 'resultat' = comparaison.",

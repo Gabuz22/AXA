@@ -1,6 +1,10 @@
 {
- "regle": "charger d'abord instructions-maitres ; puis les pages du type de question ; citer contrat + notice + page ; signaler les absences au lieu d'inventer",
+ "regle": "première visite : charger start (initialisation complète) ; sinon instructions-maitres ; puis les pages du type de question ; citer contrat + notice + page ; signaler les absences au lieu d'inventer",
  "questions": {
+  "premiere_visite_ou_doute_sur_la_methode": [
+   "start",
+   "instructions-maitres"
+  ],
   "garantie_couverte_ou_pas": [
    "instructions-maitres",
    "routage",

@@ -189,13 +189,15 @@ async function confiance(body) {
 
 /* ---------- Utiliser avec une IA (protocole : donner Gabriel AXA à son IA) ---------- */
 const IA_URL = "https://gabuz22.github.io/AXA/ia/";
+const IA_START_URL = IA_URL + "start.html";
 const IA_INSTRUCTIONS_URL = IA_URL + "instructions-maitres.html";
 const IA_TXT_REL = "../ia/instructions-maitres.txt"; // même origine (app et /ia servis sous /AXA/)
 // Mini-prompt : le SEUL texte que le conseiller manipule. L'IA découvre et applique seule Gabriel AXA.
 const MINI_PROMPT = `Utilise Gabriel AXA :
-${IA_INSTRUCTIONS_URL}
+${IA_START_URL}
 
-Lis d'abord ces instructions destinées aux IA, applique-les, puis réponds.
+Lis d'abord cette page d'initialisation pour les IA, applique son protocole, puis réponds.
+N'utilise jamais ta mémoire générale sur les contrats AXA : uniquement les pages de cette base, citées.
 
 Ma question : `;
 
