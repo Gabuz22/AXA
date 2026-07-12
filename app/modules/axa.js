@@ -11,7 +11,7 @@ import { TUTORIEL, PROMPTS, PARCOURS, FAMILLE_META, ERREURS_TRANSVERSES, OBJECTI
 // Sections réellement implémentées (garde-fou anti-lien-mort : un parcours ne s'affiche
 // que si sa cible existe). RDV/animateur s'activent automatiquement à leur implémentation.
 const IMPLEMENTED = new Set(["accueil", "premiers_pas", "copilote", "contrat", "recherche", "glossaire", "comparateur",
-  "besoins", "rdv", "animateur", "assistant", "assistants", "formulaires", "sources", "pdf", "historique", "parametres"]);
+  "besoins", "rdv", "animateur", "argumentaire", "assistant", "assistants", "formulaires", "sources", "pdf", "historique", "parametres"]);
 
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
 
@@ -44,19 +44,37 @@ export async function mount(el, ctx) {
   const human = true;
   el.innerHTML = `<div class="view-body">Chargement…</div>`;
   const body = el.querySelector(".view-body");
-  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistant, assistants, confiance, comparateur, besoins, rdv, animateur, formulaires, sources, pdf, historique, parametres }[section] || accueil;
+  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistant, assistants, confiance, comparateur, besoins, rdv, animateur, argumentaire, formulaires, sources, pdf, historique, parametres }[section] || accueil;
   try { await render(body, human, ctx); }
   catch (e) { body.innerHTML = `<p class="warn">Erreur de la section (${esc(e.message)}).</p>`; }
 }
 
-/* ---------- Accueil ---------- */
+/* ---------- Accueil (Chantier 8 — orienté intention : « que veux-tu faire ? ») ---------- */
 async function accueil(body) {
   const idx = await kb.source("index_global");
   const stats = idx?.statistiques;
-  // Parcours orientés terrain (n'affiche que les cibles implémentées → aucun lien mort).
-  const parcours = PARCOURS.filter(p => IMPLEMENTED.has(p.href.split("/").pop() || "accueil"));
+  const resume = await kb.source("contrats_resume_humain");
+  const dates = (resume?.contrats || []).map(c => c.date_document).filter(Boolean).sort();
   const EXEMPLES = ["délai de carence", "exclusions décès", "rachat possible ?", "invalidité IPT", "fiscalité transmission"];
   const gotoSearch = q => { set({ axaQuery: (q || "").trim() }); location.hash = "#/recherche"; };
+  // Entrées par intention — chaque tuile répond à « je veux… ».
+  const INTENTS = [
+    ["🧠", "Poser une question", "#/copilote", "preuves + pistes, sourcées"],
+    ["📑", "Comprendre un contrat", "#/contrat", "l'essentiel, le mécanisme, les preuves"],
+    ["⚖️", "Comparer deux contrats", "#/comparateur", "pour décider, pas juxtaposer"],
+    ["🧩", "Analyser un cas client", "#/besoins", "diagnostic progressif, statuts clairs"],
+    ["🗓", "Préparer un rendez-vous", "#/rdv", "avant · pendant · après"],
+    ["🗣", "Construire un argumentaire", "#/argumentaire", "trame éditable, sourcée"],
+    ["📖", "Vérifier un terme", "#/glossaire", "définitions sourcées par contrat"],
+    ["🤖", "Travailler avec une IA", "#/assistants", "un mini-prompt à coller"],
+  ];
+  // Reprendre : dernières recherches locales + dernier contexte de travail.
+  const hist = (kb.history() || []).slice(0, 3);
+  const back = get("axaBack");
+  const backLbl = { recherche: "ta recherche", copilote: "ta question au copilote", contrat: "la fiche", comparateur: "la comparaison" }[back?.from];
+  const reprendre = (hist.length || (back?.q && backLbl)) ? `<h3 class="day-h">Reprendre</h3><div class="filters">
+      ${back?.q && backLbl ? `<button class="chip on" id="acc_back">↩ ${backLbl} « ${esc(back.q.length > 36 ? back.q.slice(0, 36) + "…" : back.q)} »</button>` : ""}
+      ${hist.map(h => `<button class="chip" data-ex="${esc(h.q)}">🔎 ${esc(h.q)}</button>`).join("")}</div>` : "";
   body.innerHTML = `
     <section class="hero">
       <h2 class="hero-t">Trouve la bonne réponse contractuelle, <span class="hero-u">sourcée</span>, en quelques secondes.</h2>
@@ -69,26 +87,19 @@ async function accueil(body) {
         ${EXEMPLES.map(x => `<button class="chip" data-ex="${esc(x)}">${esc(x)}</button>`).join("")}</div>
       <p class="hero-new">Nouveau ici ? <a href="#/decouvrir">✨ Découvrir Gabriel AXA en 2 minutes</a> · <a href="#/cas_usage">🎯 Que puis-je faire ?</a></p>
     </section>
-    <h3 class="day-h">Accès rapides</h3>
-    <div class="grid">
-      ${tile("📑", "Contrats", "#/contrat", `${stats?.contrats ?? 9} fiches contractuelles, A→Z`)}
-      ${tile("⚖️", "Comparateur", "#/comparateur", "deux contrats côte à côte")}
-      ${tile("📖", "Glossaire", "#/glossaire", "les termes AXA définis, sourcés")}
-      ${tile("🧠", "Copilote de réponse", "#/copilote", "preuve + raisonnement, sourcé")}
-      ${tile("🤖", "Utiliser avec une IA", "#/assistants", "un mini-prompt à coller dans ton IA")}
-      ${tile("📄", "Notices PDF", "#/pdf", "la source qui fait foi")}
-    </div>
-    ${stats ? `<h3 class="day-h">Base de connaissances</h3>
-    <div class="grid kpis">
-      <div class="tile"><span class="tile-s">Contrats</span><span class="tile-l">${stats.contrats}</span><span class="tile-s">à jour</span></div>
-      <div class="tile"><span class="tile-s">Faits contractuels</span><span class="tile-l">${stats.faits_uniques}</span><span class="tile-s">${Object.keys(stats.categories_source || {}).length} catégories</span></div>
-      <div class="tile"><span class="tile-s">Garanties</span><span class="tile-l">${stats.categories_source?.garantie ?? "—"}</span><span class="tile-s">exclusions : ${stats.categories_source?.exclusion ?? "—"}</span></div>
-      <div class="tile"><span class="tile-s">Points de vigilance</span><span class="tile-l">${stats.categories_source?.point_vigilance ?? "—"}</span><span class="tile-s">fiscalité : ${stats.categories_source?.fiscalite ?? "—"}</span></div>
-    </div>` : ""}
-    <p class="muted" style="margin-top:16px">Aucune donnée client stockée. <b>La notice PDF fait toujours foi.</b></p>`;
+    ${reprendre}
+    <h3 class="day-h">Que veux-tu faire ?</h3>
+    <div class="grid">${INTENTS.map(([i, l, h, s]) => tile(i, l, h, s)).join("")}</div>
+    <p class="muted" style="margin-top:16px">${stats ? `Base : <b>${stats.contrats}</b> contrats · <b>${stats.faits_uniques}</b> faits sourcés${dates.length ? ` · notices de ${esc(dates[0])} à ${esc(dates[dates.length - 1])} (chaque fiche affiche la sienne)` : ""}. ` : ""}
+    Aucune donnée client stockée. <b>La notice PDF fait toujours foi.</b> <a href="#/pdf">📄 Notices</a></p>`;
   body.querySelector("#acc_go").onclick = () => gotoSearch(body.querySelector("#acc_q").value);
   body.querySelector("#acc_q").addEventListener("keydown", e => { if (e.key === "Enter") gotoSearch(e.target.value); });
-  body.querySelector("#acc_ex").addEventListener("click", e => { const b = e.target.closest("[data-ex]"); if (b) gotoSearch(b.dataset.ex); });
+  body.addEventListener("click", e => { const b = e.target.closest("[data-ex]"); if (b) gotoSearch(b.dataset.ex); });
+  body.querySelector("#acc_back")?.addEventListener("click", () => {
+    if (back.from === "comparateur" && back.slugs) { location.hash = "#/comparateur/" + back.slugs.join("/"); return; }
+    if (back.from === "contrat") { location.hash = "#/contrat/" + back.q.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]/g, ""); return; }
+    set({ axaQuery: back.q }); location.hash = "#/" + (back.from === "copilote" ? "copilote" : "recherche");
+  });
 }
 function tile(icon, label, href, sub) {
   return `<a class="tile" href="${href}"><span class="tile-i">${icon}</span><span class="tile-l">${esc(label)}</span><span class="tile-s">${esc(sub)}</span></a>`;
@@ -521,6 +532,7 @@ async function contrat(body, human, ctx) {
             <button class="btn" data-act="copilote">🧠 Poser une question sur ${esc(court(c.nom))}</button>
             <a class="btn ghost" href="#/besoins">🎯 Analyser un cas client</a>
             <button class="btn ghost" data-act="rdv">🗓 Préparer un rendez-vous</button>
+            <button class="btn ghost" data-act="arg">🗣 Créer un argumentaire</button>
           </div></div>
         <div class="ess-b"><div class="ess-h">Comparer${confusion ? " " + IA_TAG : ""}</div>
           ${confusion ? `<p class="ess-p" style="margin-bottom:8px">${esc(confusion)}</p>` : ""}
@@ -615,6 +627,7 @@ async function contrat(body, human, ctx) {
         bindCopy(body.querySelector("[data-act=copy]"), () => resumeTexte(c, insp), "✓ Résumé copié");
         body.querySelector("[data-act=copilote]")?.addEventListener("click", () => { set({ axaQuery: c.nom + " " }); location.hash = "#/copilote"; });
         body.querySelector("[data-act=rdv]")?.addEventListener("click", () => { set({ axaRdvPrefill: c.nom }); location.hash = "#/rdv"; });
+        body.querySelector("[data-act=arg]")?.addEventListener("click", () => { set({ axaArgPrefill: c.nom }); location.hash = "#/argumentaire"; });
         body.querySelectorAll("[data-goto]").forEach(a => a.onclick = e => {
           e.preventDefault(); const s = body.querySelector("#" + a.dataset.goto);
           if (s) { s.open = true; s.scrollIntoView({ behavior: "smooth", block: "start" }); }
@@ -677,9 +690,25 @@ async function recherche(body) {
         <span class="pill">${esc(h.type)}</span><strong>${esc(h.label || "(sans titre)")}</strong><span class="muted">${esc(h.contrat || "")}</span></div>
       <p class="card-b">${highlight(sansTitre(h.text, h.label), terms)}</p>
       <p class="muted">${tete ? `<span class="muted">celui qui recoupe le mieux tes termes — vérifie la notice (fait foi) · </span>` : ""}<a href="${h.ref}">→ ouvrir la fiche</a></p></article>`;
+    // État vide HUMAIN : distinguer « rien pour ce filtre » de « rien du tout », expliquer
+    // ce que ça signifie et proposer la suite — jamais un cul-de-sac.
+    const etatVide = () => {
+      const q = input.value.trim();
+      if (lastHits.length) return `<p class='muted'>Aucun résultat de ce type — ${lastHits.length} au total dans les autres filtres ci-dessus.</p>`;
+      return `<div class="card"><div class="card-h"><span class="pill pending">aucun fait trouvé</span><strong>« ${esc(q)} »</strong></div>
+        <p class="card-b">Soit le mot n'est pas celui de la notice, soit l'information n'est <b>pas dans la base</b> — elle n'y est jamais inventée. <b>Ne réponds pas au client sans vérifier.</b></p>
+        <ul class="hlist">
+          <li>Reformule avec le mot de la notice (« rachat » plutôt que « récupérer l'argent »).</li>
+          <li>Précise le contrat (« carence Avizen »).</li>
+          <li>Matière réglementaire (impôt, retraite légale, succession) → <a href="#/sources">sources officielles</a>.</li>
+          <li>En dernier recours : <a href="#/pdf">ouvrir la notice</a> — elle fait foi.</li>
+        </ul>
+        <div class="btns"><button class="btn ghost" id="gr_cop">🧠 Poser la question au copilote</button></div></div>`;
+    };
     res.innerHTML = shown.length ? `<p class="muted">${shown.length} résultat(s)${active !== "all" ? " · filtre : " + esc(FILTERS.find(f => f.id === active).label) : ""}</p>`
       + shown.map((h, i) => carte(h, i === 0)).join("")
-      : "<p class='muted'>Aucun résultat pour ce filtre.</p>";
+      : etatVide();
+    res.querySelector("#gr_cop")?.addEventListener("click", () => { set({ axaQuery: input.value.trim() }); location.hash = "#/copilote"; });
   }
   let t;
   async function run(q) {
@@ -1035,6 +1064,7 @@ async function comparateur(body, human, ctx) {
     // ① EN 30 SECONDES — pourquoi (ou pourquoi pas) comparer ces deux-là.
     let verdict;
     if (sameFam) verdict = `Même famille (<b>${esc(cA.famille)}</b>) : contrats proches, <b>à ne pas confondre</b> — la décision se joue sur les garanties et exclusions ligne à ligne.`;
+    else if (!risques.length) verdict = `Familles différentes (${esc(cA.famille)} vs ${esc(cB.famille)}) — usages distincts. <span class="muted">L'analyse des besoins couverts est indisponible (couche /ia non générée) : compare ligne à ligne ci-dessous.</span>`;
     else if (!communs.length) verdict = `Ces deux contrats <b>ne répondent pas au même besoin</b> (${esc(cA.famille)} vs ${esc(cB.famille)}) : les comparer terme à terme a peu de sens. La vraie question : se <b>complètent</b>-ils dans la couverture du client ?`;
     else verdict = `Familles différentes (${esc(cA.famille)} vs ${esc(cB.famille)}) avec des besoins partagés : souvent <b>complémentaires</b> plutôt que concurrents — vérifier les doublons sur les besoins communs.`;
     const chipsR = arr => arr.map(r => `<span class="fchip" title="${esc((r.questions || [])[0] || "")}">${esc(shortR(r))}</span>`).join("");
@@ -1597,6 +1627,122 @@ async function animateur(body) {
     bindCopy(body.querySelector("#an_copy"), () => asText);
     body.querySelector("#an_print").onclick = () => printTarget(body.querySelector("#an_card"));
   };
+}
+
+/* ---------- Argumentaire (Chantier 7 — support de vente ÉDITABLE, sourcé, honnête) ----------
+   Pas un texte généré à prendre ou à laisser : une trame structurée que le conseiller
+   ADAPTE avant usage (zone éditable), avec la distinction affichée entre contenu VALIDÉ
+   (faits sourcés notice) et SUGGESTION IA (analyses à valider), et des [À COMPLÉTER]
+   là où la donnée manque au lieu de l'inventer. Deux formats : trame d'entretien, mail. */
+const ARG_PROFILS = [["", "Profil général"], ["tns", "Indépendant / TNS"], ["famille", "Famille avec enfants"], ["senior", "Senior / retraite proche"], ["jeune", "Jeune actif"]];
+const ARG_RISQUES_PROFIL = {
+  tns: ["arret_travail_itt", "invalidite", "retraite_revenu", "emprunt"],
+  famille: ["deces_protection_famille", "education_enfants", "emprunt", "arret_travail_itt"],
+  senior: ["dependance", "obseques", "epargne_transmission", "retraite_revenu"],
+  jeune: ["accident_vie_privee", "invalidite", "arret_travail_itt", "epargne_transmission"],
+};
+async function argumentaire(body) {
+  const resume = await kb.source("contrats_resume_humain");
+  const contrats = resume?.contrats || [];
+  if (!contrats.length) { body.innerHTML = `<p class="warn">Données contrats indisponibles.</p>`; return; }
+  const matrice = await inspJson("metier/matrice_risques.json");
+  const RISQUES = matrice?.risques || {};
+  const st = { contrat: "", profil: "", format: "trame" };
+  const pre = get("axaArgPrefill");
+  if (pre && contrats.some(c => c.nom === pre)) st.contrat = pre;
+  if (!st.contrat) st.contrat = contrats[0].nom;
+  set({ axaArgPrefill: null });
+
+  body.innerHTML = `
+    <p class="lead"><span class="qbadge q-beta">BÊTA</span> Une trame d'argumentaire à <b>adapter</b>, pas un texte à réciter :
+    les faits sourcés (validés) et les analyses IA (suggestions à valider) sont <b>distingués</b>, et ce qui manque est marqué
+    <b>[À COMPLÉTER]</b> au lieu d'être inventé.</p>
+    <div class="card"><div class="row3">
+      <label>Contrat<select id="ag_c">${contrats.map(c => `<option ${st.contrat === c.nom ? "selected" : ""}>${esc(c.nom)}</option>`).join("")}</select></label>
+      <label>Profil client<select id="ag_p">${ARG_PROFILS.map(([v, l]) => `<option value="${v}">${esc(l)}</option>`).join("")}</select></label>
+      <label>Format<select id="ag_f"><option value="trame">Trame d'entretien</option><option value="mail">Mail de proposition</option></select></label>
+    </div>
+    <div class="btns"><button class="btn gold" id="ag_go">🗣 Construire la trame</button></div></div>
+    <div id="ag_out"></div>`;
+
+  async function construire() {
+    const c = contrats.find(x => x.nom === st.contrat);
+    const insp = await inspFiche(c.nom);
+    const titres = (key, n) => (c[key] || []).map(f => typeof f === "string" ? f : (f.titre && !f.titre.startsWith("_") ? f.titre : "")).filter(Boolean).slice(0, n);
+    const pages = key => (c[key] || []).map(f => (f && typeof f === "object" && f.source?.page) ? `${f.titre} (notice p.${f.source.page})` : (f.titre || "")).filter(x => x && !x.startsWith("_")).slice(0, 3);
+    const accroche = iaTxt(insp?.finalite), favorable = iaTxt(insp?.situations_favorables), defavorable = iaTxt(insp?.situations_defavorables);
+    // Besoins du contrat, resserrés sur le profil choisi (heuristique matrice, étiquetée).
+    const rIds = Object.keys(RISQUES).filter(id => (RISQUES[id].contrats || []).some(x => cleNom(x) === cleNom(c.nom)));
+    const pref = ARG_RISQUES_PROFIL[st.profil] || [];
+    const rOrd = [...rIds].sort((x, y) => (pref.indexOf(x) < 0 ? 9 : pref.indexOf(x)) - (pref.indexOf(y) < 0 ? 9 : pref.indexOf(y)));
+    const besoins = rOrd.slice(0, 3).map(id => String(RISQUES[id].libelle || id).split("—")[0].trim());
+    const profilLbl = ARG_PROFILS.find(([v]) => v === st.profil)?.[1] || "Profil général";
+    const V = "[VALIDÉ — sourcé notice]", S = "[SUGGESTION IA — à valider]";
+    let L;
+    if (st.format === "trame") {
+      L = [`TRAME D'ENTRETIEN — ${c.nom} · ${profilLbl}`, "",
+        `1. ACCROCHE ${accroche ? S : ""}`,
+        accroche || "[À COMPLÉTER — pourquoi ce contrat existe, en une phrase]", "",
+        `2. LE BESOIN DU CLIENT ${besoins.length ? S : ""}`,
+        besoins.length ? "Angles à explorer pour ce profil : " + besoins.join(" · ") : "[À COMPLÉTER — reformuler le besoin exprimé]",
+        "Reformuler avec ses mots : « Si je comprends bien, vous voulez… [À COMPLÉTER] »", "",
+        `3. CE QUE LE CONTRAT APPORTE ${V}`,
+        ...(pages("garanties_principales").map(x => "- " + x)),
+        "→ montrer la notice à la page citée, pas de promesse orale.", "",
+        `4. POUR CE CLIENT ${favorable ? S : ""}`,
+        favorable ? "Pertinent quand : " + favorable : "[À COMPLÉTER]",
+        defavorable ? "Le dire honnêtement si : " + defavorable : "", "",
+        `5. À NE PAS PROMETTRE ${V}`,
+        ...(pages("exclusions_importantes").map(x => "- " + x)),
+        ...(titres("points_de_vigilance", 2).map(x => "- Vigilance : " + x)), "",
+        "6. OBJECTIONS PROBABLES [SUGGESTION — exemples à adapter]",
+        "- « C'est trop cher » → revenir au besoin : que se passe-t-il sans couverture ?",
+        "- « J'ai déjà un contrat » → proposer de vérifier doublons et trous, sans dénigrer.",
+        "- « Je vais réfléchir » → identifier la vraie objection, proposer une étape datée.", "",
+        "7. PROCHAINE ÉTAPE",
+        "« Je vous propose [À COMPLÉTER : simulation / second RDV / vérification] d'ici le [DATE]. »", "",
+        "RÈGLES : la notice PDF fait foi · aucun chiffre fiscal sans source officielle · les suggestions IA se valident avant usage."];
+    } else {
+      L = [`Objet : Notre échange sur ${court(c.nom)} — [À COMPLÉTER]`, "", "Bonjour [PRÉNOM],", "",
+        `Suite à notre échange, voici l'essentiel sur ${c.nom}${besoins.length ? ` au regard de votre situation (${besoins[0].toLowerCase()})` : ""}.`, "",
+        `Ce que ce contrat apporte ${V} :`,
+        ...(pages("garanties_principales").map(x => "- " + x)), "",
+        `Points d'attention dont nous avons parlé ${V} :`,
+        ...(pages("exclusions_importantes").slice(0, 2).map(x => "- " + x)), "",
+        "Ces éléments sont indicatifs : les conditions exactes figurent dans la notice d'information, qui fait foi — je vous la remets avec la proposition.", "",
+        "Prochaine étape proposée : [À COMPLÉTER] avant le [DATE].", "",
+        "Bien cordialement,", "[SIGNATURE]"];
+    }
+    const texte = L.filter(x => x !== "").join("\n").replace(/\n{3,}/g, "\n\n");
+    const nManque = (texte.match(/\[À COMPLÉTER/g) || []).length;
+    body.querySelector("#ag_out").innerHTML = `
+      <div class="card">
+        <div class="card-h"><strong>${st.format === "trame" ? "Trame d'entretien" : "Mail de proposition"} — ${esc(court(c.nom))}</strong>
+          <span class="pill integrated">validé = sourcé</span><span class="pill pending">suggestion IA = à valider</span>
+          ${nManque ? `<span class="pill pending">${nManque} champ(s) à compléter</span>` : ""}</div>
+        <p class="muted" style="margin:0 0 8px">Adapte le texte ci-dessous avant usage — c'est ta trame, pas un script.</p>
+        <textarea id="ag_txt" rows="22" style="width:100%;resize:vertical;font-size:13px;line-height:1.5">${esc(texte)}</textarea>
+        <div class="btns" style="margin-top:8px">
+          <button class="btn gold" id="ag_copy">📋 Copier</button>
+          <button class="btn ghost" id="ag_regen">⟳ Régénérer</button>
+          <a class="btn ghost" href="#/contrat/${cleNom(c.nom)}">📑 Revenir aux preuves (fiche)</a>
+          ${printBtnHtml("ag_print")}</div>
+        <div class="warnbox" style="margin-top:10px">⚖️ Support d'aide à l'entretien. Les blocs « suggestion IA » se valident avant usage ;
+        les chiffres et conditions exactes se montrent sur la notice (elle fait foi).</div></div>`;
+    const ta = body.querySelector("#ag_txt");
+    bindCopy(body.querySelector("#ag_copy"), () => ta.value, "✓ Trame copiée");
+    body.querySelector("#ag_regen").onclick = () => { if (ta.value === texte || confirm("Écraser tes modifications et régénérer ?")) construire(); };
+    body.querySelector("#ag_print").onclick = () => {
+      const pre2 = document.createElement("pre"); pre2.style.whiteSpace = "pre-wrap"; pre2.textContent = ta.value;
+      ta.parentElement.appendChild(pre2); pre2.classList.add("print-only-temp");
+      printTarget(pre2); setTimeout(() => pre2.remove(), 4000);
+    };
+  }
+  body.querySelector("#ag_c").onchange = e => { st.contrat = e.target.value; };
+  body.querySelector("#ag_p").onchange = e => { st.profil = e.target.value; };
+  body.querySelector("#ag_f").onchange = e => { st.format = e.target.value; };
+  body.querySelector("#ag_go").onclick = () => construire();
+  if (pre) construire(); // arrivé depuis une fiche : la trame sort tout de suite
 }
 
 /* ---------- Formulaires ---------- */

@@ -33,6 +33,7 @@ const NAV = [
   { group: "Outils conseiller (bêta)", items: [
     { id: "besoins", label: "Cas client", icon: "🧩", beta: true },
     { id: "rdv", label: "Rendez-vous", icon: "🗓", beta: true },
+    { id: "argumentaire", label: "Argumentaire", icon: "🗣", beta: true },
     { id: "animateur", label: "Animateur", icon: "🎓", beta: true },
   ]},
 ];
@@ -57,6 +58,7 @@ const HELP = {
   besoins: { what: "Le cas client : coche ce que tu sais, le diagnostic (risques priorisés, trous, doublons, contrats à examiner) se construit au fur et à mesure.", how: ["Renseigne profil, événements, besoins et contrats en place — dans n'importe quel ordre.", "Chaque élément porte son statut : déclaré, déduit ou hypothèse.", "Poursuis vers la fiche, le comparateur ou la préparation de RDV."] },
   rdv: { what: "Le rendez-vous en trois temps : préparer (kit enrichi), s'appuyer en séance (accès rapide + notes locales), conclure (compte-rendu et mail générés).", how: ["① Avant : renseigne le contexte (ou pars du cas client) et génère le kit.", "② Pendant : notes locales avec marqueurs « à vérifier / objection ».", "③ Après : le compte-rendu et le mail se construisent depuis tes notes."] },
   animateur: { what: "Mode formation / réunion d'équipe.", how: ["Utilise les repères pour animer une session."] },
+  argumentaire: { what: "Une trame d'argumentaire à adapter : faits sourcés (validés) et suggestions IA distingués, manques marqués [À COMPLÉTER].", how: ["Choisis contrat, profil et format.", "Adapte le texte dans la zone éditable, puis copie.", "« Revenir aux preuves » ouvre la fiche sourcée."] },
   premiers_pas: { what: "Le tutoriel de prise en main de Gabriel AXA.", how: ["Suis les étapes ; reviens ici quand tu veux."] },
 };
 const DEFAULT_HELP = { what: "Gabriel AXA : la base de connaissances contractuelle AXA, sourcée, pour gagner du temps.", how: ["Utilise la recherche ou le copilote.", "La notice PDF fait toujours foi."] };
