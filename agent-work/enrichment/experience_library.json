@@ -1,0 +1,44 @@
+{
+  "_avertissement": "BIBLIOTHÈQUE D'EXPÉRIENCE — raisonnements métier acquis dossier après dossier (raisonnement de Claude jouant l'inspecteur expérimenté, comparé aux moteurs). Ce sont des ENSEIGNEMENTS heuristiques étiquetés, jamais des règles ni des clauses. Structure GÉNÉRIQUE (situation → leçons) réutilisable pour tout métier ; le contenu est l'adaptateur AXA.",
+  "origin": "simulation_assistee_par_claude",
+  "version": "1.0.0",
+  "dossiers": [
+    {
+      "id": "exp_001_medecin_liberal",
+      "situation": {"flags": ["tns", "profession_medicale"], "risques": ["arret_travail_itt", "invalidite", "emprunt"],
+                    "resume": "Médecin libéral 38 ans, revenus élevés, 1 enfant, crédit cabinet + résidence, inquiétude : arrêt de travail."},
+      "ce_que_les_moteurs_ont_bien_fait": ["priorité ITT pour le TNS", "dettes d'abord", "questions psy/dos emprunteur"],
+      "ce_qui_manquait": ["le DÉLAI DE CARENCE long des régimes obligatoires de professions libérales (l'IJ contractuelle doit démarrer tôt)",
+                          "les PLAFONDS d'IJ à confronter au revenu réel élevé", "distinguer crédit professionnel (cabinet) et crédit familial"],
+      "lecons": [
+        {"si": ["tns"], "lecon": "Professions libérales/médicales : vérifier le DÉLAI DE CARENCE du régime obligatoire (souvent long) — la franchise de l'IJ contractuelle doit être choisie pour démarrer AVANT que le régime ne verse.", "type": "question_a_poser"},
+        {"si": ["tns"], "lecon": "Revenus élevés : confronter les PLAFONDS d'indemnisation au revenu réel — une IJ plafonnée peut laisser un trou majeur.", "type": "risque_cache"},
+        {"si": ["credit", "tns"], "lecon": "Un crédit PROFESSIONNEL (local, matériel) ne se traite pas comme le crédit familial : couverture et bénéficiaire distincts.", "type": "piege"}
+      ]
+    },
+    {
+      "id": "exp_002_famille_recomposee",
+      "situation": {"flags": ["couple", "enfants", "senior"], "risques": ["epargne_transmission", "deces_protection_famille", "dependance"],
+                    "resume": "Couple recomposé 55 ans, enfants de deux lits, patrimoine constitué, objectif transmission équilibrée."},
+      "ce_que_les_moteurs_ont_bien_fait": ["fenêtre dépendance à 55 ans", "assurance vie proposée pour la transmission"],
+      "ce_qui_manquait": ["le PIÈGE de la clause bénéficiaire standard en famille recomposée",
+                          "l'arbitrage explicite entre protéger le nouveau conjoint ET les enfants du premier lit"],
+      "lecons": [
+        {"si": ["couple", "enfants"], "lecon": "FAMILLE RECOMPOSÉE : la clause bénéficiaire standard (« mon conjoint ») peut déshériter de fait les enfants du premier lit — la RÉDACTION de la clause est la décision la plus importante du dossier (répartition nominative, démembrement : à travailler avec un juriste).", "type": "piege"},
+        {"si": ["couple", "enfants"], "lecon": "Demander SYSTÉMATIQUEMENT : « des enfants d'une précédente union ? » — cette seule question change toute la stratégie de transmission.", "type": "question_a_poser"},
+        {"si": ["senior"], "lecon": "À 55 ans, traiter la dépendance dans le MÊME rendez-vous que la transmission : c'est la dernière fenêtre d'assurabilité confortable.", "type": "strategie"}
+      ]
+    },
+    {
+      "id": "exp_003_jeune_solo",
+      "situation": {"flags": ["solo"], "risques": ["accident_vie_privee", "arret_travail_itt"],
+                    "resume": "Jeune actif 26 ans, célibataire sans enfant, locataire, budget serré, sportif."},
+      "ce_que_les_moteurs_ont_bien_fait": ["questions sports à risque", "pas de suréquipement épargne"],
+      "ce_qui_manquait": ["le socle priorisait le DÉCÈS avant l'ITT alors que personne ne dépend de lui — corrigé dans le système (règle solo)"],
+      "lecons": [
+        {"si": ["solo"], "lecon": "SANS PERSONNE À CHARGE, le décès n'est PAS la priorité : c'est l'invalidité/ITT qui ruine une vie de célibataire. Une solution MINIMALE (accident + ITT) est souvent la bonne — ne pas suréquiper.", "type": "arbitrage"},
+        {"si": ["solo"], "lecon": "Budget serré : commencer par le risque qui détruit le budget (arrêt long), pas par celui qui rassure le conseiller.", "type": "strategie"}
+      ]
+    }
+  ]
+}

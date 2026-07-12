@@ -228,6 +228,41 @@
       }
     }
   ],
+  "retours_experience": {
+    "dossiers_similaires": 2,
+    "lecons": [
+      {
+        "lecon": "Professions libérales/médicales : vérifier le DÉLAI DE CARENCE du régime obligatoire (souvent long) — la franchise de l'IJ contractuelle doit être choisie pour démarrer AVANT que le régime ne verse.",
+        "type": "question_a_poser",
+        "source": "exp_001_medecin_liberal",
+        "origine": "simulation_assistee_par_claude"
+      },
+      {
+        "lecon": "Revenus élevés : confronter les PLAFONDS d'indemnisation au revenu réel — une IJ plafonnée peut laisser un trou majeur.",
+        "type": "risque_cache",
+        "source": "exp_001_medecin_liberal",
+        "origine": "simulation_assistee_par_claude"
+      },
+      {
+        "lecon": "Un crédit PROFESSIONNEL (local, matériel) ne se traite pas comme le crédit familial : couverture et bénéficiaire distincts.",
+        "type": "piege",
+        "source": "exp_001_medecin_liberal",
+        "origine": "simulation_assistee_par_claude"
+      },
+      {
+        "lecon": "FAMILLE RECOMPOSÉE : la clause bénéficiaire standard (« mon conjoint ») peut déshériter de fait les enfants du premier lit — la RÉDACTION de la clause est la décision la plus importante du dossier (répartition nominative, démembrement : à travailler avec un juriste).",
+        "type": "piege",
+        "source": "exp_002_famille_recomposee",
+        "origine": "simulation_assistee_par_claude"
+      },
+      {
+        "lecon": "Demander SYSTÉMATIQUEMENT : « des enfants d'une précédente union ? » — cette seule question change toute la stratégie de transmission.",
+        "type": "question_a_poser",
+        "source": "exp_002_famille_recomposee",
+        "origine": "simulation_assistee_par_claude"
+      }
+    ]
+  },
   "objections_probables": [
     {
       "risque": "emprunt",

@@ -324,6 +324,14 @@
           "deces_protection_famille"
         ],
         "pourquoi": "le collectif d'entreprise couvre souvent l'arrêt de travail mais rarement assez le décès/l'éducation : vérifier les plafonds du collectif."
+      },
+      {
+        "si": "solo",
+        "retrograde": [
+          "deces_protection_famille",
+          "education_enfants"
+        ],
+        "pourquoi": "sans personne à charge, le décès n'est pas prioritaire : c'est l'invalidité/ITT qui ruine une vie de célibataire (leçon exp_003)."
       }
     ]
   },

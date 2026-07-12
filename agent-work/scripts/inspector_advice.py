@@ -35,6 +35,8 @@ def read_profile(case):
         flags.add("senior")
     if any(k in txt for k in ("marie", "pacse", "couple")):
         flags.add("couple")
+    if "celibataire" in txt and "enfants" not in flags:
+        flags.add("solo")                      # leçon exp_003 : sans personne à charge, autres priorités
     return {"flags": sorted(flags), "faits": facts}
 
 
@@ -71,7 +73,13 @@ def prioritize(rids, metier, flags):
     # stable : les boostés remontent en tête dans l'ordre du socle
     head = [r for r in ordered if r in boosted]
     tail = [r for r in ordered if r not in boosted]
-    return head + tail
+    out = head + tail
+    # rétrogradations (leçon exp_003 : « solo » -> le décès n'est pas prioritaire sans personne à charge)
+    demoted = []
+    for regle in (metier.get("priorites_risques", {}).get("regles") or []):
+        if regle.get("si") in flags:
+            demoted += regle.get("retrograde", [])
+    return [r for r in out if r not in demoted] + [r for r in out if r in demoted]
 
 
 # ------------------------------------------------------------------ audit de l'existant
@@ -133,6 +141,20 @@ def advise(case, graph, metier, domain="axa-contrat"):
     doublons = [r for r, a in audit["par_risque"].items() if a["statut"] == "doublon_potentiel"]
     trous = [r for r, a in audit["par_risque"].items() if a["statut"] == "trou_potentiel"]
 
+    # RETOURS D'EXPÉRIENCE (bibliothèque des raisonnements) : « j'ai déjà rencontré des situations proches »
+    experience = {"dossiers_similaires": 0, "lecons": []}
+    lib = metier.get("_experience") or {}
+    for d in lib.get("dossiers", []):
+        sit = d.get("situation", {})
+        common_flags = set(sit.get("flags", [])) & flags
+        common_risks = set(sit.get("risques", [])) & set(rids)
+        if common_flags or len(common_risks) >= 2:
+            experience["dossiers_similaires"] += 1
+        for le in d.get("lecons", []):
+            if set(le.get("si", [])) <= flags:
+                experience["lecons"].append({"lecon": le["lecon"], "type": le.get("type"),
+                                             "source": d["id"], "origine": lib.get("origin")})
+
     return {
         "case_id": case.get("case_id"), "case_valid": ok, "case_errors": errs,
         "profil": profile,
@@ -142,6 +164,7 @@ def advise(case, graph, metier, domain="axa-contrat"):
         "trous_de_couverture_potentiels": trous,
         "doublons_potentiels": doublons,
         "plan_action": plan,
+        "retours_experience": experience,
         "objections_probables": objections,
         "informations_manquantes": comp["missing"] + IC.unknowns(case),
         "hypotheses": IC.assumptions(case),

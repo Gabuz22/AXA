@@ -93,5 +93,14 @@ def ingest_from_repo(graph, repo_root, domain="axa-contrat"):
                                                                "relations_inter": 0, "unresolved": []}
 
 
+EXPERIENCE = "agent-work/enrichment/experience_library.json"
+
+
 def load_metier(repo_root):
-    return load_json_file(os.path.join(repo_root, METIER))
+    """Charge la matrice métier + la BIBLIOTHÈQUE D'EXPÉRIENCE (attachée sous _experience)."""
+    m = load_json_file(os.path.join(repo_root, METIER))
+    if m is not None:
+        exp = load_json_file(os.path.join(repo_root, EXPERIENCE))
+        if exp:
+            m["_experience"] = exp
+    return m

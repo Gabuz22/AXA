@@ -203,6 +203,9 @@ def _write_metier(graph):
     _write_json("metier/evenements_vie.json", {
         "avertissement": metier.get("_avertissement"), "origin": metier.get("origin"),
         "evenements": metier.get("evenements_vie", {})})
+    exp = metier.get("_experience")
+    if exp:
+        _write_json("experience/bibliotheque.json", exp)   # bibliothèque des raisonnements (étiquetée)
 
 
 def main():
