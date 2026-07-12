@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-12T19:15:17Z",
+  "generated_at": "2026-07-12T19:30:48Z",
   "totals": {
-    "runs": 138,
+    "runs": 144,
     "llm_calls": 10,
     "tokens_in_est": 1200,
     "tokens_out_est": 400,
-    "proposals_generated": 160,
+    "proposals_generated": 164,
     "proposals_pending_real": 8,
     "proposals_fixtures": 0,
     "proposals_deduplicated": 0,
@@ -14,8 +14,8 @@
   },
   "per_agent": {
     "adversarial-tests": {
-      "runs": 47,
-      "proposals_generated": 48
+      "runs": 49,
+      "proposals_generated": 50
     },
     "concepts": {
       "runs": 1,
@@ -30,7 +30,7 @@
       "proposals_generated": 1
     },
     "extraction-llm": {
-      "runs": 26,
+      "runs": 28,
       "proposals_generated": 10
     },
     "official-sources": {
@@ -42,8 +42,8 @@
       "proposals_generated": 31
     },
     "ux-ai": {
-      "runs": 44,
-      "proposals_generated": 44
+      "runs": 46,
+      "proposals_generated": 46
     }
   }
 }
