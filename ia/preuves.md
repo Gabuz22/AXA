@@ -1,6 +1,6 @@
 # Graphe de preuves
 
-> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v2.1.0).
+> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-12 (v2.1.0).
 > Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
 
 **Objectif.** Chaque élément citable comme preuve, avec id stable, contrat, type, texte, source PDF + page, liens et concepts. Une conclusion doit reposer sur des ids précis.

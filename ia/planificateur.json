@@ -1,7 +1,7 @@
 {
  "meta": {
   "version": "2.1.0",
-  "genere_le": "2026-07-10",
+  "genere_le": "2026-07-12",
   "usage": "Mapper une question -> concept(s) via synonymes, obtenir contrats candidats + catégories à consulter + notices. Ne répond pas ; prépare le parcours."
  },
  "plans": {

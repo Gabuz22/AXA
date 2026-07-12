@@ -1,6 +1,6 @@
 # Qualité du routage — mesures de précision
 
-> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v2.1.0).
+> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-12 (v2.1.0).
 > Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
 
 **Objectif.** Précision du moteur de détection/routage : contrats, périmètre, sources officielles, statut. Les erreurs restantes sont listées par famille.

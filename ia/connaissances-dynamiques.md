@@ -1,6 +1,6 @@
 # Connaissances dynamiques
 
-> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-10 (v2.1.0).
+> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-12 (v2.1.0).
 > Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
 
 **Objectif.** Infrastructure (chaîne) prête pour intégrer, plus tard et manuellement, des règles réglementaires validées. Aucune intégration automatique.
