@@ -342,6 +342,12 @@ li.diff{color:var(--gold)}
 .fiche-work{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px;margin:0 18px}
 .fiche-work .btns{margin:0}
 .fsec-why{font-size:12.5px;color:var(--muted);margin:0;font-style:italic}
+/* Comparateur (chantier 4) */
+.cmp-pick{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;margin-bottom:12px}
+.cmp-pick>label{flex:1;min-width:180px;display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:var(--muted)}
+.cmp-pick #cmp_swap{min-height:38px;flex:none}
+.cmp-bes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px;margin-top:10px}
+.cmp-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px;margin-bottom:8px}
 @media(max-width:640px){
   .main{padding:16px 14px}
   .fiche-head,.fiche-assureur,.fiche .warnbox,.fiche-retenir,.fsec,.fiche-sep,.fiche-foot,.fiche-niv,.ess-grid,.ess-statut,.fiche-work{margin-left:10px;margin-right:10px}
