@@ -11,7 +11,7 @@ import { TUTORIEL, PROMPTS, PARCOURS, FAMILLE_META, ERREURS_TRANSVERSES, OBJECTI
 // Sections réellement implémentées (garde-fou anti-lien-mort : un parcours ne s'affiche
 // que si sa cible existe). RDV/animateur s'activent automatiquement à leur implémentation.
 const IMPLEMENTED = new Set(["accueil", "premiers_pas", "copilote", "contrat", "recherche", "glossaire", "comparateur",
-  "besoins", "rdv", "animateur", "argumentaire", "assistant", "assistants", "formulaires", "sources", "pdf", "historique", "parametres"]);
+  "besoins", "rdv", "animateur", "argumentaire", "assistants", "formulaires", "sources", "pdf", "historique", "parametres"]);
 
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
 
@@ -44,7 +44,7 @@ export async function mount(el, ctx) {
   const human = true;
   el.innerHTML = `<div class="view-body">Chargement…</div>`;
   const body = el.querySelector(".view-body");
-  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistant, assistants, confiance, comparateur, besoins, rdv, animateur, argumentaire, formulaires, sources, pdf, historique, parametres }[section] || accueil;
+  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistants, confiance, comparateur, besoins, rdv, animateur, argumentaire, formulaires, sources, pdf, historique, parametres }[section] || accueil;
   try { await render(body, human, ctx); }
   catch (e) { body.innerHTML = `<p class="warn">Erreur de la section (${esc(e.message)}).</p>`; }
 }
@@ -74,7 +74,8 @@ async function accueil(body) {
   const backLbl = { recherche: "ta recherche", copilote: "ta question au copilote", contrat: "la fiche", comparateur: "la comparaison" }[back?.from];
   const reprendre = (hist.length || (back?.q && backLbl)) ? `<h3 class="day-h">Reprendre</h3><div class="filters">
       ${back?.q && backLbl ? `<button class="chip on" id="acc_back">↩ ${backLbl} « ${esc(back.q.length > 36 ? back.q.slice(0, 36) + "…" : back.q)} »</button>` : ""}
-      ${hist.map(h => `<button class="chip" data-ex="${esc(h.q)}">🔎 ${esc(h.q)}</button>`).join("")}</div>` : "";
+      ${hist.map(h => `<button class="chip" data-ex="${esc(h.q)}">🔎 ${esc(h.q)}</button>`).join("")}
+      ${hist.length ? `<a class="chip" href="#/historique">🕘 tout l'historique</a>` : ""}</div>` : "";
   body.innerHTML = `
     <section class="hero">
       <h2 class="hero-t">Trouve la bonne réponse contractuelle, <span class="hero-u">sourcée</span>, en quelques secondes.</h2>
@@ -279,6 +280,8 @@ async function cas_usage(body) {
     ["📖", "Comprendre une définition", "glossaire", ""],
     ["⚖️", "Comparer deux contrats", "comparateur", ""],
     ["🧠", "Construire un premier raisonnement", "copilote", ""],
+    ["🧩", "Analyser un cas client", "besoins", ""],
+    ["🗣", "Construire un argumentaire", "argumentaire", ""],
     ["🤖", "Analyse multi-contrats (IA)", "assistants", ""],
     ["🗓", "Préparer un rendez-vous", "rdv", ""],
   ];
@@ -981,43 +984,6 @@ async function glossaire(body, human) {
     let t; inp.addEventListener("input", e => { clearTimeout(t); const v = e.target.value; t = setTimeout(() => { render(v); const i = body.querySelector("#glq"); i.focus(); i.setSelectionRange(v.length, v.length); }, 200); });
   }
   render();
-}
-
-/* ---------- Assistant IA (cadré : aucun appel API en V1) ---------- */
-async function assistant(body) {
-  const prompt = await kb.source("prompt_conseiller");
-  const modeEmploi = await kb.source("mode_emploi_ia");
-  body.innerHTML = `
-    <p class="lead">L'assistant IA n'est <b>pas encore connecté</b> (aucun appel API — voir ADR-004).
-    En attendant, ce poste de travail prépare tout pour tes assistants externes :</p>
-    ${modeEmploi ? `<div class="card"><h3 style="margin:0 0 8px">Mode d'emploi IA — double master (Pack A stable / Pack B matrices)</h3>
-      <div class="btns"><button class="btn gold" id="me_copy">📋 Copier le mode d'emploi</button><span class="muted" id="me_st"></span></div>
-      <details class="acc"><summary class="muted">Lire le mode d'emploi</summary><div class="md" id="me_md">Rendu…</div></details>
-      <p class="muted">Règle d'or : Pack A = preuve contractuelle · Pack B = raisonnement (jamais cité seul comme preuve) ·
-      réponse client = toujours vérifiée contrat/PDF/source officielle.</p></div>` : ""}
-    <div class="card"><h3 style="margin:0 0 8px">Mode d'emploi IA — prompt conseiller officiel</h3>
-      ${prompt ? `<div class="btns"><button class="btn gold" id="as_copy">📋 Copier le prompt</button><span class="muted" id="as_st"></span></div>
-      <details class="acc"><summary class="muted">Aperçu</summary><div class="md" id="as_md">Rendu…</div></details>`
-      : `<p class="muted">Prompt conseiller introuvable (rôle prompt_conseiller du manifeste).</p>`}
-    </div>
-    <div class="grid">
-      ${tile("📄", "Notices contractuelles", "#/pdf", "la source qui fait foi")}
-      ${tile("🧠", "Copilote de réponse", "#/copilote", "preuve + raisonnement, sourcé")}
-    </div>
-    <p class="muted">L'assistant conversationnel n'est pas branché dans Gabriel AXA (aucun appel API) :
-    l'application prépare tout pour ChatGPT / Claude et garde la notice PDF comme référence qui fait foi.</p>`;
-  body.querySelector("#as_copy")?.addEventListener("click", async () => {
-    try { await navigator.clipboard.writeText(prompt); body.querySelector("#as_st").textContent = "Copié."; }
-    catch { body.querySelector("#as_st").textContent = "Copie refusée — ouvre l'aperçu."; }
-  });
-  const meMd = body.querySelector("#me_md");
-  if (meMd && modeEmploi) renderMarkdown(modeEmploi).then(h => { meMd.innerHTML = h; });
-  const asMd = body.querySelector("#as_md");
-  if (asMd && prompt) renderMarkdown(prompt).then(h => { asMd.innerHTML = h; });
-  body.querySelector("#me_copy")?.addEventListener("click", async () => {
-    try { await navigator.clipboard.writeText(modeEmploi); body.querySelector("#me_st").textContent = "Copié."; }
-    catch { body.querySelector("#me_st").textContent = "Copie refusée — ouvre l'aperçu."; }
-  });
 }
 
 /* ---------- Comparateur (Chantier 4 — comprendre et décider) ----------

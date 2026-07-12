@@ -38,14 +38,23 @@ const NAV = [
   ]},
 ];
 const INDEX = {}; NAV.forEach(g => g.items.forEach(it => INDEX[it.id] = it));
+// Routes UTILES mais volontairement hors navigation (accessibles par lien direct,
+// ex. « tout l'historique » depuis l'accueil) — sans elles, #/historique retombait
+// silencieusement sur l'accueil.
+const EXTRA_ROUTES = [
+  { id: "historique", label: "Historique des recherches", icon: "🕘" },
+  { id: "parametres", label: "Paramètres", icon: "⚙️" },
+  { id: "formulaires", label: "Formulaires", icon: "📝" },
+];
+EXTRA_ROUTES.forEach(it => { if (!INDEX[it.id]) INDEX[it.id] = it; });
 
 // Aide contextuelle par section (le « ? » du header). Aucune donnée, aucun réseau.
 const HELP = {
   accueil: { what: "Le point de départ : la promesse de Gabriel AXA et l'accès direct à la recherche.", how: ["Tape ta question dans la barre de recherche.", "Ou ouvre une fiche contrat, le copilote ou une notice."] },
   recherche: { what: "Le cœur du produit : retrouver une garantie, une exclusion, une définition ou une condition — sourcé.", how: ["Tape en langage naturel (synonymes tolérés).", "Filtre par type ; chaque résultat porte sa source (notice/page)."] },
-  contrat: { what: "Les fiches contrat, par ordre alphabétique.", how: ["Choisis un contrat ou filtre.", "Chaque fait renvoie à la notice à la bonne page."] },
+  contrat: { what: "La fiche contrat est un espace de travail : l'essentiel d'abord (à qui, quand, pièges, questions), puis le mécanisme, les actions (copilote, cas, RDV, comparaison) et les preuves sourcées.", how: ["Ouvre un contrat — chaque fait renvoie à la notice à la bonne page.", "Les blocs « analyse IA » sont des aides à valider, jamais une preuve.", "Le lien « revenir à ta recherche » garde ton contexte."] },
   copilote: { what: "Réponse assemblée sans IA : preuves (Pack A) + raisonnement (Pack B), séparés.", how: ["Pose ta question.", "Copie le brief sourcé. La notice PDF fait foi."] },
-  comparateur: { what: "Deux contrats côte à côte pour choisir.", how: ["Sélectionne deux contrats à comparer."] },
+  comparateur: { what: "Comparer pour décider : comparabilité en 30 secondes, ce que chacun apporte en propre, table détaillée, questions client qui font trancher.", how: ["Choisis deux contrats (⇄ pour permuter).", "Les besoins couverts/non couverts viennent de la matrice métier (étiquetée).", "Poursuis : fiches, copilote, synthèse copiable, RDV."] },
   glossaire: { what: "Les termes définis dans les notices AXA, regroupés et sourcés.", how: ["Filtre un terme pour voir ses définitions par contrat."] },
   pdf: { what: "Les notices contractuelles — la source qui fait foi.", how: ["Ouvre une notice, si possible à la bonne page."] },
   decouvrir: { what: "Ce qu'est Gabriel AXA, à qui il s'adresse et ce qu'il change — en moins de 5 minutes.", how: ["Lis la promesse et les exemples.", "Puis lance une recherche."] },
@@ -60,6 +69,9 @@ const HELP = {
   animateur: { what: "Mode formation / réunion d'équipe.", how: ["Utilise les repères pour animer une session."] },
   argumentaire: { what: "Une trame d'argumentaire à adapter : faits sourcés (validés) et suggestions IA distingués, manques marqués [À COMPLÉTER].", how: ["Choisis contrat, profil et format.", "Adapte le texte dans la zone éditable, puis copie.", "« Revenir aux preuves » ouvre la fiche sourcée."] },
   premiers_pas: { what: "Le tutoriel de prise en main de Gabriel AXA.", how: ["Suis les étapes ; reviens ici quand tu veux."] },
+  historique: { what: "Tes dernières recherches, locales à ce navigateur.", how: ["Clique une ligne pour relancer la recherche.", "« Vider » efface tout."] },
+  parametres: { what: "Maintenance de l'espace : recharger les sources, vider l'historique.", how: ["Utilise « Recharger » après une mise à jour des données."] },
+  formulaires: { what: "Formulaires de recueil (export local uniquement).", how: ["Ouvre un formulaire dans un nouvel onglet."] },
 };
 const DEFAULT_HELP = { what: "Gabriel AXA : la base de connaissances contractuelle AXA, sourcée, pour gagner du temps.", how: ["Utilise la recherche ou le copilote.", "La notice PDF fait toujours foi."] };
 
