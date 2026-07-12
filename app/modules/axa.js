@@ -513,6 +513,13 @@ async function recherche(body) {
     for (const t of terms) { if (t.length < 2) continue; out = out.replace(new RegExp("(" + t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "gi"), "<mark>$1</mark>"); }
     return out;
   }
+  const rnorm = s => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  // Le texte des faits commence souvent par son propre titre : on ne l'affiche qu'une fois.
+  const sansTitre = (text, label) => {
+    let t = String(text || "").trim(); const L = String(label || "").trim();
+    for (let i = 0; i < 2 && L && rnorm(t).startsWith(rnorm(L)); i++) t = t.slice(L.length).replace(/^\s*[—:.\-]\s*/, "");
+    return t.trim() || L;
+  };
   function paint() {
     const shown = lastHits.filter(h => matchFilter(FILTERS.find(f => f.id === active), h));
     filtersEl.innerHTML = FILTERS.map(f => {
@@ -520,11 +527,14 @@ async function recherche(body) {
       return n || f.id === "all" ? `<button class="chip ${active === f.id ? "on" : ""}" data-fid="${f.id}">${esc(f.label)}${f.id === "all" ? "" : ` (${n})`}</button>` : "";
     }).join("");
     filtersEl.querySelectorAll("[data-fid]").forEach(b => b.onclick = () => { active = b.dataset.fid; paint(); });
-    const terms = (input.value.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").match(/[a-z0-9]{2,}/g)) || [];
-    res.innerHTML = shown.length ? `<p class="muted">${shown.length} résultat(s)${active !== "all" ? " · filtre : " + esc(FILTERS.find(f => f.id === active).label) : ""}</p>` + shown.map(h => `
-      <article class="card"><div class="card-h"><span class="pill">${esc(h.type)}</span><strong>${esc(h.label || "(sans titre)")}</strong><span class="muted">${esc(h.contrat || "")}</span></div>
-      <p class="card-b">${highlight(h.text, terms)}</p>
-      <p class="muted"><a href="${h.ref}">→ ouvrir la section</a></p></article>`).join("")
+    const terms = (rnorm(input.value.trim()).match(/[a-z0-9]{2,}/g)) || [];
+    const carte = (h, tete) => `
+      <article class="card ${tete ? "cop-base" : ""}"><div class="card-h">${tete ? `<span class="pill integrated">meilleur résultat</span>` : ""}
+        <span class="pill">${esc(h.type)}</span><strong>${esc(h.label || "(sans titre)")}</strong><span class="muted">${esc(h.contrat || "")}</span></div>
+      <p class="card-b">${highlight(sansTitre(h.text, h.label), terms)}</p>
+      <p class="muted">${tete ? `<span class="muted">celui qui recoupe le mieux tes termes — vérifie la notice (fait foi) · </span>` : ""}<a href="${h.ref}">→ ouvrir la fiche</a></p></article>`;
+    res.innerHTML = shown.length ? `<p class="muted">${shown.length} résultat(s)${active !== "all" ? " · filtre : " + esc(FILTERS.find(f => f.id === active).label) : ""}</p>`
+      + shown.map((h, i) => carte(h, i === 0)).join("")
       : "<p class='muted'>Aucun résultat pour ce filtre.</p>";
   }
   let t;
@@ -533,6 +543,13 @@ async function recherche(body) {
     if (q.length < 2) { lastHits = []; filtersEl.innerHTML = ""; res.innerHTML = "<p class='muted'>Tape au moins 2 caractères.</p>"; return; }
     res.innerHTML = "<p class='muted'>Recherche…</p>";
     lastHits = await kb.searchAll(q);
+    // Déduplication d'affichage : même titre + même contrat (variantes d'écriture tolérées) = 1 carte.
+    const vu = new Set();
+    lastHits = lastHits.filter(h => {
+      const k = rnorm(String(h.contrat || "").replace(/\(.*?\)/g, "")).replace(/[^a-z0-9]/g, "") + "|" +
+                rnorm(h.label || h.text.slice(0, 40)).replace(/[^a-z0-9]/g, "");
+      if (vu.has(k)) return false; vu.add(k); return true;
+    });
     paint();
   }
   input.addEventListener("input", e => { clearTimeout(t); t = setTimeout(() => run(e.target.value), 250); });
