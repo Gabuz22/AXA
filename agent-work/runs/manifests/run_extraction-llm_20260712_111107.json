@@ -1,0 +1,23 @@
+{
+  "run_id": "run_extraction-llm_20260712_111107",
+  "agent_id": "extraction-llm",
+  "started_at": "2026-07-12T11:11:07Z",
+  "finished_at": "2026-07-12T11:11:07Z",
+  "dry_run": true,
+  "status": "no_work",
+  "task_id": "task_extraction_llm_micro_zones",
+  "provider_used": null,
+  "model_used": null,
+  "counters": {
+    "llm_calls": 0,
+    "tokens_in_est": 0,
+    "tokens_out_est": 0,
+    "proposals_generated": 0,
+    "proposals_written": 0,
+    "proposals_deduplicated": 0,
+    "proposals_rejected_auto": 0
+  },
+  "notes": [
+    "extraction-llm: aucune zone à traiter"
+  ]
+}
