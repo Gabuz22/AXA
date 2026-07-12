@@ -31,7 +31,7 @@ const NAV = [
     { id: "tester", label: "Tester Gabriel AXA", icon: "🧪" },
   ]},
   { group: "Outils conseiller (bêta)", items: [
-    { id: "besoins", label: "Analyse des besoins", icon: "🧩", beta: true },
+    { id: "besoins", label: "Cas client", icon: "🧩", beta: true },
     { id: "rdv", label: "Préparation RDV", icon: "🗓", beta: true },
     { id: "animateur", label: "Animateur", icon: "🎓", beta: true },
   ]},
@@ -54,7 +54,7 @@ const HELP = {
   confiance: { what: "D'où viennent les données et pourquoi s'y fier : documents publics, traçabilité, notice qui fait foi.", how: ["Chaque information renvoie à sa notice PDF.", "Rien n'est inventé."] },
   tester: { what: "La phase de test : ce qu'on attend de toi pour construire la prochaine version.", how: ["Note les erreurs et les manques.", "Compare avec ta pratique."] },
   sources: { what: "Quand s'appuyer sur le contrat, la notice, ou une source officielle externe.", how: ["Le contrat/notice fait foi ; les sources officielles pour la réglementation évolutive."] },
-  besoins: { what: "Un questionnaire guidé pour cadrer le besoin du client.", how: ["Réponds aux questions ; oriente vers les contrats pertinents."] },
+  besoins: { what: "Le cas client : coche ce que tu sais, le diagnostic (risques priorisés, trous, doublons, contrats à examiner) se construit au fur et à mesure.", how: ["Renseigne profil, événements, besoins et contrats en place — dans n'importe quel ordre.", "Chaque élément porte son statut : déclaré, déduit ou hypothèse.", "Poursuis vers la fiche, le comparateur ou la préparation de RDV."] },
   rdv: { what: "Une trame pour préparer un rendez-vous client.", how: ["Suis la trame ; imprime si besoin."] },
   animateur: { what: "Mode formation / réunion d'équipe.", how: ["Utilise les repères pour animer une session."] },
   premiers_pas: { what: "Le tutoriel de prise en main de Gabriel AXA.", how: ["Suis les étapes ; reviens ici quand tu veux."] },

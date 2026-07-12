@@ -1135,51 +1135,244 @@ async function comparateur(body, human, ctx) {
   renderCompare();
 }
 
-/* ---------- Analyse des besoins (parcours guidé — pistes, jamais de reco définitive) ---------- */
+/* ---------- Cas client (Chantier 5 — divulgation progressive, statuts explicites) ----------
+   Part de quelques faits (profil, événements, besoins exprimés, contrats en place) et
+   construit le diagnostic AU FUR ET À MESURE : risques priorisés avec statut
+   (déclaré / déduit / hypothèse), audit de l'existant (couvert-à-vérifier / doublon / trou),
+   contrats à examiner, retours d'expérience étiquetés, données qui affineraient. Jamais une
+   recommandation automatique : le conseiller décide, la notice PDF fait foi. */
 function bullets(arr) { return `<ul class="hlist">${arr.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`; }
+const EVT_LABELS = {
+  naissance: "👶 Naissance / enfant à venir", achat_immobilier: "🏠 Achat immobilier / crédit",
+  passage_independant: "🧰 Passage en indépendant", mariage_pacs: "💍 Mariage / PACS",
+  divorce: "⚡ Divorce / séparation", approche_retraite: "🌅 Retraite qui approche",
+  deces_proche: "🕯 Décès d'un proche", sport_a_risque: "🏔 Sport / activité à risque",
+};
+// Ordre socle des priorités : dettes d'abord, catastrophique avant probable, protéger avant épargner.
+const ORDRE_SOCLE = ["emprunt", "deces_protection_famille", "arret_travail_itt", "invalidite",
+  "accident_vie_privee", "education_enfants", "dependance", "obseques", "retraite_revenu", "epargne_transmission"];
+const POURQUOI_RANG = {
+  emprunt: "une dette longue court quoi qu'il arrive — la couvrir passe avant le reste",
+  deces_protection_famille: "catastrophique pour les proches si rien n'est prévu",
+  arret_travail_itt: "le risque le plus fréquent : le revenu s'arrête, pas les charges",
+  invalidite: "rare mais définitif — à traiter avec l'arrêt de travail",
+  accident_vie_privee: "fréquent, et hors du champ des couvertures professionnelles",
+  education_enfants: "sécuriser le parcours des enfants si un parent disparaît",
+  dependance: "fenêtre d'assurabilité : plus on attend, plus c'est cher ou refusé",
+  obseques: "éviter de laisser la charge et l'organisation aux proches",
+  retraite_revenu: "se construit tôt, mais après la protection du présent",
+  epargne_transmission: "on épargne une fois le socle de protection en place",
+};
 async function besoins(body) {
   const resume = await kb.source("contrats_resume_humain");
   const contrats = resume?.contrats || [];
+  const [matrice, evtsData, biblio] = await Promise.all([
+    inspJson("metier/matrice_risques.json"), inspJson("metier/evenements_vie.json"), inspJson("experience/bibliotheque.json")]);
+  const RISQUES = matrice?.risques || {};
+  const EVTS = evtsData?.evenements || {};
+  const DOSSIERS = biblio?.dossiers || [];
+  if (!Object.keys(RISQUES).length) {
+    body.innerHTML = `<p class="warn">La matrice métier n'est pas disponible (couche /ia/inspecteur non générée).
+      En attendant : la <a href="#/recherche">recherche</a> et les <a href="#/contrat">fiches contrat</a> restent complètes.</p>`;
+    return;
+  }
+  const shortR = id => String(RISQUES[id]?.libelle || id).split("—")[0].trim();
+  const couvrent = id => (RISQUES[id]?.contrats || []);
+  const COLLECTIF_COUVRE = new Set(["deces_protection_famille", "arret_travail_itt", "invalidite"]);
+
+  // État du cas — local à l'écran, jamais stocké.
+  const cas = { statut: "", fam: "", age: "", credit: false, collectif: false, evts: new Set(), besoins: new Set(), existants: new Set() };
+
   body.innerHTML = `
-    <p class="lead">Parcours guidé : renseigne la situation, l'outil propose des <b>pistes</b> à explorer.
-    <b>Ce n'est pas une recommandation :</b> le conseiller décide et vérifie au contrat.</p>
-    <div class="card"><h3 style="margin:0 0 8px">Situation du client</h3>
+    <p class="lead">Pars de la <b>situation réelle</b> : coche ce que tu sais, le diagnostic se construit au fur et à mesure —
+    pas de formulaire à terminer avant d'avoir de la valeur. <b>Aucune donnée client n'est stockée.</b></p>
+    <div class="card">
+      <div class="ess-h" style="margin-bottom:8px">La situation <span style="text-transform:none;letter-spacing:0">— dans n'importe quel ordre</span></div>
       <div class="row3">
-        <label>Âge<input id="bz_age" type="number" min="0" max="120" placeholder="ex. 35"></label>
-        <label>Situation familiale<select id="bz_fam"><option value="">—</option><option>Célibataire</option><option>En couple</option><option>Avec enfants</option><option>Famille recomposée</option></select></label>
-        <label>Profession<select id="bz_pro"><option value="">—</option><option>Salarié</option><option>Indépendant / TNS</option><option>Fonctionnaire</option><option>Sans activité</option><option>Retraité</option></select></label>
+        <label>Statut professionnel<select id="cc_statut"><option value="">je ne sais pas encore</option><option>Salarié</option><option>Indépendant / TNS</option><option>Fonctionnaire</option><option>Retraité</option><option>Sans activité</option></select></label>
+        <label>Situation familiale<select id="cc_fam"><option value="">je ne sais pas encore</option><option>Célibataire</option><option>En couple</option><option>Avec enfants</option><option>Famille recomposée</option></select></label>
+        <label>Âge<input id="cc_age" type="number" min="16" max="100" placeholder="ex. 42"></label>
       </div>
-      <fieldset class="perms"><legend>Objectifs (un ou plusieurs)</legend>
-        ${OBJECTIFS.map((o, i) => `<label class="inline"><input type="checkbox" data-obj="${i}"> ${esc(o.label)}</label>`).join("")}</fieldset>
-      <div class="row3">
-        <label>Budget mensuel<select id="bz_budget"><option value="">—</option><option>&lt; 50 €</option><option>50–150 €</option><option>&gt; 150 €</option></select></label>
-        <label>Horizon<select id="bz_hor"><option value="">—</option><option>Court terme</option><option>Moyen terme</option><option>Long terme</option></select></label>
-        <label>Contraintes<input id="bz_contr" placeholder="ex. santé, budget serré"></label>
+      <div class="filters" style="margin:8px 0 0">
+        <label class="inline"><input type="checkbox" id="cc_credit"> crédit en cours</label>
+        <label class="inline"><input type="checkbox" id="cc_collectif"> couverture collective employeur</label>
       </div>
-      <div class="btns"><button class="btn gold" id="bz_go">🎯 Proposer des pistes</button></div>
-      <div id="bz_out"></div></div>`;
-  body.querySelector("#bz_go").onclick = () => {
-    const objs = [...body.querySelectorAll("[data-obj]:checked")].map(c => OBJECTIFS[Number(c.dataset.obj)]);
-    const out = body.querySelector("#bz_out");
-    if (!objs.length) { out.innerHTML = "<p class='muted'>Coche au moins un objectif.</p>"; return; }
-    const familles = [...new Set(objs.map(o => o.famille))];
-    const pistes = contrats.filter(c => familles.includes(c.famille));
-    const questions = [...new Set(familles.flatMap(f => (FAMILLE_META[f]?.questions) || []))];
-    const age = body.querySelector("#bz_age").value, pro = body.querySelector("#bz_pro").value;
-    const notes = [];
-    if (pro === "Indépendant / TNS") notes.push("Statut TNS : vérifier les dispositifs dédiés (Madelin/PER) et le questionnaire médical.");
-    if (age && Number(age) >= 60) notes.push("Âge ≥ 60 ans : attention aux conditions d'âge et limites de souscription selon les contrats.");
-    out.innerHTML = `
-      <h3 class="day-h">Pistes à explorer (à valider par le conseiller)</h3>
-      <p class="muted">Familles rapprochées : ${familles.map(esc).join(", ")}</p>
-      ${pistes.length ? bullets(pistes.map(c => `${c.nom} (${c.famille})`)) : "<p class='muted'>Aucun contrat de ces familles dans la base — élargir via la recherche globale.</p>"}
-      <h3 class="day-h">Questions complémentaires à poser</h3>${bullets(questions)}
-      ${notes.length ? `<h3 class="day-h">Points d'attention</h3>${bullets(notes)}` : ""}
-      <div class="warnbox">⚖️ Ces pistes ne sont pas une recommandation. Vérifier garanties, exclusions et conditions
-      dans <a href="#/contrat">la fiche contrat</a> et la notice PDF avant toute proposition. Aucun calcul fiscal définitif sans données complètes.</div>
-      <div class="btns"><button class="btn" id="bz_rdv">🗓 Préparer un RDV avec ces éléments</button></div>`;
-    body.querySelector("#bz_rdv").onclick = () => { location.hash = "#/rdv"; };
+      <div class="ess-h" style="margin:12px 0 4px">Événements récents ou à venir</div>
+      <div class="filters" id="cc_evts">${Object.keys(EVTS).map(k => `<button class="chip" data-evt="${k}">${esc(EVT_LABELS[k] || k)}</button>`).join("")}</div>
+      <div class="ess-h" style="margin:10px 0 4px">Besoins exprimés par le client</div>
+      <div class="filters" id="cc_bes">${Object.keys(RISQUES).map(k => `<button class="chip" data-bes="${k}">${esc(shortR(k))}</button>`).join("")}</div>
+      <div class="ess-h" style="margin:10px 0 4px">Contrats déjà en place</div>
+      <div class="filters" id="cc_ex">${contrats.map(c => `<button class="chip" data-ex="${esc(c.nom)}">${esc(court(c.nom))}</button>`).join("")}</div>
+      <div class="filters" style="margin-top:12px"><span class="muted" style="align-self:center;font-size:12px">Essayer :</span>
+        <button class="chip" id="cc_demo1">démo : artisan TNS, 2 enfants, crédit</button>
+        <button class="chip" id="cc_demo2">démo : 26 ans, célibataire, sportif</button>
+        <button class="chip" id="cc_reset">↺ tout effacer</button></div>
+    </div>
+    <div id="cc_out"><p class="muted">Le diagnostic apparaît ici dès la première information cochée.</p></div>`;
+
+  const flagsDe = () => {
+    const f = new Set();
+    if (cas.statut === "Indépendant / TNS") f.add("tns");
+    if (cas.statut === "Salarié") f.add("salarie");
+    if (cas.fam === "Avec enfants" || cas.fam === "Famille recomposée") f.add("enfants");
+    if (cas.fam === "Famille recomposée") f.add("famille_recomposee");
+    if (cas.credit) f.add("credit");
+    const age = Number(cas.age);
+    if (age >= 55) f.add("senior");
+    if (age && age < 35) f.add("jeune");
+    if (cas.fam === "Célibataire" && !f.has("enfants")) f.add("solo");
+    return f;
   };
+  // Chaque risque actif porte son STATUT épistémique : déclaré > déduit > hypothèse.
+  const risquesActifs = flags => {
+    const out = new Map(); const rank = { declare: 3, deduit: 2, hypothese: 1 };
+    const add = (id, st, via) => {
+      if (!RISQUES[id]) return;
+      const cur = out.get(id);
+      if (!cur) out.set(id, { statut: st, via: via ? [via] : [] });
+      else { if (rank[st] > rank[cur.statut]) cur.statut = st; if (via) cur.via.push(via); }
+    };
+    for (const b of cas.besoins) add(b, "declare", "exprimé par le client");
+    for (const e of cas.evts) for (const rid of (EVTS[e]?.risques || [])) add(rid, "deduit", "événement : " + String(EVT_LABELS[e] || e).replace(/^\S+\s/, ""));
+    if (flags.has("credit")) add("emprunt", "deduit", "crédit en cours");
+    if (flags.has("tns")) { add("arret_travail_itt", "hypothese", "statut TNS"); add("invalidite", "hypothese", "statut TNS"); }
+    if (flags.has("enfants")) { add("deces_protection_famille", "hypothese", "enfants à charge"); add("education_enfants", "hypothese", "enfants à charge"); }
+    if (flags.has("senior")) { add("dependance", "hypothese", "âge ≥ 55"); add("obseques", "hypothese", "âge ≥ 55"); add("retraite_revenu", "hypothese", "âge ≥ 55"); }
+    return out;
+  };
+  const prioriser = (actifs, flags) => {
+    const score = id => {
+      let s = ORDRE_SOCLE.indexOf(id); if (s < 0) s = 99;
+      if (flags.has("credit") && id === "emprunt") s -= 6;
+      if (flags.has("tns") && id === "arret_travail_itt") s -= 3;
+      if (flags.has("enfants") && id === "education_enfants") s -= 2;
+      if (flags.has("enfants") && id === "deces_protection_famille") s -= 1;
+      if (flags.has("senior") && (id === "dependance" || id === "obseques")) s -= 3;
+      // Célibataire sans personne à charge : décès/éducation rétrogradés (sauf besoin exprimé).
+      if (flags.has("solo") && !cas.besoins.has(id) && (id === "deces_protection_famille" || id === "education_enfants")) s += 8;
+      return s;
+    };
+    return [...actifs.keys()].sort((x, y) => score(x) - score(y));
+  };
+
+  function paint() {
+    const out = body.querySelector("#cc_out");
+    const flags = flagsDe();
+    const actifs = risquesActifs(flags);
+    if (!actifs.size) { out.innerHTML = `<p class="muted">Le diagnostic apparaît ici dès la première information cochée.</p>`; return; }
+    const ordre = prioriser(actifs, flags);
+    const exNoms = [...cas.existants];
+    const couvertsPar = id => exNoms.filter(n => couvrent(id).some(x => cleNom(x) === cleNom(n)));
+    const stBadge = st => st === "declare" ? `<span class="pill integrated">déclaré</span>`
+      : st === "deduit" ? `<span class="pill">déduit</span>` : `<span class="pill pending">hypothèse</span>`;
+
+    // ① Diagnostic priorisé, chaque ligne dit son statut, son rang et l'état de couverture.
+    const lignes = ordre.map((id, i) => {
+      const a = actifs.get(id);
+      const cvts = couvertsPar(id);
+      const parCollectif = cas.collectif && COLLECTIF_COUVRE.has(id);
+      let etat;
+      if (cvts.length >= 2) etat = `<span class="pill pending">doublon possible : ${esc(cvts.map(court).join(" + "))}</span>`;
+      else if (cvts.length === 1) etat = `<span class="pill">couvert par ${esc(court(cvts[0]))} — à vérifier au contrat</span>`;
+      else if (parCollectif) etat = `<span class="pill">peut-être couvert par le collectif — à vérifier</span>`;
+      else etat = `<span class="pill pending">non couvert — trou potentiel</span>`;
+      return `<div class="fitem"><div class="fitem-t">${i + 1}. ${esc(shortR(id))} ${stBadge(a.statut)} ${etat}</div>
+        <p class="fitem-x"><span class="fitem-xl">Pourquoi ce rang</span> ${esc(POURQUOI_RANG[id] || "")}</p>
+        ${a.via.length ? `<p class="fitem-x"><span class="fitem-xl">D'où ça vient</span> ${esc([...new Set(a.via)].join(" · "))}</p>` : ""}</div>`;
+    }).join("");
+
+    // ② Contrats à examiner pour les trous (candidats de la matrice, hors existants).
+    const trous = ordre.filter(id => !couvertsPar(id).length && !(cas.collectif && COLLECTIF_COUVRE.has(id))).slice(0, 4);
+    const candOf = id => couvrent(id).filter(n => !exNoms.some(x => cleNom(x) === cleNom(n)));
+    const candBloc = trous.map(id => {
+      const cands = candOf(id);
+      if (!cands.length) return `<div class="fitem"><div class="fitem-t">${esc(shortR(id))}</div><p class="fitem-b muted">Aucun contrat de la base ne couvre ce besoin — voir l'offre hors périmètre.</p></div>`;
+      const links = cands.map(n => `<a class="btn ghost" href="#/contrat/${cleNom(n)}">📑 ${esc(court(n))}</a>`).join("");
+      const cmp = cands.length >= 2 ? `<a class="btn ghost" href="#/comparateur/${cleNom(cands[0])}/${cleNom(cands[1])}">⚖ comparer</a>` : "";
+      return `<div class="fitem"><div class="fitem-t">${esc(shortR(id))}</div><div class="btns" style="margin:6px 0 0">${links}${cmp}</div>
+        ${(RISQUES[id].questions || [])[0] ? `<p class="fitem-x"><span class="fitem-xl">À demander d'abord</span> ${esc(RISQUES[id].questions[0])}</p>` : ""}</div>`;
+    }).join("");
+
+    // ③ Retours d'expérience applicables (bibliothèque, filtrés par sous-ensemble de flags).
+    const lecons = [];
+    for (const d of DOSSIERS) for (const l of (d.lecons || []))
+      if ((l.si || []).length && (l.si || []).every(fl => flags.has(fl))) lecons.push(l);
+    const TYPE_LECON = { piege: "⚠ piège", question_a_poser: "❓ à poser", strategie: "🧭 stratégie", arbitrage: "⚖ arbitrage", risque_cache: "🕳 risque caché" };
+    const expBloc = lecons.length ? `<details class="acc" open><summary>📚 Retours d'expérience applicables (${lecons.length}) <span class="muted">— dossiers similaires, à valider</span></summary>
+      ${lecons.slice(0, 5).map(l => `<div class="fitem" style="margin:8px 0"><div class="fitem-t">${TYPE_LECON[l.type] || esc(l.type || "")}</div><p class="fitem-b">${esc(l.lecon)}</p></div>`).join("")}</details>` : "";
+
+    // ④ Les données qui changeraient le diagnostic (uniquement celles qui manquent).
+    const manquent = [];
+    if (!cas.statut) manquent.push("Statut professionnel : il change la priorité arrêt de travail (le TNS est mal couvert par le régime obligatoire).");
+    if (!cas.fam) manquent.push("Situation familiale : qui dépend de ce revenu ? (décès, éducation)");
+    if (!cas.age) manquent.push("Âge : il conditionne l'assurabilité (dépendance, obsèques) et les limites de souscription.");
+    if (cas.statut === "Salarié" && !cas.collectif) manquent.push("Couverture collective : un salarié en a souvent une — vérifier avant de doubler décès/ITT/invalidité.");
+    if (!cas.existants.size) manquent.push("Contrats existants : sans eux, impossible de voir doublons et trous réels.");
+
+    const cand1 = trous.length ? candOf(trous[0])[0] : null;
+    const synthese = () => {
+      const L = ["CAS CLIENT — diagnostic provisoire (aide au raisonnement, à valider)", ""];
+      const sit = [cas.statut, cas.fam, cas.age ? cas.age + " ans" : "", cas.credit ? "crédit en cours" : "", cas.collectif ? "couverture collective" : ""].filter(Boolean).join(" · ");
+      if (sit) L.push("SITUATION : " + sit);
+      if (cas.evts.size) L.push("ÉVÉNEMENTS : " + [...cas.evts].map(e => String(EVT_LABELS[e] || e).replace(/^\S+\s/, "")).join(" · "));
+      if (exNoms.length) L.push("DÉJÀ EN PLACE : " + exNoms.join(" · "));
+      L.push("", "RISQUES PAR PRIORITÉ :");
+      ordre.forEach((id, i) => {
+        const a = actifs.get(id); const cvts = couvertsPar(id);
+        const etat = cvts.length >= 2 ? "doublon possible (" + cvts.join(" + ") + ")" : cvts.length === 1 ? "couvert par " + cvts[0] + " — à vérifier" : (cas.collectif && COLLECTIF_COUVRE.has(id)) ? "peut-être couvert par le collectif" : "non couvert (trou potentiel)";
+        L.push(`${i + 1}. ${shortR(id)} [${a.statut}] — ${etat}`);
+      });
+      if (trous.length) { L.push("", "CONTRATS À EXAMINER :"); trous.forEach(id => { const cands = candOf(id); if (cands.length) L.push(`- ${shortR(id)} : ${cands.join(" ou ")}`); }); }
+      if (manquent.length) { L.push("", "À CLARIFIER :"); manquent.forEach(x => L.push("- " + x)); }
+      L.push("", "RÈGLE : hypothèse ≠ fait ; le conseiller décide ; la notice PDF fait foi. Aide IA à valider — jamais une recommandation automatique.");
+      return L.join("\n");
+    };
+
+    out.innerHTML = `
+      <h3 class="day-h">① Diagnostic — risques par priorité ${IA_TAG}</h3>
+      <p class="muted" style="margin-top:0"><span class="pill integrated">déclaré</span> = dit par le client ·
+        <span class="pill">déduit</span> = découle d'un fait (événement, crédit) ·
+        <span class="pill pending">hypothèse</span> = suggéré par le profil, à confirmer</p>
+      ${lignes}
+      ${candBloc ? `<h3 class="day-h">② Contrats à examiner pour les trous</h3>${candBloc}` : ""}
+      ${expBloc}
+      ${manquent.length ? `<h3 class="day-h">③ Ce qui affinerait le diagnostic</h3>${bullets(manquent)}` : ""}
+      <h3 class="day-h">④ Et maintenant</h3>
+      <div class="card"><div class="btns">
+        <button class="btn ghost" id="cc_copy">📋 Copier la synthèse du cas</button>
+        <button class="btn ghost" id="cc_rdv">🗓 Préparer le RDV${cand1 ? " (" + esc(court(cand1)) + ")" : ""}</button>
+        ${cand1 ? `<button class="btn ghost" id="cc_cop">🧠 Creuser au copilote</button>` : ""}
+      </div></div>
+      <div class="warnbox">⚖️ Aide au raisonnement (matrice métier IA, étiquetée, à valider) — <b>pas une recommandation</b>.
+      Le conseiller décide ; garanties, exclusions et conditions se vérifient dans la fiche et la notice PDF.</div>`;
+    bindCopy(out.querySelector("#cc_copy"), synthese, "✓ Synthèse copiée");
+    out.querySelector("#cc_rdv")?.addEventListener("click", () => { set({ axaRdvPrefill: cand1 || exNoms[0] || "" }); location.hash = "#/rdv"; });
+    out.querySelector("#cc_cop")?.addEventListener("click", () => { set({ axaQuery: `${court(cand1)} ${shortR(trous[0])} ` }); location.hash = "#/copilote"; });
+  }
+
+  // Câblage : chaque changement re-diagnostique (divulgation progressive).
+  const $ = sel => body.querySelector(sel);
+  $("#cc_statut").onchange = e => { cas.statut = e.target.value; paint(); };
+  $("#cc_fam").onchange = e => { cas.fam = e.target.value; paint(); };
+  $("#cc_age").oninput = e => { cas.age = e.target.value; paint(); };
+  $("#cc_credit").onchange = e => { cas.credit = e.target.checked; paint(); };
+  $("#cc_collectif").onchange = e => { cas.collectif = e.target.checked; paint(); };
+  const toggleChip = (setRef, key, el) => { setRef.has(key) ? setRef.delete(key) : setRef.add(key); el.classList.toggle("on"); paint(); };
+  $("#cc_evts").addEventListener("click", e => { const b = e.target.closest("[data-evt]"); if (b) toggleChip(cas.evts, b.dataset.evt, b); });
+  $("#cc_bes").addEventListener("click", e => { const b = e.target.closest("[data-bes]"); if (b) toggleChip(cas.besoins, b.dataset.bes, b); });
+  $("#cc_ex").addEventListener("click", e => { const b = e.target.closest("[data-ex]"); if (b) toggleChip(cas.existants, b.dataset.ex, b); });
+  const applique = patch => {
+    Object.assign(cas, { statut: "", fam: "", age: "", credit: false, collectif: false }, patch);
+    cas.evts = new Set(patch.evts || []); cas.besoins = new Set(patch.besoins || []); cas.existants = new Set(patch.existants || []);
+    $("#cc_statut").value = cas.statut; $("#cc_fam").value = cas.fam; $("#cc_age").value = cas.age;
+    $("#cc_credit").checked = cas.credit; $("#cc_collectif").checked = cas.collectif;
+    body.querySelectorAll("#cc_evts .chip, #cc_bes .chip, #cc_ex .chip").forEach(ch =>
+      ch.classList.toggle("on", cas.evts.has(ch.dataset.evt) || cas.besoins.has(ch.dataset.bes) || cas.existants.has(ch.dataset.ex)));
+    paint();
+  };
+  $("#cc_demo1").onclick = () => applique({ statut: "Indépendant / TNS", fam: "Avec enfants", age: "42", credit: true, existants: [contrats.find(c => /excelium/i.test(c.nom))?.nom].filter(Boolean) });
+  $("#cc_demo2").onclick = () => applique({ statut: "Salarié", fam: "Célibataire", age: "26", evts: ["sport_a_risque"] });
+  $("#cc_reset").onclick = () => applique({});
 }
 
 /* ---------- Préparation RDV (fiche générée, exportable) ---------- */
