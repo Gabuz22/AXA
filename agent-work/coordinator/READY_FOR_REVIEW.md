@@ -1,6 +1,6 @@
 # Prêt pour examen
 
-_Généré le 2026-07-12T02:30:46Z. Lire CE fichier d'abord ; n'examiner que les éléments ci-dessous._
+_Généré le 2026-07-12T09:40:13Z. Lire CE fichier d'abord ; n'examiner que les éléments ci-dessous._
 
 **Réel en attente : 8.** 8 contrôle(s)/trou(s) déjà transformé(s) en incidents structurés et sourcés : Claude examine les 5 éléments prioritaires (~24 min économisées) au lieu de refaire l'analyse.
 
