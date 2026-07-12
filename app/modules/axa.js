@@ -541,16 +541,49 @@ async function recherche(body) {
   if (carried.length >= 2) { input.value = carried; run(carried); }
 }
 
-/* ---------- Copilote de réponse (Phase 6, SANS IA) ----------
-   Doctrine (mode d'emploi double master) : Pack A = preuve contractuelle (fait foi) ;
-   Pack B = raisonnement (jamais cité seul comme preuve). Le copilote rassemble les deux,
-   sourcés et séparés, et laisse le conseiller formuler — la notice PDF fait toujours foi. */
+/* ---------- Copilote de réponse (SANS IA) — interface de travail GUIDÉE ----------
+   Doctrine inchangée : Pack A = preuve contractuelle (fait foi) ; Pack B = raisonnement
+   (jamais cité seul). Mais au lieu d'une liste brute, le copilote produit un plan de travail :
+   ① ce que j'ai compris → ② base de réponse → ③ preuves PAR CONTRAT (dédupliquées) →
+   ④ pistes hiérarchisées → ⑤ prochaine action → ⑥ questions de suivi. Tout est déterministe. */
 const COPILOTE_EXEMPLES = ["décès accidentel couvert ?", "délai de carence", "rachat possible", "exclusions décès", "invalidité IPT", "bénéficiaire"];
+
+// Type de question détecté par lexique (déterministe, affiché à l'utilisateur).
+const COP_TYPES = [
+  ["exclusion", ["exclu", "exclusion"], "une exclusion"],
+  ["delai", ["delai", "carence", "attente", "franchise"], "un délai / une franchise"],
+  ["plafond", ["plafond", "capital", "montant", "limite"], "un plafond / un montant"],
+  ["rachat", ["rachat", "racheter", "retrait"], "le rachat ou le retrait"],
+  ["fiscalite", ["fiscal", "impot", "succession", "transmission", "abattement"], "la fiscalité"],
+  ["beneficiaire", ["beneficiaire"], "la clause bénéficiaire"],
+  ["definition", ["definition", "signifie", "veut dire"], "une définition"],
+  ["couverture", ["couvert", "couverture", "garanti", "garantie", "prise en charge", "rembourse"], "une couverture / garantie"],
+];
+// Questions de suivi par type (relancent le copilote — jamais une avalanche : 3 max).
+const COP_SUIVI = {
+  couverture: c => [`exclusions ${c}`, `délai de carence ${c}`, `plafond ${c}`],
+  exclusion: c => [`garanties ${c}`, `conditions ${c}`, `délai de carence ${c}`],
+  delai: c => [`exclusions ${c}`, `plafond ${c}`],
+  plafond: c => [`garanties ${c}`, `exclusions ${c}`],
+  rachat: c => [`fiscalité rachat ${c}`, `délais ${c}`],
+  fiscalite: c => [`bénéficiaire ${c}`, `plafond ${c}`],
+  beneficiaire: c => [`fiscalité transmission ${c}`, `garanties ${c}`],
+  definition: c => [`garanties ${c}`, `exclusions ${c}`],
+};
+// Priorité humaine des branches Pack B (nécessaire > utile > secondaire).
+const COP_B_PRIORITE = {
+  regles_transverses_et_garde_fous: ["nécessaire", "garde-fou à respecter avant de répondre"],
+  arbres_decision: ["utile", "pour structurer le raisonnement"],
+  modeles_reponse_par_question: ["utile", "pour formuler la réponse"],
+  raisonnements_complexes: ["utile", "si le cas est complexe"],
+  matrices_croisement_avance: ["secondaire", "croisements avancés"],
+};
+
 async function copilote(body) {
   body.innerHTML = `
-    <p class="lead">Copilote de réponse <b>sans IA</b> : pose une question, il rassemble les
-    <b>preuves contractuelles (Pack A — font foi)</b> et le <b>raisonnement (Pack B — aide à décider, jamais une preuve)</b>,
-    puis te laisse formuler la réponse. <b>La notice PDF fait toujours foi.</b></p>
+    <p class="lead">Pose ta question : le copilote la décode, rassemble les <b>preuves (Pack A — font foi)</b>
+    par contrat, hiérarchise les <b>pistes (Pack B — jamais une preuve)</b> et te propose la suite.
+    <b>Sans IA, tout est sourcé — la notice PDF fait toujours foi.</b></p>
     <div class="view-head" style="margin-top:0">
       <input class="filter" id="cop_q" placeholder="Ex : le décès accidentel est-il couvert par MasterLife ?" aria-label="Question au copilote" autofocus>
     </div>
@@ -560,63 +593,164 @@ async function copilote(body) {
   const res = body.querySelector("#cop_res");
 
   const norm = s => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  const slugc = s => norm(s).replace(/[^a-z0-9]/g, "");
   const highlight = (text, terms) => {
     let out = esc(String(text).slice(0, 320));
     for (const t of terms) { if (t.length < 2) continue; out = out.replace(new RegExp("(" + t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "gi"), "<mark>$1</mark>"); }
     return out;
   };
+  // Le texte des preuves commence souvent par son propre titre ("X — X. …") : on ne l'affiche qu'une fois.
+  const texteSansTitre = (text, label) => {
+    let t = String(text || "").trim(); const L = String(label || "").trim();
+    for (let i = 0; i < 2 && L && norm(t).startsWith(norm(L)); i++) t = t.slice(L.length).replace(/^\s*[—:.\-]\s*/, "");
+    return t.trim() || L;
+  };
 
-  // Brief sourcé, copiable (note de RDV ou base d'un prompt IA) — la doctrine est rappelée en clair.
-  function briefText(q, preuves, reasoning) {
-    const L = ["QUESTION : " + q, "", "PREUVES CONTRACTUELLES (Pack A — à vérifier sur la notice PDF, qui fait foi) :"];
-    if (preuves.length) preuves.forEach(h => L.push(`- [${h.contrat || "—"}] ${(h.label ? h.label + " : " : "")}${h.text}`));
-    else L.push("- (aucune preuve trouvée — ne pas répondre sans vérifier la notice)");
-    L.push("", "RAISONNEMENT (Pack B — aide à la décision, NON contractuel) :");
-    if (reasoning.length) reasoning.forEach(r => L.push(`- [${r.branchLabel}] ${r.text}`));
-    else L.push("- (aucun élément de raisonnement)");
+  const contratsRef = ((await kb.source("contrats_resume_humain"))?.contrats || []).map(c => c.nom);
+
+  // ① Compréhension déterministe de la question : contrats cités + type détecté (montrés à l'utilisateur).
+  function comprendre(q) {
+    const nq = slugc(q);
+    const cites = contratsRef.filter(n => {
+      const s = slugc(n).replace(/assurance(vie|obseques)|garantiedesaccidentsdelavie|plandepargne.*/g, "");
+      return s.length >= 5 && nq.includes(s.slice(0, Math.min(s.length, 9)));
+    });
+    const type = COP_TYPES.find(([, kws]) => kws.some(k => norm(q).includes(k)));
+    return { cites, type: type ? { id: type[0], libelle: type[2] } : null };
+  }
+
+  function briefText(q, comp, groupes, reasoning) {
+    const L = ["QUESTION : " + q,
+               "COMPRIS : " + (comp.type ? comp.type.libelle : "recherche générale") +
+               (comp.cites.length ? " · contrat(s) : " + comp.cites.join(", ") : " · aucun contrat précisé"), "",
+               "PREUVES CONTRACTUELLES (Pack A — à vérifier sur la notice PDF, qui fait foi) :"];
+    for (const g of groupes) for (const h of g.items) L.push(`- [${g.contrat}] ${h.label} : ${texteSansTitre(h.text, h.label)}`);
+    if (!groupes.length) L.push("- (aucune preuve trouvée — ne pas répondre sans vérifier la notice)");
+    L.push("", "PISTES (Pack B — aide à la décision, NON contractuel) :");
+    reasoning.slice(0, 4).forEach(r => L.push(`- [${r.branchLabel}] ${r.text}`));
     L.push("", "RÈGLE : la notice PDF fait foi. Vérifier avant toute réponse au client.");
     return L.join("\n");
   }
 
-  function render(q, preuves, reasoning) {
-    const terms = norm(q).match(/[a-z0-9]{2,}/g) || [];
-    const preuvesHtml = preuves.length ? preuves.map(h => `
-      <article class="card"><div class="card-h"><span class="pill integrated">preuve</span><span class="pill">${esc(h.type)}</span>
-        <strong>${esc(h.label || "(sans titre)")}</strong><span class="muted">${esc(h.contrat || "")}</span></div>
-      <p class="card-b">${highlight(h.text, terms)}</p>
-      <p class="muted"><a href="${h.ref}">→ ouvrir la fiche</a> · <a href="#/pdf">📄 notice (fait foi)</a></p></article>`).join("")
-      : `<div class="card"><p class="warn">⚠ Aucune preuve contractuelle trouvée pour ces mots-clés.
-        Ne réponds pas au client sans vérifier la notice — reformule ta question ou <a href="#/pdf">ouvre le PDF</a>.</p></div>`;
-    const reasoningHtml = reasoning.length ? reasoning.map(r => `
-      <article class="card"><div class="card-h"><span class="pill pending">raisonnement · non contractuel</span>
-        <span class="muted">${esc(r.branchLabel)}</span></div>
-      <p class="card-b">${highlight(r.text, terms)}</p></article>`).join("")
-      : `<p class="muted">Aucun élément de raisonnement Pack B pour cette question.</p>`;
+  // Nom canonique d'un contrat, tolérant aux variantes d'écriture (« EssenCiel » =
+  // « Essen'Ciel (assurance obsèques) ») : clé = slug du nom SANS parenthèses.
+  const cleContrat = n => slugc(String(n || "").replace(/\(.*?\)/g, ""));
+  const refParCle = new Map(contratsRef.map(n => [cleContrat(n), n]));
+  const canonNom = n => refParCle.get(cleContrat(n)) || n;
 
-    res.innerHTML = `
-      <h3 class="day-h">① Preuves contractuelles <span class="pill integrated">Pack A · font foi</span></h3>
-      ${preuvesHtml}
-      <h3 class="day-h">② Raisonnement <span class="pill pending">Pack B · jamais une preuve</span></h3>
-      ${reasoningHtml}
-      <h3 class="day-h">③ Réponse à formuler</h3>
-      <div class="card">
-        <p>Pars des preuves Pack A, <b>vérifie la notice PDF</b> (elle fait foi), puis reformule au client.
-        Le raisonnement Pack B t'aide à structurer mais ne se cite jamais seul.</p>
-        <div class="btns"><button class="btn gold" id="cop_copy">📋 Copier le brief sourcé</button>
-          <a class="btn ghost" href="#/pdf">📄 Ouvrir un PDF</a>
-          <a class="btn ghost" href="#/assistants">📦 Pack de contexte IA</a></div>
-      </div>`;
-    bindCopy(res.querySelector("#cop_copy"), () => briefText(q, preuves, reasoning));
+  // Regroupe les preuves PAR CONTRAT, dédupliquées (même titre + même contrat = 1 seule carte).
+  function grouper(preuves, cites) {
+    const vu = new Set(); const parContrat = new Map();
+    for (const h of preuves) {
+      const c = h.contrat ? canonNom(h.contrat) : "Transverse";
+      const cle = cleContrat(c) + "|" + slugc(h.label || h.text.slice(0, 40));
+      if (vu.has(cle)) continue; vu.add(cle);
+      if (!parContrat.has(c)) parContrat.set(c, []);
+      parContrat.get(c).push(h);
+    }
+    const groupes = [...parContrat.entries()].map(([contrat, items]) => ({
+      contrat, items: items.slice(0, 3), enPlus: Math.max(0, items.length - 3),
+      cite: cites.some(n => slugc(n) === slugc(contrat)),
+      score: Math.max(...items.map(i => i.score || 0)),
+    }));
+    groupes.sort((a, b) => (b.cite - a.cite) || (b.score - a.score));
+    return groupes;
+  }
+
+  function render(q, comp, groupes, reasoning) {
+    const terms = norm(q).match(/[a-z0-9]{2,}/g) || [];
+    const meilleur = groupes[0]?.items[0];
+    const contratPrincipal = comp.cites[0] || groupes[0]?.contrat;
+    const directes = !!(comp.cites.length && groupes[0]?.cite);
+
+    // ① Ce que j'ai compris
+    const h = [`<div class="card cop-compris"><div class="card-h"><span class="pill">① ce que j'ai compris</span></div>
+      <p class="card-b">Tu cherches ${comp.type ? "<b>" + esc(comp.type.libelle) + "</b>" : "une information contractuelle"}
+      ${comp.cites.length ? " sur <b>" + comp.cites.map(esc).join("</b> et <b>") + "</b>."
+                          : ".<br><span class='muted'>Aucun contrat précisé — je regarde les 9. Précise un contrat pour une réponse plus sûre.</span>"}
+      ${comp.cites.length > 1 ? "<br><span class='muted'>Plusieurs contrats cités : pense au comparateur (ci-dessous).</span>" : ""}</p></div>`];
+
+    // ② Base de réponse (jamais une réponse inventée : le meilleur élément sourcé + prudence).
+    // Signal faible = la preuve de tête ne couvre presque aucun mot significatif de la question
+    // (question hors domaine contractuel ou trop large) → prévenir au lieu de faire semblant.
+    const motsClefs = terms.filter(t => t.length >= 4);
+    const meule = meilleur ? norm([meilleur.label, meilleur.text, meilleur.contrat, meilleur.type].join(" ")) : "";
+    const couverture = meilleur && motsClefs.length
+      ? motsClefs.filter(t => meule.includes(t)).length / motsClefs.length : 1;
+    if (meilleur && couverture < 0.4 && !directes) {
+      h.push(`<div class="card"><div class="card-h"><span class="pill pending">② signal faible</span></div>
+        <p class="card-b warn">Ta question ne recoupe presque aucun terme de la base contractuelle —
+        elle est peut-être <b>hors du domaine des contrats</b> ou <b>trop large</b>.</p>
+        <p class="muted">Ce que j'ai de plus proche (à prendre avec prudence) :
+        <b>${esc(meilleur.label || "")}</b> <span class="muted">(${esc(groupes[0].contrat)})</span> —
+        ${highlight(texteSansTitre(meilleur.text, meilleur.label), terms)}</p>
+        <p class="muted">Reformule avec les mots de la notice, précise un contrat, ou vois les
+        <a href="#/sources">sources officielles</a> si c'est réglementaire.</p></div>`);
+    } else if (meilleur) {
+      h.push(`<div class="card cop-base"><div class="card-h"><span class="pill integrated">② base de réponse</span>
+        <span class="pill ${directes ? "integrated" : "pending"}">${directes ? "preuve directe du contrat visé" : "élément le plus proche — à confirmer"}</span></div>
+        <p class="card-b"><b>${esc(meilleur.label || "")}</b> <span class="muted">(${esc(groupes[0].contrat)} · ${esc(meilleur.type)})</span><br>
+        ${highlight(texteSansTitre(meilleur.text, meilleur.label), terms)}</p>
+        <p class="muted">Formule ta réponse à partir de cet élément, après contrôle de la notice (elle fait foi)${directes ? "" :
+          " — et vérifie que le contrat correspond bien à la situation du client"}.</p>
+        <p class="muted"><a href="${meilleur.ref}">→ ouvrir la fiche ${esc(groupes[0].contrat)}</a> · <a href="#/pdf">📄 notice</a></p></div>`);
+    } else {
+      h.push(`<div class="card"><div class="card-h"><span class="pill pending">② pas de preuve trouvée</span></div>
+        <p class="card-b warn">Je n'ai trouvé aucun fait contractuel pour ces mots. <b>Ne réponds pas au client sans vérifier.</b></p>
+        <p class="muted">Essaie : reformuler avec le mot de la notice (ex. « rachat » plutôt que « récupérer l'argent »),
+        préciser le contrat, ou <a href="#/pdf">ouvrir la notice</a> · <a href="#/sources">source officielle</a> si c'est réglementaire.</p></div>`);
+    }
+
+    // ③ Preuves par contrat (dédupliquées, 3 max par contrat, contrat visé ouvert)
+    if (groupes.length) {
+      h.push(`<h3 class="day-h">③ Preuves par contrat <span class="pill integrated">Pack A · font foi</span></h3>`);
+      groupes.slice(0, 5).forEach((g, i) => {
+        h.push(`<details class="acc" ${i === 0 ? "open" : ""}><summary><b>${esc(g.contrat)}</b>
+          <span class="muted">${g.items.length + g.enPlus} preuve(s)${g.cite ? " · contrat cité dans ta question" : ""}</span></summary>
+          ${g.items.map(x => `<article class="card"><div class="card-h"><span class="pill">${esc(x.type)}</span><strong>${esc(x.label || "(sans titre)")}</strong></div>
+            <p class="card-b">${highlight(texteSansTitre(x.text, x.label), terms)}</p>
+            <p class="muted"><a href="${x.ref}">→ fiche</a> · <a href="#/pdf">📄 notice</a></p></article>`).join("")}
+          ${g.enPlus ? `<p class="muted">+ ${g.enPlus} autre(s) — <a href="${g.items[0].ref}">voir la fiche complète</a></p>` : ""}</details>`);
+      });
+    }
+
+    // ④ Pistes hiérarchisées (Pack B) — repliées, jamais un mur
+    if (reasoning.length) {
+      h.push(`<h3 class="day-h">④ Pistes à examiner <span class="pill pending">Pack B · jamais une preuve</span></h3>`);
+      reasoning.slice(0, 4).forEach(r => {
+        const [prio, pourquoi] = COP_B_PRIORITE[r.branch] || ["secondaire", r.branchLabel];
+        h.push(`<details class="acc"><summary><span class="pill ${prio === "nécessaire" ? "integrated" : "pending"}">${prio}</span>
+          <b>${esc(r.label)}</b> <span class="muted">— ${esc(pourquoi)}</span></summary>
+          <p class="card-b">${highlight(r.text, terms)}</p></details>`);
+      });
+    }
+
+    // ⑤ Prochaine action (contextualisée)
+    const deux = groupes.slice(0, 2).map(g => g.contrat);
+    h.push(`<h3 class="day-h">⑤ Prochaine action</h3><div class="card"><div class="btns">
+      ${contratPrincipal ? `<a class="btn gold" href="#/contrat/${slugc(contratPrincipal)}">📑 Ouvrir la fiche ${esc(contratPrincipal)}</a>` : ""}
+      ${deux.length === 2 ? `<a class="btn ghost" href="#/comparateur/${slugc(deux[0])}/${slugc(deux[1])}">⚖ Comparer ${esc(deux[0])} ↔ ${esc(deux[1])}</a>` : ""}
+      <button class="btn ghost" id="cop_copy">📋 Copier le brief sourcé</button>
+      <a class="btn ghost" href="#/assistants">📦 Poser la question à ton IA (pack)</a></div></div>`);
+
+    // ⑥ Questions de suivi (3 max, liées au cas)
+    const suite = (COP_SUIVI[comp.type?.id] || COP_SUIVI.couverture)(contratPrincipal || "").map(s => s.trim());
+    h.push(`<h3 class="day-h">⑥ Questions de suivi</h3><div class="filters">${
+      [...new Set(suite)].slice(0, 3).map(s => `<button class="chip" data-suivi="${esc(s)}">${esc(s)}</button>`).join("")}</div>`);
+
+    res.innerHTML = h.join("");
+    bindCopy(res.querySelector("#cop_copy"), () => briefText(q, comp, groupes, reasoning));
+    res.querySelectorAll("[data-suivi]").forEach(b => b.onclick = () => { input.value = b.dataset.suivi; run(b.dataset.suivi); window.scrollTo(0, 0); });
   }
 
   let t;
   async function run(q) {
     q = (q || "").trim();
     if (q.length < 2) { res.innerHTML = `<p class="muted">Tape une question (≥ 2 caractères) ou choisis un exemple.</p>`; return; }
-    res.innerHTML = `<p class="muted">Recherche dans la base (preuves + raisonnement)…</p>`;
-    // includeMaster:false → searchAll ne remonte que des faits contractuels (Pack A) ; Pack B est traité à part.
+    res.innerHTML = `<p class="muted">Analyse de la question, recherche des preuves et des pistes…</p>`;
+    const comp = comprendre(q);
     const [preuves, reasoning] = await Promise.all([kb.searchAll(q, { includeMaster: false }), kb.reasoningB(q)]);
-    render(q, preuves.slice(0, 12), reasoning);
+    render(q, comp, grouper(preuves.slice(0, 24), comp.cites), reasoning);
   }
   input.addEventListener("input", e => { clearTimeout(t); t = setTimeout(() => run(e.target.value), 250); });
   body.querySelector("#cop_ex").addEventListener("click", e => {
@@ -697,7 +831,7 @@ async function assistant(body) {
 /* ---------- Comparateur (deux contrats côte à côte + tableau global) ---------- */
 const COMPARE_SECTIONS = [["Garanties principales", "garanties_principales"], ["Exclusions importantes", "exclusions_importantes"],
   ["Options", "options"], ["Points de vigilance", "points_de_vigilance"], ["Fiscalité", "fiscalite"]];
-async function comparateur(body, human) {
+async function comparateur(body, human, ctx) {
   const resume = await kb.source("contrats_resume_humain");
   const t = await kb.source("comparatif");
   const contrats = resume?.contrats || [];
@@ -706,6 +840,11 @@ async function comparateur(body, human) {
   const titles = (c, key) => (c[key] || []).map(f => typeof f === "string" ? f : (f.titre && !f.titre.startsWith("_") ? f.titre : "")).filter(Boolean);
   const opt = (sel, c) => `<option value="${esc(c.nom)}" ${sel === c.nom ? "selected" : ""}>${esc(c.nom)}</option>`;
   let a = contrats[0].nom, b = contrats[1] ? contrats[1].nom : contrats[0].nom;
+  // Lien profond #/comparateur/<slugA>/<slugB> : le copilote et les fiches peuvent pré-remplir la comparaison.
+  const slugc = s => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]/g, "");
+  const parSlug = w => (contrats.find(c => slugc(c.nom) === w) || contrats.find(c => slugc(c.nom).startsWith(w)))?.nom;
+  if (ctx?.path?.[0]) a = parSlug(slugc(decodeURIComponent(ctx.path[0]))) || a;
+  if (ctx?.path?.[1]) b = parSlug(slugc(decodeURIComponent(ctx.path[1]))) || b;
 
   function renderCompare() {
     const cA = contrats.find(c => c.nom === a), cB = contrats.find(c => c.nom === b);
