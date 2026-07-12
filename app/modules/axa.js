@@ -1346,7 +1346,7 @@ async function besoins(body) {
       <div class="warnbox">⚖️ Aide au raisonnement (matrice métier IA, étiquetée, à valider) — <b>pas une recommandation</b>.
       Le conseiller décide ; garanties, exclusions et conditions se vérifient dans la fiche et la notice PDF.</div>`;
     bindCopy(out.querySelector("#cc_copy"), synthese, "✓ Synthèse copiée");
-    out.querySelector("#cc_rdv")?.addEventListener("click", () => { set({ axaRdvPrefill: cand1 || exNoms[0] || "" }); location.hash = "#/rdv"; });
+    out.querySelector("#cc_rdv")?.addEventListener("click", () => { set({ axaRdvPrefill: cand1 || exNoms[0] || "", axaRdvCase: synthese() }); location.hash = "#/rdv"; });
     out.querySelector("#cc_cop")?.addEventListener("click", () => { set({ axaQuery: `${court(cand1)} ${shortR(trous[0])} ` }); location.hash = "#/copilote"; });
   }
 
@@ -1375,74 +1375,189 @@ async function besoins(body) {
   $("#cc_reset").onclick = () => applique({});
 }
 
-/* ---------- Préparation RDV (fiche générée, exportable) ---------- */
+/* ---------- Rendez-vous : Avant · Pendant · Après (Chantier 6) ----------
+   La journée réelle du conseiller, en un seul espace :
+   ① AVANT — kit de préparation enrichi du cerveau inspecteur (accroche, questions de la
+     matrice de risques, pièges du contrat, objections), repris du cas client si on en vient.
+   ② PENDANT — accès rapide sans perdre le dossier (nouvel onglet), notes locales, marqueurs
+     « à vérifier / objection / donnée manquante », formulations prudentes.
+   ③ APRÈS — compte-rendu généré depuis les notes, mail client prudent, suites et 2e RDV.
+   Notes en localStorage UNIQUEMENT (ce navigateur) — rien ne part dans le dépôt. */
 async function rdv(body) {
   const resume = await kb.source("contrats_resume_humain");
   const contrats = resume?.contrats || [];
-  body.innerHTML = `
-    <p class="lead"><span class="qbadge q-beta">BÊTA</span> Aide à la préparation de rendez-vous — checklist prudente et sourçable. Aucune donnée client n'est stockée.</p>
-    <div class="card"><h3 style="margin:0 0 8px">Contexte du rendez-vous</h3>
-      <div class="row3">
-        <label>Objectif principal<select id="rv_obj"><option value="">—</option>${OBJECTIFS.map(o => `<option value="${esc(o.famille)}">${esc(o.label)}</option>`).join("")}</select></label>
-        <label>Profil client<input id="rv_profil" placeholder="ex. 40 ans, marié, 2 enfants, salarié"></label>
-        <label>Contrat pressenti<select id="rv_contrat"><option value="">— (optionnel)</option>${contrats.map(c => `<option>${esc(c.nom)}</option>`).join("")}</select></label>
-      </div>
-      <div class="btns"><button class="btn gold" id="rv_go">🗓 Générer la fiche</button></div>
-      <p class="muted" id="rv_ctx" style="display:none"></p></div>
-    <div id="rv_out"></div>`;
-  // Contexte repris de la fiche contrat (bouton « Préparer un rendez-vous ») : contrat pressenti
-  // et objectif pré-remplis — l'utilisateur n'a plus qu'à compléter le profil.
+  const matrice = await inspJson("metier/matrice_risques.json");
+  const RISQUES = Object.values(matrice?.risques || {});
+  const risquesDuContrat = nom => RISQUES.filter(r => (r.contrats || []).some(x => cleNom(x) === cleNom(nom)));
+  const LS_NOTES = "axa_rdv_notes_v1";
+  const lireNotes = () => { try { return localStorage.getItem(LS_NOTES) || ""; } catch { return ""; } };
+  const ecrireNotes = v => { try { localStorage.setItem(LS_NOTES, v); } catch {} };
+
+  // État de l'écran : survit au changement d'onglet (pas au rechargement — sauf les notes).
+  const st = { phase: "avant", obj: "", profil: "", contrat: "", etape: "" };
   const pre = get("axaRdvPrefill");
-  if (pre) {
-    const selC = body.querySelector("#rv_contrat");
-    if ([...selC.options].some(o => o.value === pre)) selC.value = pre;
+  if (pre && contrats.some(c => c.nom === pre)) {
+    st.contrat = pre;
     const cPre = contrats.find(x => x.nom === pre);
-    if (cPre) { const objSel = body.querySelector("#rv_obj"); if ([...objSel.options].some(o => o.value === cPre.famille)) objSel.value = cPre.famille; }
-    const ctxEl = body.querySelector("#rv_ctx");
-    ctxEl.style.display = ""; ctxEl.innerHTML = `Contexte repris de la fiche <b>${esc(pre)}</b> — complète le profil puis génère.`;
-    set({ axaRdvPrefill: null });
+    if (cPre && OBJECTIFS.some(o => o.famille === cPre.famille)) st.obj = cPre.famille;
   }
-  body.querySelector("#rv_go").onclick = () => {
-    const fam = body.querySelector("#rv_obj").value;
-    const profil = body.querySelector("#rv_profil").value.trim();
-    const contratNom = body.querySelector("#rv_contrat").value;
-    const c = contrats.find(x => x.nom === contratNom);
-    const meta = FAMILLE_META[fam];
-    const contratsVerif = contratNom ? [contratNom] : contrats.filter(x => x.famille === fam).map(x => x.nom);
-    const vigilance = c ? (c.points_de_vigilance || []).map(f => f.titre || f.resume_humain || f).filter(x => typeof x === "string" && !x.startsWith("_")).slice(0, 6) : [];
-    const fiche = {
-      titre: `Préparation RDV${profil ? " — " + profil : ""}`,
-      objectifs: ["Comprendre le besoin réel du client", fam ? `Explorer la piste : ${OBJECTIFS.find(o => o.famille === fam)?.label || fam}` : "Qualifier l'objectif"],
-      questions: meta?.questions || ["Situation, objectif, budget, horizon, contrats existants ?"],
-      vigilance: vigilance.length ? vigilance : (meta?.erreurs || []),
-      contrats_verifier: contratsVerif,
-      sources: ["Notice(s) PDF du/des contrat(s) pressenti(s)", "Fiche contrat AXA Conseiller", "Sources officielles pour toute règle publique"],
-      formulations: ["« Sous réserve de vérification au contrat… »", "« La notice précise que… (page X) »", "« Je reviens vers vous après vérification »"],
-      objections: ["« C'est trop cher » → clarifier le besoin et les garanties réellement utiles", "« J'ai déjà un contrat » → comparer sans dénigrer, vérifier les doublons/manques"],
-      etapes: ["Récapituler les besoins validés", "Remettre les documents officiels", "Fixer la prochaine étape"],
-    };
-    const sec = (t, arr) => `<h3 class="day-h">${t}</h3>${bullets(arr)}`;
+  const caseCtx = get("axaRdvCase") || ""; // synthèse du cas client, consommée une fois
+  set({ axaRdvPrefill: null, axaRdvCase: null });
+
+  const FORMULATIONS = ["« Sous réserve de vérification au contrat… »", "« La notice précise que… (page X) »", "« Je reviens vers vous après vérification »"];
+  const OBJECTIONS = ["« C'est trop cher » → clarifier le besoin et les garanties réellement utiles",
+    "« J'ai déjà un contrat » → comparer sans dénigrer, vérifier les doublons et les manques",
+    "« Je vais réfléchir » → identifier la vraie objection, proposer une prochaine étape datée"];
+
+  async function render() {
+    const tabs = `<div class="filters" style="margin-top:0">${[["avant", "① Avant — préparer"], ["pendant", "② Pendant — s'appuyer"], ["apres", "③ Après — conclure"]]
+      .map(([id, l]) => `<button class="chip ${st.phase === id ? "on" : ""}" data-ph="${id}">${l}</button>`).join("")}</div>`;
+    let content = "";
+
+    if (st.phase === "avant") {
+      content = `
+      <div class="card"><h3 style="margin:0 0 8px">Contexte du rendez-vous</h3>
+        <div class="row3">
+          <label>Objectif principal<select id="rv_obj"><option value="">—</option>${OBJECTIFS.map(o => `<option value="${esc(o.famille)}" ${st.obj === o.famille ? "selected" : ""}>${esc(o.label)}</option>`).join("")}</select></label>
+          <label>Profil client<input id="rv_profil" placeholder="ex. 40 ans, marié, 2 enfants, salarié" value="${esc(st.profil)}"></label>
+          <label>Contrat pressenti<select id="rv_contrat"><option value="">— (optionnel)</option>${contrats.map(c => `<option ${st.contrat === c.nom ? "selected" : ""}>${esc(c.nom)}</option>`).join("")}</select></label>
+        </div>
+        <div class="btns"><button class="btn gold" id="rv_go">🗓 Générer le kit de préparation</button>
+          <a class="btn ghost" href="#/besoins">🧩 Partir d'un cas client</a></div>
+        ${caseCtx ? `<details class="acc" style="margin-top:10px" open><summary>🧩 Cas client repris — le diagnostic te suit</summary><pre style="white-space:pre-wrap;font-size:12px;background:var(--surface-2);border-radius:8px;padding:10px;margin:8px 0 0">${esc(caseCtx)}</pre></details>` : ""}
+      </div>
+      <div id="rv_out"></div>`;
+    } else if (st.phase === "pendant") {
+      const ficheHref = st.contrat ? `#/contrat/${cleNom(st.contrat)}` : "#/contrat";
+      content = `
+      <div class="card"><div class="ess-h">Accès rapide — s'ouvre dans un autre onglet, ton dossier reste ici</div>
+        <div class="btns">
+          <a class="btn ghost" href="#/recherche" target="_blank" rel="noopener">🔎 Recherche</a>
+          <a class="btn ghost" href="${ficheHref}" target="_blank" rel="noopener">📑 Fiche ${st.contrat ? esc(court(st.contrat)) : "contrat"}</a>
+          <a class="btn ghost" href="#/comparateur${st.contrat ? "/" + cleNom(st.contrat) : ""}" target="_blank" rel="noopener">⚖ Comparateur</a>
+          <a class="btn ghost" href="#/glossaire" target="_blank" rel="noopener">📖 Glossaire</a>
+          <a class="btn ghost" href="#/pdf" target="_blank" rel="noopener">📄 Notices</a>
+        </div></div>
+      <div class="card"><div class="ess-h">Notes du rendez-vous <span style="text-transform:none;letter-spacing:0">— locales à ce navigateur, jamais dans le dépôt</span></div>
+        <div class="filters" style="margin:6px 0">
+          ${[["À VÉRIFIER", "🔎 à vérifier"], ["OBJECTION", "💬 objection"], ["DONNÉE MANQUANTE", "❓ donnée manquante"], ["ACCORD", "✅ accord"]]
+            .map(([tag, l]) => `<button class="chip" data-tag="${tag}">${l}</button>`).join("")}
+        </div>
+        <textarea id="rv_notes" rows="10" style="width:100%;resize:vertical" placeholder="Note librement. Les boutons ci-dessus insèrent un marqueur — le compte-rendu s'en servira.">${esc(lireNotes())}</textarea>
+        <div class="btns" style="margin-top:8px"><button class="btn ghost" id="rv_ncopy">📋 Copier les notes</button>
+          <button class="btn danger" id="rv_nclear">🗑 Effacer</button></div></div>
+      <div class="card"><div class="ess-h">Formulations prudentes</div>${bullets(FORMULATIONS)}
+        <p class="muted">Aucun chiffre fiscal ou social définitif en séance — « je vérifie et je reviens vers vous ».</p></div>`;
+    } else {
+      const notes = lireNotes();
+      const lignes = notes.split("\n").map(l => l.trim()).filter(Boolean);
+      const verifs = lignes.filter(l => /^— (À VÉRIFIER|DONNÉE MANQUANTE)/.test(l));
+      const accords = lignes.filter(l => /^— ACCORD/.test(l));
+      const libres = lignes.filter(l => !/^— (À VÉRIFIER|DONNÉE MANQUANTE|OBJECTION|ACCORD)/.test(l));
+      const objLabel = OBJECTIFS.find(o => o.famille === st.obj)?.label || "";
+      const cr = ["COMPTE-RENDU DE RENDEZ-VOUS — " + new Date().toLocaleDateString("fr-FR"),
+        "Client : [À COMPLÉTER]" + (st.profil ? " · " + st.profil : ""),
+        (objLabel ? "Objectif : " + objLabel + " · " : "") + (st.contrat ? "Contrat évoqué : " + st.contrat : ""), "",
+        "CE QUI A ÉTÉ DIT / OBSERVÉ :", ...(libres.length ? libres.map(x => "- " + x.replace(/^—\s*/, "")) : ["- [À COMPLÉTER]"]),
+        "", "ACCORDS :", ...(accords.length ? accords.map(x => "- " + x.replace(/^— ACCORD\s*:?\s*/, "")) : ["- [aucun noté]"]),
+        "", "POINTS À VÉRIFIER AVANT TOUTE RÉPONSE :", ...(verifs.length ? verifs.map(x => "- " + x.replace(/^—\s*/, "")) : ["- [aucun noté]"]),
+        "", "PROCHAINE ÉTAPE : " + (st.etape || "[À COMPLÉTER]"),
+        "", "Rappel : aucune réponse engageante sans vérification au contrat / à la notice (elle fait foi)."].join("\n");
+      const mail = ["Objet : Suite à notre rendez-vous", "", "Bonjour [PRÉNOM],", "",
+        "Merci pour notre échange de ce jour" + (objLabel ? " au sujet de : " + objLabel.toLowerCase() : "") + ".",
+        verifs.length ? "Comme convenu, je vérifie les points suivants et je reviens vers vous avant le [DATE] :" : "Comme convenu, je reviens vers vous avant le [DATE].",
+        ...verifs.map(x => "- " + x.replace(/^—\s*(À VÉRIFIER|DONNÉE MANQUANTE)\s*:?\s*/, "")),
+        "", "Les éléments évoqués restent à confirmer au regard des conditions du contrat — la notice d'information fait foi.",
+        "", "Bien cordialement,", "[SIGNATURE]"].join("\n");
+      content = `
+      <div class="card"><div class="ess-h">Compte-rendu — généré depuis tes notes</div>
+        <label style="display:block;margin:6px 0">Prochaine étape convenue<input id="rv_etape" placeholder="ex. second RDV le 20/07 pour présenter la proposition" value="${esc(st.etape)}" style="width:100%"></label>
+        <pre id="rv_cr" style="white-space:pre-wrap;font-size:12.5px;background:var(--surface-2);border-radius:8px;padding:12px">${esc(cr)}</pre>
+        <div class="btns"><button class="btn gold" id="rv_crcopy">📋 Copier le compte-rendu</button></div></div>
+      <div class="card"><div class="ess-h">Mail client — trame prudente à adapter</div>
+        <pre style="white-space:pre-wrap;font-size:12.5px;background:var(--surface-2);border-radius:8px;padding:12px">${esc(mail)}</pre>
+        <div class="btns"><button class="btn ghost" id="rv_mailcopy">📋 Copier le mail</button></div></div>
+      <div class="card"><div class="ess-h">Et ensuite</div>
+        <div class="btns">
+          <button class="btn ghost" id="rv_rdv2">🗓 Préparer le 2ᵉ rendez-vous</button>
+          <a class="btn ghost" href="#/besoins">🧩 Compléter le cas client</a>
+          ${st.contrat ? `<a class="btn ghost" href="#/contrat/${cleNom(st.contrat)}">📑 Revoir la fiche ${esc(court(st.contrat))}</a>` : ""}
+        </div>
+        <p class="muted" style="margin-top:8px">Après envoi du compte-rendu : penser à effacer les notes locales (onglet « Pendant »).</p></div>`;
+    }
+
+    body.innerHTML = `
+      <p class="lead"><span class="qbadge q-beta">BÊTA</span> Le rendez-vous en trois temps : <b>préparer</b>, <b>s'appuyer en séance</b>, <b>conclure</b>.
+      Aucune donnée client ne quitte ce navigateur.</p>
+      ${tabs}${content}`;
+    body.querySelectorAll("[data-ph]").forEach(bt => bt.onclick = () => { st.phase = bt.dataset.ph; render(); });
+
+    if (st.phase === "avant") {
+      body.querySelector("#rv_obj").onchange = e => { st.obj = e.target.value; };
+      body.querySelector("#rv_profil").oninput = e => { st.profil = e.target.value; };
+      body.querySelector("#rv_contrat").onchange = e => { st.contrat = e.target.value; };
+      body.querySelector("#rv_go").onclick = async () => { await kitAvant(); };
+      if (st.contrat || st.obj || caseCtx) await kitAvant(); // contexte déjà connu → le kit sort tout de suite
+    } else if (st.phase === "pendant") {
+      const ta = body.querySelector("#rv_notes");
+      ta.addEventListener("input", () => ecrireNotes(ta.value));
+      body.querySelectorAll("[data-tag]").forEach(bt => bt.onclick = () => {
+        ta.value = (ta.value ? ta.value.replace(/\n?$/, "\n") : "") + "— " + bt.dataset.tag + " : ";
+        ecrireNotes(ta.value); ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length);
+      });
+      bindCopy(body.querySelector("#rv_ncopy"), () => ta.value, "✓ Notes copiées");
+      body.querySelector("#rv_nclear").onclick = () => { if (ta.value && !confirm("Effacer toutes les notes locales ?")) return; ta.value = ""; ecrireNotes(""); };
+    } else {
+      body.querySelector("#rv_etape").oninput = e => { st.etape = e.target.value; };
+      body.querySelector("#rv_etape").onchange = () => render();
+      bindCopy(body.querySelector("#rv_crcopy"), () => body.querySelector("#rv_cr").textContent, "✓ Compte-rendu copié");
+      bindCopy(body.querySelector("#rv_mailcopy"), () => body.querySelectorAll("pre")[1].textContent, "✓ Mail copié");
+      body.querySelector("#rv_rdv2").onclick = () => { st.phase = "avant"; st.profil = (st.profil ? st.profil + " · " : "") + "2ᵉ rendez-vous"; render(); };
+    }
+  }
+
+  // Kit de préparation : méthodo famille + cerveau inspecteur du contrat pressenti (étiqueté).
+  async function kitAvant() {
+    const c = contrats.find(x => x.nom === st.contrat);
+    const insp = c ? await inspFiche(c.nom) : null;
+    const meta = FAMILLE_META[st.obj];
+    const rqs = c ? risquesDuContrat(c.nom) : [];
+    const questions = [...new Set([...rqs.flatMap(r => r.questions || []), ...((meta?.questions) || [])])].slice(0, 6);
+    const vigilance = c ? (c.points_de_vigilance || []).map(f => f.titre || f.resume_humain || f).filter(x => typeof x === "string" && !x.startsWith("_")).slice(0, 5) : (meta?.erreurs || []);
+    const accroche = iaTxt(insp?.finalite), favorable = iaTxt(insp?.situations_favorables), defavorable = iaTxt(insp?.situations_defavorables);
+    const contratsVerif = st.contrat ? [st.contrat] : contrats.filter(x => x.famille === st.obj).map(x => x.nom);
+    const objLabel = st.obj ? (OBJECTIFS.find(o => o.famille === st.obj)?.label || st.obj) : "";
+    const sec = (t, arr) => arr.length ? `<h3 class="day-h">${t}</h3>${bullets(arr)}` : "";
     body.querySelector("#rv_out").innerHTML = `
-      <div class="card" id="rv_card"><div class="card-h"><strong>${esc(fiche.titre)}</strong>
+      <div class="card" id="rv_card"><div class="card-h"><strong>Kit de préparation${st.profil ? " — " + esc(st.profil) : ""}</strong>
         <button class="btn ghost" id="rv_copy" style="min-height:30px;padding:0 10px">📋 Copier</button>
         ${printBtnHtml("rv_print")}</div>
-      ${sec("🎯 Objectifs du RDV", fiche.objectifs)}
-      ${sec("❓ Questions à poser", fiche.questions)}
-      ${sec("⚠ Points de vigilance", fiche.vigilance)}
-      ${sec("📑 Contrats à vérifier", fiche.contrats_verifier)}
-      ${sec("📚 Sources à ouvrir", fiche.sources)}
-      ${sec("🗣 Formulations prudentes", fiche.formulations)}
-      ${sec("💬 Objections possibles — exemples à adapter", fiche.objections)}
-      ${sec("➡ Prochaines étapes — trame type", fiche.etapes)}
-      <div class="warnbox">⚖️ Fiche d'aide à la préparation. La réponse client s'appuie sur le contrat / la notice PDF / une source officielle. Aucun conseil définitif automatisé.</div></div>`;
-    const asText = [fiche.titre, "", "OBJECTIFS", ...fiche.objectifs.map(x => "- " + x), "", "QUESTIONS", ...fiche.questions.map(x => "- " + x),
-      "", "VIGILANCE", ...fiche.vigilance.map(x => "- " + x), "", "CONTRATS À VÉRIFIER", ...fiche.contrats_verifier.map(x => "- " + x),
-      "", "SOURCES", ...fiche.sources.map(x => "- " + x), "", "FORMULATIONS", ...fiche.formulations.map(x => "- " + x),
-      "", "OBJECTIONS", ...fiche.objections.map(x => "- " + x), "", "ÉTAPES", ...fiche.etapes.map(x => "- " + x),
-      "", "Rappel : la notice PDF fait foi ; aucun conseil définitif automatisé."].join("\n");
-    bindCopy(body.querySelector("#rv_copy"), () => asText);
+      ${c && accroche ? `<h3 class="day-h">🎯 L'accroche — pourquoi ce contrat existe ${IA_TAG}</h3><p class="card-b">${esc(accroche)}</p>` : ""}
+      ${sec("🧭 Objectifs du RDV", ["Comprendre le besoin réel et les couvertures déjà en place", objLabel ? `Explorer la piste : ${objLabel}` : "Qualifier l'objectif", "Repartir avec une prochaine étape datée"])}
+      ${sec("❓ Questions de découverte", questions.length ? questions : ["Situation, objectif, budget, horizon, contrats existants ?"])}
+      ${c && favorable ? `<h3 class="day-h">✓ Ce contrat est pertinent quand ${IA_TAG}</h3><p class="card-b">${esc(favorable)}</p>` : ""}
+      ${c && defavorable ? `<h3 class="day-h">⚠ Il l'est moins quand ${IA_TAG}</h3><p class="card-b">${esc(defavorable)}</p>` : ""}
+      ${sec("🚨 Pièges à ne pas rater", vigilance)}
+      ${sec("💬 Objections probables — exemples à adapter", OBJECTIONS)}
+      ${sec("📑 Contrats à vérifier avant le RDV", contratsVerif)}
+      ${sec("🗣 Formulations prudentes", FORMULATIONS)}
+      <div class="warnbox">⚖️ Kit d'aide à la préparation — les blocs « analyse IA » sont à valider, jamais une preuve.
+      La réponse client s'appuie sur le contrat / la notice PDF / une source officielle.</div>
+      <div class="btns" style="padding:0 18px 14px"><button class="btn" id="rv_allerpendant">▶ Passer en mode rendez-vous (pendant)</button></div></div>`;
+    const asText = ["KIT DE PRÉPARATION" + (st.profil ? " — " + st.profil : ""), ""];
+    if (caseCtx) asText.push("CAS CLIENT :", caseCtx, "");
+    if (accroche) asText.push("ACCROCHE (analyse IA, à valider) : " + accroche, "");
+    asText.push("QUESTIONS DE DÉCOUVERTE :", ...questions.map(x => "- " + x), "");
+    if (favorable) asText.push("PERTINENT QUAND (IA, à valider) : " + favorable, "");
+    if (vigilance.length) asText.push("PIÈGES :", ...vigilance.map(x => "- " + x), "");
+    asText.push("OBJECTIONS :", ...OBJECTIONS.map(x => "- " + x), "", "CONTRATS À VÉRIFIER :", ...contratsVerif.map(x => "- " + x),
+      "", "Rappel : la notice PDF fait foi ; aucun conseil définitif automatisé ; analyses IA à valider.");
+    bindCopy(body.querySelector("#rv_copy"), () => asText.join("\n"), "✓ Kit copié");
     body.querySelector("#rv_print").onclick = () => printTarget(body.querySelector("#rv_card"));
-  };
+    body.querySelector("#rv_allerpendant").onclick = () => { st.phase = "pendant"; render(); };
+  }
+
+  await render();
 }
 
 /* ---------- Mode animateur commercial ---------- */
