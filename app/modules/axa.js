@@ -45,7 +45,7 @@ export async function mount(el, ctx) {
   el.innerHTML = `<div class="view-body">Chargement…</div>`;
   const body = el.querySelector(".view-body");
   const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistant, assistants, confiance, comparateur, besoins, rdv, animateur, formulaires, sources, pdf, historique, parametres }[section] || accueil;
-  try { await render(body, human); }
+  try { await render(body, human, ctx); }
   catch (e) { body.innerHTML = `<p class="warn">Erreur de la section (${esc(e.message)}).</p>`; }
 }
 
@@ -327,13 +327,17 @@ async function tester(body) {
 }
 
 /* ---------- Fiche contrat (écran métier conseiller) ---------- */
-async function contrat(body, human) {
+async function contrat(body, human, ctx) {
   const resume = await kb.source("contrats_resume_humain");
   const contrats = resume?.contrats || [];
   if (!contrats.length) { body.innerHTML = `<p class="warn">Résumé humain des contrats indisponible (voir manifeste).</p>`; return; }
   if (!human) { body.innerHTML = `<pre>${esc(JSON.stringify(resume, null, 2).slice(0, 200000))}</pre>`; return; }
   const familles = [...new Set(contrats.map(c => c.famille).filter(Boolean))].sort();
   let fam = "all", selected = null; // selected = nom du contrat ouvert (null = sélecteur)
+  // Lien profond #/contrat/<slug> : la recherche et le copilote ouvrent DIRECTEMENT la bonne fiche.
+  const slugc = s => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]/g, "");
+  const want = ctx?.path?.[0] ? slugc(decodeURIComponent(ctx.path[0])) : null;
+  if (want) selected = (contrats.find(c => slugc(c.nom) === want) || contrats.find(c => slugc(c.nom).startsWith(want)))?.nom || null;
   // Carte filename → URL de notice (quick win 3 : lien fait → notice à la bonne page).
   const pdfIdx = await kb.source("pdf_index");
   const pdfByName = new Map();

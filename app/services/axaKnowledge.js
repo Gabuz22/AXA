@@ -61,23 +61,27 @@ export function pdfUrl(path) {
 }
 
 /* ---------- Recherche globale (sources légères, générique par rôle) ---------- */
+// Lien profond vers LA fiche du contrat concerné (l'app autonome route sur #/contrat/<slug> —
+// l'ancien "#/axa/contrat" venait du fork Gabriel Virtuel et renvoyait à l'accueil).
+const _slug = s => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]/g, "");
+const ficheRef = nom => "#/contrat/" + _slug(nom);
 // Chaque extracteur transforme une source en éléments cherchables {type, label, text, contrat, ref}.
 const SEARCH_EXTRACTORS = {
   contrats_resume_humain: d => (d?.contrats || []).flatMap(c => [
-    { type: "contrat", label: c.nom, text: [c.nom, c.famille, c.resume_neutre].join(" "), contrat: c.nom, ref: "#/axa/contrat" },
+    { type: "contrat", label: c.nom, text: [c.nom, c.famille, c.resume_neutre].join(" "), contrat: c.nom, ref: ficheRef(c.nom) },
     ...["garanties_principales", "exclusions_importantes", "options", "points_de_vigilance", "cotisations_prix", "fiscalite", "delais_franchises"].flatMap(k =>
-      (c[k] || []).map(f => ({ type: k.replace(/_/g, " "), label: f.titre || "", text: [f.titre, f.resume_humain].filter(Boolean).join(" — "), contrat: c.nom, ref: "#/axa/contrat" }))),
+      (c[k] || []).map(f => ({ type: k.replace(/_/g, " "), label: f.titre || "", text: [f.titre, f.resume_humain].filter(Boolean).join(" — "), contrat: c.nom, ref: ficheRef(c.nom) }))),
   ]),
-  formules: d => (d?.formules || []).map(f => ({ type: "formule", label: f.nom, text: [f.nom, f.usage, f.formule, f.description].filter(Boolean).join(" — "), contrat: f.contrat, ref: "#/axa/sources" })),
-  pdf_index: d => (d?.pdfs || []).map(p => ({ type: "pdf", label: p.nom_fichier, text: [p.nom_contrat, p.type_document, p.nom_fichier].join(" "), contrat: p.nom_contrat, ref: "#/axa/pdf" })),
-  contrats_index: d => (d?.contrats || []).map(c => ({ type: "contrat (JSON enrichi)", label: c.nom, text: [c.nom, c.famille, c.slug].join(" "), contrat: c.nom, ref: "#/axa/contrat" })),
+  formules: d => (d?.formules || []).map(f => ({ type: "formule", label: f.nom, text: [f.nom, f.usage, f.formule, f.description].filter(Boolean).join(" — "), contrat: f.contrat, ref: "#/sources" })),
+  pdf_index: d => (d?.pdfs || []).map(p => ({ type: "pdf", label: p.nom_fichier, text: [p.nom_contrat, p.type_document, p.nom_fichier].join(" "), contrat: p.nom_contrat, ref: "#/pdf" })),
+  contrats_index: d => (d?.contrats || []).map(c => ({ type: "contrat (JSON enrichi)", label: c.nom, text: [c.nom, c.famille, c.slug].join(" "), contrat: c.nom, ref: ficheRef(c.nom) })),
   // Évolution ① : la couche dérivée de Pack A (définitions, conditions de souscription,
   // déclencheurs/plafonds/franchises) devient cherchable — jusqu'ici invisible pour la recherche.
   fiches_conseiller: d => (d?.contrats || []).flatMap(c => [
-    ...(c.definitions || []).map(x => ({ type: "définition", label: x.terme, text: [x.terme, x.definition].filter(Boolean).join(" — "), contrat: c.nom, ref: "#/axa/contrat" })),
-    ...(c.conditions_souscription || []).map(x => ({ type: "condition de souscription", label: c.nom, text: x.texte || "", contrat: c.nom, ref: "#/axa/contrat" })),
+    ...(c.definitions || []).map(x => ({ type: "définition", label: x.terme, text: [x.terme, x.definition].filter(Boolean).join(" — "), contrat: c.nom, ref: ficheRef(c.nom) })),
+    ...(c.conditions_souscription || []).map(x => ({ type: "condition de souscription", label: c.nom, text: x.texte || "", contrat: c.nom, ref: ficheRef(c.nom) })),
     ...(c.faits || []).filter(f => f.declencheurs.length || f.plafonds.length || f.franchises.length || f.description)
-      .map(f => ({ type: f.categorie, label: f.titre, contrat: c.nom, ref: "#/axa/contrat",
+      .map(f => ({ type: f.categorie, label: f.titre, contrat: c.nom, ref: ficheRef(c.nom),
         text: [f.titre, f.description, ...(f.declencheurs || []), ...(f.plafonds || []), ...(f.franchises || [])].filter(Boolean).join(" — ") })),
   ]),
 };
@@ -89,7 +93,7 @@ function walkMaster(d) {
   const walk = (v, trail) => {
     if (n > 4000 || v == null) return;
     if (typeof v === "string") {
-      if (v.length > 25) { out.push({ type: "master A · " + trail[0].replace(/_/g, " "), label: trail.slice(-1)[0].replace(/_/g, " "), text: v, contrat: "", ref: "#/axa/sources" }); n++; }
+      if (v.length > 25) { out.push({ type: "master A · " + trail[0].replace(/_/g, " "), label: trail.slice(-1)[0].replace(/_/g, " "), text: v, contrat: "", ref: "#/sources" }); n++; }
       return;
     }
     if (Array.isArray(v)) { v.forEach(x => walk(x, trail)); return; }
