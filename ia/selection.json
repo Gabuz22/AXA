@@ -1,0 +1,50 @@
+{
+ "regle": "charger d'abord instructions-maitres ; puis les pages du type de question ; citer contrat + notice + page ; signaler les absences au lieu d'inventer",
+ "questions": {
+  "garantie_couverte_ou_pas": [
+   "instructions-maitres",
+   "routage",
+   "garanties",
+   "exclusions",
+   "contrats"
+  ],
+  "comparer_des_contrats": [
+   "comparateur",
+   "matrices",
+   "contrats"
+  ],
+  "definition_d_un_terme": [
+   "glossaire",
+   "definitions"
+  ],
+  "delais_franchises_plafonds": [
+   "delais",
+   "franchises",
+   "plafonds"
+  ],
+  "cotisations_et_fiscalite": [
+   "cotisations",
+   "fiscalite"
+  ],
+  "preuve_et_citation": [
+   "preuves",
+   "notices",
+   "sources"
+  ],
+  "question_complexe_multi_contrats": [
+   "methode-question-complexe",
+   "planificateur",
+   "routage"
+  ],
+  "reglementaire_vs_contractuel": [
+   "reglementation",
+   "sources-officielles",
+   "hierarchie"
+  ],
+  "etat_et_limites_de_la_base": [
+   "couverture",
+   "maturite",
+   "qualite-routage"
+  ]
+ }
+}

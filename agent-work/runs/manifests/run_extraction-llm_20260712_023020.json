@@ -1,0 +1,23 @@
+{
+  "run_id": "run_extraction-llm_20260712_023020",
+  "agent_id": "extraction-llm",
+  "started_at": "2026-07-12T02:30:20Z",
+  "finished_at": "2026-07-12T02:30:21Z",
+  "dry_run": true,
+  "status": "ok",
+  "task_id": "task_extraction_llm_micro_zones",
+  "provider_used": "gemini",
+  "model_used": "gemini-3.1-flash-lite",
+  "counters": {
+    "llm_calls": 1,
+    "tokens_in_est": 120,
+    "tokens_out_est": 40,
+    "proposals_generated": 1,
+    "proposals_written": 1,
+    "proposals_deduplicated": 0,
+    "proposals_rejected_auto": 0
+  },
+  "notes": [
+    "extraction-llm: 1 retenue(s)/1 produite(s), 1 zone(s), rentab=1.00"
+  ]
+}

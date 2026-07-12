@@ -580,6 +580,28 @@ def build_static_pages(theme_counts):
                         "citation": "[Notice : <fichier>, p.<page>]"},
         "sitemap": SITE + "/ia/sitemap-ia.xml", "coverage": SITE + "/ia/couverture.html",
     }
+    # Outil de SÉLECTION DE CONTEXTE (rétroporté de Gabriel Virtuel /vue-ia/privee/) :
+    # selon le type de question, l'IA sait quelles pages charger — au lieu de tout lire.
+    selection = {
+        "regle": "charger d'abord instructions-maitres ; puis les pages du type de question ; "
+                 "citer contrat + notice + page ; signaler les absences au lieu d'inventer",
+        "questions": {
+            "garantie_couverte_ou_pas": ["instructions-maitres", "routage", "garanties", "exclusions", "contrats"],
+            "comparer_des_contrats": ["comparateur", "matrices", "contrats"],
+            "definition_d_un_terme": ["glossaire", "definitions"],
+            "delais_franchises_plafonds": ["delais", "franchises", "plafonds"],
+            "cotisations_et_fiscalite": ["cotisations", "fiscalite"],
+            "preuve_et_citation": ["preuves", "notices", "sources"],
+            "question_complexe_multi_contrats": ["methode-question-complexe", "planificateur", "routage"],
+            "reglementaire_vs_contractuel": ["reglementation", "sources-officielles", "hierarchie"],
+            "etat_et_limites_de_la_base": ["couverture", "maturite", "qualite-routage"],
+        },
+    }
+    for _mods in selection["questions"].values():
+        for _m in _mods:
+            assert _m in pages, "selection vers page inconnue : %s" % _m
+    manifest["selection"] = SITE + "/ia/selection.json"
+    write("selection.json", json.dumps(selection, ensure_ascii=False, indent=1))
     write("ai-manifest.json", json.dumps(manifest, ensure_ascii=False, indent=1))
     man_md = md_hdr("Manifeste IA", "Comment la base est organisée, quelles pages existent, comment citer, quelle hiérarchie suivre, quelle page fait autorité.") + """
 ## Organisation
