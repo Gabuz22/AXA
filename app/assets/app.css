@@ -324,9 +324,27 @@ li.diff{color:var(--gold)}
 /* Badge source — visible et actionnable */
 .fsrc{display:inline-flex;align-items:center;gap:4px;margin-top:9px;font-family:var(--mono);font-size:11px;font-weight:600;color:var(--accent);background:var(--accent-wash);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:6px;padding:2px 8px;text-decoration:none;white-space:nowrap}
 .fsrc:hover{background:color-mix(in srgb,var(--accent) 22%,transparent);text-decoration:none}
+/* Espace de travail (chantier 3) : hiérarchie progressive + blocs « essentiel » */
+.fiche-niv{display:flex;align-items:baseline;gap:9px;margin:18px 18px 8px;font-weight:620;font-size:14.5px;letter-spacing:-.01em}
+.niv-n{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;flex:none;align-self:center}
+.niv-s{font-size:12px;color:var(--muted);font-weight:400}
+.ess-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:8px;margin:0 18px}
+.ess-b{border:1px solid var(--line);border-radius:10px;background:var(--surface-2);padding:11px 13px;min-width:0}
+.ess-b.ess-wide{grid-column:1/-1}
+.ess-b.t-okb{border-left:3px solid var(--ok)}
+.ess-b.t-warnb{border-left:3px solid var(--warn)}
+.ess-h{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ess-p{font-size:13.5px;line-height:1.55;margin:0}
+.ess-b .hlist{margin:0}
+.ess-b .fiche-chips{margin:0}
+.ess-more{margin:7px 0 0;font-size:12.5px}
+.ess-statut{margin:10px 18px 0;font-size:12.5px;color:var(--muted)}
+.fiche-work{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px;margin:0 18px}
+.fiche-work .btns{margin:0}
+.fsec-why{font-size:12.5px;color:var(--muted);margin:0;font-style:italic}
 @media(max-width:640px){
   .main{padding:16px 14px}
-  .fiche-head,.fiche-assureur,.fiche .warnbox,.fiche-retenir,.fsec,.fiche-sep,.fiche-foot{margin-left:10px;margin-right:10px}
+  .fiche-head,.fiche-assureur,.fiche .warnbox,.fiche-retenir,.fsec,.fiche-sep,.fiche-foot,.fiche-niv,.ess-grid,.ess-statut,.fiche-work{margin-left:10px;margin-right:10px}
   .fiche-head{padding-left:12px;padding-right:12px}
 }
 
