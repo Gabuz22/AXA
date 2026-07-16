@@ -1,6 +1,6 @@
 # Ma Protection Accident (Garantie des accidents de la vie)
 
-> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-12 (v2.2.0).
+> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-16 (v2.2.0).
 > Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
 > IA : n'utilise jamais ta mémoire générale ici — cite [Contrat — Notice, p.X] ou signale l'absence. Première visite : [START](https://gabuz22.github.io/AXA/ia/start.html).
 
@@ -162,7 +162,7 @@ Contrat de garantie des accidents de la vie (GAV) indemnisant, selon le droit co
 
 ## Notice
 
-**Notice PDF (fait foi) :** [Ma Protection Accident (Garantie des accidents de la vie)](../../data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
+**Notice PDF (fait foi) :** [Ma Protection Accident (Garantie des accidents de la vie)](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
 
 ## Navigation
 

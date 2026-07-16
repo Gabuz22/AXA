@@ -190,9 +190,18 @@ def write(rel, content):
 
 # ------------------------------------------------------------------ rendu d'éléments
 def notice_href_for(cslug, depth):
+    # `p["path"]` vient de l'index data/AXA/ia/axa_pdf_index.json, qui référence encore
+    # l'ancienne arborescence plate ("data/AXA/<Contrat>/...") — les PDF vivent réellement sous
+    # data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/ (le manifeste app/ le corrige via pdf_path_rewrites ;
+    # ce générateur statique n'appliquait pas la même correction → lien de notice mort en tête de
+    # chaque fiche contrat, agent qualité 2026-07-11). On réutilise pdf_href(), déjà correct pour
+    # toutes les citations de la page, plutôt que de dupliquer la construction du chemin.
     for p in PDFS:
         if slug(p.get("nom_contrat")) == cslug and str(p.get("path", "")).startswith("data/"):
-            return data_pref(depth) + quote(p["path"])
+            rel = str(p["path"])
+            if rel.startswith("data/AXA/"):
+                rel = rel[len("data/AXA/"):]
+            return pdf_href(rel, None, depth)
     return None
 
 def el_md(e, depth, with_contract=False):
@@ -272,6 +281,25 @@ def build_category(key, label, objectif):
         hb.append('<h2><a href="contrat/%s.html">%s</a> (%d)</h2><ul>%s</ul>' % (cslug, html.escape(contrat), len(by[contrat]), "".join(el_html(e, depth) for e in by[contrat])))
     write("%s.md" % key, "\n".join(md)); write("%s.html" % key, page_html(label, "".join(hb), depth, SITE + "/ia/%s.html" % key))
 
+def _glossaire_contrat_slug(nom):
+    # Le glossaire (data/AXA/derived/fiches_conseiller.json) référence des noms de contrat COURTS
+    # ("EssenCiel", "Ma Protection Accident"…), différents des noms canoniques longs utilisés pour
+    # nommer les pages contrat/*.html (issus de CONTRATS/CONTRACT_META) — 19 liens cassés détectés
+    # par l'agent qualité (agent-work/quality, 2026-07-11). Résolution avant repli sur le slug brut :
+    # 1) correspondance exacte, 2) cas ambigu Essen'Ciel (deux contrats) — même défaut « obsèques »
+    # que detect_contracts() plus bas, 3) préfixe (même tolérance que find_derived() plus haut).
+    ns = slug(nom)
+    for cm in CONTRACT_META:
+        if cm["slug"] == ns:
+            return cm["slug"]
+    nn = norm(nom)
+    if "essen ciel" in nn or "essenciel" in nn:
+        return "essen-ciel-patrimoine" if "patrimoine" in nn else "essen-ciel-assurance-obseques"
+    for cm in CONTRACT_META:
+        if cm["slug"].startswith(ns) or ns.startswith(cm["slug"]):
+            return cm["slug"]
+    return ns  # repli : comportement antérieur, jamais pire qu'avant
+
 def build_glossaire():
     depth = 0
     md = [md_hdr("Glossaire complet (%d termes)" % len(GLOSSAIRE), "Tous les termes définis dans les notices AXA, regroupés et sourcés.")]
@@ -282,7 +310,7 @@ def build_glossaire():
         hb.append('<h2 id="%s">%s</h2><ul>' % (html.escape(gid), html.escape(g.get("terme", ""))))
         for e in (g.get("entrees") or []):
             md.append("- **%s** : %s%s" % (e.get("contrat", ""), e.get("definition", ""), cite_md(e.get("source"), depth)))
-            hb.append('<li><a href="contrat/%s.html">%s</a> : %s%s</li>' % (slug(e.get("contrat")), html.escape(e.get("contrat", "")), html.escape(e.get("definition", "")), cite_html(e.get("source"), depth)))
+            hb.append('<li><a href="contrat/%s.html">%s</a> : %s%s</li>' % (_glossaire_contrat_slug(e.get("contrat")), html.escape(e.get("contrat", "")), html.escape(e.get("definition", "")), cite_html(e.get("source"), depth)))
         md.append(""); hb.append("</ul>")
     write("glossaire.md", "\n".join(md)); write("glossaire.html", page_html("Glossaire", "".join(hb), depth, SITE + "/ia/glossaire.html"))
 
@@ -291,7 +319,10 @@ def build_notices():
     md = [md_hdr("Notices contractuelles (%d)" % len(PDFS), "Toutes les notices PDF — la source qui fait foi.")]
     hb = ['<h1>Notices contractuelles (%d)</h1><p>Documents qui font foi.</p><ul>' % len(PDFS)]
     for p in PDFS:
-        u = data_pref(depth) + quote(p["path"]) if str(p.get("path", "")).startswith("data/") else None
+        # Même correction que notice_href_for() : l'index référence l'ancienne arborescence plate.
+        rel = str(p.get("path", ""))
+        if rel.startswith("data/AXA/"): rel = rel[len("data/AXA/"):]
+        u = pdf_href(rel, None, depth) if str(p.get("path", "")).startswith("data/") else None
         nom = p.get("nom_contrat") or ""; fich = p.get("nom_fichier") or str(p.get("path", "")).split("/")[-1]
         pages = (" · %s p." % p["pages"]) if p.get("pages") else ""
         md.append("- **%s** — %s%s%s" % (nom, fich, pages, (" [ouvrir](%s)" % u) if u else ""))

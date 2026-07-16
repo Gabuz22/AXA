@@ -1,410 +1,402 @@
 {
-  "name": "Gabriel AXA — Vue IA",
-  "version": "2.2.0",
-  "generated": "2026-07-12",
-  "base_url": "https://gabuz22.github.io/AXA/ia/",
-  "authority": "La notice PDF fait foi. Ordre : notice PDF > Pack A > glossaire > Pack B.",
-  "organisation": "Projection statique des JSON (source de vérité). Une page par contrat, une page par catégorie (garanties, exclusions, définitions, conditions, déclencheurs, plafonds, franchises…), des vues thématiques transversales, glossaire, notices, sources. Rien n'est dupliqué manuellement.",
-  "how_to_cite": "[Notice : <fichier>, p.<page>](<url PDF>). Chaque élément a un id stable réutilisable (#<id>).",
-  "hierarchy": [
-    "index",
-    "contrat|categorie|theme",
-    "element (#id)",
-    "notice",
-    "page PDF (#page=)"
+ "name": "Gabriel AXA — Vue IA",
+ "version": "2.2.0",
+ "generated": "2026-07-16",
+ "base_url": "https://gabuz22.github.io/AXA/ia/",
+ "authority": "La notice PDF fait foi. Ordre : notice PDF > Pack A > glossaire > Pack B.",
+ "organisation": "Projection statique des JSON (source de vérité). Une page par contrat, une page par catégorie (garanties, exclusions, définitions, conditions, déclencheurs, plafonds, franchises…), des vues thématiques transversales, glossaire, notices, sources. Rien n'est dupliqué manuellement.",
+ "how_to_cite": "[Notice : <fichier>, p.<page>](<url PDF>). Chaque élément a un id stable réutilisable (#<id>).",
+ "hierarchy": [
+  "index",
+  "contrat|categorie|theme",
+  "element (#id)",
+  "notice",
+  "page PDF (#page=)"
+ ],
+ "rules": [
+  "Pack A = preuve",
+  "Pack B = raisonnement (jamais une preuve seule)",
+  "Toujours citer la source",
+  "Ne jamais inventer ; signaler l'absence",
+  "La notice PDF fait foi"
+ ],
+ "data_origin": "Documents publics (notices / CG AXA). Aucune donnée client. Couches dérivées ; masters non modifiés.",
+ "entry_point": "https://gabuz22.github.io/AXA/ia/start.html",
+ "ai_protocol": "Toute IA : 1) première visite : lire /ia/start.html (initialisation en une lecture : protocole, carte, exemples, auto-test) ; 2) appliquer /ia/instructions-maitres.html (classer la question, utiliser les outils, citer contrat+notice+page, distinguer contractuel/réglementaire, signaler les absences) ; 3) répondre. Jamais de fait contractuel ni de chiffre réglementaire de mémoire.",
+ "ai_onboarding": {
+  "start": "https://gabuz22.github.io/AXA/ia/start.html",
+  "etapes": [
+   "oublier sa mémoire générale AXA",
+   "comprendre la base",
+   "protocole en 5 règles",
+   "carte type de question -> pages",
+   "exemples travaillés",
+   "auto-test corrigé",
+   "répondre"
   ],
-  "rules": [
-    "Pack A = preuve",
-    "Pack B = raisonnement (jamais une preuve seule)",
-    "Toujours citer la source",
-    "Ne jamais inventer ; signaler l'absence",
-    "La notice PDF fait foi"
-  ],
-  "data_origin": "Documents publics (notices / CG AXA). Aucune donnée client. Couches dérivées ; masters non modifiés.",
-  "entry_point": "https://gabuz22.github.io/AXA/ia/start.html",
-  "ai_protocol": "Toute IA : 1) première visite : lire /ia/start.html (initialisation en une lecture : protocole, carte, exemples, auto-test) ; 2) appliquer /ia/instructions-maitres.html (classer la question, utiliser les outils, citer contrat+notice+page, distinguer contractuel/réglementaire, signaler les absences) ; 3) répondre. Jamais de fait contractuel ni de chiffre réglementaire de mémoire.",
-  "ai_onboarding": {
-    "start": "https://gabuz22.github.io/AXA/ia/start.html",
-    "etapes": [
-      "oublier sa mémoire générale AXA",
-      "comprendre la base",
-      "protocole en 5 règles",
-      "carte type de question -> pages",
-      "exemples travaillés",
-      "auto-test corrigé",
-      "répondre"
-    ],
-    "protocole_de_reference": "https://gabuz22.github.io/AXA/ia/instructions-maitres.html",
-    "hypothese": "les IA sont imparfaites : chaque page porte un rappel du protocole et renvoie vers start"
+  "protocole_de_reference": "https://gabuz22.github.io/AXA/ia/instructions-maitres.html",
+  "hypothese": "les IA sont imparfaites : chaque page porte un rappel du protocole et renvoie vers start"
+ },
+ "pages": [
+  {
+   "id": "start",
+   "html": "https://gabuz22.github.io/AXA/ia/start.html",
+   "md": "https://gabuz22.github.io/AXA/ia/start.md"
   },
-  "pages": [
-    {
-      "id": "start",
-      "html": "https://gabuz22.github.io/AXA/ia/start.html",
-      "md": "https://gabuz22.github.io/AXA/ia/start.md"
-    },
-    {
-      "id": "index",
-      "html": "https://gabuz22.github.io/AXA/ia/index.html",
-      "md": "https://gabuz22.github.io/AXA/ia/index.md"
-    },
-    {
-      "id": "instructions-maitres",
-      "html": "https://gabuz22.github.io/AXA/ia/instructions-maitres.html",
-      "md": "https://gabuz22.github.io/AXA/ia/instructions-maitres.md"
-    },
-    {
-      "id": "guide-ia",
-      "html": "https://gabuz22.github.io/AXA/ia/guide-ia.html",
-      "md": "https://gabuz22.github.io/AXA/ia/guide-ia.md"
-    },
-    {
-      "id": "outils",
-      "html": "https://gabuz22.github.io/AXA/ia/outils.html",
-      "md": "https://gabuz22.github.io/AXA/ia/outils.md"
-    },
-    {
-      "id": "routage",
-      "html": "https://gabuz22.github.io/AXA/ia/routage.html",
-      "md": "https://gabuz22.github.io/AXA/ia/routage.md"
-    },
-    {
-      "id": "pertinence",
-      "html": "https://gabuz22.github.io/AXA/ia/pertinence.html",
-      "md": "https://gabuz22.github.io/AXA/ia/pertinence.md"
-    },
-    {
-      "id": "qualite-routage",
-      "html": "https://gabuz22.github.io/AXA/ia/qualite-routage.html",
-      "md": "https://gabuz22.github.io/AXA/ia/qualite-routage.md"
-    },
-    {
-      "id": "planificateur",
-      "html": "https://gabuz22.github.io/AXA/ia/planificateur.html",
-      "md": "https://gabuz22.github.io/AXA/ia/planificateur.md"
-    },
-    {
-      "id": "concepts",
-      "html": "https://gabuz22.github.io/AXA/ia/concepts.html",
-      "md": "https://gabuz22.github.io/AXA/ia/concepts.md"
-    },
-    {
-      "id": "couverture-recherche",
-      "html": "https://gabuz22.github.io/AXA/ia/couverture-recherche.html",
-      "md": "https://gabuz22.github.io/AXA/ia/couverture-recherche.md"
-    },
-    {
-      "id": "comparateur",
-      "html": "https://gabuz22.github.io/AXA/ia/comparateur.html",
-      "md": "https://gabuz22.github.io/AXA/ia/comparateur.md"
-    },
-    {
-      "id": "preuves",
-      "html": "https://gabuz22.github.io/AXA/ia/preuves.html",
-      "md": "https://gabuz22.github.io/AXA/ia/preuves.md"
-    },
-    {
-      "id": "methode-question-complexe",
-      "html": "https://gabuz22.github.io/AXA/ia/methode-question-complexe.html",
-      "md": "https://gabuz22.github.io/AXA/ia/methode-question-complexe.md"
-    },
-    {
-      "id": "tests",
-      "html": "https://gabuz22.github.io/AXA/ia/tests.html",
-      "md": "https://gabuz22.github.io/AXA/ia/tests.md"
-    },
-    {
-      "id": "hierarchie",
-      "html": "https://gabuz22.github.io/AXA/ia/hierarchie.html",
-      "md": "https://gabuz22.github.io/AXA/ia/hierarchie.md"
-    },
-    {
-      "id": "choix-sources",
-      "html": "https://gabuz22.github.io/AXA/ia/choix-sources.html",
-      "md": "https://gabuz22.github.io/AXA/ia/choix-sources.md"
-    },
-    {
-      "id": "sources-officielles",
-      "html": "https://gabuz22.github.io/AXA/ia/sources-officielles.html",
-      "md": "https://gabuz22.github.io/AXA/ia/sources-officielles.md"
-    },
-    {
-      "id": "reglementation",
-      "html": "https://gabuz22.github.io/AXA/ia/reglementation.html",
-      "md": "https://gabuz22.github.io/AXA/ia/reglementation.md"
-    },
-    {
-      "id": "surveillance",
-      "html": "https://gabuz22.github.io/AXA/ia/surveillance.html",
-      "md": "https://gabuz22.github.io/AXA/ia/surveillance.md"
-    },
-    {
-      "id": "connaissances-dynamiques",
-      "html": "https://gabuz22.github.io/AXA/ia/connaissances-dynamiques.html",
-      "md": "https://gabuz22.github.io/AXA/ia/connaissances-dynamiques.md"
-    },
-    {
-      "id": "matrices",
-      "html": "https://gabuz22.github.io/AXA/ia/matrices.html",
-      "md": "https://gabuz22.github.io/AXA/ia/matrices.md"
-    },
-    {
-      "id": "graphe",
-      "html": "https://gabuz22.github.io/AXA/ia/graphe.html",
-      "md": "https://gabuz22.github.io/AXA/ia/graphe.md"
-    },
-    {
-      "id": "maturite",
-      "html": "https://gabuz22.github.io/AXA/ia/maturite.html",
-      "md": "https://gabuz22.github.io/AXA/ia/maturite.md"
-    },
-    {
-      "id": "pack-a",
-      "html": "https://gabuz22.github.io/AXA/ia/pack-a.html",
-      "md": "https://gabuz22.github.io/AXA/ia/pack-a.md"
-    },
-    {
-      "id": "pack-b",
-      "html": "https://gabuz22.github.io/AXA/ia/pack-b.html",
-      "md": "https://gabuz22.github.io/AXA/ia/pack-b.md"
-    },
-    {
-      "id": "contrats",
-      "html": "https://gabuz22.github.io/AXA/ia/contrats.html",
-      "md": "https://gabuz22.github.io/AXA/ia/contrats.md"
-    },
-    {
-      "id": "garanties",
-      "html": "https://gabuz22.github.io/AXA/ia/garanties.html",
-      "md": "https://gabuz22.github.io/AXA/ia/garanties.md"
-    },
-    {
-      "id": "exclusions",
-      "html": "https://gabuz22.github.io/AXA/ia/exclusions.html",
-      "md": "https://gabuz22.github.io/AXA/ia/exclusions.md"
-    },
-    {
-      "id": "options",
-      "html": "https://gabuz22.github.io/AXA/ia/options.html",
-      "md": "https://gabuz22.github.io/AXA/ia/options.md"
-    },
-    {
-      "id": "cotisations",
-      "html": "https://gabuz22.github.io/AXA/ia/cotisations.html",
-      "md": "https://gabuz22.github.io/AXA/ia/cotisations.md"
-    },
-    {
-      "id": "delais",
-      "html": "https://gabuz22.github.io/AXA/ia/delais.html",
-      "md": "https://gabuz22.github.io/AXA/ia/delais.md"
-    },
-    {
-      "id": "fiscalite",
-      "html": "https://gabuz22.github.io/AXA/ia/fiscalite.html",
-      "md": "https://gabuz22.github.io/AXA/ia/fiscalite.md"
-    },
-    {
-      "id": "points-vigilance",
-      "html": "https://gabuz22.github.io/AXA/ia/points-vigilance.html",
-      "md": "https://gabuz22.github.io/AXA/ia/points-vigilance.md"
-    },
-    {
-      "id": "formules",
-      "html": "https://gabuz22.github.io/AXA/ia/formules.html",
-      "md": "https://gabuz22.github.io/AXA/ia/formules.md"
-    },
-    {
-      "id": "definitions",
-      "html": "https://gabuz22.github.io/AXA/ia/definitions.html",
-      "md": "https://gabuz22.github.io/AXA/ia/definitions.md"
-    },
-    {
-      "id": "conditions",
-      "html": "https://gabuz22.github.io/AXA/ia/conditions.html",
-      "md": "https://gabuz22.github.io/AXA/ia/conditions.md"
-    },
-    {
-      "id": "declencheurs",
-      "html": "https://gabuz22.github.io/AXA/ia/declencheurs.html",
-      "md": "https://gabuz22.github.io/AXA/ia/declencheurs.md"
-    },
-    {
-      "id": "plafonds",
-      "html": "https://gabuz22.github.io/AXA/ia/plafonds.html",
-      "md": "https://gabuz22.github.io/AXA/ia/plafonds.md"
-    },
-    {
-      "id": "franchises",
-      "html": "https://gabuz22.github.io/AXA/ia/franchises.html",
-      "md": "https://gabuz22.github.io/AXA/ia/franchises.md"
-    },
-    {
-      "id": "glossaire",
-      "html": "https://gabuz22.github.io/AXA/ia/glossaire.html",
-      "md": "https://gabuz22.github.io/AXA/ia/glossaire.md"
-    },
-    {
-      "id": "notices",
-      "html": "https://gabuz22.github.io/AXA/ia/notices.html",
-      "md": "https://gabuz22.github.io/AXA/ia/notices.md"
-    },
-    {
-      "id": "sources",
-      "html": "https://gabuz22.github.io/AXA/ia/sources.html",
-      "md": "https://gabuz22.github.io/AXA/ia/sources.md"
-    },
-    {
-      "id": "recherches",
-      "html": "https://gabuz22.github.io/AXA/ia/recherches.html",
-      "md": "https://gabuz22.github.io/AXA/ia/recherches.md"
-    },
-    {
-      "id": "themes",
-      "html": "https://gabuz22.github.io/AXA/ia/themes.html",
-      "md": "https://gabuz22.github.io/AXA/ia/themes.md"
-    },
-    {
-      "id": "couverture",
-      "html": "https://gabuz22.github.io/AXA/ia/couverture.html",
-      "md": "https://gabuz22.github.io/AXA/ia/couverture.md"
-    }
-  ],
-  "contracts": [
-    {
-      "slug": "avizen",
-      "id": "axa_avizen_2025-04",
-      "nom": "Avizen",
-      "famille": "prévoyance",
-      "html": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html",
-      "md": "https://gabuz22.github.io/AXA/ia/contrat/avizen.md"
-    },
-    {
-      "slug": "avizen-pro",
-      "id": "axa_avizen_pro_2025-04",
-      "nom": "Avizen Pro",
-      "famille": "prévoyance",
-      "html": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html",
-      "md": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.md"
-    },
-    {
-      "slug": "entour-age",
-      "id": "axa_entourage_2025-06",
-      "nom": "Entour'Age",
-      "famille": "prévoyance",
-      "html": "https://gabuz22.github.io/AXA/ia/contrat/entour-age.html",
-      "md": "https://gabuz22.github.io/AXA/ia/contrat/entour-age.md"
-    },
-    {
-      "slug": "essen-ciel-assurance-obseques",
-      "id": "axa_essenciel_2025-06",
-      "nom": "Essen'Ciel (assurance obsèques)",
-      "famille": "prévoyance",
-      "html": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html",
-      "md": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.md"
-    },
-    {
-      "slug": "essen-ciel-patrimoine",
-      "id": "axa_essenciel_patrimoine_2023-09",
-      "nom": "Essen'Ciel Patrimoine",
-      "famille": "prévoyance",
-      "html": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-patrimoine.html",
-      "md": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-patrimoine.md"
-    },
-    {
-      "slug": "excelium-assurance-vie",
-      "id": "axa_excelium_vie_2026-05",
-      "nom": "Excelium (assurance vie)",
-      "famille": "épargne",
-      "html": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html",
-      "md": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.md"
-    },
-    {
-      "slug": "ma-protection-accident-garantie-des-accidents-de-la-vie",
-      "id": "axa_ma_protection_accident_2024-03",
-      "nom": "Ma Protection Accident (Garantie des accidents de la vie)",
-      "famille": "prévoyance",
-      "html": "https://gabuz22.github.io/AXA/ia/contrat/ma-protection-accident-garantie-des-accidents-de-la-vie.html",
-      "md": "https://gabuz22.github.io/AXA/ia/contrat/ma-protection-accident-garantie-des-accidents-de-la-vie.md"
-    },
-    {
-      "slug": "ma-retraite-plan-d-epargne-retraite-individuel-per",
-      "id": "axa_ma_retraite_2026-05",
-      "nom": "Ma Retraite (plan d'épargne retraite individuel — PER)",
-      "famille": "retraite",
-      "html": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html",
-      "md": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.md"
-    },
-    {
-      "slug": "masterlife-credit",
-      "id": "axa_masterlife_credit_2024-10",
-      "nom": "Masterlife CREDIT",
-      "famille": "assurance_emprunteur",
-      "html": "https://gabuz22.github.io/AXA/ia/contrat/masterlife-credit.html",
-      "md": "https://gabuz22.github.io/AXA/ia/contrat/masterlife-credit.md"
-    }
-  ],
-  "themes": [
-    {
-      "slug": "invalidite",
-      "nom": "Invalidité",
-      "html": "https://gabuz22.github.io/AXA/ia/themes/invalidite.html"
-    },
-    {
-      "slug": "deces",
-      "nom": "Décès",
-      "html": "https://gabuz22.github.io/AXA/ia/themes/deces.html"
-    },
-    {
-      "slug": "hospitalisation",
-      "nom": "Hospitalisation",
-      "html": "https://gabuz22.github.io/AXA/ia/themes/hospitalisation.html"
-    },
-    {
-      "slug": "rachat",
-      "nom": "Rachat",
-      "html": "https://gabuz22.github.io/AXA/ia/themes/rachat.html"
-    },
-    {
-      "slug": "souscription",
-      "nom": "Souscription",
-      "html": "https://gabuz22.github.io/AXA/ia/themes/souscription.html"
-    },
-    {
-      "slug": "fiscalite",
-      "nom": "Fiscalité",
-      "html": "https://gabuz22.github.io/AXA/ia/themes/fiscalite.html"
-    },
-    {
-      "slug": "association",
-      "nom": "Association",
-      "html": "https://gabuz22.github.io/AXA/ia/themes/association.html"
-    },
-    {
-      "slug": "anpere",
-      "nom": "ANPERE",
-      "html": "https://gabuz22.github.io/AXA/ia/themes/anpere.html"
-    }
-  ],
-  "raw_data": {
-    "pack_a": "https://gabuz22.github.io/AXA/data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
-    "pack_b": "https://gabuz22.github.io/AXA/data/AXA/AXA_MASTER_DONNEES_PACK_B_MATRICES_EXPERIMENTAL.json",
-    "contrats": "https://gabuz22.github.io/AXA/ia/contrats.json",
-    "glossaire": "https://gabuz22.github.io/AXA/ia/glossaire.json"
+  {
+   "id": "index",
+   "html": "https://gabuz22.github.io/AXA/ia/index.html",
+   "md": "https://gabuz22.github.io/AXA/ia/index.md"
   },
-  "conventions": {
-    "slug": "minuscules, sans accents, séparateur '-' ; stable entre versions",
-    "id": "id JSON d'origine si présent, sinon dérivé déterministe (stable)",
-    "citation": "[Notice : <fichier>, p.<page>]"
+  {
+   "id": "instructions-maitres",
+   "html": "https://gabuz22.github.io/AXA/ia/instructions-maitres.html",
+   "md": "https://gabuz22.github.io/AXA/ia/instructions-maitres.md"
   },
-  "sitemap": "https://gabuz22.github.io/AXA/ia/sitemap-ia.xml",
-  "coverage": "https://gabuz22.github.io/AXA/ia/couverture.html",
-  "selection": "https://gabuz22.github.io/AXA/ia/selection.json",
-  "inspecteur": {
-    "description": "Environnement de raisonnement Inspecteur (dérivé du graphe, lecture seule).",
-    "entree": "ia/inspecteur/GUIDE_IA.md",
-    "index": "ia/inspecteur/index.json",
-    "outils": "ia/inspecteur/tools.json",
-    "contrats": 9,
-    "empreinte": "i_4ee39aa165f97e99"
+  {
+   "id": "guide-ia",
+   "html": "https://gabuz22.github.io/AXA/ia/guide-ia.html",
+   "md": "https://gabuz22.github.io/AXA/ia/guide-ia.md"
+  },
+  {
+   "id": "outils",
+   "html": "https://gabuz22.github.io/AXA/ia/outils.html",
+   "md": "https://gabuz22.github.io/AXA/ia/outils.md"
+  },
+  {
+   "id": "routage",
+   "html": "https://gabuz22.github.io/AXA/ia/routage.html",
+   "md": "https://gabuz22.github.io/AXA/ia/routage.md"
+  },
+  {
+   "id": "pertinence",
+   "html": "https://gabuz22.github.io/AXA/ia/pertinence.html",
+   "md": "https://gabuz22.github.io/AXA/ia/pertinence.md"
+  },
+  {
+   "id": "qualite-routage",
+   "html": "https://gabuz22.github.io/AXA/ia/qualite-routage.html",
+   "md": "https://gabuz22.github.io/AXA/ia/qualite-routage.md"
+  },
+  {
+   "id": "planificateur",
+   "html": "https://gabuz22.github.io/AXA/ia/planificateur.html",
+   "md": "https://gabuz22.github.io/AXA/ia/planificateur.md"
+  },
+  {
+   "id": "concepts",
+   "html": "https://gabuz22.github.io/AXA/ia/concepts.html",
+   "md": "https://gabuz22.github.io/AXA/ia/concepts.md"
+  },
+  {
+   "id": "couverture-recherche",
+   "html": "https://gabuz22.github.io/AXA/ia/couverture-recherche.html",
+   "md": "https://gabuz22.github.io/AXA/ia/couverture-recherche.md"
+  },
+  {
+   "id": "comparateur",
+   "html": "https://gabuz22.github.io/AXA/ia/comparateur.html",
+   "md": "https://gabuz22.github.io/AXA/ia/comparateur.md"
+  },
+  {
+   "id": "preuves",
+   "html": "https://gabuz22.github.io/AXA/ia/preuves.html",
+   "md": "https://gabuz22.github.io/AXA/ia/preuves.md"
+  },
+  {
+   "id": "methode-question-complexe",
+   "html": "https://gabuz22.github.io/AXA/ia/methode-question-complexe.html",
+   "md": "https://gabuz22.github.io/AXA/ia/methode-question-complexe.md"
+  },
+  {
+   "id": "tests",
+   "html": "https://gabuz22.github.io/AXA/ia/tests.html",
+   "md": "https://gabuz22.github.io/AXA/ia/tests.md"
+  },
+  {
+   "id": "hierarchie",
+   "html": "https://gabuz22.github.io/AXA/ia/hierarchie.html",
+   "md": "https://gabuz22.github.io/AXA/ia/hierarchie.md"
+  },
+  {
+   "id": "choix-sources",
+   "html": "https://gabuz22.github.io/AXA/ia/choix-sources.html",
+   "md": "https://gabuz22.github.io/AXA/ia/choix-sources.md"
+  },
+  {
+   "id": "sources-officielles",
+   "html": "https://gabuz22.github.io/AXA/ia/sources-officielles.html",
+   "md": "https://gabuz22.github.io/AXA/ia/sources-officielles.md"
+  },
+  {
+   "id": "reglementation",
+   "html": "https://gabuz22.github.io/AXA/ia/reglementation.html",
+   "md": "https://gabuz22.github.io/AXA/ia/reglementation.md"
+  },
+  {
+   "id": "surveillance",
+   "html": "https://gabuz22.github.io/AXA/ia/surveillance.html",
+   "md": "https://gabuz22.github.io/AXA/ia/surveillance.md"
+  },
+  {
+   "id": "connaissances-dynamiques",
+   "html": "https://gabuz22.github.io/AXA/ia/connaissances-dynamiques.html",
+   "md": "https://gabuz22.github.io/AXA/ia/connaissances-dynamiques.md"
+  },
+  {
+   "id": "matrices",
+   "html": "https://gabuz22.github.io/AXA/ia/matrices.html",
+   "md": "https://gabuz22.github.io/AXA/ia/matrices.md"
+  },
+  {
+   "id": "graphe",
+   "html": "https://gabuz22.github.io/AXA/ia/graphe.html",
+   "md": "https://gabuz22.github.io/AXA/ia/graphe.md"
+  },
+  {
+   "id": "maturite",
+   "html": "https://gabuz22.github.io/AXA/ia/maturite.html",
+   "md": "https://gabuz22.github.io/AXA/ia/maturite.md"
+  },
+  {
+   "id": "pack-a",
+   "html": "https://gabuz22.github.io/AXA/ia/pack-a.html",
+   "md": "https://gabuz22.github.io/AXA/ia/pack-a.md"
+  },
+  {
+   "id": "pack-b",
+   "html": "https://gabuz22.github.io/AXA/ia/pack-b.html",
+   "md": "https://gabuz22.github.io/AXA/ia/pack-b.md"
+  },
+  {
+   "id": "contrats",
+   "html": "https://gabuz22.github.io/AXA/ia/contrats.html",
+   "md": "https://gabuz22.github.io/AXA/ia/contrats.md"
+  },
+  {
+   "id": "garanties",
+   "html": "https://gabuz22.github.io/AXA/ia/garanties.html",
+   "md": "https://gabuz22.github.io/AXA/ia/garanties.md"
+  },
+  {
+   "id": "exclusions",
+   "html": "https://gabuz22.github.io/AXA/ia/exclusions.html",
+   "md": "https://gabuz22.github.io/AXA/ia/exclusions.md"
+  },
+  {
+   "id": "options",
+   "html": "https://gabuz22.github.io/AXA/ia/options.html",
+   "md": "https://gabuz22.github.io/AXA/ia/options.md"
+  },
+  {
+   "id": "cotisations",
+   "html": "https://gabuz22.github.io/AXA/ia/cotisations.html",
+   "md": "https://gabuz22.github.io/AXA/ia/cotisations.md"
+  },
+  {
+   "id": "delais",
+   "html": "https://gabuz22.github.io/AXA/ia/delais.html",
+   "md": "https://gabuz22.github.io/AXA/ia/delais.md"
+  },
+  {
+   "id": "fiscalite",
+   "html": "https://gabuz22.github.io/AXA/ia/fiscalite.html",
+   "md": "https://gabuz22.github.io/AXA/ia/fiscalite.md"
+  },
+  {
+   "id": "points-vigilance",
+   "html": "https://gabuz22.github.io/AXA/ia/points-vigilance.html",
+   "md": "https://gabuz22.github.io/AXA/ia/points-vigilance.md"
+  },
+  {
+   "id": "formules",
+   "html": "https://gabuz22.github.io/AXA/ia/formules.html",
+   "md": "https://gabuz22.github.io/AXA/ia/formules.md"
+  },
+  {
+   "id": "definitions",
+   "html": "https://gabuz22.github.io/AXA/ia/definitions.html",
+   "md": "https://gabuz22.github.io/AXA/ia/definitions.md"
+  },
+  {
+   "id": "conditions",
+   "html": "https://gabuz22.github.io/AXA/ia/conditions.html",
+   "md": "https://gabuz22.github.io/AXA/ia/conditions.md"
+  },
+  {
+   "id": "declencheurs",
+   "html": "https://gabuz22.github.io/AXA/ia/declencheurs.html",
+   "md": "https://gabuz22.github.io/AXA/ia/declencheurs.md"
+  },
+  {
+   "id": "plafonds",
+   "html": "https://gabuz22.github.io/AXA/ia/plafonds.html",
+   "md": "https://gabuz22.github.io/AXA/ia/plafonds.md"
+  },
+  {
+   "id": "franchises",
+   "html": "https://gabuz22.github.io/AXA/ia/franchises.html",
+   "md": "https://gabuz22.github.io/AXA/ia/franchises.md"
+  },
+  {
+   "id": "glossaire",
+   "html": "https://gabuz22.github.io/AXA/ia/glossaire.html",
+   "md": "https://gabuz22.github.io/AXA/ia/glossaire.md"
+  },
+  {
+   "id": "notices",
+   "html": "https://gabuz22.github.io/AXA/ia/notices.html",
+   "md": "https://gabuz22.github.io/AXA/ia/notices.md"
+  },
+  {
+   "id": "sources",
+   "html": "https://gabuz22.github.io/AXA/ia/sources.html",
+   "md": "https://gabuz22.github.io/AXA/ia/sources.md"
+  },
+  {
+   "id": "recherches",
+   "html": "https://gabuz22.github.io/AXA/ia/recherches.html",
+   "md": "https://gabuz22.github.io/AXA/ia/recherches.md"
+  },
+  {
+   "id": "themes",
+   "html": "https://gabuz22.github.io/AXA/ia/themes.html",
+   "md": "https://gabuz22.github.io/AXA/ia/themes.md"
+  },
+  {
+   "id": "couverture",
+   "html": "https://gabuz22.github.io/AXA/ia/couverture.html",
+   "md": "https://gabuz22.github.io/AXA/ia/couverture.md"
   }
+ ],
+ "contracts": [
+  {
+   "slug": "avizen",
+   "id": "axa_avizen_2025-04",
+   "nom": "Avizen",
+   "famille": "prévoyance",
+   "html": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html",
+   "md": "https://gabuz22.github.io/AXA/ia/contrat/avizen.md"
+  },
+  {
+   "slug": "avizen-pro",
+   "id": "axa_avizen_pro_2025-04",
+   "nom": "Avizen Pro",
+   "famille": "prévoyance",
+   "html": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html",
+   "md": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.md"
+  },
+  {
+   "slug": "entour-age",
+   "id": "axa_entourage_2025-06",
+   "nom": "Entour'Age",
+   "famille": "prévoyance",
+   "html": "https://gabuz22.github.io/AXA/ia/contrat/entour-age.html",
+   "md": "https://gabuz22.github.io/AXA/ia/contrat/entour-age.md"
+  },
+  {
+   "slug": "essen-ciel-assurance-obseques",
+   "id": "axa_essenciel_2025-06",
+   "nom": "Essen'Ciel (assurance obsèques)",
+   "famille": "prévoyance",
+   "html": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html",
+   "md": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.md"
+  },
+  {
+   "slug": "essen-ciel-patrimoine",
+   "id": "axa_essenciel_patrimoine_2023-09",
+   "nom": "Essen'Ciel Patrimoine",
+   "famille": "prévoyance",
+   "html": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-patrimoine.html",
+   "md": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-patrimoine.md"
+  },
+  {
+   "slug": "excelium-assurance-vie",
+   "id": "axa_excelium_vie_2026-05",
+   "nom": "Excelium (assurance vie)",
+   "famille": "épargne",
+   "html": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html",
+   "md": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.md"
+  },
+  {
+   "slug": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "id": "axa_ma_protection_accident_2024-03",
+   "nom": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "famille": "prévoyance",
+   "html": "https://gabuz22.github.io/AXA/ia/contrat/ma-protection-accident-garantie-des-accidents-de-la-vie.html",
+   "md": "https://gabuz22.github.io/AXA/ia/contrat/ma-protection-accident-garantie-des-accidents-de-la-vie.md"
+  },
+  {
+   "slug": "ma-retraite-plan-d-epargne-retraite-individuel-per",
+   "id": "axa_ma_retraite_2026-05",
+   "nom": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "famille": "retraite",
+   "html": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html",
+   "md": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.md"
+  },
+  {
+   "slug": "masterlife-credit",
+   "id": "axa_masterlife_credit_2024-10",
+   "nom": "Masterlife CREDIT",
+   "famille": "assurance_emprunteur",
+   "html": "https://gabuz22.github.io/AXA/ia/contrat/masterlife-credit.html",
+   "md": "https://gabuz22.github.io/AXA/ia/contrat/masterlife-credit.md"
+  }
+ ],
+ "themes": [
+  {
+   "slug": "invalidite",
+   "nom": "Invalidité",
+   "html": "https://gabuz22.github.io/AXA/ia/themes/invalidite.html"
+  },
+  {
+   "slug": "deces",
+   "nom": "Décès",
+   "html": "https://gabuz22.github.io/AXA/ia/themes/deces.html"
+  },
+  {
+   "slug": "hospitalisation",
+   "nom": "Hospitalisation",
+   "html": "https://gabuz22.github.io/AXA/ia/themes/hospitalisation.html"
+  },
+  {
+   "slug": "rachat",
+   "nom": "Rachat",
+   "html": "https://gabuz22.github.io/AXA/ia/themes/rachat.html"
+  },
+  {
+   "slug": "souscription",
+   "nom": "Souscription",
+   "html": "https://gabuz22.github.io/AXA/ia/themes/souscription.html"
+  },
+  {
+   "slug": "fiscalite",
+   "nom": "Fiscalité",
+   "html": "https://gabuz22.github.io/AXA/ia/themes/fiscalite.html"
+  },
+  {
+   "slug": "association",
+   "nom": "Association",
+   "html": "https://gabuz22.github.io/AXA/ia/themes/association.html"
+  },
+  {
+   "slug": "anpere",
+   "nom": "ANPERE",
+   "html": "https://gabuz22.github.io/AXA/ia/themes/anpere.html"
+  }
+ ],
+ "raw_data": {
+  "pack_a": "https://gabuz22.github.io/AXA/data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+  "pack_b": "https://gabuz22.github.io/AXA/data/AXA/AXA_MASTER_DONNEES_PACK_B_MATRICES_EXPERIMENTAL.json",
+  "contrats": "https://gabuz22.github.io/AXA/ia/contrats.json",
+  "glossaire": "https://gabuz22.github.io/AXA/ia/glossaire.json"
+ },
+ "conventions": {
+  "slug": "minuscules, sans accents, séparateur '-' ; stable entre versions",
+  "id": "id JSON d'origine si présent, sinon dérivé déterministe (stable)",
+  "citation": "[Notice : <fichier>, p.<page>]"
+ },
+ "sitemap": "https://gabuz22.github.io/AXA/ia/sitemap-ia.xml",
+ "coverage": "https://gabuz22.github.io/AXA/ia/couverture.html",
+ "selection": "https://gabuz22.github.io/AXA/ia/selection.json"
 }

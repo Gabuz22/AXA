@@ -1,7 +1,7 @@
 {
  "meta": {
   "version": "2.2.0",
-  "genere_le": "2026-07-12",
+  "genere_le": "2026-07-16",
   "usage": "Mapper une question -> concept(s) via synonymes, obtenir contrats candidats + catégories à consulter + notices. Ne répond pas ; prépare le parcours."
  },
  "plans": {
@@ -42,35 +42,35 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
     },
     {
      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
     },
     {
      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [
@@ -117,39 +117,39 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Essen'Ciel Patrimoine",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
     },
     {
      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
     },
     {
      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [
@@ -181,15 +181,15 @@
    "notices": [
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
     }
    ],
    "criteres_completude": [
@@ -228,31 +228,31 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
     },
     {
      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [
@@ -284,15 +284,15 @@
    "notices": [
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [
@@ -335,27 +335,27 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [
@@ -392,19 +392,19 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     }
    ],
    "criteres_completude": [
@@ -449,39 +449,39 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Essen'Ciel Patrimoine",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
     },
     {
      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
     },
     {
      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [
@@ -529,35 +529,35 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Essen'Ciel Patrimoine",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
     },
     {
      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [
@@ -588,11 +588,11 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     }
    ],
    "criteres_completude": [
@@ -624,35 +624,35 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Essen'Ciel Patrimoine",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
     },
     {
      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [
@@ -693,39 +693,39 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Essen'Ciel Patrimoine",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
     },
     {
      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
     },
     {
      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [
@@ -772,39 +772,39 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Essen'Ciel Patrimoine",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
     },
     {
      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
     },
     {
      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [
@@ -848,39 +848,39 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Essen'Ciel (assurance obsèques)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Essen'Ciel Patrimoine",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
     },
     {
      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf"
     },
     {
      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [
@@ -914,27 +914,27 @@
    "notices": [
     {
      "contrat": "Avizen",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf"
     },
     {
      "contrat": "Avizen Pro",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf"
     },
     {
      "contrat": "Entour'Age",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf"
     },
     {
      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf"
     },
     {
      "contrat": "Masterlife CREDIT",
-     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf"
     }
    ],
    "criteres_completude": [

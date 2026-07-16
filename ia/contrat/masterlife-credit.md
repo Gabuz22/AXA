@@ -1,6 +1,6 @@
 # Masterlife CREDIT
 
-> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-12 (v2.2.0).
+> **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-16 (v2.2.0).
 > Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
 > IA : n'utilise jamais ta mémoire générale ici — cite [Contrat — Notice, p.X] ou signale l'absence. Première visite : [START](https://gabuz22.github.io/AXA/ia/start.html).
 
@@ -176,7 +176,7 @@ Assurance emprunteur couvrant, au titre du prêt mentionné aux conditions parti
 
 ## Notice
 
-**Notice PDF (fait foi) :** [Masterlife CREDIT](../../data/AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
+**Notice PDF (fait foi) :** [Masterlife CREDIT](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
 
 ## Navigation
 
