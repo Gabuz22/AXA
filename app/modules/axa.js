@@ -761,11 +761,19 @@ async function recherche(body) {
     }).join("");
     filtersEl.querySelectorAll("[data-fid]").forEach(b => b.onclick = () => { active = b.dataset.fid; paint(); });
     const terms = (rnorm(input.value.trim()).match(/[a-z0-9]{2,}/g)) || [];
+    // Badge de tête HONNÊTE (V-Matrix) : si le meilleur résultat ne recoupe que faiblement les
+    // termes saisis (couverture pondérée < 50 %, synonymes inclus — service axaKnowledge), on ne le
+    // présente PAS comme « meilleur résultat » : badge « correspondance faible » + explication.
+    // Un résultat faible reste affiché (il peut servir) mais n'est jamais présenté comme fiable.
     const carte = (h, tete) => `
-      <article class="card ${tete ? "cop-base" : ""}"><div class="card-h">${tete ? `<span class="pill integrated">meilleur résultat</span>` : ""}
+      <article class="card ${tete ? "cop-base" : ""}"><div class="card-h">${tete ? (h.faible
+          ? `<span class="pill pending">correspondance faible</span>`
+          : `<span class="pill integrated">meilleur résultat</span>`) : ""}
         <span class="pill">${esc(h.type)}</span><strong>${esc(h.label || "(sans titre)")}</strong><span class="muted">${esc(h.contrat || "")}</span></div>
       <p class="card-b">${highlight(sansTitre(h.text, h.label), terms)}</p>
-      <p class="muted">${tete ? `<span class="muted">celui qui recoupe le mieux tes termes — vérifie la notice (fait foi) · </span>` : ""}<a href="${h.ref}">→ ouvrir la fiche</a></p></article>`;
+      <p class="muted">${tete ? (h.faible
+          ? `<span class="muted">ne recoupe qu'une partie de tes termes — cette question est peut-être <b>hors du périmètre des 9 contrats</b> de la base. À vérifier, ne t'appuie pas dessus tel quel · </span>`
+          : `<span class="muted">celui qui recoupe le mieux tes termes — vérifie la notice (fait foi) · </span>`) : ""}<a href="${h.ref}">→ ouvrir la fiche</a></p></article>`;
     // État vide HUMAIN : distinguer « rien pour ce filtre » de « rien du tout », expliquer
     // ce que ça signifie et proposer la suite — jamais un cul-de-sac.
     const etatVide = () => {

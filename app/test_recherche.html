@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tests recherche — Gabriel AXA</title>
+<style>
+body{font-family:system-ui,Segoe UI,Roboto,sans-serif;background:#0b0c0e;color:#e8ebf0;margin:0;padding:24px;max-width:900px}
+.ok{color:#4ade80}.ko{color:#f87171}li{margin:6px 0}code{background:#1a1d23;padding:1px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>Tests du moteur de recherche (déterministes, sans framework)</h1>
+<p>Servir la racine du dépôt puis ouvrir <code>/app/test_recherche.html</code>.
+Le résultat global s'affiche aussi dans le titre de l'onglet (lisible en headless :
+<code>chrome --headless=new --dump-dom</code>).</p>
+<ul id="out"><li>Exécution…</li></ul>
+<script type="module">
+// Mêmes chemins relatifs que l'app réelle (page au niveau de app/index.html).
+import { searchAll, clearSearchIndex } from "./services/axaKnowledge.js";
+
+const out = document.getElementById("out");
+const results = [];
+function check(nom, cond, detail) {
+  results.push({ nom, ok: !!cond, detail });
+}
+const contratsDistincts = hits => new Set(hits.map(h => h.contrat).filter(Boolean)).size;
+
+async function run() {
+  clearSearchIndex();
+
+  // 1. Résultat clairement pertinent : le 1er n'est PAS marqué faible et le type attendu sort.
+  let r = await searchAll("délai de carence");
+  check("pertinent — « délai de carence » : des résultats", r.length > 0, `${r.length} résultats`);
+  check("pertinent — 1er résultat non faible", r[0] && !r[0].faible, `couverture=${r[0]?.couverture?.toFixed(2)}`);
+  check("pertinent — une définition dans les 3 premiers", r.slice(0, 3).some(h => h.type === "définition" || /d[ée]finition/.test(h.type)), r.slice(0, 3).map(h => h.type).join(", "));
+
+  // 2. Résultat faible : requête hors périmètre à faible recoupement lexical.
+  r = await searchAll("dégât des eaux appartement");
+  check("faible — « dégât des eaux appartement » : 1er marqué faible (ou aucun résultat)",
+    r.length === 0 || r[0].faible, r[0] ? `couverture=${r[0].couverture?.toFixed(2)}` : "0 résultat");
+
+  r = await searchAll("assurance auto voiture tiers");
+  check("faible — « assurance auto voiture tiers » : 1er marqué faible (ou aucun)",
+    r.length === 0 || r[0].faible, r[0] ? `couverture=${r[0].couverture?.toFixed(2)}` : "0 résultat");
+
+  // 3. Aucune correspondance : requête absurde (tokens inexistants dans le corpus ET hors
+  //    synonymes) → zéro résultat, jamais d'invention.
+  r = await searchAll("xyzabc qwerty zgloubi wxcvbn");
+  check("aucune — requête absurde : 0 résultat", r.length === 0, `${r.length} résultats`);
+
+  // 4. Recherche transversale : « rachat » touche plusieurs contrats distincts.
+  r = await searchAll("rachat");
+  check("transversale — « rachat » : ≥ 3 contrats distincts", contratsDistincts(r) >= 3, `${contratsDistincts(r)} contrats`);
+  check("transversale — 1er résultat non faible", r[0] && !r[0].faible, `couverture=${r[0]?.couverture?.toFixed(2)}`);
+
+  // 5. Recherche ambiguë : mot générique unique → beaucoup de résultats, 1er non faible
+  //    (le terme saisi EST couvert ; l'ambiguïté se gère par les filtres, pas par un faux doute).
+  r = await searchAll("capital");
+  check("ambiguë — « capital » : nombreux résultats", r.length >= 20, `${r.length} résultats`);
+  check("ambiguë — 1er résultat non faible", r[0] && !r[0].faible, `couverture=${r[0]?.couverture?.toFixed(2)}`);
+
+  // 6. Synonymes : « carence » seul doit trouver via « attente » et rester couvert (non faible).
+  r = await searchAll("carence");
+  check("synonymes — « carence » : des résultats (via délai/attente)", r.length > 0, `${r.length} résultats`);
+  check("synonymes — 1er résultat non faible (couvert par synonyme)", r[0] && !r[0].faible, `couverture=${r[0]?.couverture?.toFixed(2)}`);
+
+  // 7a. Faute légère d'accent : la normalisation la neutralise entièrement.
+  r = await searchAll("exclusions décés");
+  check("faute d'accent — « décés » : résultats et 1er non faible", r.length > 0 && !r[0].faible, r[0] ? `couverture=${r[0].couverture?.toFixed(2)}` : "0 résultat");
+
+  // 7b. Faute de consonne : « carrence » n'existe pas dans le corpus → si un contrat cité sort
+  //     quand même (« avizen » matché), il doit être marqué faible — honnête, pas de fausse confiance.
+  r = await searchAll("carrence avizen");
+  check("faute de consonne — « carrence avizen » : 1er marqué faible (ou aucun)",
+    r.length === 0 || r[0].faible, r[0] ? `couverture=${r[0].couverture?.toFixed(2)}` : "0 résultat");
+
+  // 8. Non-régression : « rachat possible ? » (exemple proposé sur l'accueil) ne doit PAS être
+  //    marqué faible — le mot utile est couvert, le mot d'appoint ne pèse pas assez pour douter.
+  r = await searchAll("rachat possible ?");
+  check("non-régression — exemple d'accueil « rachat possible ? » non faible", r[0] && !r[0].faible, `couverture=${r[0]?.couverture?.toFixed(2)}`);
+
+  const ok = results.filter(x => x.ok).length;
+  out.innerHTML = results.map(x =>
+    `<li class="${x.ok ? "ok" : "ko"}">${x.ok ? "✓" : "✗"} ${x.nom} <span style="opacity:.6">(${x.detail || ""})</span></li>`).join("");
+  const verdict = `${ok}/${results.length} ${ok === results.length ? "OK" : "ÉCHEC"}`;
+  document.title = `Tests recherche : ${verdict}`;
+  out.insertAdjacentHTML("beforeend", `<li><b id="verdict">${verdict}</b></li>`);
+}
+run().catch(e => { out.innerHTML = `<li class="ko">ERREUR : ${e.message}</li>`; document.title = "Tests recherche : ERREUR"; });
+</script>
+</body>
+</html>

@@ -232,6 +232,32 @@ export async function searchAll(query, { includeMaster = true, types = null } = 
   const baseTerms = [...new Set(tok(raw))];
   if (!baseTerms.length) return [];
   const terms = expand(baseTerms);
+  // Couverture des termes SAISIS, synonymes inclus (V-Matrix) : un terme est « couvert » par un
+  // résultat si le résultat contient ce terme OU l'un de ses synonymes (« carence » trouvé via
+  // « attente » reste couvert). Pondération par idf : un terme rare non couvert pèse lourd, un mot
+  // courant couvert pèse peu ; un terme ABSENT de tout le corpus (df=0 : « appartement ») reçoit
+  // l'idf maximal — c'est le signal « probablement hors périmètre ». Sous 50 % de couverture
+  // pondérée, le résultat est marqué `faible` : l'UI remplace « meilleur résultat » par
+  // « correspondance faible — à vérifier ». Le CLASSEMENT BM25 n'est pas modifié.
+  // Les mots interrogatifs/modaux d'une question naturelle (« rachat possible ? », « combien… »)
+  // ne PORTENT pas de sens métier : leur absence du corpus ne prouve pas que la question est hors
+  // périmètre. Ils sont exclus de la mesure de couverture (jamais du classement).
+  const FILLERS = new Set(("combien comment pourquoi quand quel quelle quels quelles laquelle lequel " +
+    "possible possibles peut peuvent peux faut doit doivent dois faire fait fais savoir sais " +
+    "donc alors aussi encore deja oui non merci bonjour question").split(" "));
+  const porteurs = baseTerms.filter(t => !FILLERS.has(t));
+  const refTerms = porteurs.length ? porteurs : baseTerms;
+  const groupes = refTerms.map(t => {
+    const g = new Set([t]);
+    for (const line of SYNONYMES) { const lt = line.flatMap(tok); if (lt.includes(t)) lt.forEach(x => g.add(x)); }
+    return g;
+  });
+  const maxIdf = Math.log(1 + (idx.N + 0.5) / 0.5);
+  const poids = refTerms.map(t => {
+    const n = idx.df.get(t);
+    return n ? Math.log(1 + (idx.N - n + 0.5) / (n + 0.5)) : maxIdf;
+  });
+  const poidsTotal = poids.reduce((a, x) => a + x, 0) || 1;
   const k1 = 1.5, b = 0.75;
   const scored = [];
   for (const it of idx.items) {
@@ -248,14 +274,17 @@ export async function searchAll(query, { includeMaster = true, types = null } = 
     }
     score *= 1 + 0.6 * (coveredBase / baseTerms.length);        // boost couverture (termes saisis)
     if (/^master /.test(it.type || "")) score *= 0.3;           // items master = raisonnement/sources, pas des faits contractuels → dévalués
-    scored.push({ ...it, score, contrat: canonContrat(it.contrat) });
+    let couvert = 0;
+    for (let gi = 0; gi < groupes.length; gi++) { for (const t of groupes[gi]) if (tf.has(t)) { couvert += poids[gi]; break; } }
+    const couverture = couvert / poidsTotal;
+    scored.push({ ...it, score, couverture, faible: couverture < 0.5, contrat: canonContrat(it.contrat) });
   }
   // Repli : si BM25 ne trouve rien, tenter la sous-chaîne exacte (comportement historique).
   if (!scored.length) {
     const q = norm(raw);
     for (const it of idx.items) {
       if (types && types.length && !types.includes(it.type)) continue;
-      if (norm(it.text).includes(q) || norm(it.label).includes(q)) scored.push({ ...it, score: 1 });
+      if (norm(it.text).includes(q) || norm(it.label).includes(q)) scored.push({ ...it, score: 1, couverture: 1, faible: false });
     }
   }
   scored.sort((a, b2) => b2.score - a.score);
