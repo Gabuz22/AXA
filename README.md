@@ -60,7 +60,9 @@ scripts/build_ia.py   générateur de la couche IA
 
 ## Statut
 
-En **phase de test conseillers** (voir `#/tester` dans l'app). Onboarding (Découvrir, Premiers pas
+En **phase de test conseillers** — protocole, message Matrix, critères de décision et limites :
+voir **[TEST_MATRIX.md](TEST_MATRIX.md)** (document unique de la phase de test), et `#/tester`
+dans l'app. Onboarding (Découvrir, Premiers pas
 & FAQ), copilote décisionnel, protocole IA (mini-prompt + page `/ia/start.html`), Inspecteur
 (analyses étiquetées « analyse IA · à valider », jamais présentées comme un fait sourcé) et outils
 conseiller (cas client, RDV, argumentaire) sont livrés. `#/tester` inclut un mécanisme de retour
