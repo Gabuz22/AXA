@@ -57,5 +57,11 @@ scripts/build_ia.py   générateur de la couche IA
 
 ## Statut
 
-Version 0.2 — extraction autonome, design system, accueil-promesse. Prochaines étapes : onboarding
-(Bienvenue / FAQ / mode démo), copilote décisionnel, page « Utiliser avec une IA » + Téléchargements.
+En **phase de test conseillers** (voir `#/tester` dans l'app). Onboarding (Découvrir, Premiers pas
+& FAQ), copilote décisionnel, protocole IA (mini-prompt + page `/ia/start.html`), Inspecteur
+(analyses étiquetées « analyse IA · à valider », jamais présentées comme un fait sourcé) et outils
+conseiller (cas client, RDV, argumentaire) sont livrés. `#/tester` inclut un mécanisme de retour
+local (aucune donnée envoyée automatiquement — le testeur copie et colle lui-même son retour).
+Racine du suivi de version : `version.json` (déclaratif, non synchronisé automatiquement à chaque
+commit) ; `agent-work/coordinator/READY_FOR_REVIEW.md` reste la référence pour les signaux qualité
+en attente de revue humaine.
