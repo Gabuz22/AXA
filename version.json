@@ -1,7 +1,7 @@
 {
   "produit": "Gabriel AXA",
-  "version": "2.1.0",
-  "nom": "Protocole d'interaction IA : le conseiller colle un mini-prompt, l'IA découvre seule Gabriel AXA via la page « Instructions maîtres » (/ia/instructions-maitres.html) et applique le protocole. Page « Utiliser avec une IA » simplifiée en 4 étapes + secours « instructions complètes ». Fin des prompts multiples et des packs côté conseiller.",
-  "date": "2026-07-10",
-  "note": "Toute l'intelligence est centralisée dans les Instructions maîtres (Vue IA) : les évolutions futures se font là, sans changer les habitudes des conseillers. Documents de sources publiques, aucune donnée client, données dérivées, masters jamais modifiés. La notice PDF fait toujours foi."
+  "version": "2.3.0",
+  "nom": "Version de test Matrix : mention d'indépendance visible partout (app, Vue IA, START, README), badge honnête « correspondance faible » quand la recherche ne recoupe que faiblement les termes saisis (couverture pondérée, synonymes inclus, 15 tests navigateur), mécanisme de retour testeurs local sur #/tester (localStorage, copie volontaire, aucune donnée client), liens Vue IA réparés (glossaire + notices PDF, 2774 liens vérifiés), serveur local propre.",
+  "date": "2026-07-17",
+  "note": "Outil indépendant et non officiel, non affilié ni validé par AXA — documents de sources publiques, aucune donnée client, données dérivées, masters jamais modifiés. La notice PDF fait toujours foi. Version applicative et version Vue IA (scripts/build_ia.py) synchronisées à 2.3.0."
 }

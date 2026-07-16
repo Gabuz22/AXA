@@ -1,7 +1,7 @@
 {
  "meta": {
-  "version": "2.2.0",
-  "genere_le": "2026-07-16",
+  "version": "2.3.0",
+  "genere_le": "2026-07-17",
   "regle": "Surveillance documentaire = détecter/comparer/dater/alerter/préparer. JAMAIS de mise à jour automatique ; JAMAIS de publication automatique. Validation humaine obligatoire.",
   "etats_possibles": [
    "Valide",
