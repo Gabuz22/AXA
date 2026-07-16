@@ -1,7 +1,8 @@
 # Outils IA — circulation & recherche
 
 > **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-16 (v2.2.0).
-> Masters non modifiés ; données de sources publiques ; **la notice PDF fait foi.**
+> Outil **indépendant et non officiel**, non affilié ni validé par AXA — documents accessibles publiquement.
+> Masters non modifiés ; **la notice PDF fait foi** ; vérification humaine avant toute réponse au client.
 > IA : n'utilise jamais ta mémoire générale ici — cite [Contrat — Notice, p.X] ou signale l'absence. Première visite : [START](https://gabuz22.github.io/AXA/ia/start.html).
 
 **Objectif.** Outils dérivés pour aider une IA à décomposer une question, parcourir les bons contrats, vérifier sa couverture et assembler une réponse sourcée.

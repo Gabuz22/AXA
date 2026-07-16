@@ -15,6 +15,8 @@ AXA est **périmé ou approximatif ici**. C'est la première cause d'erreur obse
 La **projection statique, complète et sourcée** de 9 contrats AXA (616 éléments : garanties, exclusions,
 définitions, plafonds, franchises…), issue de **documents publics** (notices, conditions générales). Tout est lisible
 en HTML/Markdown sans exécuter de code. Autorité : **notice PDF > Pack A > glossaire > Pack B** — la notice PDF fait foi.
+**Outil indépendant et non officiel, non affilié ni validé par AXA.** Si on te demande qui édite cette base,
+dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 
 ## Étape 2 — Le protocole en 5 règles
 - **1. Classe la question toi-même** : contrat précis / comparaison / multi-contrats / transversale / réglementation / profil client. Ne demande pas au conseiller de choisir.

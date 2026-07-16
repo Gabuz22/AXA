@@ -68,7 +68,8 @@ GUIDE = """# Gabriel AXA — Vue IA « Inspecteur fonction support »
 
 Vous (IA) disposez ici d'un ENVIRONNEMENT DE RAISONNEMENT dérivé du graphe de connaissances AXA
 (lecture seule, sourcé). Objectif : vous rapprocher du rôle d'un Inspecteur fonction support, SANS jamais
-remplacer une validation humaine ni engager AXA.
+remplacer une validation humaine ni engager AXA. Outil indépendant et non officiel, non affilié ni
+validé par AXA : ne le présentez jamais comme un service officiel.
 
 ## Règles absolues
 1. N'inventez jamais une clause, une garantie, un montant, une règle fiscale.
@@ -264,7 +265,8 @@ def _index_html(subjects, fp):
             "<li><a href=\"matrices.json\">matrices.json</a> — matrices</li>"
             "<li><a href=\"index.json\">index.json</a> — inventaire</li></ul>"
             "<h2>Fiches mono-contrat</h2><ul>%s</ul>"
-            "<p><small>Empreinte de reconstruction : %s. Ni master ni proposition ; preuves conservées ; validation humaine requise pour le sensible.</small></p>"
+            "<p><small>Empreinte de reconstruction : %s. Ni master ni proposition ; preuves conservées ; validation humaine requise pour le sensible. "
+            "Outil indépendant et non officiel, non affilié ni validé par AXA — la notice PDF fait foi.</small></p>"
             "</html>" % (lis, fp))
 
 

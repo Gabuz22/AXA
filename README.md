@@ -3,9 +3,12 @@
 **Assistant conseiller AXA** — la base de connaissances contractuelle, sourcée, pour **gagner du temps** :
 retrouver une garantie, une exclusion, une définition ou une condition, toujours reliée à la notice qui fait foi.
 
+> **Outil indépendant et non officiel, non affilié ni validé par AXA.** Construit à partir de
+> documents accessibles publiquement (notices d'information / CG diffusées par AXA). Les notices
+> contractuelles et les sources officielles font foi ; toute information doit être **vérifiée
+> humainement** avant une réponse ou une recommandation au client.
+>
 > Application métier autonome, sans build. Aucune IA branchée, aucune clé API, aucune donnée client.
-> Les documents contractuels embarqués proviennent de **sources publiques** (notices d'information / CG diffusées par AXA).
-> **La notice PDF fait toujours foi.**
 
 ## Lancer en local
 

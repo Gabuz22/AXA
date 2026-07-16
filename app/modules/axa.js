@@ -37,6 +37,12 @@ function bindCopy(btn, getText, done = "✓ Copié") {
 }
 
 export const title = "Gabriel AXA";
+
+// Mention d'indépendance (phase de test) — UNE seule formulation, réutilisée telle quelle sur
+// les écrans où elle doit être visible (accueil, tester, assistants, confiance) pour rester
+// cohérente. Consigne produit pour la version de test ; pas une validation juridique définitive.
+const INDEP_COURT = `Outil <b>indépendant et non officiel</b>, non affilié ni validé par AXA — construit à partir de documents accessibles publiquement.`;
+const INDEP_COMPLET = `${INDEP_COURT} Les notices contractuelles et les sources officielles font foi. Toute information doit être <b>vérifiée humainement</b> avant une réponse ou une recommandation au client.`;
 // Gabriel AXA : le shell (app.js) fournit la navigation et l'en-tête ; ce module rend UNE section.
 // Vue conseiller uniquement (pas de mode « technique/IA » : jargon retiré du produit métier).
 export async function mount(el, ctx) {
@@ -92,7 +98,8 @@ async function accueil(body) {
     <h3 class="day-h">Que veux-tu faire ?</h3>
     <div class="grid">${INTENTS.map(([i, l, h, s]) => tile(i, l, h, s)).join("")}</div>
     <p class="muted" style="margin-top:16px">${stats ? `Base : <b>${stats.contrats}</b> contrats · <b>${stats.faits_uniques}</b> faits sourcés${dates.length ? ` · notices de ${esc(dates[0])} à ${esc(dates[dates.length - 1])} (chaque fiche affiche la sienne)` : ""}. ` : ""}
-    Aucune donnée client stockée. <b>La notice PDF fait toujours foi.</b> <a href="#/pdf">📄 Notices</a></p>`;
+    Aucune donnée client stockée. <b>La notice PDF fait toujours foi.</b> <a href="#/pdf">📄 Notices</a></p>
+    <p class="muted">${INDEP_COURT} <a href="#/confiance">🔒 Origine des données</a></p>`;
   body.querySelector("#acc_go").onclick = () => gotoSearch(body.querySelector("#acc_q").value);
   body.querySelector("#acc_q").addEventListener("keydown", e => { if (e.key === "Enter") gotoSearch(e.target.value); });
   body.addEventListener("click", e => { const b = e.target.closest("[data-ex]"); if (b) gotoSearch(b.dataset.ex); });
@@ -166,6 +173,9 @@ async function confiance(body) {
       ${tile("🧠", "Preuve vs raisonnement", "#/assistants", "Pack A = preuve · Pack B = aide")}
     </div>
 
+    <h3 class="day-h">Indépendance</h3>
+    <div class="card"><p class="card-b">${INDEP_COMPLET}</p></div>
+
     <h3 class="day-h">Origine des données</h3>
     <div class="card"><p class="card-b">Les informations proviennent exclusivement des <b>notices d'information et conditions
     générales</b> des produits AXA — des documents <b>publics</b>, remis à tout prospect. Aucune donnée client, aucune
@@ -225,7 +235,8 @@ async function assistants(body) {
     elle classe la question, consulte les bons outils et répond en citant contrat, notice et page.</p>
 
     <div class="warnbox">⚠ La <b>notice PDF fait foi</b>. Selon ses capacités web, une IA peut ne pas ouvrir les liens — vérifiez
-    toujours la source avant d'utiliser une réponse avec un client. Ne saisissez <b>aucune donnée client nominative</b>.</div>
+    toujours la source avant d'utiliser une réponse avec un client. Ne saisissez <b>aucune donnée client nominative</b>.
+    ${INDEP_COURT}</div>
 
     <p class="muted" style="margin-top:16px">Votre IA n'ouvre pas les liens ?
       <button class="btn ghost" id="full_copy" style="min-height:30px;padding:0 10px">📋 Copier les instructions complètes</button>
@@ -351,7 +362,7 @@ async function tester(body) {
       <li><b>Dis-nous ce qui manque</b> : un contrat, une garantie, une catégorie.</li>
       <li><b>Note les cas</b> où une IA se trompe ou n'aboutit pas.</li>
     </ul>
-    <div class="warnbox">Rappel : la <b>notice PDF fait foi</b>. Pendant le test, vérifie toujours avant d'utiliser une réponse avec un client.</div>
+    <div class="warnbox">${INDEP_COMPLET}</div>
     <h3 class="day-h">Par où commencer</h3>
     <div class="grid">
       ${tile("🔎", "Une vraie recherche", "#/recherche", "teste une question de RDV")}
