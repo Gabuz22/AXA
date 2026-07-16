@@ -321,7 +321,25 @@ async function portail_ia(body) {
   bindCopy(body.querySelector("#pia_copy"), () => IA_URL, "✓ Adresse copiée");
 }
 
-/* ---------- Tester Gabriel AXA (phase de test conseillers) ---------- */
+/* ---------- Tester Gabriel AXA (phase de test conseillers) ----------
+   Retours EN LOCAL uniquement (ce navigateur, localStorage) — rien n'est envoyé nulle part.
+   Volontaire, minimal, aucune donnée client : le testeur copie son texte et le colle lui-même
+   dans le canal de test (le groupe Matrix). Pas de collecte, pas de backend, pas d'analytics. */
+const LS_FEEDBACK = "gv_axa_feedback_v1";
+const lireRetours = () => { try { return JSON.parse(localStorage.getItem(LS_FEEDBACK)) || []; } catch { return []; } };
+const ecrireRetours = v => { try { localStorage.setItem(LS_FEEDBACK, JSON.stringify(v)); } catch {} };
+function retourTexte(r) {
+  return [
+    `Recherche testée : ${r.recherche || "—"}`,
+    `Contrat concerné : ${r.contrat || "—"}`,
+    `A trouvé l'info : ${r.trouve}`,
+    `Utilité perçue : ${r.utilite}`,
+    `IA utilisée : ${r.ia}`,
+    r.commentaire ? `Commentaire : ${r.commentaire}` : null,
+    `— ${new Date(r.date).toLocaleString("fr-FR")}`,
+  ].filter(Boolean).join("\n");
+}
+
 async function tester(body) {
   body.innerHTML = `<p class="lead">Gabriel AXA est en <b>phase de test</b>. Ton retour construit la prochaine version.
     Utilise-le comme dans ta pratique réelle, puis dis-nous ce qui marche et ce qui manque.</p>
@@ -339,7 +357,49 @@ async function tester(body) {
       ${tile("🔎", "Une vraie recherche", "#/recherche", "teste une question de RDV")}
       ${tile("⚖️", "Une comparaison", "#/comparateur", "deux contrats que tu proposes")}
       ${tile("🤖", "Avec ton IA", "#/assistants", "colle l'adresse et interroge")}
-    </div>`;
+    </div>
+    <h3 class="day-h">Noter un retour</h3>
+    <p class="muted">Reste ici, dans ton navigateur — rien n'est envoyé automatiquement. Tu copies et tu colles toi-même dans le groupe Matrix quand tu veux.</p>
+    <form id="fb_form" class="card">
+      <label>Recherche testée<input id="fb_recherche" class="filter" placeholder="ex. délai de carence Avizen"></label>
+      <label>Contrat concerné<input id="fb_contrat" class="filter" placeholder="optionnel"></label>
+      <label>As-tu trouvé l'information ?
+        <select id="fb_trouve" class="filter"><option>oui</option><option>partiellement</option><option>non</option></select></label>
+      <label>Utilité perçue vs ta pratique habituelle ?
+        <select id="fb_utilite" class="filter"><option>plus rapide/fiable</option><option>pareil</option><option>moins pratique</option></select></label>
+      <label>As-tu utilisé une IA (ChatGPT/Claude/Gemini…) ?
+        <select id="fb_ia" class="filter"><option>non</option><option>oui, réponse correcte</option><option>oui, réponse fausse ou incomplète</option></select></label>
+      <label>Ce qui était incompréhensible, manquant, ou une erreur constatée
+        <textarea id="fb_commentaire" rows="3" style="width:100%;resize:vertical" placeholder="libre"></textarea></label>
+      <button type="submit" class="btn gold" style="margin-top:8px">Enregistrer ce retour</button>
+    </form>
+    <div id="fb_list"></div>`;
+
+  const listEl = body.querySelector("#fb_list");
+  function renderListe() {
+    const retours = lireRetours();
+    listEl.innerHTML = !retours.length ? "" : `
+      <h3 class="day-h">Tes retours enregistrés (${retours.length}, sur cet appareil)</h3>
+      <div class="btns"><button class="btn ghost" id="fb_copy">📋 Copier tous mes retours</button>
+        <button class="btn ghost" id="fb_clear">Vider</button></div>
+      <ul class="hlist">${retours.map(r => `<li><span class="muted">${esc(new Date(r.date).toLocaleString("fr-FR"))}</span> — ${esc(r.recherche || "(sans intitulé)")} · ${esc(r.trouve)}</li>`).join("")}</ul>`;
+    bindCopy(listEl.querySelector("#fb_copy"), () => retours.map(retourTexte).join("\n\n---\n\n"), "✓ Retours copiés — colle-les dans le groupe Matrix");
+    listEl.querySelector("#fb_clear")?.addEventListener("click", () => { if (confirm("Vider tes retours enregistrés sur cet appareil ?")) { ecrireRetours([]); renderListe(); } });
+  }
+  renderListe();
+
+  body.querySelector("#fb_form").addEventListener("submit", e => {
+    e.preventDefault();
+    const q = id => body.querySelector(id).value.trim();
+    const retours = lireRetours();
+    retours.unshift({
+      date: new Date().toISOString(), recherche: q("#fb_recherche"), contrat: q("#fb_contrat"),
+      trouve: q("#fb_trouve"), utilite: q("#fb_utilite"), ia: q("#fb_ia"), commentaire: q("#fb_commentaire"),
+    });
+    ecrireRetours(retours);
+    body.querySelector("#fb_form").reset();
+    renderListe();
+  });
 }
 
 /* ---------- Fiche contrat (espace de travail conseiller — Chantier 3) ----------
