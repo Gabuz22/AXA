@@ -1,0 +1,120 @@
+{
+ "objectif": "Faire monter une IA de « réponse correcte » à « niveau conseiller » puis « niveau inspecteur fonction support ». Chaque niveau AJOUTE des contrôles ; aucun ne remplace le socle. À passer sur sa propre réponse AVANT de l'envoyer.",
+ "niveaux": [
+  {
+   "id": "socle",
+   "nom": "Répondeur fiable",
+   "resume": "Le plancher, jamais négociable : sourcé, sans invention, sans donnée client.",
+   "en_dessous": "ne pas répondre",
+   "pages": [
+    "start",
+    "instructions-maitres",
+    "preuves"
+   ]
+  },
+  {
+   "id": "conseiller",
+   "nom": "Niveau conseiller",
+   "resume": "Complétude utile au client : garanties avec leurs exclusions et conditions, éligibilité, structure de cas client, action concrète.",
+   "ajoute_sur": "socle",
+   "pages": [
+    "exclusions",
+    "conditions",
+    "franchises",
+    "plafonds",
+    "pertinence",
+    "methode-question-complexe",
+    "routage"
+   ]
+  },
+  {
+   "id": "inspecteur",
+   "nom": "Niveau inspecteur fonction support",
+   "resume": "Rigueur de contrôle : cohérence inter-contrats, exhaustivité vérifiée, traçabilité auditée, frontière réglementaire tenue, escalade explicite.",
+   "ajoute_sur": "conseiller",
+   "pages": [
+    "comparateur",
+    "matrices",
+    "points-vigilance",
+    "reglementation",
+    "sources-officielles",
+    "couverture"
+   ]
+  }
+ ],
+ "grille_auto_evaluation": [
+  {
+   "niveau": "socle",
+   "q": "Chaque fait contractuel de ma réponse porte-t-il [Contrat — Notice, p.X] ?"
+  },
+  {
+   "niveau": "socle",
+   "q": "Ai-je séparé le contractuel du réglementaire, sans aucun chiffre de barème donné de mémoire ?"
+  },
+  {
+   "niveau": "socle",
+   "q": "Ai-je signalé ce qui est absent de la base au lieu de le combler ?"
+  },
+  {
+   "niveau": "socle",
+   "q": "Ma réponse est-elle exempte de donnée client nominative ?"
+  },
+  {
+   "niveau": "conseiller",
+   "q": "Chaque garantie citée est-elle accompagnée de ses exclusions ET de ses conditions (déclencheurs, franchise, carence, plafond) ?"
+  },
+  {
+   "niveau": "conseiller",
+   "q": "Ai-je vérifié l'éligibilité (âge, statut d'adhésion) quand la question porte sur un contrat souscriptible ?"
+  },
+  {
+   "niveau": "conseiller",
+   "q": "Ai-je distingué une garantie centrale d'une simple mention (pertinence pondérée) ?"
+  },
+  {
+   "niveau": "conseiller",
+   "q": "Pour un cas client : ai-je structuré besoin prioritaire → contrats candidats → couvert/trou/doublon → question à poser ?"
+  },
+  {
+   "niveau": "conseiller",
+   "q": "Ai-je donné au conseiller une action concrète (quoi vérifier, quelle question, quelle page de notice) ?"
+  },
+  {
+   "niveau": "inspecteur",
+   "q": "Quand plusieurs contrats traitent le même point, ai-je comparé et signalé explicitement les divergences ?"
+  },
+  {
+   "niveau": "inspecteur",
+   "q": "Ai-je balayé toutes les catégories du contrat pour n'omettre aucune exclusion/condition/plafond/franchise/point de vigilance ?"
+  },
+  {
+   "niveau": "inspecteur",
+   "q": "Ai-je audité la traçabilité (notice + page) et signalé toute source incomplète ou tableau non extrait ?"
+  },
+  {
+   "niveau": "inspecteur",
+   "q": "Ai-je tenu la frontière réglementaire (barème/plafond fiscal → source officielle datée, « évolutif ») ?"
+  },
+  {
+   "niveau": "inspecteur",
+   "q": "Ai-je nommé ce qui doit remonter à une validation humaine / inspecteur (critères d'escalade) ?"
+  }
+ ],
+ "criteres_escalade": [
+  "Tarif ou cotisation non chiffré dans la notice (tableau non extrait) → renvoyer au devis/tarificateur officiel.",
+  "Contradiction réelle entre deux notices sur le même point → signaler, ne pas trancher.",
+  "Question hors périmètre de la base (contrat, garantie ou option absent) → le dire clairement.",
+  "Chiffre réglementaire (barème, abattement, plafond fiscal, âge de déductibilité) → source officielle, jamais de mémoire.",
+  "Donnée client nominative dans la question → demander une reformulation anonyme avant de traiter.",
+  "Décision d'opportunité (souscrire ou non, arbitrer un budget) → c'est le conseiller et le client, pas l'IA."
+ ],
+ "stats_base": {
+  "contrats": 9,
+  "elements_cites": 533,
+  "pct_avec_page_notice": 73,
+  "garanties": 50,
+  "exclusions": 33,
+  "conditions_souscription": 19,
+  "points_de_vigilance": 61
+ }
+}

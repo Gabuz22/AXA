@@ -12,6 +12,7 @@
 **Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
 
 
+- **[Niveaux de compétence](niveaux-competence.html)** — escalier de rigueur conseiller → inspecteur + grille d'auto-évaluation (JSON)
 - **[Routage par type de question](routage.html)** — détection d'entités + verrouillage du contrat explicite + périmètre
 - **[Pertinence pondérée](pertinence.html)** — score 0-5 concept×contrat (garantie centrale vs mention), avec preuves
 - **[Qualité du routage](qualite-routage.html)** — métriques de précision : contrats, périmètre, sources, statut ; erreurs par famille
@@ -33,4 +34,4 @@
 - **[Jeux de tests](tests.html)** — ≥ 50 questions de contrôle + parcours attendus
 
 ## Formats machine
-- [concepts.json](concepts.json) · [planificateur.json](planificateur.json) · [couverture-recherche.json](couverture-recherche.json) · [preuves.json](preuves.json) · [tests.json](tests.json)
+- [niveaux-competence.json](niveaux-competence.json) · [concepts.json](concepts.json) · [planificateur.json](planificateur.json) · [couverture-recherche.json](couverture-recherche.json) · [preuves.json](preuves.json) · [tests.json](tests.json)

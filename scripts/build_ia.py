@@ -178,7 +178,7 @@ for g in GLOSSAIRE:
     for en in (g.get("entrees") or []): add_src(en.get("source"), (en.get("contrat"), "definition"))
 
 # ------------------------------------------------------------------ gabarit HTML / MD
-CATS_NAV = [("start", "START"), ("index", "Index"), ("instructions-maitres", "Instructions maîtres"), ("guide-ia", "Guide IA"), ("outils", "Outils"), ("routage", "Routage"), ("pertinence", "Pertinence"),
+CATS_NAV = [("start", "START"), ("index", "Index"), ("instructions-maitres", "Instructions maîtres"), ("guide-ia", "Guide IA"), ("niveaux-competence", "Niveaux"), ("outils", "Outils"), ("routage", "Routage"), ("pertinence", "Pertinence"),
             ("qualite-routage", "Qualité routage"), ("hierarchie", "Hiérarchie"), ("choix-sources", "Choix sources"),
             ("methode-question-complexe", "Méthode"), ("contrats", "Contrats"), ("garanties", "Garanties"), ("exclusions", "Exclusions"),
             ("definitions", "Définitions"), ("conditions", "Conditions"), ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
@@ -686,6 +686,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 - Preuve à citer → [preuves](preuves.html) · [notices](notices.html)
 - Question complexe → [méthode](methode-question-complexe.html) · [planificateur](planificateur.html)
 - Réglementaire vs contractuel → [réglementation](reglementation.html) · [sources officielles](sources-officielles.html) · [hiérarchie](hierarchie.html)
+- **Monter en rigueur** (répondre niveau conseiller, contrôler niveau inspecteur) → [niveaux de compétence](niveaux-competence.html)
 - Limites de la base → [couverture](couverture.html) · [qualité du routage](qualite-routage.html)
 - Version machine de cette carte : [selection.json](selection.json) · tout le reste : [ai-manifest.json](ai-manifest.json)
 
@@ -755,7 +756,7 @@ def build_static_pages(theme_counts):
     write("guide-ia.md", GUIDE_MD)
     write("guide-ia.html", page_html("Guide IA", renderish(GUIDE_MD), depth, SITE + "/ia/guide-ia.html"))
     # Manifeste lisible + ai-manifest.json
-    pages = ["start", "index", "instructions-maitres", "guide-ia", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
+    pages = ["start", "index", "instructions-maitres", "guide-ia", "niveaux-competence", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
              "planificateur", "concepts", "couverture-recherche",
              "comparateur", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
              "sources-officielles", "reglementation", "surveillance", "connaissances-dynamiques", "matrices",
@@ -814,6 +815,7 @@ def build_static_pages(theme_counts):
             "question_complexe_multi_contrats": ["methode-question-complexe", "planificateur", "routage"],
             "reglementaire_vs_contractuel": ["reglementation", "sources-officielles", "hierarchie"],
             "etat_et_limites_de_la_base": ["couverture", "maturite", "qualite-routage"],
+            "hausser_la_rigueur_conseiller_ou_inspecteur": ["niveaux-competence", "instructions-maitres"],
         },
     }
     for _mods in selection["questions"].values():
@@ -1207,9 +1209,128 @@ def build_methode():
     write("methode-question-complexe.md", METHODE_MD)
     write("methode-question-complexe.html", page_html("Méthode question complexe", renderish(METHODE_MD), depth, SITE + "/ia/methode-question-complexe.html"))
 
+def build_niveaux():
+    """Escalier de rigueur : comment une IA passe d'une réponse « correcte » à une réponse de niveau
+    conseiller, puis de niveau inspecteur fonction support. C'est une page de MÉTHODE (comme guide-ia
+    ou methode-question-complexe), pas une projection de données — mais chaque exigence renvoie à une
+    page/outil RÉEL de la base, et les statistiques sont calculées sur les éléments chargés (jamais
+    inventées). But : faire monter en compétence ET en rigueur les IA qui consultent la base."""
+    depth = 0
+    CITEES = ["garanties", "exclusions", "definitions", "conditions", "declencheurs",
+              "plafonds", "franchises", "options", "cotisations", "delais", "fiscalite", "points-vigilance", "formules"]
+    tot = avec_page = 0
+    for k in CITEES:
+        for e in ELEMENTS.get(k, []):
+            tot += 1
+            s = e.get("src") or {}
+            if s and s.get("page"): avec_page += 1
+    pct_page = round(100 * avec_page / tot) if tot else 0
+    n_gar, n_exc = len(ELEMENTS.get("garanties", [])), len(ELEMENTS.get("exclusions", []))
+    n_pv, n_cond = len(ELEMENTS.get("points-vigilance", [])), len(ELEMENTS.get("conditions", []))
+    nc = len(CONTRACT_META)
+
+    # Grille d'auto-évaluation exploitable par une IA (le « outil » : une checklist machine).
+    grille = [
+        {"niveau": "socle", "q": "Chaque fait contractuel de ma réponse porte-t-il [Contrat — Notice, p.X] ?"},
+        {"niveau": "socle", "q": "Ai-je séparé le contractuel du réglementaire, sans aucun chiffre de barème donné de mémoire ?"},
+        {"niveau": "socle", "q": "Ai-je signalé ce qui est absent de la base au lieu de le combler ?"},
+        {"niveau": "socle", "q": "Ma réponse est-elle exempte de donnée client nominative ?"},
+        {"niveau": "conseiller", "q": "Chaque garantie citée est-elle accompagnée de ses exclusions ET de ses conditions (déclencheurs, franchise, carence, plafond) ?"},
+        {"niveau": "conseiller", "q": "Ai-je vérifié l'éligibilité (âge, statut d'adhésion) quand la question porte sur un contrat souscriptible ?"},
+        {"niveau": "conseiller", "q": "Ai-je distingué une garantie centrale d'une simple mention (pertinence pondérée) ?"},
+        {"niveau": "conseiller", "q": "Pour un cas client : ai-je structuré besoin prioritaire → contrats candidats → couvert/trou/doublon → question à poser ?"},
+        {"niveau": "conseiller", "q": "Ai-je donné au conseiller une action concrète (quoi vérifier, quelle question, quelle page de notice) ?"},
+        {"niveau": "inspecteur", "q": "Quand plusieurs contrats traitent le même point, ai-je comparé et signalé explicitement les divergences ?"},
+        {"niveau": "inspecteur", "q": "Ai-je balayé toutes les catégories du contrat pour n'omettre aucune exclusion/condition/plafond/franchise/point de vigilance ?"},
+        {"niveau": "inspecteur", "q": "Ai-je audité la traçabilité (notice + page) et signalé toute source incomplète ou tableau non extrait ?"},
+        {"niveau": "inspecteur", "q": "Ai-je tenu la frontière réglementaire (barème/plafond fiscal → source officielle datée, « évolutif ») ?"},
+        {"niveau": "inspecteur", "q": "Ai-je nommé ce qui doit remonter à une validation humaine / inspecteur (critères d'escalade) ?"},
+    ]
+    escalade = [
+        "Tarif ou cotisation non chiffré dans la notice (tableau non extrait) → renvoyer au devis/tarificateur officiel.",
+        "Contradiction réelle entre deux notices sur le même point → signaler, ne pas trancher.",
+        "Question hors périmètre de la base (contrat, garantie ou option absent) → le dire clairement.",
+        "Chiffre réglementaire (barème, abattement, plafond fiscal, âge de déductibilité) → source officielle, jamais de mémoire.",
+        "Donnée client nominative dans la question → demander une reformulation anonyme avant de traiter.",
+        "Décision d'opportunité (souscrire ou non, arbitrer un budget) → c'est le conseiller et le client, pas l'IA.",
+    ]
+    donnees = {
+        "objectif": "Faire monter une IA de « réponse correcte » à « niveau conseiller » puis « niveau inspecteur fonction support ». "
+                    "Chaque niveau AJOUTE des contrôles ; aucun ne remplace le socle. À passer sur sa propre réponse AVANT de l'envoyer.",
+        "niveaux": [
+            {"id": "socle", "nom": "Répondeur fiable", "resume": "Le plancher, jamais négociable : sourcé, sans invention, sans donnée client.",
+             "en_dessous": "ne pas répondre", "pages": ["start", "instructions-maitres", "preuves"]},
+            {"id": "conseiller", "nom": "Niveau conseiller", "resume": "Complétude utile au client : garanties avec leurs exclusions et conditions, éligibilité, structure de cas client, action concrète.",
+             "ajoute_sur": "socle", "pages": ["exclusions", "conditions", "franchises", "plafonds", "pertinence", "methode-question-complexe", "routage"]},
+            {"id": "inspecteur", "nom": "Niveau inspecteur fonction support", "resume": "Rigueur de contrôle : cohérence inter-contrats, exhaustivité vérifiée, traçabilité auditée, frontière réglementaire tenue, escalade explicite.",
+             "ajoute_sur": "conseiller", "pages": ["comparateur", "matrices", "points-vigilance", "reglementation", "sources-officielles", "couverture"]},
+        ],
+        "grille_auto_evaluation": grille,
+        "criteres_escalade": escalade,
+        "stats_base": {"contrats": nc, "elements_cites": tot, "pct_avec_page_notice": pct_page,
+                       "garanties": n_gar, "exclusions": n_exc, "conditions_souscription": n_cond, "points_de_vigilance": n_pv},
+    }
+    write("niveaux-competence.json", json.dumps(donnees, ensure_ascii=False, indent=1))
+
+    def grille_bloc(niv):
+        return "\n".join("- [ ] %s" % g["q"] for g in grille if g["niveau"] == niv)
+    md = md_hdr("Niveaux de compétence — conseiller puis inspecteur",
+                "Comment une IA passe d'une réponse correcte à une réponse de niveau conseiller, puis de niveau inspecteur fonction support. "
+                "Chaque niveau ajoute des contrôles vérifiables ; la grille se passe sur sa propre réponse avant de l'envoyer.") + """
+## Pourquoi cette page
+Une réponse peut être **juste et pauvre**. La base permet plus : répondre **comme un bon conseiller**, puis
+**contrôler comme un inspecteur fonction support**. Les trois niveaux s'**empilent** — l'inspecteur fait tout ce
+que fait le conseiller, plus le contrôle. On ne descend jamais sous le socle.
+
+Repères de la base (calculés, non déclaratifs) : **%(nc)d contrats**, **%(tot)d éléments citables**, dont
+**%(pp)d %%** portent une page de notice précise — %(ng)d garanties, %(ne)d exclusions, %(ncond)d conditions de
+souscription, %(npv)d points de vigilance. C'est ce matériau que les niveaux exploitent.
+
+## Niveau 0 — Répondeur fiable (le plancher, jamais négociable)
+Déjà exigé par le [START](start.html). En dessous, **on ne répond pas**.
+%(g_socle)s
+
+## Niveau 1 — Niveau conseiller (répondre comme un bon conseiller)
+Ajoute la **complétude utile au client**. Une garantie nue n'est pas une réponse de conseiller.
+- Toute garantie citée **avec ses exclusions ET ses conditions** — déclencheurs, franchise, délai de carence, plafond : [exclusions](exclusions.html) · [conditions](conditions.html) · [franchises](franchises.html) · [plafonds](plafonds.html).
+- **Éligibilité vérifiée** : conditions d'adhésion (âge, statut) rappelées dès que la question porte sur un contrat souscriptible : [conditions](conditions.html).
+- **Garantie centrale distinguée d'une simple mention** (pertinence pondérée) : [pertinence](pertinence.html).
+- **Cas client structuré** : besoin prioritaire → contrats candidats → couvert / trou / doublon → question à poser au client : [méthode](methode-question-complexe.html) · [routage](routage.html).
+- **Une action concrète** pour le conseiller : quoi vérifier, quelle question poser, quelle page de notice ouvrir.
+
+Auto-contrôle du niveau conseiller :
+%(g_conseiller)s
+
+## Niveau 2 — Niveau inspecteur fonction support (contrôler, pas seulement conseiller)
+Ajoute la **rigueur de contrôle**. L'inspecteur ne se contente pas d'une réponse juste : il la **met à l'épreuve**.
+- **Cohérence inter-contrats** : quand plusieurs contrats traitent le même concept, comparer et **signaler les divergences** (une carence de 3 mois ici, 12 là) : [comparateur](comparateur.html) · [matrices](matrices.html).
+- **Exhaustivité vérifiée** : pour la garantie citée, s'assurer qu'**aucune** exclusion / condition / plafond / franchise / point de vigilance n'est omis : [points de vigilance](points-vigilance.html).
+- **Traçabilité auditée** : chaque fait porte notice + page ; une source incomplète ou un tableau non extrait se **dit**, jamais présenté comme certain.
+- **Frontière réglementaire tenue** : tout chiffre de barème / plafond fiscal → **source officielle datée** et marquée « évolutif », jamais transformé en donnée contractuelle : [réglementation](reglementation.html) · [sources officielles](sources-officielles.html).
+- **Angles morts** : signaler ce que la notice ne tranche pas et les cas limites : [points de vigilance](points-vigilance.html) · [couverture](couverture.html).
+- **Escalade** : nommer ce qui doit remonter à une validation humaine (ci-dessous).
+
+Auto-contrôle du niveau inspecteur :
+%(g_inspecteur)s
+
+## Ce qui doit remonter (critères d'escalade)
+L'inspecteur **signale** ces cas ; il ne tranche jamais seul.
+%(escalade)s
+
+## La grille, en un fetch
+Version machine exploitable directement : [niveaux-competence.json](niveaux-competence.json) — les 14 questions oui/non,
+les trois niveaux et leurs pages, les critères d'escalade. Une IA peut s'en servir pour **noter sa propre réponse**
+avant de la rendre.
+""" % {"nc": nc, "tot": tot, "pp": pct_page, "ng": n_gar, "ne": n_exc, "ncond": n_cond, "npv": n_pv,
+       "g_socle": grille_bloc("socle"), "g_conseiller": grille_bloc("conseiller"), "g_inspecteur": grille_bloc("inspecteur"),
+       "escalade": "\n".join("- %s" % e for e in escalade)}
+    write("niveaux-competence.md", md)
+    write("niveaux-competence.html", page_html("Niveaux de compétence", renderish(md), depth, SITE + "/ia/niveaux-competence.html"))
+
 def build_outils():
     depth = 0
-    items = [("routage", "Routage par type de question", "détection d'entités + verrouillage du contrat explicite + périmètre"),
+    items = [("niveaux-competence", "Niveaux de compétence", "escalier de rigueur conseiller → inspecteur + grille d'auto-évaluation (JSON)"),
+             ("routage", "Routage par type de question", "détection d'entités + verrouillage du contrat explicite + périmètre"),
              ("pertinence", "Pertinence pondérée", "score 0-5 concept×contrat (garantie centrale vs mention), avec preuves"),
              ("qualite-routage", "Qualité du routage", "métriques de précision : contrats, périmètre, sources, statut ; erreurs par famille"),
              ("planificateur", "Planificateur de recherche", "question → plan (concept, synonymes, contrats, catégories, notices)"),
@@ -1232,8 +1353,8 @@ def build_outils():
     hb = ['<h1>Outils IA — circulation & recherche</h1><p>Décomposer · parcourir · vérifier · comparer · prouver · assembler. Tout est dérivé et sourcé.</p><ul>']
     for k, t, d in items:
         md.append("- **[%s](%s.html)** — %s" % (t, k, d)); hb.append('<li><a href="%s.html"><strong>%s</strong></a> — %s (aussi <a href="%s.md">.md</a>)</li>' % (k, html.escape(t), html.escape(d), k))
-    md += ["", "## Formats machine", "- [concepts.json](concepts.json) · [planificateur.json](planificateur.json) · [couverture-recherche.json](couverture-recherche.json) · [preuves.json](preuves.json) · [tests.json](tests.json)"]
-    hb.append('</ul><h2>Formats machine</h2><p><a href="concepts.json">concepts.json</a> · <a href="planificateur.json">planificateur.json</a> · <a href="couverture-recherche.json">couverture-recherche.json</a> · <a href="preuves.json">preuves.json</a> · <a href="tests.json">tests.json</a></p>')
+    md += ["", "## Formats machine", "- [niveaux-competence.json](niveaux-competence.json) · [concepts.json](concepts.json) · [planificateur.json](planificateur.json) · [couverture-recherche.json](couverture-recherche.json) · [preuves.json](preuves.json) · [tests.json](tests.json)"]
+    hb.append('</ul><h2>Formats machine</h2><p><a href="niveaux-competence.json">niveaux-competence.json</a> · <a href="concepts.json">concepts.json</a> · <a href="planificateur.json">planificateur.json</a> · <a href="couverture-recherche.json">couverture-recherche.json</a> · <a href="preuves.json">preuves.json</a> · <a href="tests.json">tests.json</a></p>')
     write("outils.md", "\n".join(md)); write("outils.html", page_html("Outils IA", "".join(hb), depth, SITE + "/ia/outils.html"))
 
 def _quality_tests():
@@ -1945,6 +2066,7 @@ def build():
     build_comparateur(concepts)
     build_preuves()
     build_methode()
+    build_niveaux()                  # escalier de rigueur conseiller → inspecteur + grille machine
     metrics = build_tests(concepts)  # tests-qualité + harness de précision
     # Infrastructure de raisonnement documentaire (Parties 2–10, 12)
     build_hierarchie()

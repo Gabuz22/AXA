@@ -49,6 +49,10 @@
    "couverture",
    "maturite",
    "qualite-routage"
+  ],
+  "hausser_la_rigueur_conseiller_ou_inspecteur": [
+   "niveaux-competence",
+   "instructions-maitres"
   ]
  }
 }

@@ -28,6 +28,7 @@ Index → (Contrat | Catégorie | Thème) → Élément `#id` → Notice → Pag
 - [index](index.html) · [.md](index.md)
 - [instructions-maitres](instructions-maitres.html) · [.md](instructions-maitres.md)
 - [guide-ia](guide-ia.html) · [.md](guide-ia.md)
+- [niveaux-competence](niveaux-competence.html) · [.md](niveaux-competence.md)
 - [outils](outils.html) · [.md](outils.md)
 - [routage](routage.html) · [.md](routage.md)
 - [pertinence](pertinence.html) · [.md](pertinence.md)

@@ -35,6 +35,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 - Preuve à citer → [preuves](preuves.html) · [notices](notices.html)
 - Question complexe → [méthode](methode-question-complexe.html) · [planificateur](planificateur.html)
 - Réglementaire vs contractuel → [réglementation](reglementation.html) · [sources officielles](sources-officielles.html) · [hiérarchie](hierarchie.html)
+- **Monter en rigueur** (répondre niveau conseiller, contrôler niveau inspecteur) → [niveaux de compétence](niveaux-competence.html)
 - Limites de la base → [couverture](couverture.html) · [qualité du routage](qualite-routage.html)
 - Version machine de cette carte : [selection.json](selection.json) · tout le reste : [ai-manifest.json](ai-manifest.json)
 
