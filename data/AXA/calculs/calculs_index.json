@@ -1,0 +1,694 @@
+{
+  "meta": {
+    "type": "calculs_index",
+    "generated_at": "2026-06-13T11:41:15.890Z",
+    "read_only_sources": true,
+    "source": "data/AXA/ia/axa_formules_index.json",
+    "avertissement": "Couche calculs indépendante. Ne modifie aucun JSON contractuel. Les formules estimées exigent une validation humaine.",
+    "total": 22,
+    "executables": 5,
+    "estimees": 4
+  },
+  "formules": [
+    {
+      "id": "axa_ma_protection_accident_2024-03_formule_01",
+      "nom": "Indice AQV",
+      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "contrat_id": "axa_ma_protection_accident_2024-03",
+      "famille": "prévoyance",
+      "usage": "autre",
+      "formule": "AQV = arrondi_supérieur(DFP + PEP + SE) ; indemnité = tableau[AQV][tranche d'âge à la consolidation]",
+      "rhs": "tableau[AQV][tranche d'âge à la consolidation]",
+      "executable": false,
+      "raison_non_exec": "référence un barème / tableau",
+      "variables_tokens": [],
+      "variables_desc": [
+        "DFP: taux de déficit fonctionnel permanent (0-100)",
+        "PEP: préjudice esthétique permanent (0-7)",
+        "SE: souffrances endurées (0-7)",
+        "âge à la date de consolidation"
+      ],
+      "niveau_confiance": 98,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 8,
+        "section": "Barème AQV p.8",
+        "pdf_ids": [
+          "axa_pdf_07"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_ma_protection_accident_2024-03_formule_02",
+      "nom": "Renonciation vente à distance — cotisation due",
+      "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "contrat_id": "axa_ma_protection_accident_2024-03",
+      "famille": "prévoyance",
+      "usage": "cotisation",
+      "formule": "montant_dû = cotisation_annuelle × nombre_de_jours_garantis / 365",
+      "rhs": "cotisation_annuelle * nombre_de_jours_garantis / 365",
+      "executable": true,
+      "raison_non_exec": null,
+      "variables_tokens": [
+        "cotisation_annuelle",
+        "nombre_de_jours_garantis"
+      ],
+      "variables_desc": [
+        "cotisation_annuelle (Conditions particulières)",
+        "nombre_de_jours_garantis"
+      ],
+      "niveau_confiance": 97,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+        "page": 19,
+        "section": "6.1 Fourniture à distance, p.19",
+        "pdf_ids": [
+          "axa_pdf_07"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_avizen_2025-04_formule_01",
+      "nom": "Prestation invalidité (rente ou capital)",
+      "contrat": "Avizen",
+      "contrat_id": "axa_avizen_2025-04",
+      "famille": "prévoyance",
+      "usage": "autre",
+      "formule": "prestation = montant_garanti_à_la_consolidation × n(taux_invalidité_fonctionnelle) / 100",
+      "rhs": "montant_garanti_à_la_consolidation * n(taux_invalidité_fonctionnelle) / 100",
+      "executable": false,
+      "raison_non_exec": "fonction non standard: n",
+      "variables_tokens": [],
+      "variables_desc": [
+        "montant_garanti (certificat d'adhésion)",
+        "n : taux d'indemnisation du tableau p.16"
+      ],
+      "niveau_confiance": 97,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 16,
+        "section": "Tableau taux d'indemnisation p.16",
+        "pdf_ids": [
+          "axa_pdf_01"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_avizen_2025-04_formule_02",
+      "nom": "Exonération ITT",
+      "contrat": "Avizen",
+      "contrat_id": "axa_avizen_2025-04",
+      "famille": "prévoyance",
+      "usage": "cotisation",
+      "formule": "remboursement = (cotisation_annuelle / 365) × jours_d_arrêt_total_indemnisés",
+      "rhs": "(cotisation_annuelle / 365) * jours_d_arrêt_total_indemnisés",
+      "executable": true,
+      "raison_non_exec": null,
+      "variables_tokens": [
+        "cotisation_annuelle",
+        "jours_d_arrêt_total_indemnisés"
+      ],
+      "variables_desc": [
+        "cotisation_annuelle",
+        "jours d'arrêt indemnisés"
+      ],
+      "niveau_confiance": 97,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 17,
+        "section": "§2.2.7 p.17",
+        "pdf_ids": [
+          "axa_pdf_01"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_avizen_2025-04_formule_03",
+      "nom": "Taux d'indemnisation zone linéaire 11-30 %",
+      "contrat": "Avizen",
+      "contrat_id": "axa_avizen_2025-04",
+      "famille": "prévoyance",
+      "usage": "autre",
+      "formule": "pour 11 ≤ t ≤ 30 : n = 1,5 × (t − 10) ; au-delà de 30 la progression n'est plus linéaire (lecture du tableau obligatoire) ; t ≥ 66 : n = 100",
+      "rhs": "100",
+      "executable": false,
+      "raison_non_exec": "constante / pas de calcul",
+      "variables_tokens": [],
+      "variables_desc": [
+        "t : taux d'invalidité fonctionnelle (%)"
+      ],
+      "niveau_confiance": 85,
+      "confiance_label": "moyen",
+      "formule_estimee": true,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+        "page": 16,
+        "section": "Tableau taux d'indemnisation p.16",
+        "pdf_ids": [
+          "axa_pdf_01"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_avizen_pro_2025-04_formule_01",
+      "nom": "Prestation invalidité (croisé)",
+      "contrat": "Avizen Pro",
+      "contrat_id": "axa_avizen_pro_2025-04",
+      "famille": "prévoyance",
+      "usage": "autre",
+      "formule": "prestation = montant_certificat × taux_indemnisation(taux_croisé(prof, fonctionnel)) / 100",
+      "rhs": "montant_certificat * taux_indemnisation(taux_croisé(prof, fonctionnel)) / 100",
+      "executable": false,
+      "raison_non_exec": "liste / décimales descriptives (virgules)",
+      "variables_tokens": [],
+      "variables_desc": [
+        "taux professionnel (expertise amiable)",
+        "taux fonctionnel (barème AT SS)",
+        "tables p.19"
+      ],
+      "niveau_confiance": 95,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 19,
+        "section": "Tableaux p.19",
+        "pdf_ids": [
+          "axa_pdf_02"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_avizen_pro_2025-04_formule_02",
+      "nom": "Prestation invalidité (option professionnelle)",
+      "contrat": "Avizen Pro",
+      "contrat_id": "axa_avizen_pro_2025-04",
+      "famille": "prévoyance",
+      "usage": "autre",
+      "formule": "si 11/15/33 ≤ n < 66 : taux_indemnisation = n/66 ; si n ≥ 66 : 100 % ; prestation = montant_certificat × taux_indemnisation",
+      "rhs": "montant_certificat * taux_indemnisation",
+      "executable": true,
+      "raison_non_exec": null,
+      "variables_tokens": [
+        "montant_certificat",
+        "taux_indemnisation"
+      ],
+      "variables_desc": [
+        "n : taux d'invalidité professionnelle"
+      ],
+      "niveau_confiance": 98,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 20,
+        "section": "§2.2.5 c)2 p.20",
+        "pdf_ids": [
+          "axa_pdf_02"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_avizen_pro_2025-04_formule_03",
+      "nom": "Exonération ITT",
+      "contrat": "Avizen Pro",
+      "contrat_id": "axa_avizen_pro_2025-04",
+      "famille": "prévoyance",
+      "usage": "cotisation",
+      "formule": "remboursement = cotisation_annuelle/365 × jours_indemnisés",
+      "rhs": "cotisation_annuelle/365 * jours_indemnisés",
+      "executable": true,
+      "raison_non_exec": null,
+      "variables_tokens": [
+        "cotisation_annuelle",
+        "jours_indemnisés"
+      ],
+      "variables_desc": [
+        "cotisation annuelle"
+      ],
+      "niveau_confiance": 97,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+        "page": 24,
+        "section": "§2.2.9 p.24",
+        "pdf_ids": [
+          "axa_pdf_02"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_entourage_2025-06_formule_01",
+      "nom": "Rente dépendance totale",
+      "contrat": "Entour'Age",
+      "contrat_id": "axa_entourage_2025-06",
+      "famille": "prévoyance",
+      "usage": "autre",
+      "formule": "rente_mensuelle = montant_souscrit × taux_revalorisation(adhésion→reconnaissance) × coefficient_réduction_éventuel ; en dépendance partielle : × 0,5",
+      "rhs": "en dépendance partielle : * 0,5",
+      "executable": false,
+      "raison_non_exec": "liste / décimales descriptives (virgules)",
+      "variables_tokens": [],
+      "variables_desc": [
+        "montant_souscrit (500-3 000 €)",
+        "taux de revalorisation décidé par le comité paritaire",
+        "coefficient de réduction (barème en vigueur, si résiliation après ≥ 8 ans)"
+      ],
+      "niveau_confiance": 95,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 21,
+        "section": "§4.3.1.1 p.21",
+        "pdf_ids": [
+          "axa_pdf_03"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_entourage_2025-06_formule_02",
+      "nom": "Capital décès remboursement des cotisations",
+      "contrat": "Entour'Age",
+      "contrat_id": "axa_entourage_2025-06",
+      "famille": "prévoyance",
+      "usage": "autre",
+      "formule": "capital = Σ cotisations versées (nettes des frais de fractionnement) entre la date d'effet de la garantie et la date du décès",
+      "rhs": "Σ cotisations versées (nettes des frais de fractionnement) entre la date d'effet de la garantie et la date du décès",
+      "executable": false,
+      "raison_non_exec": "fonction non standard: versées",
+      "variables_tokens": [],
+      "variables_desc": [
+        "cotisations versées",
+        "frais de fractionnement"
+      ],
+      "niveau_confiance": 97,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+        "page": 27,
+        "section": "§6.2.2 p.27",
+        "pdf_ids": [
+          "axa_pdf_03"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_essenciel_2025-06_formule_01",
+      "nom": "Capital revalorisé",
+      "contrat": "Essen'Ciel (assurance obsèques)",
+      "contrat_id": "axa_essenciel_2025-06",
+      "famille": "prévoyance",
+      "usage": "autre",
+      "formule": "capital(t) = capital_souscrit × 1,01^t (+ participation aux bénéfices éventuelle)",
+      "rhs": "capital_souscrit * 1,01^t (+ participation aux bénéfices éventuelle)",
+      "executable": false,
+      "raison_non_exec": "liste / décimales descriptives (virgules)",
+      "variables_tokens": [],
+      "variables_desc": [
+        "t : années d'adhésion entières"
+      ],
+      "niveau_confiance": 95,
+      "confiance_label": "bon",
+      "formule_estimee": true,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 20,
+        "section": "§5.2.1 p.20 + exemple p.7",
+        "pdf_ids": [
+          "axa_pdf_04"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_essenciel_2025-06_formule_02",
+      "nom": "Pénalité de rachat",
+      "contrat": "Essen'Ciel (assurance obsèques)",
+      "contrat_id": "axa_essenciel_2025-06",
+      "famille": "prévoyance",
+      "usage": "valeur_de_rachat",
+      "formule": "pénalité(année n) = max(0 ; 5 % − 0,5 % × (n − 1)) × valeur_de_rachat, nulle à partir de la 11e année",
+      "rhs": "5 % − 0,5 % * (n − 1)) * valeur_de_rachat, nulle à partir de la 11e année",
+      "executable": false,
+      "raison_non_exec": "pourcentages / valeurs descriptives",
+      "variables_tokens": [],
+      "variables_desc": [
+        "n : année d'adhésion du rachat"
+      ],
+      "niveau_confiance": 92,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 33,
+        "section": "§8.3 p.33",
+        "pdf_ids": [
+          "axa_pdf_04"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_essenciel_2025-06_formule_03",
+      "nom": "Valeur de rachat",
+      "contrat": "Essen'Ciel (assurance obsèques)",
+      "contrat_id": "axa_essenciel_2025-06",
+      "famille": "prévoyance",
+      "usage": "valeur_de_rachat",
+      "formule": "VR(t) = provision mathématique(t) − pénalité éventuelle ; PM = engagement futur de l'assureur − engagement futur de l'assuré (calcul actuariel non reproduit dans la notice ; seuls les tableaux d'exemples chiffrés sont contractuels)",
+      "rhs": "seuls les tableaux d'exemples chiffrés sont contractuels)",
+      "executable": false,
+      "raison_non_exec": "référence un barème / tableau",
+      "variables_tokens": [],
+      "variables_desc": [
+        "âge à l'adhésion",
+        "années révolues de paiement",
+        "capital choisi",
+        "type et durée de cotisation"
+      ],
+      "niveau_confiance": 60,
+      "confiance_label": "faible",
+      "formule_estimee": true,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+        "page": 35,
+        "section": "§8.3 p.33-35",
+        "pdf_ids": [
+          "axa_pdf_04"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_masterlife_credit_2024-10_formule_01",
+      "nom": "IJ incapacité (plafond)",
+      "contrat": "Masterlife CREDIT",
+      "contrat_id": "axa_masterlife_credit_2024-10",
+      "famille": "assurance_emprunteur",
+      "usage": "autre",
+      "formule": "IJ_max = échéance_du_prêt / N × quotité, avec N = 30 (mensuel), 90 (trimestriel), 180 (semestriel), 365 (annuel) ; prêt in fine : IJ = intérêts_annuels/365",
+      "rhs": "intérêts_annuels/365",
+      "executable": true,
+      "raison_non_exec": null,
+      "variables_tokens": [
+        "intérêts_annuels"
+      ],
+      "variables_desc": [
+        "échéance du prêt",
+        "périodicité",
+        "quotité assurée"
+      ],
+      "niveau_confiance": 97,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 12,
+        "section": "Article 4.1.a p.12",
+        "pdf_ids": [
+          "axa_pdf_10"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_masterlife_credit_2024-10_formule_02",
+      "nom": "IJ invalidité partielle",
+      "contrat": "Masterlife CREDIT",
+      "contrat_id": "axa_masterlife_credit_2024-10",
+      "famille": "assurance_emprunteur",
+      "usage": "autre",
+      "formule": "IJ = IJ_max × n_indemnisation(taux_croisé)/100, pour 33 ≤ taux < 66 ; 100 % si ≥ 66 ; 0 si < 33",
+      "rhs": "0 si < 33",
+      "executable": false,
+      "raison_non_exec": "symboles non arithmétiques",
+      "variables_tokens": [],
+      "variables_desc": [
+        "taux croisé (tableau p.15)"
+      ],
+      "niveau_confiance": 96,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 15,
+        "section": "Tableaux p.15",
+        "pdf_ids": [
+          "axa_pdf_10"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_masterlife_credit_2024-10_formule_03",
+      "nom": "Exonération incapacité",
+      "contrat": "Masterlife CREDIT",
+      "contrat_id": "axa_masterlife_credit_2024-10",
+      "famille": "assurance_emprunteur",
+      "usage": "cotisation",
+      "formule": "remboursement = cotisation_annuelle/365 × max(0, jours_incapacité − 90)",
+      "rhs": "cotisation_annuelle/365 * max(0, jours_incapacité − 90)",
+      "executable": false,
+      "raison_non_exec": "liste / décimales descriptives (virgules)",
+      "variables_tokens": [],
+      "variables_desc": [
+        "cotisation annuelle",
+        "jours d'incapacité"
+      ],
+      "niveau_confiance": 85,
+      "confiance_label": "moyen",
+      "formule_estimee": true,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+        "page": 16,
+        "section": "Article 4.4.a p.16",
+        "pdf_ids": [
+          "axa_pdf_10"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_excelium_vie_2026-05_formule_01",
+      "nom": "Valeur de rachat minimale support euros",
+      "contrat": "Excelium (assurance vie)",
+      "contrat_id": "axa_excelium_vie_2026-05",
+      "famille": "épargne",
+      "usage": "valeur_de_rachat",
+      "formule": "VR(n) = versement_net_initial × (1 − 0,008)^n",
+      "rhs": "versement_net_initial * (1 − 0,008)^n",
+      "executable": false,
+      "raison_non_exec": "liste / décimales descriptives (virgules)",
+      "variables_tokens": [],
+      "variables_desc": [
+        "n : années écoulées",
+        "taux de frais de gestion 0,8 %/an"
+      ],
+      "niveau_confiance": 97,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 46,
+        "section": "7.1.3 p.46-47",
+        "pdf_ids": [
+          "axa_pdf_05",
+          "axa_pdf_06"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_excelium_vie_2026-05_formule_02",
+      "nom": "Nombre d'UC/parts après frais",
+      "contrat": "Excelium (assurance vie)",
+      "contrat_id": "axa_excelium_vie_2026-05",
+      "famille": "épargne",
+      "usage": "valeur_de_rachat",
+      "formule": "N(n) = N0 × (1 − taux_mensuel)^(12n), avec taux_mensuel = 0,0669 % (Croissance), 0,0804 % (UC standard), 0,1014 % (UC pilotée), 0,1259 % (AXA Immo Avenir)",
+      "rhs": "N0 * (1 − taux_mensuel)^(12n), avec taux_mensuel = 0,0669 % (Croissance), 0,0804 % (UC standard), 0,1014 % (UC pilotée), 0,1259 % (AXA Immo Avenir)",
+      "executable": false,
+      "raison_non_exec": "pourcentages / valeurs descriptives",
+      "variables_tokens": [],
+      "variables_desc": [
+        "N0 : nombre initial de parts/UC"
+      ],
+      "niveau_confiance": 97,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 47,
+        "section": "7.1.3 p.47",
+        "pdf_ids": [
+          "axa_pdf_05",
+          "axa_pdf_06"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_excelium_vie_2026-05_formule_03",
+      "nom": "Prime mensuelle garantie Revalorisée",
+      "contrat": "Excelium (assurance vie)",
+      "contrat_id": "axa_excelium_vie_2026-05",
+      "famille": "épargne",
+      "usage": "cotisation",
+      "formule": "prime = capital_sous_risque_fin_de_mois × tarif_mensuel(âge)",
+      "rhs": "capital_sous_risque_fin_de_mois * tarif_mensuel(âge)",
+      "executable": false,
+      "raison_non_exec": "fonction non standard: tarif_mensuel",
+      "variables_tokens": [],
+      "variables_desc": [
+        "capital sous risque = max(0, montant_garanti − épargne)",
+        "tarif par âge (tableau p.17)"
+      ],
+      "niveau_confiance": 97,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 17,
+        "section": "4.2.2 p.17-18",
+        "pdf_ids": [
+          "axa_pdf_05",
+          "axa_pdf_06"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_excelium_vie_2026-05_formule_04",
+      "nom": "Montant garanti Revalorisée",
+      "contrat": "Excelium (assurance vie)",
+      "contrat_id": "axa_excelium_vie_2026-05",
+      "famille": "épargne",
+      "usage": "autre",
+      "formule": "MG = Σ versements_nets × Π(1 + taux_mensuel_LivretA) sur la période [mois suivant l'encaissement ; mois précédant le décès] − minorations proportionnelles aux rachats",
+      "rhs": "mois précédant le décès] − minorations proportionnelles aux rachats",
+      "executable": false,
+      "raison_non_exec": "référence un barème / tableau",
+      "variables_tokens": [],
+      "variables_desc": [
+        "taux mensuel du Livret A de chaque mois",
+        "rachats partiels"
+      ],
+      "niveau_confiance": 90,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
+        "page": 16,
+        "section": "4.2.2 p.16",
+        "pdf_ids": [
+          "axa_pdf_05",
+          "axa_pdf_06"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_ma_retraite_2026-05_formule_01",
+      "nom": "Valeur de transfert en parts/UC",
+      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "contrat_id": "axa_ma_retraite_2026-05",
+      "famille": "retraite",
+      "usage": "autre",
+      "formule": "N(1) = N0 × (1 − taux_mensuel)^12 × (1 − 1 % si transfert < 5 ans) ; taux_mensuel = 0,0669 % (Croissance), 0,0804 % (UC), 0,1259 % (AXA Immo Avenir)",
+      "rhs": "0,0669 % (Croissance), 0,0804 % (UC), 0,1259 % (AXA Immo Avenir)",
+      "executable": false,
+      "raison_non_exec": "pourcentages / valeurs descriptives",
+      "variables_tokens": [],
+      "variables_desc": [
+        "N0 parts/UC initiales"
+      ],
+      "niveau_confiance": 97,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 28,
+        "section": "9.2 p.28-29",
+        "pdf_ids": [
+          "axa_pdf_08",
+          "axa_pdf_09"
+        ]
+      },
+      "tableau_source_present": true
+    },
+    {
+      "id": "axa_ma_retraite_2026-05_formule_02",
+      "nom": "Rente initiale",
+      "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "contrat_id": "axa_ma_retraite_2026-05",
+      "famille": "retraite",
+      "usage": "autre",
+      "formule": "rente_annuelle = Σ_versements [épargne_relative_au_versement × coefficient(année_retraite, âge ; table en vigueur à la date du versement)] ; frais 1 % par arrérage déjà intégrés aux coefficients",
+      "rhs": "frais 1 % par arrérage déjà intégrés aux coefficients",
+      "executable": false,
+      "raison_non_exec": "pourcentages / valeurs descriptives",
+      "variables_tokens": [],
+      "variables_desc": [
+        "coefficients de l'annexe 13",
+        "âge à la liquidation",
+        "année de la retraite"
+      ],
+      "niveau_confiance": 90,
+      "confiance_label": "bon",
+      "formule_estimee": false,
+      "exemple_chiffre": null,
+      "source": {
+        "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+        "page": 48,
+        "section": "Annexe 13 p.48-49",
+        "pdf_ids": [
+          "axa_pdf_08",
+          "axa_pdf_09"
+        ]
+      },
+      "tableau_source_present": true
+    }
+  ]
+}

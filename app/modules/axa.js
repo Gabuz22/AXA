@@ -8,6 +8,7 @@ import { isEmpty } from "../services/humanView.js";
 import { renderMarkdown } from "../services/markdown.js";
 import { TUTORIEL, FAMILLE_META, ERREURS_TRANSVERSES, OBJECTIFS } from "./axa_content.js";
 import { prospection } from "./prospection.js";
+import { calculs } from "./calculs.js";
 
 // Sections réellement implémentées (garde-fou anti-lien-mort : un parcours ne s'affiche
 // que si sa cible existe). RDV/animateur s'activent automatiquement à leur implémentation.
@@ -51,7 +52,7 @@ export async function mount(el, ctx) {
   const human = true;
   el.innerHTML = `<div class="view-body">Chargement…</div>`;
   const body = el.querySelector(".view-body");
-  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistants, confiance, besoins, rdv, prospection, animateur, argumentaire, sources, pdf, historique, parametres }[section] || accueil;
+  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistants, confiance, besoins, rdv, prospection, calculs, animateur, argumentaire, sources, pdf, historique, parametres }[section] || accueil;
   try { await render(body, human, ctx); }
   catch (e) { body.innerHTML = `<p class="warn">Erreur de la section (${esc(e.message)}).</p>`; }
 }

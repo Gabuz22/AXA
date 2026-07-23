@@ -13,6 +13,7 @@ const NAV = [
     { id: "contrat", label: "Contrats", icon: "📑" },
     { id: "glossaire", label: "Glossaire", icon: "📖" },
     { id: "copilote", label: "Copilote de réponse", icon: "🧠" },
+    { id: "calculs", label: "Formules & calculs", icon: "🧮" },
     { id: "pdf", label: "Notices PDF", icon: "📄" },
   ]},
   { group: "Découvrir", items: [
@@ -54,6 +55,7 @@ const HELP = {
   contrat: { what: "La fiche contrat est un espace de travail : l'essentiel d'abord (à qui, quand, pièges, questions), puis le mécanisme, les actions (copilote, cas, RDV) et les preuves sourcées.", how: ["Ouvre un contrat — chaque fait renvoie à la notice à la bonne page.", "Les blocs « analyse IA » sont des aides à valider, jamais une preuve.", "Le lien « revenir à ta recherche » garde ton contexte."] },
   copilote: { what: "Réponse assemblée sans IA : preuves (Pack A) + raisonnement (Pack B), séparés.", how: ["Pose ta question.", "Copie le brief sourcé. La notice PDF fait foi."] },
   glossaire: { what: "Les termes définis dans les notices AXA, regroupés et sourcés.", how: ["Filtre un terme pour voir ses définitions par contrat."] },
+  calculs: { what: "Les formules des notices, chacune avec son document et sa page. Celles qui sont calculables le sont ici ; celles qui renvoient à un barème sont affichées avec la raison — on ne calcule jamais à la place d'un tableau.", how: ["Filtre par « calculables » pour ne voir que celles qui se calculent.", "Saisis les variables, le résultat s'affiche.", "Les formules « estimées » donnent une fourchette et exigent ta validation : elles ne sont pas contractuelles.", "Chaque formule renvoie à sa notice à la bonne page."] },
   pdf: { what: "Les notices contractuelles — la source qui fait foi.", how: ["Ouvre une notice, si possible à la bonne page."] },
   decouvrir: { what: "Ce qu'est Gabriel AXA, à qui il s'adresse et ce qu'il change — en moins de 5 minutes.", how: ["Lis la promesse et les exemples.", "Puis lance une recherche."] },
   cas_usage: { what: "Des exemples concrets et cliquables de ce que tu peux faire aujourd'hui.", how: ["Clique un exemple pour l'essayer directement."] },

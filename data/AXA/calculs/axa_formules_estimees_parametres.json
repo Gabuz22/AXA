@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "type": "parametres_formules_estimees",
+    "objectif": "Permettre de tester des hypothèses personnelles sans modifier les contrats.",
+    "rappel": "Toute formule estimée nécessite validation humaine.",
+    "json_contractuels_modifies": false,
+    "version": "2.9.2"
+  },
+  "formules": [
+    {
+      "id": "axa_avizen_2025-04_formule_03",
+      "nom": "Taux d'indemnisation linéaire Avizen, zone 11-30 %",
+      "contrat": "Avizen",
+      "contrat_id": "axa_avizen_2025-04",
+      "usage": "interpolation_bareme",
+      "statut": "estimee",
+      "expression_base": "1.5 * (taux_invalidite - 10)",
+      "variables": ["taux_invalidite"],
+      "parametres_modifiables": [
+        {"nom":"taux_invalidite","valeur_defaut":20,"unite":"%","min":11,"max":30,"pas":1,"marge_erreur_estimee":"0 % dans la zone linéaire vérifiée","justification_marge":"Relation vérifiée sur les points 11 à 30 du tableau.","source":"déduction tableau"}
+      ],
+      "marge_pourcentage": 0,
+      "niveau_confiance": 85,
+      "message_validation": "Formule estimée — validation humaine obligatoire."
+    },
+    {
+      "id": "axa_essenciel_2025-06_formule_01",
+      "nom": "Capital Essen'Ciel revalorisé",
+      "contrat": "Essen'Ciel (assurance obsèques)",
+      "contrat_id": "axa_essenciel_2025-06",
+      "usage": "capital_garanti",
+      "statut": "estimee",
+      "expression_base": "capital_souscrit * (1 + taux_revalorisation / 100) ^ annees",
+      "variables": ["capital_souscrit","taux_revalorisation","annees"],
+      "parametres_modifiables": [
+        {"nom":"capital_souscrit","valeur_defaut":5000,"unite":"EUR","min":1000,"max":15000,"pas":100,"marge_erreur_estimee":"sans marge si valeur contractuelle saisie","justification_marge":"Valeur issue des conditions particulières.","source":"travail personnel"},
+        {"nom":"taux_revalorisation","valeur_defaut":1,"unite":"%/an","min":0,"max":3,"pas":0.1,"marge_erreur_estimee":"±0,5 point testé","justification_marge":"Le minimum de 1 % est documenté, la participation éventuelle n'est pas garantie.","source":"déduction tableau"},
+        {"nom":"annees","valeur_defaut":10,"unite":"années","min":0,"max":30,"pas":1,"marge_erreur_estimee":"horizon utilisateur","justification_marge":"Projection annuelle composée.","source":"travail personnel"}
+      ],
+      "marge_pourcentage": 7,
+      "niveau_confiance": 75,
+      "message_validation": "Formule estimée — validation humaine obligatoire. La participation aux bénéfices n'est pas garantie."
+    },
+    {
+      "id": "axa_essenciel_2025-06_formule_03",
+      "nom": "Valeur de rachat Essen'Ciel, approximation prudente",
+      "contrat": "Essen'Ciel (assurance obsèques)",
+      "contrat_id": "axa_essenciel_2025-06",
+      "usage": "valeur_rachat",
+      "statut": "estimee",
+      "expression_base": "cumul_cotisations * taux_provision / 100 * (1 - penalite / 100)",
+      "variables": ["cumul_cotisations","taux_provision","penalite"],
+      "parametres_modifiables": [
+        {"nom":"cumul_cotisations","valeur_defaut":4800,"unite":"EUR","min":0,"max":30000,"pas":100,"marge_erreur_estimee":"sans marge si cumul réel saisi","justification_marge":"Somme des cotisations réellement versées.","source":"travail personnel"},
+        {"nom":"taux_provision","valeur_defaut":70,"unite":"%","min":40,"max":100,"pas":1,"marge_erreur_estimee":"marge non déterminée — prudence élevée","justification_marge":"Paramètres actuariels absents de la notice.","source":"estimation modèle"},
+        {"nom":"penalite","valeur_defaut":2.5,"unite":"%","min":0,"max":5,"pas":0.5,"marge_erreur_estimee":"selon année de rachat","justification_marge":"Pénalité contractuelle décroissante, année exacte à vérifier.","source":"déduction tableau"}
+      ],
+      "marge_pourcentage": 20,
+      "niveau_confiance": 45,
+      "message_validation": "Formule estimée — validation humaine obligatoire. Marge actuarielle inconnue : ne jamais présenter comme valeur contractuelle."
+    },
+    {
+      "id": "axa_masterlife_credit_2024-10_formule_03",
+      "nom": "Exonération incapacité Masterlife",
+      "contrat": "Masterlife CREDIT",
+      "contrat_id": "axa_masterlife_credit_2024-10",
+      "usage": "cotisation",
+      "statut": "estimee",
+      "expression_base": "cotisation_annuelle / 365 * max(0, jours_incapacite - franchise_jours)",
+      "variables": ["cotisation_annuelle","jours_incapacite","franchise_jours"],
+      "parametres_modifiables": [
+        {"nom":"cotisation_annuelle","valeur_defaut":600,"unite":"EUR/an","min":0,"max":10000,"pas":10,"marge_erreur_estimee":"sans marge si valeur réelle saisie","justification_marge":"Valeur du contrat.","source":"travail personnel"},
+        {"nom":"jours_incapacite","valeur_defaut":120,"unite":"jours","min":0,"max":730,"pas":1,"marge_erreur_estimee":"selon décision de prise en charge","justification_marge":"Durée reconnue à vérifier.","source":"travail personnel"},
+        {"nom":"franchise_jours","valeur_defaut":90,"unite":"jours","min":0,"max":180,"pas":1,"marge_erreur_estimee":"0 si franchise contractuelle confirmée","justification_marge":"Interprétation directe de la franchise de 90 jours.","source":"déduction tableau"}
+      ],
+      "marge_pourcentage": 5,
+      "niveau_confiance": 85,
+      "message_validation": "Formule estimée — validation humaine obligatoire."
+    }
+  ]
+}
