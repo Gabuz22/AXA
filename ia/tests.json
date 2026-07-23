@@ -2381,8 +2381,8 @@
      "avizen-pro",
      "ma-protection-accident-garantie-des-accidents-de-la-vie",
      "entour-age",
-     "masterlife-credit",
      "essen-ciel-assurance-obseques",
+     "masterlife-credit",
      "excelium-assurance-vie"
     ],
     "contrats_rejetes": 2,
@@ -2802,10 +2802,11 @@
      "avizen",
      "avizen-pro",
      "entour-age",
+     "essen-ciel-assurance-obseques",
      "excelium-assurance-vie",
      "ma-retraite-plan-d-epargne-retraite-individuel-per"
     ],
-    "contrats_rejetes": 3,
+    "contrats_rejetes": 2,
     "source_officielle_requise": false,
     "statut": "conclusion_documentee"
    },

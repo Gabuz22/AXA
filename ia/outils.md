@@ -20,6 +20,7 @@
 - **[Index conceptuel](concepts.html)** — concepts métier reliant synonymes, contrats, catégories, sources
 - **[Détecteur de couverture](couverture-recherche.html)** — présent / absent de la base / à vérifier en notice
 - **[Comparateur thématique](comparateur.html)** — un sujet, tous les contrats côte à côte, sourcé
+- **[Divergences inter-contrats](divergences.html)** — où les contrats diffèrent sur un chiffre (âge, délais) — signal à vérifier, jamais une contradiction
 - **[Graphe de preuves](preuves.html)** — chaque élément citable (id, source, page, concepts)
 - **[Méthode & assembleur](methode-question-complexe.html)** — 5 parcours + structure de réponse sécurisée
 - **[Hiérarchie documentaire](hierarchie.html)** — ordre : contrat → notice → docs AXA → réglementation → réponse

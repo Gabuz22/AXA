@@ -2,7 +2,7 @@
  "meta": {
   "categorie": "definitions",
   "version": "2.3.0",
-  "total": 42
+  "total": 46
  },
  "elements": [
   {
@@ -180,6 +180,38 @@
    "texte": "(Pour le Capital Premiers Frais en Formule Totale et Partielle) : GIR 1-4 ET physique = incapacité pour ≥ 2 des 5 AVQ ou psychique = démence avec Folstein < 18. Score évalué par le Médecin Conseil d'AXA.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
    "page": 13
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:def:bc84b360bb",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Accident",
+   "texte": "Atteinte corporelle non intentionnelle provenant de l'action soudaine, violente et imprévisible d'une cause extérieure. Les affections de la colonne vertébrale, pathologies cardiaques (avec ou sans coronaropathies), chocs émotifs et états dépressifs sont considérés comme des MALADIES.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 47
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:def:408870172d",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Bénéficiaires",
+   "texte": "(1) à hauteur des frais d'obsèques : la personne physique ou l'entreprise de pompes funèbres ayant pris en charge les obsèques, sur factures ; (2) à défaut ou pour le solde : bénéficiaires subsidiaires désignés par l'adhérent.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 47
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:def:16d324e538",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Membre de la famille",
+   "texte": "Conjoint ou partenaire PACS de l'assuré ; leurs enfants et ascendants jusqu'au 2e degré.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 48
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:def:0309a6c666",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "France",
+   "texte": "France métropolitaine + DROM (Guadeloupe, Guyane, Martinique, Mayotte, La Réunion).",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 48
   },
   {
    "id": "excelium-assurance-vie:def:e60bade006",

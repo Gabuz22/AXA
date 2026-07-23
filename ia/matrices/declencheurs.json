@@ -2,7 +2,7 @@
  "meta": {
   "categorie": "declencheurs",
   "version": "2.3.0",
-  "total": 77
+  "total": 83
  },
  "elements": [
   {
@@ -348,6 +348,54 @@
    "texte": "selon prestation : dépendance de l'assuré reconnue, ou rôle d'aidant",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
    "page": 25
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Garantie décès (capital obsèques)",
+   "texte": "décès de l'assuré",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Garantie décès (capital obsèques)",
+   "texte": "décès accidentel : dès la prise d'effet ; décès non accidentel : après 1 an (sinon remboursement des cotisations nettes de frais à la succession)",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:5134099b84:declencheur:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance dès l'adhésion",
+   "texte": "dès l'adhésion",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 23
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:declencheur:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance au moment du décès",
+   "texte": "décès à plus de 30 km du domicile pour le volet rapatriement",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:declencheur:1",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance au moment du décès",
+   "texte": "appel préalable obligatoire à AXA Assistance avant toute dépense",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:67b35a1cdb:declencheur:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance après le décès (proches)",
+   "texte": "demande d'un membre de la famille",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 27
   },
   {
    "id": "excelium-assurance-vie:fait:4475e2a358:declencheur:0",

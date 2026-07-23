@@ -23,6 +23,10 @@
 
 - Conditions cumulatives : résider en France métropolitaine, à Monaco ou dans un DOM ; être ou devenir membre ANPERE (droits d'adhésion) ; se soumettre aux formalités médicales demandées ; avoir entre 40 et 75 ans inclus à la signature (âge par différence de millésimes). [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.6, 1.1.2.1 Admissibilité](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=6) `#entour-age:cond:0757925f45`  _(conditions)_
 
+## Essen'Ciel (assurance obsèques) (1)
+
+- Conditions cumulatives : résident fiscal français ; adhérent ANPERE (droits d'adhésion) ; âge entre 50 et 85 ans inclus à la signature (différence de millésimes). Pas de formalité médicale mentionnée dans la notice. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.16, 3.6](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=16) `#essen-ciel-assurance-obseques:cond:969788b935`  _(conditions)_
+
 ## Excelium (assurance vie) (2)
 
 - **frais** — Frais de dossier · 30 € maximum, prélevés uniquement au premier versement (conditions de suppression possibles, art. 5.1.1). · Droits d'adhésion ANPERE · 15 € maximum, une fois, pour les non-adhérents. · Frais sur versements · 4,85 % maximum sur chaque versement (illustrations plafonnées à 5 % cumulé la 1re année avec frais de dossier). · Frais de gestion · Support en euros : 0,80 %/an max ; fonds Croissance : 0,80 %/an max (taux mensuel équivalent 0,0669 %) ; UC hors mandat et hors AXA Immo Avenir : 0,96 %/an max (0,0804 %/mois) ; AXA Immo Avenir : 1,5… [Notice : 2026-05 Notice Excelium Vie.pdf](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf) `#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_58fc69bea0e9_knowledge_6dce3bffa380`  _(cotisations)_

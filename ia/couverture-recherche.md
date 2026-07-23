@@ -17,15 +17,15 @@
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : —
 
 ## Décès
-- Trouvé : 4 definitions, 18 garanties, 18 declencheurs, 12 exclusions, 1 conditions, 9 plafonds
-- Absent de la base (à vérifier en **notice / certificat d'adhésion**) : franchises
+- Trouvé : 4 definitions, 18 garanties, 23 declencheurs, 12 exclusions, 1 conditions, 18 plafonds, 1 franchises
+- Absent de la base (à vérifier en **notice / certificat d'adhésion**) : —
 
 ## Décès accidentel
-- Trouvé : 1 declencheurs, 2 exclusions, 1 franchises
+- Trouvé : 2 declencheurs, 2 exclusions, 2 franchises
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : definitions, garanties, conditions, plafonds
 
 ## Accident
-- Trouvé : 11 definitions, 17 garanties, 26 declencheurs, 13 exclusions, 4 plafonds, 4 franchises
+- Trouvé : 12 definitions, 17 garanties, 27 declencheurs, 13 exclusions, 4 plafonds, 5 franchises
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : conditions
 
 ## Hospitalisation
@@ -37,7 +37,7 @@
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : —
 
 ## Carence / délai d'attente
-- Trouvé : 1 definitions, 1 declencheurs, 1 exclusions, 1 conditions, 3 franchises
+- Trouvé : 1 definitions, 1 declencheurs, 1 exclusions, 1 conditions, 4 franchises
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : garanties, plafonds
 
 ## Rachat
@@ -45,11 +45,11 @@
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : declencheurs, conditions, franchises
 
 ## Souscription & adhésion
-- Trouvé : 3 definitions, 14 garanties, 3 declencheurs, 4 exclusions, 8 conditions, 4 plafonds, 3 franchises
+- Trouvé : 3 definitions, 14 garanties, 4 declencheurs, 4 exclusions, 9 conditions, 5 plafonds, 3 franchises
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : —
 
 ## Âge
-- Trouvé : 1 conditions
+- Trouvé : 2 conditions
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : definitions, garanties, declencheurs, exclusions, plafonds, franchises
 
 ## Suicide
@@ -57,11 +57,11 @@
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : definitions, garanties, declencheurs, conditions, plafonds, franchises
 
 ## Bénéficiaire
-- Trouvé : 2 definitions, 7 garanties, 2 exclusions, 2 plafonds
+- Trouvé : 3 definitions, 7 garanties, 2 exclusions, 2 plafonds
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : declencheurs, conditions, franchises
 
 ## Fiscalité
-- Trouvé : 2 definitions, 4 garanties, 2 declencheurs, 2 conditions
+- Trouvé : 2 definitions, 4 garanties, 3 declencheurs, 3 conditions
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : exclusions, plafonds, franchises
 
 ## Fin de garantie
@@ -69,5 +69,5 @@
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : definitions, conditions, franchises
 
 ## Association / ANPERE
-- Trouvé : 1 garanties, 6 conditions
+- Trouvé : 1 garanties, 7 conditions
 - Absent de la base (à vérifier en **notice / certificat d'adhésion**) : definitions, declencheurs, exclusions, plafonds, franchises

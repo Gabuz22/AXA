@@ -2,7 +2,7 @@
  "meta": {
   "categorie": "plafonds",
   "version": "2.3.0",
-  "total": 43
+  "total": 53
  },
  "elements": [
   {
@@ -188,6 +188,86 @@
    "texte": "répit : 1 000 € TTC/an ; visites d'établissements : 200 € ; transport hébergement temporaire : 100 €/an",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
    "page": 25
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Garantie décès (capital obsèques)",
+   "texte": "capital 2 000 - 10 000 €",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:1",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Garantie décès (capital obsèques)",
+   "texte": "le capital peut être insuffisant pour couvrir les frais réels (reliquat à charge des proches)",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:5134099b84:plafond:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance dès l'adhésion",
+   "texte": "renseignements d'ordre documentaire",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 23
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:plafond:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance au moment du décès",
+   "texte": "3 600 € TTC (rapatriement+retour+présence)",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:plafond:1",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance au moment du décès",
+   "texte": "cercueil 800 € TTC",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:plafond:2",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance au moment du décès",
+   "texte": "hôtel 80 €/nuit ×3",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:plafond:3",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance au moment du décès",
+   "texte": "750 € TTC (garde enfants+animaux+aide-ménagère)",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance après le décès (proches)",
+   "texte": "6 entretiens psy / 80 €/séance",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 27
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:1",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance après le décès (proches)",
+   "texte": "aide mobilité 160 € TTC",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 27
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:2",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Assistance après le décès (proches)",
+   "texte": "3 évaluations sociales",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 27
   },
   {
    "id": "excelium-assurance-vie:fait:62d6fd5c2d:plafond:0",

@@ -15,7 +15,7 @@
 | Catégorie | JSON | Vue IA | Couverture |
 |---|--:|--:|--:|
 | Résumé humain (resume_neutre) | 9 | 9 | 100 % |
-| Résumé IA (descriptions faits) | 83 | 83 | 100 % |
+| Résumé IA (descriptions faits) | 91 | 91 | 100 % |
 | Garanties | 50 | 50 | 100 % |
 | Exclusions | 33 | 33 | 100 % |
 | Options | 36 | 36 | 100 % |
@@ -24,14 +24,14 @@
 | Fiscalité | 44 | 44 | 100 % |
 | Points de vigilance | 61 | 61 | 100 % |
 | Formules | 22 | 22 | 100 % |
-| Définitions | 42 | 42 | 100 % |
-| Conditions | 19 | 19 | 100 % |
-| Déclencheurs | 77 | 77 | 100 % |
-| Plafonds | 43 | 43 | 100 % |
-| Franchises | 13 | 13 | 100 % |
+| Définitions | 46 | 46 | 100 % |
+| Conditions | 21 | 21 | 100 % |
+| Déclencheurs | 83 | 83 | 100 % |
+| Plafonds | 53 | 53 | 100 % |
+| Franchises | 14 | 14 | 100 % |
 | Glossaire (définitions) | 46 | 46 | 100 % |
 | Notices (PDF) | 11 | 11 | 100 % |
-| Sources (références) | 155 | 155 | 100 % |
+| Sources (références) | 156 | 156 | 100 % |
 | Contrats | 9 | 9 | 100 % |
 
 **Verdict.** ✅ Couverture complète : aucune information exploitable perdue.

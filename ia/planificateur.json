@@ -96,6 +96,7 @@
     "conditions",
     "declencheurs",
     "plafonds",
+    "franchises",
     "options",
     "cotisations",
     "delais",
@@ -583,7 +584,8 @@
    ],
    "contrats_candidats": [
     "Avizen",
-    "Entour'Age"
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)"
    ],
    "notices": [
     {
@@ -593,6 +595,10 @@
     {
      "contrat": "Entour'Age",
      "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     }
    ],
    "criteres_completude": [
@@ -907,6 +913,7 @@
     "Avizen",
     "Avizen Pro",
     "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
     "Excelium (assurance vie)",
     "Ma Retraite (plan d'épargne retraite individuel — PER)",
     "Masterlife CREDIT"
@@ -923,6 +930,10 @@
     {
      "contrat": "Entour'Age",
      "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf"
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "url": "https://gabuz22.github.io/AXA/ia/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf"
     },
     {
      "contrat": "Excelium (assurance vie)",

@@ -1,4 +1,4 @@
-# Définitions — toutes (42)
+# Définitions — toutes (46)
 
 > **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-17 (v2.3.0).
 > Outil **indépendant et non officiel**, non affilié ni validé par AXA — documents accessibles publiquement.
@@ -42,6 +42,13 @@
 - **Dépendance Totale** — 2 conditions cumulatives : (1) état de santé justifiant définitivement l'assistance d'une tierce personne ; (2) selon la nature : physique = incapacité d'exercer seule ≥ 4 des 5 AVQ ; psychique = démence diagnostiquée avec Folstein ≤ 10 ET incitation nécessaire pour ≥ 2 AVQ ; mixte = démence avec Folstein ≤ 15 ET incapacité pour ≥ 3 AVQ. État consolidé, permanent, reconnu par le Médecin Conseil d'AXA. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.13, 2.2.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=13) `#entour-age:def:81f0a11726`
 - **Dépendance Partielle** — 2 conditions cumulatives : (1) GIR 1, 2 ou 3 ; (2) physique = incapacité pour ≥ 3 des 5 AVQ, ou psychique = démence diagnostiquée avec Folstein < 15. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.13, 2.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=13) `#entour-age:def:8934291cab`
 - **Dépendance Légère** — (Pour le Capital Premiers Frais en Formule Totale et Partielle) : GIR 1-4 ET physique = incapacité pour ≥ 2 des 5 AVQ ou psychique = démence avec Folstein < 18. Score évalué par le Médecin Conseil d'AXA. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.13, 2.2.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=13) `#entour-age:def:dd8cd4544e`
+
+## Essen'Ciel (assurance obsèques) (4)
+
+- **Accident** — Atteinte corporelle non intentionnelle provenant de l'action soudaine, violente et imprévisible d'une cause extérieure. Les affections de la colonne vertébrale, pathologies cardiaques (avec ou sans coronaropathies), chocs émotifs et états dépressifs sont considérés comme des MALADIES. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.47, 13. Définitions - Accident](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=47) `#essen-ciel-assurance-obseques:def:bc84b360bb`
+- **Bénéficiaires** — (1) à hauteur des frais d'obsèques : la personne physique ou l'entreprise de pompes funèbres ayant pris en charge les obsèques, sur factures ; (2) à défaut ou pour le solde : bénéficiaires subsidiaires désignés par l'adhérent. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.47, 13. Définitions - Bénéficiaires](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=47) `#essen-ciel-assurance-obseques:def:408870172d`
+- **Membre de la famille** — Conjoint ou partenaire PACS de l'assuré ; leurs enfants et ascendants jusqu'au 2e degré. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.48, 13. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=48) `#essen-ciel-assurance-obseques:def:16d324e538`
+- **France** — France métropolitaine + DROM (Guadeloupe, Guyane, Martinique, Mayotte, La Réunion). [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.48, 13. Définitions - France](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=48) `#essen-ciel-assurance-obseques:def:0309a6c666`
 
 ## Excelium (assurance vie) (3)
 

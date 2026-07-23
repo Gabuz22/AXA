@@ -1,4 +1,4 @@
-# Franchises — toutes (13)
+# Franchises — toutes (14)
 
 > **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-17 (v2.3.0).
 > Outil **indépendant et non officiel**, non affilié ni validé par AXA — documents accessibles publiquement.
@@ -30,6 +30,10 @@
 
 - **Rente viagère dépendance (garantie principale obligatoire)** — franchise absolue 3 mois (91e jour) [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.21, 4.3.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=21) `#entour-age:fait:52eb8f16a6:franchise:0`
 - **Rente viagère dépendance (garantie principale obligatoire)** — délai d'attente 1 an (maladie) / 3 ans (maladies neurologiques, neurodégénératives ou psychiatriques) / aucun si dépendance d'origine accidentelle postérieure à l'adhésion [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.21, 4.3.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=21) `#entour-age:fait:52eb8f16a6:franchise:1`
+
+## Essen'Ciel (assurance obsèques) (1)
+
+- **Garantie décès (capital obsèques)** — délai d'attente 1 an pour le décès non accidentel [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) `#essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0`
 
 ## Ma Protection Accident (Garantie des accidents de la vie) (1)
 

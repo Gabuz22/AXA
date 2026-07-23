@@ -17,6 +17,11 @@
    "matrices",
    "contrats"
   ],
+  "verifier_les_ecarts_entre_contrats": [
+   "divergences",
+   "comparateur",
+   "matrices"
+  ],
   "definition_d_un_terme": [
    "glossaire",
    "definitions"

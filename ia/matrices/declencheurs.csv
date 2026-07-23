@@ -42,6 +42,12 @@ entour-age:fait:52eb8f16a6:declencheur:2,Entour'Age,Rente viagère dépendance (
 entour-age:fait:2a25013e7a:declencheur:0,Entour'Age,Services dès l'adhésion « ENTREAIDANTS »,dès la prise d'effet de l'adhésion,2025-06 Notice d'Information Entour'Age.pdf,16
 entour-age:fait:2094e3a95e:declencheur:0,Entour'Age,Services d'assistance dédiés en perte d'autonomie,état de dépendance reconnu,2025-06 Notice d'Information Entour'Age.pdf,23
 entour-age:fait:dcbc36cf9a:declencheur:0,Entour'Age,Services pour l'aidant de l'assuré,"selon prestation : dépendance de l'assuré reconnue, ou rôle d'aidant",2025-06 Notice d'Information Entour'Age.pdf,25
+essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:0,Essen'Ciel (assurance obsèques),Garantie décès (capital obsèques),décès de l'assuré,2025-06 Notice d'information Essen'Ciel.pdf,20
+essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1,Essen'Ciel (assurance obsèques),Garantie décès (capital obsèques),"décès accidentel : dès la prise d'effet ; décès non accidentel : après 1 an (sinon remboursement des cotisations nettes de frais à la succession)",2025-06 Notice d'information Essen'Ciel.pdf,20
+essen-ciel-assurance-obseques:fait:5134099b84:declencheur:0,Essen'Ciel (assurance obsèques),Assistance dès l'adhésion,dès l'adhésion,2025-06 Notice d'information Essen'Ciel.pdf,23
+essen-ciel-assurance-obseques:fait:59074fa019:declencheur:0,Essen'Ciel (assurance obsèques),Assistance au moment du décès,décès à plus de 30 km du domicile pour le volet rapatriement,2025-06 Notice d'information Essen'Ciel.pdf,24
+essen-ciel-assurance-obseques:fait:59074fa019:declencheur:1,Essen'Ciel (assurance obsèques),Assistance au moment du décès,appel préalable obligatoire à AXA Assistance avant toute dépense,2025-06 Notice d'information Essen'Ciel.pdf,24
+essen-ciel-assurance-obseques:fait:67b35a1cdb:declencheur:0,Essen'Ciel (assurance obsèques),Assistance après le décès (proches),demande d'un membre de la famille,2025-06 Notice d'information Essen'Ciel.pdf,27
 excelium-assurance-vie:fait:4475e2a358:declencheur:0,Excelium (assurance vie),Garantie en cas de vie (au terme),vie de l'assuré au terme,2026-05 Notice Excelium Vie.pdf,15
 excelium-assurance-vie:fait:4475e2a358:declencheur:1,Excelium (assurance vie),Garantie en cas de vie (au terme),demande de l'adhérent,2026-05 Notice Excelium Vie.pdf,15
 excelium-assurance-vie:fait:48e4ad06df:declencheur:0,Excelium (assurance vie),Garantie en cas de décès,décès de l'assuré avant le terme,2026-05 Notice Excelium Vie.pdf,15

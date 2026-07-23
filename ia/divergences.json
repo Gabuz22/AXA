@@ -1,0 +1,201 @@
+{
+ "meta": {
+  "version": "2.3.0",
+  "genere_le": "2026-07-17",
+  "dimensions": 2,
+  "usage": "Contrôle niveau inspecteur : repérer où les contrats diffèrent sur un paramètre chiffré."
+ },
+ "avertissement": "Détecteur de DIFFÉRENCES, pas de contradictions. Une divergence est un signal à vérifier à la notice — le sens d'un même chiffre peut varier d'un contrat à l'autre. Ne jamais conclure à une contradiction sans lire les garanties visées. La notice PDF fait foi.",
+ "dimensions": [
+  {
+   "id": "age-adhesion",
+   "nom": "Âge à l'adhésion",
+   "diverge": true,
+   "valeurs_distinctes": [
+    "40–75 ans",
+    "50–85 ans",
+    "≤75 ans",
+    "≥18 ans"
+   ],
+   "note_interpretation": "Chaque contrat fixe sa propre fenêtre d'âge à la signature. Une plage différente n'est pas une erreur — mais un client hors plage est inéligible : à vérifier AVANT toute proposition.",
+   "par_contrat": [
+    {
+     "contrat": "Avizen Pro",
+     "slug": "avizen-pro",
+     "valeurs": [
+      {
+       "valeur": "≤75 ans",
+       "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+       "page": 7
+      }
+     ]
+    },
+    {
+     "contrat": "Entour'Age",
+     "slug": "entour-age",
+     "valeurs": [
+      {
+       "valeur": "40–75 ans",
+       "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+       "page": 6
+      }
+     ]
+    },
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "slug": "essen-ciel-assurance-obseques",
+     "valeurs": [
+      {
+       "valeur": "50–85 ans",
+       "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+       "page": 16
+      }
+     ]
+    },
+    {
+     "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+     "slug": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+     "valeurs": [
+      {
+       "valeur": "≥18 ans",
+       "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+       "page": 27
+      }
+     ]
+    }
+   ],
+   "mentionne_sans_valeur_chiffree": []
+  },
+  {
+   "id": "delais-carences",
+   "nom": "Délais & carences (durées)",
+   "diverge": true,
+   "valeurs_distinctes": [
+    "10 jours",
+    "15 jours",
+    "180 jours",
+    "2 mois",
+    "3 ans",
+    "3 mois",
+    "3 semaines",
+    "30 jours",
+    "365 jours",
+    "90 jours"
+   ],
+   "note_interpretation": "Les durées (carence, franchise, délai) ne se comparent qu'à GARANTIE équivalente : un même nombre de jours peut viser des risques différents. Vérifier la garantie visée avant de conclure.",
+   "par_contrat": [
+    {
+     "contrat": "Avizen",
+     "slug": "avizen",
+     "valeurs": [
+      {
+       "valeur": "15 jours",
+       "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+       "page": 20
+      },
+      {
+       "valeur": "30 jours",
+       "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+       "page": 28
+      },
+      {
+       "valeur": "365 jours",
+       "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+       "page": 28
+      },
+      {
+       "valeur": "90 jours",
+       "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+       "page": 28
+      }
+     ]
+    },
+    {
+     "contrat": "Avizen Pro",
+     "slug": "avizen-pro",
+     "valeurs": [
+      {
+       "valeur": "15 jours",
+       "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+       "page": 27
+      },
+      {
+       "valeur": "30 jours",
+       "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+       "page": 44
+      },
+      {
+       "valeur": "365 jours",
+       "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+       "page": 44
+      },
+      {
+       "valeur": "90 jours",
+       "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+       "page": 44
+      }
+     ]
+    },
+    {
+     "contrat": "Entour'Age",
+     "slug": "entour-age",
+     "valeurs": [
+      {
+       "valeur": "3 ans",
+       "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+       "page": 21
+      },
+      {
+       "valeur": "3 mois",
+       "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+       "page": 21
+      }
+     ]
+    },
+    {
+     "contrat": "Excelium (assurance vie)",
+     "slug": "excelium-assurance-vie",
+     "valeurs": [
+      {
+       "valeur": "2 mois",
+       "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+       "page": 44
+      },
+      {
+       "valeur": "3 semaines",
+       "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+       "page": 44
+      }
+     ]
+    },
+    {
+     "contrat": "Masterlife CREDIT",
+     "slug": "masterlife-credit",
+     "valeurs": [
+      {
+       "valeur": "10 jours",
+       "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+       "page": 18
+      },
+      {
+       "valeur": "180 jours",
+       "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+       "page": 18
+      },
+      {
+       "valeur": "90 jours",
+       "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+       "page": 18
+      }
+     ]
+    }
+   ],
+   "mentionne_sans_valeur_chiffree": [
+    {
+     "contrat": "Essen'Ciel (assurance obsèques)",
+     "slug": "essen-ciel-assurance-obseques"
+    }
+   ]
+  }
+ ]
+}

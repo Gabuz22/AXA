@@ -33,6 +33,7 @@
    "resume": "Rigueur de contrôle : cohérence inter-contrats, exhaustivité vérifiée, traçabilité auditée, frontière réglementaire tenue, escalade explicite.",
    "ajoute_sur": "conseiller",
    "pages": [
+    "divergences",
     "comparateur",
     "matrices",
     "points-vigilance",
@@ -110,11 +111,11 @@
  ],
  "stats_base": {
   "contrats": 9,
-  "elements_cites": 533,
-  "pct_avec_page_notice": 73,
+  "elements_cites": 556,
+  "pct_avec_page_notice": 74,
   "garanties": 50,
   "exclusions": 33,
-  "conditions_souscription": 19,
+  "conditions_souscription": 21,
   "points_de_vigilance": 61
  }
 }

@@ -2,7 +2,7 @@
  "meta": {
   "categorie": "conditions",
   "version": "2.3.0",
-  "total": 19
+  "total": 21
  },
  "elements": [
   {
@@ -84,6 +84,22 @@
    "texte": "Modifications en cours d'adhésion : possibles à partir de la 3e année pleine, à jour des cotisations, assuré non dépendant ; amélioration de garanties : assuré ≤ 75 ans, acceptation d'AXA, nouveau délai d'attente sur les garanties supplémentaires.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
    "page": 8
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:cond:969788b935",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "",
+   "texte": "Conditions cumulatives : résident fiscal français ; adhérent ANPERE (droits d'adhésion) ; âge entre 50 et 85 ans inclus à la signature (différence de millésimes). Pas de formalité médicale mentionnée dans la notice.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 16
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:cond:9f5521f209",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "",
+   "texte": "Cotisations temporaires : âge < 90 ans au paiement de la dernière cotisation.",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 17
   },
   {
    "id": "excelium-assurance-vie:cond:04d661bd25",

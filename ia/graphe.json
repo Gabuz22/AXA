@@ -2,8 +2,8 @@
  "meta": {
   "version": "2.3.0",
   "genere_le": "2026-07-17",
-  "noeuds": 661,
-  "aretes": 2110,
+  "noeuds": 692,
+  "aretes": 2217,
   "types_noeuds": [
    "article_reglementaire",
    "concept",
@@ -944,6 +944,30 @@
    "contrat": "Entour'Age"
   },
   {
+   "id": "el:essen-ciel-assurance-obseques:def:bc84b360bb",
+   "type": "definition",
+   "label": "Accident",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:def:408870172d",
+   "type": "definition",
+   "label": "Bénéficiaires",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:def:16d324e538",
+   "type": "definition",
+   "label": "Membre de la famille",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:def:0309a6c666",
+   "type": "definition",
+   "label": "France",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
    "id": "el:excelium-assurance-vie:def:e60bade006",
    "type": "definition",
    "label": "Fonds Croissance",
@@ -1122,6 +1146,18 @@
    "type": "condition",
    "label": "Modifications en cours d'adhésion : possibles à partir de la",
    "contrat": "Entour'Age"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:cond:969788b935",
+   "type": "condition",
+   "label": "Conditions cumulatives : résident fiscal français ; adhérent",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:cond:9f5521f209",
+   "type": "condition",
+   "label": "Cotisations temporaires : âge < 90 ans au paiement de la der",
+   "contrat": "Essen'Ciel (assurance obsèques)"
   },
   {
    "id": "el:excelium-assurance-vie:cond:04d661bd25",
@@ -1434,6 +1470,42 @@
    "type": "declencheur",
    "label": "Services pour l'aidant de l'assuré",
    "contrat": "Entour'Age"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:0",
+   "type": "declencheur",
+   "label": "Garantie décès (capital obsèques)",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+   "type": "declencheur",
+   "label": "Garantie décès (capital obsèques)",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:5134099b84:declencheur:0",
+   "type": "declencheur",
+   "label": "Assistance dès l'adhésion",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:59074fa019:declencheur:0",
+   "type": "declencheur",
+   "label": "Assistance au moment du décès",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:59074fa019:declencheur:1",
+   "type": "declencheur",
+   "label": "Assistance au moment du décès",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:declencheur:0",
+   "type": "declencheur",
+   "label": "Assistance après le décès (proches)",
+   "contrat": "Essen'Ciel (assurance obsèques)"
   },
   {
    "id": "el:excelium-assurance-vie:fait:4475e2a358:declencheur:0",
@@ -1778,6 +1850,66 @@
    "contrat": "Entour'Age"
   },
   {
+   "id": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:0",
+   "type": "plafond",
+   "label": "Garantie décès (capital obsèques)",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:1",
+   "type": "plafond",
+   "label": "Garantie décès (capital obsèques)",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:5134099b84:plafond:0",
+   "type": "plafond",
+   "label": "Assistance dès l'adhésion",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:0",
+   "type": "plafond",
+   "label": "Assistance au moment du décès",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:1",
+   "type": "plafond",
+   "label": "Assistance au moment du décès",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:2",
+   "type": "plafond",
+   "label": "Assistance au moment du décès",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:3",
+   "type": "plafond",
+   "label": "Assistance au moment du décès",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:0",
+   "type": "plafond",
+   "label": "Assistance après le décès (proches)",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:1",
+   "type": "plafond",
+   "label": "Assistance après le décès (proches)",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:2",
+   "type": "plafond",
+   "label": "Assistance après le décès (proches)",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
    "id": "el:excelium-assurance-vie:fait:62d6fd5c2d:plafond:0",
    "type": "plafond",
    "label": "Garantie « Sérénité » (plancher, incluse)",
@@ -1956,6 +2088,12 @@
    "type": "franchise",
    "label": "Rente viagère dépendance (garantie principale obligatoire)",
    "contrat": "Entour'Age"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+   "type": "franchise",
+   "label": "Garantie décès (capital obsèques)",
+   "contrat": "Essen'Ciel (assurance obsèques)"
   },
   {
    "id": "el:ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:franchise:0",
@@ -3750,6 +3888,54 @@
    "type": "fait",
    "label": "GIR 5 et 6",
    "contrat": "Entour'Age"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2",
+   "type": "fait",
+   "label": "Garantie décès (capital obsèques)",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:0c78e0e092",
+   "type": "fait",
+   "label": "Revalorisation du capital",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:5134099b84",
+   "type": "fait",
+   "label": "Assistance dès l'adhésion",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:59074fa019",
+   "type": "fait",
+   "label": "Assistance au moment du décès",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb",
+   "type": "fait",
+   "label": "Assistance après le décès (proches)",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:c5c20e0b74",
+   "type": "fait",
+   "label": "Décès exclus",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:152ed66d71",
+   "type": "fait",
+   "label": "Décès accidentel exclu",
+   "contrat": "Essen'Ciel (assurance obsèques)"
+  },
+  {
+   "id": "el:essen-ciel-assurance-obseques:fait:a3ce12d1bf",
+   "type": "fait",
+   "label": "Exclusions assistance",
+   "contrat": "Essen'Ciel (assurance obsèques)"
   },
   {
    "id": "el:excelium-assurance-vie:fait:4475e2a358",
@@ -6242,6 +6428,56 @@
    "rel": "source"
   },
   {
+   "from": "el:essen-ciel-assurance-obseques:def:bc84b360bb",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:def:bc84b360bb",
+   "to": "concept:accident",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:def:bc84b360bb",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:def:408870172d",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:def:408870172d",
+   "to": "concept:beneficiaire",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:def:408870172d",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:def:16d324e538",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:def:16d324e538",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:def:0309a6c666",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:def:0309a6c666",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
    "from": "el:excelium-assurance-vie:def:e60bade006",
    "to": "contrat:excelium-assurance-vie",
    "rel": "appartient_a"
@@ -6702,6 +6938,46 @@
    "rel": "source"
   },
   {
+   "from": "el:essen-ciel-assurance-obseques:cond:969788b935",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:cond:969788b935",
+   "to": "concept:souscription",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:cond:969788b935",
+   "to": "concept:age",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:cond:969788b935",
+   "to": "concept:fiscalite",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:cond:969788b935",
+   "to": "concept:association",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:cond:969788b935",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:cond:9f5521f209",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:cond:9f5521f209",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
    "from": "el:excelium-assurance-vie:cond:04d661bd25",
    "to": "contrat:excelium-assurance-vie",
    "rel": "appartient_a"
@@ -7592,6 +7868,111 @@
    "rel": "source"
   },
   {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:0",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:0",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:0",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+   "to": "concept:deces-accidentel",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+   "to": "concept:accident",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+   "to": "concept:fiscalite",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:5134099b84:declencheur:0",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:5134099b84:declencheur:0",
+   "to": "concept:souscription",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:5134099b84:declencheur:0",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:declencheur:0",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:declencheur:0",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:declencheur:0",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:declencheur:1",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:declencheur:1",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:declencheur:1",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:declencheur:0",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:declencheur:0",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:declencheur:0",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
    "from": "el:excelium-assurance-vie:fait:4475e2a358:declencheur:0",
    "to": "contrat:excelium-assurance-vie",
    "rel": "appartient_a"
@@ -8464,6 +8845,156 @@
   {
    "from": "el:entour-age:fait:dcbc36cf9a:plafond:0",
    "to": "notice:2025-06-notice-d-information-entour-age-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:0",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:0",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:0",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:1",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:1",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:1",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:5134099b84:plafond:0",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:5134099b84:plafond:0",
+   "to": "concept:souscription",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:5134099b84:plafond:0",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:0",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:0",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:0",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:1",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:1",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:1",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:2",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:2",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:2",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:3",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:3",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019:plafond:3",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:0",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:0",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:0",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:1",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:1",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:1",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:2",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:2",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:2",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
    "rel": "source"
   },
   {
@@ -8904,6 +9435,36 @@
   {
    "from": "el:entour-age:fait:52eb8f16a6:franchise:1",
    "to": "notice:2025-06-notice-d-information-entour-age-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+   "to": "concept:deces-accidentel",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+   "to": "concept:accident",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+   "to": "concept:carence",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
    "rel": "source"
   },
   {
@@ -13769,6 +14330,166 @@
   {
    "from": "el:entour-age:fait:4e99d7e44b",
    "to": "notice:2025-06-notice-d-information-entour-age-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2",
+   "to": "concept:incapacite-temporaire",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2",
+   "to": "concept:souscription",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2",
+   "to": "concept:beneficiaire",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:2b1ce99ec2",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:0c78e0e092",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:0c78e0e092",
+   "to": "concept:souscription",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:0c78e0e092",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:5134099b84",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:5134099b84",
+   "to": "concept:souscription",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:5134099b84",
+   "to": "concept:fiscalite",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:5134099b84",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:59074fa019",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:67b35a1cdb",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:c5c20e0b74",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:c5c20e0b74",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:c5c20e0b74",
+   "to": "concept:souscription",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:c5c20e0b74",
+   "to": "concept:suicide",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:c5c20e0b74",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:152ed66d71",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:152ed66d71",
+   "to": "concept:invalidite",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:152ed66d71",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:152ed66d71",
+   "to": "concept:deces-accidentel",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:152ed66d71",
+   "to": "concept:accident",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:152ed66d71",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
+   "rel": "source"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:a3ce12d1bf",
+   "to": "contrat:essen-ciel-assurance-obseques",
+   "rel": "appartient_a"
+  },
+  {
+   "from": "el:essen-ciel-assurance-obseques:fait:a3ce12d1bf",
+   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
    "rel": "source"
   },
   {

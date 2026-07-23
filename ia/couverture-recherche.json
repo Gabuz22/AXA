@@ -34,15 +34,13 @@
    "present": {
     "definitions": 4,
     "garanties": 18,
-    "declencheurs": 18,
+    "declencheurs": 23,
     "exclusions": 12,
     "conditions": 1,
-    "plafonds": 9,
-    "franchises": 0
+    "plafonds": 18,
+    "franchises": 1
    },
-   "absent_de_la_base": [
-    "franchises"
-   ],
+   "absent_de_la_base": [],
    "contrats": [
     "Avizen",
     "Avizen Pro",
@@ -59,11 +57,11 @@
    "present": {
     "definitions": 0,
     "garanties": 0,
-    "declencheurs": 1,
+    "declencheurs": 2,
     "exclusions": 2,
     "conditions": 0,
     "plafonds": 0,
-    "franchises": 1
+    "franchises": 2
    },
    "absent_de_la_base": [
     "definitions",
@@ -79,13 +77,13 @@
   },
   "accident": {
    "present": {
-    "definitions": 11,
+    "definitions": 12,
     "garanties": 17,
-    "declencheurs": 26,
+    "declencheurs": 27,
     "exclusions": 13,
     "conditions": 0,
     "plafonds": 4,
-    "franchises": 4
+    "franchises": 5
    },
    "absent_de_la_base": [
     "conditions"
@@ -150,7 +148,7 @@
     "exclusions": 1,
     "conditions": 1,
     "plafonds": 0,
-    "franchises": 3
+    "franchises": 4
    },
    "absent_de_la_base": [
     "garanties",
@@ -194,10 +192,10 @@
    "present": {
     "definitions": 3,
     "garanties": 14,
-    "declencheurs": 3,
+    "declencheurs": 4,
     "exclusions": 4,
-    "conditions": 8,
-    "plafonds": 4,
+    "conditions": 9,
+    "plafonds": 5,
     "franchises": 3
    },
    "absent_de_la_base": [],
@@ -218,7 +216,7 @@
     "garanties": 0,
     "declencheurs": 0,
     "exclusions": 0,
-    "conditions": 1,
+    "conditions": 2,
     "plafonds": 0,
     "franchises": 0
    },
@@ -232,7 +230,8 @@
    ],
    "contrats": [
     "Avizen",
-    "Entour'Age"
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)"
    ]
   },
   "suicide": {
@@ -266,7 +265,7 @@
   },
   "beneficiaire": {
    "present": {
-    "definitions": 2,
+    "definitions": 3,
     "garanties": 7,
     "declencheurs": 0,
     "exclusions": 2,
@@ -295,9 +294,9 @@
    "present": {
     "definitions": 2,
     "garanties": 4,
-    "declencheurs": 2,
+    "declencheurs": 3,
     "exclusions": 0,
-    "conditions": 2,
+    "conditions": 3,
     "plafonds": 0,
     "franchises": 0
    },
@@ -351,7 +350,7 @@
     "garanties": 1,
     "declencheurs": 0,
     "exclusions": 0,
-    "conditions": 6,
+    "conditions": 7,
     "plafonds": 0,
     "franchises": 0
    },
@@ -366,6 +365,7 @@
     "Avizen",
     "Avizen Pro",
     "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
     "Excelium (assurance vie)",
     "Ma Retraite (plan d'épargne retraite individuel — PER)",
     "Masterlife CREDIT"

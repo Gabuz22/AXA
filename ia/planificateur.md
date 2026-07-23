@@ -28,7 +28,7 @@
 
 ### Décès
 - Synonymes : deces, décès, mortalit, capital deces
-- Catégories à consulter : garanties, exclusions, definitions, conditions, declencheurs, plafonds, options, cotisations, delais, fiscalite, points-vigilance, formules
+- Catégories à consulter : garanties, exclusions, definitions, conditions, declencheurs, plafonds, franchises, options, cotisations, delais, fiscalite, points-vigilance, formules
 - Contrats candidats : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
 
 ### Décès accidentel
@@ -69,7 +69,7 @@
 ### Âge
 - Synonymes : age a l adhesion, age maximal, age minimal, ans inclus, annee de naissance
 - Catégories à consulter : conditions, cotisations
-- Contrats candidats : Avizen, Entour'Age
+- Contrats candidats : Avizen, Entour'Age, Essen'Ciel (assurance obsèques)
 
 ### Suicide
 - Synonymes : suicide
@@ -94,4 +94,4 @@
 ### Association / ANPERE
 - Synonymes : anpere, association, gestion paritaire
 - Catégories à consulter : garanties, conditions, cotisations
-- Contrats candidats : Avizen, Avizen Pro, Entour'Age, Excelium (assurance vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
+- Contrats candidats : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Excelium (assurance vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT

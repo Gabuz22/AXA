@@ -16,7 +16,7 @@ Toute conclusion se reconstruit depuis des **preuves identifiées** : « cette c
 Chaque preuve porte : contrat · type · texte · **source PDF + page** · lien contrat · lien notice · concepts liés.
 
 ## Format machine
-- [preuves.json](preuves.json) — 616 éléments. Relations dérivées (même contrat, concepts partagés) ; aucune relation inventée.
+- [preuves.json](preuves.json) — 647 éléments. Relations dérivées (même contrat, concepts partagés) ; aucune relation inventée.
 
 ## Comment citer une preuve
 `[Notice : <fichier>, p.<page>]` + l'`#id` de l'élément (réutilisable, stable).

@@ -11,11 +11,11 @@
 
 **Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
 
-- [Invalidité](themes/invalidite.md) — 171 éléments
-- [Décès](themes/deces.md) — 124 éléments
+- [Invalidité](themes/invalidite.md) — 172 éléments
+- [Décès](themes/deces.md) — 144 éléments
 - [Hospitalisation](themes/hospitalisation.md) — 11 éléments
 - [Rachat](themes/rachat.md) — 81 éléments
-- [Souscription](themes/souscription.md) — 105 éléments
-- [Fiscalité](themes/fiscalite.md) — 37 éléments
-- [Association](themes/association.md) — 24 éléments
-- [ANPERE](themes/anpere.md) — 10 éléments
+- [Souscription](themes/souscription.md) — 112 éléments
+- [Fiscalité](themes/fiscalite.md) — 40 éléments
+- [Association](themes/association.md) — 26 éléments
+- [ANPERE](themes/anpere.md) — 11 éléments

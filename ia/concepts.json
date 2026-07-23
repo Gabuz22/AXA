@@ -267,6 +267,11 @@
      "avizen-pro:fait:cfb98375a0:declencheur:0",
      "avizen-pro:fait:6354ec813b:declencheur:0",
      "avizen-pro:fait:e4f8ae15eb:declencheur:0",
+     "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:0",
+     "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+     "essen-ciel-assurance-obseques:fait:59074fa019:declencheur:0",
+     "essen-ciel-assurance-obseques:fait:59074fa019:declencheur:1",
+     "essen-ciel-assurance-obseques:fait:67b35a1cdb:declencheur:0",
      "excelium-assurance-vie:fait:48e4ad06df:declencheur:0",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:2bd15a813d:declencheur:0",
      "ma-retraite-plan-d-epargne-retraite-individuel-per:fait:2aa29d9978:declencheur:0",
@@ -283,8 +288,20 @@
      "avizen-pro:fait:e6e92c4b61:plafond:0",
      "avizen-pro:fait:6354ec813b:plafond:0",
      "avizen-pro:fait:cf7576de07:plafond:0",
+     "essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:0",
+     "essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:1",
+     "essen-ciel-assurance-obseques:fait:59074fa019:plafond:0",
+     "essen-ciel-assurance-obseques:fait:59074fa019:plafond:1",
+     "essen-ciel-assurance-obseques:fait:59074fa019:plafond:2",
+     "essen-ciel-assurance-obseques:fait:59074fa019:plafond:3",
+     "essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:0",
+     "essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:1",
+     "essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:2",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:2bd15a813d:plafond:0",
      "masterlife-credit:fait:d958e52a0c:plafond:0"
+    ],
+    "franchises": [
+     "essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0"
     ],
     "options": [
      "axa_axa_axa_avizen_2025_04_options_8f4ee5536c39_knowledge_566df5b56ec5",
@@ -361,10 +378,12 @@
      "axa_axa_axa_ma_protection_accident_2024_03_exclusions_30878c977dde_knowledge_bd99bda85a24"
     ],
     "declencheurs": [
-     "entour-age:fait:52eb8f16a6:declencheur:1"
+     "entour-age:fait:52eb8f16a6:declencheur:1",
+     "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1"
     ],
     "franchises": [
-     "entour-age:fait:52eb8f16a6:franchise:1"
+     "entour-age:fait:52eb8f16a6:franchise:1",
+     "essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0"
     ],
     "options": [
      "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad"
@@ -436,6 +455,7 @@
      "avizen:def:af457b706f",
      "avizen:def:4289ad5c61",
      "avizen-pro:def:bc84b360bb",
+     "essen-ciel-assurance-obseques:def:bc84b360bb",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:def:bc84b360bb",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:def:a7ab0cecc7",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:def:4aa801f469",
@@ -459,6 +479,7 @@
      "avizen-pro:fait:300c94bbd6:declencheur:0",
      "avizen-pro:fait:e381236ba4:declencheur:0",
      "entour-age:fait:52eb8f16a6:declencheur:1",
+     "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:declencheur:0",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:declencheur:1",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:declencheur:2",
@@ -480,6 +501,7 @@
      "avizen:fait:819383df2a:franchise:0",
      "avizen-pro:fait:b98f6e974d:franchise:0",
      "entour-age:fait:52eb8f16a6:franchise:1",
+     "essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:franchise:0"
     ],
     "options": [
@@ -671,7 +693,8 @@
     "franchises": [
      "avizen:fait:3d298b99e0:franchise:0",
      "avizen-pro:fait:45763a5331:franchise:0",
-     "entour-age:fait:52eb8f16a6:franchise:1"
+     "entour-age:fait:52eb8f16a6:franchise:1",
+     "essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0"
     ],
     "options": [
      "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad"
@@ -858,6 +881,7 @@
      "avizen:cond:df91ea5e02",
      "entour-age:cond:0757925f45",
      "entour-age:cond:2a7fe9c4fc",
+     "essen-ciel-assurance-obseques:cond:969788b935",
      "excelium-assurance-vie:cond:04d661bd25",
      "ma-retraite-plan-d-epargne-retraite-individuel-per:cond:c956e63a5d",
      "ma-retraite-plan-d-epargne-retraite-individuel-per:cond:e8e8e580d8",
@@ -866,13 +890,15 @@
     "declencheurs": [
      "avizen-pro:fait:e4f8ae15eb:declencheur:0",
      "entour-age:fait:2a25013e7a:declencheur:0",
+     "essen-ciel-assurance-obseques:fait:5134099b84:declencheur:0",
      "excelium-assurance-vie:fait:0b27383ed4:declencheur:1"
     ],
     "plafonds": [
      "avizen:fait:2cbcc3adad:plafond:0",
      "avizen:fait:d2f8ad4663:plafond:0",
      "entour-age:fait:2a25013e7a:plafond:0",
-     "entour-age:fait:2094e3a95e:plafond:1"
+     "entour-age:fait:2094e3a95e:plafond:1",
+     "essen-ciel-assurance-obseques:fait:5134099b84:plafond:0"
     ],
     "franchises": [
      "avizen:fait:89a1ca75b5:franchise:0",
@@ -967,7 +993,8 @@
    ],
    "categories": {
     "conditions": [
-     "entour-age:cond:0757925f45"
+     "entour-age:cond:0757925f45",
+     "essen-ciel-assurance-obseques:cond:969788b935"
     ],
     "cotisations": [
      "axa_axa_axa_avizen_2025_04_cotisations_et_prix_abc3375d4853_knowledge_811b06665e8e"
@@ -975,7 +1002,8 @@
    },
    "contrats": [
     "Avizen",
-    "Entour'Age"
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)"
    ],
    "url": "https://gabuz22.github.io/AXA/ia/concepts.html#c-age"
   },
@@ -1041,6 +1069,7 @@
     ],
     "definitions": [
      "avizen-pro:def:095b5fb514",
+     "essen-ciel-assurance-obseques:def:408870172d",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:def:11cbeb7842"
     ],
     "plafonds": [
@@ -1110,12 +1139,14 @@
      "ma-protection-accident-garantie-des-accidents-de-la-vie:def:890b9fbc67"
     ],
     "conditions": [
+     "essen-ciel-assurance-obseques:cond:969788b935",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:cond:88e167c83f",
      "ma-protection-accident-garantie-des-accidents-de-la-vie:cond:1158f219d0"
     ],
     "declencheurs": [
      "avizen:fait:9893112dc5:declencheur:1",
-     "avizen-pro:fait:6354ec813b:declencheur:0"
+     "avizen-pro:fait:6354ec813b:declencheur:0",
+     "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1"
     ],
     "options": [
      "axa_axa_axa_avizen_pro_2025_04_options_30367f970ec3_knowledge_9b700659935b",
@@ -1259,6 +1290,7 @@
      "avizen:cond:94ec71256c",
      "avizen-pro:cond:7f172f0e1e",
      "entour-age:cond:0757925f45",
+     "essen-ciel-assurance-obseques:cond:969788b935",
      "excelium-assurance-vie:cond:04d661bd25",
      "ma-retraite-plan-d-epargne-retraite-individuel-per:cond:c956e63a5d",
      "masterlife-credit:cond:1ed4ab0baf"
@@ -1273,6 +1305,7 @@
     "Avizen",
     "Avizen Pro",
     "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
     "Excelium (assurance vie)",
     "Ma Retraite (plan d'épargne retraite individuel — PER)",
     "Masterlife CREDIT"

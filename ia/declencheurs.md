@@ -1,4 +1,4 @@
-# Déclencheurs — toutes (77)
+# Déclencheurs — toutes (83)
 
 > **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-17 (v2.3.0).
 > Outil **indépendant et non officiel**, non affilié ni validé par AXA — documents accessibles publiquement.
@@ -63,6 +63,15 @@
 - **Services dès l'adhésion « ENTREAIDANTS »** — dès la prise d'effet de l'adhésion [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.16, 3.3.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=16) `#entour-age:fait:2a25013e7a:declencheur:0`
 - **Services d'assistance dédiés en perte d'autonomie** — état de dépendance reconnu [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.23, 4.4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=23) `#entour-age:fait:2094e3a95e:declencheur:0`
 - **Services pour l'aidant de l'assuré** — selon prestation : dépendance de l'assuré reconnue, ou rôle d'aidant [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.25, 5.2.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=25) `#entour-age:fait:dcbc36cf9a:declencheur:0`
+
+## Essen'Ciel (assurance obsèques) (6)
+
+- **Garantie décès (capital obsèques)** — décès de l'assuré [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) `#essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:0`
+- **Garantie décès (capital obsèques)** — décès accidentel : dès la prise d'effet ; décès non accidentel : après 1 an (sinon remboursement des cotisations nettes de frais à la succession) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) `#essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1`
+- **Assistance dès l'adhésion** — dès l'adhésion [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.23, 6.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=23) `#essen-ciel-assurance-obseques:fait:5134099b84:declencheur:0`
+- **Assistance au moment du décès** — décès à plus de 30 km du domicile pour le volet rapatriement [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24) `#essen-ciel-assurance-obseques:fait:59074fa019:declencheur:0`
+- **Assistance au moment du décès** — appel préalable obligatoire à AXA Assistance avant toute dépense [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24) `#essen-ciel-assurance-obseques:fait:59074fa019:declencheur:1`
+- **Assistance après le décès (proches)** — demande d'un membre de la famille [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.27, 6.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=27) `#essen-ciel-assurance-obseques:fait:67b35a1cdb:declencheur:0`
 
 ## Excelium (assurance vie) (6)
 

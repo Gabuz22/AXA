@@ -25,7 +25,7 @@
 ## Couverture des données (rappel)
 
 - Résumé humain (resume_neutre) : 9/9
-- Résumé IA (descriptions faits) : 83/83
+- Résumé IA (descriptions faits) : 91/91
 - Garanties : 50/50
 - Exclusions : 33/33
 - Options : 36/36
@@ -34,14 +34,14 @@
 - Fiscalité : 44/44
 - Points de vigilance : 61/61
 - Formules : 22/22
-- Définitions : 42/42
-- Conditions : 19/19
-- Déclencheurs : 77/77
-- Plafonds : 43/43
-- Franchises : 13/13
+- Définitions : 46/46
+- Conditions : 21/21
+- Déclencheurs : 83/83
+- Plafonds : 53/53
+- Franchises : 14/14
 - Glossaire (définitions) : 46/46
 - Notices (PDF) : 11/11
-- Sources (références) : 155/155
+- Sources (références) : 156/156
 - Contrats : 9/9
 
 ## Limites restantes

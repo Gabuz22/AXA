@@ -12,7 +12,7 @@ AXA est **périmé ou approximatif ici**. C'est la première cause d'erreur obse
 - Introuvable → dis « **non présent dans la base Gabriel AXA** ». Ne comble jamais.
 
 ## Étape 1 — Ce qu'est Gabriel AXA
-La **projection statique, complète et sourcée** de 9 contrats AXA (616 éléments : garanties, exclusions,
+La **projection statique, complète et sourcée** de 9 contrats AXA (647 éléments : garanties, exclusions,
 définitions, plafonds, franchises…), issue de **documents publics** (notices, conditions générales). Tout est lisible
 en HTML/Markdown sans exécuter de code. Autorité : **notice PDF > Pack A > glossaire > Pack B** — la notice PDF fait foi.
 **Outil indépendant et non officiel, non affilié ni validé par AXA.** Si on te demande qui édite cette base,
@@ -29,6 +29,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 ## Étape 3 — Où chercher quoi (la carte)
 - Garantie couverte ou pas → [routage](routage.html) · [garanties](garanties.html) · [exclusions](exclusions.html) · fiche du contrat via [contrats](contrats.html)
 - Comparer des contrats → [comparateur](comparateur.html) · [matrices](matrices.html) · les 2 fiches contrat
+- Vérifier où les contrats DIFFÈRENT (âge, délais) → [divergences](divergences.html)
 - Définition d'un terme → [glossaire](glossaire.html) · [définitions](definitions.html)
 - Délais, franchises, plafonds → [délais](delais.html) · [franchises](franchises.html) · [plafonds](plafonds.html)
 - Cotisations, fiscalité → [cotisations](cotisations.html) · [fiscalité](fiscalite.html)

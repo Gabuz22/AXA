@@ -2,7 +2,7 @@
  "meta": {
   "version": "2.3.0",
   "genere_le": "2026-07-17",
-  "elements": 616,
+  "elements": 647,
   "usage": "Graphe de preuves : chaque conclusion doit citer des ids d'éléments. relations = même contrat + concepts partagés (dérivés, vérifiables).",
   "champs": [
    "id",
@@ -1667,6 +1667,62 @@
    ]
   },
   {
+   "id": "essen-ciel-assurance-obseques:def:bc84b360bb",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "definitions",
+   "titre": "Accident",
+   "texte": "Atteinte corporelle non intentionnelle provenant de l'action soudaine, violente et imprévisible d'une cause extérieure. Les affections de la colonne vertébrale, pathologies cardiaques (avec ou sans coronaropathies), chocs émotifs et états dépressifs sont considérés comme des MALADIES.",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 47,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:def:bc84b360bb",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=47",
+   "concepts": [
+    "accident"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:def:408870172d",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "definitions",
+   "titre": "Bénéficiaires",
+   "texte": "(1) à hauteur des frais d'obsèques : la personne physique ou l'entreprise de pompes funèbres ayant pris en charge les obsèques, sur factures ; (2) à défaut ou pour le solde : bénéficiaires subsidiaires désignés par l'adhérent.",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 47,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:def:408870172d",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=47",
+   "concepts": [
+    "beneficiaire"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:def:16d324e538",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "definitions",
+   "titre": "Membre de la famille",
+   "texte": "Conjoint ou partenaire PACS de l'assuré ; leurs enfants et ascendants jusqu'au 2e degré.",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 48,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:def:16d324e538",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=48",
+   "concepts": []
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:def:0309a6c666",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "definitions",
+   "titre": "France",
+   "texte": "France métropolitaine + DROM (Guadeloupe, Guyane, Martinique, Mayotte, La Réunion).",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 48,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:def:0309a6c666",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=48",
+   "concepts": []
+  },
+  {
    "id": "excelium-assurance-vie:def:e60bade006",
    "contrat": "Excelium (assurance vie)",
    "contrat_slug": "excelium-assurance-vie",
@@ -2106,6 +2162,37 @@
     "carence",
     "souscription"
    ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:cond:969788b935",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "conditions",
+   "titre": "",
+   "texte": "Conditions cumulatives : résident fiscal français ; adhérent ANPERE (droits d'adhésion) ; âge entre 50 et 85 ans inclus à la signature (différence de millésimes). Pas de formalité médicale mentionnée dans la notice.",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 16,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:cond:969788b935",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=16",
+   "concepts": [
+    "souscription",
+    "age",
+    "fiscalite",
+    "association"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:cond:9f5521f209",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "conditions",
+   "titre": "",
+   "texte": "Cotisations temporaires : âge < 90 ans au paiement de la dernière cotisation.",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 17,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:cond:9f5521f209",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=17",
+   "concepts": []
   },
   {
    "id": "excelium-assurance-vie:cond:04d661bd25",
@@ -2894,6 +2981,99 @@
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/entour-age.html#entour-age:fait:dcbc36cf9a:declencheur:0",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=25",
    "concepts": []
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "declencheurs",
+   "titre": "Garantie décès (capital obsèques)",
+   "texte": "décès de l'assuré",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:0",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "declencheurs",
+   "titre": "Garantie décès (capital obsèques)",
+   "texte": "décès accidentel : dès la prise d'effet ; décès non accidentel : après 1 an (sinon remboursement des cotisations nettes de frais à la succession)",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20",
+   "concepts": [
+    "deces",
+    "deces-accidentel",
+    "accident",
+    "fiscalite"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:5134099b84:declencheur:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "declencheurs",
+   "titre": "Assistance dès l'adhésion",
+   "texte": "dès l'adhésion",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 23,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:5134099b84:declencheur:0",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=23",
+   "concepts": [
+    "souscription"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:declencheur:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "declencheurs",
+   "titre": "Assistance au moment du décès",
+   "texte": "décès à plus de 30 km du domicile pour le volet rapatriement",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:59074fa019:declencheur:0",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:declencheur:1",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "declencheurs",
+   "titre": "Assistance au moment du décès",
+   "texte": "appel préalable obligatoire à AXA Assistance avant toute dépense",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:59074fa019:declencheur:1",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:67b35a1cdb:declencheur:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "declencheurs",
+   "titre": "Assistance après le décès (proches)",
+   "texte": "demande d'un membre de la famille",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 27,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:67b35a1cdb:declencheur:0",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=27",
+   "concepts": [
+    "deces"
+   ]
   },
   {
    "id": "excelium-assurance-vie:fait:4475e2a358:declencheur:0",
@@ -3741,6 +3921,156 @@
    "concepts": []
   },
   {
+   "id": "essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "plafonds",
+   "titre": "Garantie décès (capital obsèques)",
+   "texte": "capital 2 000 - 10 000 €",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:0",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:1",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "plafonds",
+   "titre": "Garantie décès (capital obsèques)",
+   "texte": "le capital peut être insuffisant pour couvrir les frais réels (reliquat à charge des proches)",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:1",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:5134099b84:plafond:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "plafonds",
+   "titre": "Assistance dès l'adhésion",
+   "texte": "renseignements d'ordre documentaire",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 23,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:5134099b84:plafond:0",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=23",
+   "concepts": [
+    "souscription"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:plafond:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "plafonds",
+   "titre": "Assistance au moment du décès",
+   "texte": "3 600 € TTC (rapatriement+retour+présence)",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:59074fa019:plafond:0",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:plafond:1",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "plafonds",
+   "titre": "Assistance au moment du décès",
+   "texte": "cercueil 800 € TTC",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:59074fa019:plafond:1",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:plafond:2",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "plafonds",
+   "titre": "Assistance au moment du décès",
+   "texte": "hôtel 80 €/nuit ×3",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:59074fa019:plafond:2",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019:plafond:3",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "plafonds",
+   "titre": "Assistance au moment du décès",
+   "texte": "750 € TTC (garde enfants+animaux+aide-ménagère)",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:59074fa019:plafond:3",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "plafonds",
+   "titre": "Assistance après le décès (proches)",
+   "texte": "6 entretiens psy / 80 €/séance",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 27,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:0",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=27",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:1",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "plafonds",
+   "titre": "Assistance après le décès (proches)",
+   "texte": "aide mobilité 160 € TTC",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 27,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:1",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=27",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:2",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "plafonds",
+   "titre": "Assistance après le décès (proches)",
+   "texte": "3 évaluations sociales",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 27,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:2",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=27",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
    "id": "excelium-assurance-vie:fait:62d6fd5c2d:plafond:0",
    "contrat": "Excelium (assurance vie)",
    "contrat_slug": "excelium-assurance-vie",
@@ -4174,6 +4504,24 @@
     "accident",
     "carence",
     "souscription"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "franchises",
+   "titre": "Garantie décès (capital obsèques)",
+   "texte": "délai d'attente 1 an pour le décès non accidentel",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20",
+   "concepts": [
+    "deces",
+    "deces-accidentel",
+    "accident",
+    "carence"
    ]
   },
   {
@@ -8643,6 +8991,133 @@
    "page": 13,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/entour-age.html#entour-age:fait:4e99d7e44b",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=13",
+   "concepts": []
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:2b1ce99ec2",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "faits",
+   "titre": "Garantie décès (capital obsèques)",
+   "texte": "Versement du capital garanti (2 000 à 10 000 €, choisi à l'adhésion) : à hauteur des frais d'obsèques à la personne/entreprise de pompes funèbres sur facture (acquittée → remboursement à la personne ayant avancé ; non acquittée → versement direct aux pompes funèbres) ; solde éventuel aux bénéficiaires subsidiaires. Le capital doit obligatoirement être affecté au financement des obsèques à concurrence de leur coût. Mise à disposition sous 48 h (ouvrées) après réception des pièces. Couverture monde entier. Le contrat n'organise PAS les obsèques.",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:2b1ce99ec2",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20",
+   "concepts": [
+    "deces",
+    "incapacite-temporaire",
+    "souscription",
+    "beneficiaire"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:0c78e0e092",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "faits",
+   "titre": "Revalorisation du capital",
+   "texte": "Revalorisation contractuelle GARANTIE de 1 %/an du capital à chaque anniversaire de l'adhésion, sans augmentation de cotisation ; + participation aux résultats techniques et financiers (taux annuel décidé par AXA, attribution au plus tard le 1er avril à effet du 31/12 précédent). La revalorisation est étendue post-mortem jusqu'à réception complète des pièces (L132-5).",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:0c78e0e092",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20",
+   "concepts": [
+    "souscription"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:5134099b84",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "faits",
+   "titre": "Assistance dès l'adhésion",
+   "texte": "Informations et conseils « Obsèques » (8h-20h30, 7j/7) ; informations juridiques « Obsèques » (succession, fiscalité, juridictions…).",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 23,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:5134099b84",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=23",
+   "concepts": [
+    "souscription",
+    "fiscalite"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:59074fa019",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "faits",
+   "titre": "Assistance au moment du décès",
+   "texte": "Rapatriement du corps/cendres jusqu'au lieu d'inhumation en France (frais réels ; cercueil lié au transport : 800 € TTC max ; frais d'obsèques/cérémonie/convois/inhumation à charge de la famille ; rapatriement vers l'étranger possible mais tous frais à charge) ; retour des membres de la famille voyageant avec l'assuré (aller simple) ; présence d'un membre de la famille (A/R + hôtel 3 nuits max à 80 €/nuit, si l'assuré était seul sur place) - PLAFOND GLOBAL de ces 3 garanties : 3 600 € TTC ; monde entier si décès à plus de 30 km du domicile, séjours étranger < 90 jours. Et pour les proches en France : garde des enfants/petits-enfants < 15 ans (jour des obsèques ou préparation), garde/transfert des animaux (2 max, dans le mois suivant, rayon 50 km), aide-ménagère au domicile du défunt (min 2 h consécutives, dans le mois) - PLAFOND GLOBAL de ces 3 prestations : 750 € TTC.",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 24,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:59074fa019",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:67b35a1cdb",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "faits",
+   "titre": "Assistance après le décès (proches)",
+   "texte": "Soutien psychologique : 6 entretiens max (téléphone et/ou cabinet, remboursement 80 €/séance max en cabinet) pendant 12 mois ; accompagnement social : jusqu'à 3 évaluations téléphoniques par assistant(e) social(e) pendant 3 mois ; plateforme digitale de démarches post-décès (courriers types, 1 an d'accès) ; aide à la mobilité pour personnes seules (accompagnateur taxi/VTC, rayon 50 km, limite 160 € TTC, pendant 3 mois) ; mise en relation entretien/fleurissement de sépulture ; organisation de services à la personne (devis, avantages CESU/fiscaux - coût à charge du demandeur ; accessible 3 mois).",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 27,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:67b35a1cdb",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=27",
+   "concepts": [
+    "deces"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:c5c20e0b74",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "faits",
+   "titre": "Décès exclus",
+   "texte": "Suicide ou tentative au cours de la 1re année d'adhésion ; guerre civile ou étrangère, invasions, agressions étrangères, hostilités ; participation active à une guerre où la France ne participe pas, rébellion, révolution, insurrection, prise de pouvoir, mouvement populaire, émeute, terrorisme (légitime défense, assistance à personne en danger et devoir professionnel garantis).",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 30,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:c5c20e0b74",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=30",
+   "concepts": [
+    "deces",
+    "souscription",
+    "suicide"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:152ed66d71",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "faits",
+   "titre": "Décès accidentel exclu",
+   "texte": "Alcoolémie ≥ limite du Code de la route français ; emprise de stupéfiants ou substances médicamenteuses hors prescription ; attentats/actes terroristes par armes ou matières radioactives, chimiques, bactériologiques ou virales ; action directe ou indirecte de tout agent biologique.",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 30,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:152ed66d71",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=30",
+   "concepts": [
+    "invalidite",
+    "deces",
+    "deces-accidentel",
+    "accident"
+   ]
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:a3ce12d1bf",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "contrat_slug": "essen-ciel-assurance-obseques",
+   "type": "faits",
+   "titre": "Exclusions assistance",
+   "texte": "Excédents de bagages ; frais non justifiés par documents originaux ; frais de documents officiels ; coût des services à la personne organisés mais non pris en charge (Â§6.2.7) ; interventions étatiques/inter-étatiques. Limites de responsabilité : secours primaires non remboursés ; force majeure, guerre, grèves, cataclysmes, radioactivité, épidémies, risques infectieux/chimiques ; clause sanctions/embargo ONU/UE/UK/USA.",
+   "source_pdf": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 31,
+   "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/essen-ciel-assurance-obseques.html#essen-ciel-assurance-obseques:fait:a3ce12d1bf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=31",
    "concepts": []
   },
   {

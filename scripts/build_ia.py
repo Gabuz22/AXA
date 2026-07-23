@@ -66,6 +66,13 @@ CONTRATS = sorted((RESUME.get("contrats") or []), key=lambda c: norm(c.get("nom"
 DERIVED = {}
 for d in (FICHES.get("contrats") or []):
     DERIVED[slug(d.get("nom"))] = d; DERIVED[slug(d.get("id"))] = d
+    # Index aussi par ALIAS : la fiche « EssenCiel » (slug essenciel) porte l'alias
+    # « Essen'Ciel (assurance obsèques) » = le nom EXACT du contrat résumé. Sans cette ligne, le
+    # rapprochement par slug échouait (essenciel ≠ essen-ciel-assurance-obseques) et TOUTE la couche
+    # dérivée d'Essen'Ciel obsèques (conditions d'adhésion, définitions, déclencheurs…) disparaissait
+    # silencieusement de la Vue IA. setdefault : un nom/id ne doit jamais être écrasé par un alias.
+    for a in (d.get("aliases") or []):
+        if a: DERIVED.setdefault(slug(a), d)
 def find_derived(c):
     k = slug(c.get("nom"))
     if k in DERIVED: return DERIVED[k]
@@ -182,7 +189,7 @@ CATS_NAV = [("start", "START"), ("index", "Index"), ("instructions-maitres", "In
             ("qualite-routage", "Qualité routage"), ("hierarchie", "Hiérarchie"), ("choix-sources", "Choix sources"),
             ("methode-question-complexe", "Méthode"), ("contrats", "Contrats"), ("garanties", "Garanties"), ("exclusions", "Exclusions"),
             ("definitions", "Définitions"), ("conditions", "Conditions"), ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
-            ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"), ("matrices", "Matrices"), ("graphe", "Graphe"),
+            ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"), ("divergences", "Divergences"), ("matrices", "Matrices"), ("graphe", "Graphe"),
             ("notices", "Notices"), ("sources", "Sources"), ("sources-officielles", "Sources officielles"), ("reglementation", "Réglementation"), ("surveillance", "Surveillance"),
             ("pack-a", "Pack A"), ("pack-b", "Pack B"), ("couverture", "Couverture"), ("maturite", "Maturité")]
 def nav_html(depth):
@@ -680,6 +687,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 ## Étape 3 — Où chercher quoi (la carte)
 - Garantie couverte ou pas → [routage](routage.html) · [garanties](garanties.html) · [exclusions](exclusions.html) · fiche du contrat via [contrats](contrats.html)
 - Comparer des contrats → [comparateur](comparateur.html) · [matrices](matrices.html) · les 2 fiches contrat
+- Vérifier où les contrats DIFFÈRENT (âge, délais) → [divergences](divergences.html)
 - Définition d'un terme → [glossaire](glossaire.html) · [définitions](definitions.html)
 - Délais, franchises, plafonds → [délais](delais.html) · [franchises](franchises.html) · [plafonds](plafonds.html)
 - Cotisations, fiscalité → [cotisations](cotisations.html) · [fiscalité](fiscalite.html)
@@ -758,7 +766,7 @@ def build_static_pages(theme_counts):
     # Manifeste lisible + ai-manifest.json
     pages = ["start", "index", "instructions-maitres", "guide-ia", "niveaux-competence", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
              "planificateur", "concepts", "couverture-recherche",
-             "comparateur", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
+             "comparateur", "divergences", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
              "sources-officielles", "reglementation", "surveillance", "connaissances-dynamiques", "matrices",
              "graphe", "maturite", "pack-a", "pack-b", "contrats",
              "garanties", "exclusions", "options", "cotisations", "delais", "fiscalite", "points-vigilance",
@@ -808,6 +816,7 @@ def build_static_pages(theme_counts):
             "premiere_visite_ou_doute_sur_la_methode": ["start", "instructions-maitres"],
             "garantie_couverte_ou_pas": ["instructions-maitres", "routage", "garanties", "exclusions", "contrats"],
             "comparer_des_contrats": ["comparateur", "matrices", "contrats"],
+            "verifier_les_ecarts_entre_contrats": ["divergences", "comparateur", "matrices"],
             "definition_d_un_terme": ["glossaire", "definitions"],
             "delais_franchises_plafonds": ["delais", "franchises", "plafonds"],
             "cotisations_et_fiscalite": ["cotisations", "fiscalite"],
@@ -1263,7 +1272,7 @@ def build_niveaux():
             {"id": "conseiller", "nom": "Niveau conseiller", "resume": "Complétude utile au client : garanties avec leurs exclusions et conditions, éligibilité, structure de cas client, action concrète.",
              "ajoute_sur": "socle", "pages": ["exclusions", "conditions", "franchises", "plafonds", "pertinence", "methode-question-complexe", "routage"]},
             {"id": "inspecteur", "nom": "Niveau inspecteur fonction support", "resume": "Rigueur de contrôle : cohérence inter-contrats, exhaustivité vérifiée, traçabilité auditée, frontière réglementaire tenue, escalade explicite.",
-             "ajoute_sur": "conseiller", "pages": ["comparateur", "matrices", "points-vigilance", "reglementation", "sources-officielles", "couverture"]},
+             "ajoute_sur": "conseiller", "pages": ["divergences", "comparateur", "matrices", "points-vigilance", "reglementation", "sources-officielles", "couverture"]},
         ],
         "grille_auto_evaluation": grille,
         "criteres_escalade": escalade,
@@ -1303,7 +1312,7 @@ Auto-contrôle du niveau conseiller :
 
 ## Niveau 2 — Niveau inspecteur fonction support (contrôler, pas seulement conseiller)
 Ajoute la **rigueur de contrôle**. L'inspecteur ne se contente pas d'une réponse juste : il la **met à l'épreuve**.
-- **Cohérence inter-contrats** : quand plusieurs contrats traitent le même concept, comparer et **signaler les divergences** (une carence de 3 mois ici, 12 là) : [comparateur](comparateur.html) · [matrices](matrices.html).
+- **Cohérence inter-contrats** : quand plusieurs contrats traitent le même concept, comparer et **signaler les divergences** (une carence de 3 mois ici, 12 là) : [divergences](divergences.html) (écarts chiffrés déjà repérés) · [comparateur](comparateur.html) · [matrices](matrices.html).
 - **Exhaustivité vérifiée** : pour la garantie citée, s'assurer qu'**aucune** exclusion / condition / plafond / franchise / point de vigilance n'est omis : [points de vigilance](points-vigilance.html).
 - **Traçabilité auditée** : chaque fait porte notice + page ; une source incomplète ou un tableau non extrait se **dit**, jamais présenté comme certain.
 - **Frontière réglementaire tenue** : tout chiffre de barème / plafond fiscal → **source officielle datée** et marquée « évolutif », jamais transformé en donnée contractuelle : [réglementation](reglementation.html) · [sources officielles](sources-officielles.html).
@@ -1327,6 +1336,126 @@ avant de la rendre.
     write("niveaux-competence.md", md)
     write("niveaux-competence.html", page_html("Niveaux de compétence", renderish(md), depth, SITE + "/ia/niveaux-competence.html"))
 
+def build_divergences():
+    """Détecteur de DIVERGENCES inter-contrats (contrôle niveau inspecteur). Extrait des paramètres
+    CHIFFRÉS comparables (âge d'adhésion, délais/carences, franchises) et signale, concept par
+    concept, là où les contrats diffèrent. C'est un signal « à vérifier », JAMAIS une conclusion de
+    contradiction : deux nombres identiques peuvent viser des risques différents, deux nombres
+    différents peuvent être cohérents. Chaque valeur porte sa notice + page. Aucune donnée inventée :
+    extraction déterministe du texte projeté."""
+    depth = 0
+    RE_RANGE = re.compile(r"(\d{1,2})\s*(?:a|et|-|/)\s*(\d{1,2})\s*ans")
+    RE_MAX = re.compile(r"(?:avant|jusqu'?a(?:ux)?|moins de|au plus|maximum|maximal)\D{0,14}(\d{1,2})\s*ans")
+    RE_MIN = re.compile(r"(?:plus de|a partir de|au moins|minimum|minimal|des l'age de)\D{0,14}(\d{1,2})\s*ans")
+    RE_DUREE = re.compile(r"(\d+)\s*(mois|jours?|semaines?|ans|annees?)")
+
+    def ex_age(t):
+        s = set()
+        for m in RE_RANGE.finditer(t): s.add("%s–%s ans" % (m.group(1), m.group(2)))
+        for m in RE_MAX.finditer(t): s.add("≤%s ans" % m.group(1))
+        for m in RE_MIN.finditer(t): s.add("≥%s ans" % m.group(1))
+        return s
+    def ex_duree(t):
+        s = set()
+        for m in RE_DUREE.finditer(t):
+            u = m.group(2)
+            u = "jours" if u.startswith("jour") else ("semaines" if u.startswith("semaine") else ("ans" if u.startswith("an") else "mois"))
+            s.add("%s %s" % (m.group(1), u))
+        return s
+
+    DIMENSIONS = [
+        {"id": "age-adhesion", "nom": "Âge à l'adhésion", "cats": ["conditions"], "filtre": None, "ex": ex_age,
+         "note": "Chaque contrat fixe sa propre fenêtre d'âge à la signature. Une plage différente n'est pas une erreur — mais un client hors plage est inéligible : à vérifier AVANT toute proposition."},
+        {"id": "delais-carences", "nom": "Délais & carences (durées)", "cats": ["delais", "franchises"], "filtre": ["carence", "attente", "franchise", "delai", "delais"], "ex": ex_duree,
+         "note": "Les durées (carence, franchise, délai) ne se comparent qu'à GARANTIE équivalente : un même nombre de jours peut viser des risques différents. Vérifier la garantie visée avant de conclure."},
+    ]
+
+    dims_out = []
+    for dim in DIMENSIONS:
+        par_contrat = {}          # cslug -> {"nom", "tokens": {token: src}}
+        sans_valeur = {}          # cslug -> nom : concept mentionné mais aucun chiffre extrait
+        for cat in dim["cats"]:
+            for e in ELEMENTS.get(cat, []):
+                t = norm((e.get("titre") or "") + " " + (e.get("texte") or ""))
+                if dim["filtre"] and not any(w in t for w in dim["filtre"]):
+                    continue
+                toks = dim["ex"](t)
+                if toks:
+                    slot = par_contrat.setdefault(e["cslug"], {"nom": e["contrat"], "tokens": {}})
+                    for tk in toks:
+                        slot["tokens"].setdefault(tk, e.get("src"))
+                elif dim["filtre"]:
+                    sans_valeur.setdefault(e["cslug"], e["contrat"])
+        for cs in par_contrat:      # un contrat qui a une valeur n'est pas « sans valeur »
+            sans_valeur.pop(cs, None)
+        valeurs = sorted({tk for slot in par_contrat.values() for tk in slot["tokens"]})
+        diverge = len(par_contrat) >= 2 and len(valeurs) > 1
+        dims_out.append({"dim": dim, "par_contrat": par_contrat, "sans_valeur": sans_valeur,
+                         "valeurs": valeurs, "diverge": diverge})
+
+    # -------- JSON machine (le vrai outil pour une IA de contrôle) --------
+    def _vals(slot):
+        out = []
+        for tk, src in slot["tokens"].items():
+            s = src or {}
+            out.append({"valeur": tk, "notice": s.get("document_source"), "page": s.get("page")})
+        return sorted(out, key=lambda x: x["valeur"])
+    data = {
+        "meta": {"version": VERSION, "genere_le": DATE, "dimensions": len(dims_out),
+                 "usage": "Contrôle niveau inspecteur : repérer où les contrats diffèrent sur un paramètre chiffré."},
+        "avertissement": "Détecteur de DIFFÉRENCES, pas de contradictions. Une divergence est un signal à vérifier "
+                         "à la notice — le sens d'un même chiffre peut varier d'un contrat à l'autre. Ne jamais conclure "
+                         "à une contradiction sans lire les garanties visées. La notice PDF fait foi.",
+        "dimensions": [{
+            "id": d["dim"]["id"], "nom": d["dim"]["nom"], "diverge": d["diverge"],
+            "valeurs_distinctes": d["valeurs"], "note_interpretation": d["dim"]["note"],
+            "par_contrat": [{"contrat": s["nom"], "slug": cs, "valeurs": _vals(s)}
+                            for cs, s in sorted(d["par_contrat"].items(), key=lambda kv: norm(kv[1]["nom"]))],
+            "mentionne_sans_valeur_chiffree": [{"contrat": n, "slug": cs} for cs, n in sorted(d["sans_valeur"].items(), key=lambda kv: norm(kv[1]))],
+        } for d in dims_out],
+    }
+    write("divergences.json", json.dumps(data, ensure_ascii=False, indent=1))
+
+    # -------- pages MD + HTML --------
+    n_div = sum(1 for d in dims_out if d["diverge"])
+    md = [md_hdr("Divergences inter-contrats",
+                 "Repérer où les contrats diffèrent sur un paramètre chiffré (âge d'adhésion, délais, carences). "
+                 "Un signal à vérifier, jamais une contradiction tranchée."), ""]
+    md += ["> **Ceci détecte des DIFFÉRENCES, pas des contradictions.** Une plage d'âge ou un délai différent "
+           "peut être parfaitement cohérent (contrats de familles distinctes) ou viser un risque différent. "
+           "Chaque valeur porte sa notice — **vérifie la garantie visée avant toute conclusion. La notice PDF fait foi.**", "",
+           "**%d dimension(s) chiffrée(s) analysée(s), dont %d avec divergence à vérifier.**" % (len(dims_out), n_div), ""]
+    hb = ['<h1>Divergences inter-contrats</h1>',
+          '<p><strong>Détecteur de différences, pas de contradictions.</strong> Un écart chiffré entre contrats est un '
+          'signal à vérifier à la notice, jamais une conclusion. Chaque valeur porte sa source. La notice PDF fait foi.</p>',
+          '<p>%d dimension(s) analysée(s), dont <strong>%d avec divergence</strong>.</p>' % (len(dims_out), n_div)]
+
+    for d in dims_out:
+        dim = d["dim"]
+        badge = " — ⚠ divergence à vérifier" if d["diverge"] else " — aligné ou dimension unique"
+        md += ["", "## %s%s" % (dim["nom"], badge), "", "_%s_" % dim["note"], ""]
+        hb.append('<h2 id="d-%s">%s%s</h2><p><em>%s</em></p>' % (dim["id"], html.escape(dim["nom"]),
+                  html.escape(badge), html.escape(dim["note"])))
+        if d["diverge"]:
+            md.append("Valeurs distinctes relevées : **%s**." % ", ".join(d["valeurs"]))
+            hb.append("<p>Valeurs distinctes relevées : <strong>%s</strong>.</p>" % html.escape(", ".join(d["valeurs"])))
+        hb.append("<ul>")
+        for cs, slot in sorted(d["par_contrat"].items(), key=lambda kv: norm(kv[1]["nom"])):
+            vals_md = " · ".join("**%s**%s" % (tk, cite_md(src, depth)) for tk, src in sorted(slot["tokens"].items()))
+            vals_html = " · ".join("<strong>%s</strong>%s" % (html.escape(tk), cite_html(src, depth)) for tk, src in sorted(slot["tokens"].items()))
+            md.append("- [%s](contrat/%s.html) : %s" % (slot["nom"], cs, vals_md))
+            hb.append('<li><a href="contrat/%s.html">%s</a> : %s</li>' % (cs, html.escape(slot["nom"]), vals_html))
+        hb.append("</ul>")
+        if d["sans_valeur"]:
+            noms = ", ".join(sorted(d["sans_valeur"].values(), key=norm))
+            md.append("- _Mentionne le sujet sans valeur chiffrée (à vérifier notice)_ : %s" % noms)
+            hb.append('<p><em>Mentionne le sujet sans valeur chiffrée (à vérifier notice)</em> : %s</p>' % html.escape(noms))
+    md += ["", "## Format machine", "- [divergences.json](divergences.json) — chaque dimension, ses valeurs par contrat (avec notice + page), "
+           "et le drapeau `diverge`. Une IA de contrôle s'en sert pour signaler ce qui doit être vérifié.", ""]
+    hb.append('<h2>Format machine</h2><p><a href="divergences.json">divergences.json</a> — valeurs par contrat, notice + page, drapeau <code>diverge</code>.</p>')
+    write("divergences.md", "\n".join(md))
+    write("divergences.html", page_html("Divergences inter-contrats", "".join(hb), depth, SITE + "/ia/divergences.html"))
+
 def build_outils():
     depth = 0
     items = [("niveaux-competence", "Niveaux de compétence", "escalier de rigueur conseiller → inspecteur + grille d'auto-évaluation (JSON)"),
@@ -1337,6 +1466,7 @@ def build_outils():
              ("concepts", "Index conceptuel", "concepts métier reliant synonymes, contrats, catégories, sources"),
              ("couverture-recherche", "Détecteur de couverture", "présent / absent de la base / à vérifier en notice"),
              ("comparateur", "Comparateur thématique", "un sujet, tous les contrats côte à côte, sourcé"),
+             ("divergences", "Divergences inter-contrats", "où les contrats diffèrent sur un chiffre (âge, délais) — signal à vérifier, jamais une contradiction"),
              ("preuves", "Graphe de preuves", "chaque élément citable (id, source, page, concepts)"),
              ("methode-question-complexe", "Méthode & assembleur", "5 parcours + structure de réponse sécurisée"),
              ("hierarchie", "Hiérarchie documentaire", "ordre : contrat → notice → docs AXA → réglementation → réponse"),
@@ -2067,6 +2197,7 @@ def build():
     build_preuves()
     build_methode()
     build_niveaux()                  # escalier de rigueur conseiller → inspecteur + grille machine
+    build_divergences()              # détecteur d'écarts chiffrés inter-contrats (contrôle inspecteur)
     metrics = build_tests(concepts)  # tests-qualité + harness de précision
     # Infrastructure de raisonnement documentaire (Parties 2–10, 12)
     build_hierarchie()

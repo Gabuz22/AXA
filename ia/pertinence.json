@@ -340,6 +340,30 @@
   },
   {
    "concept": "accident",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 4,
+   "types": [
+    "declencheurs",
+    "definitions",
+    "delais",
+    "exclusions",
+    "franchises",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
+    "essen-ciel-assurance-obseques:def:bc84b360bb",
+    "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+    "essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+    "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73",
+    "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174"
+   ],
+   "justification": "Garantie ou déclencheur important dans Essen'Ciel (assurance obsèques)."
+  },
+  {
+   "concept": "accident",
    "contrat": "masterlife-credit",
    "score": 4,
    "types": [
@@ -396,12 +420,14 @@
    "contrat": "essen-ciel-assurance-obseques",
    "score": 4,
    "types": [
+    "definitions",
     "fiscalite",
     "garanties",
     "points-vigilance"
    ],
    "preuves": [
     "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb",
+    "essen-ciel-assurance-obseques:def:408870172d",
     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_10b11fed39d8_knowledge_81a9d27bb02d",
     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_622c88ea9f4b_knowledge_9e5bc789bca2",
     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641",
@@ -499,11 +525,14 @@
    "score": 4,
    "types": [
     "cotisations",
+    "declencheurs",
     "delais",
     "exclusions",
     "fiscalite",
+    "franchises",
     "garanties",
     "options",
+    "plafonds",
     "points-vigilance"
    ],
    "preuves": [
@@ -512,9 +541,9 @@
     "axa_axa_axa_essenciel_2025_06_garanties_e659d22109db_knowledge_887ac2922e7f",
     "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
     "axa_axa_axa_essenciel_2025_06_exclusions_e72bdb32890b_knowledge_17f7b1238668",
-    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
-    "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8",
-    "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d54c486f45e6_knowledge_9b690d586091"
+    "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:0",
+    "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+    "essen-ciel-assurance-obseques:fait:59074fa019:declencheur:0"
    ],
    "justification": "Garantie ou déclencheur important dans Essen'Ciel (assurance obsèques)."
   },
@@ -591,6 +620,28 @@
     "axa_axa_axa_entourage_2025_06_delais_carences_franchises_ad16ac0bce02_knowledge_035d6a65dfdf"
    ],
    "justification": "Garantie ou déclencheur important dans Entour'Age."
+  },
+  {
+   "concept": "deces-accidentel",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 4,
+   "types": [
+    "declencheurs",
+    "delais",
+    "exclusions",
+    "franchises",
+    "options",
+    "points-vigilance"
+   ],
+   "preuves": [
+    "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
+    "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
+    "essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
+    "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73",
+    "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174"
+   ],
+   "justification": "Garantie ou déclencheur important dans Essen'Ciel (assurance obsèques)."
   },
   {
    "concept": "fin-garantie",
@@ -726,6 +777,8 @@
    "contrat": "essen-ciel-assurance-obseques",
    "score": 4,
    "types": [
+    "conditions",
+    "declencheurs",
     "delais",
     "fiscalite",
     "garanties",
@@ -733,6 +786,8 @@
    ],
    "preuves": [
     "axa_axa_axa_essenciel_2025_06_garanties_c0b7532da10b_knowledge_580dd13f2d14",
+    "essen-ciel-assurance-obseques:cond:969788b935",
+    "essen-ciel-assurance-obseques:fait:2b1ce99ec2:declencheur:1",
     "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
     "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73",
     "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_6b52755aa9bc_knowledge_bf8cc347b759",
@@ -991,21 +1046,24 @@
    "contrat": "essen-ciel-assurance-obseques",
    "score": 4,
    "types": [
+    "conditions",
     "cotisations",
+    "declencheurs",
     "exclusions",
     "fiscalite",
     "garanties",
-    "options"
+    "options",
+    "plafonds"
    ],
    "preuves": [
     "axa_axa_axa_essenciel_2025_06_garanties_962d2baf76de_knowledge_27dc8feebdeb",
     "axa_axa_axa_essenciel_2025_06_garanties_9ebc6fa82294_knowledge_6e72c2b48f79",
     "axa_axa_axa_essenciel_2025_06_garanties_c0b7532da10b_knowledge_580dd13f2d14",
     "axa_axa_axa_essenciel_2025_06_exclusions_e72bdb32890b_knowledge_17f7b1238668",
-    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
-    "axa_axa_axa_essenciel_2025_06_options_de0a3dff8347_knowledge_6e47ac594507",
-    "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0fdc19816413_knowledge_010612cb7537",
-    "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8"
+    "essen-ciel-assurance-obseques:cond:969788b935",
+    "essen-ciel-assurance-obseques:fait:5134099b84:declencheur:0",
+    "essen-ciel-assurance-obseques:fait:5134099b84:plafond:0",
+    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad"
    ],
    "justification": "Garantie ou déclencheur important dans Essen'Ciel (assurance obsèques)."
   },
@@ -1059,24 +1117,6 @@
   },
   {
    "concept": "accident",
-   "contrat": "essen-ciel-assurance-obseques",
-   "score": 3,
-   "types": [
-    "delais",
-    "exclusions",
-    "options",
-    "points-vigilance"
-   ],
-   "preuves": [
-    "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
-    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
-    "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73",
-    "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174"
-   ],
-   "justification": "Condition, limite ou exclusion structurante dans Essen'Ciel (assurance obsèques)."
-  },
-  {
-   "concept": "accident",
    "contrat": "excelium-assurance-vie",
    "score": 3,
    "types": [
@@ -1098,6 +1138,18 @@
     "entour-age:cond:0757925f45"
    ],
    "justification": "Condition, limite ou exclusion structurante dans Entour'Age."
+  },
+  {
+   "concept": "age",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 3,
+   "types": [
+    "conditions"
+   ],
+   "preuves": [
+    "essen-ciel-assurance-obseques:cond:969788b935"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Essen'Ciel (assurance obsèques)."
   },
   {
    "concept": "association",
@@ -1136,6 +1188,18 @@
     "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d"
    ],
    "justification": "Condition, limite ou exclusion structurante dans Entour'Age."
+  },
+  {
+   "concept": "association",
+   "contrat": "essen-ciel-assurance-obseques",
+   "score": 3,
+   "types": [
+    "conditions"
+   ],
+   "preuves": [
+    "essen-ciel-assurance-obseques:cond:969788b935"
+   ],
+   "justification": "Condition, limite ou exclusion structurante dans Essen'Ciel (assurance obsèques)."
   },
   {
    "concept": "association",
@@ -1219,24 +1283,6 @@
     "axa_entourage_2025-06_formule_02"
    ],
    "justification": "Condition, limite ou exclusion structurante dans Entour'Age."
-  },
-  {
-   "concept": "deces-accidentel",
-   "contrat": "essen-ciel-assurance-obseques",
-   "score": 3,
-   "types": [
-    "delais",
-    "exclusions",
-    "options",
-    "points-vigilance"
-   ],
-   "preuves": [
-    "axa_axa_axa_essenciel_2025_06_exclusions_7d3dadacb815_knowledge_175b6f6af18d",
-    "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad",
-    "axa_axa_axa_essenciel_2025_06_delais_carences_franchises_29aa24c3d7b5_knowledge_c4c1cb6c1b73",
-    "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174"
-   ],
-   "justification": "Condition, limite ou exclusion structurante dans Essen'Ciel (assurance obsèques)."
   },
   {
    "concept": "deces-accidentel",
@@ -1575,9 +1621,11 @@
    "contrat": "essen-ciel-assurance-obseques",
    "score": 1,
    "types": [
+    "franchises",
     "options"
    ],
    "preuves": [
+    "essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
     "axa_axa_axa_essenciel_2025_06_options_87a4cb27ff56_knowledge_63f695d13bad"
    ],
    "justification": "Mention secondaire dans Essen'Ciel (assurance obsèques)."

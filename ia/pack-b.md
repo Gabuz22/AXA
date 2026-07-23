@@ -505,6 +505,20 @@ Assurance obsèques : capital garanti choisi entre 2 000 et 10 000 €, versé e
 - **Pénalité de rachat** — valeur_de_rachat · pénalité(année n) = max(0 ; 5 % − 0,5 % × (n − 1)) × valeur_de_rachat, nulle à partir de la 11e année · justification : Texte explicite : 5 % la 1re année, -0,5 %/an, nulle au-delà de la 10e année. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.33, §8.3 p.33](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=33) `#axa_essenciel_2025-06_formule_02`
 - **Valeur de rachat** — valeur_de_rachat · VR(t) = provision mathématique(t) − pénalité éventuelle ; PM = engagement futur de l'assureur − engagement futur de l'assuré (calcul actuariel non reproduit dans la notice ; seuls les tableaux d'exemples chiffrés sont contractuels) · justification : Définition donnée mais paramètres actuariels (tables, taux) non publiés : seuls les minima des tableaux sont garantis. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.35, §8.3 p.33-35](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=35) `#axa_essenciel_2025-06_formule_03`
 
+
+### Définitions (4)
+
+- **Accident** — Atteinte corporelle non intentionnelle provenant de l'action soudaine, violente et imprévisible d'une cause extérieure. Les affections de la colonne vertébrale, pathologies cardiaques (avec ou sans coronaropathies), chocs émotifs et états dépressifs sont considérés comme des MALADIES. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.47, 13. Définitions - Accident](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=47) `#essen-ciel-assurance-obseques:def:bc84b360bb`
+- **Bénéficiaires** — (1) à hauteur des frais d'obsèques : la personne physique ou l'entreprise de pompes funèbres ayant pris en charge les obsèques, sur factures ; (2) à défaut ou pour le solde : bénéficiaires subsidiaires désignés par l'adhérent. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.47, 13. Définitions - Bénéficiaires](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=47) `#essen-ciel-assurance-obseques:def:408870172d`
+- **Membre de la famille** — Conjoint ou partenaire PACS de l'assuré ; leurs enfants et ascendants jusqu'au 2e degré. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.48, 13. Définitions](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=48) `#essen-ciel-assurance-obseques:def:16d324e538`
+- **France** — France métropolitaine + DROM (Guadeloupe, Guyane, Martinique, Mayotte, La Réunion). [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.48, 13. Définitions - France](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=48) `#essen-ciel-assurance-obseques:def:0309a6c666`
+
+
+### Conditions de souscription (2)
+
+- Conditions cumulatives : résident fiscal français ; adhérent ANPERE (droits d'adhésion) ; âge entre 50 et 85 ans inclus à la signature (différence de millésimes). Pas de formalité médicale mentionnée dans la notice. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.16, 3.6](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=16) `#essen-ciel-assurance-obseques:cond:969788b935`
+- Cotisations temporaires : âge < 90 ans au paiement de la dernière cotisation. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.17, 4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=17) `#essen-ciel-assurance-obseques:cond:9f5521f209`
+
 ## Essen'Ciel Patrimoine
 
 

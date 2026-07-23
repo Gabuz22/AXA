@@ -1,4 +1,4 @@
-# Plafonds — toutes (43)
+# Plafonds — toutes (53)
 
 > **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-17 (v2.3.0).
 > Outil **indépendant et non officiel**, non affilié ni validé par AXA — documents accessibles publiquement.
@@ -43,6 +43,19 @@
 - **Services d'assistance dédiés en perte d'autonomie** — bilan d'adaptation du domicile : 500 € TTC [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.23, 4.4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=23) `#entour-age:fait:2094e3a95e:plafond:0`
 - **Services d'assistance dédiés en perte d'autonomie** — 1 bilan initial par adhésion [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.23, 4.4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=23) `#entour-age:fait:2094e3a95e:plafond:1`
 - **Services pour l'aidant de l'assuré** — répit : 1 000 € TTC/an ; visites d'établissements : 200 € ; transport hébergement temporaire : 100 €/an [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.25, 5.2.4](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=25) `#entour-age:fait:dcbc36cf9a:plafond:0`
+
+## Essen'Ciel (assurance obsèques) (10)
+
+- **Garantie décès (capital obsèques)** — capital 2 000 - 10 000 € [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) `#essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:0`
+- **Garantie décès (capital obsèques)** — le capital peut être insuffisant pour couvrir les frais réels (reliquat à charge des proches) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) `#essen-ciel-assurance-obseques:fait:2b1ce99ec2:plafond:1`
+- **Assistance dès l'adhésion** — renseignements d'ordre documentaire [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.23, 6.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=23) `#essen-ciel-assurance-obseques:fait:5134099b84:plafond:0`
+- **Assistance au moment du décès** — 3 600 € TTC (rapatriement+retour+présence) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24) `#essen-ciel-assurance-obseques:fait:59074fa019:plafond:0`
+- **Assistance au moment du décès** — cercueil 800 € TTC [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24) `#essen-ciel-assurance-obseques:fait:59074fa019:plafond:1`
+- **Assistance au moment du décès** — hôtel 80 €/nuit ×3 [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24) `#essen-ciel-assurance-obseques:fait:59074fa019:plafond:2`
+- **Assistance au moment du décès** — 750 € TTC (garde enfants+animaux+aide-ménagère) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24) `#essen-ciel-assurance-obseques:fait:59074fa019:plafond:3`
+- **Assistance après le décès (proches)** — 6 entretiens psy / 80 €/séance [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.27, 6.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=27) `#essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:0`
+- **Assistance après le décès (proches)** — aide mobilité 160 € TTC [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.27, 6.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=27) `#essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:1`
+- **Assistance après le décès (proches)** — 3 évaluations sociales [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.27, 6.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=27) `#essen-ciel-assurance-obseques:fait:67b35a1cdb:plafond:2`
 
 ## Excelium (assurance vie) (3)
 

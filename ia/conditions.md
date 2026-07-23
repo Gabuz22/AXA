@@ -1,4 +1,4 @@
-# Conditions de souscription — toutes (19)
+# Conditions de souscription — toutes (21)
 
 > **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-17 (v2.3.0).
 > Outil **indépendant et non officiel**, non affilié ni validé par AXA — documents accessibles publiquement.
@@ -30,6 +30,11 @@
 - Conditions cumulatives : résider en France métropolitaine, à Monaco ou dans un DOM ; être ou devenir membre ANPERE (droits d'adhésion) ; se soumettre aux formalités médicales demandées ; avoir entre 40 et 75 ans inclus à la signature (âge par différence de millésimes). [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.6, 1.1.2.1 Admissibilité](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=6) `#entour-age:cond:0757925f45`
 - Rente à choisir entre 500 et 3 000 €/mois ; choix de formule (Totale seule ou Totale et Partielle) ; tarification particulière possible pour risque aggravé. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.6, 1.1.2.2 a)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=6) `#entour-age:cond:139ae41e9a`
 - Modifications en cours d'adhésion : possibles à partir de la 3e année pleine, à jour des cotisations, assuré non dépendant ; amélioration de garanties : assuré ≤ 75 ans, acceptation d'AXA, nouveau délai d'attente sur les garanties supplémentaires. [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.8, 1.1.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=8) `#entour-age:cond:2a7fe9c4fc`
+
+## Essen'Ciel (assurance obsèques) (2)
+
+- Conditions cumulatives : résident fiscal français ; adhérent ANPERE (droits d'adhésion) ; âge entre 50 et 85 ans inclus à la signature (différence de millésimes). Pas de formalité médicale mentionnée dans la notice. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.16, 3.6](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=16) `#essen-ciel-assurance-obseques:cond:969788b935`
+- Cotisations temporaires : âge < 90 ans au paiement de la dernière cotisation. [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.17, 4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=17) `#essen-ciel-assurance-obseques:cond:9f5521f209`
 
 ## Excelium (assurance vie) (2)
 

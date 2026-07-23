@@ -110,9 +110,9 @@
 - **Garantie** : Garantie décès (capital obsèques) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) · Assistance au moment du décès [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24) · Assistance après le décès (proches) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.27, 6.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=27)
 - **Conditions** : _absent de la base_
 - **Exclusions** : Décès accidentel exclu [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.30, 7.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=30) · Décès exclus [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.30, 7.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=30)
-- **Déclencheurs** : _absent de la base_
-- **Plafonds** : _absent de la base_
-- **Franchises** : _absent de la base_
+- **Déclencheurs** : Garantie décès (capital obsèques) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) · Garantie décès (capital obsèques) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) · Assistance au moment du décès [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24) · Assistance au moment du décès [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24)
+- **Plafonds** : Garantie décès (capital obsèques) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) · Garantie décès (capital obsèques) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) · Assistance au moment du décès [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24) · Assistance au moment du décès [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.24, 6.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=24)
+- **Franchises** : Garantie décès (capital obsèques) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20)
 ### Essen'Ciel Patrimoine
 - **Définition** : _absent de la base_
 - **Garantie** : Garantie décès — versement d'un capital aux bénéficiaires [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.2, 4, 16, 1.1, 2.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=2) · Revalorisation / participation aux bénéfices [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.6, 8, 2.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=6)
@@ -187,7 +187,7 @@
 - **Exclusions** : _absent de la base_
 - **Déclencheurs** : _absent de la base_
 - **Plafonds** : _absent de la base_
-- **Franchises** : _absent de la base_
+- **Franchises** : Garantie décès (capital obsèques) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20)
 
 ## Âge
 
@@ -203,6 +203,14 @@
 - **Définition** : _absent de la base_
 - **Garantie** : _absent de la base_
 - **Conditions** : Conditions cumulatives : résider en France métropolitaine, à [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.6, 1.1.2.1 Admissibilité](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=6)
+- **Exclusions** : _absent de la base_
+- **Déclencheurs** : _absent de la base_
+- **Plafonds** : _absent de la base_
+- **Franchises** : _absent de la base_
+### Essen'Ciel (assurance obsèques)
+- **Définition** : _absent de la base_
+- **Garantie** : _absent de la base_
+- **Conditions** : Conditions cumulatives : résident fiscal français ; adhérent [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.16, 3.6](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=16)
 - **Exclusions** : _absent de la base_
 - **Déclencheurs** : _absent de la base_
 - **Plafonds** : _absent de la base_
@@ -406,10 +414,10 @@
 ### Essen'Ciel (assurance obsèques)
 - **Définition** : _absent de la base_
 - **Garantie** : Garantie décès (capital obsèques) [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) · Revalorisation du capital [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.20, 5.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=20) · Assistance dès l'adhésion [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.23, 6.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=23)
-- **Conditions** : _absent de la base_
+- **Conditions** : Conditions cumulatives : résident fiscal français ; adhérent [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.16, 3.6](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=16)
 - **Exclusions** : Décès exclus [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.30, 7.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=30)
-- **Déclencheurs** : _absent de la base_
-- **Plafonds** : _absent de la base_
+- **Déclencheurs** : Assistance dès l'adhésion [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.23, 6.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=23)
+- **Plafonds** : Assistance dès l'adhésion [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.23, 6.1](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=23)
 - **Franchises** : _absent de la base_
 ### Essen'Ciel Patrimoine
 - **Définition** : _absent de la base_

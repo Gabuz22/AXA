@@ -16,8 +16,8 @@ Une réponse peut être **juste et pauvre**. La base permet plus : répondre **c
 **contrôler comme un inspecteur fonction support**. Les trois niveaux s'**empilent** — l'inspecteur fait tout ce
 que fait le conseiller, plus le contrôle. On ne descend jamais sous le socle.
 
-Repères de la base (calculés, non déclaratifs) : **9 contrats**, **533 éléments citables**, dont
-**73 %** portent une page de notice précise — 50 garanties, 33 exclusions, 19 conditions de
+Repères de la base (calculés, non déclaratifs) : **9 contrats**, **556 éléments citables**, dont
+**74 %** portent une page de notice précise — 50 garanties, 33 exclusions, 21 conditions de
 souscription, 61 points de vigilance. C'est ce matériau que les niveaux exploitent.
 
 ## Niveau 0 — Répondeur fiable (le plancher, jamais négociable)
@@ -44,7 +44,7 @@ Auto-contrôle du niveau conseiller :
 
 ## Niveau 2 — Niveau inspecteur fonction support (contrôler, pas seulement conseiller)
 Ajoute la **rigueur de contrôle**. L'inspecteur ne se contente pas d'une réponse juste : il la **met à l'épreuve**.
-- **Cohérence inter-contrats** : quand plusieurs contrats traitent le même concept, comparer et **signaler les divergences** (une carence de 3 mois ici, 12 là) : [comparateur](comparateur.html) · [matrices](matrices.html).
+- **Cohérence inter-contrats** : quand plusieurs contrats traitent le même concept, comparer et **signaler les divergences** (une carence de 3 mois ici, 12 là) : [divergences](divergences.html) (écarts chiffrés déjà repérés) · [comparateur](comparateur.html) · [matrices](matrices.html).
 - **Exhaustivité vérifiée** : pour la garantie citée, s'assurer qu'**aucune** exclusion / condition / plafond / franchise / point de vigilance n'est omis : [points de vigilance](points-vigilance.html).
 - **Traçabilité auditée** : chaque fait porte notice + page ; une source incomplète ou un tableau non extrait se **dit**, jamais présenté comme certain.
 - **Frontière réglementaire tenue** : tout chiffre de barème / plafond fiscal → **source officielle datée** et marquée « évolutif », jamais transformé en donnée contractuelle : [réglementation](reglementation.html) · [sources officielles](sources-officielles.html).

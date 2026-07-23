@@ -262,7 +262,7 @@
 
 ## ✅ [transversale] Quels contrats traitent de accident ?
 - Détecté : contrat=— · concept=accident · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
-- Contrats retenus : avizen, avizen-pro, ma-protection-accident-garantie-des-accidents-de-la-vie, entour-age, masterlife-credit, essen-ciel-assurance-obseques, excelium-assurance-vie
+- Contrats retenus : avizen, avizen-pro, ma-protection-accident-garantie-des-accidents-de-la-vie, entour-age, essen-ciel-assurance-obseques, masterlife-credit, excelium-assurance-vie
 - Attendu : obligatoires=— · interdits=0 · source=False · statut=—
 
 ## ✅ [transversale] Quels contrats traitent de hospitalisation ?
@@ -317,7 +317,7 @@
 
 ## ✅ [transversale] Quels contrats traitent de association / anpere ?
 - Détecté : contrat=— · concept=association · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
-- Contrats retenus : masterlife-credit, avizen, avizen-pro, entour-age, excelium-assurance-vie, ma-retraite-plan-d-epargne-retraite-individuel-per
+- Contrats retenus : masterlife-credit, avizen, avizen-pro, entour-age, essen-ciel-assurance-obseques, excelium-assurance-vie, ma-retraite-plan-d-epargne-retraite-individuel-per
 - Attendu : obligatoires=— · interdits=0 · source=False · statut=—
 
 ## ✅ [comparaison] Compare Avizen et Avizen Pro sur le décès.

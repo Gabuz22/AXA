@@ -2,7 +2,7 @@
  "meta": {
   "categorie": "franchises",
   "version": "2.3.0",
-  "total": 13
+  "total": 14
  },
  "elements": [
   {
@@ -84,6 +84,14 @@
    "texte": "délai d'attente 1 an (maladie) / 3 ans (maladies neurologiques, neurodégénératives ou psychiatriques) / aucun si dépendance d'origine accidentelle postérieure à l'adhésion",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
    "page": 21
+  },
+  {
+   "id": "essen-ciel-assurance-obseques:fait:2b1ce99ec2:franchise:0",
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "titre": "Garantie décès (capital obsèques)",
+   "texte": "délai d'attente 1 an pour le décès non accidentel",
+   "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+   "page": 20
   },
   {
    "id": "ma-protection-accident-garantie-des-accidents-de-la-vie:fait:55a0c9a7a3:franchise:0",
