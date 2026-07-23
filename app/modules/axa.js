@@ -7,6 +7,7 @@ import { get, set } from "../state/store.js";
 import { isEmpty } from "../services/humanView.js";
 import { renderMarkdown } from "../services/markdown.js";
 import { TUTORIEL, FAMILLE_META, ERREURS_TRANSVERSES, OBJECTIFS } from "./axa_content.js";
+import { prospection } from "./prospection.js";
 
 // Sections réellement implémentées (garde-fou anti-lien-mort : un parcours ne s'affiche
 // que si sa cible existe). RDV/animateur s'activent automatiquement à leur implémentation.
@@ -50,7 +51,7 @@ export async function mount(el, ctx) {
   const human = true;
   el.innerHTML = `<div class="view-body">Chargement…</div>`;
   const body = el.querySelector(".view-body");
-  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistants, confiance, besoins, rdv, animateur, argumentaire, formulaires, sources, pdf, historique, parametres }[section] || accueil;
+  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistants, confiance, besoins, rdv, prospection, animateur, argumentaire, formulaires, sources, pdf, historique, parametres }[section] || accueil;
   try { await render(body, human, ctx); }
   catch (e) { body.innerHTML = `<p class="warn">Erreur de la section (${esc(e.message)}).</p>`; }
 }
@@ -97,7 +98,7 @@ async function accueil(body) {
     <h3 class="day-h">Que veux-tu faire ?</h3>
     <div class="grid">${INTENTS.map(([i, l, h, s]) => tile(i, l, h, s)).join("")}</div>
     <p class="muted" style="margin-top:16px">${stats ? `Base : <b>${stats.contrats}</b> contrats · <b>${stats.faits_uniques}</b> faits sourcés${dates.length ? ` · notices de ${esc(dates[0])} à ${esc(dates[dates.length - 1])} (chaque fiche affiche la sienne)` : ""}. ` : ""}
-    Aucune donnée client stockée. <b>La notice PDF fait toujours foi.</b> <a href="#/pdf">📄 Notices</a></p>
+    Aucune donnée client dans la base contractuelle. <b>La notice PDF fait toujours foi.</b> <a href="#/pdf">📄 Notices</a></p>
     <p class="muted">${INDEP_COURT} <a href="#/confiance">🔒 Origine des données</a></p>`;
   body.querySelector("#acc_go").onclick = () => gotoSearch(body.querySelector("#acc_q").value);
   body.querySelector("#acc_q").addEventListener("keydown", e => { if (e.key === "Enter") gotoSearch(e.target.value); });
@@ -115,7 +116,7 @@ function tile(icon, label, href, sub) {
 const PP_EXEMPLES = ["délai de carence décès", "exclusions garantie décès", "rachat possible", "conditions d'âge à l'adhésion", "fiscalité transmission", "invalidité IPT"];
 const PP_FAQ = [
   ["Qu'est-ce que Gabriel AXA ?", "Un assistant de recherche dans la base contractuelle AXA (garanties, exclusions, conditions, définitions), à partir de documents publics. Il fait gagner du temps ; il ne remplace pas la notice, qui fait toujours foi."],
-  ["Est-ce que ça contient des données client ?", "Non. Aucune donnée client n'est stockée. Les documents embarqués proviennent de sources publiques (notices d'information, conditions générales)."],
+  ["Est-ce que ça contient des données client ?", "La base contractuelle, non : les documents embarqués proviennent de sources publiques (notices d'information, conditions générales). Seul l'outil Prospection stocke des coordonnées, et uniquement dans TON navigateur — jamais envoyées, jamais transmises à une IA."],
   ["Puis-je répondre à un client à partir d'un résultat ?", "Le résultat vous oriente et cite sa source. Avant toute réponse ferme, vérifiez la notice PDF à la page indiquée : c'est elle qui fait foi."],
   ["Comment chercher efficacement ?", "Tapez en langage naturel (« le décès accidentel est-il couvert ? »). Les synonymes métier sont tolérés. Filtrez ensuite par type (garantie, exclusion, définition…)."],
   ["Comment utiliser Gabriel AXA avec une IA ?", "Ouvrez « Utiliser avec une IA », copiez le mini-prompt et collez-le dans votre assistant (ChatGPT, Claude, Gemini…). L'IA découvre seule Gabriel AXA, applique ses instructions et répond en citant ses sources."],
@@ -175,7 +176,7 @@ async function confiance(body) {
 
     <h3 class="day-h">Origine des données</h3>
     <div class="card"><p class="card-b">Les informations proviennent exclusivement des <b>notices d'information et conditions
-    générales</b> des produits AXA — des documents <b>publics</b>, remis à tout prospect. Aucune donnée client, aucune
+    générales</b> des produits AXA — des documents <b>publics</b>, remis à tout prospect. Aucune donnée client dans cette base, aucune
     donnée interne, aucune source privée.</p></div>
 
     <h3 class="day-h">Traçabilité</h3>
@@ -232,7 +233,7 @@ async function assistants(body) {
     elle classe la question, consulte les bons outils et répond en citant contrat, notice et page.</p>
 
     <div class="warnbox">⚠ La <b>notice PDF fait foi</b>. Selon ses capacités web, une IA peut ne pas ouvrir les liens — vérifiez
-    toujours la source avant d'utiliser une réponse avec un client. Ne saisissez <b>aucune donnée client nominative</b>.
+    toujours la source avant d'utiliser une réponse avec un client. Ne collez <b>aucune donnée client nominative</b> dans une IA externe (les coordonnées de l'outil Prospection restent dans ton navigateur et ne doivent jamais être copiées dans une IA).
     ${INDEP_COURT}</div>
 
     <p class="muted" style="margin-top:16px">Votre IA n'ouvre pas les liens ?
@@ -266,7 +267,7 @@ async function decouvrir(body) {
     <div class="grid">
       ${tile("⏱", "Pourquoi ça existe", "#/recherche", "gagner du temps : ne plus feuilleter les notices pour un détail")}
       ${tile("👥", "À qui c'est destiné", "#/cas_usage", "conseillers épargne/protection, débutants ou expérimentés, animateurs")}
-      ${tile("📄", "Sur quoi c'est fondé", "#/confiance", "documents publics uniquement (notices, CG). Aucune donnée client.")}
+      ${tile("📄", "Sur quoi c'est fondé", "#/confiance", "documents publics uniquement (notices, CG). Aucune donnée client dans la base.")}
     </div>
     <h3 class="day-h">Ce que ça remplace… et ce que ça ne remplace pas</h3>
     <div class="grid">

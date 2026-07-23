@@ -32,6 +32,7 @@ const NAV = [
   { group: "Outils conseiller (bêta)", items: [
     { id: "besoins", label: "Cas client", icon: "🧩", beta: true },
     { id: "rdv", label: "Rendez-vous", icon: "🗓", beta: true },
+    { id: "prospection", label: "Prospection", icon: "📞", beta: true },
     { id: "argumentaire", label: "Argumentaire", icon: "🗣", beta: true },
     { id: "animateur", label: "Animateur", icon: "🎓", beta: true },
   ]},
@@ -64,6 +65,7 @@ const HELP = {
   sources: { what: "Quand s'appuyer sur le contrat, la notice, ou une source officielle externe.", how: ["Le contrat/notice fait foi ; les sources officielles pour la réglementation évolutive."] },
   besoins: { what: "Le cas client : coche ce que tu sais, le diagnostic (risques priorisés, trous, doublons, contrats à examiner) se construit au fur et à mesure.", how: ["Renseigne profil, événements, besoins et contrats en place — dans n'importe quel ordre.", "Chaque élément porte son statut : déclaré, déduit ou hypothèse.", "Poursuis vers la fiche contrat ou la préparation de RDV."] },
   rdv: { what: "Le rendez-vous en trois temps : préparer (kit enrichi), s'appuyer en séance (accès rapide + notes locales), conclure (compte-rendu et mail générés).", how: ["① Avant : renseigne le contexte (ou pars du cas client) et génère le kit.", "② Pendant : notes locales avec marqueurs « à vérifier / objection ».", "③ Après : le compte-rendu et le mail se construisent depuis tes notes."] },
+  prospection: { what: "Ton suivi de prospection : qui appeler, quand relancer, avec quel message. Les seules données nominatives de Gabriel AXA — elles restent dans ce navigateur.", how: ["Ajoute un prospect (origine directe ou PRVT, coordonnées, catégorie).", "Fixe la date de relance : les retards remontent en tête de liste.", "Adapte la trame de message, puis copie-la — l'outil n'envoie jamais à ta place.", "Exporte régulièrement : rien n'est sauvegardé ailleurs."] },
   animateur: { what: "Mode formation / réunion d'équipe.", how: ["Utilise les repères pour animer une session."] },
   argumentaire: { what: "Une trame d'argumentaire à adapter : faits sourcés (validés) et suggestions IA distingués, manques marqués [À COMPLÉTER].", how: ["Choisis contrat, profil et format.", "Adapte le texte dans la zone éditable, puis copie.", "« Revenir aux preuves » ouvre la fiche sourcée."] },
   premiers_pas: { what: "Le tutoriel de prise en main de Gabriel AXA.", how: ["Suis les étapes ; reviens ici quand tu veux."] },
