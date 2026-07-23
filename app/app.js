@@ -44,7 +44,6 @@ const INDEX = {}; NAV.forEach(g => g.items.forEach(it => INDEX[it.id] = it));
 const EXTRA_ROUTES = [
   { id: "historique", label: "Historique des recherches", icon: "🕘" },
   { id: "parametres", label: "Paramètres", icon: "⚙️" },
-  { id: "formulaires", label: "Formulaires", icon: "📝" },
 ];
 EXTRA_ROUTES.forEach(it => { if (!INDEX[it.id]) INDEX[it.id] = it; });
 
@@ -71,7 +70,6 @@ const HELP = {
   premiers_pas: { what: "Le tutoriel de prise en main de Gabriel AXA.", how: ["Suis les étapes ; reviens ici quand tu veux."] },
   historique: { what: "Tes dernières recherches, locales à ce navigateur.", how: ["Clique une ligne pour relancer la recherche.", "« Vider » efface tout."] },
   parametres: { what: "Maintenance de l'espace : recharger les sources, vider l'historique.", how: ["Utilise « Recharger » après une mise à jour des données."] },
-  formulaires: { what: "Formulaires de recueil (export local uniquement).", how: ["Ouvre un formulaire dans un nouvel onglet."] },
 };
 const DEFAULT_HELP = { what: "Gabriel AXA : la base de connaissances contractuelle AXA, sourcée, pour gagner du temps.", how: ["Utilise la recherche ou le copilote.", "La notice PDF fait toujours foi."] };
 

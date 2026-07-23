@@ -1,6 +1,6 @@
 // axa — espace AXA CONSEILLER (V1.3) : assistant de travail complet, indépendant du Patrimoine.
 // Routes : #/<section> — accueil, contrat, recherche, assistant, besoins,
-// formulaires, sources, pdf, historique, parametres. Les données viennent du service
+// sources, pdf, historique, parametres. Les données viennent du service
 // axaKnowledge (piloté par data/AXA/workspace_manifest.json — architecture évolutive).
 import * as kb from "../services/axaKnowledge.js";
 import { get, set } from "../state/store.js";
@@ -12,7 +12,7 @@ import { prospection } from "./prospection.js";
 // Sections réellement implémentées (garde-fou anti-lien-mort : un parcours ne s'affiche
 // que si sa cible existe). RDV/animateur s'activent automatiquement à leur implémentation.
 const IMPLEMENTED = new Set(["accueil", "premiers_pas", "copilote", "contrat", "recherche", "glossaire",
-  "besoins", "rdv", "animateur", "argumentaire", "assistants", "formulaires", "sources", "pdf", "historique", "parametres"]);
+  "besoins", "rdv", "animateur", "argumentaire", "assistants", "sources", "pdf", "historique", "parametres"]);
 
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
 
@@ -51,7 +51,7 @@ export async function mount(el, ctx) {
   const human = true;
   el.innerHTML = `<div class="view-body">Chargement…</div>`;
   const body = el.querySelector(".view-body");
-  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistants, confiance, besoins, rdv, prospection, animateur, argumentaire, formulaires, sources, pdf, historique, parametres }[section] || accueil;
+  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistants, confiance, besoins, rdv, prospection, animateur, argumentaire, sources, pdf, historique, parametres }[section] || accueil;
   try { await render(body, human, ctx); }
   catch (e) { body.innerHTML = `<p class="warn">Erreur de la section (${esc(e.message)}).</p>`; }
 }
@@ -1635,21 +1635,6 @@ async function argumentaire(body) {
 }
 
 /* ---------- Formulaires ---------- */
-async function formulaires(body) {
-  const m = await kb.manifest();
-  const schema = await kb.source("formulaires_schema");
-  body.innerHTML = `
-    <p class="lead">Recueil d'informations client. <b>Aucune donnée client n'est stockée dans le dépôt</b> —
-    les formulaires exportent en local uniquement.</p>
-    <div class="grid">${(m.formulaires_pages || []).map(f =>
-      `<a class="tile" href="../${esc(f.path)}" target="_blank" rel="noopener"><span class="tile-i">📝</span><span class="tile-l">${esc(f.label)}</span><span class="tile-s">ouvrir dans un nouvel onglet</span></a>`).join("")}</div>
-    ${(() => { // schémas : tableau OU objet {id: schema} selon les versions du master
-      const raw = schema?.formulaires;
-      const list = Array.isArray(raw) ? raw : (raw && typeof raw === "object" ? Object.entries(raw).map(([id, v]) => ({ id, ...(typeof v === "object" ? v : {}) })) : []);
-      return list.length ? `<h3 class="day-h">Schémas disponibles</h3><ul class="hlist">${list.map(f =>
-        `<li><b>${esc(f.nom || f.label || f.id)}</b>${f.description ? " — " + esc(f.description) : ""}${f.champs || f.sections ? ` <span class="muted">(${(f.champs || f.sections).length ?? ""} champs)</span>` : ""}</li>`).join("")}</ul>` : "";
-    })()}`;
-}
 
 /* ---------- Sources officielles (quand contrat / notice / réglementation) ---------- */
 const AUTORITES = [
