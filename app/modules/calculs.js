@@ -108,6 +108,169 @@ export function fourchette(central, margePct) {
   return { basse: r(central * (1 - m / 100)), centrale: r(central), haute: r(central * (1 + m / 100)) };
 }
 
+/* ---------- projections : courbes (migrées de la section « 4. Courbes » du cockpit) ----------
+   POURQUOI ELLES SURVIVENT, alors que le reste de la page legacy ne survit pas : sur 122
+   sauvegardes de l'espace local, `gv_v292_etude` (périmètre d'étude), `gv_v292_scenarios` et
+   `gv_v292_personnelles` (formules perso) n'apparaissent JAMAIS — ces fonctions n'ont jamais servi.
+   `gv_v292_courbes`, si : 64 fois, avec une simulation réelle (40 €/mois, capital 5 000 €,
+   modèle « cumul vs réduction », horizon 30 ans). On porte donc les courbes, et elles seules.
+   Le tracé reste un SVG maison : aucune dépendance, aucun réseau. */
+const VARS_RE = /[A-Za-zÀ-ÿ_][A-Za-zÀ-ÿ0-9_]*/g;
+export const variablesDe = expr =>
+  [...new Set([...String(expr).matchAll(VARS_RE)].map(m => m[0]))].filter(n => !(sansAccent(n) in FUNCS));
+
+// Modèles de courbes : les EXPRESSIONS vivaient en dur dans le JS du cockpit (le JSON ne portait
+// que les identifiants et les libellés) — elles sont reprises ici telles quelles.
+const COURBE_CUMUL = { id: "cumul", nom: "Cumul des cotisations", expr: "cotisation_mensuelle * 12 * t", regime: "hypothese" };
+const COURBE_CAPITAL = { id: "capital", nom: "Capital garanti estimé", expr: "capital_souscrit * (1 + taux_annuel / 100) ^ t", regime: "estimee" };
+const COURBE_REDUC = { id: "reduction", nom: "Valeur de réduction estimée", expr: "capital_souscrit * taux_reduction / 100", regime: "estimee" };
+const MODELES_COURBES = {
+  cumul_vs_capital: [COURBE_CUMUL, COURBE_CAPITAL],
+  cumul_vs_reduction: [COURBE_CUMUL, COURBE_REDUC],
+  capital_vs_reduction: [COURBE_CAPITAL, COURBE_REDUC],
+  evolution_cotisation: [{ id: "cotisation", nom: "Cotisation annuelle", expr: "cotisation_mensuelle * 12 * (1 + taux_annuel / 100) ^ t", regime: "hypothese" }],
+  rachat_temps: [{ id: "rachat", nom: "Valeur de rachat estimée", expr: "cotisation_mensuelle * 12 * t * taux_reduction / 100", regime: "estimee" }],
+  part_taxable: [{ id: "taxable", nom: "Part taxable estimée", expr: "max(0, montant_rachat - capital_verse)", regime: "estimee" }],
+  comparaison_contrats: [
+    { id: "contrat_a", nom: "Contrat A", expr: "capital_souscrit * (1 + taux_annuel / 100) ^ t", regime: "estimee" },
+    { id: "contrat_b", nom: "Contrat B", expr: "capital_souscrit * (1 + (taux_annuel - 0.25) / 100) ^ t", regime: "estimee" },
+  ],
+  hypotheses_estimees: [
+    { id: "basse", nom: "Hypothèse basse", expr: "capital_souscrit * (1 + (taux_annuel - 0.5) / 100) ^ t", regime: "estimee" },
+    { id: "centrale", nom: "Hypothèse centrale", expr: "capital_souscrit * (1 + taux_annuel / 100) ^ t", regime: "estimee" },
+    { id: "haute", nom: "Hypothèse haute", expr: "capital_souscrit * (1 + (taux_annuel + 0.5) / 100) ^ t", regime: "estimee" },
+  ],
+};
+const PARAMS_DEFAUT = { cotisation_mensuelle: 40, capital_souscrit: 5000, taux_annuel: 1, taux_reduction: 65, montant_rachat: 6000, capital_verse: 5000 };
+const CLE_COURBES = "gv_axa_courbes_v1";
+const COULEURS = ["#f7931a", "#5b8def", "#5bd07a", "#e2674a", "#b78cff", "#38bdf8"];
+
+/** Points d'une courbe sur l'horizon. Une expression fausse ne casse rien : le point vaut null. */
+export function serie(courbe, params, horizon, pas) {
+  const pts = [];
+  for (let t = 0; t <= horizon + 1e-9; t += pas) {
+    const x = Number(t.toFixed(4));
+    let y = null;
+    try { y = calculer(courbe.expr, { ...params, t: x }); } catch { y = null; }
+    pts.push({ x, y: Number.isFinite(y) ? y : null });
+  }
+  return pts;
+}
+
+function svgCourbes(series, horizon) {
+  const W = 820, H = 340, P = 52;
+  const ys = series.flatMap(s => s.points.map(p => p.y)).filter(Number.isFinite);
+  if (!ys.length) return `<p class="muted">Aucune courbe traçable : vérifie les expressions et les hypothèses.</p>`;
+  const min = Math.min(0, ...ys), max = Math.max(1, ...ys);
+  const px = v => P + (W - P * 2) * v / (horizon || 1);
+  const py = v => H - P - (H - P * 2) * (v - min) / (max - min || 1);
+  const traces = series.map((s, i) => {
+    const d = s.points.filter(p => Number.isFinite(p.y)).map((p, k) => `${k ? "L" : "M"}${px(p.x).toFixed(1)},${py(p.y).toFixed(1)}`).join(" ");
+    return `<path d="${d}" fill="none" stroke="${COULEURS[i % COULEURS.length]}" stroke-width="2.5"/>`;
+  }).join("");
+  const grad = [0, 0.5, 1].map(f => {
+    const v = min + (max - min) * f;
+    return `<text x="${P - 8}" y="${(py(v) + 4).toFixed(1)}" text-anchor="end" fill="currentColor" opacity=".55" font-size="11">${esc(fmt(v))}</text>`;
+  }).join("");
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Projection sur ${horizon} ans" style="width:100%;height:auto;color:var(--txt,#9fb0c8)">
+    <line x1="${P}" y1="${H - P}" x2="${W - P}" y2="${H - P}" stroke="currentColor" opacity=".35"/>
+    <line x1="${P}" y1="${P}" x2="${P}" y2="${H - P}" stroke="currentColor" opacity=".35"/>
+    ${grad}${traces}
+    <text x="${W - P}" y="${H - 16}" text-anchor="end" fill="currentColor" opacity=".55" font-size="11">${esc(horizon)} ans</text></svg>`;
+}
+
+/** Monte le panneau de projection. `modeles` = graphiques_modeles du JSON (id + nom lisibles). */
+function monterCourbes(host, modeles) {
+  const lu = (() => { try { return JSON.parse(localStorage.getItem(CLE_COURBES)) || {}; } catch { return {}; } })();
+  const cfg = {
+    modele: MODELES_COURBES[lu.modele] ? lu.modele : "cumul_vs_capital",
+    horizon: Number(lu.horizon) > 0 ? Number(lu.horizon) : 30,
+    pas: Number(lu.pas) > 0 ? Number(lu.pas) : 1,
+    params: { ...PARAMS_DEFAUT, ...(lu.params || {}) },
+    courbes: Array.isArray(lu.courbes) && lu.courbes.length ? lu.courbes : MODELES_COURBES.cumul_vs_capital.map(c => ({ ...c, visible: true })),
+  };
+  const garder = () => { try { localStorage.setItem(CLE_COURBES, JSON.stringify(cfg)); } catch {} };
+  // Les paramètres affichés sont ceux dont les courbes ont besoin — pas une liste figée.
+  const paramsUtiles = () => [...new Set(cfg.courbes.flatMap(c => variablesDe(c.expr)))].filter(n => n !== "t");
+  const hypotheses = () => [`Modèle : ${(modeles.find(m => m.id === cfg.modele) || {}).nom || cfg.modele}`,
+    `Horizon : ${cfg.horizon} ans (pas de ${cfg.pas})`,
+    `Hypothèses : ${paramsUtiles().map(n => `${n} = ${cfg.params[n] ?? 0}`).join(" ; ")}`,
+    `Courbes : ${cfg.courbes.map(c => `${c.nom} [${c.regime === "estimee" ? "estimée" : "hypothèse de travail"}]`).join(" ; ")}`,
+    "Simulation NON CONTRACTUELLE : elle illustre les hypothèses saisies. Vérifier barèmes et conditions à la notice avant tout usage client.",
+  ].join("\n");
+
+  function peindre() {
+    const utiles = paramsUtiles();
+    const series = cfg.courbes.filter(c => c.visible !== false).map(c => ({ ...c, points: serie(c, cfg.params, cfg.horizon, cfg.pas) }));
+    host.innerHTML = `
+      <div class="warnbox">📈 Projection <b>non contractuelle</b> : elle calcule ce que tu saisis, rien d'autre.
+        Les courbes « estimées » reposent sur des hypothèses de rendement ou de réduction — jamais sur un engagement AXA.</div>
+      <div class="row3">
+        <label>Modèle<select id="cb_modele">${modeles.filter(m => MODELES_COURBES[m.id])
+          .map(m => `<option value="${esc(m.id)}"${m.id === cfg.modele ? " selected" : ""}>${esc(m.nom)}</option>`).join("")}</select></label>
+        <label>Horizon (ans)<input id="cb_horizon" type="number" min="1" max="60" value="${esc(cfg.horizon)}"></label>
+        <label>Pas (ans)<input id="cb_pas" type="number" min="0.25" max="10" step="0.25" value="${esc(cfg.pas)}"></label>
+      </div>
+      <div class="row3">${utiles.map(n => `<label>${esc(n)}<input type="number" step="any" data-cbp="${esc(n)}" value="${esc(cfg.params[n] ?? 0)}"></label>`).join("")}</div>
+      <div class="card" style="margin-top:10px">${svgCourbes(series, cfg.horizon)}
+        <div class="filters" style="margin-top:8px">${cfg.courbes.map((c, i) => `<button class="chip ${c.visible === false ? "" : "on"}" data-cbv="${i}">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${COULEURS[i % COULEURS.length]};margin-right:6px"></span>${esc(c.nom)}
+          <span style="opacity:.75"> · ${esc(c.regime === "estimee" ? "estimée" : "hypothèse")}</span></button>`).join("")}</div>
+      </div>
+      <details class="acc"><summary class="muted">Voir et ajuster les expressions (${cfg.courbes.length})</summary>
+        ${cfg.courbes.map((c, i) => `<label style="display:block;margin:6px 0">${esc(c.nom)}
+          <input type="text" data-cbe="${i}" value="${esc(c.expr)}" style="width:100%"></label>`).join("")}
+        <p class="muted">Variables autorisées : les hypothèses ci-dessus, plus <code>t</code> (années écoulées). Aucune fonction hors liste.</p></details>
+      <div class="btns" style="margin-top:8px">
+        <button class="btn gold" id="cb_tracer">Retracer</button>
+        <button class="btn" id="cb_csv">Exporter le CSV</button>
+        <button class="btn" id="cb_hyp">Copier les hypothèses</button>
+        <button class="btn" id="cb_reset">↺ Modèle par défaut</button>
+        <span class="muted" id="cb_msg"></span>
+      </div>`;
+
+    const $ = s => host.querySelector(s);
+    const lire = () => {
+      cfg.horizon = Math.min(60, Math.max(1, Number($("#cb_horizon").value) || 30));
+      cfg.pas = Math.min(10, Math.max(0.25, Number($("#cb_pas").value) || 1));
+      host.querySelectorAll("[data-cbp]").forEach(i => cfg.params[i.dataset.cbp] = Number(i.value) || 0);
+      host.querySelectorAll("[data-cbe]").forEach(i => cfg.courbes[+i.dataset.cbe].expr = i.value.trim() || cfg.courbes[+i.dataset.cbe].expr);
+      garder();
+    };
+    $("#cb_modele").onchange = e => {
+      cfg.modele = e.target.value;
+      cfg.courbes = MODELES_COURBES[cfg.modele].map(c => ({ ...c, visible: true }));
+      // Une variable inconnue du nouveau modèle démarre à 0 plutôt que de faire échouer le tracé.
+      paramsUtiles().forEach(n => { if (!(n in cfg.params)) cfg.params[n] = /taux/.test(n) ? 1 : 0; });
+      garder(); peindre();
+    };
+    $("#cb_tracer").onclick = () => { lire(); peindre(); };
+    host.querySelectorAll("[data-cbv]").forEach(b => b.onclick = () => {
+      const c = cfg.courbes[+b.dataset.cbv]; c.visible = c.visible === false; garder(); peindre();
+    });
+    $("#cb_reset").onclick = () => { try { localStorage.removeItem(CLE_COURBES); } catch {}
+      Object.assign(cfg, { modele: "cumul_vs_capital", horizon: 30, pas: 1, params: { ...PARAMS_DEFAUT },
+        courbes: MODELES_COURBES.cumul_vs_capital.map(c => ({ ...c, visible: true })) }); peindre(); };
+    $("#cb_csv").onclick = () => {
+      lire();
+      const s = cfg.courbes.map(c => ({ nom: c.nom, points: serie(c, cfg.params, cfg.horizon, cfg.pas) }));
+      const lignes = [["annee", ...s.map(x => x.nom)]];
+      (s[0]?.points || []).forEach((p, i) => lignes.push([p.x, ...s.map(x => x.points[i]?.y ?? "")]));
+      const csv = lignes.map(l => l.map(c => `"${String(c).replace(/"/g, '""')}"`).join(",")).join("\n");
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+      a.download = "projection_axa.csv"; a.click(); URL.revokeObjectURL(a.href);
+      $("#cb_msg").textContent = "✓ CSV exporté";
+    };
+    $("#cb_hyp").onclick = async () => {
+      lire();
+      try { await navigator.clipboard.writeText(hypotheses()); $("#cb_msg").textContent = "✓ Hypothèses copiées"; }
+      catch { $("#cb_msg").textContent = "⚠ copie refusée par le navigateur"; }
+    };
+  }
+  peindre();
+}
+
 /* ---------- rendu ---------- */
 const REGIME = {
   exec: ["contractuelle · calculable", "good"],
@@ -166,11 +329,13 @@ export const title = "Formules & calculs";
 export async function calculs(body) {
   body.innerHTML = `<p class="lead">Chargement des formules…</p>`;
 
-  let index, estimees;
+  let index, estimees, modeles;
   try {
-    [index, estimees] = await Promise.all([
+    [index, estimees, modeles] = await Promise.all([
       fetch(BASE + "calculs_index.json", { cache: "no-store" }).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
       fetch(BASE + "axa_formules_estimees_parametres.json", { cache: "no-store" }).then(r => r.ok ? r.json() : { formules: [] }).catch(() => ({ formules: [] })),
+      // Absent = pas de projection, jamais d'erreur : les formules restent complètes.
+      fetch(BASE + "axa_etudes_modeles.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null),
     ]);
   } catch (e) {
     body.innerHTML = `<div class="card"><div class="card-h"><strong>Formules indisponibles</strong></div>
@@ -180,6 +345,7 @@ export async function calculs(body) {
 
   const formules = index.formules || [];
   const est = estimees.formules || [];
+  const grafs = (modeles?.graphiques_modeles || []).filter(m => MODELES_COURBES[m.id]);
   const nExec = formules.filter(f => f.executable).length;
   let filtre = "toutes", q = "";
 
@@ -194,7 +360,8 @@ export async function calculs(body) {
     </div>
     <div class="filters" id="ca_filters"></div>
     <div id="ca_list"></div>
-    ${est.length ? `<h3 class="day-h">Formules estimées (${est.length}) — hypothèses à valider</h3><div id="ca_est"></div>` : ""}`;
+    ${est.length ? `<h3 class="day-h">Formules estimées (${est.length}) — hypothèses à valider</h3><div id="ca_est"></div>` : ""}
+    ${grafs.length ? `<h3 class="day-h">Projection — courbes</h3><div id="ca_courbes"></div>` : ""}`;
 
   const $ = id => body.querySelector("#" + id);
 
@@ -248,6 +415,8 @@ export async function calculs(body) {
       } catch (e) { out.textContent = `⚠ ${e.message}`; }
     });
   }
+
+  if (grafs.length) monterCourbes($("ca_courbes"), grafs);
 
   $("ca_q").addEventListener("input", e => { q = e.target.value; rendre(); });
   rendre();
