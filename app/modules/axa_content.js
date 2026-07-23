@@ -42,8 +42,9 @@ fréquente entre deux mécaniques, préparation d'un rendez-vous complexe.
    points de vigilance, contrats à vérifier, sources à ouvrir, formulations prudentes).
 5. **Analyser un besoin** → *Analyse des besoins* : renseigne la situation, l'outil propose des
    **pistes** de familles/contrats à explorer — **il ne décide pas à ta place**.
-6. **Comparer deux contrats** → *Comparateur* : différences, ressemblances, et « à ne pas
-   confondre » (contrats proches d'une même famille).
+6. **Comparer deux contrats** → *avec ton IA* : donne-lui l'adresse de la Vue IA (voir
+   « Utiliser avec une IA ») — elle dispose du comparateur et des matrices. La fiche contrat
+   garde le bloc « à ne pas confondre » (contrats proches d'une même famille).
 7. **Accéder aux sources** → *Sources officielles* (manifeste des masters) et *PDF contractuels*
    (notices et conditions générales, qui font foi).
 8. **Mode IA / audit** → bascule 👤/🤖 en haut de l'app : la vue IA affiche les données brutes
@@ -75,61 +76,6 @@ const GARDE_FOUS = `Règles impératives :
 - Aucun conseil personnalisé définitif, aucun calcul fiscal/social définitif sans source officielle et données complètes.
 - Termine par les limites de ta réponse et où le conseiller doit vérifier.`;
 
-export const PROMPTS = [
-  {
-    id: "quotidien", titre: "Conseiller — usage quotidien",
-    description: "Prompt de base à coller en tête de conversation avec ChatGPT/Claude.",
-    texte: `Tu es un assistant pour un conseiller AXA. Je te fournis une base de connaissances contractuelle (Pack A stable, Pack B matrices, mode d'emploi).
-${GARDE_FOUS}
-Réponds de façon claire, structurée et prudente. Attends ma question.`,
-  },
-  {
-    id: "recherche", titre: "Recherche contrat / garantie",
-    description: "Retrouver une garantie, une exclusion ou une condition, avec source.",
-    texte: `Dans le contrat [NOM DU CONTRAT], retrouve : [GARANTIE / EXCLUSION / CONDITION recherchée].
-Donne : le libellé exact, ce que ça couvre ou exclut, les conditions, et la source (notice PDF + page si disponible).
-${GARDE_FOUS}`,
-  },
-  {
-    id: "comparaison", titre: "Comparaison de contrats",
-    description: "Comparer deux contrats en séparant preuve (Pack A) et raisonnement (Pack B).",
-    texte: `Compare [CONTRAT 1] et [CONTRAT 2] sur : [garanties clés / exclusions / cotisations / fiscalité].
-Présente : différences, ressemblances, et points « à ne pas confondre ».
-Sépare explicitement ce qui vient du Pack A (preuve contractuelle, avec sources) de ce qui relève d'un raisonnement Pack B.
-${GARDE_FOUS}`,
-  },
-  {
-    id: "rdv", titre: "Préparation de rendez-vous",
-    description: "Générer une fiche de préparation prudente.",
-    texte: `Prépare un rendez-vous pour un client : [SITUATION : âge, famille, profession, objectif, budget, horizon].
-Donne : objectifs du RDV, questions à poser, points de vigilance, contrats à vérifier, sources/PDF à ouvrir, formulations prudentes, objections possibles, prochaines étapes.
-Ne propose que des PISTES à valider ; ne décide pas à la place du conseiller.
-${GARDE_FOUS}`,
-  },
-  {
-    id: "verif", titre: "Vérification de prudence",
-    description: "Faire relire une réponse avant de la donner au client.",
-    texte: `Voici une réponse que j'envisage de donner à un client : « [MA RÉPONSE] ».
-Vérifie : est-elle exacte au regard du contrat ? Cite-t-elle ses sources ? Y a-t-il une sur-interprétation, notamment d'une matrice Pack B ? Manque-t-il une limite ou une réserve ?
-Réécris-la de façon plus prudente si nécessaire.
-${GARDE_FOUS}`,
-  },
-  {
-    id: "reponse_client", titre: "Réponse client prudente",
-    description: "Rédiger une réponse client sourcée et mesurée.",
-    texte: `Rédige une réponse client à la question : « [QUESTION CLIENT] », concernant [CONTRAT].
-Ton professionnel, clair, rassurant, sans jargon inutile. Appuie chaque point contractuel sur sa source (notice PDF). Ajoute une réserve invitant à vérifier au contrat pour le cas précis.
-${GARDE_FOUS}`,
-  },
-  {
-    id: "animateur", titre: "Animateur commercial",
-    description: "Préparer un mini-brief ou un cas pratique pour former un conseiller.",
-    texte: `Agis comme animateur commercial. Prépare un mini-brief de formation sur [CONTRAT / THÈME] pour un conseiller :
-points clés à maîtriser, erreurs fréquentes à éviter, 3 questions de contrôle avec réponses sourcées, 1 cas pratique.
-Distingue toujours ce qui est preuve contractuelle (Pack A) de ce qui est raisonnement (Pack B).
-${GARDE_FOUS}`,
-  },
-];
 
 // Repères MÉTHODOLOGIQUES par famille de contrats (Lot 3). Ce ne sont PAS des affirmations
 // contractuelles : ce sont des aides génériques au raisonnement. La vérité reste le contrat/PDF.
@@ -178,13 +124,3 @@ export const ERREURS_TRANSVERSES = [
   "Conclure alors que la source est absente ou insuffisante",
 ];
 
-// Parcours métier de l'accueil (Lot 2 — orienté usage terrain).
-export const PARCOURS = [
-  { icon: "🔎", titre: "Je cherche une info contrat", sub: "garantie, exclusion, condition", href: "#/recherche" },
-  { icon: "📑", titre: "Je consulte une fiche contrat", sub: "vue conseiller par contrat", href: "#/contrat" },
-  { icon: "🗓", titre: "Je prépare un rendez-vous", sub: "fiche de préparation", href: "#/rdv" },
-  { icon: "⚖️", titre: "Je compare deux contrats", sub: "différences & ne pas confondre", href: "#/comparateur" },
-  { icon: "🎯", titre: "J'analyse un besoin client", sub: "pistes, pas de reco définitive", href: "#/besoins" },
-  { icon: "🎓", titre: "Je forme un conseiller", sub: "mode animateur", href: "#/animateur" },
-  { icon: "📚", titre: "Je vérifie une source", sub: "sources & PDF officiels", href: "#/sources" },
-];

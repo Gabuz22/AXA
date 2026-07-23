@@ -13,7 +13,6 @@ const FALLBACK_MANIFEST = {
   sources: {
     index_global: { path: "ia/axa_index_global.json" },
     contrats_resume_humain: { path: "vue_humaine/axa_contrats_resume_humain.json" },
-    comparatif: { path: "vue_humaine/tableau_comparatif.json" },
     contrats_index: { path: "contrats/contrats_index.json" },
     pdf_index: { path: "ia/axa_pdf_index.json" },
   },

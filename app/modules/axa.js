@@ -1,16 +1,16 @@
 // axa — espace AXA CONSEILLER (V1.3) : assistant de travail complet, indépendant du Patrimoine.
-// Routes : #/<section> — accueil, contrat, recherche, assistant, comparateur, besoins,
+// Routes : #/<section> — accueil, contrat, recherche, assistant, besoins,
 // formulaires, sources, pdf, historique, parametres. Les données viennent du service
 // axaKnowledge (piloté par data/AXA/workspace_manifest.json — architecture évolutive).
 import * as kb from "../services/axaKnowledge.js";
 import { get, set } from "../state/store.js";
 import { isEmpty } from "../services/humanView.js";
 import { renderMarkdown } from "../services/markdown.js";
-import { TUTORIEL, PROMPTS, PARCOURS, FAMILLE_META, ERREURS_TRANSVERSES, OBJECTIFS } from "./axa_content.js";
+import { TUTORIEL, FAMILLE_META, ERREURS_TRANSVERSES, OBJECTIFS } from "./axa_content.js";
 
 // Sections réellement implémentées (garde-fou anti-lien-mort : un parcours ne s'affiche
 // que si sa cible existe). RDV/animateur s'activent automatiquement à leur implémentation.
-const IMPLEMENTED = new Set(["accueil", "premiers_pas", "copilote", "contrat", "recherche", "glossaire", "comparateur",
+const IMPLEMENTED = new Set(["accueil", "premiers_pas", "copilote", "contrat", "recherche", "glossaire",
   "besoins", "rdv", "animateur", "argumentaire", "assistants", "formulaires", "sources", "pdf", "historique", "parametres"]);
 
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
@@ -50,7 +50,7 @@ export async function mount(el, ctx) {
   const human = true;
   el.innerHTML = `<div class="view-body">Chargement…</div>`;
   const body = el.querySelector(".view-body");
-  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistants, confiance, comparateur, besoins, rdv, animateur, argumentaire, formulaires, sources, pdf, historique, parametres }[section] || accueil;
+  const render = { accueil, decouvrir, cas_usage, portail_ia, tester, premiers_pas, copilote, contrat, recherche, glossaire, assistants, confiance, besoins, rdv, animateur, argumentaire, formulaires, sources, pdf, historique, parametres }[section] || accueil;
   try { await render(body, human, ctx); }
   catch (e) { body.innerHTML = `<p class="warn">Erreur de la section (${esc(e.message)}).</p>`; }
 }
@@ -67,7 +67,6 @@ async function accueil(body) {
   const INTENTS = [
     ["🧠", "Poser une question", "#/copilote", "preuves + pistes, sourcées"],
     ["📑", "Comprendre un contrat", "#/contrat", "l'essentiel, le mécanisme, les preuves"],
-    ["⚖️", "Comparer deux contrats", "#/comparateur", "pour décider, pas juxtaposer"],
     ["🧩", "Analyser un cas client", "#/besoins", "diagnostic progressif, statuts clairs"],
     ["🗓", "Préparer un rendez-vous", "#/rdv", "avant · pendant · après"],
     ["🗣", "Construire un argumentaire", "#/argumentaire", "trame éditable, sourcée"],
@@ -77,7 +76,7 @@ async function accueil(body) {
   // Reprendre : dernières recherches locales + dernier contexte de travail.
   const hist = (kb.history() || []).slice(0, 3);
   const back = get("axaBack");
-  const backLbl = { recherche: "ta recherche", copilote: "ta question au copilote", contrat: "la fiche", comparateur: "la comparaison" }[back?.from];
+  const backLbl = { recherche: "ta recherche", copilote: "ta question au copilote", contrat: "la fiche" }[back?.from];
   const reprendre = (hist.length || (back?.q && backLbl)) ? `<h3 class="day-h">Reprendre</h3><div class="filters">
       ${back?.q && backLbl ? `<button class="chip on" id="acc_back">↩ ${backLbl} « ${esc(back.q.length > 36 ? back.q.slice(0, 36) + "…" : back.q)} »</button>` : ""}
       ${hist.map(h => `<button class="chip" data-ex="${esc(h.q)}">🔎 ${esc(h.q)}</button>`).join("")}
@@ -104,7 +103,6 @@ async function accueil(body) {
   body.querySelector("#acc_q").addEventListener("keydown", e => { if (e.key === "Enter") gotoSearch(e.target.value); });
   body.addEventListener("click", e => { const b = e.target.closest("[data-ex]"); if (b) gotoSearch(b.dataset.ex); });
   body.querySelector("#acc_back")?.addEventListener("click", () => {
-    if (back.from === "comparateur" && back.slugs) { location.hash = "#/comparateur/" + back.slugs.join("/"); return; }
     if (back.from === "contrat") { location.hash = "#/contrat/" + back.q.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]/g, ""); return; }
     set({ axaQuery: back.q }); location.hash = "#/" + (back.from === "copilote" ? "copilote" : "recherche");
   });
@@ -139,7 +137,6 @@ async function premiers_pas(body) {
       <li>Partez d'une question concrète, comme à un collègue.</li>
       <li>Repérez le <b>type</b> du résultat (garantie / exclusion / condition) et son contrat.</li>
       <li><b>Ouvrez la notice</b> à la page citée avant toute réponse client.</li>
-      <li>En cas de doute entre deux contrats proches, utilisez le <a href="#/comparateur">comparateur</a>.</li>
     </ul>
 
     <h3 class="day-h">Limites</h3>
@@ -291,7 +288,6 @@ async function cas_usage(body) {
     ["🚫", "Vérifier une exclusion", "recherche", "exclusions garantie décès"],
     ["⏳", "Trouver un délai de carence", "recherche", "délai de carence"],
     ["📖", "Comprendre une définition", "glossaire", ""],
-    ["⚖️", "Comparer deux contrats", "comparateur", ""],
     ["🧠", "Construire un premier raisonnement", "copilote", ""],
     ["🧩", "Analyser un cas client", "besoins", ""],
     ["🗣", "Construire un argumentaire", "argumentaire", ""],
@@ -314,7 +310,7 @@ async function portail_ia(body) {
     ["🧭", "Guide IA", "guide-ia.html", "comment une IA doit répondre : citer, ne pas inventer, arbitrer"],
     ["🕸️", "Concepts", "concepts.html", "synonymes métier reliés aux contrats (IPT, PTIA…)"],
     ["🚦", "Routage", "routage.html", "décomposer une question, choisir les bons contrats"],
-    ["⚖️", "Comparateur", "comparateur.html", "un sujet, tous les contrats côte à côte"],
+    ["⚖️", "Comparateur (pour ton IA)", "comparateur.html", "un sujet, tous les contrats côte à côte"],
     ["🧪", "Méthode", "methode-question-complexe.html", "les parcours pour une question complexe"],
     ["✅", "Qualité", "qualite-routage.html", "mesures de précision du moteur"],
     ["🧾", "Tests", "tests.html", "questions de contrôle et parcours attendus"],
@@ -366,7 +362,6 @@ async function tester(body) {
     <h3 class="day-h">Par où commencer</h3>
     <div class="grid">
       ${tile("🔎", "Une vraie recherche", "#/recherche", "teste une question de RDV")}
-      ${tile("⚖️", "Une comparaison", "#/comparateur", "deux contrats que tu proposes")}
       ${tile("🤖", "Avec ton IA", "#/assistants", "colle l'adresse et interroge")}
     </div>
     <h3 class="day-h">Noter un retour</h3>
@@ -610,10 +605,9 @@ async function contrat(body, human, ctx) {
             <button class="btn ghost" data-act="rdv">🗓 Préparer un rendez-vous</button>
             <button class="btn ghost" data-act="arg">🗣 Créer un argumentaire</button>
           </div></div>
-        <div class="ess-b"><div class="ess-h">Comparer${confusion ? " " + IA_TAG : ""}</div>
-          ${confusion ? `<p class="ess-p" style="margin-bottom:8px">${esc(confusion)}</p>` : ""}
-          <div class="btns">${conf.slice(0, 3).map(p => `<a class="btn ghost" href="#/comparateur/${slugMoi}/${slugc(p)}">⚖ vs ${esc(court(p))}</a>`).join("")}
-            <a class="btn ghost" href="#/comparateur/${slugMoi}">⚖ autre contrat…</a></div></div>
+        <div class="ess-b"><div class="ess-h">À ne pas confondre${confusion ? " " + IA_TAG : ""}</div>
+          ${confusion ? `<p class="ess-p" style="margin-bottom:8px">${esc(confusion)}</p>` : `<p class="ess-p muted">Aucune confusion fréquente signalée.</p>`}
+          <div class="btns">${conf.slice(0, 3).map(p => `<a class="btn ghost" href="#/contrat/${slugc(p)}">📑 ${esc(court(p))}</a>`).join("")}</div></div>
       </div>`;
 
     // ⑤ VÉRIFIER LES PREUVES — faits sourcés, chaque bloc dit pourquoi il compte.
@@ -676,7 +670,7 @@ async function contrat(body, human, ctx) {
       const insp = c ? await inspFiche(c.nom) : null;
       // Retour au contexte : la recherche/question/comparaison qui a mené ici reste à un clic.
       const back = get("axaBack");
-      const backLbl = { recherche: "ta recherche", copilote: "ta question", comparateur: "la comparaison" }[back?.from];
+      const backLbl = { recherche: "ta recherche", copilote: "ta question" }[back?.from];
       const backLink = back?.q && backLbl ? ` · <a href="#" id="axa_ctx">↩ revenir à ${backLbl} « ${esc(back.q.length > 42 ? back.q.slice(0, 42) + "…" : back.q)} »</a>` : "";
       content = `<p class="crumb"><a href="#" id="axa_back">← Tous les contrats</a>${backLink}</p>` + (c ? fiche(c, insp) : "<p class='muted'>Contrat introuvable.</p>");
     } else {
@@ -692,7 +686,6 @@ async function contrat(body, human, ctx) {
     body.querySelector("#axa_ctx")?.addEventListener("click", e => {
       e.preventDefault(); const back = get("axaBack");
       if (!back?.q) return;
-      if (back.from === "comparateur" && back.slugs) { location.hash = "#/comparateur/" + back.slugs.join("/"); return; }
       set({ axaQuery: back.q }); location.hash = "#/" + (back.from === "copilote" ? "copilote" : "recherche");
     });
     body.querySelectorAll("[data-print]").forEach(b => b.onclick = () => printTarget(b.closest(".card")));
@@ -708,9 +701,6 @@ async function contrat(body, human, ctx) {
           e.preventDefault(); const s = body.querySelector("#" + a.dataset.goto);
           if (s) { s.open = true; s.scrollIntoView({ behavior: "smooth", block: "start" }); }
         });
-        // Le comparateur ouvert depuis la fiche saura proposer « revenir à la fiche ».
-        body.querySelectorAll("a[href^='#/comparateur']").forEach(aEl =>
-          aEl.addEventListener("click", () => set({ axaBack: { from: "contrat", q: c.nom } })));
       }
     }
     const inp = body.querySelector("#axaq");
@@ -943,7 +933,7 @@ async function copilote(body) {
       <p class="card-b">Tu cherches ${comp.type ? "<b>" + esc(comp.type.libelle) + "</b>" : "une information contractuelle"}
       ${comp.cites.length ? " sur <b>" + comp.cites.map(esc).join("</b> et <b>") + "</b>."
                           : ".<br><span class='muted'>Aucun contrat précisé — je regarde les 9. Précise un contrat pour une réponse plus sûre.</span>"}
-      ${comp.cites.length > 1 ? "<br><span class='muted'>Plusieurs contrats cités : pense au comparateur (ci-dessous).</span>" : ""}</p></div>`];
+      ${comp.cites.length > 1 ? "<br><span class='muted'>Plusieurs contrats cités : demande la comparaison à ton IA (voir « Utiliser avec une IA »).</span>" : ""}</p></div>`];
 
     // ② Base de réponse (jamais une réponse inventée : le meilleur élément sourcé + prudence).
     // Signal faible = la preuve de tête ne couvre presque aucun mot significatif de la question
@@ -1001,10 +991,8 @@ async function copilote(body) {
     }
 
     // ⑤ Prochaine action (contextualisée)
-    const deux = groupes.slice(0, 2).map(g => g.contrat);
     h.push(`<h3 class="day-h">⑤ Prochaine action</h3><div class="card"><div class="btns">
       ${contratPrincipal ? `<a class="btn gold" href="#/contrat/${slugc(contratPrincipal)}">📑 Ouvrir la fiche ${esc(contratPrincipal)}</a>` : ""}
-      ${deux.length === 2 ? `<a class="btn ghost" href="#/comparateur/${slugc(deux[0])}/${slugc(deux[1])}">⚖ Comparer ${esc(deux[0])} ↔ ${esc(deux[1])}</a>` : ""}
       <button class="btn ghost" id="cop_copy">📋 Copier le brief sourcé</button>
       <a class="btn ghost" href="#/assistants">📦 Poser la question à ton IA (pack)</a></div></div>`);
 
@@ -1065,151 +1053,6 @@ async function glossaire(body, human) {
     let t; inp.addEventListener("input", e => { clearTimeout(t); const v = e.target.value; t = setTimeout(() => { render(v); const i = body.querySelector("#glq"); i.focus(); i.setSelectionRange(v.length, v.length); }, 200); });
   }
   render();
-}
-
-/* ---------- Comparateur (Chantier 4 — comprendre et décider) ----------
-   ① en 30 secondes (comparabilité + besoins couverts, matrice métier étiquetée) →
-   ② différences essentielles expliquées → ③ comparaison détaillée ligne à ligne (Pack A) →
-   ④ données client pour trancher → ⑤ actions. Le contexte est conservé dans les deux sens
-   (fiche ↔ comparaison). Fail-open : sans /ia, ne manquent que les blocs d'analyse. */
-const COMPARE_SECTIONS = [["Garanties principales", "garanties_principales"], ["Exclusions importantes", "exclusions_importantes"],
-  ["Options", "options"], ["Points de vigilance", "points_de_vigilance"], ["Fiscalité", "fiscalite"]];
-async function comparateur(body, human, ctx) {
-  const resume = await kb.source("contrats_resume_humain");
-  const t = await kb.source("comparatif");
-  const contrats = resume?.contrats || [];
-  if (!contrats.length) { body.innerHTML = `<p class="warn">Données de comparaison indisponibles.</p>`; return; }
-  if (!human) { body.innerHTML = `<pre>${esc(JSON.stringify({ comparatif: t, contrats: contrats.map(c => c.nom) }, null, 2).slice(0, 60000))}</pre>`; return; }
-  const matrice = await inspJson("metier/matrice_risques.json");
-  const risques = Object.values(matrice?.risques || {});
-  const besoinsDe = nom => risques.filter(r => (r.contrats || []).some(x => cleNom(x) === cleNom(nom)));
-  const shortR = r => String(r.libelle || "").split("—")[0].trim();
-  const titles = (c, key) => (c[key] || []).map(f => typeof f === "string" ? f : (f.titre && !f.titre.startsWith("_") ? f.titre : "")).filter(Boolean);
-  const opt = (sel, c) => `<option value="${esc(c.nom)}" ${sel === c.nom ? "selected" : ""}>${esc(c.nom)}</option>`;
-  let a = contrats[0].nom, b = contrats[1] ? contrats[1].nom : contrats[0].nom;
-  // Lien profond #/comparateur/<slugA>/<slugB> : le copilote et les fiches pré-remplissent.
-  const slugc = s => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]/g, "");
-  const parSlug = w => (contrats.find(c => slugc(c.nom) === w) || contrats.find(c => slugc(c.nom).startsWith(w)))?.nom;
-  if (ctx?.path?.[0]) a = parSlug(slugc(decodeURIComponent(ctx.path[0]))) || a;
-  if (ctx?.path?.[1]) b = parSlug(slugc(decodeURIComponent(ctx.path[1]))) || b;
-  if (a === b && contrats.length > 1) b = contrats.find(c => c.nom !== a).nom;
-
-  async function renderCompare() {
-    const cA = contrats.find(c => c.nom === a), cB = contrats.find(c => c.nom === b);
-    const out = body.querySelector("#cmp_out");
-    if (a === b) { out.innerHTML = `<div class="warnbox">Choisis deux contrats différents pour comparer.</div>`; return; }
-    out.innerHTML = `<p class="muted">Analyse de la comparaison…</p>`;
-    const [iA, iB] = await Promise.all([inspFiche(a), inspFiche(b)]);
-    const sameFam = cA.famille === cB.famille;
-
-    // Besoins couverts (matrice métier, heuristique IA étiquetée) : le langage de la décision.
-    const bA = besoinsDe(a), bB = besoinsDe(b);
-    const communs = bA.filter(r => bB.includes(r));
-    const seulsA = bA.filter(r => !bB.includes(r)), seulsB = bB.filter(r => !bA.includes(r));
-    const aucun = risques.filter(r => !bA.includes(r) && !bB.includes(r));
-
-    // ① EN 30 SECONDES — pourquoi (ou pourquoi pas) comparer ces deux-là.
-    let verdict;
-    if (sameFam) verdict = `Même famille (<b>${esc(cA.famille)}</b>) : contrats proches, <b>à ne pas confondre</b> — la décision se joue sur les garanties et exclusions ligne à ligne.`;
-    else if (!risques.length) verdict = `Familles différentes (${esc(cA.famille)} vs ${esc(cB.famille)}) — usages distincts. <span class="muted">L'analyse des besoins couverts est indisponible (couche /ia non générée) : compare ligne à ligne ci-dessous.</span>`;
-    else if (!communs.length) verdict = `Ces deux contrats <b>ne répondent pas au même besoin</b> (${esc(cA.famille)} vs ${esc(cB.famille)}) : les comparer terme à terme a peu de sens. La vraie question : se <b>complètent</b>-ils dans la couverture du client ?`;
-    else verdict = `Familles différentes (${esc(cA.famille)} vs ${esc(cB.famille)}) avec des besoins partagés : souvent <b>complémentaires</b> plutôt que concurrents — vérifier les doublons sur les besoins communs.`;
-    const chipsR = arr => arr.map(r => `<span class="fchip" title="${esc((r.questions || [])[0] || "")}">${esc(shortR(r))}</span>`).join("");
-    const trente = `<div class="card"><div class="card-h"><span class="pill integrated">① en 30 secondes</span>${IA_TAG}</div>
-      <p class="card-b">${verdict}</p>
-      <div class="cmp-bes">
-        ${communs.length ? `<div class="ess-b"><div class="ess-h">Couvert par les deux — attention au doublon</div><div class="fiche-chips">${chipsR(communs)}</div></div>` : ""}
-        ${seulsA.length ? `<div class="ess-b t-okb"><div class="ess-h">Seul ${esc(court(a))} couvre</div><div class="fiche-chips">${chipsR(seulsA)}</div></div>` : ""}
-        ${seulsB.length ? `<div class="ess-b t-okb"><div class="ess-h">Seul ${esc(court(b))} couvre</div><div class="fiche-chips">${chipsR(seulsB)}</div></div>` : ""}
-        ${aucun.length ? `<div class="ess-b t-warnb"><div class="ess-h">Aucun des deux ne couvre</div><div class="fiche-chips">${aucun.map(r => `<span class="fchip" title="Voir : ${esc((r.contrats || []).join(", "))}">${esc(shortR(r))}</span>`).join("")}</div><p class="ess-more muted">survole un besoin : quels contrats le couvrent</p></div>` : ""}
-      </div></div>`;
-
-    // ② DIFFÉRENCES ESSENTIELLES — ce que chacun apporte en propre, et quand ça compte.
-    const diffOf = key => {
-      const ta = titles(cA, key), tb = titles(cB, key);
-      const sA = new Set(ta.map(x => x.toLowerCase())), sB = new Set(tb.map(x => x.toLowerCase()));
-      return { a: ta.filter(x => !sB.has(x.toLowerCase())), b: tb.filter(x => !sA.has(x.toLowerCase())) };
-    };
-    const dG = diffOf("garanties_principales"), dE = diffOf("exclusions_importantes");
-    const favA = iaTxt(iA?.situations_favorables), favB = iaTxt(iB?.situations_favorables);
-    const apporte = (nomC, gar, fav) => `<div class="ess-b"><div class="ess-h">Ce que ${esc(court(nomC))} apporte en propre</div>
-      ${gar.length ? bullets(gar.slice(0, 5)) : `<p class="ess-p muted">Aucune garantie écrite ici qui ne soit pas aussi chez l'autre (au niveau des intitulés).</p>`}
-      ${fav ? `<p class="fitem-x" style="margin-top:8px"><span class="fitem-xl">Favorable quand</span> ${esc(fav)} ${IA_TAG}</p>` : ""}</div>`;
-    const essentielles = `<h3 class="day-h">② Différences essentielles</h3>
-      <p class="muted">Garanties écrites d'un seul côté (intitulés Pack A). Une différence d'écriture n'est pas forcément une différence contractuelle — <b>la notice fait foi</b>.</p>
-      <div class="cmp-two">${apporte(a, dG.a, favA)}${apporte(b, dG.b, favB)}</div>
-      ${(dE.a.length || dE.b.length) ? `<details class="acc"><summary>🚫 Exclusions écrites d'un seul côté <span class="muted">(${dE.a.length + dE.b.length}) — l'autre contrat peut exclure la même chose sous une autre formulation</span></summary>
-        ${dE.a.length ? `<div class="fitem" style="margin:8px 0"><div class="fitem-t">${esc(court(a))}</div>${bullets(dE.a.slice(0, 6))}</div>` : ""}
-        ${dE.b.length ? `<div class="fitem" style="margin:8px 0"><div class="fitem-t">${esc(court(b))}</div>${bullets(dE.b.slice(0, 6))}</div>` : ""}</details>` : ""}`;
-
-    // ③ COMPARAISON DÉTAILLÉE — la table ligne à ligne (faits Pack A).
-    const sideBySide = COMPARE_SECTIONS.map(([label, key]) => {
-      const ta = titles(cA, key), tb = titles(cB, key);
-      if (!ta.length && !tb.length) return "";
-      const setA = new Set(ta.map(x => x.toLowerCase())), setB = new Set(tb.map(x => x.toLowerCase()));
-      const li = (arr, other) => arr.map(x => `<li class="${other.has(x.toLowerCase()) ? "" : "diff"}">${esc(x)}</li>`).join("") || "<li class='muted'>—</li>";
-      return `<tr><td style="text-align:left"><b>${esc(label)}</b></td>
-        <td style="text-align:left;white-space:normal"><ul class="hlist">${li(ta, setB)}</ul></td>
-        <td style="text-align:left;white-space:normal"><ul class="hlist">${li(tb, setA)}</ul></td></tr>`;
-    }).join("");
-    const detail = `<h3 class="day-h">③ Comparaison détaillée <span class="pill integrated" style="margin-left:6px">Pack A · sourcé</span></h3>
-      <p class="muted">En <span class="diff-lg">orange</span> : présent d'un seul côté. Le raisonnement (Pack B) n'est jamais une preuve.</p>
-      <div class="tblwrap"><table class="tbl"><thead><tr><th>Thème</th><th>${esc(cA.nom)}</th><th>${esc(cB.nom)}</th></tr></thead><tbody>${sideBySide}</tbody></table></div>`;
-
-    // ④ POUR TRANCHER — les données client qui font vraiment la décision.
-    const qTrancher = [...new Set([...seulsA, ...seulsB, ...communs].flatMap(r => r.questions || []))].slice(0, 5);
-    const trancher = qTrancher.length ? `<h3 class="day-h">④ Pour trancher : à demander au client</h3>
-      <div class="card"><p class="muted" style="margin-top:0">Ces réponses déterminent quel contrat — ou quelle combinaison — correspond à la situation.</p>${bullets(qTrancher)}</div>` : "";
-
-    // ⑤ ACTIONS — poursuivre sans perdre la comparaison.
-    const actions = `<h3 class="day-h">⑤ Et maintenant</h3><div class="card"><div class="btns">
-      <a class="btn ghost" href="#/contrat/${slugc(a)}">📑 Fiche ${esc(court(a))}</a>
-      <a class="btn ghost" href="#/contrat/${slugc(b)}">📑 Fiche ${esc(court(b))}</a>
-      <button class="btn ghost" id="cmp_cop">🧠 Creuser au copilote</button>
-      <button class="btn ghost" id="cmp_copy">📋 Copier la synthèse</button>
-      <button class="btn ghost" id="cmp_rdv">🗓 Préparer un RDV</button>
-      ${printBtnHtml("cmp_print")}</div></div>`;
-
-    out.innerHTML = trente + essentielles + detail + trancher + actions;
-
-    const synthese = () => {
-      const L = [`COMPARAISON — ${a} vs ${b}`, ""];
-      L.push(sameFam ? `Même famille (${cA.famille}) : à ne pas confondre.` : `Familles différentes (${cA.famille} vs ${cB.famille}).`);
-      if (communs.length) L.push("", "BESOINS COUVERTS PAR LES DEUX (vérifier le doublon) : " + communs.map(shortR).join(" · "));
-      if (seulsA.length) L.push(`SEUL ${a} COUVRE : ` + seulsA.map(shortR).join(" · "));
-      if (seulsB.length) L.push(`SEUL ${b} COUVRE : ` + seulsB.map(shortR).join(" · "));
-      if (aucun.length) L.push("AUCUN DES DEUX NE COUVRE : " + aucun.map(shortR).join(" · "));
-      if (dG.a.length) L.push("", `GARANTIES PROPRES À ${a} : ` + dG.a.slice(0, 6).join(" · "));
-      if (dG.b.length) L.push(`GARANTIES PROPRES À ${b} : ` + dG.b.slice(0, 6).join(" · "));
-      if (qTrancher.length) { L.push("", "À DEMANDER AU CLIENT :"); qTrancher.forEach(q => L.push("- " + q)); }
-      L.push("", "Aide à la décision (matrice métier IA, à valider). La notice PDF fait foi — aucune réponse client sans vérification.");
-      return L.join("\n");
-    };
-    out.querySelector("#cmp_cop")?.addEventListener("click", () => { set({ axaQuery: `${court(a)} ${court(b)} ` }); location.hash = "#/copilote"; });
-    out.querySelector("#cmp_rdv")?.addEventListener("click", () => { set({ axaRdvPrefill: a }); location.hash = "#/rdv"; });
-    bindCopy(out.querySelector("#cmp_copy"), synthese, "✓ Synthèse copiée");
-    out.querySelector("#cmp_print")?.addEventListener("click", () => printTarget(out));
-    // Ouvrir une fiche depuis ici : elle proposera « revenir à la comparaison ».
-    out.querySelectorAll("a[href^='#/contrat/']").forEach(el =>
-      el.addEventListener("click", () => set({ axaBack: { from: "comparateur", q: `${court(a)} ↔ ${court(b)}`, slugs: [slugc(a), slugc(b)] } })));
-  }
-
-  // Contexte conservé : arrivé depuis une fiche, on peut y revenir d'un clic.
-  const back = get("axaBack");
-  const crumb = (back?.from === "contrat" && back.q) ? `<p class="crumb"><a href="#" id="cmp_back">↩ revenir à la fiche « ${esc(back.q)} »</a></p>` : "";
-  body.innerHTML = `${crumb}<p class="lead">Compare pour <b>décider</b> : ce qui est comparable, ce que chacun apporte en propre, et les données client qui font trancher. Les faits viennent du Pack A ; la notice PDF fait foi.</p>
-    <div class="cmp-pick"><label>Contrat A<select id="cmp_a">${contrats.map(c => opt(a, c)).join("")}</select></label>
-      <button class="btn ghost" id="cmp_swap" title="Permuter A et B" aria-label="Permuter les deux contrats">⇄ permuter</button>
-      <label>Contrat B<select id="cmp_b">${contrats.map(c => opt(b, c)).join("")}</select></label></div>
-    <div id="cmp_out"></div>
-    ${t?.lignes ? `<details class="acc"><summary>Tableau global (nombre de faits par thème)</summary>
-      <div class="tblwrap"><table class="tbl"><thead><tr>${t.colonnes.map(c => `<th>${esc(c.replace(/_/g, " "))}</th>`).join("")}</tr></thead>
-      <tbody>${t.lignes.map(l => `<tr>${t.colonnes.map((c, i) => `<td ${i === 0 ? 'style="text-align:left;white-space:normal"' : ""}>${esc(l[c] ?? "—")}</td>`).join("")}</tr>`).join("")}</tbody></table></div></details>` : ""}`;
-  body.querySelector("#cmp_back")?.addEventListener("click", e => { e.preventDefault(); location.hash = "#/contrat/" + slugc(back.q); });
-  body.querySelector("#cmp_a").onchange = e => { a = e.target.value; renderCompare(); };
-  body.querySelector("#cmp_b").onchange = e => { b = e.target.value; renderCompare(); };
-  body.querySelector("#cmp_swap").onclick = () => { [a, b] = [b, a]; body.querySelector("#cmp_a").value = a; body.querySelector("#cmp_b").value = b; renderCompare(); };
-  renderCompare();
 }
 
 /* ---------- Cas client (Chantier 5 — divulgation progressive, statuts explicites) ----------
@@ -1365,8 +1208,7 @@ async function besoins(body) {
       const cands = candOf(id);
       if (!cands.length) return `<div class="fitem"><div class="fitem-t">${esc(shortR(id))}</div><p class="fitem-b muted">Aucun contrat de la base ne couvre ce besoin — voir l'offre hors périmètre.</p></div>`;
       const links = cands.map(n => `<a class="btn ghost" href="#/contrat/${cleNom(n)}">📑 ${esc(court(n))}</a>`).join("");
-      const cmp = cands.length >= 2 ? `<a class="btn ghost" href="#/comparateur/${cleNom(cands[0])}/${cleNom(cands[1])}">⚖ comparer</a>` : "";
-      return `<div class="fitem"><div class="fitem-t">${esc(shortR(id))}</div><div class="btns" style="margin:6px 0 0">${links}${cmp}</div>
+      return `<div class="fitem"><div class="fitem-t">${esc(shortR(id))}</div><div class="btns" style="margin:6px 0 0">${links}</div>
         ${(RISQUES[id].questions || [])[0] ? `<p class="fitem-x"><span class="fitem-xl">À demander d'abord</span> ${esc(RISQUES[id].questions[0])}</p>` : ""}</div>`;
     }).join("");
 
@@ -1511,7 +1353,6 @@ async function rdv(body) {
         <div class="btns">
           <a class="btn ghost" href="#/recherche" target="_blank" rel="noopener">🔎 Recherche</a>
           <a class="btn ghost" href="${ficheHref}" target="_blank" rel="noopener">📑 Fiche ${st.contrat ? esc(court(st.contrat)) : "contrat"}</a>
-          <a class="btn ghost" href="#/comparateur${st.contrat ? "/" + cleNom(st.contrat) : ""}" target="_blank" rel="noopener">⚖ Comparateur</a>
           <a class="btn ghost" href="#/glossaire" target="_blank" rel="noopener">📖 Glossaire</a>
           <a class="btn ghost" href="#/pdf" target="_blank" rel="noopener">📄 Notices</a>
         </div></div>

@@ -47,7 +47,7 @@ du message dans le groupe Matrix reste une action humaine.*
 2. `exclusions décès` — exclusions typées, sourcées.
 3. `rachat possible ?` — question naturelle, contrats d'épargne.
 4. `invalidité IPT` — définition + garanties (synonymes gérés).
-5. Compare **Avizen** et **Avizen Pro** dans le **Comparateur** — ce que chacun apporte en propre.
+5. Compare **Avizen** et **Avizen Pro** en donnant la Vue IA à ton IA (« Utiliser avec une IA ») — la comparaison n'est plus un menu du produit.
 
 ## 4. Utilisation avec une IA — consignes
 
@@ -76,7 +76,7 @@ client, aucun suivi intrusif, aucune plateforme analytique.
 - combien de conseillers volontaires / combien ont réellement ouvert le site ;
 - combien de retours structurés reçus (formulaire `#/tester`) ;
 - informations trouvées ou non (champ « as-tu trouvé »), temps perçu vs pratique habituelle ;
-- fonctionnalités réellement utilisées (recherche seule ? comparateur ? IA ?) ;
+- fonctionnalités réellement utilisées (recherche seule ? outils conseiller ? IA ?) ;
 - réutilisation spontanée après le premier essai ;
 - usage avec ou sans IA, et fiabilité perçue des réponses IA ;
 - erreurs, incompréhensions, éléments manquants signalés ;

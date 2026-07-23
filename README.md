@@ -26,7 +26,8 @@ N'importe quel serveur statique fait l'affaire (l'app est en modules ES natifs).
 - **Recherche** en langage naturel (garanties, exclusions, définitions, conditions), sourcée.
 - **Fiches contrat** (par ordre alphabétique) avec renvoi à la notice à la bonne page.
 - **Copilote de réponse** : preuves contractuelles (Pack A) + raisonnement (Pack B), séparés, avec brief copiable.
-- **Comparateur**, **glossaire**, **notices PDF**, **outils conseiller** (analyse des besoins, préparation RDV, animateur).
+- **Glossaire**, **notices PDF**, **outils conseiller** (analyse des besoins, préparation RDV, animateur).
+- La **comparaison de contrats** se fait avec ton IA : donne-lui l'adresse de la Vue IA (voir « Utiliser avec une IA »), elle dispose du comparateur et des matrices.
 - **Utiliser avec une IA** : mode d'emploi Pack A / Pack B pour ChatGPT ou Claude.
 
 ## Vue IA (`/ia`) — couche pour les modèles
