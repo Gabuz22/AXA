@@ -1,15 +1,16 @@
 // prospection — suivi de prospection du conseiller (Lot prospection, 2026-07-23).
 //
-// CONFIDENTIALITÉ — la règle du produit change ici, et c'est assumé et cadré :
-// partout ailleurs Gabriel AXA ne stocke AUCUNE donnée nominative. Cet outil, lui, en stocke par
-// nature (nom, téléphone, mail, adresse d'un prospect). Garde-fous appliqués :
+// CONFIDENTIALITÉ — position produit (Gabriel, 2026-07-23) : les coordonnées d'un PROSPECT vu en
+// prospection peuvent être stockées ; elles deviennent sensibles au moment où le prospect devient
+// CLIENT, pas avant. Partout ailleurs Gabriel AXA ne stocke aucune donnée nominative. Garde-fous :
 //   • stockage EXCLUSIVEMENT dans le localStorage de CE navigateur (clé gv_axa_prospects_v1) ;
 //   • JAMAIS envoyé au réseau, jamais inclus dans la Vue IA, jamais dans un pack destiné à une IA ;
-//   • l'export est un geste HUMAIN explicite (bouton), jamais automatique ;
+//   • l'export est un geste HUMAIN explicite (bouton), jamais automatique — et l'outil RAPPELLE
+//     l'export hebdomadaire, car le localStorage peut être vidé par le navigateur à tout moment ;
 //   • aucune donnée de prospection ne doit être collée dans une IA externe (rappelé à l'écran).
 // Le message type est une TRAME que le conseiller modifie ; l'essentiel est qu'il soit COPIABLE.
 // L'envoi automatisé n'est volontairement PAS implémenté (décision produit ultérieure).
-import { markExport } from "../state/store.js";
+import { markExport, getExports } from "../state/store.js";
 
 const LS = "gv_axa_prospects_v1";
 const LS_TPL = "gv_axa_prospect_msg_v1";
@@ -84,9 +85,12 @@ export async function prospection(body) {
   body.innerHTML = `
     <p class="lead">Suis tes prospects : qui appeler, quand relancer, et avec quel message.
       Le message est une <b>trame que tu modifies</b> — l'outil ne parle jamais à ta place.</p>
-    <div class="warnbox">🔒 <b>Ces informations restent dans ce navigateur</b> — jamais envoyées, jamais transmises
-      à une IA, jamais publiées. Elles ne sont sauvegardées nulle part ailleurs : pense à
-      <b>exporter</b> régulièrement. Ne colle jamais ces données dans une IA externe.</div>
+    <div class="warnbox">🔒 <b>Ces informations restent dans ce navigateur</b> — jamais envoyées, jamais
+      transmises à une IA, jamais publiées. Elles ne sont sauvegardées <b>nulle part ailleurs</b> :
+      le navigateur peut les effacer, d'où l'<b>export hebdomadaire</b> ci-dessous.
+      Dès qu'un prospect devient <b>client</b>, ses données deviennent sensibles : bascule-les dans
+      tes outils AXA et ne les laisse pas ici.</div>
+    <div id="pr_rappel"></div>
 
     <div class="card">
       <div class="card-h"><strong id="pr_ftitre">➕ Nouveau prospect</strong></div>
@@ -150,6 +154,21 @@ export async function prospection(body) {
     $("pr_ftitre").textContent = "➕ Nouveau prospect"; $("pr_cancel").hidden = true;
   };
 
+  // Rappel d'export HEBDOMADAIRE : le stockage navigateur n'est pas une sauvegarde.
+  function rappelExport(nb) {
+    const z = $("pr_rappel"); if (!z) return;
+    if (!nb) { z.innerHTML = ""; return; }
+    const iso = (getExports() || {}).prospection;
+    const jours = iso ? Math.floor((Date.now() - new Date(iso).getTime()) / 86400000) : null;
+    if (jours === null) {
+      z.innerHTML = `<div class="warnbox">📤 <b>Aucun export encore réalisé</b> — ${nb} prospect(s) n'existent que dans ce navigateur. Exporte-les dès maintenant (bouton en bas).</div>`;
+    } else if (jours >= 7) {
+      z.innerHTML = `<div class="warnbox">📤 <b>Dernier export il y a ${jours} jour(s)</b> — l'export hebdomadaire est recommandé. ${nb} prospect(s) à sauvegarder.</div>`;
+    } else {
+      z.innerHTML = `<p class="muted">📤 Dernier export il y a ${jours} jour(s) — à refaire chaque semaine.</p>`;
+    }
+  }
+
   function compteurs(l) {
     const c = { tous: l.length, retard: 0, aujourdhui: 0 };
     l.forEach(p => { const e = etatRelance(p); if (e.cle === "retard") c.retard++; if (e.cle === "aujourdhui") c.aujourdhui++; });
@@ -209,6 +228,7 @@ export async function prospection(body) {
     const rang = p => ({ retard: 0, aujourdhui: 1 }[etatRelance(p).cle] ?? 2);
     list.sort((a, b) => rang(a) - rang(b) || String(a.date_relance || "9999").localeCompare(String(b.date_relance || "9999")));
 
+    rappelExport(tous.length);
     $("pr_list").innerHTML = list.length ? list.map(carte).join("")
       : `<p class="muted">${tous.length ? "Aucun prospect ne correspond à ce filtre." : "Aucun prospect pour l'instant — ajoute le premier ci-dessus."}</p>`;
 
@@ -274,13 +294,13 @@ export async function prospection(body) {
   $("pr_exp_csv").onclick = () => {
     const l = lire(); if (!l.length) { $("pr_exp_msg").textContent = "Rien à exporter."; return; }
     telecharger("﻿" + versCSV(l), `prospection_${todayISO()}.csv`, "text/csv;charset=utf-8");
-    markExport("prospection"); $("pr_exp_msg").textContent = `⬇ ${l.length} prospect(s) exporté(s).`;
+    markExport("prospection"); $("pr_exp_msg").textContent = `⬇ ${l.length} prospect(s) exporté(s).`; rendre();
   };
   $("pr_exp_json").onclick = () => {
     const l = lire(); if (!l.length) { $("pr_exp_msg").textContent = "Rien à exporter."; return; }
     telecharger(JSON.stringify({ v: 1, exporte_le: new Date().toISOString(), prospects: l }, null, 2),
       `prospection_${todayISO()}.json`, "application/json");
-    markExport("prospection"); $("pr_exp_msg").textContent = `⬇ ${l.length} prospect(s) sauvegardé(s).`;
+    markExport("prospection"); $("pr_exp_msg").textContent = `⬇ ${l.length} prospect(s) sauvegardé(s).`; rendre();
   };
 
   vider();
