@@ -20,8 +20,22 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 IA = "ia"
-DATE = datetime.date.today().isoformat()
-VERSION = "2.3.0"   # tenue synchrone avec version.json (racine)
+# BUILD REPRODUCTIBLE : la date vient de version.json (la date de la VERSION), pas du jour de
+# l'exécution. Sans cela, regénérer /ia un autre jour réécrivait 218 fichiers pour la seule ligne
+# de date → le contrôle qualité « sorties /ia synchronisées » était rouge en permanence et
+# masquait les vrais signaux. Repli sur aujourd'hui si version.json est illisible.
+def _version_meta():
+    try:
+        with open("version.json", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+_VMETA = _version_meta()
+DATE = _VMETA.get("date") or datetime.date.today().isoformat()
+VERSION = "2.3.0"   # tenue synchrone avec version.json (racine) — dérive signalée juste dessous
+if _VMETA.get("version") and _VMETA["version"] != VERSION:
+    print("[build_ia] ATTENTION version desynchronisee : version.json=%s / build_ia=%s"
+          % (_VMETA["version"], VERSION))
 SITE = "https://gabuz22.github.io/AXA"
 
 def load(p, d=None):
@@ -63,9 +77,23 @@ def find_derived(c):
 def data_pref(depth): return "../" * (depth + 1)   # ia/<depth> -> racine dépôt
 def int_pref(depth):  return "../" * depth          # entre pages ia/
 
+PDF_BASE = "data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/"   # emplacement RÉEL des notices sur disque
+
+def rel_contrat(path):
+    """Chemin relatif au dossier des contrats, quelle que soit la forme de l'index.
+
+    `document_source` (masters) est déjà relatif (« Avizen/notice.pdf »). L'index PDF, lui, porte
+    un chemin depuis la racine : depuis 2026-07-23 la forme CORRIGÉE (avec 00_PACKAGE_ACTIF/…),
+    et auparavant une forme plate obsolète. On tolère les deux — sans quoi corriger l'index à la
+    source dupliquait le préfixe et cassait tous les liens de notice."""
+    p = str(path or "")
+    if p.startswith(PDF_BASE): return p[len(PDF_BASE):]
+    if p.startswith("data/AXA/"): return p[len("data/AXA/"):]
+    return p
+
 def pdf_href(document_source, page, depth):
     if not document_source: return None
-    p = "data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/" + str(document_source)
+    p = PDF_BASE + rel_contrat(document_source)
     first = str(page).split(",")[0].strip() if page else ""
     return data_pref(depth) + quote(p) + ("#page=" + first if first else "")
 
@@ -201,10 +229,7 @@ def notice_href_for(cslug, depth):
     # toutes les citations de la page, plutôt que de dupliquer la construction du chemin.
     for p in PDFS:
         if slug(p.get("nom_contrat")) == cslug and str(p.get("path", "")).startswith("data/"):
-            rel = str(p["path"])
-            if rel.startswith("data/AXA/"):
-                rel = rel[len("data/AXA/"):]
-            return pdf_href(rel, None, depth)
+            return pdf_href(rel_contrat(p["path"]), None, depth)
     return None
 
 def el_md(e, depth, with_contract=False):
@@ -323,9 +348,7 @@ def build_notices():
     hb = ['<h1>Notices contractuelles (%d)</h1><p>Documents qui font foi.</p><ul>' % len(PDFS)]
     for p in PDFS:
         # Même correction que notice_href_for() : l'index référence l'ancienne arborescence plate.
-        rel = str(p.get("path", ""))
-        if rel.startswith("data/AXA/"): rel = rel[len("data/AXA/"):]
-        u = pdf_href(rel, None, depth) if str(p.get("path", "")).startswith("data/") else None
+        u = pdf_href(rel_contrat(p.get("path")), None, depth) if str(p.get("path", "")).startswith("data/") else None
         nom = p.get("nom_contrat") or ""; fich = p.get("nom_fichier") or str(p.get("path", "")).split("/")[-1]
         pages = (" · %s p." % p["pages"]) if p.get("pages") else ""
         md.append("- **%s** — %s%s%s" % (nom, fich, pages, (" [ouvrir](%s)" % u) if u else ""))
@@ -1118,7 +1141,7 @@ def build_preuves():
                           "type": cat, "titre": e.get("titre") or "", "texte": e.get("texte") or "",
                           "source_pdf": s.get("document_source"), "page": s.get("page"),
                           "lien_contrat": SITE + "/ia/contrat/%s.html#%s" % (e.get("cslug"), e["id"]),
-                          "lien_notice": (SITE + "/" + quote("data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/" + str(s["document_source"])) + ("#page=" + str(s["page"]).split(",")[0].strip() if s.get("page") else "")) if s.get("document_source") else None,
+                          "lien_notice": (SITE + "/" + quote(PDF_BASE + rel_contrat(s["document_source"])) + ("#page=" + str(s["page"]).split(",")[0].strip() if s.get("page") else "")) if s.get("document_source") else None,
                           "concepts": el_concepts(e)})
     write("preuves.json", json.dumps({"meta": {"version": VERSION, "genere_le": DATE, "elements": len(nodes),
         "usage": "Graphe de preuves : chaque conclusion doit citer des ids d'éléments. relations = même contrat + concepts partagés (dérivés, vérifiables).",

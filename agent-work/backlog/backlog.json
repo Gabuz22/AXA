@@ -20,8 +20,8 @@
       },
       "done_criteria": "Un rapport quality/reports/*.json produit ; incidents éventuels enregistrés.",
       "status": "todo",
-      "attempts": 0,
-      "last_attempt": null,
+      "attempts": 4,
+      "last_attempt": "2026-07-23T11:00:50Z",
       "blocked_reason": null
     },
     {

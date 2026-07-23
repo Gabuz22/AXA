@@ -1,8 +1,8 @@
 {
   "proposal_id": "quality__preuves_avec_source_document_notice",
   "agent_id": "quality",
-  "run_id": "run_quality_20260711_121914",
-  "created_at": "2026-07-11T12:19:20Z",
+  "run_id": "run_quality_20260723_110041",
+  "created_at": "2026-07-23T11:00:50Z",
   "status": "pending_review",
   "origin": "deterministic",
   "task": {
