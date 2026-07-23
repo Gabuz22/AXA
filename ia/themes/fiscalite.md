@@ -68,7 +68,7 @@
   - Limite : Pas de garantie plancher égale aux versements nets de frais (≠ épargne garantie).  _(garanties)_
 - **Régime fiscal — assurance vie (transmission)** — Régime fiscal de l'assurance vie : transmission via art. 990 I et 757 B du CGI (selon âge des versements). Avantage de transmission hors succession dans les limites légales. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.5, 16, Régime fiscal](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=5) `#axa_essenciel_patrimoine_2023-09_fiscalite_d81aa98e400a`
   - Limite : Annexe fiscale datée (2018) ; vérifier la fiscalité EN VIGUEUR au moment du conseil. Distinguer 990 I (versements avant 70 ans) et 757 B (après 70 ans).  _(fiscalite)_
-- Fiscalité datée dans la notice (2018) → vérifier la fiscalité en vigueur. `#axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753`  _(points-vigilance)_
+- Fiscalité datée dans la notice (2018) → vérifier la fiscalité en vigueur. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.5, Régime fiscal — indications générales (au 1er janvier 2018)](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=5) `#axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753`  _(points-vigilance)_
 
 ## Excelium (assurance vie) (4)
 

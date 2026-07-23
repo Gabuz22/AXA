@@ -1,4 +1,4 @@
-# Sources (156 références distinctes)
+# Sources (159 références distinctes)
 
 > **Vue IA de Gabriel AXA** — projection statique des JSON, lisible sans JavaScript. Générée le 2026-07-17 (v2.3.0).
 > Outil **indépendant et non officiel**, non affilié ni validé par AXA — documents accessibles publiquement.
@@ -78,10 +78,13 @@
 - **2025-06 Notice d'Information Entour'Age.pdf**, p.6 — 5 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=6)
 - **2025-06 Notice d'Information Entour'Age.pdf**, p.8 — 2 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=8)
 - **2025-06 Notice d'Information Entour'Age.pdf**, p.9 — 1 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=9)
-- **2023-09 Notice d'information Essen'Ciel Patrimoine.pdf**, p.13 — 1 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=13)
+- **2023-09 Notice d'information Essen'Ciel Patrimoine.pdf**, p.13 — 2 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=13)
 - **2023-09 Notice d'information Essen'Ciel Patrimoine.pdf**, p.13, 14, 15 — 1 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=13)
+- **2023-09 Notice d'information Essen'Ciel Patrimoine.pdf**, p.2 — 1 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=2)
 - **2023-09 Notice d'information Essen'Ciel Patrimoine.pdf**, p.2, 14, 15 — 1 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=2)
 - **2023-09 Notice d'information Essen'Ciel Patrimoine.pdf**, p.2, 4, 16 — 1 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=2)
+- **2023-09 Notice d'information Essen'Ciel Patrimoine.pdf**, p.4 — 1 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=4)
+- **2023-09 Notice d'information Essen'Ciel Patrimoine.pdf**, p.5 — 2 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=5)
 - **2023-09 Notice d'information Essen'Ciel Patrimoine.pdf**, p.5, 16 — 1 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=5)
 - **2023-09 Notice d'information Essen'Ciel Patrimoine.pdf**, p.6 — 1 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=6)
 - **2023-09 Notice d'information Essen'Ciel Patrimoine.pdf**, p.6, 8 — 1 élément(s) [ouvrir](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=6)

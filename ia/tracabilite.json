@@ -5,6 +5,7 @@
   "usage": "Contrôle niveau inspecteur : quels éléments d'un contrat ne sont pas pleinement traçables et doivent être vérifiés à la notice avant d'être cités à un client.",
   "niveaux": {
    "complete": "pleinement traçable (notice + page)",
+   "editorial": "note conseiller éditoriale (assumée, pas une citation de notice)",
    "incomplete": "source connue, page imprécise — à vérifier notice",
    "tableau_non_extrait": "valeur dans un tableau non extrait — à lire dans la notice",
    "sans_source": "aucune source rattachée — à vérifier"
@@ -12,9 +13,10 @@
  },
  "global": {
   "elements": 556,
-  "pleinement_tracables": 411,
-  "pct": 74,
-  "a_verifier": 145
+  "pleinement_tracables": 416,
+  "pct": 75,
+  "a_verifier": 139,
+  "notes_editoriales": 1
  },
  "contrats": [
   {
@@ -24,6 +26,7 @@
    "pct_tracable": 83,
    "repartition": {
     "complete": 76,
+    "editorial": 0,
     "incomplete": 16,
     "tableau_non_extrait": 0,
     "sans_source": 0
@@ -182,6 +185,7 @@
    "pct_tracable": 81,
    "repartition": {
     "complete": 72,
+    "editorial": 0,
     "incomplete": 17,
     "tableau_non_extrait": 0,
     "sans_source": 0
@@ -349,6 +353,7 @@
    "pct_tracable": 71,
    "repartition": {
     "complete": 44,
+    "editorial": 0,
     "incomplete": 18,
     "tableau_non_extrait": 0,
     "sans_source": 0
@@ -525,6 +530,7 @@
    "pct_tracable": 72,
    "repartition": {
     "complete": 44,
+    "editorial": 0,
     "incomplete": 17,
     "tableau_non_extrait": 0,
     "sans_source": 0
@@ -689,12 +695,13 @@
    "contrat": "Essen'Ciel Patrimoine",
    "slug": "essen-ciel-patrimoine",
    "elements": 14,
-   "pct_tracable": 36,
+   "pct_tracable": 71,
    "repartition": {
-    "complete": 5,
+    "complete": 10,
+    "editorial": 1,
     "incomplete": 0,
     "tableau_non_extrait": 3,
-    "sans_source": 6
+    "sans_source": 0
    },
    "a_verifier": [
     {
@@ -723,60 +730,6 @@
      "notice": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
      "page": "13, 14, 15",
      "section": "4.3"
-    },
-    {
-     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_09cc2c565c43",
-     "type": "points-vigilance",
-     "niveau": "sans_source",
-     "libelle": "NE PAS confondre avec Essen'Ciel (obsèques) : Patrimoine = transmission, cadre assurance vie, facult",
-     "notice": null,
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_7e9993e4030f",
-     "type": "points-vigilance",
-     "niveau": "sans_source",
-     "libelle": "Pas de garantie en capital ≥ versements nets de frais (ce n'est pas une épargne garantie).",
-     "notice": null,
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c",
-     "type": "points-vigilance",
-     "niveau": "sans_source",
-     "libelle": "Valeurs de rachat/réduction faibles les 1res années ; tableau à vérifier en notice (§4.3).",
-     "notice": null,
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f",
-     "type": "points-vigilance",
-     "niveau": "sans_source",
-     "libelle": "Âge à l'adhésion 18–65 ans ; formalités médicales possibles.",
-     "notice": null,
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753",
-     "type": "points-vigilance",
-     "niveau": "sans_source",
-     "libelle": "Fiscalité datée dans la notice (2018) → vérifier la fiscalité en vigueur.",
-     "notice": null,
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0",
-     "type": "points-vigilance",
-     "niveau": "sans_source",
-     "libelle": "Assistance limitée (France/DOM/Monaco) alors que le décès est couvert mondialement.",
-     "notice": null,
-     "page": null,
-     "section": null
     }
    ]
   },
@@ -787,6 +740,7 @@
    "pct_tracable": 63,
    "repartition": {
     "complete": 29,
+    "editorial": 0,
     "incomplete": 17,
     "tableau_non_extrait": 0,
     "sans_source": 0
@@ -954,6 +908,7 @@
    "pct_tracable": 77,
    "repartition": {
     "complete": 53,
+    "editorial": 0,
     "incomplete": 16,
     "tableau_non_extrait": 0,
     "sans_source": 0
@@ -1112,6 +1067,7 @@
    "pct_tracable": 61,
    "repartition": {
     "complete": 28,
+    "editorial": 0,
     "incomplete": 18,
     "tableau_non_extrait": 0,
     "sans_source": 0
@@ -1288,6 +1244,7 @@
    "pct_tracable": 78,
    "repartition": {
     "complete": 60,
+    "editorial": 0,
     "incomplete": 17,
     "tableau_non_extrait": 0,
     "sans_source": 0

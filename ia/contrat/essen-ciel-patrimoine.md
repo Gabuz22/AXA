@@ -57,11 +57,11 @@ Capital décès aux bénéficiaires désignés. L'adhésion NE comporte PAS de g
 ## Points de vigilance (6)
 
 - NE PAS confondre avec Essen'Ciel (obsèques) : Patrimoine = transmission, cadre assurance vie, faculté de rachat. `#axa_essenciel_patrimoine_2023-09_point_vigilance_09cc2c565c43`
-- Pas de garantie en capital ≥ versements nets de frais (ce n'est pas une épargne garantie). `#axa_essenciel_patrimoine_2023-09_point_vigilance_7e9993e4030f`
-- Valeurs de rachat/réduction faibles les 1res années ; tableau à vérifier en notice (§4.3). `#axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c`
-- Âge à l'adhésion 18–65 ans ; formalités médicales possibles. `#axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f`
-- Fiscalité datée dans la notice (2018) → vérifier la fiscalité en vigueur. `#axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753`
-- Assistance limitée (France/DOM/Monaco) alors que le décès est couvert mondialement. `#axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0`
+- Pas de garantie en capital ≥ versements nets de frais (ce n'est pas une épargne garantie). [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.2, Informations essentielles (préambule, point 2)](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=2) `#axa_essenciel_patrimoine_2023-09_point_vigilance_7e9993e4030f`
+- Valeurs de rachat/réduction faibles les 1res années ; tableau à vérifier en notice (§4.3). [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.13, 4.3 Le rachat et la réduction](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=13) `#axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c`
+- Âge à l'adhésion 18–65 ans ; formalités médicales possibles. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.4, 1.4 Les conditions d'adhésion](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=4) `#axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f`
+- Fiscalité datée dans la notice (2018) → vérifier la fiscalité en vigueur. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.5, Régime fiscal — indications générales (au 1er janvier 2018)](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=5) `#axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753`
+- Assistance limitée (France/DOM/Monaco) alors que le décès est couvert mondialement. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.5, 1.6 La clause de territorialité](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=5) `#axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0`
 
 ## Notice
 

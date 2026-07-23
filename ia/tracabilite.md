@@ -12,9 +12,9 @@
 **Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
 
 
-**Global : 556 éléments, 411 pleinement traçables (74 %). 145 à vérifier.**
+**Global : 556 éléments, 416 pleinement traçables (75 %). 139 à vérifier · 1 note(s) éditoriale(s) assumée(s).**
 
-> Traçable = source pointant la **notice + la page**. « À vérifier » ne veut pas dire faux : la donnée existe mais sa localisation exacte reste à confirmer dans la notice (page imprécise, tableau non extrait, ou source à rattacher). **La notice PDF fait foi.**
+> Traçable = source pointant la **notice + la page**. « À vérifier » ne veut pas dire faux : la donnée existe mais sa localisation exacte reste à confirmer dans la notice (page imprécise, tableau non extrait, ou source à rattacher). Une **note éditoriale** est une mise en garde conseiller assumée (ex. comparaison inter-produits) : elle n'a pas de citation de notice, et ne doit pas être présentée comme un fait contractuel. **La notice PDF fait foi.**
 
 ## Vue d'ensemble
 
@@ -24,7 +24,7 @@
 | Avizen Pro | 89 | 81 % | 17 |
 | Entour'Age | 62 | 71 % | 18 |
 | Essen'Ciel (assurance obsèques) | 61 | 72 % | 17 |
-| Essen'Ciel Patrimoine | 14 | 36 % | 9 |
+| Essen'Ciel Patrimoine | 14 | 71 % | 3 |
 | Excelium (assurance vie) | 46 | 63 % | 17 |
 | Ma Protection Accident (Garantie des accidents de la vie) | 69 | 77 % | 16 |
 | Ma Retraite (plan d'épargne retraite individuel — PER) | 46 | 61 % | 18 |
@@ -114,20 +114,14 @@ Répartition : 44 pleinement traçable · 17 source connue, page imprécise.
 - **[points-vigilance]** Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, qu — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
 - _… et 3 autres (voir tracabilite.json)._
 
-## Essen'Ciel Patrimoine — 36 % traçable
+## Essen'Ciel Patrimoine — 71 % traçable
 
-Répartition : 5 pleinement traçable · 3 valeur dans un tableau non extrait · 6 aucune source rattachée.
+Répartition : 10 pleinement traçable · 1 note conseiller éditoriale · 3 valeur dans un tableau non extrait.
 
-À vérifier (9) — tableau non extrait et sans source d'abord :
+À vérifier (3) — tableau non extrait et sans source d'abord :
 - **[fiscalite]** Régime fiscal — assurance vie (transmission) — _⚠ tableau non extrait_ [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.5, 16, Régime fiscal](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=5)
 - **[options]** Faculté de rachat (total / partiel) + tableau des valeurs de rachat — _⚠ tableau non extrait_ [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.2, 14, 15, 4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=2)
 - **[options]** Mise en réduction (valeur de réduction) — _⚠ tableau non extrait_ [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.13, 14, 15, 4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=13)
-- **[points-vigilance]** NE PAS confondre avec Essen'Ciel (obsèques) : Patrimoine = transmission, cadre assurance vie, facult — _⚠ sans source_
-- **[points-vigilance]** Pas de garantie en capital ≥ versements nets de frais (ce n'est pas une épargne garantie). — _⚠ sans source_
-- **[points-vigilance]** Valeurs de rachat/réduction faibles les 1res années ; tableau à vérifier en notice (§4.3). — _⚠ sans source_
-- **[points-vigilance]** Âge à l'adhésion 18–65 ans ; formalités médicales possibles. — _⚠ sans source_
-- **[points-vigilance]** Fiscalité datée dans la notice (2018) → vérifier la fiscalité en vigueur. — _⚠ sans source_
-- **[points-vigilance]** Assistance limitée (France/DOM/Monaco) alors que le décès est couvert mondialement. — _⚠ sans source_
 
 ## Excelium (assurance vie) — 63 % traçable
 

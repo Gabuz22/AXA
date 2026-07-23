@@ -83,7 +83,7 @@
   - Condition : adhésion simultanée des deux conjoints
   - Limite : La réduction cesse si l'un rachète ou met en réduction.  _(options)_
 - NE PAS confondre avec Essen'Ciel (obsèques) : Patrimoine = transmission, cadre assurance vie, faculté de rachat. `#axa_essenciel_patrimoine_2023-09_point_vigilance_09cc2c565c43`  _(points-vigilance)_
-- Valeurs de rachat/réduction faibles les 1res années ; tableau à vérifier en notice (§4.3). `#axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c`  _(points-vigilance)_
+- Valeurs de rachat/réduction faibles les 1res années ; tableau à vérifier en notice (§4.3). [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.13, 4.3 Le rachat et la réduction](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=13) `#axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c`  _(points-vigilance)_
 
 ## Excelium (assurance vie) (16)
 

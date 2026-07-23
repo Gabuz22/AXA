@@ -3,7 +3,7 @@
   "version": "2.3.0",
   "genere_le": "2026-07-17",
   "noeuds": 692,
-  "aretes": 2217,
+  "aretes": 2222,
   "types_noeuds": [
    "article_reglementaire",
    "concept",
@@ -12703,6 +12703,11 @@
    "rel": "appartient_a"
   },
   {
+   "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_7e9993e4030f",
+   "to": "notice:2023-09-notice-d-information-essen-ciel-patrimoine-pdf",
+   "rel": "source"
+  },
+  {
    "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c",
    "to": "contrat:essen-ciel-patrimoine",
    "rel": "appartient_a"
@@ -12711,6 +12716,11 @@
    "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c",
    "to": "concept:rachat",
    "rel": "concerne"
+  },
+  {
+   "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c",
+   "to": "notice:2023-09-notice-d-information-essen-ciel-patrimoine-pdf",
+   "rel": "source"
   },
   {
    "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f",
@@ -12723,6 +12733,11 @@
    "rel": "concerne"
   },
   {
+   "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f",
+   "to": "notice:2023-09-notice-d-information-essen-ciel-patrimoine-pdf",
+   "rel": "source"
+  },
+  {
    "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753",
    "to": "contrat:essen-ciel-patrimoine",
    "rel": "appartient_a"
@@ -12733,6 +12748,11 @@
    "rel": "concerne"
   },
   {
+   "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753",
+   "to": "notice:2023-09-notice-d-information-essen-ciel-patrimoine-pdf",
+   "rel": "source"
+  },
+  {
    "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0",
    "to": "contrat:essen-ciel-patrimoine",
    "rel": "appartient_a"
@@ -12741,6 +12761,11 @@
    "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0",
    "to": "concept:deces",
    "rel": "concerne"
+  },
+  {
+   "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0",
+   "to": "notice:2023-09-notice-d-information-essen-ciel-patrimoine-pdf",
+   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_0aa645be29d8_knowledge_2075dc1b8feb",

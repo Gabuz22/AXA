@@ -10408,7 +10408,10 @@
       "label": "bon",
       "score": 88
      },
-     "source": {},
+     "source": {
+      "statut_tracabilite": "editorial",
+      "note": "Note conseiller inter-produits (Patrimoine vs Essen'Ciel obsèques) — comparaison, absente de la notice."
+     },
      "flags": {},
      "mots_cles": []
     },
@@ -10429,7 +10432,12 @@
       "label": "bon",
       "score": 88
      },
-     "source": {},
+     "source": {
+      "document_source": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 2,
+      "section": "Informations essentielles (préambule, point 2)",
+      "statut_tracabilite": "complete"
+     },
      "flags": {},
      "mots_cles": []
     },
@@ -10450,7 +10458,12 @@
       "label": "bon",
       "score": 88
      },
-     "source": {},
+     "source": {
+      "document_source": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 13,
+      "section": "4.3 Le rachat et la réduction",
+      "statut_tracabilite": "complete"
+     },
      "flags": {},
      "mots_cles": []
     },
@@ -10471,7 +10484,12 @@
       "label": "bon",
       "score": 88
      },
-     "source": {},
+     "source": {
+      "document_source": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 4,
+      "section": "1.4 Les conditions d'adhésion",
+      "statut_tracabilite": "complete"
+     },
      "flags": {},
      "mots_cles": []
     },
@@ -10492,7 +10510,12 @@
       "label": "bon",
       "score": 88
      },
-     "source": {},
+     "source": {
+      "document_source": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 5,
+      "section": "Régime fiscal — indications générales (au 1er janvier 2018)",
+      "statut_tracabilite": "complete"
+     },
      "flags": {},
      "mots_cles": []
     },
@@ -10513,7 +10536,12 @@
       "label": "bon",
       "score": 88
      },
-     "source": {},
+     "source": {
+      "document_source": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 5,
+      "section": "1.6 La clause de territorialité",
+      "statut_tracabilite": "complete"
+     },
      "flags": {},
      "mots_cles": []
     }

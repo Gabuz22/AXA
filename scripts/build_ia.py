@@ -1467,15 +1467,18 @@ def build_tracabilite():
     depth = 0
     CITEES = ["garanties", "exclusions", "definitions", "conditions", "declencheurs",
               "plafonds", "franchises", "options", "cotisations", "delais", "fiscalite", "points-vigilance", "formules"]
-    NIVEAUX = ["complete", "incomplete", "tableau_non_extrait", "sans_source"]
+    NIVEAUX = ["complete", "editorial", "incomplete", "tableau_non_extrait", "sans_source"]
     LBL = {"complete": "pleinement traçable (notice + page)",
+           "editorial": "note conseiller éditoriale (assumée, pas une citation de notice)",
            "incomplete": "source connue, page imprécise — à vérifier notice",
            "tableau_non_extrait": "valeur dans un tableau non extrait — à lire dans la notice",
            "sans_source": "aucune source rattachée — à vérifier"}
+    A_VERIFIER = ("incomplete", "tableau_non_extrait", "sans_source")   # editorial et complete n'y sont pas
 
     def niveau(src):
+        st = (src or {}).get("statut_tracabilite")
+        if st == "editorial": return "editorial"          # note assumée : rien à vérifier en notice
         if not src or not src.get("document_source"): return "sans_source"
-        st = src.get("statut_tracabilite")
         if st == "tableau_non_extrait": return "tableau_non_extrait"
         if st == "incomplete": return "incomplete"
         if st == "complete": return "complete"
@@ -1489,7 +1492,7 @@ def build_tracabilite():
             if cs not in par: continue
             lv = niveau(e.get("src"))
             slot = par[cs]; slot["tot"] += 1; slot["cnt"][lv] += 1
-            if lv != "complete":
+            if lv in A_VERIFIER:
                 s = e.get("src") or {}
                 slot["a_verifier"].append({"id": e["id"], "type": cat, "niveau": lv,
                     "libelle": (e.get("titre") or e.get("texte") or "")[:100],
@@ -1503,15 +1506,16 @@ def build_tracabilite():
 
     g_tot = sum(s["tot"] for s in par.values())
     g_complete = sum(s["cnt"]["complete"] for s in par.values())
+    g_editorial = sum(s["cnt"]["editorial"] for s in par.values())
     g_pct = round(100 * g_complete / g_tot) if g_tot else 0
-    g_verifier = g_tot - g_complete
+    g_verifier = sum(len(s["a_verifier"]) for s in par.values())
 
     # -------- JSON machine (l'outil : « que dois-je vérifier dans le contrat X ? ») --------
     data = {
         "meta": {"version": VERSION, "genere_le": DATE,
                  "usage": "Contrôle niveau inspecteur : quels éléments d'un contrat ne sont pas pleinement traçables et doivent être vérifiés à la notice avant d'être cités à un client.",
                  "niveaux": LBL},
-        "global": {"elements": g_tot, "pleinement_tracables": g_complete, "pct": g_pct, "a_verifier": g_verifier},
+        "global": {"elements": g_tot, "pleinement_tracables": g_complete, "pct": g_pct, "a_verifier": g_verifier, "notes_editoriales": g_editorial},
         "contrats": [{
             "contrat": s["nom"], "slug": cs, "elements": s["tot"], "pct_tracable": s["pct"],
             "repartition": s["cnt"], "a_verifier": s["a_verifier"],
@@ -1523,18 +1527,19 @@ def build_tracabilite():
     md = [md_hdr("Audit de traçabilité par contrat",
                  "Quelle part de chaque contrat est pleinement localisable (notice + page), et LA LISTE de ce qui ne l'est pas. "
                  "Un fait non traçable ne se cite jamais à un client sans vérification.")]
-    md += ["", "**Global : %d éléments, %d pleinement traçables (%d %%). %d à vérifier.**" % (g_tot, g_complete, g_pct, g_verifier), "",
+    md += ["", "**Global : %d éléments, %d pleinement traçables (%d %%). %d à vérifier · %d note(s) éditoriale(s) assumée(s).**" % (g_tot, g_complete, g_pct, g_verifier, g_editorial), "",
            "> Traçable = source pointant la **notice + la page**. « À vérifier » ne veut pas dire faux : la donnée existe "
            "mais sa localisation exacte reste à confirmer dans la notice (page imprécise, tableau non extrait, ou source à rattacher). "
-           "**La notice PDF fait foi.**", ""]
+           "Une **note éditoriale** est une mise en garde conseiller assumée (ex. comparaison inter-produits) : elle n'a pas de citation "
+           "de notice, et ne doit pas être présentée comme un fait contractuel. **La notice PDF fait foi.**", ""]
     hb = ['<h1>Audit de traçabilité par contrat</h1>',
-          '<p><strong>Global : %d éléments, %d pleinement traçables (%d%%). %d à vérifier.</strong></p>' % (g_tot, g_complete, g_pct, g_verifier),
+          '<p><strong>Global : %d éléments, %d pleinement traçables (%d%%). %d à vérifier · %d note(s) éditoriale(s).</strong></p>' % (g_tot, g_complete, g_pct, g_verifier, g_editorial),
           '<p><em>Traçable = source pointant la notice + la page. « À vérifier » ne veut pas dire faux : la localisation '
-          'exacte reste à confirmer (page imprécise, tableau non extrait, source à rattacher). La notice PDF fait foi.</em></p>',
+          'exacte reste à confirmer. Une note éditoriale est une mise en garde conseiller assumée (sans citation de notice), à ne pas citer comme un fait contractuel. La notice PDF fait foi.</em></p>',
           '<table><thead><tr><th>Contrat</th><th>Éléments</th><th>Traçables</th><th>À vérifier</th></tr></thead><tbody>']
     md += ["## Vue d'ensemble", "", "| Contrat | Éléments | Traçables | À vérifier |", "|---|---|---|---|"]
     for cs, s in par.items():
-        av = s["tot"] - s["cnt"]["complete"]
+        av = len(s["a_verifier"])
         md.append("| %s | %d | %d %% | %d |" % (s["nom"], s["tot"], s["pct"], av))
         hb.append('<tr><td><a href="contrat/%s.html">%s</a></td><td>%d</td><td>%d%%</td><td>%d</td></tr>' % (cs, html.escape(s["nom"]), s["tot"], s["pct"], av))
     hb.append("</tbody></table>")

@@ -137,7 +137,7 @@
 - **Réduction tarifaire couple (-10 %)** — Adhésion simultanée de l'adhérent et de son conjoint (marié/PACS/concubin) : -10 % permanent sur l'ensemble des cotisations. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.13, 4.1](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=13) `#axa_essenciel_patrimoine_2023-09_option_133833a39642`
   - Condition : adhésion simultanée des deux conjoints
   - Limite : La réduction cesse si l'un rachète ou met en réduction.  _(options)_
-- Âge à l'adhésion 18–65 ans ; formalités médicales possibles. `#axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f`  _(points-vigilance)_
+- Âge à l'adhésion 18–65 ans ; formalités médicales possibles. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.4, 1.4 Les conditions d'adhésion](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=4) `#axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f`  _(points-vigilance)_
 
 ## Excelium (assurance vie) (11)
 

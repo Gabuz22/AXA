@@ -183,7 +183,7 @@
   - Limite : Délai de carence suicide : 1re année. Vérifier la liste complète des exclusions en notice §2.4 (p.6).  _(exclusions)_
 - **Prestations d'assistance (suite au décès)** — Prestations d'assistance fournies par AXA Assistance (suite au décès de l'assuré). [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.7, 9, 10, 3.x](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=7) `#axa_essenciel_patrimoine_2023-09_option_1c3ca5ad4e41`
   - Limite : Territorialité assistance limitée (voir territorialité).  _(options)_
-- Assistance limitée (France/DOM/Monaco) alors que le décès est couvert mondialement. `#axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0`  _(points-vigilance)_
+- Assistance limitée (France/DOM/Monaco) alors que le décès est couvert mondialement. [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.5, 1.6 La clause de territorialité](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=5) `#axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0`  _(points-vigilance)_
 
 ## Excelium (assurance vie) (10)
 
