@@ -15,8 +15,9 @@ const FALLBACK_MANIFEST = {
     contrats_resume_humain: { path: "vue_humaine/axa_contrats_resume_humain.json" },
     contrats_index: { path: "contrats/contrats_index.json" },
     pdf_index: { path: "ia/axa_pdf_index.json" },
+    fiches_conseiller: { path: "derived/fiches_conseiller.json" },
+    scoring_preselection: { path: "ia/axa_scoring_recherche_personnalisee.json" },
   },
-  formulaires_pages: [],
 };
 
 let _manifest = null;

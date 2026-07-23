@@ -9,6 +9,7 @@ import { renderMarkdown } from "../services/markdown.js";
 import { TUTORIEL, FAMILLE_META, ERREURS_TRANSVERSES, OBJECTIFS } from "./axa_content.js";
 import { prospection } from "./prospection.js";
 import { calculs } from "./calculs.js";
+import { preselection } from "../services/axaPreselection.js";
 
 // Sections réellement implémentées (garde-fou anti-lien-mort : un parcours ne s'affiche
 // que si sa cible existe). RDV/animateur s'activent automatiquement à leur implémentation.
@@ -1085,6 +1086,27 @@ const POURQUOI_RANG = {
   retraite_revenu: "se construit tôt, mais après la protection du présent",
   epargne_transmission: "on épargne une fois le socle de protection en place",
 };
+// Passerelle entre les risques de la matrice métier (produit) et les besoins canoniques du barème
+// de présélection (ia/axa_scoring_recherche_personnalisee.json). Les deux vocabulaires sont
+// utilisés ENSEMBLE : mots-clés du barème ∪ mots-clés de la matrice. `null` = pas d'équivalent
+// canonique (accident de la vie privée, dépendance) → seuls les mots-clés de la matrice comptent.
+const RISQUE_BESOIN = {
+  emprunt: "assurance_emprunteur",
+  deces_protection_famille: "proteger_famille",
+  arret_travail_itt: "arret_travail",
+  invalidite: "invalidite",
+  accident_vie_privee: null,
+  education_enfants: "proteger_famille",
+  dependance: null,
+  obseques: "obseques_rapatriement",
+  retraite_revenu: "retraite",
+  epargne_transmission: "transmission",
+};
+// L'importance d'un besoin se déduit de son rang de priorité et de son statut épistémique :
+// un besoin DÉCLARÉ par le client pèse plus qu'une HYPOTHÈSE déduite de son profil.
+const POIDS_STATUT = { declare: 1, deduit: 0.85, hypothese: 0.7 };
+const importanceDe = (rang, statut) => Math.round(Math.max(30, 100 - 8 * rang) * (POIDS_STATUT[statut] ?? 0.7));
+
 async function besoins(body) {
   const resume = await kb.source("contrats_resume_humain");
   const contrats = resume?.contrats || [];
@@ -1103,7 +1125,9 @@ async function besoins(body) {
   const COLLECTIF_COUVRE = new Set(["deces_protection_famille", "arret_travail_itt", "invalidite"]);
 
   // État du cas — local à l'écran, jamais stocké.
-  const cas = { statut: "", fam: "", age: "", credit: false, collectif: false, evts: new Set(), besoins: new Set(), existants: new Set() };
+  const cas = { statut: "", fam: "", age: "", budget: "", credit: false, collectif: false, evts: new Set(), besoins: new Set(), existants: new Set() };
+  // Dernière présélection calculée (asynchrone) — reprise par la synthèse copiable.
+  let presel = null, preselJeton = 0;
 
   body.innerHTML = `
     <p class="lead">Pars de la <b>situation réelle</b> : coche ce que tu sais, le diagnostic se construit au fur et à mesure —
@@ -1118,6 +1142,7 @@ async function besoins(body) {
       <div class="filters" style="margin:8px 0 0">
         <label class="inline"><input type="checkbox" id="cc_credit"> crédit en cours</label>
         <label class="inline"><input type="checkbox" id="cc_collectif"> couverture collective employeur</label>
+        <label class="inline" style="margin-left:10px">budget <input id="cc_budget" type="number" min="0" step="5" placeholder="€/mois" style="width:88px;margin:0 6px"> <span class="muted">optionnel</span></label>
       </div>
       <div class="ess-h" style="margin:12px 0 4px">Événements récents ou à venir</div>
       <div class="filters" id="cc_evts">${Object.keys(EVTS).map(k => `<button class="chip" data-evt="${k}">${esc(EVT_LABELS[k] || k)}</button>`).join("")}</div>
@@ -1177,6 +1202,95 @@ async function besoins(body) {
     return [...actifs.keys()].sort((x, y) => score(x) - score(y));
   };
 
+  /* ---------- ② Présélection classée (barème contractuel migré du cockpit) ----------
+     Le diagnostic ① reste synchrone et instantané ; la présélection se pose dès que les
+     conditions de souscription sourcées sont lues. Elle ne remplace pas le raisonnement du
+     conseiller : elle CLASSE les candidats de la matrice avec un motif vérifiable pour chacun,
+     et n'en fait jamais disparaître un sans dire pourquoi. */
+  const badgeElig = e => e.statut === "probable" ? `<span class="pill integrated">âge : compatible</span>`
+    : e.statut === "exclue" ? `<span class="pill pending">âge hors plage d'adhésion</span>`
+    : e.statut === "incertaine" ? `<span class="pill pending">âge : réserve à lever</span>`
+    : `<span class="pill">âge : non documenté</span>`;
+  const badgeBudget = b => !b.estimation ? `<span class="pill">${esc(b.statut)}</span>`
+    : `<span class="pill${/au-dessus/.test(b.statut) ? " pending" : ""}">${esc(b.statut)} — à partir de ${esc(String(b.estimation.valeur).replace(".", ","))} €/mois</span>`;
+  // L'estimation de prix vient d'une phrase de notice : elle est affichée avec, jamais seule.
+  const citationPrix = b => !b.estimation ? "" : `<p class="fitem-x"><span class="fitem-xl">Ordre de grandeur</span> « ${esc(b.estimation.phrase)} » — ${esc(b.estimation.source.document_source || "notice")}${b.estimation.source.page ? ", p. " + esc(b.estimation.source.page) : ""}. Non contractuel : le tarificateur fait foi.</p>`;
+  const citation = p => `<p class="fitem-x"><span class="fitem-xl">Source</span> « ${esc(p.phrase)} » — ${esc(p.doc || "notice")}${p.page ? ", p. " + esc(p.page) : ""}${p.section ? " · " + esc(p.section) : ""}</p>`;
+  // Besoins que ce contrat n'adresse pas du tout (à distinguer de ceux qu'il annonce sans les documenter).
+  const nonAdresses = r => r.besoins.detail.filter(d => !d.rattache).map(d => d.libelle);
+
+  function carteContrat(r, rang, trous) {
+    // « Répond à » : les besoins actifs que la matrice métier rattache à ce contrat (le POURQUOI
+    // du classement reste le besoin du client, pas le score).
+    const pour = [...trous, ...ordreCourant.filter(id => !trous.includes(id))]
+      .filter(id => couvrent(id).some(n => cleNom(n) === r.cle));
+    const q = pour.length ? (RISQUES[pour[0]].questions || [])[0] : null;
+    const axes = `éligibilité ${r.eligibilite.score} · besoins ${Math.round(r.besoins.scoreCouverture)} · importance ${Math.round(r.besoins.scoreImportance)} · budget ${r.budget.score} · confiance ${r.confiance}`;
+    return `<div class="fitem">
+      <div class="fitem-t">${rang}. ${esc(court(r.nom))} <span class="pill integrated">score ${esc(String(r.score).replace(".", ","))}/100</span> ${badgeElig(r.eligibilite)} ${badgeBudget(r.budget)}</div>
+      ${pour.length ? `<p class="fitem-x"><span class="fitem-xl">Répond à</span> ${esc(pour.map(shortR).join(" · "))}</p>` : ""}
+      ${r.eligibilite.preuves.slice(0, 1).map(citation).join("")}
+      ${citationPrix(r.budget)}
+      ${q ? `<p class="fitem-x"><span class="fitem-xl">À demander d'abord</span> ${esc(q)}</p>` : ""}
+      <p class="fitem-x"><span class="fitem-xl">Décomposition</span> ${esc(axes)}</p>
+      ${r.besoins.annonces.length ? `<p class="fitem-x"><span class="fitem-xl">À creuser</span> ${esc(r.besoins.annonces.join(", "))} — la matrice rattache ce besoin au contrat, mais aucune source chargée ne le documente : à vérifier à la notice.</p>` : ""}
+      ${nonAdresses(r).length ? `<p class="fitem-x"><span class="fitem-xl">N'adresse pas</span> ${esc(nonAdresses(r).join(", "))}</p>` : ""}
+      <div class="btns" style="margin:6px 0 0"><a class="btn ghost" href="#/contrat/${esc(r.cle)}">📑 Ouvrir la fiche sourcée</a></div>
+    </div>`;
+  }
+
+  function rendrePresel(res, trous) {
+    if (!res.classes.length) {
+      return `<p class="muted">Aucun contrat de la base ne dépasse le seuil de ${res.seuil}/100 pour ce cas.
+        ${res.ecartes.length ? `Voir ci-dessous pourquoi les ${res.ecartes.length} contrats examinés ont été écartés.` : ""}</p>
+        ${blocEcartes(res)}`;
+    }
+    const sansCandidat = trous.filter(id => !couvrent(id).length);
+    return `<p class="muted" style="margin-top:0">${res.classes.length} contrat(s) sur ${res.total} examiné(s), classés par le barème contractuel
+      (éligibilité 25 % · besoins couverts 30 % · importance des besoins 20 % · budget 15 % · confiance documentaire 10 %).
+      ${res.remunerationExclue ? "<b>La rémunération conseiller n'entre pas dans le calcul.</b>" : ""}</p>
+      ${res.classes.map((r, i) => carteContrat(r, i + 1, trous)).join("")}
+      ${sansCandidat.length ? `<div class="fitem"><div class="fitem-t">Sans candidat dans la base</div>
+        <p class="fitem-b muted">${esc(sansCandidat.map(shortR).join(" · "))} — aucun contrat de la base ne couvre ce besoin : voir l'offre hors périmètre.</p></div>` : ""}
+      ${blocEcartes(res)}`;
+  }
+
+  const blocEcartes = res => !res.ecartes.length ? "" : `<details class="acc" style="margin-top:10px">
+    <summary>👁 Les ${res.ecartes.length} contrats écartés, et pourquoi <span class="muted">— rien n'est masqué en silence</span></summary>
+    ${res.ecartes.map(r => `<div class="fitem" style="margin:8px 0"><div class="fitem-t">${esc(court(r.nom))} <span class="pill pending">${esc(r.motif)}</span></div>
+      ${r.eligibilite.preuves.slice(0, 1).map(citation).join("")}
+      <div class="btns" style="margin:6px 0 0"><a class="btn ghost" href="#/contrat/${esc(r.cle)}">📑 Vérifier au contrat</a></div></div>`).join("")}
+    <p class="muted" style="margin:8px 0 0">Une limite d'âge lue dans une notice peut ne viser qu'une garantie ou une option : la notice PDF fait foi.</p></details>`;
+
+  let ordreCourant = [];
+  async function peindrePresel(ordre, actifs, trous) {
+    const jeton = ++preselJeton;
+    const zone = body.querySelector("#cc_presel");
+    if (!zone) return;
+    const criteres = {
+      age: cas.age === "" ? null : Number(cas.age),
+      budget_mensuel: cas.budget === "" ? null : Number(cas.budget),
+      besoins: ordre.map((id, i) => ({
+        id, libelle: shortR(id), importance: importanceDe(i, actifs.get(id).statut),
+        besoin_canonique: RISQUE_BESOIN[id] ?? null, mots_cles: RISQUES[id]?.mots_cles || [],
+        contrats: couvrent(id),   // la matrice métier tranche ce que les mots-clés se contentent d'orienter
+      })),
+      existants: [...cas.existants],
+    };
+    let res;
+    try { res = await preselection(criteres); }
+    catch (e) {
+      if (jeton === preselJeton) zone.innerHTML = `<p class="warn">Présélection indisponible (${esc(e.message)}) — les fiches contrat restent complètes.</p>`;
+      return;
+    }
+    if (jeton !== preselJeton || !body.querySelector("#cc_presel")) return;   // un changement plus récent a relancé le calcul
+    presel = res;
+    body.querySelector("#cc_presel").innerHTML = rendrePresel(res, trous);
+    // Le RDV se prépare sur le contrat le mieux classé, pas sur le premier venu de la matrice.
+    const btn = body.querySelector("#cc_rdv");
+    if (btn && res.classes[0]) { btn.dataset.contrat = res.classes[0].nom; btn.textContent = `🗓 Préparer le RDV (${court(res.classes[0].nom)})`; }
+  }
+
   function paint() {
     const out = body.querySelector("#cc_out");
     const flags = flagsDe();
@@ -1206,13 +1320,6 @@ async function besoins(body) {
     // ② Contrats à examiner pour les trous (candidats de la matrice, hors existants).
     const trous = ordre.filter(id => !couvertsPar(id).length && !(cas.collectif && COLLECTIF_COUVRE.has(id))).slice(0, 4);
     const candOf = id => couvrent(id).filter(n => !exNoms.some(x => cleNom(x) === cleNom(n)));
-    const candBloc = trous.map(id => {
-      const cands = candOf(id);
-      if (!cands.length) return `<div class="fitem"><div class="fitem-t">${esc(shortR(id))}</div><p class="fitem-b muted">Aucun contrat de la base ne couvre ce besoin — voir l'offre hors périmètre.</p></div>`;
-      const links = cands.map(n => `<a class="btn ghost" href="#/contrat/${cleNom(n)}">📑 ${esc(court(n))}</a>`).join("");
-      return `<div class="fitem"><div class="fitem-t">${esc(shortR(id))}</div><div class="btns" style="margin:6px 0 0">${links}</div>
-        ${(RISQUES[id].questions || [])[0] ? `<p class="fitem-x"><span class="fitem-xl">À demander d'abord</span> ${esc(RISQUES[id].questions[0])}</p>` : ""}</div>`;
-    }).join("");
 
     // ③ Retours d'expérience applicables (bibliothèque, filtrés par sous-ensemble de flags).
     const lecons = [];
@@ -1243,7 +1350,16 @@ async function besoins(body) {
         const etat = cvts.length >= 2 ? "doublon possible (" + cvts.join(" + ") + ")" : cvts.length === 1 ? "couvert par " + cvts[0] + " — à vérifier" : (cas.collectif && COLLECTIF_COUVRE.has(id)) ? "peut-être couvert par le collectif" : "non couvert (trou potentiel)";
         L.push(`${i + 1}. ${shortR(id)} [${a.statut}] — ${etat}`);
       });
-      if (trous.length) { L.push("", "CONTRATS À EXAMINER :"); trous.forEach(id => { const cands = candOf(id); if (cands.length) L.push(`- ${shortR(id)} : ${cands.join(" ou ")}`); }); }
+      if (presel?.classes?.length) {
+        L.push("", `PRÉSÉLECTION CLASSÉE (barème contractuel, seuil ${presel.seuil}/100 — rémunération exclue du calcul) :`);
+        presel.classes.forEach((r, i) => {
+          L.push(`${i + 1}. ${court(r.nom)} — score ${String(r.score).replace(".", ",")}/100 · ${r.eligibilite.statut === "probable" ? "âge compatible" : "âge : " + r.eligibilite.statut} · ${r.budget.statut}`);
+          if (r.besoins.absents.length) L.push(`   non couvert par ce contrat : ${r.besoins.absents.join(", ")}`);
+        });
+        if (presel.ecartes.length) L.push("", "ÉCARTÉS : " + presel.ecartes.map(r => `${court(r.nom)} (${r.motif})`).join(" · "));
+      } else if (trous.length) {
+        L.push("", "CONTRATS À EXAMINER :"); trous.forEach(id => { const cands = candOf(id); if (cands.length) L.push(`- ${shortR(id)} : ${cands.join(" ou ")}`); });
+      }
       if (manquent.length) { L.push("", "À CLARIFIER :"); manquent.forEach(x => L.push("- " + x)); }
       L.push("", "RÈGLE : hypothèse ≠ fait ; le conseiller décide ; la notice PDF fait foi. Aide IA à valider — jamais une recommandation automatique.");
       return L.join("\n");
@@ -1255,7 +1371,8 @@ async function besoins(body) {
         <span class="pill">déduit</span> = découle d'un fait (événement, crédit) ·
         <span class="pill pending">hypothèse</span> = suggéré par le profil, à confirmer</p>
       ${lignes}
-      ${candBloc ? `<h3 class="day-h">② Contrats à examiner pour les trous</h3>${candBloc}` : ""}
+      <h3 class="day-h">② Contrats à examiner — présélection classée ${IA_TAG}</h3>
+      <div id="cc_presel"><p class="muted">Calcul de la présélection…</p></div>
       ${expBloc}
       ${manquent.length ? `<h3 class="day-h">③ Ce qui affinerait le diagnostic</h3>${bullets(manquent)}` : ""}
       <h3 class="day-h">④ Et maintenant</h3>
@@ -1267,8 +1384,11 @@ async function besoins(body) {
       <div class="warnbox">⚖️ Aide au raisonnement (matrice métier IA, étiquetée, à valider) — <b>pas une recommandation</b>.
       Le conseiller décide ; garanties, exclusions et conditions se vérifient dans la fiche et la notice PDF.</div>`;
     bindCopy(out.querySelector("#cc_copy"), synthese, "✓ Synthèse copiée");
-    out.querySelector("#cc_rdv")?.addEventListener("click", () => { set({ axaRdvPrefill: cand1 || exNoms[0] || "", axaRdvCase: synthese() }); location.hash = "#/rdv"; });
+    const btnRdv = out.querySelector("#cc_rdv");
+    btnRdv?.addEventListener("click", () => { set({ axaRdvPrefill: btnRdv.dataset.contrat || cand1 || exNoms[0] || "", axaRdvCase: synthese() }); location.hash = "#/rdv"; });
     out.querySelector("#cc_cop")?.addEventListener("click", () => { set({ axaQuery: `${court(cand1)} ${shortR(trous[0])} ` }); location.hash = "#/copilote"; });
+    ordreCourant = ordre;
+    peindrePresel(ordre, actifs, trous);
   }
 
   // Câblage : chaque changement re-diagnostique (divulgation progressive).
@@ -1276,6 +1396,7 @@ async function besoins(body) {
   $("#cc_statut").onchange = e => { cas.statut = e.target.value; paint(); };
   $("#cc_fam").onchange = e => { cas.fam = e.target.value; paint(); };
   $("#cc_age").oninput = e => { cas.age = e.target.value; paint(); };
+  $("#cc_budget").oninput = e => { cas.budget = e.target.value; paint(); };
   $("#cc_credit").onchange = e => { cas.credit = e.target.checked; paint(); };
   $("#cc_collectif").onchange = e => { cas.collectif = e.target.checked; paint(); };
   const toggleChip = (setRef, key, el) => { setRef.has(key) ? setRef.delete(key) : setRef.add(key); el.classList.toggle("on"); paint(); };
@@ -1283,9 +1404,9 @@ async function besoins(body) {
   $("#cc_bes").addEventListener("click", e => { const b = e.target.closest("[data-bes]"); if (b) toggleChip(cas.besoins, b.dataset.bes, b); });
   $("#cc_ex").addEventListener("click", e => { const b = e.target.closest("[data-ex]"); if (b) toggleChip(cas.existants, b.dataset.ex, b); });
   const applique = patch => {
-    Object.assign(cas, { statut: "", fam: "", age: "", credit: false, collectif: false }, patch);
+    Object.assign(cas, { statut: "", fam: "", age: "", budget: "", credit: false, collectif: false }, patch);
     cas.evts = new Set(patch.evts || []); cas.besoins = new Set(patch.besoins || []); cas.existants = new Set(patch.existants || []);
-    $("#cc_statut").value = cas.statut; $("#cc_fam").value = cas.fam; $("#cc_age").value = cas.age;
+    $("#cc_statut").value = cas.statut; $("#cc_fam").value = cas.fam; $("#cc_age").value = cas.age; $("#cc_budget").value = cas.budget;
     $("#cc_credit").checked = cas.credit; $("#cc_collectif").checked = cas.collectif;
     body.querySelectorAll("#cc_evts .chip, #cc_bes .chip, #cc_ex .chip").forEach(ch =>
       ch.classList.toggle("on", cas.evts.has(ch.dataset.evt) || cas.besoins.has(ch.dataset.bes) || cas.existants.has(ch.dataset.ex)));

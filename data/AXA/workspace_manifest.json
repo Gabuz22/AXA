@@ -19,17 +19,12 @@
     "pdf_index": { "path": "ia/axa_pdf_index.json", "description": "Index des PDF contractuels (notices, CG)" },
     "formules": { "path": "ia/axa_formules_index.json", "description": "Index des formules et calculs contractuels" },
     "moteur_recommandation": { "path": "ia/axa_moteur_recommandation.json", "description": "Matrice de raisonnement besoins → dimensions de contrats" },
+    "scoring_preselection": { "path": "ia/axa_scoring_recherche_personnalisee.json", "description": "Barème de présélection contractuelle : pondérations, seuils, mots-clés de besoins (rémunération exclue du calcul)" },
     "formulaires_schema": { "path": "ia/axa_formulaires_schema.json", "description": "Schémas des formulaires client" },
     "knowledge_graph": { "path": "ia/axa_knowledge_graph.json", "description": "Graphe de connaissances (relations entre faits)" },
     "prompt_conseiller": { "path": "00_PACKAGE_ACTIF/PROMPT_CONSEILLER_AXA_FINAL.md", "format": "markdown", "description": "Mode d'emploi IA : prompt conseiller officiel" }
   },
   "pdf_path_rewrites": [
     { "from": "data/AXA/", "to": "data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/", "note": "L'index PDF référence l'ancienne arborescence plate ; les PDF vivent dans le package actif." }
-  ],
-  "formulaires_pages": [
-    { "label": "Formulaire rapide", "path": "pages/axa/formulaire_rapide.html" },
-    { "label": "Formulaire essentiel", "path": "pages/axa/formulaire_essentiel.html" },
-    { "label": "Formulaire complet", "path": "pages/axa/formulaire_complet.html" },
-    { "label": "Recherche personnalisée", "path": "pages/axa/recherche_personnalisee.html" }
   ]
 }
