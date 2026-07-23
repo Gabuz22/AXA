@@ -55,6 +55,11 @@
    "maturite",
    "qualite-routage"
   ],
+  "que_verifier_avant_de_citer": [
+   "tracabilite",
+   "preuves",
+   "hierarchie"
+  ],
   "hausser_la_rigueur_conseiller_ou_inspecteur": [
    "niveaux-competence",
    "instructions-maitres"

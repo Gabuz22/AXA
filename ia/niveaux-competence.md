@@ -46,7 +46,7 @@ Auto-contrôle du niveau conseiller :
 Ajoute la **rigueur de contrôle**. L'inspecteur ne se contente pas d'une réponse juste : il la **met à l'épreuve**.
 - **Cohérence inter-contrats** : quand plusieurs contrats traitent le même concept, comparer et **signaler les divergences** (une carence de 3 mois ici, 12 là) : [divergences](divergences.html) (écarts chiffrés déjà repérés) · [comparateur](comparateur.html) · [matrices](matrices.html).
 - **Exhaustivité vérifiée** : pour la garantie citée, s'assurer qu'**aucune** exclusion / condition / plafond / franchise / point de vigilance n'est omis : [points de vigilance](points-vigilance.html).
-- **Traçabilité auditée** : chaque fait porte notice + page ; une source incomplète ou un tableau non extrait se **dit**, jamais présenté comme certain.
+- **Traçabilité auditée** : chaque fait porte notice + page ; une source incomplète ou un tableau non extrait se **dit**, jamais présenté comme certain : [audit de traçabilité](tracabilite.html) (par contrat, déjà chiffré).
 - **Frontière réglementaire tenue** : tout chiffre de barème / plafond fiscal → **source officielle datée** et marquée « évolutif », jamais transformé en donnée contractuelle : [réglementation](reglementation.html) · [sources officielles](sources-officielles.html).
 - **Angles morts** : signaler ce que la notice ne tranche pas et les cas limites : [points de vigilance](points-vigilance.html) · [couverture](couverture.html).
 - **Escalade** : nommer ce qui doit remonter à une validation humaine (ci-dessous).

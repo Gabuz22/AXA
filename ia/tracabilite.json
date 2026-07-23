@@ -1,0 +1,1452 @@
+{
+ "meta": {
+  "version": "2.3.0",
+  "genere_le": "2026-07-17",
+  "usage": "Contrôle niveau inspecteur : quels éléments d'un contrat ne sont pas pleinement traçables et doivent être vérifiés à la notice avant d'être cités à un client.",
+  "niveaux": {
+   "complete": "pleinement traçable (notice + page)",
+   "incomplete": "source connue, page imprécise — à vérifier notice",
+   "tableau_non_extrait": "valeur dans un tableau non extrait — à lire dans la notice",
+   "sans_source": "aucune source rattachée — à vérifier"
+  }
+ },
+ "global": {
+  "elements": 556,
+  "pleinement_tracables": 411,
+  "pct": 74,
+  "a_verifier": 145
+ },
+ "contrats": [
+  {
+   "contrat": "Avizen",
+   "slug": "avizen",
+   "elements": 92,
+   "pct_tracable": 83,
+   "repartition": {
+    "complete": 76,
+    "incomplete": 16,
+    "tableau_non_extrait": 0,
+    "sans_source": 0
+   },
+   "a_verifier": [
+    {
+     "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_2ca4d97bb9ae_knowledge_6ed9ced498a7",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "tableaux",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "frais",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_7f531ad19cd0_knowledge_0d72b99a5472",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "exemples_chiffrés",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_abc3375d4853_knowledge_811b06665e8e",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "mode_calcul",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "réductions",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "fiscalité",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "determination_part_taxable",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "conditions_de_rachat",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_906eb3ee9913_knowledge_306ed551c6e9",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "valeurs_de_rachat",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_d15d09b28f2a_knowledge_f7005bf2d30b",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "mise_en_reduction",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_0fe3eed1b758_knowledge_70e30390986f",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de ",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_35a954074956_knowledge_5c564f1268c0",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au m",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_4be05876c398_knowledge_c48f67d5f295",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique ",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_7bce30284464_knowledge_2cd764868136",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille,",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_7fcd9a720eb6_knowledge_0576f001d0e2",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au cert",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_2025_04_points_de_vigilance_cc15c2c82089_knowledge_a0dae9627c20",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie.",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": null,
+     "section": null
+    }
+   ]
+  },
+  {
+   "contrat": "Avizen Pro",
+   "slug": "avizen-pro",
+   "elements": 89,
+   "pct_tracable": 81,
+   "repartition": {
+    "complete": 72,
+    "incomplete": 17,
+    "tableau_non_extrait": 0,
+    "sans_source": 0
+   },
+   "a_verifier": [
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "tableaux",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "exemples_chiffrés",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_819a475f3f85_knowledge_f28130b0ac7c",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "mode_calcul",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "frais",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "réductions",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2b1334381d5d_knowledge_1ed566556524",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "conditions_de_rachat",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_43a1be7843ad_knowledge_c5adf18d1814",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "mise_en_reduction",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_98ed4e335a5b_knowledge_6bb9408ea279",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "valeurs_de_rachat",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_a9a1ff6e4623_knowledge_b16b93a33ab5",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "fiscalité",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_b51bc4461cfc_knowledge_3e9616ceeed6",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "determination_part_taxable",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_0b64a692c15f_knowledge_f543fa5ba4e4",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justifi",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_26fde9bd19a5_knowledge_77e0f0881c3c",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3)",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une ",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_b3c4d3f2b5e8_knowledge_7db2ae0bff95",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_bb01f772b8f5_knowledge_b348f1b96a11",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Aucun montant garanti dans la notice — tout est au certificat d'adhésion.",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_d3e550a93ef8_knowledge_9310380f9152",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestatio",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_f99ef92bee2b_knowledge_314b37ae71ff",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sa",
+     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+     "page": null,
+     "section": null
+    }
+   ]
+  },
+  {
+   "contrat": "Entour'Age",
+   "slug": "entour-age",
+   "elements": 62,
+   "pct_tracable": 71,
+   "repartition": {
+    "complete": 44,
+    "incomplete": 18,
+    "tableau_non_extrait": 0,
+    "sans_source": 0
+   },
+   "a_verifier": [
+    {
+     "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "tableaux",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "mode_calcul",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b71f718b3818_knowledge_2ceb18ba5d21",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "frais",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_bda7c72e6e68_knowledge_c08c819e085e",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "exemples_chiffrés",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_df0f22fdd097_knowledge_21a4375ed5e3",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "réductions",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "determination_part_taxable",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "fiscalité",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_6e3dedbb6c6b_knowledge_e47bdf2e7075",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "valeurs_de_rachat",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_933bb6edae6e_knowledge_55a3c4fbd645",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "mise_en_reduction",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "conditions_de_rachat",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_16c84e8a15cc_knowledge_00dcf84ccfed",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_39e9899bad5a_knowledge_38c24a8b1762",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_6a2656a952a6_knowledge_d8ab8642609e",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_6f230082ba39_knowledge_79617a24203d",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_8eb68cebc424_knowledge_c2ef0572d645",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheime",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_acdb551cb108_knowledge_8417d05b72d9",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "La mise en réduction met fin aux prestations d'assistance.",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_e441d358bb4c_knowledge_b70fb02a5650",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans ",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": null,
+     "section": null
+    }
+   ]
+  },
+  {
+   "contrat": "Essen'Ciel (assurance obsèques)",
+   "slug": "essen-ciel-assurance-obseques",
+   "elements": 61,
+   "pct_tracable": 72,
+   "repartition": {
+    "complete": 44,
+    "incomplete": 17,
+    "tableau_non_extrait": 0,
+    "sans_source": 0
+   },
+   "a_verifier": [
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0d109ff2f1ce_knowledge_b64c3388e76a",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "réductions",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "frais",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d352dd9df6b0_knowledge_a18b90c925a0",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "exemples_chiffrés",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d54c486f45e6_knowledge_9b690d586091",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "tableaux",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d5f8f13b0b5c_knowledge_a95f12312a57",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "mode_calcul",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_10b11fed39d8_knowledge_81a9d27bb02d",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "valeurs_de_rachat",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_622c88ea9f4b_knowledge_9e5bc789bca2",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "conditions_de_rachat",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_6b52755aa9bc_knowledge_bf8cc347b759",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "fiscalité",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "determination_part_taxable",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_94c8368f6856_knowledge_d80119f3d2ae",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "mise_en_reduction",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_0a61c726cd35_knowledge_4ebecf35bc1c",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_62de1e7dadfb_knowledge_09e6e3b5f2e2",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes d",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_aeb56e7d32c3_knowledge_2c080b3d95be",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, qu",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiai",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_d5ec81079541_knowledge_86cdae42467c",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec ",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_e2fddb92cc3a_knowledge_194eb1adda54",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance.",
+     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+     "page": null,
+     "section": null
+    }
+   ]
+  },
+  {
+   "contrat": "Essen'Ciel Patrimoine",
+   "slug": "essen-ciel-patrimoine",
+   "elements": 14,
+   "pct_tracable": 36,
+   "repartition": {
+    "complete": 5,
+    "incomplete": 0,
+    "tableau_non_extrait": 3,
+    "sans_source": 6
+   },
+   "a_verifier": [
+    {
+     "id": "axa_essenciel_patrimoine_2023-09_fiscalite_d81aa98e400a",
+     "type": "fiscalite",
+     "niveau": "tableau_non_extrait",
+     "libelle": "Régime fiscal — assurance vie (transmission)",
+     "notice": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+     "page": "5, 16",
+     "section": "Régime fiscal"
+    },
+    {
+     "id": "axa_essenciel_patrimoine_2023-09_option_d5aed7e8f30b",
+     "type": "options",
+     "niveau": "tableau_non_extrait",
+     "libelle": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+     "notice": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+     "page": "2, 14, 15",
+     "section": "4.3"
+    },
+    {
+     "id": "axa_essenciel_patrimoine_2023-09_option_4c8a4bdf86b1",
+     "type": "options",
+     "niveau": "tableau_non_extrait",
+     "libelle": "Mise en réduction (valeur de réduction)",
+     "notice": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+     "page": "13, 14, 15",
+     "section": "4.3"
+    },
+    {
+     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_09cc2c565c43",
+     "type": "points-vigilance",
+     "niveau": "sans_source",
+     "libelle": "NE PAS confondre avec Essen'Ciel (obsèques) : Patrimoine = transmission, cadre assurance vie, facult",
+     "notice": null,
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_7e9993e4030f",
+     "type": "points-vigilance",
+     "niveau": "sans_source",
+     "libelle": "Pas de garantie en capital ≥ versements nets de frais (ce n'est pas une épargne garantie).",
+     "notice": null,
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_6d1b15108d5c",
+     "type": "points-vigilance",
+     "niveau": "sans_source",
+     "libelle": "Valeurs de rachat/réduction faibles les 1res années ; tableau à vérifier en notice (§4.3).",
+     "notice": null,
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f",
+     "type": "points-vigilance",
+     "niveau": "sans_source",
+     "libelle": "Âge à l'adhésion 18–65 ans ; formalités médicales possibles.",
+     "notice": null,
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_64e186cef753",
+     "type": "points-vigilance",
+     "niveau": "sans_source",
+     "libelle": "Fiscalité datée dans la notice (2018) → vérifier la fiscalité en vigueur.",
+     "notice": null,
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_essenciel_patrimoine_2023-09_point_vigilance_b1ad6c0f49d0",
+     "type": "points-vigilance",
+     "niveau": "sans_source",
+     "libelle": "Assistance limitée (France/DOM/Monaco) alors que le décès est couvert mondialement.",
+     "notice": null,
+     "page": null,
+     "section": null
+    }
+   ]
+  },
+  {
+   "contrat": "Excelium (assurance vie)",
+   "slug": "excelium-assurance-vie",
+   "elements": 46,
+   "pct_tracable": 63,
+   "repartition": {
+    "complete": 29,
+    "incomplete": 17,
+    "tableau_non_extrait": 0,
+    "sans_source": 0
+   },
+   "a_verifier": [
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_171c5a3a4b19_knowledge_833f37b8be6f",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "mode_calcul",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_297d8ca1d613_knowledge_5d36dfd4585a",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "tableaux",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_4f3778d27635_knowledge_d5c460f0fa07",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "exemples_chiffrés",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_58fc69bea0e9_knowledge_6dce3bffa380",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "frais",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "réductions",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_3dfb729787c5_knowledge_8280ed50233d",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "mise_en_reduction",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "fiscalité",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_85bea04ba9d3_knowledge_ad9b384335e5",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "conditions_de_rachat",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_c0f287ca10a5_knowledge_4b1481c5d49d",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "determination_part_taxable",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_ee50e7e2015b_knowledge_076ec1b062c1",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "valeurs_de_rachat",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_0aa645be29d8_knowledge_2075dc1b8feb",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvem",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_218bb9d14039_knowledge_adbe0d8ec182",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; p",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_33113b1f8da2_knowledge_5731bc2dd8df",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le ta",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_6dbdc19c69e0_knowledge_ab0f944dd026",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de ",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_73a0c3f0cb6e_knowledge_63403609a675",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de c",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_ad67ed6a280f_knowledge_c720aef2dd6c",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_c375b97eae3b_knowledge_7109df78eb58",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctu",
+     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+     "page": null,
+     "section": null
+    }
+   ]
+  },
+  {
+   "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
+   "slug": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "elements": 69,
+   "pct_tracable": 77,
+   "repartition": {
+    "complete": 53,
+    "incomplete": 16,
+    "tableau_non_extrait": 0,
+    "sans_source": 0
+   },
+   "a_verifier": [
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_0abf98aa5778_knowledge_445e279cef50",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "mode_calcul",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "réductions",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_9a686a6a2b25_knowledge_23fb738e71fb",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "tableaux",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "frais",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_c22a5aa37858_knowledge_579359b13918",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "exemples_chiffrés",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_12a04ea57d41_knowledge_347f5f4fe5ab",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "fiscalité",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_23df485b165e_knowledge_a358e165a171",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "valeurs_de_rachat",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_243bf8cd8a2e_knowledge_fd2afdcc6a20",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "note",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_72c35224482f_knowledge_a9a24a4c6a38",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "conditions_de_rachat",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_7a8987e8b1f5_knowledge_ddb46c1a8ae9",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "determination_part_taxable",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_d7a8988e5d19_knowledge_70abebba0cab",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "mise_en_reduction",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4bcd5a5c99f0_knowledge_9e023765fd47",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4fe1d6193758_knowledge_5b9c5fea95b4",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_5256a4785e84_knowledge_c7303cf5027d",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité na",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_b635c47c8e25_knowledge_40c607965a24",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions gén",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_e3bb18915674_knowledge_4d9eb5b02c92",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Subrogation de l'assureur contre le tiers responsable (6.7).",
+     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+     "page": null,
+     "section": null
+    }
+   ]
+  },
+  {
+   "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+   "slug": "ma-retraite-plan-d-epargne-retraite-individuel-per",
+   "elements": 46,
+   "pct_tracable": 61,
+   "repartition": {
+    "complete": 28,
+    "incomplete": 18,
+    "tableau_non_extrait": 0,
+    "sans_source": 0
+   },
+   "a_verifier": [
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_0d373eee8846_knowledge_4a70ecf97022",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "mode_calcul",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_5f78886419a6_knowledge_e1c82020b80b",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "exemples_chiffrés",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_949c0d6b1fe0_knowledge_868134057060",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "frais",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_9ba03053e69a_knowledge_d8f10c7d1ce0",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "réductions",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_a5a20f809364_knowledge_79846d0b1e50",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "tableaux",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1c74300ec161_knowledge_7796cf78275b",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "valeurs_de_rachat",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "fiscalité",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_30d289ee955a_knowledge_7c124417b8b5",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "conditions_de_rachat",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_58efaba51d48_knowledge_4b450012844f",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "mise_en_reduction",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_78d2a3fea36c_knowledge_b714c809e8b8",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "determination_part_taxable",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_29dbe9dd07a5_knowledge_bf0dd90f6ec7",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si ",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_40a6471abe1e_knowledge_f517d36babe3",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Compartiment 3 : sortie en rente UNIQUEMENT.",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_4638a08834d5_knowledge_0ba923dcc369",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Plus de déductibilité fiscale des versements après 70 ans.",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_7e539c84f84b_knowledge_3f6297fa7729",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limit",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_88050d867e12_knowledge_3300e810ad31",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Frais de transfert 1 % uniquement les 5 premières années.",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_9a1413ab3b74_knowledge_a3ade0f48deb",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque ",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_c9108a1f7554_knowledge_24bafdb8e47e",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fr",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_db274a95a51e_knowledge_af2979bd8634",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les strat",
+     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+     "page": null,
+     "section": null
+    }
+   ]
+  },
+  {
+   "contrat": "Masterlife CREDIT",
+   "slug": "masterlife-credit",
+   "elements": 77,
+   "pct_tracable": 78,
+   "repartition": {
+    "complete": 60,
+    "incomplete": 17,
+    "tableau_non_extrait": 0,
+    "sans_source": 0
+   },
+   "a_verifier": [
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "exemples_chiffrés",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_317921e2cd84_knowledge_8dcd710beb80",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "mode_calcul",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_8936eebaa5cc_knowledge_85eab19f89d6",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "réductions",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_a8de7fb08bee_knowledge_fc624b04e8d5",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "frais",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_f904852eb47e_knowledge_1f5ef94b1625",
+     "type": "cotisations",
+     "niveau": "incomplete",
+     "libelle": "tableaux",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6184af0ed0bb_knowledge_d2b949a61e4b",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "mise_en_reduction",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6557ee3b82de_knowledge_bcf56946772e",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "determination_part_taxable",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_8d6684edc0fe_knowledge_549556fde47d",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "conditions_de_rachat",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_965709e14702_knowledge_59bba4ded7e7",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "valeurs_de_rachat",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_a579030f51e4_knowledge_6b6563df11b1",
+     "type": "fiscalite",
+     "niveau": "incomplete",
+     "libelle": "fiscalité",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_14236254decd_knowledge_8c4dc54fa7d1",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Pas de valeur de rachat ni de réduction.",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_173b632105ef_knowledge_af69875b3299",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_484c871eb4bf_knowledge_7b643e57951b",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (gara",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_5f5655d49ac6_knowledge_91b5fa511851",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_6acaf82de4d0_knowledge_c33f87b96f7d",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_b54b61128019_knowledge_405b144e09ef",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaill",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    },
+    {
+     "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_c3162986a52f_knowledge_df9e127805c0",
+     "type": "points-vigilance",
+     "niveau": "incomplete",
+     "libelle": "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement ",
+     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+     "page": null,
+     "section": null
+    }
+   ]
+  }
+ ]
+}

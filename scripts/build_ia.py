@@ -190,7 +190,7 @@ CATS_NAV = [("start", "START"), ("index", "Index"), ("instructions-maitres", "In
             ("methode-question-complexe", "Méthode"), ("contrats", "Contrats"), ("garanties", "Garanties"), ("exclusions", "Exclusions"),
             ("definitions", "Définitions"), ("conditions", "Conditions"), ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
             ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"), ("divergences", "Divergences"), ("matrices", "Matrices"), ("graphe", "Graphe"),
-            ("notices", "Notices"), ("sources", "Sources"), ("sources-officielles", "Sources officielles"), ("reglementation", "Réglementation"), ("surveillance", "Surveillance"),
+            ("notices", "Notices"), ("tracabilite", "Traçabilité"), ("sources", "Sources"), ("sources-officielles", "Sources officielles"), ("reglementation", "Réglementation"), ("surveillance", "Surveillance"),
             ("pack-a", "Pack A"), ("pack-b", "Pack B"), ("couverture", "Couverture"), ("maturite", "Maturité")]
 def nav_html(depth):
     ip = int_pref(depth)
@@ -692,6 +692,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 - Délais, franchises, plafonds → [délais](delais.html) · [franchises](franchises.html) · [plafonds](plafonds.html)
 - Cotisations, fiscalité → [cotisations](cotisations.html) · [fiscalité](fiscalite.html)
 - Preuve à citer → [preuves](preuves.html) · [notices](notices.html)
+- Ce qui reste à VÉRIFIER avant de citer (par contrat) → [traçabilité](tracabilite.html)
 - Question complexe → [méthode](methode-question-complexe.html) · [planificateur](planificateur.html)
 - Réglementaire vs contractuel → [réglementation](reglementation.html) · [sources officielles](sources-officielles.html) · [hiérarchie](hierarchie.html)
 - **Monter en rigueur** (répondre niveau conseiller, contrôler niveau inspecteur) → [niveaux de compétence](niveaux-competence.html)
@@ -766,7 +767,7 @@ def build_static_pages(theme_counts):
     # Manifeste lisible + ai-manifest.json
     pages = ["start", "index", "instructions-maitres", "guide-ia", "niveaux-competence", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
              "planificateur", "concepts", "couverture-recherche",
-             "comparateur", "divergences", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
+             "comparateur", "divergences", "tracabilite", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
              "sources-officielles", "reglementation", "surveillance", "connaissances-dynamiques", "matrices",
              "graphe", "maturite", "pack-a", "pack-b", "contrats",
              "garanties", "exclusions", "options", "cotisations", "delais", "fiscalite", "points-vigilance",
@@ -824,6 +825,7 @@ def build_static_pages(theme_counts):
             "question_complexe_multi_contrats": ["methode-question-complexe", "planificateur", "routage"],
             "reglementaire_vs_contractuel": ["reglementation", "sources-officielles", "hierarchie"],
             "etat_et_limites_de_la_base": ["couverture", "maturite", "qualite-routage"],
+            "que_verifier_avant_de_citer": ["tracabilite", "preuves", "hierarchie"],
             "hausser_la_rigueur_conseiller_ou_inspecteur": ["niveaux-competence", "instructions-maitres"],
         },
     }
@@ -1272,7 +1274,7 @@ def build_niveaux():
             {"id": "conseiller", "nom": "Niveau conseiller", "resume": "Complétude utile au client : garanties avec leurs exclusions et conditions, éligibilité, structure de cas client, action concrète.",
              "ajoute_sur": "socle", "pages": ["exclusions", "conditions", "franchises", "plafonds", "pertinence", "methode-question-complexe", "routage"]},
             {"id": "inspecteur", "nom": "Niveau inspecteur fonction support", "resume": "Rigueur de contrôle : cohérence inter-contrats, exhaustivité vérifiée, traçabilité auditée, frontière réglementaire tenue, escalade explicite.",
-             "ajoute_sur": "conseiller", "pages": ["divergences", "comparateur", "matrices", "points-vigilance", "reglementation", "sources-officielles", "couverture"]},
+             "ajoute_sur": "conseiller", "pages": ["divergences", "tracabilite", "comparateur", "matrices", "points-vigilance", "reglementation", "sources-officielles", "couverture"]},
         ],
         "grille_auto_evaluation": grille,
         "criteres_escalade": escalade,
@@ -1314,7 +1316,7 @@ Auto-contrôle du niveau conseiller :
 Ajoute la **rigueur de contrôle**. L'inspecteur ne se contente pas d'une réponse juste : il la **met à l'épreuve**.
 - **Cohérence inter-contrats** : quand plusieurs contrats traitent le même concept, comparer et **signaler les divergences** (une carence de 3 mois ici, 12 là) : [divergences](divergences.html) (écarts chiffrés déjà repérés) · [comparateur](comparateur.html) · [matrices](matrices.html).
 - **Exhaustivité vérifiée** : pour la garantie citée, s'assurer qu'**aucune** exclusion / condition / plafond / franchise / point de vigilance n'est omis : [points de vigilance](points-vigilance.html).
-- **Traçabilité auditée** : chaque fait porte notice + page ; une source incomplète ou un tableau non extrait se **dit**, jamais présenté comme certain.
+- **Traçabilité auditée** : chaque fait porte notice + page ; une source incomplète ou un tableau non extrait se **dit**, jamais présenté comme certain : [audit de traçabilité](tracabilite.html) (par contrat, déjà chiffré).
 - **Frontière réglementaire tenue** : tout chiffre de barème / plafond fiscal → **source officielle datée** et marquée « évolutif », jamais transformé en donnée contractuelle : [réglementation](reglementation.html) · [sources officielles](sources-officielles.html).
 - **Angles morts** : signaler ce que la notice ne tranche pas et les cas limites : [points de vigilance](points-vigilance.html) · [couverture](couverture.html).
 - **Escalade** : nommer ce qui doit remonter à une validation humaine (ci-dessous).
@@ -1456,6 +1458,111 @@ def build_divergences():
     write("divergences.md", "\n".join(md))
     write("divergences.html", page_html("Divergences inter-contrats", "".join(hb), depth, SITE + "/ia/divergences.html"))
 
+def build_tracabilite():
+    """Audit de traçabilité par contrat (contrôle niveau inspecteur). Pour chaque contrat, mesure
+    quelle part de ses éléments est PLEINEMENT localisable (notice + page), et LISTE précisément ceux
+    qui ne le sont pas : source incomplète, tableau non extrait, ou aucune page. C'est la face
+    « qualité de preuve » de la rigueur : un fait non traçable ne doit jamais être cité à un client
+    sans vérification. Déterministe, calculé sur les sources réelles des éléments projetés."""
+    depth = 0
+    CITEES = ["garanties", "exclusions", "definitions", "conditions", "declencheurs",
+              "plafonds", "franchises", "options", "cotisations", "delais", "fiscalite", "points-vigilance", "formules"]
+    NIVEAUX = ["complete", "incomplete", "tableau_non_extrait", "sans_source"]
+    LBL = {"complete": "pleinement traçable (notice + page)",
+           "incomplete": "source connue, page imprécise — à vérifier notice",
+           "tableau_non_extrait": "valeur dans un tableau non extrait — à lire dans la notice",
+           "sans_source": "aucune source rattachée — à vérifier"}
+
+    def niveau(src):
+        if not src or not src.get("document_source"): return "sans_source"
+        st = src.get("statut_tracabilite")
+        if st == "tableau_non_extrait": return "tableau_non_extrait"
+        if st == "incomplete": return "incomplete"
+        if st == "complete": return "complete"
+        return "complete" if src.get("page") else "incomplete"   # éléments dérivés : jugés sur la page
+
+    # Agrégation par contrat (clé = slug), dans l'ordre officiel des contrats.
+    par = {cm["slug"]: {"nom": cm["nom"], "cnt": {n: 0 for n in NIVEAUX}, "tot": 0, "a_verifier": []} for cm in CONTRACT_META}
+    for cat in CITEES:
+        for e in ELEMENTS.get(cat, []):
+            cs = e.get("cslug")
+            if cs not in par: continue
+            lv = niveau(e.get("src"))
+            slot = par[cs]; slot["tot"] += 1; slot["cnt"][lv] += 1
+            if lv != "complete":
+                s = e.get("src") or {}
+                slot["a_verifier"].append({"id": e["id"], "type": cat, "niveau": lv,
+                    "libelle": (e.get("titre") or e.get("texte") or "")[:100],
+                    "notice": s.get("document_source"), "page": s.get("page"), "section": s.get("section")})
+
+    # Tri des « à vérifier » : tableau non extrait d'abord (priorité inspecteur), puis sans source, puis incomplet.
+    ordre_lv = {"tableau_non_extrait": 0, "sans_source": 1, "incomplete": 2}
+    for slot in par.values():
+        slot["a_verifier"].sort(key=lambda x: (ordre_lv.get(x["niveau"], 9), x["type"]))
+        slot["pct"] = round(100 * slot["cnt"]["complete"] / slot["tot"]) if slot["tot"] else 0
+
+    g_tot = sum(s["tot"] for s in par.values())
+    g_complete = sum(s["cnt"]["complete"] for s in par.values())
+    g_pct = round(100 * g_complete / g_tot) if g_tot else 0
+    g_verifier = g_tot - g_complete
+
+    # -------- JSON machine (l'outil : « que dois-je vérifier dans le contrat X ? ») --------
+    data = {
+        "meta": {"version": VERSION, "genere_le": DATE,
+                 "usage": "Contrôle niveau inspecteur : quels éléments d'un contrat ne sont pas pleinement traçables et doivent être vérifiés à la notice avant d'être cités à un client.",
+                 "niveaux": LBL},
+        "global": {"elements": g_tot, "pleinement_tracables": g_complete, "pct": g_pct, "a_verifier": g_verifier},
+        "contrats": [{
+            "contrat": s["nom"], "slug": cs, "elements": s["tot"], "pct_tracable": s["pct"],
+            "repartition": s["cnt"], "a_verifier": s["a_verifier"],
+        } for cs, s in par.items()],
+    }
+    write("tracabilite.json", json.dumps(data, ensure_ascii=False, indent=1))
+
+    # -------- pages MD + HTML --------
+    md = [md_hdr("Audit de traçabilité par contrat",
+                 "Quelle part de chaque contrat est pleinement localisable (notice + page), et LA LISTE de ce qui ne l'est pas. "
+                 "Un fait non traçable ne se cite jamais à un client sans vérification.")]
+    md += ["", "**Global : %d éléments, %d pleinement traçables (%d %%). %d à vérifier.**" % (g_tot, g_complete, g_pct, g_verifier), "",
+           "> Traçable = source pointant la **notice + la page**. « À vérifier » ne veut pas dire faux : la donnée existe "
+           "mais sa localisation exacte reste à confirmer dans la notice (page imprécise, tableau non extrait, ou source à rattacher). "
+           "**La notice PDF fait foi.**", ""]
+    hb = ['<h1>Audit de traçabilité par contrat</h1>',
+          '<p><strong>Global : %d éléments, %d pleinement traçables (%d%%). %d à vérifier.</strong></p>' % (g_tot, g_complete, g_pct, g_verifier),
+          '<p><em>Traçable = source pointant la notice + la page. « À vérifier » ne veut pas dire faux : la localisation '
+          'exacte reste à confirmer (page imprécise, tableau non extrait, source à rattacher). La notice PDF fait foi.</em></p>',
+          '<table><thead><tr><th>Contrat</th><th>Éléments</th><th>Traçables</th><th>À vérifier</th></tr></thead><tbody>']
+    md += ["## Vue d'ensemble", "", "| Contrat | Éléments | Traçables | À vérifier |", "|---|---|---|---|"]
+    for cs, s in par.items():
+        av = s["tot"] - s["cnt"]["complete"]
+        md.append("| %s | %d | %d %% | %d |" % (s["nom"], s["tot"], s["pct"], av))
+        hb.append('<tr><td><a href="contrat/%s.html">%s</a></td><td>%d</td><td>%d%%</td><td>%d</td></tr>' % (cs, html.escape(s["nom"]), s["tot"], s["pct"], av))
+    hb.append("</tbody></table>")
+
+    for cs, s in par.items():
+        rep = " · ".join("%d %s" % (s["cnt"][n], LBL[n].split(" —")[0].split(" (")[0]) for n in NIVEAUX if s["cnt"][n])
+        md += ["", "## %s — %d %% traçable" % (s["nom"], s["pct"]), "", "Répartition : %s." % rep, ""]
+        hb.append('<h2 id="c-%s">%s — %d%% traçable</h2><p>Répartition : %s.</p>' % (cs, html.escape(s["nom"]), s["pct"], html.escape(rep)))
+        av = s["a_verifier"]
+        if not av:
+            md.append("_Tous les éléments cités sont pleinement traçables._"); hb.append("<p><em>Tous les éléments cités sont pleinement traçables.</em></p>"); continue
+        md.append("À vérifier (%d) — tableau non extrait et sans source d'abord :" % len(av))
+        hb.append('<p>À vérifier (%d) — tableau non extrait et sans source d\'abord :</p><ul>' % len(av))
+        for it in av[:14]:
+            src = {"document_source": it["notice"], "page": it["page"], "section": it["section"]} if it["notice"] else None
+            tag = {"tableau_non_extrait": "⚠ tableau non extrait", "sans_source": "⚠ sans source", "incomplete": "page à préciser"}[it["niveau"]]
+            md.append("- **[%s]** %s — _%s_%s" % (it["type"], it["libelle"], tag, cite_md(src, depth)))
+            hb.append('<li><strong>[%s]</strong> %s — <em>%s</em>%s</li>' % (html.escape(it["type"]), html.escape(it["libelle"]), html.escape(tag), cite_html(src, depth)))
+        hb.append("</ul>")
+        if len(av) > 14:
+            md.append("- _… et %d autres (voir tracabilite.json)._" % (len(av) - 14))
+            hb.append('<p><em>… et %d autres (voir <a href="tracabilite.json">tracabilite.json</a>).</em></p>' % (len(av) - 14))
+    md += ["", "## Format machine", "- [tracabilite.json](tracabilite.json) — par contrat : score, répartition, et la liste exacte "
+           "des éléments à vérifier (type, niveau, notice, page). Une IA de contrôle s'en sert pour dire ce qu'il faut confirmer avant de citer.", ""]
+    hb.append('<h2>Format machine</h2><p><a href="tracabilite.json">tracabilite.json</a> — par contrat : score, répartition, éléments à vérifier (type, niveau, notice, page).</p>')
+    write("tracabilite.md", "\n".join(md))
+    write("tracabilite.html", page_html("Audit de traçabilité", "".join(hb), depth, SITE + "/ia/tracabilite.html"))
+
 def build_outils():
     depth = 0
     items = [("niveaux-competence", "Niveaux de compétence", "escalier de rigueur conseiller → inspecteur + grille d'auto-évaluation (JSON)"),
@@ -1467,6 +1574,7 @@ def build_outils():
              ("couverture-recherche", "Détecteur de couverture", "présent / absent de la base / à vérifier en notice"),
              ("comparateur", "Comparateur thématique", "un sujet, tous les contrats côte à côte, sourcé"),
              ("divergences", "Divergences inter-contrats", "où les contrats diffèrent sur un chiffre (âge, délais) — signal à vérifier, jamais une contradiction"),
+             ("tracabilite", "Audit de traçabilité", "par contrat : quelle part est pleinement sourcée (notice + page), et la liste de ce qui est à vérifier"),
              ("preuves", "Graphe de preuves", "chaque élément citable (id, source, page, concepts)"),
              ("methode-question-complexe", "Méthode & assembleur", "5 parcours + structure de réponse sécurisée"),
              ("hierarchie", "Hiérarchie documentaire", "ordre : contrat → notice → docs AXA → réglementation → réponse"),
@@ -2198,6 +2306,7 @@ def build():
     build_methode()
     build_niveaux()                  # escalier de rigueur conseiller → inspecteur + grille machine
     build_divergences()              # détecteur d'écarts chiffrés inter-contrats (contrôle inspecteur)
+    build_tracabilite()              # audit de traçabilité par contrat (qualité de preuve, contrôle inspecteur)
     metrics = build_tests(concepts)  # tests-qualité + harness de précision
     # Infrastructure de raisonnement documentaire (Parties 2–10, 12)
     build_hierarchie()

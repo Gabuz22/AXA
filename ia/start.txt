@@ -34,6 +34,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 - Délais, franchises, plafonds → [délais](https://gabuz22.github.io/AXA/ia/delais.html) · [franchises](https://gabuz22.github.io/AXA/ia/franchises.html) · [plafonds](https://gabuz22.github.io/AXA/ia/plafonds.html)
 - Cotisations, fiscalité → [cotisations](https://gabuz22.github.io/AXA/ia/cotisations.html) · [fiscalité](https://gabuz22.github.io/AXA/ia/fiscalite.html)
 - Preuve à citer → [preuves](https://gabuz22.github.io/AXA/ia/preuves.html) · [notices](https://gabuz22.github.io/AXA/ia/notices.html)
+- Ce qui reste à VÉRIFIER avant de citer (par contrat) → [traçabilité](https://gabuz22.github.io/AXA/ia/tracabilite.html)
 - Question complexe → [méthode](https://gabuz22.github.io/AXA/ia/methode-question-complexe.html) · [planificateur](https://gabuz22.github.io/AXA/ia/planificateur.html)
 - Réglementaire vs contractuel → [réglementation](https://gabuz22.github.io/AXA/ia/reglementation.html) · [sources officielles](https://gabuz22.github.io/AXA/ia/sources-officielles.html) · [hiérarchie](https://gabuz22.github.io/AXA/ia/hierarchie.html)
 - **Monter en rigueur** (répondre niveau conseiller, contrôler niveau inspecteur) → [niveaux de compétence](https://gabuz22.github.io/AXA/ia/niveaux-competence.html)

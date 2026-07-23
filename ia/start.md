@@ -34,6 +34,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 - Délais, franchises, plafonds → [délais](delais.html) · [franchises](franchises.html) · [plafonds](plafonds.html)
 - Cotisations, fiscalité → [cotisations](cotisations.html) · [fiscalité](fiscalite.html)
 - Preuve à citer → [preuves](preuves.html) · [notices](notices.html)
+- Ce qui reste à VÉRIFIER avant de citer (par contrat) → [traçabilité](tracabilite.html)
 - Question complexe → [méthode](methode-question-complexe.html) · [planificateur](planificateur.html)
 - Réglementaire vs contractuel → [réglementation](reglementation.html) · [sources officielles](sources-officielles.html) · [hiérarchie](hierarchie.html)
 - **Monter en rigueur** (répondre niveau conseiller, contrôler niveau inspecteur) → [niveaux de compétence](niveaux-competence.html)
