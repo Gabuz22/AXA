@@ -135,6 +135,11 @@ const MODELES_COURBES = {
     { id: "contrat_a", nom: "Contrat A", expr: "capital_souscrit * (1 + taux_annuel / 100) ^ t", regime: "estimee" },
     { id: "contrat_b", nom: "Contrat B", expr: "capital_souscrit * (1 + (taux_annuel - 0.25) / 100) ^ t", regime: "estimee" },
   ],
+  // Ce modèle-ci ne vient pas de la page calculs mais du module de courbes INTERNE au cockpit
+  // (clé `gv_v291_courbes`, présente dans 64 sauvegardes) : c'était le seul endroit où vivait la
+  // capitalisation d'une épargne régulière — valeur acquise d'une suite de versements.
+  epargne_capitalisee: [COURBE_CUMUL,
+    { id: "capitalise", nom: "Capital capitalisé (intérêts composés)", expr: "cotisation_mensuelle * 12 * ((1 + taux_annuel / 100) ^ t - 1) / (taux_annuel / 100)", regime: "hypothese" }],
   hypotheses_estimees: [
     { id: "basse", nom: "Hypothèse basse", expr: "capital_souscrit * (1 + (taux_annuel - 0.5) / 100) ^ t", regime: "estimee" },
     { id: "centrale", nom: "Hypothèse centrale", expr: "capital_souscrit * (1 + taux_annuel / 100) ^ t", regime: "estimee" },

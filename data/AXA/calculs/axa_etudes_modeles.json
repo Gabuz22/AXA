@@ -2,24 +2,190 @@
   "meta": {
     "type": "modeles_etudes_calculs_axa",
     "version": "2.9.2",
-    "json_contractuels_modifies": false
+    "json_contractuels_modifies": false,
+    "note_migration": "Repris de Gabriel Virtuel (cockpit legacy) le 2026-07-23. Le modele epargne_capitalisee vient du module de courbes INTERNE au cockpit (cle gv_v291_courbes), seul endroit ou vivait la formule de capitalisation d une epargne reguliere."
   },
   "etudes_modeles": [
-    {"id":"etude_obseques","nom":"Étude obsèques","contrats_recommandes":["axa_essenciel_2025-06","axa_entourage_2025-06","axa_avizen_2025-04","axa_excelium_vie_2026-05"],"formules_utiles":["axa_essenciel_2025-06_formule_01","axa_essenciel_2025-06_formule_02","axa_essenciel_2025-06_formule_03"],"variables_typiques":["cotisation_mensuelle","capital_souscrit","annees"],"graphiques_typiques":["cumul_vs_capital","cumul_vs_reduction","hypotheses_estimees"]},
-    {"id":"etude_essenciel","nom":"Essen'Ciel seul","contrats_recommandes":["axa_essenciel_2025-06"],"formules_utiles":["axa_essenciel_2025-06_formule_01","axa_essenciel_2025-06_formule_02","axa_essenciel_2025-06_formule_03"],"variables_typiques":["cotisation_mensuelle","capital_souscrit","annees"],"graphiques_typiques":["cumul_vs_capital","capital_vs_reduction"]},
-    {"id":"etude_prevoyance_tns","nom":"Prévoyance TNS","contrats_recommandes":["axa_avizen_pro_2025-04","axa_masterlife_credit_2024-10"],"formules_utiles":[],"variables_typiques":["cotisation_annuelle","jours_indemnises","taux_indemnisation"],"graphiques_typiques":["evolution_cotisation"]},
-    {"id":"etude_rachat_reduction","nom":"Rachat / réduction","contrats_recommandes":["axa_essenciel_2025-06","axa_excelium_vie_2026-05","axa_ma_retraite_2026-05"],"formules_utiles":[],"variables_typiques":["annees","cumul_cotisations","taux_provision"],"graphiques_typiques":["rachat_temps","capital_vs_reduction","part_taxable"]},
-    {"id":"etude_cotisations","nom":"Étude cotisations","contrats_recommandes":[],"formules_utiles":[],"variables_typiques":["cotisation_mensuelle","taux_annuel","annees"],"graphiques_typiques":["evolution_cotisation","cumul_vs_capital"]},
-    {"id":"etude_comparaison","nom":"Comparaison de contrats","contrats_recommandes":[],"formules_utiles":[],"variables_typiques":["annees"],"graphiques_typiques":["comparaison_contrats"]}
+    {
+      "id": "etude_obseques",
+      "nom": "Étude obsèques",
+      "contrats_recommandes": [
+        "axa_essenciel_2025-06",
+        "axa_entourage_2025-06",
+        "axa_avizen_2025-04",
+        "axa_excelium_vie_2026-05"
+      ],
+      "formules_utiles": [
+        "axa_essenciel_2025-06_formule_01",
+        "axa_essenciel_2025-06_formule_02",
+        "axa_essenciel_2025-06_formule_03"
+      ],
+      "variables_typiques": [
+        "cotisation_mensuelle",
+        "capital_souscrit",
+        "annees"
+      ],
+      "graphiques_typiques": [
+        "cumul_vs_capital",
+        "cumul_vs_reduction",
+        "hypotheses_estimees"
+      ]
+    },
+    {
+      "id": "etude_essenciel",
+      "nom": "Essen'Ciel seul",
+      "contrats_recommandes": [
+        "axa_essenciel_2025-06"
+      ],
+      "formules_utiles": [
+        "axa_essenciel_2025-06_formule_01",
+        "axa_essenciel_2025-06_formule_02",
+        "axa_essenciel_2025-06_formule_03"
+      ],
+      "variables_typiques": [
+        "cotisation_mensuelle",
+        "capital_souscrit",
+        "annees"
+      ],
+      "graphiques_typiques": [
+        "cumul_vs_capital",
+        "capital_vs_reduction"
+      ]
+    },
+    {
+      "id": "etude_prevoyance_tns",
+      "nom": "Prévoyance TNS",
+      "contrats_recommandes": [
+        "axa_avizen_pro_2025-04",
+        "axa_masterlife_credit_2024-10"
+      ],
+      "formules_utiles": [],
+      "variables_typiques": [
+        "cotisation_annuelle",
+        "jours_indemnises",
+        "taux_indemnisation"
+      ],
+      "graphiques_typiques": [
+        "evolution_cotisation"
+      ]
+    },
+    {
+      "id": "etude_rachat_reduction",
+      "nom": "Rachat / réduction",
+      "contrats_recommandes": [
+        "axa_essenciel_2025-06",
+        "axa_excelium_vie_2026-05",
+        "axa_ma_retraite_2026-05"
+      ],
+      "formules_utiles": [],
+      "variables_typiques": [
+        "annees",
+        "cumul_cotisations",
+        "taux_provision"
+      ],
+      "graphiques_typiques": [
+        "rachat_temps",
+        "capital_vs_reduction",
+        "part_taxable"
+      ]
+    },
+    {
+      "id": "etude_cotisations",
+      "nom": "Étude cotisations",
+      "contrats_recommandes": [],
+      "formules_utiles": [],
+      "variables_typiques": [
+        "cotisation_mensuelle",
+        "taux_annuel",
+        "annees"
+      ],
+      "graphiques_typiques": [
+        "evolution_cotisation",
+        "cumul_vs_capital"
+      ]
+    },
+    {
+      "id": "etude_comparaison",
+      "nom": "Comparaison de contrats",
+      "contrats_recommandes": [],
+      "formules_utiles": [],
+      "variables_typiques": [
+        "annees"
+      ],
+      "graphiques_typiques": [
+        "comparaison_contrats"
+      ]
+    }
   ],
   "graphiques_modeles": [
-    {"id":"cumul_vs_capital","nom":"Cumul cotisations vs capital garanti","courbes":["cumul_cotisations","capital_garanti"]},
-    {"id":"cumul_vs_reduction","nom":"Cumul cotisations vs valeur de réduction","courbes":["cumul_cotisations","valeur_reduction"]},
-    {"id":"capital_vs_reduction","nom":"Capital garanti vs valeur de réduction","courbes":["capital_garanti","valeur_reduction"]},
-    {"id":"evolution_cotisation","nom":"Évolution cotisation annuelle","courbes":["cotisation_annuelle"]},
-    {"id":"rachat_temps","nom":"Valeur de rachat dans le temps","courbes":["valeur_rachat"]},
-    {"id":"part_taxable","nom":"Part taxable selon rachat","courbes":["part_taxable"]},
-    {"id":"comparaison_contrats","nom":"Comparaison de contrats sur le même horizon","courbes":["comparaison"]},
-    {"id":"hypotheses_estimees","nom":"Hypothèse basse / centrale / haute","courbes":["basse","centrale","haute"]}
+    {
+      "id": "cumul_vs_capital",
+      "nom": "Cumul cotisations vs capital garanti",
+      "courbes": [
+        "cumul_cotisations",
+        "capital_garanti"
+      ]
+    },
+    {
+      "id": "cumul_vs_reduction",
+      "nom": "Cumul cotisations vs valeur de réduction",
+      "courbes": [
+        "cumul_cotisations",
+        "valeur_reduction"
+      ]
+    },
+    {
+      "id": "capital_vs_reduction",
+      "nom": "Capital garanti vs valeur de réduction",
+      "courbes": [
+        "capital_garanti",
+        "valeur_reduction"
+      ]
+    },
+    {
+      "id": "evolution_cotisation",
+      "nom": "Évolution cotisation annuelle",
+      "courbes": [
+        "cotisation_annuelle"
+      ]
+    },
+    {
+      "id": "rachat_temps",
+      "nom": "Valeur de rachat dans le temps",
+      "courbes": [
+        "valeur_rachat"
+      ]
+    },
+    {
+      "id": "part_taxable",
+      "nom": "Part taxable selon rachat",
+      "courbes": [
+        "part_taxable"
+      ]
+    },
+    {
+      "id": "comparaison_contrats",
+      "nom": "Comparaison de contrats sur le même horizon",
+      "courbes": [
+        "comparaison"
+      ]
+    },
+    {
+      "id": "hypotheses_estimees",
+      "nom": "Hypothèse basse / centrale / haute",
+      "courbes": [
+        "basse",
+        "centrale",
+        "haute"
+      ]
+    },
+    {
+      "id": "epargne_capitalisee",
+      "nom": "Épargne régulière capitalisée",
+      "courbes": [
+        "cumul_cotisations",
+        "capital_capitalise"
+      ]
+    }
   ]
 }
