@@ -11,8 +11,11 @@
 // persistance, aucune mutation de données — le texte est analysé en mémoire et jeté. GET est aussi
 // accepté (?texte=...) pour les brouillons courts.
 
-const CTR = /(garanti|garantie|couvr|exclu|exclusion|franchise|carence|délai|plafond|capital|rente|cotisation|indemnit|prestation|décès|invalidit|incapacit)/i;
-const REG = /(abattement|barème|plafond fiscal|déductib|990\s*I|757\s*B|taux\s|impôt|fiscalit)/i;
+// AFFIRMATION contractuelle (verbes/formules d'assertion), pas simple mention d'un risque : « le
+// client a un besoin de décès » ne s'affirme rien d'un contrat et n'a pas à être cité ; « Avizen
+// couvre le décès » si. On cible donc ce qui ASSERTE un comportement du contrat.
+const CTR = /(couv|garanti|exclu|verse|prévoit|plafonn|indemnis|prise? en charge|s'applique|franchise|carence|délai de|remboursé|éligib)/i;
+const REG = /(abattement|barème|plafond fiscal|déduct|madelin|990\s*I|757\s*B|taux\s|impôt|fiscalit)/i;
 const REDIR = /(source officielle|réglementaire|législation|impots\.gouv|service-public|urssaf|autorité|évolue|à vérifier (sur|auprès)|non présent dans la base)/i;
 const CITE = /\[[^\]]*(?:notice|p\.?\s*\d)/i;
 const NUM = /\d/;

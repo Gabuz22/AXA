@@ -1870,8 +1870,8 @@ TESTS_QUALITE = [
 
 VERIFIER_JS = r"""
 (function(){
-  var CTR = /(garanti|garantie|couvr|exclu|exclusion|franchise|carence|délai|plafond|capital|rente|cotisation|indemnit|prestation|décès|invalidit|incapacit)/i;
-  var REG = /(abattement|barème|plafond fiscal|déductib|990\s*I|757\s*B|taux\s|impôt|fiscalit)/i;
+  var CTR = /(couv|garanti|exclu|verse|prévoit|plafonn|indemnis|prise? en charge|s'applique|franchise|carence|délai de|remboursé|éligib)/i;
+  var REG = /(abattement|barème|plafond fiscal|déduct|madelin|990\s*I|757\s*B|taux\s|impôt|fiscalit)/i;
   // Redirection réglementaire correcte : une phrase qui renvoie à la source officielle n'a PAS à
   // porter de citation contractuelle (ce n'est pas une affirmation de fait tirée de la notice).
   var REDIR = /(source officielle|réglementaire|législation|impots\.gouv|service-public|urssaf|autorité|évolue|à vérifier (sur|auprès)|non présent dans la base)/i;

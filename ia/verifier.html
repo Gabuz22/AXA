@@ -5,8 +5,8 @@
 <main>
 <h1>Vérificateur de réponse</h1><p>Colle ici la réponse produite par l'IA. Ce contrôle <strong>mécanique</strong> vérifie la FORME — citations, source officielle sur le réglementaire, clôture, attestation — <strong>pas l'exactitude</strong>. La notice PDF fait toujours foi.</p><textarea id="in" rows="12" style="width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;padding:12px;border-radius:8px;border:1px solid #33415a;background:#0e1726;color:#e8ebf0" placeholder="Base consultée : Gabriel AXA v2.3.0 (2026-07-17)&#10;&#10;Colle la réponse ici…"></textarea><div id="out" style="margin-top:14px"></div><style>#out .ok{background:rgba(91,208,122,.12);border:1px solid rgba(91,208,122,.5);border-radius:8px;padding:12px}#out .warn{border-radius:8px;padding:10px 12px;margin:8px 0;background:rgba(245,196,81,.08);border:1px solid rgba(245,196,81,.4)}#out .warn.grave{background:rgba(226,103,74,.1);border-color:rgba(226,103,74,.5)}#out .muted,.muted{color:#9fb0c8;font-size:13px}</style><script>
 (function(){
-  var CTR = /(garanti|garantie|couvr|exclu|exclusion|franchise|carence|délai|plafond|capital|rente|cotisation|indemnit|prestation|décès|invalidit|incapacit)/i;
-  var REG = /(abattement|barème|plafond fiscal|déductib|990\s*I|757\s*B|taux\s|impôt|fiscalit)/i;
+  var CTR = /(couv|garanti|exclu|verse|prévoit|plafonn|indemnis|prise? en charge|s'applique|franchise|carence|délai de|remboursé|éligib)/i;
+  var REG = /(abattement|barème|plafond fiscal|déduct|madelin|990\s*I|757\s*B|taux\s|impôt|fiscalit)/i;
   // Redirection réglementaire correcte : une phrase qui renvoie à la source officielle n'a PAS à
   // porter de citation contractuelle (ce n'est pas une affirmation de fait tirée de la notice).
   var REDIR = /(source officielle|réglementaire|législation|impots\.gouv|service-public|urssaf|autorité|évolue|à vérifier (sur|auprès)|non présent dans la base)/i;
