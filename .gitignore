@@ -8,3 +8,8 @@ __pycache__/
 agent-work/runs/quota_state.json
 agent-work/orchestrator/locks/*.lock
 .wrangler/
+
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
