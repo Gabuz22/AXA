@@ -9,11 +9,13 @@
 // garde-fous (lecture seule, aucune donnée nominative).
 import * as preselection from "./functions/api/preselection.js";
 import * as diagnostic from "./functions/api/diagnostic.js";
+import * as verifier from "./functions/api/verifier.js";
 
 // Table de routage : chemin → module Function (mêmes handlers que le modèle Pages).
 const ROUTES = {
   "/api/preselection": preselection,
   "/api/diagnostic": diagnostic,
+  "/api/verifier": verifier,   // seul endpoint qui accepte un POST utile (le brouillon à analyser) — mais toujours AUCUNE écriture
 };
 
 export default {
@@ -22,8 +24,8 @@ export default {
     const mod = ROUTES[pathname];
     if (mod) {
       if (request.method === "GET") return mod.onRequestGet({ request, env });
-      if (request.method === "POST") return mod.onRequestPost();
-      return new Response(JSON.stringify({ erreur: "Méthode non autorisée (GET uniquement)." }), {
+      if (request.method === "POST") return mod.onRequestPost({ request, env });
+      return new Response(JSON.stringify({ erreur: "Méthode non autorisée." }), {
         status: 405, headers: { "Content-Type": "application/json; charset=utf-8" },
       });
     }
