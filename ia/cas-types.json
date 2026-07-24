@@ -1,0 +1,312 @@
+{
+ "meta": {
+  "version": "2.3.0",
+  "genere_le": "2026-07-17",
+  "usage": "Patrons de RAISONNEMENT travaillés (profil → besoins → contrats candidats → pièges → questions). À imiter, jamais à appliquer comme une recommandation automatique.",
+  "regle": "Aide au raisonnement. Le conseiller décide ; garanties, exclusions et conditions se vérifient dans la fiche et la notice PDF."
+ },
+ "cas": [
+  {
+   "id": "tns-artisan-credit",
+   "titre": "Artisan TNS, 42 ans, 2 enfants, crédit immobilier en cours",
+   "type": "profil client · multi-besoins",
+   "profil": "Travailleur indépendant (TNS) : le régime obligatoire couvre mal l'arrêt de travail. Deux enfants à charge, un crédit immobilier en cours.",
+   "besoins": [
+    "Maintien du revenu en cas d'arrêt de travail / invalidité (priorité TNS)",
+    "Sécuriser le remboursement du crédit",
+    "Protéger la famille en cas de décès"
+   ],
+   "questions": [
+    "Que verse réellement le régime obligatoire en arrêt de travail, et quel complément vise-t-on ?",
+    "Capital restant dû, durée et quotités entre co-emprunteurs ?",
+    "Qui dépend de ce revenu, et sur quelle durée (éducation des enfants) ?"
+   ],
+   "contrats_a_examiner": [
+    {
+     "slug": "avizen-pro",
+     "nom": "Avizen Pro",
+     "pieges_cles": [
+      {
+       "libelle": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
+       "type": "Déchéance — perte totale du droit",
+       "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+       "page": 4
+      },
+      {
+       "libelle": "Décès/IPT toutes causes",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+       "page": 42
+      }
+     ]
+    },
+    {
+     "slug": "masterlife-credit",
+     "nom": "Masterlife CREDIT",
+     "pieges_cles": [
+      {
+       "libelle": "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+       "type": "Déchéance — perte totale du droit",
+       "notice": null,
+       "page": null
+      },
+      {
+       "libelle": "États antérieurs",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+       "page": 21
+      }
+     ]
+    },
+    {
+     "slug": "avizen",
+     "nom": "Avizen",
+     "pieges_cles": [
+      {
+       "libelle": "ITT/Invalidité — exclusions spécifiques",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+       "page": 27
+      },
+      {
+       "libelle": "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+       "page": 26
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jeune-celibataire-sportif",
+   "titre": "26 ans, célibataire, sans personne à charge, sport à risque",
+   "type": "profil client · besoin ciblé",
+   "profil": "Pas de personne à charge : le décès n'est pas la priorité. Pratique un sport à risque — le besoin réel est la réparation d'un accident de la vie privée.",
+   "besoins": [
+    "Réparer les conséquences d'un accident de la vie privée",
+    "Vérifier la couverture des sports à risque"
+   ],
+   "questions": [
+    "Le sport pratiqué relève-t-il d'une exclusion ou d'une option dédiée ?",
+    "Cherche-t-on l'indemnisation du préjudice réel (GAV) ou des montants forfaitaires ?"
+   ],
+   "contrats_a_examiner": [
+    {
+     "slug": "ma-protection-accident",
+     "nom": "ma-protection-accident",
+     "pieges_cles": []
+    },
+    {
+     "slug": "avizen",
+     "nom": "Avizen",
+     "pieges_cles": [
+      {
+       "libelle": "ITT/Invalidité — exclusions spécifiques",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+       "page": 27
+      },
+      {
+       "libelle": "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+       "page": 26
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "senior-dependance",
+   "titre": "62 ans, anticipe la perte d'autonomie",
+   "type": "profil client · besoin ciblé",
+   "profil": "Fenêtre d'assurabilité : plus on attend, plus c'est cher ou refusé. Le besoin est la dépendance, pas l'épargne.",
+   "besoins": [
+    "Couvrir la perte d'autonomie (rente dépendance)",
+    "Éventuellement anticiper les obsèques"
+   ],
+   "questions": [
+    "Couvrir la dépendance totale seule, ou aussi partielle (choix de formule) ?",
+    "Un capital immédiat pour les premiers frais est-il souhaité ?",
+    "Quel est l'âge exact ? Il conditionne l'admissibilité et le tarif."
+   ],
+   "contrats_a_examiner": [
+    {
+     "slug": "entour-age",
+     "nom": "Entour'Age",
+     "pieges_cles": [
+      {
+       "libelle": "GIR 5 et 6",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+       "page": 13
+      },
+      {
+       "libelle": "Dépendance suite à accidents — cas exclus",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+       "page": 29
+      }
+     ]
+    },
+    {
+     "slug": "essen-ciel-assurance-obseques",
+     "nom": "Essen'Ciel (assurance obsèques)",
+     "pieges_cles": [
+      {
+       "libelle": "Exclusions assistance",
+       "type": "Déchéance — perte totale du droit",
+       "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+       "page": 31
+      },
+      {
+       "libelle": "Décès accidentel exclu",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+       "page": 30
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "salarie-achat-immobilier",
+   "titre": "Salarié 38 ans, achat immobilier, couverture collective employeur",
+   "type": "profil client · multi-besoins",
+   "profil": "Un salarié a souvent une couverture collective : vérifier avant de doubler. L'achat immobilier crée un besoin d'assurance emprunteur.",
+   "besoins": [
+    "Sécuriser le crédit immobilier",
+    "Compléter (sans doublonner) la prévoyance décès/ITT du collectif"
+   ],
+   "questions": [
+    "Que couvre déjà le contrat collectif de l'employeur (décès, ITT, invalidité) ?",
+    "Profil AERAS ou antécédents à déclarer pour l'emprunteur ?"
+   ],
+   "contrats_a_examiner": [
+    {
+     "slug": "masterlife-credit",
+     "nom": "Masterlife CREDIT",
+     "pieges_cles": [
+      {
+       "libelle": "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+       "type": "Déchéance — perte totale du droit",
+       "notice": null,
+       "page": null
+      },
+      {
+       "libelle": "États antérieurs",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+       "page": 21
+      }
+     ]
+    },
+    {
+     "slug": "avizen",
+     "nom": "Avizen",
+     "pieges_cles": [
+      {
+       "libelle": "ITT/Invalidité — exclusions spécifiques",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+       "page": 27
+      },
+      {
+       "libelle": "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+       "page": 26
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "epargne-transmission",
+   "titre": "55 ans, transmettre un capital dans un cadre fiscal avantageux",
+   "type": "profil client · épargne / transmission",
+   "profil": "Le socle de protection est en place ; l'objectif est la transmission via l'assurance vie. Attention : ce n'est pas une épargne garantie.",
+   "besoins": [
+    "Transmettre un capital au décès",
+    "Comprendre le cadre fiscal (réglementaire, à vérifier)"
+   ],
+   "questions": [
+    "Objectif : financer des funérailles, ou transmettre plus largement ?",
+    "Horizon de placement et tolérance au risque (UC vs fonds euros) ?"
+   ],
+   "contrats_a_examiner": [
+    {
+     "slug": "excelium-assurance-vie",
+     "nom": "Excelium (assurance vie)",
+     "pieges_cles": [
+      {
+       "libelle": "Exclusions de la garantie « Revalorisée »",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
+       "page": 16
+      },
+      {
+       "libelle": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+       "type": "Plafond / montant limité",
+       "notice": null,
+       "page": null
+      }
+     ]
+    },
+    {
+     "slug": "essen-ciel-patrimoine",
+     "nom": "Essen'Ciel Patrimoine",
+     "pieges_cles": [
+      {
+       "libelle": "Risques exclus de la garantie décès",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+       "page": "6"
+      },
+      {
+       "libelle": "NE PAS confondre avec Essen'Ciel (obsèques) : Patrimoine = transmission, cadre assurance vie, faculté de rachat.",
+       "type": "Point de vigilance à contrôler",
+       "notice": null,
+       "page": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "preparation-retraite",
+   "titre": "45 ans, préparer un revenu de retraite",
+   "type": "profil client · retraite",
+   "profil": "Se construit tôt, après la protection du présent. Le PER est indisponible avant l'échéance (hors cas de déblocage).",
+   "besoins": [
+    "Constituer une épargne retraite",
+    "Comprendre déductibilité (réglementaire) et sortie"
+   ],
+   "questions": [
+    "Horizon avant la retraite ? Capacité d'épargne régulière ?",
+    "Sortie souhaitée en rente, en capital, ou mixte ?"
+   ],
+   "contrats_a_examiner": [
+    {
+     "slug": "ma-retraite-plan-d-epargne-retraite-individuel-per",
+     "nom": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+     "pieges_cles": [
+      {
+       "libelle": "Indisponibilité de l'épargne",
+       "type": "Exclusion — la garantie ne joue pas",
+       "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+       "page": 27
+      },
+      {
+       "libelle": "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.",
+       "type": "Plafond / montant limité",
+       "notice": null,
+       "page": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

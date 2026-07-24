@@ -39,6 +39,7 @@ Index → (Contrat | Catégorie | Thème) → Élément `#id` → Notice → Pag
 - [comparateur](comparateur.html) · [.md](comparateur.md)
 - [divergences](divergences.html) · [.md](divergences.md)
 - [pieges](pieges.html) · [.md](pieges.md)
+- [cas-types](cas-types.html) · [.md](cas-types.md)
 - [tracabilite](tracabilite.html) · [.md](tracabilite.md)
 - [preuves](preuves.html) · [.md](preuves.md)
 - [methode-question-complexe](methode-question-complexe.html) · [.md](methode-question-complexe.md)

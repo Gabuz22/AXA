@@ -38,6 +38,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 - Preuve à citer → [preuves](preuves.html) · [notices](notices.html)
 - Ce qui reste à VÉRIFIER avant de citer (par contrat) → [traçabilité](tracabilite.html)
 - Question complexe → [méthode](methode-question-complexe.html) · [planificateur](planificateur.html)
+- **Raisonner sur un profil client** (comme un conseiller) → [cas-types travaillés](cas-types.html)
 - Réglementaire vs contractuel → [réglementation](reglementation.html) · [sources officielles](sources-officielles.html) · [hiérarchie](hierarchie.html)
 - **Monter en rigueur** (répondre niveau conseiller, contrôler niveau inspecteur) → [niveaux de compétence](niveaux-competence.html)
 - Limites de la base → [couverture](couverture.html) · [qualité du routage](qualite-routage.html)

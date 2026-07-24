@@ -27,6 +27,11 @@
    "exclusions",
    "points-vigilance"
   ],
+  "raisonner_sur_un_profil_client": [
+   "cas-types",
+   "pieges",
+   "methode-question-complexe"
+  ],
   "definition_d_un_terme": [
    "glossaire",
    "definitions"

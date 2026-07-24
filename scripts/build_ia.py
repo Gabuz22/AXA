@@ -129,6 +129,7 @@ RH_CATS = [
 ]
 ELEMENTS = {k: [] for k, _, _ in RH_CATS}
 ELEMENTS.update({"definitions": [], "conditions": [], "faits": [], "declencheurs": [], "plafonds": [], "franchises": []})
+PIEGES_BY_SLUG = {}   # rempli par build_pieges, lu par build_cas_types (ordre garanti dans main)
 CONTRACT_META = []
 
 def txt_of(f):
@@ -189,7 +190,7 @@ CATS_NAV = [("start", "START"), ("index", "Index"), ("instructions-maitres", "In
             ("qualite-routage", "Qualité routage"), ("hierarchie", "Hiérarchie"), ("choix-sources", "Choix sources"),
             ("methode-question-complexe", "Méthode"), ("contrats", "Contrats"), ("garanties", "Garanties"), ("exclusions", "Exclusions"),
             ("definitions", "Définitions"), ("conditions", "Conditions"), ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
-            ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"), ("divergences", "Divergences"), ("pieges", "Pièges"), ("matrices", "Matrices"), ("graphe", "Graphe"),
+            ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"), ("divergences", "Divergences"), ("pieges", "Pièges"), ("cas-types", "Cas-types"), ("matrices", "Matrices"), ("graphe", "Graphe"),
             ("notices", "Notices"), ("tracabilite", "Traçabilité"), ("sources", "Sources"), ("sources-officielles", "Sources officielles"), ("reglementation", "Réglementation"), ("surveillance", "Surveillance"),
             ("pack-a", "Pack A"), ("pack-b", "Pack B"), ("couverture", "Couverture"), ("maturite", "Maturité")]
 def nav_html(depth):
@@ -696,6 +697,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 - Preuve à citer → [preuves](preuves.html) · [notices](notices.html)
 - Ce qui reste à VÉRIFIER avant de citer (par contrat) → [traçabilité](tracabilite.html)
 - Question complexe → [méthode](methode-question-complexe.html) · [planificateur](planificateur.html)
+- **Raisonner sur un profil client** (comme un conseiller) → [cas-types travaillés](cas-types.html)
 - Réglementaire vs contractuel → [réglementation](reglementation.html) · [sources officielles](sources-officielles.html) · [hiérarchie](hierarchie.html)
 - **Monter en rigueur** (répondre niveau conseiller, contrôler niveau inspecteur) → [niveaux de compétence](niveaux-competence.html)
 - Limites de la base → [couverture](couverture.html) · [qualité du routage](qualite-routage.html)
@@ -810,7 +812,7 @@ def build_static_pages(theme_counts):
     # Manifeste lisible + ai-manifest.json
     pages = ["start", "index", "instructions-maitres", "guide-ia", "niveaux-competence", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
              "planificateur", "concepts", "couverture-recherche",
-             "comparateur", "divergences", "pieges", "tracabilite", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
+             "comparateur", "divergences", "pieges", "cas-types", "tracabilite", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
              "sources-officielles", "reglementation", "surveillance", "connaissances-dynamiques", "matrices",
              "graphe", "maturite", "pack-a", "pack-b", "contrats",
              "garanties", "exclusions", "options", "cotisations", "delais", "fiscalite", "points-vigilance",
@@ -862,6 +864,7 @@ def build_static_pages(theme_counts):
             "comparer_des_contrats": ["comparateur", "matrices", "contrats"],
             "verifier_les_ecarts_entre_contrats": ["divergences", "comparateur", "matrices"],
             "les_pieges_et_exclusions_d_un_contrat": ["pieges", "exclusions", "points-vigilance"],
+            "raisonner_sur_un_profil_client": ["cas-types", "pieges", "methode-question-complexe"],
             "definition_d_un_terme": ["glossaire", "definitions"],
             "delais_franchises_plafonds": ["delais", "franchises", "plafonds"],
             "cotisations_et_fiscalite": ["cotisations", "fiscalite"],
@@ -1685,12 +1688,129 @@ def build_pieges():
         hb.append("</ul>")
         data["contrats"].append(cd)
 
+    global PIEGES_BY_SLUG
+    PIEGES_BY_SLUG = {cd["slug"]: cd for cd in data["contrats"]}
     write("pieges.json", json.dumps(data, ensure_ascii=False, indent=1))
     md += ["", "## Format machine", "- [pieges.json](pieges.json) — par contrat : chaque piège avec son type, son impact "
            "client, sa notice et sa page. Une IA s'en sert pour ne jamais présenter une garantie sans son revers.", ""]
     hb.append('<h2>Format machine</h2><p><a href="pieges.json">pieges.json</a> — par contrat : type, impact client, notice, page.</p>')
     write("pieges.md", "\n".join(md))
     write("pieges.html", page_html("Matrice de pièges", "".join(hb), depth, SITE + "/ia/pieges.html"))
+
+# Cas-types : parcours de RAISONNEMENT travaillés. Le rattachement profil → FAMILLE de contrat est
+# factuel (chaque contrat couvre un besoin connu) ; les pièges et citations viennent des données
+# réelles. Ce ne sont PAS des recommandations automatiques : ce sont des patrons de raisonnement à
+# imiter — le conseiller décide, la notice PDF fait foi.
+CAS_TYPES = [
+    {"id": "tns-artisan-credit", "titre": "Artisan TNS, 42 ans, 2 enfants, crédit immobilier en cours",
+     "type": "profil client · multi-besoins",
+     "profil": "Travailleur indépendant (TNS) : le régime obligatoire couvre mal l'arrêt de travail. Deux enfants à charge, un crédit immobilier en cours.",
+     "besoins": ["Maintien du revenu en cas d'arrêt de travail / invalidité (priorité TNS)",
+                 "Sécuriser le remboursement du crédit", "Protéger la famille en cas de décès"],
+     "contrats": ["avizen-pro", "masterlife-credit", "avizen"],
+     "questions": ["Que verse réellement le régime obligatoire en arrêt de travail, et quel complément vise-t-on ?",
+                   "Capital restant dû, durée et quotités entre co-emprunteurs ?",
+                   "Qui dépend de ce revenu, et sur quelle durée (éducation des enfants) ?"]},
+    {"id": "jeune-celibataire-sportif", "titre": "26 ans, célibataire, sans personne à charge, sport à risque",
+     "type": "profil client · besoin ciblé",
+     "profil": "Pas de personne à charge : le décès n'est pas la priorité. Pratique un sport à risque — le besoin réel est la réparation d'un accident de la vie privée.",
+     "besoins": ["Réparer les conséquences d'un accident de la vie privée", "Vérifier la couverture des sports à risque"],
+     "contrats": ["ma-protection-accident", "avizen"],
+     "questions": ["Le sport pratiqué relève-t-il d'une exclusion ou d'une option dédiée ?",
+                   "Cherche-t-on l'indemnisation du préjudice réel (GAV) ou des montants forfaitaires ?"]},
+    {"id": "senior-dependance", "titre": "62 ans, anticipe la perte d'autonomie",
+     "type": "profil client · besoin ciblé",
+     "profil": "Fenêtre d'assurabilité : plus on attend, plus c'est cher ou refusé. Le besoin est la dépendance, pas l'épargne.",
+     "besoins": ["Couvrir la perte d'autonomie (rente dépendance)", "Éventuellement anticiper les obsèques"],
+     "contrats": ["entour-age", "essen-ciel-assurance-obseques"],
+     "questions": ["Couvrir la dépendance totale seule, ou aussi partielle (choix de formule) ?",
+                   "Un capital immédiat pour les premiers frais est-il souhaité ?",
+                   "Quel est l'âge exact ? Il conditionne l'admissibilité et le tarif."]},
+    {"id": "salarie-achat-immobilier", "titre": "Salarié 38 ans, achat immobilier, couverture collective employeur",
+     "type": "profil client · multi-besoins",
+     "profil": "Un salarié a souvent une couverture collective : vérifier avant de doubler. L'achat immobilier crée un besoin d'assurance emprunteur.",
+     "besoins": ["Sécuriser le crédit immobilier", "Compléter (sans doublonner) la prévoyance décès/ITT du collectif"],
+     "contrats": ["masterlife-credit", "avizen"],
+     "questions": ["Que couvre déjà le contrat collectif de l'employeur (décès, ITT, invalidité) ?",
+                   "Profil AERAS ou antécédents à déclarer pour l'emprunteur ?"]},
+    {"id": "epargne-transmission", "titre": "55 ans, transmettre un capital dans un cadre fiscal avantageux",
+     "type": "profil client · épargne / transmission",
+     "profil": "Le socle de protection est en place ; l'objectif est la transmission via l'assurance vie. Attention : ce n'est pas une épargne garantie.",
+     "besoins": ["Transmettre un capital au décès", "Comprendre le cadre fiscal (réglementaire, à vérifier)"],
+     "contrats": ["excelium-assurance-vie", "essen-ciel-patrimoine"],
+     "questions": ["Objectif : financer des funérailles, ou transmettre plus largement ?",
+                   "Horizon de placement et tolérance au risque (UC vs fonds euros) ?"]},
+    {"id": "preparation-retraite", "titre": "45 ans, préparer un revenu de retraite",
+     "type": "profil client · retraite",
+     "profil": "Se construit tôt, après la protection du présent. Le PER est indisponible avant l'échéance (hors cas de déblocage).",
+     "besoins": ["Constituer une épargne retraite", "Comprendre déductibilité (réglementaire) et sortie"],
+     "contrats": ["ma-retraite-plan-d-epargne-retraite-individuel-per"],
+     "questions": ["Horizon avant la retraite ? Capacité d'épargne régulière ?",
+                   "Sortie souhaitée en rente, en capital, ou mixte ?"]},
+]
+
+def build_cas_types():
+    depth = 0
+    cslug_nom = {slug(c["nom"]): c["nom"] for c in CONTRATS}
+    data = {"meta": {"version": VERSION, "genere_le": DATE,
+                     "usage": "Patrons de RAISONNEMENT travaillés (profil → besoins → contrats candidats → pièges → "
+                              "questions). À imiter, jamais à appliquer comme une recommandation automatique.",
+                     "regle": "Aide au raisonnement. Le conseiller décide ; garanties, exclusions et conditions se "
+                              "vérifient dans la fiche et la notice PDF."},
+            "cas": []}
+    md = [md_hdr("Cas-types travaillés",
+                 "Parcours de raisonnement de bout en bout : d'un profil client à la forme d'une bonne réponse, en "
+                 "passant par les besoins, les contrats candidats, leurs pièges et les questions à poser."), ""]
+    md += ["> **Ce ne sont pas des recommandations.** Ce sont des **patrons de raisonnement** : la façon de chaîner "
+           "profil → besoins → contrats à examiner → pièges → questions. Le conseiller décide ; la notice PDF fait foi.", ""]
+    hb = ['<h1>Cas-types travaillés</h1>',
+          '<p>Des parcours de <strong>raisonnement</strong> de bout en bout — à imiter, jamais des recommandations '
+          'automatiques. Le conseiller décide ; la notice PDF fait foi.</p>']
+
+    for cas in CAS_TYPES:
+        contrats = [{"slug": cs, "nom": cslug_nom.get(cs, cs),
+                     "pieges": (PIEGES_BY_SLUG.get(cs, {}).get("pieges") or [])[:2]} for cs in cas["contrats"]]
+        cd = {**{k: cas[k] for k in ("id", "titre", "type", "profil", "besoins", "questions")},
+              "contrats_a_examiner": [{"slug": c["slug"], "nom": c["nom"],
+                                       "pieges_cles": [{"libelle": p["libelle"], "type": p["type_label"],
+                                                        "notice": p["notice"], "page": p["page"]} for p in c["pieges"]]}
+                                      for c in contrats]}
+        data["cas"].append(cd)
+
+        md += ["", "## %s" % cas["titre"], "", "_Type détecté : %s_" % cas["type"], "",
+               "**Profil.** %s" % cas["profil"], "",
+               "**① Besoins à explorer.**"] + ["- %s" % b for b in cas["besoins"]]
+        md += ["", "**② Contrats à examiner** (avec leurs pièges à vérifier d'abord) :"]
+        hb.append('<h2 id="c-%s">%s</h2><p><em>Type détecté : %s</em></p><p><strong>Profil.</strong> %s</p>'
+                  % (cas["id"], html.escape(cas["titre"]), html.escape(cas["type"]), html.escape(cas["profil"])))
+        hb.append('<p><strong>① Besoins à explorer</strong></p><ul>%s</ul>' % "".join("<li>%s</li>" % html.escape(b) for b in cas["besoins"]))
+        hb.append('<p><strong>② Contrats à examiner</strong> (avec leurs pièges à vérifier d\'abord) :</p>')
+        for c in contrats:
+            md.append("- [%s](contrat/%s.html)" % (c["nom"], c["slug"]))
+            hb.append('<div class="fitem"><div class="fitem-t"><a href="contrat/%s.html">%s</a></div><ul>' % (c["slug"], html.escape(c["nom"])))
+            for p in c["pieges"]:
+                src = {"document_source": p["notice"], "page": p["page"]} if p.get("notice") else None
+                md.append("  - ⚠ %s — _%s_%s" % (p["libelle"][:120], p["type_label"], cite_md(src, depth)))
+                hb.append('<li>⚠ %s — <em>%s</em>%s</li>' % (html.escape(p["libelle"][:120]), html.escape(p["type_label"]), cite_html(src, depth)))
+            if not c["pieges"]:
+                md.append("  - _(pièges : voir la fiche et la matrice de pièges)_"); hb.append("<li><em>voir la matrice de pièges</em></li>")
+            hb.append("</ul></div>")
+        md += ["", "**③ Questions à poser d'abord :**"] + ["- %s" % q for q in cas["questions"]]
+        hb.append('<p><strong>③ Questions à poser d\'abord</strong></p><ul>%s</ul>' % "".join("<li>%s</li>" % html.escape(q) for q in cas["questions"]))
+        md += ["", "**④ Forme d'une bonne réponse.** Reformuler le besoin, présenter chaque contrat candidat AVEC ses "
+               "pièges (jamais une garantie sans son revers), citer chaque fait `[Contrat — Notice, p.X]`, séparer le "
+               "réglementaire (fiscalité, plafonds → source officielle), finir par les questions ouvertes. **Aide au "
+               "raisonnement, pas une recommandation.**", ""]
+        hb.append('<p><strong>④ Forme d\'une bonne réponse.</strong> Reformuler le besoin, présenter chaque contrat '
+                  'AVEC ses pièges (jamais une garantie sans son revers), citer chaque fait, séparer le réglementaire '
+                  '(→ source officielle), finir par les questions. <em>Aide au raisonnement, pas une recommandation.</em></p>')
+
+    write("cas-types.json", json.dumps(data, ensure_ascii=False, indent=1))
+    md += ["", "## Format machine", "- [cas-types.json](cas-types.json) — chaque cas : profil, besoins, contrats à "
+           "examiner (avec pièges clés sourcés), questions. Un patron de raisonnement par cas.", ""]
+    hb.append('<h2>Format machine</h2><p><a href="cas-types.json">cas-types.json</a> — profil, besoins, contrats (pièges clés sourcés), questions.</p>')
+    write("cas-types.md", "\n".join(md))
+    write("cas-types.html", page_html("Cas-types travaillés", "".join(hb), depth, SITE + "/ia/cas-types.html"))
 
 def build_outils():
     depth = 0
@@ -1704,6 +1824,7 @@ def build_outils():
              ("comparateur", "Comparateur thématique", "un sujet, tous les contrats côte à côte, sourcé"),
              ("divergences", "Divergences inter-contrats", "où les contrats diffèrent sur un chiffre (âge, délais) — signal à vérifier, jamais une contradiction"),
              ("pieges", "Matrice de pièges", "le revers de chaque contrat : exclusions, déchéances, délais, plafonds — à croiser avec toute garantie"),
+             ("cas-types", "Cas-types travaillés", "parcours de raisonnement profil → besoins → contrats → pièges → questions"),
              ("tracabilite", "Audit de traçabilité", "par contrat : quelle part est pleinement sourcée (notice + page), et la liste de ce qui est à vérifier"),
              ("preuves", "Graphe de preuves", "chaque élément citable (id, source, page, concepts)"),
              ("methode-question-complexe", "Méthode & assembleur", "5 parcours + structure de réponse sécurisée"),
@@ -2437,6 +2558,7 @@ def build():
     build_niveaux()                  # escalier de rigueur conseiller → inspecteur + grille machine
     build_divergences()              # détecteur d'écarts chiffrés inter-contrats (contrôle inspecteur)
     build_pieges()                   # matrice de pièges par contrat (le revers de chaque garantie)
+    build_cas_types()                # cas-types travaillés (patrons de raisonnement, après build_pieges)
     build_tracabilite()              # audit de traçabilité par contrat (qualité de preuve, contrôle inspecteur)
     metrics = build_tests(concepts)  # tests-qualité + harness de précision
     # Infrastructure de raisonnement documentaire (Parties 2–10, 12)
