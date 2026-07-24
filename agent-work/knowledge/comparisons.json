@@ -1,0 +1,604 @@
+{
+  "version": "1.0.0",
+  "domain": "axa-contrat",
+  "generated_at": "2026-07-24T08:45:45Z",
+  "comparison": {
+    "matrix": {
+      "garantie": {
+        "Avizen": [
+          "Rente invalidité permanente partielle ou totale par accident (optionnelle)",
+          "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)",
+          "Indemnités journalières ITT par accident (optionnelle)",
+          "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+          "Indemnités journalières ITT toutes causes (optionnelle)",
+          "Rente éducation décès / Rente éducation IPT (garantie principale)",
+          "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+          "Garantie aide à la famille",
+          "Garantie invalidité permanente totale (IPT)",
+          "Garantie incapacité temporaire totale de travail (ITT)",
+          "Garantie décès",
+          "Délai d'attente pour les garanties incapacité temporaire totale de travail et invalidité permanente partielle ou totale.",
+          "Possibilité d'augmentation du capital garanti en cas de décès ou d'invalidité permanente totale sans sélection médicale ",
+          "Prestations d'assistance",
+          "Garantie décès accidentel",
+          "Capital en cas d’invalidité permanente partielle ou totale par accident",
+          "Garantie aide à la famille",
+          "Calcul de la rente en cas d'invalidité",
+          "Liste des professions éligibles au barème spécifique",
+          "Conditions de déclenchement du capital invalidité permanente"
+        ],
+        "Avizen Pro": [
+          "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)",
+          "Rente invalidité par accident (optionnelle)",
+          "Capital invalidité permanente partielle ou totale (optionnelle)",
+          "Rente éducation décès / IPT + double effet",
+          "Capital décès par accident / IPT par accident",
+          "Indemnités Remboursement des frais professionnels (optionnelle)",
+          "IJ ITT par accident (optionnelle)",
+          "Capital invalidité par accident (optionnelle)"
+        ],
+        "Entour'Age": [
+          "Services pour l'aidant de l'assuré",
+          "Services dès l'adhésion « ENTREAIDANTS »",
+          "Rente viagère dépendance (garantie principale obligatoire)",
+          "Services d'assistance dédiés en perte d'autonomie"
+        ],
+        "Essen'Ciel (assurance obsèques)": [
+          "Garantie décès (capital obsèques)",
+          "Revalorisation du capital",
+          "Assistance dès l'adhésion",
+          "Assistance au moment du décès",
+          "Assistance après le décès (proches)",
+          "Garantie décès",
+          "Garanties d'assistance"
+        ],
+        "Essen'Ciel Patrimoine": [
+          "Garantie décès — versement d'un capital aux bénéficiaires",
+          "Revalorisation / participation aux bénéfices"
+        ],
+        "Excelium (assurance vie)": [
+          "Garantie en cas de décès",
+          "Garantie « Revalorisée »",
+          "Garantie « Sérénité » (plancher, incluse)",
+          "Garantie en cas de vie (au terme)"
+        ],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [
+          "Accidents lors de la conduite d'un véhicule (dérogations)",
+          "Accidents médicaux et infections nosocomiales",
+          "Préjudices indemnisés selon droit commun",
+          "Indemnisation des préjudices corporels (barème AQV)",
+          "En cas de décès",
+          "Accidents corporels d'activités courantes",
+          "Accidents corporels lors d'événements exceptionnels"
+        ],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [
+          "Garantie « Sérénité » (plancher décès, incluse)",
+          "En cas de décès avant liquidation totale",
+          "Garanties de fidélité",
+          "En cas de vie — sortie en capital",
+          "En cas de vie — sortie en rente viagère"
+        ],
+        "Masterlife CREDIT": [
+          "Incapacité de travail (IJ)",
+          "Invalidité totale ou partielle",
+          "Exonération du paiement des cotisations",
+          "Invalidité spécifique AERAS (GIS)",
+          "PTIA",
+          "Garantie Aide à la famille",
+          "Décès"
+        ]
+      },
+      "definition": {
+        "Avizen": [],
+        "Avizen Pro": [],
+        "Entour'Age": [],
+        "Essen'Ciel (assurance obsèques)": [
+          "Définition de l'âge de l'assuré pour le calcul de la cotisation",
+          "Le contrat Essen'Ciel ne fournit pas de définition explicite des termes 'invalidité', 'accident', 'hospitalisation' ou '",
+          "Définition de la valeur de réduction",
+          "Définition de l'accident : toute atteinte corporelle non intentionnelle de la part de l'assuré, provenant de l'action so",
+          "Définition contractuelle de la maladie",
+          "Définition contractuelle de l'accident",
+          "Définition contractuelle de la force majeure"
+        ],
+        "Essen'Ciel Patrimoine": [],
+        "Excelium (assurance vie)": [],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [],
+        "Masterlife CREDIT": []
+      },
+      "condition": {
+        "Avizen": [],
+        "Avizen Pro": [],
+        "Entour'Age": [],
+        "Essen'Ciel (assurance obsèques)": [
+          "Possibilité de rachat total après la première année",
+          "Conditions cumulatives pour adhérer au contrat",
+          "La mise en relation avec un psychologue est possible pendant les 6 mois suivant le décès.",
+          "La garde est limitée à 16 heures maximum sur 2 jours suivant le décès, avec un minimum de 2 heures consécutives.",
+          "Sélection médicale à l'adhésion",
+          "Délai de traitement des réclamations",
+          "La garantie est limitée à une période de 3 mois suivant le décès de l'assuré.",
+          "Conditions d'éligibilité pour modifier le montant du capital garanti",
+          "La garantie aide-ménagère est soumise à un minimum de 2 heures consécutives au cours du mois suivant le décès.",
+          "Exclusion de la garantie décès en cas de suicide durant la première année d'adhésion.",
+          "Conditions de prise d'effet et durée de l'adhésion."
+        ],
+        "Essen'Ciel Patrimoine": [],
+        "Excelium (assurance vie)": [],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [],
+        "Masterlife CREDIT": []
+      },
+      "declencheur": {
+        "Avizen": [],
+        "Avizen Pro": [],
+        "Entour'Age": [],
+        "Essen'Ciel (assurance obsèques)": [
+          "Conséquences et délais en cas de non-paiement de la cotisation",
+          "La garantie de présence d'un membre de la famille est conditionnée au fait que l'assuré était seul sur place au moment d",
+          "La nécessité de l'intervention de l'assistance est déterminée exclusivement par l'équipe médicale d'AXA.",
+          "Déclenchement de la garantie décès selon la cause (accidentelle ou non).",
+          "Le versement du capital garanti intervient dans un délai de 48 heures jours ouvrés suivant la réception de toutes les pi"
+        ],
+        "Essen'Ciel Patrimoine": [],
+        "Excelium (assurance vie)": [],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [],
+        "Masterlife CREDIT": []
+      },
+      "exclusion": {
+        "Avizen": [
+          "ITT/Invalidité — exclusions spécifiques",
+          "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire",
+          "Décès/IPT toutes causes — suicide 1re année",
+          "Exclusions communes — activités et sports à risque",
+          "Décès/IPT par accident — exclusions spécifiques"
+        ],
+        "Avizen Pro": [
+          "Décès/IPT toutes causes",
+          "Exclusions communes — activités/sports à risque",
+          "ITT/Invalidité",
+          "Décès/IPT par accident"
+        ],
+        "Entour'Age": [
+          "GIR 5 et 6",
+          "Dépendance suite à accidents — cas exclus",
+          "Exclusions générales (dépendance et décès)"
+        ],
+        "Essen'Ciel (assurance obsèques)": [
+          "Exclusions assistance",
+          "Décès accidentel exclu",
+          "Décès exclus",
+          "Exclusions de garantie"
+        ],
+        "Essen'Ciel Patrimoine": [
+          "Risques exclus de la garantie décès"
+        ],
+        "Excelium (assurance vie)": [
+          "Exclusions de la garantie « Revalorisée »"
+        ],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [
+          "Faits intentionnels, suicide",
+          "Affections même consécutives à un accident garanti",
+          "Délit intentionnel ou crime",
+          "Accidents du travail et activités électives/syndicales",
+          "Alcool, médicaments, stupéfiants",
+          "Sports professionnels, rémunérés, à risques, extrêmes",
+          "Non-respect de réglementation (véhicules motorisés)",
+          "Expérimentations biomédicales"
+        ],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [
+          "Indisponibilité de l'épargne"
+        ],
+        "Masterlife CREDIT": [
+          "États antérieurs",
+          "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)",
+          "PTIA/incapacité/invalidité — exclusions",
+          "Sports et activités exclus (sauf acceptation)",
+          "Décès — guerre/émeutes/crimes",
+          "Décès — suicide",
+          "Cures et esthétique"
+        ]
+      },
+      "limite": {
+        "Avizen": [],
+        "Avizen Pro": [],
+        "Entour'Age": [],
+        "Essen'Ciel (assurance obsèques)": [],
+        "Essen'Ciel Patrimoine": [],
+        "Excelium (assurance vie)": [],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [],
+        "Masterlife CREDIT": []
+      },
+      "plafond": {
+        "Avizen": [],
+        "Avizen Pro": [],
+        "Entour'Age": [],
+        "Essen'Ciel (assurance obsèques)": [
+          "Plafonds des frais de gestion inclus dans les cotisations",
+          "Plafond de prise en charge des frais de rapatriement et d'assistance par AXA Assistance",
+          "Plafond du capital garanti",
+          "Plafond global des garanties d'assistance décès",
+          "Le montant total des frais pris en charge pour la garde des enfants, la garde des animaux et l'aide-ménagère est limité ",
+          "La prise en charge de l'assistance psychologique est limitée à 6 entretiens et 80 € par séance en cabinet.",
+          "Le capital garanti choisi lors de l'adhésion est compris entre 2 000 et 10 000 €."
+        ],
+        "Essen'Ciel Patrimoine": [],
+        "Excelium (assurance vie)": [],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [],
+        "Masterlife CREDIT": []
+      },
+      "delai": {
+        "Avizen": [],
+        "Avizen Pro": [],
+        "Entour'Age": [],
+        "Essen'Ciel (assurance obsèques)": [
+          "Délai de paiement du capital garanti",
+          "Délai de renonciation",
+          "Délai de versement des sommes en cas de rachat",
+          "Délai de 10 jours après échéance pour le paiement des cotisations avant envoi d'une mise en demeure",
+          "Délai de versement en cas de rachat"
+        ],
+        "Essen'Ciel Patrimoine": [],
+        "Excelium (assurance vie)": [],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [],
+        "Masterlife CREDIT": []
+      },
+      "beneficiaire": {
+        "Avizen": [],
+        "Avizen Pro": [],
+        "Entour'Age": [],
+        "Essen'Ciel (assurance obsèques)": [],
+        "Essen'Ciel Patrimoine": [],
+        "Excelium (assurance vie)": [],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [],
+        "Masterlife CREDIT": []
+      },
+      "formalite": {
+        "Avizen": [],
+        "Avizen Pro": [],
+        "Entour'Age": [],
+        "Essen'Ciel (assurance obsèques)": [],
+        "Essen'Ciel Patrimoine": [],
+        "Excelium (assurance vie)": [],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [],
+        "Masterlife CREDIT": []
+      },
+      "option": {
+        "Avizen": [
+          "Exonération des cotisations en cas d'ITT",
+          "Indexation des garanties (option à l'adhésion)",
+          "Exonération des cotisations en cas d'invalidité",
+          "Capital décès double garantie",
+          "Augmentation sans sélection médicale (mariage/naissance/adoption)"
+        ],
+        "Avizen Pro": [
+          "Cadre fiscal Madelin",
+          "Exonération cotisations invalidité",
+          "Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)",
+          "Indexation PASS",
+          "Exonération cotisations ITT",
+          "Capital décès double garantie",
+          "Option taux invalidité professionnelle (barème spécifique)",
+          "Option taux d'invalidité 15 % maladie"
+        ],
+        "Entour'Age": [
+          "Réduction couple",
+          "Formule Dépendance Totale et Partielle",
+          "Capital Premiers Frais",
+          "Capital décès Remboursement des cotisations",
+          "Capital décès"
+        ],
+        "Essen'Ciel (assurance obsèques)": [
+          "Modification du capital garanti",
+          "Réduction adhésion simultanée (couple)",
+          "Choix de la durée de cotisation"
+        ],
+        "Essen'Ciel Patrimoine": [
+          "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+          "Mise en réduction (valeur de réduction)",
+          "Réduction tarifaire couple (-10 %)",
+          "Prestations d'assistance (suite au décès)"
+        ],
+        "Excelium (assurance vie)": [
+          "Prorogation du fonds Croissance",
+          "Types de gestion",
+          "Rachats partiels programmés"
+        ],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [
+          "Mes Sports à risque"
+        ],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [
+          "Types de gestion",
+          "Indexation des versements réguliers",
+          "Versements pris en charge par la société",
+          "Transfert individuel sortant"
+        ],
+        "Masterlife CREDIT": [
+          "Option Psy/Dos+",
+          "Tarif constant",
+          "Tarif capital restant dû"
+        ]
+      },
+      "formule": {
+        "Avizen": [
+          "Prestation invalidité (rente ou capital)",
+          "Exonération ITT",
+          "Taux d'indemnisation zone linéaire 11-30 %"
+        ],
+        "Avizen Pro": [
+          "Prestation invalidité (croisé)",
+          "Prestation invalidité (option professionnelle)",
+          "Exonération ITT"
+        ],
+        "Entour'Age": [
+          "Rente dépendance totale",
+          "Capital décès remboursement des cotisations"
+        ],
+        "Essen'Ciel (assurance obsèques)": [
+          "Capital revalorisé",
+          "Pénalité de rachat",
+          "Valeur de rachat"
+        ],
+        "Essen'Ciel Patrimoine": [],
+        "Excelium (assurance vie)": [
+          "Valeur de rachat minimale support euros",
+          "Nombre d'UC/parts après frais",
+          "Prime mensuelle garantie Revalorisée",
+          "Montant garanti Revalorisée"
+        ],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [
+          "Indice AQV",
+          "Renonciation vente à distance — cotisation due"
+        ],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [
+          "Valeur de transfert en parts/UC",
+          "Rente initiale"
+        ],
+        "Masterlife CREDIT": [
+          "IJ incapacité (plafond)",
+          "IJ invalidité partielle",
+          "Exonération incapacité"
+        ]
+      },
+      "point_vigilance": {
+        "Avizen": [
+          "Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.",
+          "IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.",
+          "Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).",
+          "Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotif…",
+          "Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en…",
+          "Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie."
+        ],
+        "Avizen Pro": [
+          "Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.",
+          "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
+          "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+          "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — véri…",
+          "Aucun montant garanti dans la notice — tout est au certificat d'adhésion.",
+          "Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.",
+          "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital."
+        ],
+        "Entour'Age": [
+          "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €……",
+          "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jam…",
+          "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+          "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).",
+          "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.",
+          "La mise en réduction met fin aux prestations d'assistance.",
+          "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+          "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans)."
+        ],
+        "Essen'Ciel (assurance obsèques)": [
+          "Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).",
+          "Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 € de VR pour 3 907 € versés à 10 ans).",
+          "Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes de frais.",
+          "Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, quelle que soit la formule (avertissement contractuel explici…",
+          "En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiaires (L132-18).",
+          "Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec le capital obsèques.",
+          "La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance."
+        ],
+        "Essen'Ciel Patrimoine": [],
+        "Excelium (assurance vie)": [
+          "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+          "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+          "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
+          "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+          "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
+          "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+          "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant."
+        ],
+        "Ma Protection Accident (Garantie des accidents de la vie)": [
+          "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
+          "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+          "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
+          "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (ar…",
+          "Subrogation de l'assureur contre le tiers responsable (6.7)."
+        ],
+        "Ma Retraite (plan d'épargne retraite individuel — PER)": [
+          "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégré…",
+          "Compartiment 3 : sortie en rente UNIQUEMENT.",
+          "Plus de déductibilité fiscale des versements après 70 ans.",
+          "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).",
+          "Frais de transfert 1 % uniquement les 5 premières années.",
+          "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.",
+          "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).",
+          "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants."
+        ],
+        "Masterlife CREDIT": [
+          "Pas de valeur de rachat ni de réduction.",
+          "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+          "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
+          "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
+          "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
+          "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).",
+          "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+."
+        ]
+      }
+    },
+    "differences": [
+      {
+        "category": "definition",
+        "kind": "couverture_asymetrique",
+        "present": [
+          "Essen'Ciel (assurance obsèques)"
+        ],
+        "absent": [
+          "Avizen",
+          "Avizen Pro",
+          "Entour'Age",
+          "Essen'Ciel Patrimoine",
+          "Excelium (assurance vie)",
+          "Ma Protection Accident (Garantie des accidents de la vie)",
+          "Ma Retraite (plan d'épargne retraite individuel — PER)",
+          "Masterlife CREDIT"
+        ],
+        "note": "différence de couverture documentaire, PAS une contradiction"
+      },
+      {
+        "category": "condition",
+        "kind": "couverture_asymetrique",
+        "present": [
+          "Essen'Ciel (assurance obsèques)"
+        ],
+        "absent": [
+          "Avizen",
+          "Avizen Pro",
+          "Entour'Age",
+          "Essen'Ciel Patrimoine",
+          "Excelium (assurance vie)",
+          "Ma Protection Accident (Garantie des accidents de la vie)",
+          "Ma Retraite (plan d'épargne retraite individuel — PER)",
+          "Masterlife CREDIT"
+        ],
+        "note": "différence de couverture documentaire, PAS une contradiction"
+      },
+      {
+        "category": "declencheur",
+        "kind": "couverture_asymetrique",
+        "present": [
+          "Essen'Ciel (assurance obsèques)"
+        ],
+        "absent": [
+          "Avizen",
+          "Avizen Pro",
+          "Entour'Age",
+          "Essen'Ciel Patrimoine",
+          "Excelium (assurance vie)",
+          "Ma Protection Accident (Garantie des accidents de la vie)",
+          "Ma Retraite (plan d'épargne retraite individuel — PER)",
+          "Masterlife CREDIT"
+        ],
+        "note": "différence de couverture documentaire, PAS une contradiction"
+      },
+      {
+        "category": "plafond",
+        "kind": "couverture_asymetrique",
+        "present": [
+          "Essen'Ciel (assurance obsèques)"
+        ],
+        "absent": [
+          "Avizen",
+          "Avizen Pro",
+          "Entour'Age",
+          "Essen'Ciel Patrimoine",
+          "Excelium (assurance vie)",
+          "Ma Protection Accident (Garantie des accidents de la vie)",
+          "Ma Retraite (plan d'épargne retraite individuel — PER)",
+          "Masterlife CREDIT"
+        ],
+        "note": "différence de couverture documentaire, PAS une contradiction"
+      },
+      {
+        "category": "delai",
+        "kind": "couverture_asymetrique",
+        "present": [
+          "Essen'Ciel (assurance obsèques)"
+        ],
+        "absent": [
+          "Avizen",
+          "Avizen Pro",
+          "Entour'Age",
+          "Essen'Ciel Patrimoine",
+          "Excelium (assurance vie)",
+          "Ma Protection Accident (Garantie des accidents de la vie)",
+          "Ma Retraite (plan d'épargne retraite individuel — PER)",
+          "Masterlife CREDIT"
+        ],
+        "note": "différence de couverture documentaire, PAS une contradiction"
+      },
+      {
+        "category": "formule",
+        "kind": "couverture_asymetrique",
+        "present": [
+          "Avizen",
+          "Avizen Pro",
+          "Entour'Age",
+          "Essen'Ciel (assurance obsèques)",
+          "Excelium (assurance vie)",
+          "Ma Protection Accident (Garantie des accidents de la vie)",
+          "Ma Retraite (plan d'épargne retraite individuel — PER)",
+          "Masterlife CREDIT"
+        ],
+        "absent": [
+          "Essen'Ciel Patrimoine"
+        ],
+        "note": "différence de couverture documentaire, PAS une contradiction"
+      },
+      {
+        "category": "point_vigilance",
+        "kind": "couverture_asymetrique",
+        "present": [
+          "Avizen",
+          "Avizen Pro",
+          "Entour'Age",
+          "Essen'Ciel (assurance obsèques)",
+          "Excelium (assurance vie)",
+          "Ma Protection Accident (Garantie des accidents de la vie)",
+          "Ma Retraite (plan d'épargne retraite individuel — PER)",
+          "Masterlife CREDIT"
+        ],
+        "absent": [
+          "Essen'Ciel Patrimoine"
+        ],
+        "note": "différence de couverture documentaire, PAS une contradiction"
+      }
+    ]
+  },
+  "contradiction_candidates": {
+    "Avizen": [],
+    "Avizen Pro": [],
+    "Entour'Age": [],
+    "Essen'Ciel (assurance obsèques)": [],
+    "Essen'Ciel Patrimoine": [
+      {
+        "a": "k_d60615daf3d45e9f428a",
+        "b": "k_7255488673c0bd0bd2df",
+        "label_a": "Garantie décès — versement d'un capital aux bénéficiaires",
+        "label_b": "Risques exclus de la garantie décès",
+        "nature": "candidat_contradiction",
+        "validation_required": true
+      }
+    ],
+    "Excelium (assurance vie)": [
+      {
+        "a": "k_292f5254485896f9efa0",
+        "b": "k_b4c344360465d24d7f09",
+        "label_a": "Garantie « Revalorisée »",
+        "label_b": "Exclusions de la garantie « Revalorisée »",
+        "nature": "candidat_contradiction",
+        "validation_required": true
+      }
+    ],
+    "Ma Protection Accident (Garantie des accidents de la vie)": [],
+    "Ma Retraite (plan d'épargne retraite individuel — PER)": [],
+    "Masterlife CREDIT": []
+  },
+  "note": "différences de couverture ≠ contradictions ; tout candidat reste à vérifier (LLM/humain)."
+}

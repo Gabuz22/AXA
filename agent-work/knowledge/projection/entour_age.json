@@ -1,0 +1,803 @@
+{
+  "projection_version": "1.0.0",
+  "subject": "Entour'Age",
+  "domain": "axa-contrat",
+  "synthese": {
+    "depth_score": 0.913,
+    "semantic_coverage": 0.385,
+    "profondeur": {
+      "L1": 13,
+      "L2": 23,
+      "L3": 24,
+      "L4": 17
+    },
+    "rates": {
+      "proof": 0.609,
+      "unrelated": 0.174,
+      "uncertainty": 0.348,
+      "contradiction": 0.0,
+      "n_entities": 23
+    }
+  },
+  "connaissances": {
+    "garantie": [
+      {
+        "label": "Services pour l'aidant de l'assuré",
+        "resume": "Informations/conseils identiques à l'assuré ; organisation de services à la personne et recherche de fournisseurs (coûts non pris en charge) ; hospitalisation imprévue > 24 h de l'aidant : aide-ménagère/auxiliaire de vie 20 h max plafonnée à 500 € TTC, 1 intervention/année civile, demande sous 8 jours ; besoin de répit de l'aidant : auxiliaire de vie (7 jours/an max, 6 h/jour max) et/ou hébergement temporaire (7 jours/an, transport 100 €/an) dans la limite GLOBALE de 1 000 € TTC/an ; aide à l'hébergement en établissement (recherche 3 établissements, 2 v…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 25,
+            "citation": "Services pour l'aidant de l'assuré"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Services dès l'adhésion « ENTREAIDANTS »",
+        "resume": "Site entreaidants.fr ; renseignements téléphoniques personnalisés 24/7 (prévention, santé, juridique, démarches dépendance « Mon assistante dédiée », aide à la constitution de dossiers APA etc.) ; garanties hospitalisation (> 24 h, ou < 24 h avec chirurgie hanche/bras/jambe/pied/main, ou chimio/radiothérapie) ou immobilisation > 4 jours : aide-ménagère/garde-malade 20 h max (min 2 h consécutives) plafonnée à 500 € TTC (demande sous 8 jours), garde/transfert animaux (2 max, 250 € TTC), visite d'un proche (transport A/R + hôtel 50 €/nuit max 250 € si aucu…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 15,
+            "citation": "Services dès l'adhésion « ENTREAIDANTS »"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Rente viagère dépendance (garantie principale obligatoire)",
+        "resume": "Rente mensuelle versée tant que dure l'état de dépendance garanti. Montant en dépendance totale = montant souscrit (500 à 3 000 €/mois) × taux de revalorisation depuis l'adhésion × le cas échéant coefficient de réduction (si résiliation après ≥ 8 ans). En Formule Totale et Partielle : 50 % du montant en dépendance partielle ; la rente totale se substitue intégralement à la rente partielle si l'état s'aggrave (nouveau dossier requis). Versée mensuellement à terme échu, après franchise absolue de 3 mois (à compter du 91e jour suivant la reconnaissance). C…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 21,
+            "citation": "Rente viagère dépendance (garantie principale obligatoire)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Services d'assistance dédiés en perte d'autonomie",
+        "resume": "Bilan initial de situation de dépendance à domicile (1 seul par assuré pendant l'adhésion) ; « projet de vie personnalisé » ; bilan d'adaptation du domicile par ergothérapeute/professionnel du bâtiment pris en charge jusqu'à 500 € TTC ; suivi de la qualité de vie.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 23,
+            "citation": "Services d'assistance dédiés en perte d'autonomie"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "exclusion": [
+      {
+        "label": "GIR 5 et 6",
+        "resume": "L'état de dépendance avec classement GIR 5 ou 6 n'est jamais garanti.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 13,
+            "citation": "GIR 5 et 6"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Dépendance suite à accidents — cas exclus",
+        "resume": "Fait intentionnel de l'assuré ; activité sportive non représentée par une fédération, sans respect des règles élémentaires de sécurité, ou à titre professionnel ; navigation aérienne (appareil sans certificat de navigabilité valable ou pilote non breveté/licence périmée ; parachute, deltaplane, parapente, ULM ou assimilé ; meeting, raid sportif, vol acrobatique, tentative de record, essais, saut en parachute non motivé par la sécurité) ; conséquences directes ou indirectes d'une transmutation de noyaux d'atomes ou de la radioactivité. La charge de la pr…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 29,
+            "citation": "Dépendance suite à accidents — cas exclus"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Exclusions générales (dépendance et décès)",
+        "resume": "Tentative de suicide de l'assuré (le suicide étant également exclu la 1re année pour la garantie Décès) ; guerres civiles en France ou guerres étrangères auxquelles la France participe, invasions, agressions étrangères, hostilités contre la France ; participation active à guerre civile, guerre sans la France, rébellion, révolution, insurrection, prise de pouvoir, mouvement populaire, émeute, terrorisme — légitime défense, assistance à personne en danger et accomplissement du devoir professionnel restant garantis.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 29,
+            "citation": "Exclusions générales (dépendance et décès)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "option": [
+      {
+        "label": "Réduction couple",
+        "resume": "Si chaque conjoint adhère individuellement dans un délai maximal de 3 mois entre les deux adhésions : réduction tarifaire permanente de 10 % sur les deux cotisations. Prend fin si l'un des contrats est résilié ou mis en réduction.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 11,
+            "citation": "Réduction couple"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Formule Dépendance Totale et Partielle",
+        "resume": "Étend la couverture à la dépendance partielle : 50 % de la rente dès reconnaissance de la dépendance partielle ; substitution intégrale par la rente totale en cas d'aggravation reconnue.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 6,
+            "citation": "Formule Dépendance Totale et Partielle"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Capital Premiers Frais",
+        "resume": "Capital forfaitaire de 3 500 € versé à l'ouverture du droit à prestations pour l'état de dépendance garanti (y compris dépendance LÉGÈRE si l'option est souscrite dans le cadre de la Formule Totale et Partielle). Montant = montant souscrit × revalorisation × coefficient de réduction éventuel. Versement unique mettant fin à la garantie ; libre utilisation.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 6,
+            "citation": "Capital Premiers Frais"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Capital décès Remboursement des cotisations",
+        "resume": "En cas de décès SANS dépendance préalable avant le 85e anniversaire : remboursement aux bénéficiaires du cumul des cotisations nettes des frais de fractionnement versées depuis la date d'effet de cette garantie. Non cumulable avec le Capital décès.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 27,
+            "citation": "Capital décès Remboursement des cotisations"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Capital décès",
+        "resume": "3 500 € versés aux bénéficiaires en cas de décès de l'assuré ; le versement met fin à toutes les garanties. Cesse à la fin de l'année d'assurance des 85 ans. Non cumulable avec Capital décès remboursement des cotisations.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 6,
+            "citation": "Capital décès"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "point_vigilance": [
+      {
+        "label": "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €……",
+        "resume": "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €…).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jam…",
+        "resume": "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jamais garantis ; GIR 4 seulement pour la dépendance légère (Capital Premiers Frais).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+        "resume": "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).",
+        "resume": "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.",
+        "resume": "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "La mise en réduction met fin aux prestations d'assistance.",
+        "resume": "La mise en réduction met fin aux prestations d'assistance.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+        "resume": "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans).",
+        "resume": "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "formule": [
+      {
+        "label": "Rente dépendance totale",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 21,
+            "citation": "Rente dépendance totale"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Capital décès remboursement des cotisations",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+            "page": 27,
+            "citation": "Capital décès Remboursement des cotisations"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "contrat": [
+      {
+        "label": "Entour'Age",
+        "resume": null,
+        "confidence": 0.55,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      }
+    ]
+  },
+  "relations": [
+    {
+      "type": "complements",
+      "de": "Services dès l'adhésion « ENTREAIDANTS »",
+      "vers": "Services pour l'aidant de l'assuré",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Services d'assistance dédiés en perte d'autonomie",
+      "vers": "Rente viagère dépendance (garantie principale obligatoire)",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "GIR 5 et 6",
+      "vers": "Rente viagère dépendance (garantie principale obligatoire)",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "refines",
+      "de": "Formule Dépendance Totale et Partielle",
+      "vers": "Rente viagère dépendance (garantie principale obligatoire)",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Capital Premiers Frais",
+      "vers": "Rente viagère dépendance (garantie principale obligatoire)",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Capital décès Remboursement des cotisations",
+      "vers": "Rente viagère dépendance (garantie principale obligatoire)",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Capital décès",
+      "vers": "Rente viagère dépendance (garantie principale obligatoire)",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "GIR 5 et 6",
+      "vers": "Rente viagère dépendance (garantie principale obligatoire)",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Services pour l'aidant de l'assuré",
+      "vers": "Rente viagère dépendance (garantie principale obligatoire)",
+      "directed": true,
+      "confidence": 0.55,
+      "validation_required": true
+    }
+  ],
+  "environnement": [
+    {
+      "clause": "Services pour l'aidant de l'assuré",
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Services dès l'adhésion « ENTREAIDANTS »",
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Services dès l'adhésion « ENTREAIDANTS »",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Rente viagère dépendance (garantie principale obligatoire)",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Services d'assistance dédiés en perte d'autonomie",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Exclusions générales (dépendance et décès)",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Exclusions générales (dépendance et décès)",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital décès Remboursement des cotisations",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital décès Remboursement des cotisations",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital décès",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital décès",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans).",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans).",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "Services pour l'aidant de l'assuré",
+      "aspect": "role",
+      "explication": "La garantie propose des conseils et une aide à l'organisation de services à la personne pour l'aidant, bien que les coûts des prestataires restent à sa charge. En cas d'hospitalisation imprévue de l'aidant supérieure à 24 heures, une aide-ménagère peut être mise en place.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Services dès l'adhésion « ENTREAIDANTS »",
+      "aspect": "role",
+      "explication": "Les services « ENTREAIDANTS » offrent des renseignements téléphoniques personnalisés disponibles 24h/24 et 7j/7. Ils couvrent des domaines tels que la prévention, la santé, le juridique, ainsi qu'une assistance pour les démarches liées à la dépendance, incluant l'aide à la constitution de dossiers APA.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Rente viagère dépendance (garantie principale obligatoire)",
+      "aspect": "role",
+      "explication": "La rente viagère dépendance est une garantie principale obligatoire qui prévoit le versement d'une rente mensuelle pendant toute la durée de l'état de dépendance garanti. Le montant versé en cas de dépendance totale correspond au montant souscrit, ajusté par un taux de revalorisation et un éventuel coefficient.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Services d'assistance dédiés en perte d'autonomie",
+      "aspect": "role",
+      "explication": "Cette garantie comprend la réalisation d'un bilan initial de situation de dépendance à domicile et l'élaboration d'un projet de vie personnalisé. Elle inclut également un bilan d'adaptation du domicile effectué par un ergothérapeute ou un professionnel du bâtiment.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "GIR 5 et 6",
+      "aspect": "role",
+      "explication": "Les niveaux de dépendance classés GIR 5 et 6 sont explicitement exclus de la garantie. Par conséquent, l'état de dépendance correspondant à ces classements n'est jamais couvert par le contrat.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Dépendance suite à accidents — cas exclus",
+      "aspect": "role",
+      "explication": "Les exclusions pour la dépendance suite à un accident concernent les faits intentionnels de l'assuré, les activités sportives non fédérées pratiquées sans règles de sécurité ou à titre professionnel, ainsi que la navigation aérienne sur des appareils sans certificat.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Exclusions générales (dépendance et décès)",
+      "aspect": "role",
+      "explication": "Les exclusions générales pour la dépendance et le décès incluent la tentative de suicide de l'assuré ainsi que les guerres civiles en France ou les guerres étrangères impliquant la France. Le suicide est également spécifiquement exclu durant la première année pour la garantie décès.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Réduction couple",
+      "aspect": "role",
+      "explication": "La réduction couple est une remise tarifaire permanente de 10 % appliquée sur les deux cotisations lorsque chaque conjoint adhère individuellement dans un délai maximal de 3 mois. Cet avantage prend fin si l'un des deux contrats est résilié.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Formule Dépendance Totale et Partielle",
+      "aspect": "role",
+      "explication": "Cette option étend la couverture de l'assurance à la dépendance partielle en versant 50 % de la rente dès sa reconnaissance. En cas d'aggravation de l'état de santé, la rente totale se substitue intégralement à la rente partielle.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Capital Premiers Frais",
+      "aspect": "role",
+      "explication": "Le Capital Premiers Frais consiste en un versement forfaitaire de 3 500 € déclenché lors de l'ouverture du droit à prestations pour dépendance. Si l'option est souscrite avec la Formule Totale, ce capital est également versé en cas de dépendance légère.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Capital décès Remboursement des cotisations",
+      "aspect": "role",
+      "explication": "En cas de décès de l'assuré avant son 85e anniversaire sans dépendance préalable, cette option prévoit le remboursement aux bénéficiaires du cumul des cotisations versées. Ce montant est calculé net des frais de fractionnement depuis la date d'effet du contrat.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Capital décès",
+      "aspect": "role",
+      "explication": "Le capital décès prévoit le versement de 3 500 € aux bénéficiaires en cas de décès de l'assuré, ce qui entraîne la fin de toutes les garanties. Cette option cesse à la fin de l'année d'assurance des 85 ans et n'est pas cumulable avec le capital décès remboursé.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €……",
+      "aspect": "role",
+      "explication": "Les services d'aide aux aidants consistent principalement en une mission d'organisation. Les frais liés aux prestataires sont à la charge de l'assuré, à moins qu'un plafond de prise en charge spécifique ne soit explicitement prévu par le contrat.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jam…",
+      "aspect": "role",
+      "explication": "La dépendance totale définie par le contrat est plus restrictive que la grille AGGIR, car elle impose un cumul avec des critères d'AVQ et de Folstein. Les GIR 5 et 6 ne sont jamais garantis, et le GIR 4 n'est couvert que sous certaines conditions.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+      "aspect": "role",
+      "explication": "Cette clause définit une période de carence de trois mois durant laquelle aucune rente n'est versée. Aucun paiement rétroactif ne sera effectué pour cette période initiale après l'activation de la garantie.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).",
+      "aspect": "role",
+      "explication": "Le barème des coefficients de mise en réduction n'est pas inclus dans la notice d'information. Ce barème est défini comme étant « en vigueur » et peut être modifié par le comité paritaire.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Entour'Age",
+      "aspect": "finalite",
+      "explication": "Anticiper la perte d'autonomie : verser une rente viagère lorsque l'assuré devient dépendant (dépendance totale, ou totale et partielle selon la formule), avec des services d'assistance pour l'assuré et ses aidants, et des options de capital (premiers frais, capital décès).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Entour'Age",
+      "aspect": "logique_contractuelle",
+      "explication": "Le déclencheur est l'état de dépendance médicalement constaté selon les grilles du contrat ; les niveaux de dépendance légère (GIR 5 et 6) sont hors garantie. La formule choisie (totale seule, ou totale + partielle) détermine l'étendue du déclenchement. Les services d'assistance existent dès l'adhésion, avant tout sinistre.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Entour'Age",
+      "aspect": "confusions_frequentes",
+      "explication": "La rente dépendance n'est ni une assurance santé ni une prise en charge d'établissement : c'est un revenu viager déclenché par la dépendance reconnue. GIR 5-6 exclus : une perte d'autonomie légère ne déclenche rien. La réduction couple est tarifaire, pas une extension de garantie.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Entour'Age",
+      "aspect": "situations_favorables",
+      "explication": "Préparation de la dépendance à un âge où les cotisations restent accessibles ; présence d'aidants familiaux (services ENTREAIDANTS).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Entour'Age",
+      "aspect": "situations_defavorables",
+      "explication": "Dépendance déjà installée ou imminente ; attentes de prise en charge médicale complète ; dépendance légère.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Entour'Age",
+      "aspect": "relation_complements_ma_retraite_plan_d_eparg",
+      "explication": "Préparation du grand âge sous deux angles : revenu de retraite (PER) et risque de dépendance (rente viagère dédiée).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    }
+  ],
+  "preuves": [
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 25,
+      "citation": "Services pour l'aidant de l'assuré"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 15,
+      "citation": "Services dès l'adhésion « ENTREAIDANTS »"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 21,
+      "citation": "Rente viagère dépendance (garantie principale obligatoire)"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 23,
+      "citation": "Services d'assistance dédiés en perte d'autonomie"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 13,
+      "citation": "GIR 5 et 6"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 29,
+      "citation": "Dépendance suite à accidents — cas exclus"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 29,
+      "citation": "Exclusions générales (dépendance et décès)"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 11,
+      "citation": "Réduction couple"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 6,
+      "citation": "Formule Dépendance Totale et Partielle"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 6,
+      "citation": "Capital Premiers Frais"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 27,
+      "citation": "Capital décès Remboursement des cotisations"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 6,
+      "citation": "Capital décès"
+    },
+    {
+      "document": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+      "page": 21,
+      "citation": "Rente dépendance totale"
+    }
+  ],
+  "incertitudes": [
+    {
+      "label": "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €……",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jam…",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "La mise en réduction met fin aux prestations d'assistance.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans).",
+      "confidence": 0.35,
+      "ambiguities": []
+    }
+  ],
+  "fraicheur": {
+    "axe": 1.0
+  },
+  "axes_faibles": []
+}

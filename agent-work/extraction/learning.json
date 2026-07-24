@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-07-23T08:47:37Z",
+  "categories": {
+    "garanties": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "exclusions": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "definitions": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "conditions": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "declencheurs": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "plafonds": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "franchises": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "options": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "cotisations": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "delais": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "fiscalite": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "points-vigilance": {
+      "accepted": 0,
+      "rejected": 0
+    },
+    "formules": {
+      "accepted": 0,
+      "rejected": 0
+    }
+  }
+}

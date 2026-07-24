@@ -1,0 +1,258 @@
+{
+  "projection_version": "1.0.0",
+  "subject": "Essen'Ciel Patrimoine",
+  "domain": "axa-contrat",
+  "synthese": {
+    "depth_score": 0.775,
+    "semantic_coverage": 0.231,
+    "profondeur": {
+      "L1": 7,
+      "L2": 8,
+      "L3": 4,
+      "L4": 1
+    },
+    "rates": {
+      "proof": 0.875,
+      "unrelated": 0.25,
+      "uncertainty": 0.0,
+      "contradiction": 0.0,
+      "n_entities": 8
+    }
+  },
+  "connaissances": {
+    "garantie": [
+      {
+        "label": "Garantie décès — versement d'un capital aux bénéficiaires",
+        "resume": "En cas de décès de l'assuré, versement d'un capital au(x) bénéficiaire(s) désigné(s). Cadre fiscal assurance vie.",
+        "confidence": 0.92,
+        "sources": [
+          {
+            "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+            "page": "2, 4, 16",
+            "citation": "Garantie décès — versement d'un capital aux bénéficiaires"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Revalorisation / participation aux bénéfices",
+        "resume": "Pas de PB contractuelle, mais participation aux bénéfices selon le Code des assurances ; revalorisation possible du capital décès.",
+        "confidence": 0.88,
+        "sources": [
+          {
+            "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+            "page": "6, 8",
+            "citation": "Revalorisation / participation aux bénéfices"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "exclusion": [
+      {
+        "label": "Risques exclus de la garantie décès",
+        "resume": "Décès exclu si : suicide la 1re année, guerre civile/étrangère, et autres cas listés §2.4.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+            "page": "6",
+            "citation": "Risques exclus de la garantie décès"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "option": [
+      {
+        "label": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+        "resume": "Le contrat comporte une faculté de rachat ; règlement sous 2 mois. Un tableau des valeurs de rachat au terme des 8 premières années figure dans la notice (§4.3).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+            "page": "2, 14, 15",
+            "citation": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Mise en réduction (valeur de réduction)",
+        "resume": "Si l'adhérent cesse de payer les cotisations, l'adhésion peut être mise en réduction : un nouveau capital garanti (valeur de réduction) est calculé.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+            "page": "13, 14, 15",
+            "citation": "Mise en réduction (valeur de réduction)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Réduction tarifaire couple (-10 %)",
+        "resume": "Adhésion simultanée de l'adhérent et de son conjoint (marié/PACS/concubin) : -10 % permanent sur l'ensemble des cotisations.",
+        "confidence": 0.92,
+        "sources": [
+          {
+            "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+            "page": "13",
+            "citation": "Réduction tarifaire couple (-10 %)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Prestations d'assistance (suite au décès)",
+        "resume": "Prestations d'assistance fournies par AXA Assistance (suite au décès de l'assuré).",
+        "confidence": 0.85,
+        "sources": [
+          {
+            "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+            "page": "7, 9, 10",
+            "citation": "Prestations d'assistance (suite au décès)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "contrat": [
+      {
+        "label": "Essen'Ciel Patrimoine",
+        "resume": null,
+        "confidence": 0.55,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      }
+    ]
+  },
+  "relations": [
+    {
+      "type": "limits",
+      "de": "Risques exclus de la garantie décès",
+      "vers": "Garantie décès — versement d'un capital aux bénéficiaires",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Mise en réduction (valeur de réduction)",
+      "vers": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Prestations d'assistance (suite au décès)",
+      "vers": "Garantie décès — versement d'un capital aux bénéficiaires",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    }
+  ],
+  "environnement": [
+    {
+      "clause": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "finalite",
+      "explication": "Garantir un capital décès aux bénéficiaires dans une logique viagère et patrimoniale : protection décès permanente avec revalorisation/participation aux bénéfices, faculté de rachat et valeur de réduction — à la frontière entre prévoyance décès et transmission.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "logique_contractuelle",
+      "explication": "Contrat de type « vie entière » : le capital décès est dû quel que soit le moment du décès, la valeur du contrat se constitue dans le temps (revalorisation), et l'assuré conserve des droits du vivant (rachat total/partiel selon tableau de valeurs, mise en réduction si arrêt des cotisations).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "confusions_frequentes",
+      "explication": "Ne pas confondre avec Essen'Ciel « obsèques » : ici la logique est patrimoniale (capital transmis, rachat possible), pas seulement le financement des funérailles. La mise en réduction diminue la garantie mais ne l'annule pas ; le rachat, lui, met fin au contrat.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "situations_favorables",
+      "explication": "Transmission d'un capital certain aux bénéficiaires, souhait de conserver une porte de sortie (rachat).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "situations_defavorables",
+      "explication": "Recherche de rendement d'épargne pure (voir assurance vie) ; horizon très court.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    }
+  ],
+  "preuves": [
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "2, 4, 16",
+      "citation": "Garantie décès — versement d'un capital aux bénéficiaires"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "6, 8",
+      "citation": "Revalorisation / participation aux bénéfices"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "6",
+      "citation": "Risques exclus de la garantie décès"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "2, 14, 15",
+      "citation": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "13, 14, 15",
+      "citation": "Mise en réduction (valeur de réduction)"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "13",
+      "citation": "Réduction tarifaire couple (-10 %)"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "7, 9, 10",
+      "citation": "Prestations d'assistance (suite au décès)"
+    }
+  ],
+  "incertitudes": [],
+  "fraicheur": {
+    "axe": 1.0
+  },
+  "axes_faibles": [
+    "understanding"
+  ]
+}

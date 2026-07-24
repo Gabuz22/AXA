@@ -1,0 +1,74 @@
+{
+  "proposal_id": "extraction_llm_20260712_083339_001",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260712_083336",
+  "created_at": "2026-07-12T08:33:39Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_assurance_obseques",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "bloc:conditions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+    "page": 30,
+    "url": null,
+    "excerpt": "d’un suicide ou tentative de suicide de l’assuré , survenu au cours de la 1ère année d’adhésion ;"
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "conditions",
+      "texte": "Exclusion de la garantie décès en cas de suicide durant la première année d'adhésion.",
+      "diff": "Ajoute une condition de délai de carence pour le risque suicide.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.90 : citation nette ; formulation ambiguë.",
+      "importance": "critique",
+      "review_cost": "2 min",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Essen'Ciel (assurance obsèques)\"] / conditions",
+      "citation_exacte": "d’un suicide ou tentative de suicide de l’assuré , survenu au cours de la 1ère année d’adhésion ;",
+      "why_missing": "nouveau contrat",
+      "why_interesting": "Définit une condition temporelle limitative pour la garantie décès.",
+      "why_probably_absent": "nouveau contrat",
+      "documentary_interest": 1.0,
+      "priority_level": "haute",
+      "value_score": 0.664,
+      "bloc": [
+        {
+          "categorie": "conditions",
+          "page": 30,
+          "citation": "d’un suicide ou tentative de suicide de l’assuré , survenu au cours de la 1ère année d’adhésion ;",
+          "texte": "Exclusion de la garantie décès en cas de suicide durant la première année d'adhésion."
+        },
+        {
+          "categorie": "conditions",
+          "page": 30,
+          "citation": "lorsqu’au moment de l’accident , le taux d’alcoolémie de l’assuré  est supérieur ou égal à la limite fixée par le code de la route français",
+          "texte": "Exclusion de la garantie décès accidentel en cas d'alcoolémie ou usage de stupéfiants."
+        }
+      ]
+    }
+  },
+  "reasoning_summary": "Définit une condition temporelle limitative pour la garantie décès.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

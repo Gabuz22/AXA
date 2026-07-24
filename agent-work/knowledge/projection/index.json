@@ -1,0 +1,53 @@
+{
+  "projection_version": "1.0.0",
+  "domain": "axa-contrat",
+  "generated_at": "2026-07-24T08:45:45Z",
+  "graph_fingerprint": "p_4c0326befdcac337",
+  "subjects": [
+    {
+      "subject": "Avizen",
+      "file": "avizen.json",
+      "depth_score": 0.865
+    },
+    {
+      "subject": "Avizen Pro",
+      "file": "avizen_pro.json",
+      "depth_score": 0.903
+    },
+    {
+      "subject": "Entour'Age",
+      "file": "entour_age.json",
+      "depth_score": 0.913
+    },
+    {
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "file": "essen_ciel_assurance_obseques.json",
+      "depth_score": 0.769
+    },
+    {
+      "subject": "Essen'Ciel Patrimoine",
+      "file": "essen_ciel_patrimoine.json",
+      "depth_score": 0.775
+    },
+    {
+      "subject": "Excelium (assurance vie)",
+      "file": "excelium_assurance_vie.json",
+      "depth_score": 0.74
+    },
+    {
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "file": "ma_protection_accident_garantie_des_accidents_de_la_vie.json",
+      "depth_score": 0.696
+    },
+    {
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "file": "ma_retraite_plan_d_epargne_retraite_individuel_per.json",
+      "depth_score": 0.657
+    },
+    {
+      "subject": "Masterlife CREDIT",
+      "file": "masterlife_credit.json",
+      "depth_score": 0.75
+    }
+  ]
+}

@@ -1,1 +1,125 @@
-{"providers":{},"updated_at":null}
+{
+  "providers": {
+    "gemini": {
+      "state": "available",
+      "key_detected": true,
+      "last_check": "2026-07-23T08:47:37Z",
+      "next_available_at": null,
+      "calls_used_est": 15,
+      "tokens_in": 138943,
+      "tokens_out": 18208,
+      "latency_avg_s": 1.0,
+      "success": 15,
+      "errors": {
+        "401": 0,
+        "403": 0,
+        "404": 0,
+        "429": 0,
+        "5xx": 0
+      },
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "disabled_models": [],
+      "needs_human": false,
+      "last_cause": "ok",
+      "quota_source": "estimation_prudente"
+    },
+    "groq": {
+      "state": "available",
+      "key_detected": true,
+      "last_check": null,
+      "next_available_at": null,
+      "calls_used_est": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "latency_avg_s": 0.0,
+      "success": 0,
+      "errors": {
+        "401": 0,
+        "403": 0,
+        "404": 0,
+        "429": 0,
+        "5xx": 0
+      },
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "disabled_models": [],
+      "needs_human": false,
+      "last_cause": null,
+      "quota_source": "estimation_prudente"
+    },
+    "cloudflare": {
+      "state": "available",
+      "key_detected": true,
+      "last_check": null,
+      "next_available_at": null,
+      "calls_used_est": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "latency_avg_s": 0.0,
+      "success": 0,
+      "errors": {
+        "401": 0,
+        "403": 0,
+        "404": 0,
+        "429": 0,
+        "5xx": 0
+      },
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "disabled_models": [],
+      "needs_human": false,
+      "last_cause": null,
+      "quota_source": "estimation_prudente"
+    },
+    "openrouter": {
+      "state": "available",
+      "key_detected": true,
+      "last_check": null,
+      "next_available_at": null,
+      "calls_used_est": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "latency_avg_s": 0.0,
+      "success": 0,
+      "errors": {
+        "401": 0,
+        "403": 0,
+        "404": 0,
+        "429": 0,
+        "5xx": 0
+      },
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "disabled_models": [],
+      "needs_human": false,
+      "last_cause": null,
+      "quota_source": "estimation_prudente"
+    },
+    "claude-assisted-test": {
+      "state": "available",
+      "key_detected": false,
+      "last_check": null,
+      "next_available_at": null,
+      "calls_used_est": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "latency_avg_s": 0.0,
+      "success": 0,
+      "errors": {
+        "401": 0,
+        "403": 0,
+        "404": 0,
+        "429": 0,
+        "5xx": 0
+      },
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "disabled_models": [],
+      "needs_human": false,
+      "last_cause": null,
+      "quota_source": "estimation_prudente"
+    }
+  },
+  "updated_at": "2026-07-24T08:45:47Z"
+}

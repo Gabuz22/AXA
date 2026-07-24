@@ -1,0 +1,74 @@
+{
+  "proposal_id": "extraction_llm_20260711_171146_002",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260711_171143",
+  "created_at": "2026-07-11T17:11:46Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_patrimoine",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "bloc:conditions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+    "page": 10,
+    "url": null,
+    "excerpt": "pendant 16 heures maximum sur 2 jours suivant le décès avec un minimum de 2 heures consécutives"
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "conditions",
+      "texte": "La garde est limitée à 16 heures maximum sur 2 jours suivant le décès, avec un minimum de 2 heures consécutives.",
+      "diff": "Ajoute des contraintes de temps précises pour la garde.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.95 : citation nette.",
+      "importance": "forte",
+      "review_cost": "1 min",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Essen'Ciel Patrimoine\"] / conditions",
+      "citation_exacte": "pendant 16 heures maximum sur 2 jours suivant le décès avec un minimum de 2 heures consécutives",
+      "why_missing": "nouveau contrat",
+      "why_interesting": "Définit les modalités temporelles de la garde d'enfants.",
+      "why_probably_absent": "nouveau contrat",
+      "documentary_interest": 1.0,
+      "priority_level": "haute",
+      "value_score": 0.87,
+      "bloc": [
+        {
+          "categorie": "conditions",
+          "page": 10,
+          "citation": "pendant 16 heures maximum sur 2 jours suivant le décès avec un minimum de 2 heures consécutives",
+          "texte": "La garde est limitée à 16 heures maximum sur 2 jours suivant le décès, avec un minimum de 2 heures consécutives."
+        },
+        {
+          "categorie": "plafonds",
+          "page": 10,
+          "citation": "Le montant total pris en charge au titre de la présente garantie est limité à 600 € TTC.",
+          "texte": "Le montant total pris en charge pour la garde des enfants est limité à 600 € TTC."
+        }
+      ]
+    }
+  },
+  "reasoning_summary": "Définit les modalités temporelles de la garde d'enfants.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

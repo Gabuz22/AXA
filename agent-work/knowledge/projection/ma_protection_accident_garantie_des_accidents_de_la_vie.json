@@ -1,0 +1,703 @@
+{
+  "projection_version": "1.0.0",
+  "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+  "domain": "axa-contrat",
+  "synthese": {
+    "depth_score": 0.696,
+    "semantic_coverage": 0.385,
+    "profondeur": {
+      "L1": 25,
+      "L2": 27,
+      "L3": 11,
+      "L4": 1
+    },
+    "rates": {
+      "proof": 0.926,
+      "unrelated": 0.556,
+      "uncertainty": 0.185,
+      "contradiction": 0.0,
+      "n_entities": 27
+    }
+  },
+  "connaissances": {
+    "garantie": [
+      {
+        "label": "Accidents lors de la conduite d'un véhicule (dérogations)",
+        "resume": "Par dérogation à l'exclusion circulation : véhicule 4 roues loué < 3 mois ; engin de jardinage autoporteur ou fauteuil roulant ; enfant < 12 ans conduisant un véhicule à moteur pour enfant ; victime impliquant son propre véhicule alors qu'elle n'avait plus/pas encore la qualité de conducteur.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 5,
+            "citation": "Accidents lors de la conduite d'un véhicule (dérogations)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Accidents médicaux et infections nosocomiales",
+        "resume": "Accidents médicaux dont le fait générateur est postérieur à la prise d'effet, première manifestation dommageable pendant la garantie, avec conséquences anormales au regard de l'état initial du patient et de son évolution prévisible.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 4,
+            "citation": "Accidents médicaux et infections nosocomiales"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Préjudices indemnisés selon droit commun",
+        "resume": "Assistance tierce personne (ATP) ; frais de logement adapté (FLA) ; frais de véhicule adapté (FVA) ; pertes de gains professionnels actuels (PGPA) ; pertes de gains professionnels futurs (PGPF, capitalisation au barème des organismes sociaux R376-1/R454-1 CSS).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 9,
+            "citation": "Préjudices indemnisés selon droit commun"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Indemnisation des préjudices corporels (barème AQV)",
+        "resume": "Indemnisation contractuelle des postes DFP (0-100), Préjudice Esthétique Permanent (0-7) et Souffrances Endurées (0-7) selon l'indice AQV (= somme des trois, arrondi à l'entier supérieur) et l'âge à la consolidation, suivant le tableau contractuel.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 7,
+            "citation": "Indemnisation des préjudices corporels (barème AQV)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "En cas de décès",
+        "resume": "Remboursement des frais d'obsèques (frais réels, limite 5 000 €) à la personne justifiant les avoir réglés ; si conjoint/enfant/famille couverts : préjudice d'affection (PAF), frais divers (FD), pertes de revenus des proches (PR, capitalisées).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 9,
+            "citation": "En cas de décès"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Accidents corporels d'activités courantes",
+        "resume": "Accidents survenus lors d'activités domestiques, scolaires et de loisirs pendant la période d'effet ; activités sportives en baptême ou initiation encadrée par personnes qualifiées d'une structure habilitée.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 4,
+            "citation": "Accidents corporels d'activités courantes"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Accidents corporels lors d'événements exceptionnels",
+        "resume": "Catastrophes naturelles, industrielles ou technologiques ; agressions, vandalisme ; terrorisme, attentats, infractions des articles 706-3 et suivants du Code de procédure pénale ; mouvements populaires et rassemblements sur la voie publique.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 4,
+            "citation": "Accidents corporels lors d'événements exceptionnels"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "exclusion": [
+      {
+        "label": "Faits intentionnels, suicide",
+        "resume": "Dommages corporels que l'assuré s'est causés intentionnellement ; conséquences du suicide ou d'une tentative de suicide.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 6,
+            "citation": "Faits intentionnels, suicide"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Affections même consécutives à un accident garanti",
+        "resume": "Affections cardio-vasculaires et vasculaires cérébrales ; affections virales, parasitaires, mycosiques ; affections musculaires, articulaires, tendineuses et discales sans cause extérieure (pathologies disco-vertébrales, rhumatismales, hernies de la paroi abdominale) ; fibromyalgie.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 6,
+            "citation": "Affections même consécutives à un accident garanti"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Délit intentionnel ou crime",
+        "resume": "Accidents résultant de poursuite pénale de l'assuré liée à un délit intentionnel (art. 121-3 Code pénal) ou à un crime.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 6,
+            "citation": "Délit intentionnel ou crime"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Accidents du travail et activités électives/syndicales",
+        "resume": "Accidents du travail, incluant les accidents de trajet ; accidents survenant dans le cadre d'activités électives ou syndicales.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 6,
+            "citation": "Accidents du travail et activités électives/syndicales"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Alcool, médicaments, stupéfiants",
+        "resume": "Faits accidentels et/ou dommages consécutifs à une consommation d'alcool ≥ 0,5 g/l de sang ; à l'absorption de médicaments, drogues ou substances stupéfiantes à un dosage non prescrit médicalement.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 6,
+            "citation": "Alcool, médicaments, stupéfiants"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Sports professionnels, rémunérés, à risques, extrêmes",
+        "resume": "Sports exercés à titre professionnel ; sports rémunérés (y compris primes de match) ; sports à risques ; sports extrêmes (base jump, wingsuit, MMA) ; sports non autorisés en France ; tentatives de records ou exploits.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 6,
+            "citation": "Sports professionnels, rémunérés, à risques, extrêmes"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Non-respect de réglementation (véhicules motorisés)",
+        "resume": "Accidents causés par l'assuré ne respectant pas la réglementation impérative en cas d'utilisation de véhicules motorisés aériens, nautiques, aquatiques, fluviaux, maritimes et lacustres.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 6,
+            "citation": "Non-respect de réglementation (véhicules motorisés)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Expérimentations biomédicales",
+        "resume": "Accidents et traitements médicaux résultant d'expérimentations biomédicales.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 6,
+            "citation": "Expérimentations biomédicales"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "option": [
+      {
+        "label": "Mes Sports à risque",
+        "resume": "Couvre les accidents résultant uniquement des sports listés : sports aériens (parachutisme, parapente, deltaplane, parachute ascensionnel, saut à élastique, ULM, autogyre, vol à voile, skydiving, planeur) ; aquatiques/nautiques (kitesurf, plongeon, hydrospeed, rafting, canyoning, plongée sous-marine et souterraine, apnée, aéroglisseur, wakeboard, scooter des mers) ; montagne (alpinisme, VTT de descente, escalade hors support artificiel sécurisé, raids et expéditions, ski hors-piste, spéléologie, motoneige) ; sports avec armes à feu ou à air comprimé. In…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 5,
+            "citation": "Mes Sports à risque"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "point_vigilance": [
+      {
+        "label": "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
+        "resume": "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
+        "confidence": 0.35,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 8,
+            "citation": "Assistance après accident et handicap : France métropolitaine uniquement (p.10)."
+          }
+        ],
+        "validation_required": false,
+        "version": 2
+      },
+      {
+        "label": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+        "resume": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+        "confidence": 0.35,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 14,
+            "citation": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16)."
+          }
+        ],
+        "validation_required": false,
+        "version": 2
+      },
+      {
+        "label": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
+        "resume": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
+        "confidence": 0.35,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 14,
+            "citation": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2)."
+          }
+        ],
+        "validation_required": false,
+        "version": 2
+      },
+      {
+        "label": "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (ar…",
+        "resume": "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (art. 6.5, 6.6).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Subrogation de l'assureur contre le tiers responsable (6.7).",
+        "resume": "Subrogation de l'assureur contre le tiers responsable (6.7).",
+        "confidence": 0.35,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 20,
+            "citation": "Subrogation de l'assureur contre le tiers responsable (6.7)."
+          }
+        ],
+        "validation_required": false,
+        "version": 2
+      }
+    ],
+    "formule": [
+      {
+        "label": "Indice AQV",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 8,
+            "citation": "Indice AQV"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Renonciation vente à distance — cotisation due",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+            "page": 19,
+            "citation": "Renonciation vente à distance — cotisation due"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "franchises": [
+      {
+        "label": "Aucune information sur les franchises liées au décès n'est présente dans le document.",
+        "resume": null,
+        "confidence": 0.95,
+        "sources": [
+          {
+            "document": "2026-05 Notice Ma Retraite.pdf",
+            "page": 13,
+            "citation": "Les versements réguliers, ainsi que les arbitrages en gestion Activ’Retraite Croissance, seront arrêtés dès traitement de l’acte de décès"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Absence de mention de franchises pour les garanties invalidité, décès, décès-accidentel, accident, hospitalisation ou in",
+        "resume": null,
+        "confidence": 0.95,
+        "sources": [
+          {
+            "document": "2026-05 Notice Ma Retraite.pdf",
+            "page": 5,
+            "citation": "prévoir, en cas de décès de l’assuré avant la liquidation totale de l’adhésion, le versement d’un capital, d’une rente viagère, ou temporaire, ou d’éducation"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Aucune information sur les franchises liées à l'hospitalisation n'est présente dans le document.",
+        "resume": null,
+        "confidence": 0.95,
+        "sources": [
+          {
+            "document": "2026-05 Notice Ma Retraite.pdf",
+            "page": 14,
+            "citation": "Ma Retraite vous permet de combiner plusieurs types de versements"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "contrat": [
+      {
+        "label": "Ma Protection Accident (Garantie des accidents de la vie)",
+        "resume": null,
+        "confidence": 0.55,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      }
+    ]
+  },
+  "relations": [
+    {
+      "type": "refines",
+      "de": "Indemnisation des préjudices corporels (barème AQV)",
+      "vers": "Préjudices indemnisés selon droit commun",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Faits intentionnels, suicide",
+      "vers": "En cas de décès",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Alcool, médicaments, stupéfiants",
+      "vers": "Accidents lors de la conduite d'un véhicule (dérogations)",
+      "directed": true,
+      "confidence": 0.8,
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Accidents du travail et activités électives/syndicales",
+      "vers": "Accidents corporels d'activités courantes",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Délit intentionnel ou crime",
+      "vers": "En cas de décès",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Alcool, médicaments, stupéfiants",
+      "vers": "En cas de décès",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Affections même consécutives à un accident garanti",
+      "vers": "Indemnisation des préjudices corporels (barème AQV)",
+      "directed": true,
+      "confidence": 0.8,
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Affections même consécutives à un accident garanti",
+      "vers": "Indemnisation des préjudices corporels (barème AQV)",
+      "directed": true,
+      "confidence": 0.8,
+      "validation_required": true
+    }
+  ],
+  "environnement": [
+    {
+      "clause": "En cas de décès",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "En cas de décès",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Absence de mention de franchises pour les garanties invalidité, décès, décès-accidentel, accident, hospitalisation ou in",
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "finalite",
+      "explication": "Indemniser les préjudices corporels consécutifs aux accidents de la vie privée (activités courantes, accidents médicaux, infections nosocomiales, certains accidents de la route par dérogation) selon une logique INDEMNITAIRE de droit commun.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "logique_contractuelle",
+      "explication": "À la différence de la prévoyance forfaitaire, la GAV répare le PRÉJUDICE réel (barème type AQV, postes de préjudices du droit commun) : l'indemnisation dépend des séquelles évaluées, pas d'un capital fixé à l'avance. Elle intervient là où il n'y a pas de tiers responsable identifiable ou solvable.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "confusions_frequentes",
+      "explication": "La GAV ne couvre PAS la maladie (les affections, même consécutives à un accident garanti, sont exclues). Elle est indemnitaire (préjudice évalué) là où Avizen est forfaitaire (montants souscrits) : les deux logiques se complètent et peuvent se cumuler dans les limites contractuelles. Les accidents de la circulation ne sont couverts que par dérogations précises.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "situations_favorables",
+      "explication": "Famille exposée aux accidents domestiques/loisirs, complément indemnitaire d'une prévoyance forfaitaire, accidents médicaux.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "situations_defavorables",
+      "explication": "Attente de couverture maladie ; préjudices légers sous les seuils d'intervention ; faits intentionnels.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    }
+  ],
+  "preuves": [
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 5,
+      "citation": "Accidents lors de la conduite d'un véhicule (dérogations)"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "citation": "Accidents médicaux et infections nosocomiales"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 9,
+      "citation": "Préjudices indemnisés selon droit commun"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 7,
+      "citation": "Indemnisation des préjudices corporels (barème AQV)"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 9,
+      "citation": "En cas de décès"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "citation": "Accidents corporels d'activités courantes"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "citation": "Accidents corporels lors d'événements exceptionnels"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Faits intentionnels, suicide"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Affections même consécutives à un accident garanti"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Délit intentionnel ou crime"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Accidents du travail et activités électives/syndicales"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Alcool, médicaments, stupéfiants"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Sports professionnels, rémunérés, à risques, extrêmes"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Non-respect de réglementation (véhicules motorisés)"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Expérimentations biomédicales"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 5,
+      "citation": "Mes Sports à risque"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 8,
+      "citation": "Indice AQV"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 19,
+      "citation": "Renonciation vente à distance — cotisation due"
+    },
+    {
+      "document": "2026-05 Notice Ma Retraite.pdf",
+      "page": 13,
+      "citation": "Les versements réguliers, ainsi que les arbitrages en gestion Activ’Retraite Croissance, seront arrêtés dès traitement de l’acte de décès"
+    },
+    {
+      "document": "2026-05 Notice Ma Retraite.pdf",
+      "page": 5,
+      "citation": "prévoir, en cas de décès de l’assuré avant la liquidation totale de l’adhésion, le versement d’un capital, d’une rente viagère, ou temporaire, ou d’éducation"
+    },
+    {
+      "document": "2026-05 Notice Ma Retraite.pdf",
+      "page": 14,
+      "citation": "Ma Retraite vous permet de combiner plusieurs types de versements"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 8,
+      "citation": "Assistance après accident et handicap : France métropolitaine uniquement (p.10)."
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 14,
+      "citation": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16)."
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 14,
+      "citation": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2)."
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 20,
+      "citation": "Subrogation de l'assureur contre le tiers responsable (6.7)."
+    }
+  ],
+  "incertitudes": [
+    {
+      "label": "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (ar…",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Subrogation de l'assureur contre le tiers responsable (6.7).",
+      "confidence": 0.35,
+      "ambiguities": []
+    }
+  ],
+  "fraicheur": {
+    "axe": 1.0
+  },
+  "axes_faibles": [
+    "understanding",
+    "relations"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "proposal_id": "corpus_explorer_20260717_034904_001",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260717_034859",
+  "created_at": "2026-07-17T03:49:04Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "definitions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-04 Notice d'information Avizen Pro (AEP).pdf",
+    "pages": "50-50",
+    "excerpt": "Contrat « Avizen Pro » — zone definitions (pages 50-50) : couverture partielle. 25 élément(s) possiblement absent(s) de la connaissance : Assurances Vie \nMutuelle, Concubin\nConcubin, Accident \nToute, Définitions, Certificat, cotisation, incapacité, Assuré\nLa."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Avizen Pro",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#definitions:50-50",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Assurances Vie \nMutuelle",
+        "Concubin\nConcubin",
+        "Accident \nToute",
+        "Définitions",
+        "Certificat",
+        "cotisation",
+        "incapacité",
+        "Assuré\nLa"
+      ],
+      "knowledge_suspect": [
+        "la définition de l'accident exclut explicitement des pathologies que la base pou",
+        "la prise en charge par le régime obligatoire (accident du travail) ne prévaut pa"
+      ]
+    }
+  },
+  "reasoning_summary": "Contrat « Avizen Pro » — zone definitions (pages 50-50) : couverture partielle. 25 élément(s) possiblement absent(s) de la connaissance : Assurances Vie \nMutuelle, Concubin\nConcubin, Accident \nToute, Définitions, Certificat, cotisation, incapacité, Assuré\nLa. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

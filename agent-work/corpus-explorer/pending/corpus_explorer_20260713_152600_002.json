@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260713_152600_002",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260713_152555",
+  "created_at": "2026-07-13T15:26:00Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "definitions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-04 Notice d'information Avizen.pdf",
+    "pages": "34-34",
+    "excerpt": "Contrat « Avizen » — zone definitions (pages 34-34) : couverture partielle. 24 élément(s) possiblement absent(s) de la connaissance : Consolidation\nStabilisation, Assurances Vie \nMutuelle, Concubin\nConcubin, Accident \nToute, Conjoint\nÉpoux, Définitions, Certificat, cotisation."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Avizen",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#definitions:34-34",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Consolidation\nStabilisation",
+        "Assurances Vie \nMutuelle",
+        "Concubin\nConcubin",
+        "Accident \nToute",
+        "Conjoint\nÉpoux",
+        "Définitions",
+        "Certificat",
+        "cotisation"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Avizen » — zone definitions (pages 34-34) : couverture partielle. 24 élément(s) possiblement absent(s) de la connaissance : Consolidation\nStabilisation, Assurances Vie \nMutuelle, Concubin\nConcubin, Accident \nToute, Conjoint\nÉpoux, Définitions, Certificat, cotisation. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

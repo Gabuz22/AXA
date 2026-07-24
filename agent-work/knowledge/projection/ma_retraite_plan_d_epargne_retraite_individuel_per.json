@@ -1,0 +1,548 @@
+{
+  "projection_version": "1.0.0",
+  "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+  "domain": "axa-contrat",
+  "synthese": {
+    "depth_score": 0.657,
+    "semantic_coverage": 0.385,
+    "profondeur": {
+      "L1": 12,
+      "L2": 21,
+      "L3": 11,
+      "L4": 1
+    },
+    "rates": {
+      "proof": 0.571,
+      "unrelated": 0.762,
+      "uncertainty": 0.381,
+      "contradiction": 0.0,
+      "n_entities": 21
+    }
+  },
+  "connaissances": {
+    "garantie": [
+      {
+        "label": "Garantie « Sérénité » (plancher décès, incluse)",
+        "resume": "Si décès avant 80 ans : capital décès (ou capital constitutif de rente) ≥ cumul des versements bruts de frais − rachats (rachats exceptionnels, sorties partielles en capital ou en rente à hauteur du capital constitutif). Coût inclus dans les frais de gestion UC, prélevé toute la durée y compris après 80 ans.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 13,
+            "citation": "Garantie « Sérénité » (plancher décès, incluse)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "En cas de décès avant liquidation totale",
+        "resume": "Prestation aux bénéficiaires en capital ou en rente : capital = épargne (tous supports) ou montant de la garantie « Sérénité ». Bénéficiaire majeur : rente viagère ou temporaire ≥ 10 ans ; bénéficiaire mineur : rente temporaire d'éducation jusqu'à 25 ans. Versement sous 1 mois après réception des pièces. Met fin à l'adhésion. Versements réguliers et arbitrages Activ'Retraite arrêtés au traitement de l'acte de décès.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 12,
+            "citation": "En cas de décès avant liquidation totale"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Garanties de fidélité",
+        "resume": "Le contrat ne comporte pas de garantie de fidélité (hors offres commerciales ponctuelles).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 26,
+            "citation": "Garanties de fidélité"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "En cas de vie — sortie en capital",
+        "resume": "À l'échéance (et sous réserve de liquidation effective de la retraite ou d'atteinte de l'âge légal) : délivrance de tout ou partie des droits des compartiments 1 et 2 en capital, en une fois ou fractionné ; versement partiel ≥ 750 €, solde restant > 750 €. Pas de frais de sortie en capital. Interdit si option expresse et irrévocable pour la rente.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 10,
+            "citation": "En cas de vie — sortie en capital"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "En cas de vie — sortie en rente viagère",
+        "resume": "Rente trimestrielle à terme échu (effet le 1er jour du mois suivant l'échéance demandée), calculée selon âge, option de rente, âge du réversataire et taux de réversion, frais de service de 1 % par arrérage, conditions tarifaires garanties au moment de chaque investissement (Protection Retraite). Options : réversion 60 % ou 100 % ; annuités garanties (versées quoi qu'il arrive sur la période, bénéficiaire désigné irrévocablement) ; réversion temporaire (≥ 10 ans) ; rente majorée ou minorée pendant la première période. Trop-perçu post-décès remboursé. Com…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 10,
+            "citation": "En cas de vie — sortie en rente viagère"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "exclusion": [
+      {
+        "label": "Indisponibilité de l'épargne",
+        "resume": "Aucun rachat avant l'échéance hors les cas de l'art. L224-4 CMF : décès du conjoint/partenaire PACS ; invalidité (2°/3° L341-4 CSS) de l'adhérent, ses enfants, son conjoint/partenaire ; surendettement (L711-1 C. conso) ; expiration des droits au chômage (ou dirigeants non renouvelés sans contrat/mandat depuis ≥ 2 ans) ; liquidation judiciaire de l'activité non salariée (ou décision du président du tribunal de commerce en conciliation) ; affectation à l'acquisition de la RÉSIDENCE PRINCIPALE (sauf compartiment 3). Rachat total = fin de l'adhésion ; verse…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 27,
+            "citation": "Indisponibilité de l'épargne"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "option": [
+      {
+        "label": "Types de gestion",
+        "resume": "Gestion personnelle (choix libre des supports), gestions de la gamme Activ'Retraite Croissance (gestion à horizon de départ en retraite avec fonds Croissance, profils dont « Prudente » ; réajustements semestriels sans frais entre supports), répartition libre possible à côté. Changement de type de gestion / d'horizon / de supports possible après le délai de renonciation.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 16,
+            "citation": "Types de gestion"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Indexation des versements réguliers",
+        "resume": "Indexation annuelle (avant le 1er avril) sur la variation du plafond de la Sécurité sociale au 1er janvier ; refus possible avant le 1er mars de chaque année.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 14,
+            "citation": "Indexation des versements réguliers"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Versements pris en charge par la société",
+        "resume": "Versements possibles par la société de l'adhérent (dirigeant ou salarié) : avantage en espèces imposable en traitements et salaires pour l'adhérent, droit à déduction comme s'il avait versé lui-même ; pour la société : cotisations sociales de droit commun + déductibilité du résultat (travail effectif, non excessif). Obligation d'interrompre ces versements à la rupture du contrat de travail / fin du mandat.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 14,
+            "citation": "Versements pris en charge par la société"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Transfert individuel sortant",
+        "resume": "Vers tout autre PER (loi 2019-486) : demande en LRAR avec certificat + RIB du gestionnaire d'accueil ; valeur de transfert notifiée sous 1 mois ; 15 jours pour y renoncer ; versement au nouveau gestionnaire sous 15 jours après acceptation. Frais : 1 % max avant le 5e anniversaire de l'adhésion, nuls ensuite ou après l'échéance. Transfert = totalité de l'épargne, fin de l'adhésion.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 28,
+            "citation": "Transfert individuel sortant"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "point_vigilance": [
+      {
+        "label": "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégré…",
+        "resume": "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégrés.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Compartiment 3 : sortie en rente UNIQUEMENT.",
+        "resume": "Compartiment 3 : sortie en rente UNIQUEMENT.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Plus de déductibilité fiscale des versements après 70 ans.",
+        "resume": "Plus de déductibilité fiscale des versements après 70 ans.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).",
+        "resume": "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Frais de transfert 1 % uniquement les 5 premières années.",
+        "resume": "Frais de transfert 1 % uniquement les 5 premières années.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.",
+        "resume": "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).",
+        "resume": "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.",
+        "resume": "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "formule": [
+      {
+        "label": "Valeur de transfert en parts/UC",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 28,
+            "citation": "Valeur de transfert en parts/UC"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Rente initiale",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+            "page": 48,
+            "citation": "Rente initiale"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "contrat": [
+      {
+        "label": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+        "resume": null,
+        "confidence": 0.55,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      }
+    ]
+  },
+  "relations": [],
+  "environnement": [
+    {
+      "clause": "Garantie « Sérénité » (plancher décès, incluse)",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Garantie « Sérénité » (plancher décès, incluse)",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "En cas de décès avant liquidation totale",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "En cas de décès avant liquidation totale",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "En cas de décès avant liquidation totale",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "En cas de décès avant liquidation totale",
+      "concept": "Bénéficiaire",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Indisponibilité de l'épargne",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Indisponibilité de l'épargne",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Indisponibilité de l'épargne",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Indisponibilité de l'épargne",
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "aspect": "finalite",
+      "explication": "Préparer un revenu de retraite : épargne dédiée, en principe indisponible jusqu'à la retraite, avec sortie en capital et/ou en rente viagère, et une protection décès (garantie plancher « Sérénité », capital en cas de décès avant liquidation).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "aspect": "logique_contractuelle",
+      "explication": "La contrepartie de l'avantage retraite est l'INDISPONIBILITÉ de l'épargne (listée comme telle) hors cas de déblocage prévus par la réglementation (règles externes à vérifier). Au terme, l'assuré arbitre entre capital et rente viagère. Avant liquidation, le décès déclenche le versement aux bénéficiaires.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "aspect": "confusions_frequentes",
+      "explication": "Le PER n'est pas une assurance vie : pas de rachat libre avant la retraite (hors cas légaux). La déductibilité éventuelle des versements et la fiscalité de sortie relèvent de règles fiscales EXTERNES et évolutives — toujours à vérifier à jour. La « sortie en rente » est irréversible une fois choisie.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "aspect": "situations_favorables",
+      "explication": "Horizon retraite long, revenus imposables (intérêt fiscal éventuel à vérifier), discipline d'épargne souhaitée.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "aspect": "situations_defavorables",
+      "explication": "Besoin de liquidité à moyen terme, horizon court avant retraite, situation fiscale non imposable (l'avantage à l'entrée disparaît — à vérifier).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    }
+  ],
+  "preuves": [
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 13,
+      "citation": "Garantie « Sérénité » (plancher décès, incluse)"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 12,
+      "citation": "En cas de décès avant liquidation totale"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 26,
+      "citation": "Garanties de fidélité"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 10,
+      "citation": "En cas de vie — sortie en capital"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 10,
+      "citation": "En cas de vie — sortie en rente viagère"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 27,
+      "citation": "Indisponibilité de l'épargne"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 16,
+      "citation": "Types de gestion"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 14,
+      "citation": "Indexation des versements réguliers"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 14,
+      "citation": "Versements pris en charge par la société"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 28,
+      "citation": "Transfert individuel sortant"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 28,
+      "citation": "Valeur de transfert en parts/UC"
+    },
+    {
+      "document": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+      "page": 48,
+      "citation": "Rente initiale"
+    }
+  ],
+  "incertitudes": [
+    {
+      "label": "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégré…",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Compartiment 3 : sortie en rente UNIQUEMENT.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Plus de déductibilité fiscale des versements après 70 ans.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Frais de transfert 1 % uniquement les 5 premières années.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.",
+      "confidence": 0.35,
+      "ambiguities": []
+    }
+  ],
+  "fraicheur": {
+    "axe": 1.0
+  },
+  "axes_faibles": [
+    "understanding",
+    "relations"
+  ]
+}

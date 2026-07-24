@@ -1,0 +1,1936 @@
+{
+  "subject": "Essen'Ciel (assurance obsèques)",
+  "domain": "axa-contrat",
+  "finalite": {
+    "texte": "Financer et faciliter l'organisation des obsèques : constituer un capital dédié, versé rapidement au décès, pour soulager les proches de la charge financière et pratique des funérailles.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "Logique de capital affecté : le capital vise le financement des obsèques et son versement est conçu pour être rapide. Les prestations d'assistance accompagnent les proches dans les démarches.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Volonté d'épargner aux proches la charge financière et organisationnelle du décès.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Objectif principalement patrimonial (voir Essen'Ciel Patrimoine ou l'assurance vie) ; besoin de liquidité du vivant.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [
+    {
+      "type": "complements",
+      "de": "Revalorisation du capital",
+      "vers": "Garantie décès (capital obsèques)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "triggers",
+      "de": "Assistance au moment du décès",
+      "vers": "Garantie décès (capital obsèques)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Assistance après le décès (proches)",
+      "vers": "Assistance au moment du décès",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Exclusions assistance",
+      "vers": "Assistance dès l'adhésion",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Exclusions assistance",
+      "vers": "Assistance au moment du décès",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Exclusions assistance",
+      "vers": "Assistance après le décès (proches)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).",
+      "vers": "Garantie décès (capital obsèques)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Assistance au moment du décès",
+      "vers": "Assistance dès l'adhésion",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Assistance après le décès (proches)",
+      "vers": "Assistance dès l'adhésion",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "refines",
+      "de": "Modification du capital garanti",
+      "vers": "Garantie décès (capital obsèques)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    }
+  ],
+  "architecture_garanties": {
+    "principales": [],
+    "secondaires": [
+      "Garantie décès (capital obsèques)",
+      "Revalorisation du capital",
+      "Assistance dès l'adhésion",
+      "Assistance au moment du décès",
+      "Assistance après le décès (proches)"
+    ],
+    "total": 5
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "Exclusions assistance",
+    "Décès accidentel exclu",
+    "Décès exclus"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Modification du capital garanti",
+    "Réduction adhésion simultanée (couple)",
+    "Choix de la durée de cotisation"
+  ],
+  "points_vigilance": [
+    "Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).",
+    "Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 € de VR pour 3 907 € versés à 10 ans).",
+    "Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes de frais.",
+    "Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, quelle que soit la formule (avertissement contractuel explici…",
+    "En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiaires (L132-18).",
+    "Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec le capital obsèques.",
+    "La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance."
+  ],
+  "concepts_structurants": [
+    "Décès",
+    "Décès accidentel",
+    "Souscription & adhésion",
+    "Souscription & adhésion",
+    "Souscription & adhésion",
+    "Fiscalité",
+    "Décès",
+    "Décès accidentel"
+  ],
+  "environnement": [
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Fiscalité",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Garantie décès (capital obsèques)",
+      "domaine": "axa-contrat",
+      "fraicheur": {
+        "as_of": "2026-07-11T22:58:00Z",
+        "ttl_days": null,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 20,
+      "citation": "Garantie décès (capital obsèques)"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 20,
+      "citation": "Revalorisation du capital"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 23,
+      "citation": "Assistance dès l'adhésion"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 24,
+      "citation": "Assistance au moment du décès"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 27,
+      "citation": "Assistance après le décès (proches)"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 31,
+      "citation": "Exclusions assistance"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 30,
+      "citation": "Décès accidentel exclu"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 30,
+      "citation": "Décès exclus"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 22,
+      "citation": "Modification du capital garanti"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 17,
+      "citation": "Réduction adhésion simultanée (couple)"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 8,
+      "citation": "Choix de la durée de cotisation"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 20,
+      "citation": "Capital revalorisé"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 33,
+      "citation": "Pénalité de rachat"
+    },
+    {
+      "document": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 35,
+      "citation": "Valeur de rachat"
+    },
+    {
+      "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 17,
+      "citation": "0,9 % maximum du capital souscrit pour les cotisations viagères ; 0,4 % maximum du capital souscrit pour les cotisations 10 ans ; 0,4 % maximum du capital souscrit pour les cotisations 20 ans."
+    },
+    {
+      "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 4,
+      "citation": "5.3. Quels sont les risques exclus ? p.21"
+    },
+    {
+      "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 14,
+      "citation": "Après la première année, l’Adhérent peut demander le rachat total de son adhésion"
+    },
+    {
+      "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 16,
+      "citation": "être résident fiscal français ; être adhérent d’ANPERE"
+    },
+    {
+      "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 12,
+      "citation": "Cette garantie est accordée pendant les 6 mois suivant la date de décès de l’assuré."
+    },
+    {
+      "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 10,
+      "citation": "pendant 16 heures maximum sur 2 jours suivant le décès avec un minimum de 2 heures consécutives"
+    },
+    {
+      "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 17,
+      "citation": "âge de l’adhérent calculé par différence de millésimes, entre l’année de la prise d’effet de l’adhésion et l’année de naissance de l’assuré"
+    },
+    {
+      "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 16,
+      "citation": "L’assureur règle le capital garanti dans un délai de 48 heures jours ouvrés suivant la réception de toutes les pièces justificatives."
+    },
+    {
+      "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 10,
+      "citation": "AXA Assistance prend en charge ces frais jusqu’à 3 600 € TTC."
+    },
+    {
+      "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 6,
+      "citation": "dans la limite du capital garanti compris entre 2 000 € et 10 000 €"
+    },
+    {
+      "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+      "page": 4,
+      "citation": "4. Votre cotisation p.17"
+    },
+    {
+      "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 17,
+      "citation": "Vous pouvez renoncer à votre adhésion pendant 30 jours calendaires révolus à compter du moment où vous êtes informé que l’adhésion au contrat est conclue."
+    },
+    {
+      "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 2,
+      "citation": "Le contrat prévoit des frais de fonctionnement et de gestion de la garantie décès exprimés en pourcentage du capital souscrit, en fonction de l’âge de l’assuré lors de l’adhésion. Ces frais sont inclus dans le montant des cotisations versées chaque année et sont au maximum de 0,19 % lorsque la cotisation est mensuelle."
+    },
+    {
+      "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 2,
+      "citation": "le versement d’un capital au(x) bénéficiaire(s) désigné(s), en cas de décès."
+    },
+    {
+      "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 2,
+      "citation": "Les sommes sont versées par l’assureur dans un délai de 2 mois."
+    },
+    {
+      "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": 13,
+      "citation": "les 2 adhésions bénéficient d’une réduction permanente de 10 % sur l’ensemble des cotisations"
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "Garantie décès (capital obsèques)",
+      "aspect": "role",
+      "explication": "La garantie décès permet le versement d'un capital compris entre 2 000 et 10 000 €, choisi lors de l'adhésion. Ce montant est versé aux pompes funèbres sur présentation de facture ou remboursé à la personne ayant acquitté les frais d'obsèques.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Revalorisation du capital",
+      "aspect": "role",
+      "explication": "La revalorisation du capital consiste en une augmentation garantie de 1 % par an à chaque anniversaire de l'adhésion, sans hausse de cotisation. Elle est complétée par une participation aux résultats techniques et financiers de l'assureur.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Assistance dès l'adhésion",
+      "aspect": "role",
+      "explication": "La garantie « Assistance dès l'adhésion » permet aux assurés de bénéficier d'informations et de conseils sur les obsèques, disponibles de 8h à 20h30, 7 jours sur 7. Elle inclut également un accès à des informations juridiques portant sur des sujets tels que la succession, la fiscalité et les juridictions.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Assistance au moment du décès",
+      "aspect": "role",
+      "explication": "La garantie couvre le rapatriement du corps ou des cendres jusqu'au lieu d'inhumation en France aux frais réels. Elle inclut également une prise en charge plafonnée à 800 € TTC pour le cercueil nécessaire au transport, tandis que les frais d'obsèques, de cérémonie et d'inhumation restent à la charge de la famille.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Assistance après le décès (proches)",
+      "aspect": "role",
+      "explication": "La garantie propose un soutien psychologique comprenant jusqu'à 6 entretiens sur 12 mois, avec un remboursement plafonné à 80 € par séance en cabinet. Elle inclut également un accompagnement social limité à 3 évaluations téléphoniques réalisées par un assistant.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Exclusions assistance",
+      "aspect": "role",
+      "explication": "Les exclusions d'assistance concernent les excédents de bagages, les frais non justifiés par des documents originaux, les frais de documents officiels et les services à la personne non pris en charge. Sont également exclus les coûts liés aux interventions étatiques.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Décès accidentel exclu",
+      "aspect": "role",
+      "explication": "L'exclusion de garantie pour décès accidentel s'applique en cas d'alcoolémie supérieure à la limite légale, d'emprise de stupéfiants ou de substances médicamenteuses non prescrites. Elle concerne également les décès résultant d'attentats ou d'actes terroristes impliquant des armes ou des matières radioactives, chimiques ou biologiques.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Décès exclus",
+      "aspect": "role",
+      "explication": "Les exclusions de décès comprennent le suicide ou la tentative de suicide durant la première année d'adhésion. Sont également exclus les décès résultant de guerres (civiles ou étrangères), d'invasions, d'agressions, d'hostilités ou d'une participation active à un conflit sans implication de la France.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Modification du capital garanti",
+      "aspect": "role",
+      "explication": "La modification du capital garanti est possible une fois par année d'adhésion, après une année complète de cotisation et avant l'âge de 86 ans. Toute augmentation nécessite un complément de cotisation basé sur l'âge et le tarif en vigueur, et entraîne l'application d'un nouveau délai d'attente d'un an.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Réduction adhésion simultanée (couple)",
+      "aspect": "role",
+      "explication": "Cette option permet de bénéficier d'une réduction permanente de 10 % sur le montant total des cotisations lorsque l'adhérent et son partenaire de vie adhèrent simultanément. Cet avantage prend fin si l'un des contrats fait l'objet d'un rachat ou d'une résiliation.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Choix de la durée de cotisation",
+      "aspect": "role",
+      "explication": "Le souscripteur peut choisir entre des cotisations temporaires (10 ou 20 ans) ou viagères. Cette option influence le montant des versements, la cotisation viagère étant plus faible mais pouvant entraîner un cumul total supérieur au capital garanti.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).",
+      "aspect": "role",
+      "explication": "Le contrat d'assurance ne couvre pas le financement de l'organisation des obsèques. Il ne s'agit pas d'un contrat en prestations.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 € de VR pour 3 907 € versés à 10 ans).",
+      "aspect": "point_vigilance",
+      "explication": "La valeur de rachat d'un contrat peut être nettement inférieure au montant total des cotisations versées sur une période prolongée. À titre d'exemple, un contrat viager peut présenter une valeur de rachat de 1 828 € pour un cumul de 3 907 € versés après 10 ans.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes de frais.",
+      "aspect": "role",
+      "explication": "En cas de décès non accidentel survenant durant la première année du contrat, l'assureur ne verse pas le capital prévu. Il procède uniquement au remboursement des cotisations versées, après déduction des frais.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, quelle que soit la formule (avertissement contractuel explici…",
+      "aspect": "role",
+      "explication": "Ce contrat est exclusivement un produit de prévoyance et non d'épargne. Il est explicitement précisé que le montant total des cotisations versées peut être supérieur au capital garanti, indépendamment de la formule choisie.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiaires (L132-18).",
+      "aspect": "role",
+      "explication": "En cas d'exclusion de la garantie décès, le contrat prévoit le versement de la valeur de rachat aux bénéficiaires subsidiaires. Cette disposition est conforme à l'article L132-18 du Code des assurances.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec le capital obsèques.",
+      "aspect": "role",
+      "explication": "Ces plafonds définissent les limites financières maximales prises en charge par l'assureur pour les prestations de rapatriement et les services associés. Il est précisé que ces montants sont distincts du capital obsèques prévu au contrat.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance.",
+      "aspect": "role",
+      "explication": "La mise en réduction, définie comme un arrêt de paiement intervenant après une année de contrat, entraîne la cessation automatique des garanties d'assistance.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Plafonds des frais de gestion inclus dans les cotisations",
+      "aspect": "Plafonds des frais de gestion inclus dans les cotisations",
+      "explication": "Les frais de gestion sont plafonnés en fonction du type de cotisation : 0,9 % du capital souscrit pour les cotisations viagères, et 0,4 % du capital souscrit pour les cotisations sur 10 ou 20 ans.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Exclusions de garantie",
+      "aspect": "role",
+      "explication": "Les exclusions de garantie définissent les risques qui ne sont pas couverts par le contrat d'assurance. Elles précisent les situations ou événements pour lesquels l'assureur ne versera aucune indemnisation.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Possibilité de rachat total après la première année",
+      "aspect": "Possibilité de rachat total après la première année",
+      "explication": "L'adhérent a la faculté de demander le rachat total de son adhésion une fois la première année écoulée. Cette opération est conditionnée par le respect de ce délai minimal d'un an.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Conditions cumulatives pour adhérer au contrat",
+      "aspect": "role",
+      "explication": "Pour adhérer au contrat, le souscripteur doit remplir deux conditions cumulatives : être résident fiscal français et être adhérent de l'association ANPERE.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "La mise en relation avec un psychologue est possible pendant les 6 mois suivant le décès.",
+      "aspect": "role",
+      "explication": "La garantie permet de bénéficier d'une mise en relation avec un psychologue. Ce service est accessible exclusivement durant la période de 6 mois qui suit la date du décès de l'assuré.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "La garde est limitée à 16 heures maximum sur 2 jours suivant le décès, avec un minimum de 2 heures consécutives.",
+      "aspect": "role",
+      "explication": "La garde est une prestation limitée à une durée totale de 16 heures réparties sur les 2 jours suivant le décès. Chaque intervention doit durer au minimum 2 heures consécutives.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "finalite",
+      "explication": "Financer et faciliter l'organisation des obsèques : constituer un capital dédié, versé rapidement au décès, pour soulager les proches de la charge financière et pratique des funérailles.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "logique_contractuelle",
+      "explication": "Logique de capital affecté : le capital vise le financement des obsèques et son versement est conçu pour être rapide. Les prestations d'assistance accompagnent les proches dans les démarches.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "confusions_frequentes",
+      "explication": "Un contrat obsèques n'est pas une assurance vie d'épargne : le capital est dimensionné et destiné aux funérailles, pas à la transmission patrimoniale. Vérifier ce qui relève du financement (capital) et des services (assistance).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "situations_favorables",
+      "explication": "Volonté d'épargner aux proches la charge financière et organisationnelle du décès.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "situations_defavorables",
+      "explication": "Objectif principalement patrimonial (voir Essen'Ciel Patrimoine ou l'assurance vie) ; besoin de liquidité du vivant.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel (assurance obsèques)",
+      "aspect": "relation_comparable_to_essen_ciel_patrimoine",
+      "explication": "Même univers (décès) mais finalités différentes : financement des obsèques vs capital décès viager patrimonial avec rachat.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "Un contrat obsèques n'est pas une assurance vie d'épargne : le capital est dimensionné et destiné aux funérailles, pas à la transmission patrimoniale. Vérifier ce qui relève du financement (capital) et des services (assistance).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.391,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    },
+    {
+      "axis": "relations",
+      "current": 0.453,
+      "why": "entités isolées (peu ou pas de relations)",
+      "recommended_task": "relier"
+    }
+  ],
+  "profondeur": 0.769,
+  "couverture_semantique": 0.769,
+  "validation": {
+    "blocks": {
+      "validated_knowledge": [
+        {
+          "label": "Garantie décès (capital obsèques)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Revalorisation du capital",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Assistance dès l'adhésion",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Assistance au moment du décès",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Assistance après le décès (proches)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Exclusions assistance",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Décès accidentel exclu",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Décès exclus",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Modification du capital garanti",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Réduction adhésion simultanée (couple)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Choix de la durée de cotisation",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 € de VR pour 3 907 € versés à 10 ans).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes de frais.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, quelle que soit la formule (avertissement contractuel explici…",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiaires (L132-18).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec le capital obsèques.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Capital revalorisé",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        },
+        {
+          "label": "Pénalité de rachat",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        },
+        {
+          "label": "Valeur de rachat",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        }
+      ],
+      "derived_relations": [
+        {
+          "type": "governed_by",
+          "src": "k_7c11b09f137f0c666993",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7c11b09f137f0c666993",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7c11b09f137f0c666993",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_76416d3cfdaed9013f18",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7aeb66a6f9625083391f",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7aeb66a6f9625083391f",
+          "dst": "k_92afac9bce12bfc328f0",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_43bf063aa84cb24ae0db",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_43bf063aa84cb24ae0db",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_60e723a8ac802f5d8dbc",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_60e723a8ac802f5d8dbc",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_87ae97b93d494b822fb7",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_87ae97b93d494b822fb7",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_57a45e5c255bab4eff45",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_57a45e5c255bab4eff45",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_57a45e5c255bab4eff45",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_5f68d3f871036fa0ed81",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_5f68d3f871036fa0ed81",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_5f68d3f871036fa0ed81",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_a9a995058cad20ea9e71",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_a9a995058cad20ea9e71",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_2565329af93e6db0ccd9",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_f08a05fd91e3f2e39baa",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_f08a05fd91e3f2e39baa",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_bfbba47537e7b0fdef43",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_bfbba47537e7b0fdef43",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_bfbba47537e7b0fdef43",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_df4d3a6764f6dfda4428",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_6db240ead04454051692",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_6995cec5305386d3df6c",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_25a9378b2470c813f445",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_f42e63312a091c816654",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        }
+      ],
+      "pending_interpretations": [
+        {
+          "label": "Plafonds des frais de gestion inclus dans les cotisations",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Exclusions de garantie",
+          "subtype": "exclusions",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Possibilité de rachat total après la première année",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Conditions cumulatives pour adhérer au contrat",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La mise en relation avec un psychologue est possible pendant les 6 mois suivant le décès.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La garde est limitée à 16 heures maximum sur 2 jours suivant le décès, avec un minimum de 2 heures consécutives.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition de l'âge de l'assuré pour le calcul de la cotisation",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Délai de paiement du capital garanti",
+          "subtype": "delais",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Plafond de prise en charge des frais de rapatriement et d'assistance par AXA Assistance",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Plafond du capital garanti",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Gestion des cotisations",
+          "subtype": "cotisations",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Délai de renonciation",
+          "subtype": "delais",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Frais de fonctionnement et de gestion",
+          "subtype": "cotisations",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Garantie décès",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Délai de versement des sommes en cas de rachat",
+          "subtype": "delais",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Réduction de 10% sur les cotisations en cas d'adhésion simultanée du conjoint",
+          "subtype": "cotisations",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Le contrat Essen'Ciel ne fournit pas de définition explicite des termes 'invalidité', 'accident', 'hospitalisation' ou '",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Sélection médicale à l'adhésion",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Délai de 10 jours après échéance pour le paiement des cotisations avant envoi d'une mise en demeure",
+          "subtype": "delais",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Conséquences et délais en cas de non-paiement de la cotisation",
+          "subtype": "declencheurs",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Délai de traitement des réclamations",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Garanties d'assistance",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Plafond global des garanties d'assistance décès",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La garantie est limitée à une période de 3 mois suivant le décès de l'assuré.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Délai de versement en cas de rachat",
+          "subtype": "delais",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Conditions d'éligibilité pour modifier le montant du capital garanti",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition de la valeur de réduction",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Délai d'attente appliqué à l'augmentation du capital garanti",
+          "subtype": "franchises",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La garantie de présence d'un membre de la famille est conditionnée au fait que l'assuré était seul sur place au moment d",
+          "subtype": "declencheurs",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Le montant total des frais pris en charge pour la garde des enfants, la garde des animaux et l'aide-ménagère est limité ",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La garantie aide-ménagère est soumise à un minimum de 2 heures consécutives au cours du mois suivant le décès.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La prise en charge de l'assistance psychologique est limitée à 6 entretiens et 80 € par séance en cabinet.",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Exclusion de la garantie décès en cas de suicide durant la première année d'adhésion.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "La nécessité de l'intervention de l'assistance est déterminée exclusivement par l'équipe médicale d'AXA.",
+          "subtype": "declencheurs",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition de l'accident : toute atteinte corporelle non intentionnelle de la part de l'assuré, provenant de l'action so",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Conditions de prise d'effet et durée de l'adhésion.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Déclenchement de la garantie décès selon la cause (accidentelle ou non).",
+          "subtype": "declencheurs",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Le capital garanti choisi lors de l'adhésion est compris entre 2 000 et 10 000 €.",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.85
+        },
+        {
+          "label": "Le versement du capital garanti intervient dans un délai de 48 heures jours ouvrés suivant la réception de toutes les pi",
+          "subtype": "declencheurs",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition contractuelle de la maladie",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition contractuelle de l'accident",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition contractuelle de la force majeure",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "type": "complements",
+          "src": "k_76416d3cfdaed9013f18",
+          "dst": "k_7c11b09f137f0c666993",
+          "statut": "pending_review"
+        },
+        {
+          "type": "triggers",
+          "src": "k_43bf063aa84cb24ae0db",
+          "dst": "k_7c11b09f137f0c666993",
+          "statut": "pending_review"
+        },
+        {
+          "type": "complements",
+          "src": "k_60e723a8ac802f5d8dbc",
+          "dst": "k_43bf063aa84cb24ae0db",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_134450af865408dc18ee",
+          "dst": "k_7aeb66a6f9625083391f",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_134450af865408dc18ee",
+          "dst": "k_43bf063aa84cb24ae0db",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_134450af865408dc18ee",
+          "dst": "k_60e723a8ac802f5d8dbc",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_653f897e09b309a6b37c",
+          "dst": "k_7c11b09f137f0c666993",
+          "statut": "pending_review"
+        },
+        {
+          "type": "complements",
+          "src": "k_43bf063aa84cb24ae0db",
+          "dst": "k_7aeb66a6f9625083391f",
+          "statut": "pending_review"
+        },
+        {
+          "type": "complements",
+          "src": "k_60e723a8ac802f5d8dbc",
+          "dst": "k_7aeb66a6f9625083391f",
+          "statut": "pending_review"
+        },
+        {
+          "type": "refines",
+          "src": "k_5f68d3f871036fa0ed81",
+          "dst": "k_7c11b09f137f0c666993",
+          "statut": "pending_review"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_d28a4072083e01f22ac1",
+          "dst": "k_7c11b09f137f0c666993",
+          "statut": "pending_review"
+        }
+      ],
+      "simulated_claude": [
+        {
+          "label": "Essen'Ciel (assurance obsèques)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_9ad0bdf56e38a944f23e",
+          "dst": "k_76439d714f95c0e6faef",
+          "statut": "simulated_claude"
+        }
+      ],
+      "uncertainties": [],
+      "human_review_required": [
+        {
+          "label": "Plafonds des frais de gestion inclus dans les cotisations",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Exclusions de garantie",
+          "subtype": "exclusions",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Possibilité de rachat total après la première année",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Conditions cumulatives pour adhérer au contrat",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La mise en relation avec un psychologue est possible pendant les 6 mois suivant le décès.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La garde est limitée à 16 heures maximum sur 2 jours suivant le décès, avec un minimum de 2 heures consécutives.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition de l'âge de l'assuré pour le calcul de la cotisation",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Délai de paiement du capital garanti",
+          "subtype": "delais",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Plafond de prise en charge des frais de rapatriement et d'assistance par AXA Assistance",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Plafond du capital garanti",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Gestion des cotisations",
+          "subtype": "cotisations",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Délai de renonciation",
+          "subtype": "delais",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Frais de fonctionnement et de gestion",
+          "subtype": "cotisations",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Garantie décès",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Délai de versement des sommes en cas de rachat",
+          "subtype": "delais",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Réduction de 10% sur les cotisations en cas d'adhésion simultanée du conjoint",
+          "subtype": "cotisations",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Le contrat Essen'Ciel ne fournit pas de définition explicite des termes 'invalidité', 'accident', 'hospitalisation' ou '",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Sélection médicale à l'adhésion",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Délai de 10 jours après échéance pour le paiement des cotisations avant envoi d'une mise en demeure",
+          "subtype": "delais",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Conséquences et délais en cas de non-paiement de la cotisation",
+          "subtype": "declencheurs",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Délai de traitement des réclamations",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Garanties d'assistance",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 1.0
+        },
+        {
+          "label": "Plafond global des garanties d'assistance décès",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La garantie est limitée à une période de 3 mois suivant le décès de l'assuré.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Délai de versement en cas de rachat",
+          "subtype": "delais",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Conditions d'éligibilité pour modifier le montant du capital garanti",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition de la valeur de réduction",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Délai d'attente appliqué à l'augmentation du capital garanti",
+          "subtype": "franchises",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La garantie de présence d'un membre de la famille est conditionnée au fait que l'assuré était seul sur place au moment d",
+          "subtype": "declencheurs",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Le montant total des frais pris en charge pour la garde des enfants, la garde des animaux et l'aide-ménagère est limité ",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La garantie aide-ménagère est soumise à un minimum de 2 heures consécutives au cours du mois suivant le décès.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "La prise en charge de l'assistance psychologique est limitée à 6 entretiens et 80 € par séance en cabinet.",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Exclusion de la garantie décès en cas de suicide durant la première année d'adhésion.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "La nécessité de l'intervention de l'assistance est déterminée exclusivement par l'équipe médicale d'AXA.",
+          "subtype": "declencheurs",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition de l'accident : toute atteinte corporelle non intentionnelle de la part de l'assuré, provenant de l'action so",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Conditions de prise d'effet et durée de l'adhésion.",
+          "subtype": "conditions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Déclenchement de la garantie décès selon la cause (accidentelle ou non).",
+          "subtype": "declencheurs",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Le capital garanti choisi lors de l'adhésion est compris entre 2 000 et 10 000 €.",
+          "subtype": "plafonds",
+          "statut": "pending_review",
+          "confidence": 0.85
+        },
+        {
+          "label": "Le versement du capital garanti intervient dans un délai de 48 heures jours ouvrés suivant la réception de toutes les pi",
+          "subtype": "declencheurs",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition contractuelle de la maladie",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition contractuelle de l'accident",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Définition contractuelle de la force majeure",
+          "subtype": "definitions",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "type": "complements",
+          "src": "k_76416d3cfdaed9013f18",
+          "dst": "k_7c11b09f137f0c666993",
+          "statut": "pending_review"
+        },
+        {
+          "type": "triggers",
+          "src": "k_43bf063aa84cb24ae0db",
+          "dst": "k_7c11b09f137f0c666993",
+          "statut": "pending_review"
+        },
+        {
+          "type": "complements",
+          "src": "k_60e723a8ac802f5d8dbc",
+          "dst": "k_43bf063aa84cb24ae0db",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_134450af865408dc18ee",
+          "dst": "k_7aeb66a6f9625083391f",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_134450af865408dc18ee",
+          "dst": "k_43bf063aa84cb24ae0db",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_134450af865408dc18ee",
+          "dst": "k_60e723a8ac802f5d8dbc",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_653f897e09b309a6b37c",
+          "dst": "k_7c11b09f137f0c666993",
+          "statut": "pending_review"
+        },
+        {
+          "type": "complements",
+          "src": "k_43bf063aa84cb24ae0db",
+          "dst": "k_7aeb66a6f9625083391f",
+          "statut": "pending_review"
+        },
+        {
+          "type": "complements",
+          "src": "k_60e723a8ac802f5d8dbc",
+          "dst": "k_7aeb66a6f9625083391f",
+          "statut": "pending_review"
+        },
+        {
+          "type": "refines",
+          "src": "k_5f68d3f871036fa0ed81",
+          "dst": "k_7c11b09f137f0c666993",
+          "statut": "pending_review"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_d28a4072083e01f22ac1",
+          "dst": "k_7c11b09f137f0c666993",
+          "statut": "pending_review"
+        },
+        {
+          "label": "Essen'Ciel (assurance obsèques)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_9ad0bdf56e38a944f23e",
+          "dst": "k_76439d714f95c0e6faef",
+          "statut": "simulated_claude"
+        }
+      ],
+      "stale": [],
+      "contradictory": []
+    },
+    "counts": {
+      "validated": 21,
+      "pending_review": 53,
+      "simulated_claude": 2,
+      "derived_deterministic": 31
+    },
+    "legend": {
+      "exposable_as_truth": [
+        "derived_deterministic",
+        "validated"
+      ],
+      "visible_if_labeled_only": [
+        "contradictory",
+        "pending_review",
+        "simulated_claude",
+        "stale",
+        "uncertain"
+      ],
+      "never_exposed": [
+        "rejected"
+      ]
+    }
+  },
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Blocs de validation SÉPARÉS : 'validated_knowledge' (masters validés) exposable comme vérité ; 'pending_interpretations'/'simulated_claude'/'stale'/'contradictory' visibles UNIQUEMENT étiquetés, jamais comme clause/règle certaine. Vérifier les preuves."
+}

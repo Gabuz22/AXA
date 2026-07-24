@@ -1,0 +1,2662 @@
+{
+  "version": "1.0.0",
+  "tasks": [
+    {
+      "task_id": "cx_c2c6f6d229b94c83",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#contenu:1-2",
+      "label": "contenu",
+      "pages": [
+        1,
+        2
+      ],
+      "reason": "Contenu absent de la connaissance : 5 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T04:08:16Z",
+      "first_seen": "2026-07-12T04:08:16Z"
+    },
+    {
+      "task_id": "cx_c490925839389dff",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:3-3",
+      "label": "garanties",
+      "pages": [
+        3,
+        3
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T04:08:16Z",
+      "first_seen": "2026-07-12T04:08:16Z"
+    },
+    {
+      "task_id": "cx_8814aa4c0cf027aa",
+      "type": "verification",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:3-3",
+      "label": "garanties",
+      "pages": [
+        3,
+        3
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T04:08:16Z",
+      "first_seen": "2026-07-12T04:08:16Z"
+    },
+    {
+      "task_id": "cx_20bb85149be5233f",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:3-3",
+      "label": "garanties",
+      "pages": [
+        3,
+        3
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T04:08:16Z",
+      "first_seen": "2026-07-12T04:08:16Z"
+    },
+    {
+      "task_id": "cx_c2d2622f9808ffc5",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#conditions:4-9",
+      "label": "conditions",
+      "pages": [
+        4,
+        9
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T04:08:16Z",
+      "first_seen": "2026-07-12T04:08:16Z"
+    },
+    {
+      "task_id": "cx_266e17c6b0968bc9",
+      "type": "verification",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#conditions:4-9",
+      "label": "conditions",
+      "pages": [
+        4,
+        9
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T04:08:16Z",
+      "first_seen": "2026-07-12T04:08:16Z"
+    },
+    {
+      "task_id": "cx_3c690779bdb5c201",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#conditions:4-9",
+      "label": "conditions",
+      "pages": [
+        4,
+        9
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T04:08:16Z",
+      "first_seen": "2026-07-12T04:08:16Z"
+    },
+    {
+      "task_id": "cx_362523e0cfd94587",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:10-18",
+      "label": "garanties",
+      "pages": [
+        10,
+        18
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T14:07:19Z",
+      "first_seen": "2026-07-12T14:07:19Z"
+    },
+    {
+      "task_id": "cx_811ab4c78db7ae22",
+      "type": "verification",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:10-18",
+      "label": "garanties",
+      "pages": [
+        10,
+        18
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T14:07:19Z",
+      "first_seen": "2026-07-12T14:07:19Z"
+    },
+    {
+      "task_id": "cx_ddb2c36b8f5271df",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:10-18",
+      "label": "garanties",
+      "pages": [
+        10,
+        18
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T14:07:19Z",
+      "first_seen": "2026-07-12T14:07:19Z"
+    },
+    {
+      "task_id": "cx_78ea915ec88ebbe9",
+      "type": "declencheur",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#declencheurs:19-20",
+      "label": "declencheurs",
+      "pages": [
+        19,
+        20
+      ],
+      "reason": "Zone axa_pdf_01#declencheurs:19-20 non couverte : extraire les declencheurs absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T14:07:19Z",
+      "first_seen": "2026-07-12T14:07:19Z"
+    },
+    {
+      "task_id": "cx_95db94287ed04506",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#declencheurs:19-20",
+      "label": "declencheurs",
+      "pages": [
+        19,
+        20
+      ],
+      "reason": "Contenu absent de la connaissance : 24 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T14:07:19Z",
+      "first_seen": "2026-07-12T14:07:19Z"
+    },
+    {
+      "task_id": "cx_0bfcfcc61a15572b",
+      "type": "condition",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#conditions:21-21",
+      "label": "conditions",
+      "pages": [
+        21,
+        21
+      ],
+      "reason": "Zone axa_pdf_01#conditions:21-21 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T14:07:19Z",
+      "first_seen": "2026-07-12T14:07:19Z"
+    },
+    {
+      "task_id": "cx_7808e75ff406666a",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#conditions:21-21",
+      "label": "conditions",
+      "pages": [
+        21,
+        21
+      ],
+      "reason": "Contenu absent de la connaissance : 20 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T14:07:19Z",
+      "first_seen": "2026-07-12T14:07:19Z"
+    },
+    {
+      "task_id": "cx_c11a8ea6206892d5",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#conditions:21-21",
+      "label": "conditions",
+      "pages": [
+        21,
+        21
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-12T14:07:19Z",
+      "first_seen": "2026-07-12T14:07:19Z"
+    },
+    {
+      "task_id": "cx_cfe04f784ba258fa",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:22-27",
+      "label": "garanties",
+      "pages": [
+        22,
+        27
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T04:11:48Z",
+      "first_seen": "2026-07-13T04:11:48Z"
+    },
+    {
+      "task_id": "cx_a4eff0f85376a83c",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:22-27",
+      "label": "garanties",
+      "pages": [
+        22,
+        27
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T04:11:48Z",
+      "first_seen": "2026-07-13T04:11:48Z"
+    },
+    {
+      "task_id": "cx_4c1844eea9dc609c",
+      "type": "condition",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#conditions:28-29",
+      "label": "conditions",
+      "pages": [
+        28,
+        29
+      ],
+      "reason": "Zone axa_pdf_01#conditions:28-29 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T04:11:48Z",
+      "first_seen": "2026-07-13T04:11:48Z"
+    },
+    {
+      "task_id": "cx_22cc456abefeb523",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#conditions:28-29",
+      "label": "conditions",
+      "pages": [
+        28,
+        29
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T04:11:48Z",
+      "first_seen": "2026-07-13T04:11:48Z"
+    },
+    {
+      "task_id": "cx_08dae01739b5b5f7",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#conditions:28-29",
+      "label": "conditions",
+      "pages": [
+        28,
+        29
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T04:11:48Z",
+      "first_seen": "2026-07-13T04:11:48Z"
+    },
+    {
+      "task_id": "cx_c293e14ad53ef185",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:30-30",
+      "label": "garanties",
+      "pages": [
+        30,
+        30
+      ],
+      "reason": "Contenu absent de la connaissance : 29 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T04:11:48Z",
+      "first_seen": "2026-07-13T04:11:48Z"
+    },
+    {
+      "task_id": "cx_0ea37e804fcd1e5e",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:30-30",
+      "label": "garanties",
+      "pages": [
+        30,
+        30
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T04:11:48Z",
+      "first_seen": "2026-07-13T04:11:48Z"
+    },
+    {
+      "task_id": "cx_ebcc31325e5f7300",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#titre:31-33",
+      "label": "titre",
+      "pages": [
+        31,
+        33
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T15:26:00Z",
+      "first_seen": "2026-07-13T15:26:00Z"
+    },
+    {
+      "task_id": "cx_baae30e0919c8b2d",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#definitions:34-34",
+      "label": "definitions",
+      "pages": [
+        34,
+        34
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T15:26:00Z",
+      "first_seen": "2026-07-13T15:26:00Z"
+    },
+    {
+      "task_id": "cx_8f497b9a45034e5e",
+      "type": "verification",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#definitions:34-34",
+      "label": "definitions",
+      "pages": [
+        34,
+        34
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T15:26:00Z",
+      "first_seen": "2026-07-13T15:26:00Z"
+    },
+    {
+      "task_id": "cx_c1b6e5aad322f9bd",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:35-36",
+      "label": "garanties",
+      "pages": [
+        35,
+        36
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T15:26:00Z",
+      "first_seen": "2026-07-13T15:26:00Z"
+    },
+    {
+      "task_id": "cx_569c13f32108abc6",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:35-36",
+      "label": "garanties",
+      "pages": [
+        35,
+        36
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-13T15:26:00Z",
+      "first_seen": "2026-07-13T15:26:00Z"
+    },
+    {
+      "task_id": "cx_fe88a2dbf06e5c7c",
+      "type": "definition",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#definitions:37-37",
+      "label": "definitions",
+      "pages": [
+        37,
+        37
+      ],
+      "reason": "Zone axa_pdf_01#definitions:37-37 non couverte : extraire les definitions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-14T03:45:50Z",
+      "first_seen": "2026-07-14T03:45:50Z"
+    },
+    {
+      "task_id": "cx_1ebb8542f224c095",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#definitions:37-37",
+      "label": "definitions",
+      "pages": [
+        37,
+        37
+      ],
+      "reason": "Contenu absent de la connaissance : 16 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-14T03:45:50Z",
+      "first_seen": "2026-07-14T03:45:50Z"
+    },
+    {
+      "task_id": "cx_7c2c89c0cd94a97d",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#contenu:38-39",
+      "label": "contenu",
+      "pages": [
+        38,
+        39
+      ],
+      "reason": "Contenu absent de la connaissance : 0 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-14T03:45:50Z",
+      "first_seen": "2026-07-14T03:45:50Z"
+    },
+    {
+      "task_id": "cx_7d0c43ed65195b8f",
+      "type": "complement",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#titre:40-40",
+      "label": "titre",
+      "pages": [
+        40,
+        40
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-14T03:45:50Z",
+      "first_seen": "2026-07-14T03:45:50Z"
+    },
+    {
+      "task_id": "cx_8d198704716e4e79",
+      "type": "verification",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#titre:40-40",
+      "label": "titre",
+      "pages": [
+        40,
+        40
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-14T03:45:50Z",
+      "first_seen": "2026-07-14T03:45:50Z"
+    },
+    {
+      "task_id": "cx_84855be5cb3e5672",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#contenu:1-1",
+      "label": "contenu",
+      "pages": [
+        1,
+        1
+      ],
+      "reason": "Contenu absent de la connaissance : 4 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-14T14:26:14Z",
+      "first_seen": "2026-07-14T14:26:14Z"
+    },
+    {
+      "task_id": "cx_8d40e1ec3d5ecabe",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#titre:2-2",
+      "label": "titre",
+      "pages": [
+        2,
+        2
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-14T14:26:14Z",
+      "first_seen": "2026-07-14T14:26:14Z"
+    },
+    {
+      "task_id": "cx_838e6009fc998866",
+      "type": "verification",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#titre:2-2",
+      "label": "titre",
+      "pages": [
+        2,
+        2
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-14T14:26:14Z",
+      "first_seen": "2026-07-14T14:26:14Z"
+    },
+    {
+      "task_id": "cx_5ef3844e4a8479a3",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:3-3",
+      "label": "garanties",
+      "pages": [
+        3,
+        3
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-14T14:26:14Z",
+      "first_seen": "2026-07-14T14:26:14Z"
+    },
+    {
+      "task_id": "cx_a580ef799c6f7d72",
+      "type": "verification",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:3-3",
+      "label": "garanties",
+      "pages": [
+        3,
+        3
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-14T14:26:14Z",
+      "first_seen": "2026-07-14T14:26:14Z"
+    },
+    {
+      "task_id": "cx_a0bc17939c67b8c7",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:3-3",
+      "label": "garanties",
+      "pages": [
+        3,
+        3
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-14T14:26:14Z",
+      "first_seen": "2026-07-14T14:26:14Z"
+    },
+    {
+      "task_id": "cx_d3b81e63a2833507",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:4-9",
+      "label": "conditions",
+      "pages": [
+        4,
+        9
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T03:46:16Z",
+      "first_seen": "2026-07-15T03:46:16Z"
+    },
+    {
+      "task_id": "cx_d0e0ad43b8486ab2",
+      "type": "verification",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:4-9",
+      "label": "conditions",
+      "pages": [
+        4,
+        9
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T03:46:16Z",
+      "first_seen": "2026-07-15T03:46:16Z"
+    },
+    {
+      "task_id": "cx_62fdd9c909eb07a3",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:4-9",
+      "label": "conditions",
+      "pages": [
+        4,
+        9
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T03:46:16Z",
+      "first_seen": "2026-07-15T03:46:16Z"
+    },
+    {
+      "task_id": "cx_add2c69d2232b15f",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:10-17",
+      "label": "garanties",
+      "pages": [
+        10,
+        17
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T03:46:16Z",
+      "first_seen": "2026-07-15T03:46:16Z"
+    },
+    {
+      "task_id": "cx_072c66eb663477ce",
+      "type": "verification",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:10-17",
+      "label": "garanties",
+      "pages": [
+        10,
+        17
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T03:46:16Z",
+      "first_seen": "2026-07-15T03:46:16Z"
+    },
+    {
+      "task_id": "cx_255635a1bea7fc01",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:10-17",
+      "label": "garanties",
+      "pages": [
+        10,
+        17
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T03:46:16Z",
+      "first_seen": "2026-07-15T03:46:16Z"
+    },
+    {
+      "task_id": "cx_e92d638e74e4e6a2",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:18-18",
+      "label": "conditions",
+      "pages": [
+        18,
+        18
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T03:46:16Z",
+      "first_seen": "2026-07-15T03:46:16Z"
+    },
+    {
+      "task_id": "cx_dccf07e0deac5ae8",
+      "type": "verification",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:18-18",
+      "label": "conditions",
+      "pages": [
+        18,
+        18
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T03:46:16Z",
+      "first_seen": "2026-07-15T03:46:16Z"
+    },
+    {
+      "task_id": "cx_7a0234228f127054",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:18-18",
+      "label": "conditions",
+      "pages": [
+        18,
+        18
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T03:46:16Z",
+      "first_seen": "2026-07-15T03:46:16Z"
+    },
+    {
+      "task_id": "cx_60fc73c86a52d30a",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:19-25",
+      "label": "garanties",
+      "pages": [
+        19,
+        25
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T14:22:59Z",
+      "first_seen": "2026-07-15T14:22:59Z"
+    },
+    {
+      "task_id": "cx_949a32ca076fde65",
+      "type": "verification",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:19-25",
+      "label": "garanties",
+      "pages": [
+        19,
+        25
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T14:22:59Z",
+      "first_seen": "2026-07-15T14:22:59Z"
+    },
+    {
+      "task_id": "cx_0ed8eddfcc6524f3",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:19-25",
+      "label": "garanties",
+      "pages": [
+        19,
+        25
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T14:22:59Z",
+      "first_seen": "2026-07-15T14:22:59Z"
+    },
+    {
+      "task_id": "cx_af6876c8aa5ef5d1",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#declencheurs:26-27",
+      "label": "declencheurs",
+      "pages": [
+        26,
+        27
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T14:22:59Z",
+      "first_seen": "2026-07-15T14:22:59Z"
+    },
+    {
+      "task_id": "cx_4a4b530376c1b4fb",
+      "type": "verification",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#declencheurs:26-27",
+      "label": "declencheurs",
+      "pages": [
+        26,
+        27
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T14:22:59Z",
+      "first_seen": "2026-07-15T14:22:59Z"
+    },
+    {
+      "task_id": "cx_df290b156b79496a",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:28-28",
+      "label": "conditions",
+      "pages": [
+        28,
+        28
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T14:22:59Z",
+      "first_seen": "2026-07-15T14:22:59Z"
+    },
+    {
+      "task_id": "cx_96fcae62206bab86",
+      "type": "verification",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:28-28",
+      "label": "conditions",
+      "pages": [
+        28,
+        28
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T14:22:59Z",
+      "first_seen": "2026-07-15T14:22:59Z"
+    },
+    {
+      "task_id": "cx_af520dbaa01f00fd",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:28-28",
+      "label": "conditions",
+      "pages": [
+        28,
+        28
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-15T14:22:59Z",
+      "first_seen": "2026-07-15T14:22:59Z"
+    },
+    {
+      "task_id": "cx_c23131b3e4c969c8",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:29-34",
+      "label": "garanties",
+      "pages": [
+        29,
+        34
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T03:48:57Z",
+      "first_seen": "2026-07-16T03:48:57Z"
+    },
+    {
+      "task_id": "cx_decfa083b74d3487",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:29-34",
+      "label": "garanties",
+      "pages": [
+        29,
+        34
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T03:48:57Z",
+      "first_seen": "2026-07-16T03:48:57Z"
+    },
+    {
+      "task_id": "cx_eccd1424d20b0f94",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:35-35",
+      "label": "conditions",
+      "pages": [
+        35,
+        35
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T03:48:57Z",
+      "first_seen": "2026-07-16T03:48:57Z"
+    },
+    {
+      "task_id": "cx_73dccaf99bf2acce",
+      "type": "verification",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:35-35",
+      "label": "conditions",
+      "pages": [
+        35,
+        35
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T03:48:57Z",
+      "first_seen": "2026-07-16T03:48:57Z"
+    },
+    {
+      "task_id": "cx_9f93fed48f65cc7c",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:35-35",
+      "label": "conditions",
+      "pages": [
+        35,
+        35
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T03:48:57Z",
+      "first_seen": "2026-07-16T03:48:57Z"
+    },
+    {
+      "task_id": "cx_5cb317705d42b6d7",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:36-44",
+      "label": "garanties",
+      "pages": [
+        36,
+        44
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T03:48:57Z",
+      "first_seen": "2026-07-16T03:48:57Z"
+    },
+    {
+      "task_id": "cx_d83abb26564c8942",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:36-44",
+      "label": "garanties",
+      "pages": [
+        36,
+        44
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T03:48:57Z",
+      "first_seen": "2026-07-16T03:48:57Z"
+    },
+    {
+      "task_id": "cx_2c33eaded2a334c1",
+      "type": "condition",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:45-45",
+      "label": "conditions",
+      "pages": [
+        45,
+        45
+      ],
+      "reason": "Zone axa_pdf_02#conditions:45-45 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T14:35:07Z",
+      "first_seen": "2026-07-16T14:35:07Z"
+    },
+    {
+      "task_id": "cx_cab7a910d8207974",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:45-45",
+      "label": "conditions",
+      "pages": [
+        45,
+        45
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T14:35:07Z",
+      "first_seen": "2026-07-16T14:35:07Z"
+    },
+    {
+      "task_id": "cx_4c08f7bdaf3f767b",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:45-45",
+      "label": "conditions",
+      "pages": [
+        45,
+        45
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T14:35:07Z",
+      "first_seen": "2026-07-16T14:35:07Z"
+    },
+    {
+      "task_id": "cx_4c7c0e155399313f",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:46-46",
+      "label": "garanties",
+      "pages": [
+        46,
+        46
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T14:35:07Z",
+      "first_seen": "2026-07-16T14:35:07Z"
+    },
+    {
+      "task_id": "cx_df87509eadd8075c",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:46-46",
+      "label": "garanties",
+      "pages": [
+        46,
+        46
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T14:35:07Z",
+      "first_seen": "2026-07-16T14:35:07Z"
+    },
+    {
+      "task_id": "cx_06a4800d74235012",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#titre:47-49",
+      "label": "titre",
+      "pages": [
+        47,
+        49
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-16T14:35:07Z",
+      "first_seen": "2026-07-16T14:35:07Z"
+    },
+    {
+      "task_id": "cx_d15ea9075acc406f",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#definitions:50-50",
+      "label": "definitions",
+      "pages": [
+        50,
+        50
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T03:49:04Z",
+      "first_seen": "2026-07-17T03:49:04Z"
+    },
+    {
+      "task_id": "cx_ae359181fb69d707",
+      "type": "verification",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#definitions:50-50",
+      "label": "definitions",
+      "pages": [
+        50,
+        50
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T03:49:04Z",
+      "first_seen": "2026-07-17T03:49:04Z"
+    },
+    {
+      "task_id": "cx_962dd1b93aa7420a",
+      "type": "condition",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:51-52",
+      "label": "conditions",
+      "pages": [
+        51,
+        52
+      ],
+      "reason": "Zone axa_pdf_02#conditions:51-52 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T03:49:04Z",
+      "first_seen": "2026-07-17T03:49:04Z"
+    },
+    {
+      "task_id": "cx_b7e96bcd1b385431",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:51-52",
+      "label": "conditions",
+      "pages": [
+        51,
+        52
+      ],
+      "reason": "Contenu absent de la connaissance : 29 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T03:49:04Z",
+      "first_seen": "2026-07-17T03:49:04Z"
+    },
+    {
+      "task_id": "cx_1668bec3a7826b59",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:51-52",
+      "label": "conditions",
+      "pages": [
+        51,
+        52
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T03:49:04Z",
+      "first_seen": "2026-07-17T03:49:04Z"
+    },
+    {
+      "task_id": "cx_aaa28d347ebc113d",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:53-53",
+      "label": "garanties",
+      "pages": [
+        53,
+        53
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T03:49:04Z",
+      "first_seen": "2026-07-17T03:49:04Z"
+    },
+    {
+      "task_id": "cx_b79f0234a4ac24c4",
+      "type": "verification",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:53-53",
+      "label": "garanties",
+      "pages": [
+        53,
+        53
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T03:49:04Z",
+      "first_seen": "2026-07-17T03:49:04Z"
+    },
+    {
+      "task_id": "cx_326f5412712827c0",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:53-53",
+      "label": "garanties",
+      "pages": [
+        53,
+        53
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T03:49:04Z",
+      "first_seen": "2026-07-17T03:49:04Z"
+    },
+    {
+      "task_id": "cx_8f6d08397bcd29da",
+      "type": "definition",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#definitions:54-54",
+      "label": "definitions",
+      "pages": [
+        54,
+        54
+      ],
+      "reason": "Zone axa_pdf_02#definitions:54-54 non couverte : extraire les definitions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T14:14:10Z",
+      "first_seen": "2026-07-17T14:14:10Z"
+    },
+    {
+      "task_id": "cx_e7a6e7fd4afefc8f",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#definitions:54-54",
+      "label": "definitions",
+      "pages": [
+        54,
+        54
+      ],
+      "reason": "Contenu absent de la connaissance : 18 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T14:14:10Z",
+      "first_seen": "2026-07-17T14:14:10Z"
+    },
+    {
+      "task_id": "cx_1e5d3c31a9520c4b",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#contenu:55-55",
+      "label": "contenu",
+      "pages": [
+        55,
+        55
+      ],
+      "reason": "Contenu absent de la connaissance : 0 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T14:14:10Z",
+      "first_seen": "2026-07-17T14:14:10Z"
+    },
+    {
+      "task_id": "cx_aff0d8c7db99b9ce",
+      "type": "complement",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#titre:56-56",
+      "label": "titre",
+      "pages": [
+        56,
+        56
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-17T14:14:10Z",
+      "first_seen": "2026-07-17T14:14:10Z"
+    },
+    {
+      "task_id": "cx_b3461f0b26096802",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#contenu:1-1",
+      "label": "contenu",
+      "pages": [
+        1,
+        1
+      ],
+      "reason": "Contenu absent de la connaissance : 6 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T03:43:06Z",
+      "first_seen": "2026-07-18T03:43:06Z"
+    },
+    {
+      "task_id": "cx_2704a71ae8d7ee6c",
+      "type": "condition",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:2-3",
+      "label": "conditions",
+      "pages": [
+        2,
+        3
+      ],
+      "reason": "Zone axa_pdf_03#conditions:2-3 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T03:43:06Z",
+      "first_seen": "2026-07-18T03:43:06Z"
+    },
+    {
+      "task_id": "cx_c6407b6e3ebc9107",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:2-3",
+      "label": "conditions",
+      "pages": [
+        2,
+        3
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T03:43:06Z",
+      "first_seen": "2026-07-18T03:43:06Z"
+    },
+    {
+      "task_id": "cx_02470c6e8bb755e6",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:2-3",
+      "label": "conditions",
+      "pages": [
+        2,
+        3
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T03:43:06Z",
+      "first_seen": "2026-07-18T03:43:06Z"
+    },
+    {
+      "task_id": "cx_a5344e36a9adb1d0",
+      "type": "definition",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#definitions:4-4",
+      "label": "definitions",
+      "pages": [
+        4,
+        4
+      ],
+      "reason": "Zone axa_pdf_03#definitions:4-4 non couverte : extraire les definitions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T03:43:06Z",
+      "first_seen": "2026-07-18T03:43:06Z"
+    },
+    {
+      "task_id": "cx_862e3df13a0ce3a0",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#definitions:4-4",
+      "label": "definitions",
+      "pages": [
+        4,
+        4
+      ],
+      "reason": "Contenu absent de la connaissance : 20 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T03:43:06Z",
+      "first_seen": "2026-07-18T03:43:06Z"
+    },
+    {
+      "task_id": "cx_db51da80ff5b5e79",
+      "type": "condition",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:5-5",
+      "label": "conditions",
+      "pages": [
+        5,
+        5
+      ],
+      "reason": "Zone axa_pdf_03#conditions:5-5 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T13:59:16Z",
+      "first_seen": "2026-07-18T13:59:16Z"
+    },
+    {
+      "task_id": "cx_a0dc3453a1dc8e4d",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:5-5",
+      "label": "conditions",
+      "pages": [
+        5,
+        5
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T13:59:16Z",
+      "first_seen": "2026-07-18T13:59:16Z"
+    },
+    {
+      "task_id": "cx_d131dea9c59451d3",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:5-5",
+      "label": "conditions",
+      "pages": [
+        5,
+        5
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T13:59:16Z",
+      "first_seen": "2026-07-18T13:59:16Z"
+    },
+    {
+      "task_id": "cx_c000885fe09aa860",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:6-6",
+      "label": "garanties",
+      "pages": [
+        6,
+        6
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T13:59:16Z",
+      "first_seen": "2026-07-18T13:59:16Z"
+    },
+    {
+      "task_id": "cx_79031296f022f508",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:6-6",
+      "label": "garanties",
+      "pages": [
+        6,
+        6
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T13:59:16Z",
+      "first_seen": "2026-07-18T13:59:16Z"
+    },
+    {
+      "task_id": "cx_c2e9c613ea4e155c",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:7-8",
+      "label": "conditions",
+      "pages": [
+        7,
+        8
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T13:59:16Z",
+      "first_seen": "2026-07-18T13:59:16Z"
+    },
+    {
+      "task_id": "cx_27fdb7305ebb7bb9",
+      "type": "verification",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:7-8",
+      "label": "conditions",
+      "pages": [
+        7,
+        8
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T13:59:16Z",
+      "first_seen": "2026-07-18T13:59:16Z"
+    },
+    {
+      "task_id": "cx_ed908c142c4536f8",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:7-8",
+      "label": "conditions",
+      "pages": [
+        7,
+        8
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-18T13:59:16Z",
+      "first_seen": "2026-07-18T13:59:16Z"
+    },
+    {
+      "task_id": "cx_1684ca515efb9464",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:9-9",
+      "label": "garanties",
+      "pages": [
+        9,
+        9
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T04:04:54Z",
+      "first_seen": "2026-07-19T04:04:54Z"
+    },
+    {
+      "task_id": "cx_f593b196bed03ce9",
+      "type": "verification",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:9-9",
+      "label": "garanties",
+      "pages": [
+        9,
+        9
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T04:04:54Z",
+      "first_seen": "2026-07-19T04:04:54Z"
+    },
+    {
+      "task_id": "cx_2920026f46b5b17c",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:9-9",
+      "label": "garanties",
+      "pages": [
+        9,
+        9
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T04:04:54Z",
+      "first_seen": "2026-07-19T04:04:54Z"
+    },
+    {
+      "task_id": "cx_0536fc01ee8b5663",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:10-10",
+      "label": "conditions",
+      "pages": [
+        10,
+        10
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T04:04:54Z",
+      "first_seen": "2026-07-19T04:04:54Z"
+    },
+    {
+      "task_id": "cx_1488064770792f72",
+      "type": "verification",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:10-10",
+      "label": "conditions",
+      "pages": [
+        10,
+        10
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T04:04:54Z",
+      "first_seen": "2026-07-19T04:04:54Z"
+    },
+    {
+      "task_id": "cx_e7e67a8b6c2f8778",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:10-10",
+      "label": "conditions",
+      "pages": [
+        10,
+        10
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T04:04:54Z",
+      "first_seen": "2026-07-19T04:04:54Z"
+    },
+    {
+      "task_id": "cx_a5fb2dd9320cd134",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:11-11",
+      "label": "garanties",
+      "pages": [
+        11,
+        11
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T04:04:54Z",
+      "first_seen": "2026-07-19T04:04:54Z"
+    },
+    {
+      "task_id": "cx_87e96aeca3ed1348",
+      "type": "verification",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:11-11",
+      "label": "garanties",
+      "pages": [
+        11,
+        11
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T04:04:54Z",
+      "first_seen": "2026-07-19T04:04:54Z"
+    },
+    {
+      "task_id": "cx_5611a5c51f3a3b1c",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:11-11",
+      "label": "garanties",
+      "pages": [
+        11,
+        11
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T04:04:54Z",
+      "first_seen": "2026-07-19T04:04:54Z"
+    },
+    {
+      "task_id": "cx_41d91a54e6235c77",
+      "type": "definition",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#definitions:12-12",
+      "label": "definitions",
+      "pages": [
+        12,
+        12
+      ],
+      "reason": "Zone axa_pdf_03#definitions:12-12 non couverte : extraire les definitions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T14:05:09Z",
+      "first_seen": "2026-07-19T14:05:09Z"
+    },
+    {
+      "task_id": "cx_12a7af73ba010791",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#definitions:12-12",
+      "label": "definitions",
+      "pages": [
+        12,
+        12
+      ],
+      "reason": "Contenu absent de la connaissance : 20 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T14:05:09Z",
+      "first_seen": "2026-07-19T14:05:09Z"
+    },
+    {
+      "task_id": "cx_16134bd2b46ba584",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:13-14",
+      "label": "conditions",
+      "pages": [
+        13,
+        14
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T14:05:09Z",
+      "first_seen": "2026-07-19T14:05:09Z"
+    },
+    {
+      "task_id": "cx_c93a336be4fadf08",
+      "type": "verification",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:13-14",
+      "label": "conditions",
+      "pages": [
+        13,
+        14
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T14:05:09Z",
+      "first_seen": "2026-07-19T14:05:09Z"
+    },
+    {
+      "task_id": "cx_75837486caaa65c1",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:13-14",
+      "label": "conditions",
+      "pages": [
+        13,
+        14
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T14:05:09Z",
+      "first_seen": "2026-07-19T14:05:09Z"
+    },
+    {
+      "task_id": "cx_cf9d336d9413522a",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:15-27",
+      "label": "garanties",
+      "pages": [
+        15,
+        27
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T14:05:09Z",
+      "first_seen": "2026-07-19T14:05:09Z"
+    },
+    {
+      "task_id": "cx_5f221f0d0f6b01c3",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:15-27",
+      "label": "garanties",
+      "pages": [
+        15,
+        27
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-19T14:05:09Z",
+      "first_seen": "2026-07-19T14:05:09Z"
+    },
+    {
+      "task_id": "cx_363a9eacee830d8a",
+      "type": "declencheur",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#declencheurs:28-28",
+      "label": "declencheurs",
+      "pages": [
+        28,
+        28
+      ],
+      "reason": "Zone axa_pdf_03#declencheurs:28-28 non couverte : extraire les declencheurs absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T04:24:26Z",
+      "first_seen": "2026-07-20T04:24:26Z"
+    },
+    {
+      "task_id": "cx_1252d41c82f511fe",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#declencheurs:28-28",
+      "label": "declencheurs",
+      "pages": [
+        28,
+        28
+      ],
+      "reason": "Contenu absent de la connaissance : 15 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T04:24:26Z",
+      "first_seen": "2026-07-20T04:24:26Z"
+    },
+    {
+      "task_id": "cx_68f819472497df67",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:29-29",
+      "label": "garanties",
+      "pages": [
+        29,
+        29
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T04:24:26Z",
+      "first_seen": "2026-07-20T04:24:26Z"
+    },
+    {
+      "task_id": "cx_f7772a06c1552e32",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:29-29",
+      "label": "garanties",
+      "pages": [
+        29,
+        29
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T04:24:26Z",
+      "first_seen": "2026-07-20T04:24:26Z"
+    },
+    {
+      "task_id": "cx_e63c1fadbc50f594",
+      "type": "condition",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:30-30",
+      "label": "conditions",
+      "pages": [
+        30,
+        30
+      ],
+      "reason": "Zone axa_pdf_03#conditions:30-30 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T04:24:26Z",
+      "first_seen": "2026-07-20T04:24:26Z"
+    },
+    {
+      "task_id": "cx_428320bbcc1d1552",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:30-30",
+      "label": "conditions",
+      "pages": [
+        30,
+        30
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T04:24:26Z",
+      "first_seen": "2026-07-20T04:24:26Z"
+    },
+    {
+      "task_id": "cx_d8d998bc42b00d84",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:30-30",
+      "label": "conditions",
+      "pages": [
+        30,
+        30
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T04:24:26Z",
+      "first_seen": "2026-07-20T04:24:26Z"
+    },
+    {
+      "task_id": "cx_08d6807baa80f0f0",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#titre:31-31",
+      "label": "titre",
+      "pages": [
+        31,
+        31
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T14:41:40Z",
+      "first_seen": "2026-07-20T14:41:40Z"
+    },
+    {
+      "task_id": "cx_63a6aaa5cdac393a",
+      "type": "condition",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:32-32",
+      "label": "conditions",
+      "pages": [
+        32,
+        32
+      ],
+      "reason": "Zone axa_pdf_03#conditions:32-32 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T14:41:40Z",
+      "first_seen": "2026-07-20T14:41:40Z"
+    },
+    {
+      "task_id": "cx_43d625d2b3978d71",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:32-32",
+      "label": "conditions",
+      "pages": [
+        32,
+        32
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T14:41:40Z",
+      "first_seen": "2026-07-20T14:41:40Z"
+    },
+    {
+      "task_id": "cx_76693c51ca062b01",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:32-32",
+      "label": "conditions",
+      "pages": [
+        32,
+        32
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T14:41:40Z",
+      "first_seen": "2026-07-20T14:41:40Z"
+    },
+    {
+      "task_id": "cx_78a28d58cac531c6",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#titre:33-33",
+      "label": "titre",
+      "pages": [
+        33,
+        33
+      ],
+      "reason": "Contenu absent de la connaissance : 23 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-20T14:41:40Z",
+      "first_seen": "2026-07-20T14:41:40Z"
+    },
+    {
+      "task_id": "cx_a3aac54997a292cd",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#contenu:34-34",
+      "label": "contenu",
+      "pages": [
+        34,
+        34
+      ],
+      "reason": "Contenu absent de la connaissance : 12 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-21T03:57:41Z",
+      "first_seen": "2026-07-21T03:57:41Z"
+    },
+    {
+      "task_id": "cx_502a0b88b2c524cc",
+      "type": "condition",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:35-35",
+      "label": "conditions",
+      "pages": [
+        35,
+        35
+      ],
+      "reason": "Zone axa_pdf_03#conditions:35-35 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-21T03:57:41Z",
+      "first_seen": "2026-07-21T03:57:41Z"
+    },
+    {
+      "task_id": "cx_fcc1c6e4a68bc99a",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:35-35",
+      "label": "conditions",
+      "pages": [
+        35,
+        35
+      ],
+      "reason": "Contenu absent de la connaissance : 26 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-21T03:57:41Z",
+      "first_seen": "2026-07-21T03:57:41Z"
+    },
+    {
+      "task_id": "cx_4fa292516fe9b006",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:35-35",
+      "label": "conditions",
+      "pages": [
+        35,
+        35
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-21T03:57:41Z",
+      "first_seen": "2026-07-21T03:57:41Z"
+    },
+    {
+      "task_id": "cx_1e2533b605e0c833",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#titre:36-36",
+      "label": "titre",
+      "pages": [
+        36,
+        36
+      ],
+      "reason": "Contenu absent de la connaissance : 29 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-21T03:57:41Z",
+      "first_seen": "2026-07-21T03:57:41Z"
+    },
+    {
+      "task_id": "cx_6c76d6b9a1d3347c",
+      "type": "condition",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:37-37",
+      "label": "conditions",
+      "pages": [
+        37,
+        37
+      ],
+      "reason": "Zone axa_pdf_03#conditions:37-37 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-21T14:36:17Z",
+      "first_seen": "2026-07-21T14:36:17Z"
+    },
+    {
+      "task_id": "cx_2742cadb43a40b95",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:37-37",
+      "label": "conditions",
+      "pages": [
+        37,
+        37
+      ],
+      "reason": "Contenu absent de la connaissance : 27 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-21T14:36:17Z",
+      "first_seen": "2026-07-21T14:36:17Z"
+    },
+    {
+      "task_id": "cx_371dfb0f650120a2",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:37-37",
+      "label": "conditions",
+      "pages": [
+        37,
+        37
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-21T14:36:17Z",
+      "first_seen": "2026-07-21T14:36:17Z"
+    },
+    {
+      "task_id": "cx_76199a65be30b331",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#titre:38-40",
+      "label": "titre",
+      "pages": [
+        38,
+        40
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-21T14:36:17Z",
+      "first_seen": "2026-07-21T14:36:17Z"
+    },
+    {
+      "task_id": "cx_4121055a3672a425",
+      "type": "declencheur",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#declencheurs:41-41",
+      "label": "declencheurs",
+      "pages": [
+        41,
+        41
+      ],
+      "reason": "Zone axa_pdf_03#declencheurs:41-41 non couverte : extraire les declencheurs absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-21T14:36:17Z",
+      "first_seen": "2026-07-21T14:36:17Z"
+    },
+    {
+      "task_id": "cx_670a6291c2335c79",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#declencheurs:41-41",
+      "label": "declencheurs",
+      "pages": [
+        41,
+        41
+      ],
+      "reason": "Contenu absent de la connaissance : 16 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-21T14:36:17Z",
+      "first_seen": "2026-07-21T14:36:17Z"
+    },
+    {
+      "task_id": "cx_bd21941d6b913596",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#definitions:42-42",
+      "label": "definitions",
+      "pages": [
+        42,
+        42
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T03:59:00Z",
+      "first_seen": "2026-07-22T03:59:00Z"
+    },
+    {
+      "task_id": "cx_b81d0a0f82c91015",
+      "type": "verification",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#definitions:42-42",
+      "label": "definitions",
+      "pages": [
+        42,
+        42
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T03:59:00Z",
+      "first_seen": "2026-07-22T03:59:00Z"
+    },
+    {
+      "task_id": "cx_7b825632f24e3fb0",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:43-44",
+      "label": "garanties",
+      "pages": [
+        43,
+        44
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T03:59:00Z",
+      "first_seen": "2026-07-22T03:59:00Z"
+    },
+    {
+      "task_id": "cx_f51e5cf2c7a436d8",
+      "type": "verification",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:43-44",
+      "label": "garanties",
+      "pages": [
+        43,
+        44
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T03:59:00Z",
+      "first_seen": "2026-07-22T03:59:00Z"
+    },
+    {
+      "task_id": "cx_ecf6cbb25afa16a0",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:43-44",
+      "label": "garanties",
+      "pages": [
+        43,
+        44
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T03:59:00Z",
+      "first_seen": "2026-07-22T03:59:00Z"
+    },
+    {
+      "task_id": "cx_3647be867164d5d2",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#sommaire:45-45",
+      "label": "sommaire",
+      "pages": [
+        45,
+        45
+      ],
+      "reason": "Contenu absent de la connaissance : 3 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T03:59:00Z",
+      "first_seen": "2026-07-22T03:59:00Z"
+    },
+    {
+      "task_id": "cx_d22acf5b5ff8936c",
+      "type": "complement",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#titre:46-46",
+      "label": "titre",
+      "pages": [
+        46,
+        46
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T14:36:29Z",
+      "first_seen": "2026-07-22T14:36:29Z"
+    },
+    {
+      "task_id": "cx_a34367b0507b8c04",
+      "type": "verification",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#titre:46-46",
+      "label": "titre",
+      "pages": [
+        46,
+        46
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T14:36:29Z",
+      "first_seen": "2026-07-22T14:36:29Z"
+    },
+    {
+      "task_id": "cx_c6f8a5643f2ba33e",
+      "type": "complement",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#contenu:1-1",
+      "label": "contenu",
+      "pages": [
+        1,
+        1
+      ],
+      "reason": "Contenu absent de la connaissance : 6 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T14:36:29Z",
+      "first_seen": "2026-07-22T14:36:29Z"
+    },
+    {
+      "task_id": "cx_2ea52fdbe81af576",
+      "type": "complement",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:2-2",
+      "label": "conditions",
+      "pages": [
+        2,
+        2
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T14:36:29Z",
+      "first_seen": "2026-07-22T14:36:29Z"
+    },
+    {
+      "task_id": "cx_b674a11bd287286e",
+      "type": "verification",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:2-2",
+      "label": "conditions",
+      "pages": [
+        2,
+        2
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T14:36:29Z",
+      "first_seen": "2026-07-22T14:36:29Z"
+    },
+    {
+      "task_id": "cx_27d155f5fcb4cf9c",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:2-2",
+      "label": "conditions",
+      "pages": [
+        2,
+        2
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-22T14:36:29Z",
+      "first_seen": "2026-07-22T14:36:29Z"
+    },
+    {
+      "task_id": "cx_da6645a70db93d2d",
+      "type": "complement",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#titre:3-3",
+      "label": "titre",
+      "pages": [
+        3,
+        3
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T03:56:53Z",
+      "first_seen": "2026-07-23T03:56:53Z"
+    },
+    {
+      "task_id": "cx_25cf0a466425206f",
+      "type": "verification",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#titre:3-3",
+      "label": "titre",
+      "pages": [
+        3,
+        3
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T03:56:53Z",
+      "first_seen": "2026-07-23T03:56:53Z"
+    },
+    {
+      "task_id": "cx_88a81a49dad6518d",
+      "type": "complement",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#garanties:4-6",
+      "label": "garanties",
+      "pages": [
+        4,
+        6
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T03:56:53Z",
+      "first_seen": "2026-07-23T03:56:53Z"
+    },
+    {
+      "task_id": "cx_2ecf20e6e7247cc0",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#garanties:4-6",
+      "label": "garanties",
+      "pages": [
+        4,
+        6
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T03:56:53Z",
+      "first_seen": "2026-07-23T03:56:53Z"
+    },
+    {
+      "task_id": "cx_accbc24fa5568bd2",
+      "type": "condition",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:7-8",
+      "label": "conditions",
+      "pages": [
+        7,
+        8
+      ],
+      "reason": "Zone axa_pdf_04#conditions:7-8 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T03:56:53Z",
+      "first_seen": "2026-07-23T03:56:53Z"
+    },
+    {
+      "task_id": "cx_0c164815cf8ba722",
+      "type": "complement",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:7-8",
+      "label": "conditions",
+      "pages": [
+        7,
+        8
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T03:56:53Z",
+      "first_seen": "2026-07-23T03:56:53Z"
+    },
+    {
+      "task_id": "cx_9a3f49aa1a2e6707",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:7-8",
+      "label": "conditions",
+      "pages": [
+        7,
+        8
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T03:56:53Z",
+      "first_seen": "2026-07-23T03:56:53Z"
+    },
+    {
+      "task_id": "cx_30750a31015332c7",
+      "type": "complement",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#garanties:9-12",
+      "label": "garanties",
+      "pages": [
+        9,
+        12
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T14:51:33Z",
+      "first_seen": "2026-07-23T14:51:33Z"
+    },
+    {
+      "task_id": "cx_56a050b6cb280b97",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#garanties:9-12",
+      "label": "garanties",
+      "pages": [
+        9,
+        12
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T14:51:33Z",
+      "first_seen": "2026-07-23T14:51:33Z"
+    },
+    {
+      "task_id": "cx_6a7cdef3484c0cc5",
+      "type": "complement",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#titre:13-15",
+      "label": "titre",
+      "pages": [
+        13,
+        15
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T14:51:33Z",
+      "first_seen": "2026-07-23T14:51:33Z"
+    },
+    {
+      "task_id": "cx_7b7c037ba6146f0c",
+      "type": "condition",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:16-19",
+      "label": "conditions",
+      "pages": [
+        16,
+        19
+      ],
+      "reason": "Zone axa_pdf_04#conditions:16-19 non couverte : extraire les conditions absents.",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T14:51:33Z",
+      "first_seen": "2026-07-23T14:51:33Z"
+    },
+    {
+      "task_id": "cx_15214299573f3c5c",
+      "type": "complement",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:16-19",
+      "label": "conditions",
+      "pages": [
+        16,
+        19
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T14:51:33Z",
+      "first_seen": "2026-07-23T14:51:33Z"
+    },
+    {
+      "task_id": "cx_a430706a574948fd",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:16-19",
+      "label": "conditions",
+      "pages": [
+        16,
+        19
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-23T14:51:33Z",
+      "first_seen": "2026-07-23T14:51:33Z"
+    },
+    {
+      "task_id": "cx_3727a9e79139ff2c",
+      "type": "complement",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#garanties:20-20",
+      "label": "garanties",
+      "pages": [
+        20,
+        20
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-24T03:55:42Z",
+      "first_seen": "2026-07-24T03:55:42Z"
+    },
+    {
+      "task_id": "cx_9e82f68586d856d7",
+      "type": "verification",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#garanties:20-20",
+      "label": "garanties",
+      "pages": [
+        20,
+        20
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-24T03:55:42Z",
+      "first_seen": "2026-07-24T03:55:42Z"
+    },
+    {
+      "task_id": "cx_1aa5fb7fa0dfda2f",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#garanties:20-20",
+      "label": "garanties",
+      "pages": [
+        20,
+        20
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-24T03:55:42Z",
+      "first_seen": "2026-07-24T03:55:42Z"
+    },
+    {
+      "task_id": "cx_97e82a62b5077012",
+      "type": "complement",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:21-21",
+      "label": "conditions",
+      "pages": [
+        21,
+        21
+      ],
+      "reason": "Zone partiellement couverte : compléter les éléments manquants.",
+      "priority": 3,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-24T03:55:42Z",
+      "first_seen": "2026-07-24T03:55:42Z"
+    },
+    {
+      "task_id": "cx_ebd08d972e0ab99a",
+      "type": "verification",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:21-21",
+      "label": "conditions",
+      "pages": [
+        21,
+        21
+      ],
+      "reason": "Vérifier la cohérence des éléments déjà connus de cette zone.",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-24T03:55:42Z",
+      "first_seen": "2026-07-24T03:55:42Z"
+    },
+    {
+      "task_id": "cx_bdf1a89b6b415a6e",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#conditions:21-21",
+      "label": "conditions",
+      "pages": [
+        21,
+        21
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-24T03:55:42Z",
+      "first_seen": "2026-07-24T03:55:42Z"
+    },
+    {
+      "task_id": "cx_bd5d4d3759de5850",
+      "type": "complement",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#garanties:22-28",
+      "label": "garanties",
+      "pages": [
+        22,
+        28
+      ],
+      "reason": "Contenu absent de la connaissance : 30 terme(s) nouveau(x).",
+      "priority": 4,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-24T03:55:42Z",
+      "first_seen": "2026-07-24T03:55:42Z"
+    },
+    {
+      "task_id": "cx_86014e32f644c33d",
+      "type": "comparaison",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#garanties:22-28",
+      "label": "garanties",
+      "pages": [
+        22,
+        28
+      ],
+      "reason": "Comparer cette zone aux mêmes zones des autres contrats (déséquilibre).",
+      "priority": 2,
+      "origin_agent": "corpus-explorer",
+      "updated_at": "2026-07-24T03:55:42Z",
+      "first_seen": "2026-07-24T03:55:42Z"
+    }
+  ],
+  "updated_at": "2026-07-24T03:55:42Z"
+}

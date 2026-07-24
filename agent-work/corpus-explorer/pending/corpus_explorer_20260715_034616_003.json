@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260715_034616_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260715_034612",
+  "created_at": "2026-07-15T03:46:16Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "conditions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-04 Notice d'information Avizen Pro (AEP).pdf",
+    "pages": "18-18",
+    "excerpt": "Contrat « Avizen Pro » — zone conditions (pages 18-18) : couverture partielle. 11 élément(s) possiblement absent(s) de la connaissance : Fixation, Sécurité, garantie, assuré, Elle, Taux, médecin conseil de l'assureur (rôle dans l'évaluation), indépendance vis-à-vis de la Sécurité sociale."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Avizen Pro",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#conditions:18-18",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Fixation",
+        "Sécurité",
+        "garantie",
+        "assuré",
+        "Elle",
+        "Taux",
+        "médecin conseil de l'assureur (rôle dans l'évaluation)",
+        "indépendance vis-à-vis de la Sécurité sociale"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Avizen Pro » — zone conditions (pages 18-18) : couverture partielle. 11 élément(s) possiblement absent(s) de la connaissance : Fixation, Sécurité, garantie, assuré, Elle, Taux, médecin conseil de l'assureur (rôle dans l'évaluation), indépendance vis-à-vis de la Sécurité sociale. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

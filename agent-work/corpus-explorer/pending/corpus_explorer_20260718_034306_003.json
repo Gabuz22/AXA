@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260718_034306_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260718_034302",
+  "created_at": "2026-07-18T03:43:06Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "definitions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'Information Entour'Age.pdf",
+    "pages": "4-4",
+    "excerpt": "Contrat « Entour'Age » — zone definitions (pages 4-4) : couverture non_couverte. 20 élément(s) possiblement absent(s) de la connaissance : Chapitre Page Article, Acceptation, Définitions, Convention, Archivage, Processus, Signature, Relation."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Entour'Age",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#definitions:4-4",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Chapitre Page Article",
+        "Acceptation",
+        "Définitions",
+        "Convention",
+        "Archivage",
+        "Processus",
+        "Signature",
+        "Relation"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Entour'Age » — zone definitions (pages 4-4) : couverture non_couverte. 20 élément(s) possiblement absent(s) de la connaissance : Chapitre Page Article, Acceptation, Définitions, Convention, Archivage, Processus, Signature, Relation. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

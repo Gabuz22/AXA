@@ -1,0 +1,209 @@
+{
+  "generated_at": "2026-07-24T08:45:45Z",
+  "domain": "axa-contrat",
+  "subjects_ranked": [
+    {
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "depth_score": 0.657,
+      "weak_axes": [
+        "understanding",
+        "relations"
+      ],
+      "semantic_coverage": 0.385
+    },
+    {
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "depth_score": 0.696,
+      "weak_axes": [
+        "understanding",
+        "relations"
+      ],
+      "semantic_coverage": 0.385
+    },
+    {
+      "subject": "Excelium (assurance vie)",
+      "depth_score": 0.74,
+      "weak_axes": [
+        "understanding"
+      ],
+      "semantic_coverage": 0.385
+    },
+    {
+      "subject": "Masterlife CREDIT",
+      "depth_score": 0.75,
+      "weak_axes": [
+        "understanding"
+      ],
+      "semantic_coverage": 0.385
+    },
+    {
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "depth_score": 0.769,
+      "weak_axes": [
+        "understanding",
+        "relations"
+      ],
+      "semantic_coverage": 0.769
+    },
+    {
+      "subject": "Essen'Ciel Patrimoine",
+      "depth_score": 0.775,
+      "weak_axes": [
+        "understanding"
+      ],
+      "semantic_coverage": 0.231
+    },
+    {
+      "subject": "Avizen",
+      "depth_score": 0.865,
+      "weak_axes": [],
+      "semantic_coverage": 0.385
+    },
+    {
+      "subject": "Avizen Pro",
+      "depth_score": 0.903,
+      "weak_axes": [],
+      "semantic_coverage": 0.385
+    },
+    {
+      "subject": "Entour'Age",
+      "depth_score": 0.913,
+      "weak_axes": [],
+      "semantic_coverage": 0.385
+    }
+  ],
+  "backlog_pending": 11,
+  "backlog_by_type": {
+    "expliquer": 6,
+    "relier": 3,
+    "contradiction": 2
+  },
+  "persistent_tasks": [
+    {
+      "task_id": "kd_9317886a7423fdf0",
+      "type": "expliquer",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "first_seen": "2026-07-11T22:58:00Z"
+    },
+    {
+      "task_id": "kd_0d0749ff0e9208f0",
+      "type": "relier",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "first_seen": "2026-07-11T22:58:00Z"
+    },
+    {
+      "task_id": "kd_f603a3255e927ffd",
+      "type": "expliquer",
+      "subject": "Essen'Ciel Patrimoine",
+      "first_seen": "2026-07-11T22:58:00Z"
+    },
+    {
+      "task_id": "ko_739acc6d828abd1c",
+      "type": "contradiction",
+      "subject": "Essen'Ciel Patrimoine",
+      "first_seen": "2026-07-11T22:58:00Z"
+    },
+    {
+      "task_id": "kd_2a600a906a623e15",
+      "type": "expliquer",
+      "subject": "Excelium (assurance vie)",
+      "first_seen": "2026-07-11T22:58:00Z"
+    },
+    {
+      "task_id": "ko_97f85a2829c7ea44",
+      "type": "contradiction",
+      "subject": "Excelium (assurance vie)",
+      "first_seen": "2026-07-11T22:58:00Z"
+    },
+    {
+      "task_id": "kd_48dbc2649a7a7cda",
+      "type": "expliquer",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "first_seen": "2026-07-11T22:58:00Z"
+    },
+    {
+      "task_id": "kd_bd89ee153c1c1af2",
+      "type": "relier",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "first_seen": "2026-07-11T22:58:00Z"
+    },
+    {
+      "task_id": "kd_71fbe988be6f01bb",
+      "type": "expliquer",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "first_seen": "2026-07-11T22:58:00Z"
+    },
+    {
+      "task_id": "kd_5e0d0e7de7f828b1",
+      "type": "relier",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "first_seen": "2026-07-11T22:58:00Z"
+    }
+  ],
+  "cost_weeks": {
+    "2026-W28": {
+      "axa-contrat": {
+        "llm_calls": 9,
+        "tokens": 0
+      }
+    },
+    "2026-W29": {
+      "axa-contrat": {
+        "llm_calls": 42,
+        "tokens": 0
+      }
+    },
+    "2026-W30": {
+      "axa-contrat": {
+        "llm_calls": 27,
+        "tokens": 0
+      }
+    }
+  },
+  "best_provider": "gemini",
+  "recommendations": [
+    {
+      "type": "approfondir",
+      "target": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "priority": 4,
+      "rationale": "profondeur 0.66, axes faibles: understanding, relations",
+      "action": "orienter knowledge-builder / extraction sur ce sujet"
+    },
+    {
+      "type": "approfondir",
+      "target": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "priority": 4,
+      "rationale": "profondeur 0.70, axes faibles: understanding, relations",
+      "action": "orienter knowledge-builder / extraction sur ce sujet"
+    },
+    {
+      "type": "approfondir",
+      "target": "Excelium (assurance vie)",
+      "priority": 4,
+      "rationale": "profondeur 0.74, axes faibles: understanding",
+      "action": "orienter knowledge-builder / extraction sur ce sujet"
+    },
+    {
+      "type": "prioriser_tache",
+      "target": "expliquer",
+      "priority": 3,
+      "rationale": "6 tâches 'expliquer' en attente (type dominant)",
+      "action": "s'assurer qu'un exécuteur traite ce type"
+    },
+    {
+      "type": "lacune_persistante",
+      "target": "Essen'Ciel (assurance obsèques)",
+      "priority": 3,
+      "rationale": "tâche 'expliquer' en attente depuis 2026-07-11T22:58:00Z",
+      "action": "vérifier pourquoi elle n'est pas exécutée (exécuteur manquant ? budget ?)"
+    },
+    {
+      "type": "router",
+      "target": "gemini",
+      "priority": 2,
+      "rationale": "meilleur score qualité/fiabilité mesuré",
+      "action": "réserver les tâches complexes à ce fournisseur ; tâches simples aux modèles rapides"
+    }
+  ],
+  "note": "recommandations vérifiables ; le manager ne modifie jamais la connaissance ni l'architecture."
+}
