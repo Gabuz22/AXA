@@ -11,7 +11,7 @@
    "titre": "fiscalité",
    "texte": "Capital décès soumis aux droits de mutation à titre gratuit (art. 757 B CGI) et/ou à la taxation de l'art. 990 I CGI. Exonération totale si bénéficiaire = conjoint, partenaire PACS ou, sous conditions (art. 796-0 ter CGI), frère/sœur. · Prestations en cas de vie (IJ et invalidité) non soumises à l'impôt sur le revenu SI l'adhésion n'a donné lieu à aucun avantage fiscal ; sinon imposables (ex. contrat Homme-clé). Régime fiscal décrit en vigueur au 01/01/2025.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null
+   "page": 3
   },
   {
    "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17",
@@ -19,7 +19,7 @@
    "titre": "determination_part_taxable",
    "texte": "determination_part_taxable. Information documentaire à consulter dans la source.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null
+   "page": 3
   },
   {
    "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09",
@@ -107,7 +107,7 @@
    "titre": "determination_part_taxable",
    "texte": "determination_part_taxable. Information documentaire à consulter dans la source.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-   "page": null
+   "page": 3
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22",
@@ -115,7 +115,7 @@
    "titre": "fiscalité",
    "texte": "Rente dépendance non imposable à l'impôt sur le revenu (hors Madelin). · Cadre Madelin possible : déduction fiscale des cotisations des garanties en rente ; en contrepartie, rente imposable en pensions et rentes viagères à titre gratuit. · Capital décès : exonération totale si bénéficiaire = conjoint, partenaire PACS, ou frère/sœur remplissant 3 conditions (célibataire/veuf/divorcé/séparé ; > 50 ans ou infirme ; vie commune constante les 5 ans précédant le décès). Autres bénéficiaires : 757 B et/ou 990 I CGI.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-   "page": null
+   "page": 3
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_6e3dedbb6c6b_knowledge_e47bdf2e7075",
@@ -131,7 +131,7 @@
    "titre": "mise_en_reduction",
    "texte": "Après au moins 8 années pleines et consécutives de cotisations, en cas de résiliation : maintien partiel de la rente dépendance et du Capital Premiers Frais (si souscrit) par MISE EN RÉDUCTION, selon le barème en vigueur à la date d'effet de la résiliation (coefficients fonction notamment du nombre d'années cotisées, appliqués au montant des garanties ; ajustables tant qu'aucun risque n'est réalisé, sur décision du comité paritaire). La mise en réduction MET FIN aux prestations d'assistance. Le barème de coefficients lui-même ne figure pas dans la notic…",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117",
@@ -234,7 +234,7 @@
    "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
    "titre": "fiscalité",
    "texte": "fiscalité. Information documentaire à consulter dans la source.",
-   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "notice": null,
    "page": null
   },
   {
@@ -242,7 +242,7 @@
    "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
    "titre": "valeurs_de_rachat",
    "texte": "valeurs_de_rachat. Information documentaire à consulter dans la source.",
-   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "notice": null,
    "page": null
   },
   {
@@ -258,7 +258,7 @@
    "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
    "titre": "conditions_de_rachat",
    "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
-   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "notice": null,
    "page": null
   },
   {
@@ -266,7 +266,7 @@
    "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
    "titre": "determination_part_taxable",
    "texte": "determination_part_taxable. Information documentaire à consulter dans la source.",
-   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "notice": null,
    "page": null
   },
   {
@@ -274,7 +274,7 @@
    "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
    "titre": "mise_en_reduction",
    "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
-   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "notice": null,
    "page": null
   },
   {
@@ -283,7 +283,7 @@
    "titre": "valeurs_de_rachat",
    "texte": "Pas de rachat libre avant l'échéance (épargne indisponible) ; rachats exceptionnels L224-4 sans frais, versés sous 2 mois ; après l'échéance, sortie en capital libre (compartiments 1-2).",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null
+   "page": 25
   },
   {
    "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779",
@@ -299,7 +299,7 @@
    "titre": "conditions_de_rachat",
    "texte": "cas L224-4 CMF (6 cas + résidence principale hors compartiment 3) · après échéance : libre (compartiments 1-2)",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null
+   "page": 25
   },
   {
    "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_58efaba51d48_knowledge_4b450012844f",
@@ -330,7 +330,7 @@
    "contrat": "Masterlife CREDIT",
    "titre": "determination_part_taxable",
    "texte": "determination_part_taxable. Information documentaire à consulter dans la source.",
-   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "notice": null,
    "page": null
   },
   {
@@ -354,7 +354,7 @@
    "contrat": "Masterlife CREDIT",
    "titre": "fiscalité",
    "texte": "fiscalité. Information documentaire à consulter dans la source.",
-   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "notice": null,
    "page": null
   }
  ]

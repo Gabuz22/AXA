@@ -3,7 +3,7 @@
   "version": "2.3.0",
   "genere_le": "2026-07-17",
   "noeuds": 692,
-  "aretes": 2176,
+  "aretes": 2169,
   "types_noeuds": [
    "article_reglementaire",
    "concept",
@@ -12018,11 +12018,6 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_12a04ea57d41_knowledge_347f5f4fe5ab",
-   "to": "notice:2024-03-cg-ma-protection-accident-aga-aep-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_23df485b165e_knowledge_a358e165a171",
    "to": "contrat:ma-protection-accident-garantie-des-accidents-de-la-vie",
    "rel": "appartient_a"
@@ -12031,11 +12026,6 @@
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_23df485b165e_knowledge_a358e165a171",
    "to": "concept:rachat",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_23df485b165e_knowledge_a358e165a171",
-   "to": "notice:2024-03-cg-ma-protection-accident-aga-aep-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_243bf8cd8a2e_knowledge_fd2afdcc6a20",
@@ -12058,19 +12048,9 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_72c35224482f_knowledge_a9a24a4c6a38",
-   "to": "notice:2024-03-cg-ma-protection-accident-aga-aep-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_7a8987e8b1f5_knowledge_ddb46c1a8ae9",
    "to": "contrat:ma-protection-accident-garantie-des-accidents-de-la-vie",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_7a8987e8b1f5_knowledge_ddb46c1a8ae9",
-   "to": "notice:2024-03-cg-ma-protection-accident-aga-aep-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_d7a8988e5d19_knowledge_70abebba0cab",
@@ -12081,11 +12061,6 @@
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_d7a8988e5d19_knowledge_70abebba0cab",
    "to": "concept:rachat",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_d7a8988e5d19_knowledge_70abebba0cab",
-   "to": "notice:2024-03-cg-ma-protection-accident-aga-aep-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1c74300ec161_knowledge_7796cf78275b",
@@ -12186,11 +12161,6 @@
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6557ee3b82de_knowledge_bcf56946772e",
    "to": "contrat:masterlife-credit",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6557ee3b82de_knowledge_bcf56946772e",
-   "to": "notice:notice-masterlife-credit-202410-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_8d6684edc0fe_knowledge_549556fde47d",
@@ -12236,11 +12206,6 @@
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_a579030f51e4_knowledge_6b6563df11b1",
    "to": "concept:fiscalite",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_a579030f51e4_knowledge_6b6563df11b1",
-   "to": "notice:notice-masterlife-credit-202410-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_0fe3eed1b758_knowledge_70e30390986f",

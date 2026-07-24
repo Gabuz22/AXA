@@ -13,22 +13,22 @@
  },
  "global": {
   "elements": 556,
-  "pleinement_tracables": 462,
-  "pct": 83,
-  "a_verifier": 47,
-  "notes_editoriales": 47
+  "pleinement_tracables": 467,
+  "pct": 84,
+  "a_verifier": 35,
+  "notes_editoriales": 54
  },
  "contrats": [
   {
    "contrat": "Avizen",
    "slug": "avizen",
    "elements": 92,
-   "pct_tracable": 86,
+   "pct_tracable": 87,
    "repartition": {
-    "complete": 79,
+    "complete": 80,
     "editorial": 5,
-    "incomplete": 2,
-    "tableau_non_extrait": 6,
+    "incomplete": 0,
+    "tableau_non_extrait": 7,
     "sans_source": 0
    },
    "a_verifier": [
@@ -60,6 +60,15 @@
      "section": "1.2 Votre cotisation"
     },
     {
+     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17",
+     "type": "fiscalite",
+     "niveau": "tableau_non_extrait",
+     "libelle": "determination_part_taxable",
+     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+     "page": 3,
+     "section": "1.1.4 La fiscalité applicable"
+    },
+    {
      "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09",
      "type": "fiscalite",
      "niveau": "tableau_non_extrait",
@@ -85,24 +94,6 @@
      "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
      "page": 27,
      "section": "4.4 Rachat et réduction"
-    },
-    {
-     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "fiscalité",
-     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "determination_part_taxable",
-     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-     "page": null,
-     "section": null
     }
    ]
   },
@@ -161,12 +152,12 @@
    "contrat": "Entour'Age",
    "slug": "entour-age",
    "elements": 62,
-   "pct_tracable": 79,
+   "pct_tracable": 82,
    "repartition": {
-    "complete": 49,
+    "complete": 51,
     "editorial": 8,
-    "incomplete": 3,
-    "tableau_non_extrait": 2,
+    "incomplete": 0,
+    "tableau_non_extrait": 3,
     "sans_source": 0
    },
    "a_verifier": [
@@ -180,6 +171,15 @@
      "section": "1.2 Votre cotisation"
     },
     {
+     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
+     "type": "fiscalite",
+     "niveau": "tableau_non_extrait",
+     "libelle": "determination_part_taxable",
+     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
+     "page": 3,
+     "section": "Régime fiscal (indications générales)"
+    },
+    {
      "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117",
      "type": "fiscalite",
      "niveau": "tableau_non_extrait",
@@ -187,33 +187,6 @@
      "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
      "page": 28,
      "section": "7.3 Valeur de rachat"
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "determination_part_taxable",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "fiscalité",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_933bb6edae6e_knowledge_55a3c4fbd645",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "mise_en_reduction",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
     }
    ]
   },
@@ -341,8 +314,8 @@
    "pct_tracable": 84,
    "repartition": {
     "complete": 58,
-    "editorial": 2,
-    "incomplete": 5,
+    "editorial": 7,
+    "incomplete": 0,
     "tableau_non_extrait": 4,
     "sans_source": 0
    },
@@ -382,51 +355,6 @@
      "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
      "page": 20,
      "section": "6.5. Cotisations"
-    },
-    {
-     "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_12a04ea57d41_knowledge_347f5f4fe5ab",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "fiscalité",
-     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_23df485b165e_knowledge_a358e165a171",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "valeurs_de_rachat",
-     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_72c35224482f_knowledge_a9a24a4c6a38",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "conditions_de_rachat",
-     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_7a8987e8b1f5_knowledge_ddb46c1a8ae9",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "determination_part_taxable",
-     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_d7a8988e5d19_knowledge_70abebba0cab",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "mise_en_reduction",
-     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-     "page": null,
-     "section": null
     }
    ]
   },
@@ -434,11 +362,11 @@
    "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
    "slug": "ma-retraite-plan-d-epargne-retraite-individuel-per",
    "elements": 46,
-   "pct_tracable": 72,
+   "pct_tracable": 76,
    "repartition": {
-    "complete": 33,
+    "complete": 35,
     "editorial": 8,
-    "incomplete": 2,
+    "incomplete": 0,
     "tableau_non_extrait": 3,
     "sans_source": 0
    },
@@ -469,24 +397,6 @@
      "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
      "page": 7,
      "section": "3.5 Indications générales relatives au régime fiscal"
-    },
-    {
-     "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1c74300ec161_knowledge_7796cf78275b",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "valeurs_de_rachat",
-     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_30d289ee955a_knowledge_7c124417b8b5",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "conditions_de_rachat",
-     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-     "page": null,
-     "section": null
     }
    ]
   },
@@ -497,8 +407,8 @@
    "pct_tracable": 83,
    "repartition": {
     "complete": 64,
-    "editorial": 5,
-    "incomplete": 2,
+    "editorial": 7,
+    "incomplete": 0,
     "tableau_non_extrait": 6,
     "sans_source": 0
    },
@@ -556,24 +466,6 @@
      "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
      "page": 21,
      "section": "Article 8. Rachat et réduction"
-    },
-    {
-     "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6557ee3b82de_knowledge_bcf56946772e",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "determination_part_taxable",
-     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_a579030f51e4_knowledge_6b6563df11b1",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "fiscalité",
-     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-     "page": null,
-     "section": null
     }
    ]
   }

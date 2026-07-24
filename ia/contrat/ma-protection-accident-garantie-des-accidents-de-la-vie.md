@@ -92,12 +92,12 @@ Contrat de garantie des accidents de la vie (GAV) indemnisant, selon le droit co
 
 ## Fiscalité (6)
 
-- **fiscalité** — fiscalité. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_12a04ea57d41_knowledge_347f5f4fe5ab`
-- **valeurs_de_rachat** — valeurs_de_rachat. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_23df485b165e_knowledge_a358e165a171`
+- **fiscalité** — fiscalité. Information documentaire à consulter dans la source. `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_12a04ea57d41_knowledge_347f5f4fe5ab`
+- **valeurs_de_rachat** — valeurs_de_rachat. Information documentaire à consulter dans la source. `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_23df485b165e_knowledge_a358e165a171`
 - **note** — Sans objet : contrat de prévoyance dommages corporels, pas de valeur de rachat. `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_243bf8cd8a2e_knowledge_fd2afdcc6a20`
-- **conditions_de_rachat** — conditions_de_rachat. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_72c35224482f_knowledge_a9a24a4c6a38`
-- **determination_part_taxable** — determination_part_taxable. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_7a8987e8b1f5_knowledge_ddb46c1a8ae9`
-- **mise_en_reduction** — mise_en_reduction. Information documentaire à consulter dans la source. [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf) `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_d7a8988e5d19_knowledge_70abebba0cab`
+- **conditions_de_rachat** — conditions_de_rachat. Information documentaire à consulter dans la source. `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_72c35224482f_knowledge_a9a24a4c6a38`
+- **determination_part_taxable** — determination_part_taxable. Information documentaire à consulter dans la source. `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_7a8987e8b1f5_knowledge_ddb46c1a8ae9`
+- **mise_en_reduction** — mise_en_reduction. Information documentaire à consulter dans la source. `#axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_d7a8988e5d19_knowledge_70abebba0cab`
 
 ## Points de vigilance (5)
 

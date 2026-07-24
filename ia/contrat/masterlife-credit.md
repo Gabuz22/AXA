@@ -108,10 +108,10 @@ Assurance emprunteur couvrant, au titre du prêt mentionné aux conditions parti
 ## Fiscalité (5)
 
 - **mise_en_reduction** — mise_en_reduction. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf, p.21, Article 8. Rachat et réduction](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=21) `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6184af0ed0bb_knowledge_d2b949a61e4b`
-- **determination_part_taxable** — determination_part_taxable. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6557ee3b82de_knowledge_bcf56946772e`
+- **determination_part_taxable** — determination_part_taxable. Information documentaire à consulter dans la source. `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6557ee3b82de_knowledge_bcf56946772e`
 - **conditions_de_rachat** — conditions_de_rachat. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf, p.21, Article 8. Rachat et réduction](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=21) `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_8d6684edc0fe_knowledge_549556fde47d`
 - **valeurs_de_rachat** — L'adhésion ne comporte ni valeur de rachat, ni valeur de réduction. [Notice : Notice-Masterlife-Credit-202410.pdf, p.21, Article 8. Rachat et réduction](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=21) `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_965709e14702_knowledge_59bba4ded7e7`
-- **fiscalité** — fiscalité. Information documentaire à consulter dans la source. [Notice : Notice-Masterlife-Credit-202410.pdf](../../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf) `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_a579030f51e4_knowledge_6b6563df11b1`
+- **fiscalité** — fiscalité. Information documentaire à consulter dans la source. `#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_a579030f51e4_knowledge_6b6563df11b1`
 
 ## Points de vigilance (7)
 

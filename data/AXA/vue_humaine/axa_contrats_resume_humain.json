@@ -1500,10 +1500,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Sans objet : contrat de prévoyance dommages corporels (garantie accidents de la vie) — ni rachat, ni réduction, ni régime fiscal d'assurance-vie."
      },
      "flags": {
       "pdf_disponible": true,
@@ -1539,10 +1537,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Sans objet : contrat de prévoyance dommages corporels (garantie accidents de la vie) — ni rachat, ni réduction, ni régime fiscal d'assurance-vie."
      },
      "flags": {
       "pdf_disponible": true,
@@ -1628,10 +1624,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Sans objet : contrat de prévoyance dommages corporels (garantie accidents de la vie) — ni rachat, ni réduction, ni régime fiscal d'assurance-vie."
      },
      "flags": {
       "pdf_disponible": true,
@@ -1669,10 +1663,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Sans objet : contrat de prévoyance dommages corporels (garantie accidents de la vie) — ni rachat, ni réduction, ni régime fiscal d'assurance-vie."
      },
      "flags": {
       "pdf_disponible": true,
@@ -1710,10 +1702,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Sans objet : contrat de prévoyance dommages corporels (garantie accidents de la vie) — ni rachat, ni réduction, ni régime fiscal d'assurance-vie."
      },
      "flags": {
       "pdf_disponible": true,
@@ -4099,9 +4089,9 @@
      },
      "source": {
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 3,
+      "section": "1.1.4 La fiscalité applicable",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -4177,9 +4167,9 @@
      },
      "source": {
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 3,
+      "section": "1.1.4 La fiscalité applicable",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -8994,9 +8984,9 @@
      },
      "source": {
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 3,
+      "section": "Régime fiscal (indications générales)",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -9036,9 +9026,9 @@
      },
      "source": {
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 3,
+      "section": "Régime fiscal (indications générales)",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -9165,9 +9155,9 @@
      },
      "source": {
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "1.3 Mises en réduction des garanties",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13891,10 +13881,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Sans objet : contrat de prévoyance emprunteur — la notice ne développe pas de régime fiscal d'assurance-vie."
      },
      "flags": {
       "pdf_disponible": true,
@@ -14018,10 +14006,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Sans objet : contrat de prévoyance emprunteur — la notice ne développe pas de régime fiscal d'assurance-vie."
      },
      "flags": {
       "pdf_disponible": true,
@@ -17728,9 +17714,9 @@
      },
      "source": {
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 25,
+      "section": "9.1 Cas exceptionnels de rachat anticipé",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -17827,9 +17813,9 @@
      },
      "source": {
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 25,
+      "section": "9.1 Cas exceptionnels de rachat anticipé",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
