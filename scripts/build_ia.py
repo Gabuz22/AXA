@@ -778,7 +778,11 @@ que tu n'as pas pu sourcer.
                      "`%(b)sapi/diagnostic?statut=<salarie|tns|fonctionnaire|retraite|sans_activite>&famille=<celibataire|couple|enfants|recomposee>&age=<âge>&credit=<1|0>&collectif=<1|0>&evts=<événements>&besoins=<risques exprimés>&existants=<contrats en place>` "
                      "— rend les risques priorisés (déclaré/déduit/hypothèse), la couverture (doublon/trou), les contrats à examiner et ce qui reste à clarifier. "
                      "Un profil vide renvoie le vocabulaire accepté."
-                     "\n  Les deux endpoints sont en LECTURE SEULE et n'acceptent AUCUNE donnée nominative.") % {"b": CLOUDFLARE_API_BASE}) if CLOUDFLARE_API_BASE else "",
+                     "\n- **Auto-vérifier ton brouillon AVANT de répondre** : envoie ton texte en POST à `%(b)sapi/verifier` "
+                     "(ou GET `?texte=`) — il renvoie les défauts de FORME (attestation, citation manquante, chiffre réglementaire non sourcé, "
+                     "clôture, nominatif). Corrige, puis réponds. Il ne juge pas l'exactitude : la notice PDF fait foi."
+                     "\n  preselection et diagnostic sont en LECTURE SEULE (GET) ; verifier accepte un POST mais N'ÉCRIT rien. "
+                     "AUCUN endpoint n'accepte de donnée nominative.") % {"b": CLOUDFLARE_API_BASE}) if CLOUDFLARE_API_BASE else "",
        "ex1_q": ex1_q, "ex1_d": ex1_d, "ex2_q": ex2_q, "ex2_d": ex2_d, "ex3_q": ex3_q, "ex3_d": ex3_d,
        "e1_txt": e1_txt, "e1_cite": e1_cite,
        "at1_q": at1_q, "at1_d": at1_d, "at2_q": at2_q, "at2_d": at2_d, "at3_q": at3_q, "at3_d": at3_d}
