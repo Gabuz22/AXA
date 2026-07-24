@@ -64,7 +64,7 @@
 ### Souscription & adhésion
 - Synonymes : souscription, adhesion, adherer, formalite, questionnaire
 - Catégories à consulter : garanties, exclusions, definitions, conditions, declencheurs, plafonds, franchises, options, cotisations, delais, fiscalite, points-vigilance, formules
-- Contrats candidats : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
+- Contrats candidats : Avizen, Avizen Pro, Entour'Age, Essen'Ciel (assurance obsèques), Essen'Ciel Patrimoine, Excelium (assurance vie), Ma Protection Accident (Garantie des accidents de la vie), Ma Retraite (plan d'épargne retraite individuel — PER), Masterlife CREDIT
 
 ### Âge
 - Synonymes : age a l adhesion, age maximal, age minimal, ans inclus, annee de naissance

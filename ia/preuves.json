@@ -5126,12 +5126,14 @@
    "contrat_slug": "avizen",
    "type": "cotisations",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_cotisations_et_prix_2ca4d97bb9ae_knowledge_6ed9ced498a7",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
-   "concepts": []
+   "concepts": [
+    "souscription"
+   ]
   },
   {
    "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
@@ -5139,12 +5141,14 @@
    "contrat_slug": "avizen",
    "type": "cotisations",
    "titre": "frais",
-   "texte": "frais. Information documentaire à consulter dans la source.",
+   "texte": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
-   "concepts": []
+   "concepts": [
+    "souscription"
+   ]
   },
   {
    "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_7f531ad19cd0_knowledge_0d72b99a5472",
@@ -5152,7 +5156,7 @@
    "contrat_slug": "avizen",
    "type": "cotisations",
    "titre": "exemples_chiffrés",
-   "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+   "texte": "Exemples chiffrés : montants sur le devis (tarif personnalisé), pas dans la notice.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_cotisations_et_prix_7f531ad19cd0_knowledge_0d72b99a5472",
@@ -5216,12 +5220,14 @@
    "contrat_slug": "avizen-pro",
    "type": "cotisations",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
    "page": 6,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=6",
-   "concepts": []
+   "concepts": [
+    "souscription"
+   ]
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
@@ -5229,13 +5235,13 @@
    "contrat_slug": "avizen-pro",
    "type": "cotisations",
    "titre": "exemples_chiffrés",
-   "texte": "Option taux professionnel : taux d'invalidité 50 % → taux d'indemnisation 50/66 = 75,76 % de la rente du certificat ; taux 75 % → 100 %.",
+   "texte": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
    "page": 6,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=6",
    "concepts": [
-    "invalidite"
+    "souscription"
    ]
   },
   {
@@ -5276,12 +5282,14 @@
    "contrat_slug": "avizen-pro",
    "type": "cotisations",
    "titre": "frais",
-   "texte": "frais. Information documentaire à consulter dans la source.",
+   "texte": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
    "page": 6,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=6",
-   "concepts": []
+   "concepts": [
+    "souscription"
+   ]
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
@@ -5307,12 +5315,14 @@
    "contrat_slug": "entour-age",
    "type": "cotisations",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Cotisation personnalisée (âge à l'adhésion, formule et niveau de rente choisis) : figure sur le devis et les conditions particulières, pas sous forme de grille dans la notice.",
    "source_pdf": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
    "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/entour-age.html#axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=9",
-   "concepts": []
+   "concepts": [
+    "souscription"
+   ]
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d",
@@ -5517,7 +5527,7 @@
    "contrat_slug": "excelium-assurance-vie",
    "type": "cotisations",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Exemples de primes mensuelles par âge (30 / 55 / 75 ans) pour la garantie « Revalorisée » — notice p.18. Chiffres illustratifs à lire dans la notice, jamais cités de mémoire.",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
    "page": 18,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_297d8ca1d613_knowledge_5d36dfd4585a",
@@ -5559,7 +5569,7 @@
    "contrat_slug": "excelium-assurance-vie",
    "type": "cotisations",
    "titre": "réductions",
-   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "texte": "Contrat d'épargne : les frais et les modalités de versement figurent aux conditions particulières et au devis ; la notice ne contient pas de grille tarifaire.",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
    "page": 18,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674",
@@ -5589,13 +5599,14 @@
    "contrat_slug": "ma-protection-accident-garantie-des-accidents-de-la-vie",
    "type": "cotisations",
    "titre": "réductions",
-   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "texte": "Réductions éventuelles : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
    "page": 20,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-protection-accident-garantie-des-accidents-de-la-vie.html#axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=20",
    "concepts": [
-    "rachat"
+    "rachat",
+    "souscription"
    ]
   },
   {
@@ -5617,12 +5628,14 @@
    "contrat_slug": "ma-protection-accident-garantie-des-accidents-de-la-vie",
    "type": "cotisations",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
    "page": 20,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-protection-accident-garantie-des-accidents-de-la-vie.html#axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_9a686a6a2b25_knowledge_23fb738e71fb",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=20",
-   "concepts": []
+   "concepts": [
+    "souscription"
+   ]
   },
   {
    "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e",
@@ -5630,12 +5643,14 @@
    "contrat_slug": "ma-protection-accident-garantie-des-accidents-de-la-vie",
    "type": "cotisations",
    "titre": "frais",
-   "texte": "frais. Information documentaire à consulter dans la source.",
+   "texte": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
    "page": 20,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-protection-accident-garantie-des-accidents-de-la-vie.html#axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=20",
-   "concepts": []
+   "concepts": [
+    "souscription"
+   ]
   },
   {
    "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_c22a5aa37858_knowledge_579359b13918",
@@ -5643,7 +5658,7 @@
    "contrat_slug": "ma-protection-accident-garantie-des-accidents-de-la-vie",
    "type": "cotisations",
    "titre": "exemples_chiffrés",
-   "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+   "texte": "Exemples chiffrés : le tarif étant personnalisé, les montants figurent sur le devis, pas dans la notice.",
    "source_pdf": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
    "page": 20,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-protection-accident-garantie-des-accidents-de-la-vie.html#axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_c22a5aa37858_knowledge_579359b13918",
@@ -5702,7 +5717,7 @@
    "contrat_slug": "ma-retraite-plan-d-epargne-retraite-individuel-per",
    "type": "cotisations",
    "titre": "réductions",
-   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "texte": "Contrat d'épargne : les frais et les modalités de versement figurent aux conditions particulières et au devis ; la notice ne contient pas de grille tarifaire.",
    "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
    "page": 12,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_9ba03053e69a_knowledge_d8f10c7d1ce0",
@@ -5717,7 +5732,7 @@
    "contrat_slug": "ma-retraite-plan-d-epargne-retraite-individuel-per",
    "type": "cotisations",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Contrat d'épargne : les frais et les modalités de versement figurent aux conditions particulières et au devis ; la notice ne contient pas de grille tarifaire.",
    "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
    "page": 12,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_a5a20f809364_knowledge_79846d0b1e50",
@@ -5730,12 +5745,14 @@
    "contrat_slug": "masterlife-credit",
    "type": "cotisations",
    "titre": "exemples_chiffrés",
-   "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+   "texte": "Exemples chiffrés : cotisation personnalisée (capital emprunté, âge, garanties) — figure sur les conditions particulières d'adhésion et le devis, pas dans la notice.",
    "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/masterlife-credit.html#axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=9",
-   "concepts": []
+   "concepts": [
+    "souscription"
+   ]
   },
   {
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_317921e2cd84_knowledge_8dcd710beb80",
@@ -5758,7 +5775,7 @@
    "contrat_slug": "masterlife-credit",
    "type": "cotisations",
    "titre": "réductions",
-   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "texte": "Réductions éventuelles : cotisation personnalisée, voir conditions particulières / devis.",
    "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/masterlife-credit.html#axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_8936eebaa5cc_knowledge_85eab19f89d6",
@@ -5773,7 +5790,7 @@
    "contrat_slug": "masterlife-credit",
    "type": "cotisations",
    "titre": "frais",
-   "texte": "frais. Information documentaire à consulter dans la source.",
+   "texte": "Frais : cotisation personnalisée, voir conditions particulières / devis.",
    "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/masterlife-credit.html#axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_a8de7fb08bee_knowledge_fc624b04e8d5",
@@ -5786,12 +5803,14 @@
    "contrat_slug": "masterlife-credit",
    "type": "cotisations",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Cotisation personnalisée (capital emprunté, âge, garanties) : figure sur les conditions particulières d'adhésion, pas sous forme de grille dans la notice.",
    "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/masterlife-credit.html#axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_f904852eb47e_knowledge_1f5ef94b1625",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=9",
-   "concepts": []
+   "concepts": [
+    "souscription"
+   ]
   },
   {
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_fcc33a37f235_knowledge_bdaff89df963",
@@ -6481,12 +6500,15 @@
    "contrat_slug": "avizen",
    "type": "fiscalite",
    "titre": "determination_part_taxable",
-   "texte": "determination_part_taxable. Information documentaire à consulter dans la source.",
+   "texte": "Fiscalité du capital décès : relève des articles 990 I / 757 B du Code général des impôts (abattements et prélèvements selon l'âge de l'assuré au versement des primes). Cadre réglementaire évolutif — à vérifier sur impots.gouv.fr. Non détaillé sous forme de tableau dans la notice.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 3,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=3",
-   "concepts": []
+   "concepts": [
+    "deces",
+    "fiscalite"
+   ]
   },
   {
    "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09",
@@ -6494,7 +6516,7 @@
    "contrat_slug": "avizen",
    "type": "fiscalite",
    "titre": "conditions_de_rachat",
-   "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
+   "texte": "Conditions de rachat : contrat de prévoyance à garanties temporaires — traité au §4.4 « Rachat et réduction » de la notice. Une garantie de prévoyance temporaire n'a en principe pas de valeur de rachat. Voir la notice.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 27,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09",
@@ -6525,7 +6547,7 @@
    "contrat_slug": "avizen",
    "type": "fiscalite",
    "titre": "valeurs_de_rachat",
-   "texte": "valeurs_de_rachat. Information documentaire à consulter dans la source.",
+   "texte": "Valeur de rachat : prévoyance temporaire, en principe pas de valeur de rachat. Voir §4.4 « Rachat et réduction » de la notice.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 27,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_906eb3ee9913_knowledge_306ed551c6e9",
@@ -6540,7 +6562,7 @@
    "contrat_slug": "avizen",
    "type": "fiscalite",
    "titre": "mise_en_reduction",
-   "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
+   "texte": "Mise en réduction : décrite au §4.4 « Rachat et réduction » de la notice (réduction des garanties en cas de cessation de paiement des cotisations). Voir la notice.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 27,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_d15d09b28f2a_knowledge_f7005bf2d30b",
@@ -6632,12 +6654,14 @@
    "contrat_slug": "avizen-pro",
    "type": "fiscalite",
    "titre": "determination_part_taxable",
-   "texte": "determination_part_taxable. Information documentaire à consulter dans la source.",
+   "texte": "Mise en réduction : décrite au §4.4 « Rachat et réduction » de la notice (réduction des garanties en cas de cessation de paiement des cotisations). Voir la notice.",
    "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
    "page": 3,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_b51bc4461cfc_knowledge_3e9616ceeed6",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=3",
-   "concepts": []
+   "concepts": [
+    "rachat"
+   ]
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
@@ -6645,12 +6669,15 @@
    "contrat_slug": "entour-age",
    "type": "fiscalite",
    "titre": "determination_part_taxable",
-   "texte": "determination_part_taxable. Information documentaire à consulter dans la source.",
+   "texte": "Fiscalité du capital décès : relève des articles 990 I / 757 B du Code général des impôts (abattements et prélèvements selon l'âge de l'assuré au versement des primes). Cadre réglementaire évolutif — à vérifier sur impots.gouv.fr. Non détaillé sous forme de tableau dans la notice.",
    "source_pdf": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
    "page": 3,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/entour-age.html#axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=3",
-   "concepts": []
+   "concepts": [
+    "deces",
+    "fiscalite"
+   ]
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22",
@@ -6707,7 +6734,7 @@
    "contrat_slug": "entour-age",
    "type": "fiscalite",
    "titre": "conditions_de_rachat",
-   "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
+   "texte": "Contrat de dépendance (rente viagère) : voir §7.3 « Valeur de rachat » de la notice. Il ne s'agit pas d'une épargne rachetable au sens d'un contrat d'assurance vie.",
    "source_pdf": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
    "page": 28,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/entour-age.html#axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117",
@@ -6820,7 +6847,7 @@
    "contrat_slug": "excelium-assurance-vie",
    "type": "fiscalite",
    "titre": "mise_en_reduction",
-   "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
+   "texte": "Assurance vie : rachat et mise en réduction décrits au §7.1 « Les règles du rachat » de la notice. Voir la notice.",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
    "page": 43,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_3dfb729787c5_knowledge_8280ed50233d",
@@ -6835,12 +6862,13 @@
    "contrat_slug": "excelium-assurance-vie",
    "type": "fiscalite",
    "titre": "fiscalité",
-   "texte": "fiscalité. Information documentaire à consulter dans la source.",
+   "texte": "Régime fiscal de l'assurance vie (fiscalité des rachats ; transmission via art. 990 I / 757 B CGI) : voir l'annexe fiscale de la notice et impots.gouv.fr. Cadre réglementaire évolutif.",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
    "page": 72,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=72",
    "concepts": [
+    "rachat",
     "fiscalite"
    ]
   },
@@ -7002,12 +7030,13 @@
    "contrat_slug": "ma-retraite-plan-d-epargne-retraite-individuel-per",
    "type": "fiscalite",
    "titre": "fiscalité",
-   "texte": "fiscalité. Information documentaire à consulter dans la source.",
+   "texte": "Régime fiscal du PER (§3.5 de la notice) : déductibilité des versements (art. 154 bis / 163 quatervicies CGI), fiscalité des rentes et du capital (art. 158 CGI), décès après 70 ans (art. 757 B, abattement 30 500 €). Cadre réglementaire évolutif — impots.gouv.fr.",
    "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
    "page": 7,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779",
    "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=7",
    "concepts": [
+    "deces",
     "fiscalite"
    ]
   },
@@ -7063,7 +7092,7 @@
    "contrat_slug": "masterlife-credit",
    "type": "fiscalite",
    "titre": "mise_en_reduction",
-   "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
+   "texte": "Assurance emprunteur : pas d'épargne. La mise en réduction est traitée à l'Article 8 « Rachat et réduction » de la notice. Voir la notice.",
    "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 21,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/masterlife-credit.html#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6184af0ed0bb_knowledge_d2b949a61e4b",
@@ -7091,7 +7120,7 @@
    "contrat_slug": "masterlife-credit",
    "type": "fiscalite",
    "titre": "conditions_de_rachat",
-   "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
+   "texte": "Assurance emprunteur : pas de valeur de rachat (ce n'est pas un contrat d'épargne). Le rachat/réduction est traité à l'Article 8 de la notice. Voir la notice.",
    "source_pdf": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 21,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/masterlife-credit.html#axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_8d6684edc0fe_knowledge_549556fde47d",

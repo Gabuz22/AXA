@@ -15,8 +15,8 @@
   "elements": 556,
   "pleinement_tracables": 467,
   "pct": 84,
-  "a_verifier": 35,
-  "notes_editoriales": 54
+  "a_verifier": 5,
+  "notes_editoriales": 84
  },
  "contrats": [
   {
@@ -26,76 +26,12 @@
    "pct_tracable": 87,
    "repartition": {
     "complete": 80,
-    "editorial": 5,
+    "editorial": 12,
     "incomplete": 0,
-    "tableau_non_extrait": 7,
+    "tableau_non_extrait": 0,
     "sans_source": 0
    },
-   "a_verifier": [
-    {
-     "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_2ca4d97bb9ae_knowledge_6ed9ced498a7",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "tableaux",
-     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-     "page": 9,
-     "section": "1.2 Votre cotisation"
-    },
-    {
-     "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "frais",
-     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-     "page": 9,
-     "section": "1.2 Votre cotisation"
-    },
-    {
-     "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_7f531ad19cd0_knowledge_0d72b99a5472",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "exemples_chiffrés",
-     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-     "page": 9,
-     "section": "1.2 Votre cotisation"
-    },
-    {
-     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "determination_part_taxable",
-     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-     "page": 3,
-     "section": "1.1.4 La fiscalité applicable"
-    },
-    {
-     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "conditions_de_rachat",
-     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-     "page": 27,
-     "section": "4.4 Rachat et réduction"
-    },
-    {
-     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_906eb3ee9913_knowledge_306ed551c6e9",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "valeurs_de_rachat",
-     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-     "page": 27,
-     "section": "4.4 Rachat et réduction"
-    },
-    {
-     "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_d15d09b28f2a_knowledge_f7005bf2d30b",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "mise_en_reduction",
-     "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-     "page": 27,
-     "section": "4.4 Rachat et réduction"
-    }
-   ]
+   "a_verifier": []
   },
   {
    "contrat": "Avizen Pro",
@@ -104,49 +40,12 @@
    "pct_tracable": 91,
    "repartition": {
     "complete": 81,
-    "editorial": 4,
+    "editorial": 8,
     "incomplete": 0,
-    "tableau_non_extrait": 4,
+    "tableau_non_extrait": 0,
     "sans_source": 0
    },
-   "a_verifier": [
-    {
-     "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "tableaux",
-     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-     "page": 6,
-     "section": "1.2. Votre cotisation"
-    },
-    {
-     "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "exemples_chiffrés",
-     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-     "page": 6,
-     "section": "1.2. Votre cotisation"
-    },
-    {
-     "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "frais",
-     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-     "page": 6,
-     "section": "1.2. Votre cotisation"
-    },
-    {
-     "id": "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_b51bc4461cfc_knowledge_3e9616ceeed6",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "determination_part_taxable",
-     "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-     "page": 3,
-     "section": "1.1.4. La fiscalité applicable"
-    }
-   ]
+   "a_verifier": []
   },
   {
    "contrat": "Entour'Age",
@@ -155,40 +54,12 @@
    "pct_tracable": 82,
    "repartition": {
     "complete": 51,
-    "editorial": 8,
+    "editorial": 11,
     "incomplete": 0,
-    "tableau_non_extrait": 3,
+    "tableau_non_extrait": 0,
     "sans_source": 0
    },
-   "a_verifier": [
-    {
-     "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "tableaux",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": 9,
-     "section": "1.2 Votre cotisation"
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "determination_part_taxable",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": 3,
-     "section": "Régime fiscal (indications générales)"
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "conditions_de_rachat",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": 28,
-     "section": "7.3 Valeur de rachat"
-    }
-   ]
+   "a_verifier": []
   },
   {
    "contrat": "Essen'Ciel (assurance obsèques)",
@@ -263,9 +134,9 @@
    "pct_tracable": 76,
    "repartition": {
     "complete": 35,
-    "editorial": 7,
+    "editorial": 10,
     "incomplete": 0,
-    "tableau_non_extrait": 4,
+    "tableau_non_extrait": 1,
     "sans_source": 0
    },
    "a_verifier": [
@@ -277,33 +148,6 @@
      "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
      "page": 18,
      "section": "5.1 Comment effectuer un versement ?"
-    },
-    {
-     "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "réductions",
-     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-     "page": 18,
-     "section": "5.1 Comment effectuer un versement ?"
-    },
-    {
-     "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_3dfb729787c5_knowledge_8280ed50233d",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "mise_en_reduction",
-     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-     "page": 43,
-     "section": "7.1 Les règles du rachat"
-    },
-    {
-     "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "fiscalité",
-     "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-     "page": 72,
-     "section": "Annexe fiscale (au 1er janvier 2026)"
     }
    ]
   },
@@ -314,49 +158,12 @@
    "pct_tracable": 84,
    "repartition": {
     "complete": 58,
-    "editorial": 7,
+    "editorial": 11,
     "incomplete": 0,
-    "tableau_non_extrait": 4,
+    "tableau_non_extrait": 0,
     "sans_source": 0
    },
-   "a_verifier": [
-    {
-     "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "réductions",
-     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-     "page": 20,
-     "section": "6.5. Cotisations"
-    },
-    {
-     "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_9a686a6a2b25_knowledge_23fb738e71fb",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "tableaux",
-     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-     "page": 20,
-     "section": "6.5. Cotisations"
-    },
-    {
-     "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "frais",
-     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-     "page": 20,
-     "section": "6.5. Cotisations"
-    },
-    {
-     "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_c22a5aa37858_knowledge_579359b13918",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "exemples_chiffrés",
-     "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-     "page": 20,
-     "section": "6.5. Cotisations"
-    }
-   ]
+   "a_verifier": []
   },
   {
    "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
@@ -365,40 +172,12 @@
    "pct_tracable": 76,
    "repartition": {
     "complete": 35,
-    "editorial": 8,
+    "editorial": 11,
     "incomplete": 0,
-    "tableau_non_extrait": 3,
+    "tableau_non_extrait": 0,
     "sans_source": 0
    },
-   "a_verifier": [
-    {
-     "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_9ba03053e69a_knowledge_d8f10c7d1ce0",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "réductions",
-     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-     "page": 12,
-     "section": "6.1 Versements réguliers"
-    },
-    {
-     "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_a5a20f809364_knowledge_79846d0b1e50",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "tableaux",
-     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-     "page": 12,
-     "section": "6.1 Versements réguliers"
-    },
-    {
-     "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "fiscalité",
-     "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-     "page": 7,
-     "section": "3.5 Indications générales relatives au régime fiscal"
-    }
-   ]
+   "a_verifier": []
   },
   {
    "contrat": "Masterlife CREDIT",
@@ -407,67 +186,12 @@
    "pct_tracable": 83,
    "repartition": {
     "complete": 64,
-    "editorial": 7,
+    "editorial": 13,
     "incomplete": 0,
-    "tableau_non_extrait": 6,
+    "tableau_non_extrait": 0,
     "sans_source": 0
    },
-   "a_verifier": [
-    {
-     "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "exemples_chiffrés",
-     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-     "page": 9,
-     "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle"
-    },
-    {
-     "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_8936eebaa5cc_knowledge_85eab19f89d6",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "réductions",
-     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-     "page": 9,
-     "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle"
-    },
-    {
-     "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_a8de7fb08bee_knowledge_fc624b04e8d5",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "frais",
-     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-     "page": 9,
-     "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle"
-    },
-    {
-     "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_f904852eb47e_knowledge_1f5ef94b1625",
-     "type": "cotisations",
-     "niveau": "tableau_non_extrait",
-     "libelle": "tableaux",
-     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-     "page": 9,
-     "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle"
-    },
-    {
-     "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6184af0ed0bb_knowledge_d2b949a61e4b",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "mise_en_reduction",
-     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-     "page": 21,
-     "section": "Article 8. Rachat et réduction"
-    },
-    {
-     "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_8d6684edc0fe_knowledge_549556fde47d",
-     "type": "fiscalite",
-     "niveau": "tableau_non_extrait",
-     "libelle": "conditions_de_rachat",
-     "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-     "page": 21,
-     "section": "Article 8. Rachat et réduction"
-    }
-   ]
+   "a_verifier": []
   }
  ]
 }

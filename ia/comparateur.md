@@ -435,6 +435,14 @@
 - **Déclencheurs** : Garantie « Revalorisée » [Notice : 2026-05 Notice Excelium Vie.pdf, p.16, 4.2.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=16)
 - **Plafonds** : _absent de la base_
 - **Franchises** : _absent de la base_
+### Ma Protection Accident (Garantie des accidents de la vie)
+- **Définition** : _absent de la base_
+- **Garantie** : _absent de la base_
+- **Conditions** : _absent de la base_
+- **Exclusions** : _absent de la base_
+- **Déclencheurs** : _absent de la base_
+- **Plafonds** : _absent de la base_
+- **Franchises** : _absent de la base_
 ### Ma Retraite (plan d'épargne retraite individuel — PER)
 - **Définition** : _absent de la base_
 - **Garantie** : En cas de décès avant liquidation totale [Notice : 2026-05 Notice Ma Retraite.pdf, p.12, 5.2](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=12)

@@ -17,7 +17,7 @@
    "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17",
    "contrat": "Avizen",
    "titre": "determination_part_taxable",
-   "texte": "determination_part_taxable. Information documentaire à consulter dans la source.",
+   "texte": "Fiscalité du capital décès : relève des articles 990 I / 757 B du Code général des impôts (abattements et prélèvements selon l'âge de l'assuré au versement des primes). Cadre réglementaire évolutif — à vérifier sur impots.gouv.fr. Non détaillé sous forme de tableau dans la notice.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 3
   },
@@ -25,7 +25,7 @@
    "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09",
    "contrat": "Avizen",
    "titre": "conditions_de_rachat",
-   "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
+   "texte": "Conditions de rachat : contrat de prévoyance à garanties temporaires — traité au §4.4 « Rachat et réduction » de la notice. Une garantie de prévoyance temporaire n'a en principe pas de valeur de rachat. Voir la notice.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 27
   },
@@ -41,7 +41,7 @@
    "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_906eb3ee9913_knowledge_306ed551c6e9",
    "contrat": "Avizen",
    "titre": "valeurs_de_rachat",
-   "texte": "valeurs_de_rachat. Information documentaire à consulter dans la source.",
+   "texte": "Valeur de rachat : prévoyance temporaire, en principe pas de valeur de rachat. Voir §4.4 « Rachat et réduction » de la notice.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 27
   },
@@ -49,7 +49,7 @@
    "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_d15d09b28f2a_knowledge_f7005bf2d30b",
    "contrat": "Avizen",
    "titre": "mise_en_reduction",
-   "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
+   "texte": "Mise en réduction : décrite au §4.4 « Rachat et réduction » de la notice (réduction des garanties en cas de cessation de paiement des cotisations). Voir la notice.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 27
   },
@@ -97,7 +97,7 @@
    "id": "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_b51bc4461cfc_knowledge_3e9616ceeed6",
    "contrat": "Avizen Pro",
    "titre": "determination_part_taxable",
-   "texte": "determination_part_taxable. Information documentaire à consulter dans la source.",
+   "texte": "Mise en réduction : décrite au §4.4 « Rachat et réduction » de la notice (réduction des garanties en cas de cessation de paiement des cotisations). Voir la notice.",
    "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
    "page": 3
   },
@@ -105,7 +105,7 @@
    "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
    "contrat": "Entour'Age",
    "titre": "determination_part_taxable",
-   "texte": "determination_part_taxable. Information documentaire à consulter dans la source.",
+   "texte": "Fiscalité du capital décès : relève des articles 990 I / 757 B du Code général des impôts (abattements et prélèvements selon l'âge de l'assuré au versement des primes). Cadre réglementaire évolutif — à vérifier sur impots.gouv.fr. Non détaillé sous forme de tableau dans la notice.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
    "page": 3
   },
@@ -137,7 +137,7 @@
    "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117",
    "contrat": "Entour'Age",
    "titre": "conditions_de_rachat",
-   "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
+   "texte": "Contrat de dépendance (rente viagère) : voir §7.3 « Valeur de rachat » de la notice. Il ne s'agit pas d'une épargne rachetable au sens d'un contrat d'assurance vie.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
    "page": 28
   },
@@ -193,7 +193,7 @@
    "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_3dfb729787c5_knowledge_8280ed50233d",
    "contrat": "Excelium (assurance vie)",
    "titre": "mise_en_reduction",
-   "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
+   "texte": "Assurance vie : rachat et mise en réduction décrits au §7.1 « Les règles du rachat » de la notice. Voir la notice.",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
    "page": 43
   },
@@ -201,7 +201,7 @@
    "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba",
    "contrat": "Excelium (assurance vie)",
    "titre": "fiscalité",
-   "texte": "fiscalité. Information documentaire à consulter dans la source.",
+   "texte": "Régime fiscal de l'assurance vie (fiscalité des rachats ; transmission via art. 990 I / 757 B CGI) : voir l'annexe fiscale de la notice et impots.gouv.fr. Cadre réglementaire évolutif.",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
    "page": 72
   },
@@ -289,7 +289,7 @@
    "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779",
    "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
    "titre": "fiscalité",
-   "texte": "fiscalité. Information documentaire à consulter dans la source.",
+   "texte": "Régime fiscal du PER (§3.5 de la notice) : déductibilité des versements (art. 154 bis / 163 quatervicies CGI), fiscalité des rentes et du capital (art. 158 CGI), décès après 70 ans (art. 757 B, abattement 30 500 €). Cadre réglementaire évolutif — impots.gouv.fr.",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
    "page": 7
   },
@@ -321,7 +321,7 @@
    "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6184af0ed0bb_knowledge_d2b949a61e4b",
    "contrat": "Masterlife CREDIT",
    "titre": "mise_en_reduction",
-   "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
+   "texte": "Assurance emprunteur : pas d'épargne. La mise en réduction est traitée à l'Article 8 « Rachat et réduction » de la notice. Voir la notice.",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 21
   },
@@ -337,7 +337,7 @@
    "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_8d6684edc0fe_knowledge_549556fde47d",
    "contrat": "Masterlife CREDIT",
    "titre": "conditions_de_rachat",
-   "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
+   "texte": "Assurance emprunteur : pas de valeur de rachat (ce n'est pas un contrat d'épargne). Le rachat/réduction est traité à l'Article 8 de la notice. Voir la notice.",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 21
   },

@@ -9,7 +9,7 @@
    "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_2ca4d97bb9ae_knowledge_6ed9ced498a7",
    "contrat": "Avizen",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 9
   },
@@ -17,7 +17,7 @@
    "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
    "contrat": "Avizen",
    "titre": "frais",
-   "texte": "frais. Information documentaire à consulter dans la source.",
+   "texte": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 9
   },
@@ -25,7 +25,7 @@
    "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_7f531ad19cd0_knowledge_0d72b99a5472",
    "contrat": "Avizen",
    "titre": "exemples_chiffrés",
-   "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+   "texte": "Exemples chiffrés : montants sur le devis (tarif personnalisé), pas dans la notice.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
    "page": 9
   },
@@ -57,7 +57,7 @@
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
    "contrat": "Avizen Pro",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
    "page": 6
   },
@@ -65,7 +65,7 @@
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
    "contrat": "Avizen Pro",
    "titre": "exemples_chiffrés",
-   "texte": "Option taux professionnel : taux d'invalidité 50 % → taux d'indemnisation 50/66 = 75,76 % de la rente du certificat ; taux 75 % → 100 %.",
+   "texte": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
    "page": 6
   },
@@ -89,7 +89,7 @@
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
    "contrat": "Avizen Pro",
    "titre": "frais",
-   "texte": "frais. Information documentaire à consulter dans la source.",
+   "texte": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
    "page": 6
   },
@@ -105,7 +105,7 @@
    "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89",
    "contrat": "Entour'Age",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Cotisation personnalisée (âge à l'adhésion, formule et niveau de rente choisis) : figure sur le devis et les conditions particulières, pas sous forme de grille dans la notice.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
    "page": 9
   },
@@ -217,7 +217,7 @@
    "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_297d8ca1d613_knowledge_5d36dfd4585a",
    "contrat": "Excelium (assurance vie)",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Exemples de primes mensuelles par âge (30 / 55 / 75 ans) pour la garantie « Revalorisée » — notice p.18. Chiffres illustratifs à lire dans la notice, jamais cités de mémoire.",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
    "page": 18
   },
@@ -241,7 +241,7 @@
    "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674",
    "contrat": "Excelium (assurance vie)",
    "titre": "réductions",
-   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "texte": "Contrat d'épargne : les frais et les modalités de versement figurent aux conditions particulières et au devis ; la notice ne contient pas de grille tarifaire.",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
    "page": 18
   },
@@ -257,7 +257,7 @@
    "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
    "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
    "titre": "réductions",
-   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "texte": "Réductions éventuelles : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
    "page": 20
   },
@@ -273,7 +273,7 @@
    "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_9a686a6a2b25_knowledge_23fb738e71fb",
    "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
    "page": 20
   },
@@ -281,7 +281,7 @@
    "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e",
    "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
    "titre": "frais",
-   "texte": "frais. Information documentaire à consulter dans la source.",
+   "texte": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
    "page": 20
   },
@@ -289,7 +289,7 @@
    "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_c22a5aa37858_knowledge_579359b13918",
    "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
    "titre": "exemples_chiffrés",
-   "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+   "texte": "Exemples chiffrés : le tarif étant personnalisé, les montants figurent sur le devis, pas dans la notice.",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
    "page": 20
   },
@@ -321,7 +321,7 @@
    "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_9ba03053e69a_knowledge_d8f10c7d1ce0",
    "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
    "titre": "réductions",
-   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "texte": "Contrat d'épargne : les frais et les modalités de versement figurent aux conditions particulières et au devis ; la notice ne contient pas de grille tarifaire.",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
    "page": 12
   },
@@ -329,7 +329,7 @@
    "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_a5a20f809364_knowledge_79846d0b1e50",
    "contrat": "Ma Retraite (plan d'épargne retraite individuel — PER)",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Contrat d'épargne : les frais et les modalités de versement figurent aux conditions particulières et au devis ; la notice ne contient pas de grille tarifaire.",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
    "page": 12
   },
@@ -337,7 +337,7 @@
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95",
    "contrat": "Masterlife CREDIT",
    "titre": "exemples_chiffrés",
-   "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+   "texte": "Exemples chiffrés : cotisation personnalisée (capital emprunté, âge, garanties) — figure sur les conditions particulières d'adhésion et le devis, pas dans la notice.",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 9
   },
@@ -353,7 +353,7 @@
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_8936eebaa5cc_knowledge_85eab19f89d6",
    "contrat": "Masterlife CREDIT",
    "titre": "réductions",
-   "texte": "réductions. Information documentaire à consulter dans la source.",
+   "texte": "Réductions éventuelles : cotisation personnalisée, voir conditions particulières / devis.",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 9
   },
@@ -361,7 +361,7 @@
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_a8de7fb08bee_knowledge_fc624b04e8d5",
    "contrat": "Masterlife CREDIT",
    "titre": "frais",
-   "texte": "frais. Information documentaire à consulter dans la source.",
+   "texte": "Frais : cotisation personnalisée, voir conditions particulières / devis.",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 9
   },
@@ -369,7 +369,7 @@
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_f904852eb47e_knowledge_1f5ef94b1625",
    "contrat": "Masterlife CREDIT",
    "titre": "tableaux",
-   "texte": "tableaux. Information documentaire à consulter dans la source.",
+   "texte": "Cotisation personnalisée (capital emprunté, âge, garanties) : figure sur les conditions particulières d'adhésion, pas sous forme de grille dans la notice.",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
    "page": 9
   },

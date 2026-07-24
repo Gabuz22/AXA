@@ -287,7 +287,7 @@
 
 ## ✅ [transversale] Quels contrats traitent de souscription & adhésion ?
 - Détecté : contrat=— · concept=souscription · périmètre=multi-contrats · source_off=False · statut=conclusion_documentee
-- Contrats retenus : excelium-assurance-vie, avizen, avizen-pro, entour-age, essen-ciel-assurance-obseques, ma-retraite-plan-d-epargne-retraite-individuel-per, masterlife-credit, essen-ciel-patrimoine
+- Contrats retenus : excelium-assurance-vie, avizen, avizen-pro, entour-age, essen-ciel-assurance-obseques, ma-retraite-plan-d-epargne-retraite-individuel-per, masterlife-credit, essen-ciel-patrimoine, ma-protection-accident-garantie-des-accidents-de-la-vie
 - Attendu : obligatoires=— · interdits=0 · source=False · statut=—
 
 ## ✅ [transversale] Quels contrats traitent de âge ?

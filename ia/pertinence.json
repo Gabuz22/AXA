@@ -147,6 +147,7 @@
     "declencheurs",
     "definitions",
     "exclusions",
+    "fiscalite",
     "garanties"
    ],
    "preuves": [
@@ -177,7 +178,8 @@
     "avizen:def:714f512e9e",
     "avizen:fait:9893112dc5:declencheur:1",
     "axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db",
-    "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5"
+    "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_16fa841976c0_knowledge_913b562987c5",
+    "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17"
    ],
    "justification": "Cœur du produit (garantie + définition + déclencheur) dans Avizen."
   },
@@ -932,7 +934,7 @@
     "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_171c5a3a4b19_knowledge_833f37b8be6f",
     "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674",
     "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_3dfb729787c5_knowledge_8280ed50233d",
-    "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_85bea04ba9d3_knowledge_ad9b384335e5"
+    "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba"
    ],
    "justification": "Garantie ou déclencheur important dans Excelium (assurance vie)."
   },
@@ -1005,10 +1007,10 @@
     "avizen-pro:fait:e4f8ae15eb:declencheur:0",
     "axa_axa_axa_avizen_pro_2025_04_options_30367f970ec3_knowledge_9b700659935b",
     "axa_axa_axa_avizen_pro_2025_04_options_cd5baa4496f8_knowledge_48ad072d3fa9",
+    "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
+    "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
     "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_759b89f27c1f_knowledge_d18add8ca1f6",
-    "axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_32baffb6fabd_knowledge_480adab7336d",
-    "axa_axa_axa_avizen_pro_2025_04_delais_carences_franchises_4c3eda7401a0_knowledge_41719d2a39ff",
-    "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_a9a1ff6e4623_knowledge_b16b93a33ab5"
+    "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201"
    ],
    "justification": "Garantie ou déclencheur important dans Avizen Pro."
   },
@@ -1110,8 +1112,8 @@
     "axa_axa_axa_masterlife_credit_2024_10_exclusions_84dc965c3cbd_knowledge_e316f16d3470",
     "masterlife-credit:cond:1ed4ab0baf",
     "axa_axa_axa_masterlife_credit_2024_10_options_cd4d91e29f75_knowledge_d0c39ab9e6b2",
-    "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_317921e2cd84_knowledge_8dcd710beb80",
-    "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_965709e14702_knowledge_59bba4ded7e7"
+    "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95",
+    "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_317921e2cd84_knowledge_8dcd710beb80"
    ],
    "justification": "Garantie ou déclencheur important dans Masterlife CREDIT."
   },
@@ -1278,9 +1280,9 @@
     "axa_axa_axa_entourage_2025_06_options_c09b72c9c8a5_knowledge_4cd76c6d196f",
     "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b71f718b3818_knowledge_2ceb18ba5d21",
     "axa_axa_axa_entourage_2025_06_delais_carences_franchises_1c5ace0d0983_knowledge_9039b861f674",
+    "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
     "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22",
-    "axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119",
-    "axa_entourage_2025-06_formule_02"
+    "axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119"
    ],
    "justification": "Condition, limite ou exclusion structurante dans Entour'Age."
   },
@@ -1675,6 +1677,7 @@
     "fiscalite"
    ],
    "preuves": [
+    "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
     "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_278b9ca9a09a_knowledge_e0ae0aab6c22"
    ],
    "justification": "Mention secondaire dans Entour'Age."
@@ -1774,7 +1777,8 @@
     "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2b1334381d5d_knowledge_1ed566556524",
     "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2db09360e436_knowledge_a3a809ae7819",
     "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_43a1be7843ad_knowledge_c5adf18d1814",
-    "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_98ed4e335a5b_knowledge_6bb9408ea279"
+    "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_98ed4e335a5b_knowledge_6bb9408ea279",
+    "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_b51bc4461cfc_knowledge_3e9616ceeed6"
    ],
    "justification": "Mention secondaire dans Avizen Pro."
   },
@@ -1832,6 +1836,20 @@
     "axa_essenciel_patrimoine_2023-09_point_vigilance_c19b40fb446f"
    ],
    "justification": "Mention secondaire dans Essen'Ciel Patrimoine."
+  },
+  {
+   "concept": "souscription",
+   "contrat": "ma-protection-accident-garantie-des-accidents-de-la-vie",
+   "score": 1,
+   "types": [
+    "cotisations"
+   ],
+   "preuves": [
+    "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
+    "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_9a686a6a2b25_knowledge_23fb738e71fb",
+    "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e"
+   ],
+   "justification": "Mention secondaire dans Ma Protection Accident (Garantie des accidents de la vie)."
   }
  ]
 }

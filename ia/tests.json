@@ -2575,9 +2575,10 @@
      "essen-ciel-assurance-obseques",
      "ma-retraite-plan-d-epargne-retraite-individuel-per",
      "masterlife-credit",
-     "essen-ciel-patrimoine"
+     "essen-ciel-patrimoine",
+     "ma-protection-accident-garantie-des-accidents-de-la-vie"
     ],
-    "contrats_rejetes": 1,
+    "contrats_rejetes": 0,
     "source_officielle_requise": false,
     "statut": "conclusion_documentee"
    },

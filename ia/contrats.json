@@ -1287,7 +1287,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "tableaux",
-     "resume_humain": "tableaux. Information documentaire à consulter dans la source.",
+     "resume_humain": "Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -1303,7 +1303,7 @@
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
       "page": 9,
       "section": "1.2 Votre cotisation",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -1326,7 +1326,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "frais",
-     "resume_humain": "frais. Information documentaire à consulter dans la source.",
+     "resume_humain": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -1342,7 +1342,7 @@
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
       "page": 9,
       "section": "1.2 Votre cotisation",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -1365,7 +1365,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "exemples_chiffrés",
-     "resume_humain": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+     "resume_humain": "Exemples chiffrés : montants sur le devis (tarif personnalisé), pas dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -1381,7 +1381,7 @@
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
       "page": 9,
       "section": "1.2 Votre cotisation",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -2052,7 +2052,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "determination_part_taxable",
-     "resume_humain": "determination_part_taxable. Information documentaire à consulter dans la source.",
+     "resume_humain": "Fiscalité du capital décès : relève des articles 990 I / 757 B du Code général des impôts (abattements et prélèvements selon l'âge de l'assuré au versement des primes). Cadre réglementaire évolutif — à vérifier sur impots.gouv.fr. Non détaillé sous forme de tableau dans la notice.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -2068,7 +2068,7 @@
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
       "page": 3,
       "section": "1.1.4 La fiscalité applicable",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -2093,7 +2093,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "conditions_de_rachat",
-     "resume_humain": "conditions_de_rachat. Information documentaire à consulter dans la source.",
+     "resume_humain": "Conditions de rachat : contrat de prévoyance à garanties temporaires — traité au §4.4 « Rachat et réduction » de la notice. Une garantie de prévoyance temporaire n'a en principe pas de valeur de rachat. Voir la notice.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -2109,7 +2109,7 @@
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
       "page": 27,
       "section": "4.4 Rachat et réduction",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -2177,7 +2177,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "valeurs_de_rachat",
-     "resume_humain": "valeurs_de_rachat. Information documentaire à consulter dans la source.",
+     "resume_humain": "Valeur de rachat : prévoyance temporaire, en principe pas de valeur de rachat. Voir §4.4 « Rachat et réduction » de la notice.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -2193,7 +2193,7 @@
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
       "page": 27,
       "section": "4.4 Rachat et réduction",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -2218,7 +2218,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "mise_en_reduction",
-     "resume_humain": "mise_en_reduction. Information documentaire à consulter dans la source.",
+     "resume_humain": "Mise en réduction : décrite au §4.4 « Rachat et réduction » de la notice (réduction des garanties en cas de cessation de paiement des cotisations). Voir la notice.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -2234,7 +2234,7 @@
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
       "page": 27,
       "section": "4.4 Rachat et réduction",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -3974,7 +3974,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "tableaux",
-     "resume_humain": "tableaux. Information documentaire à consulter dans la source.",
+     "resume_humain": "Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -3990,7 +3990,7 @@
       "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
       "page": 6,
       "section": "1.2. Votre cotisation",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -4013,7 +4013,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "exemples_chiffrés",
-     "resume_humain": "Option taux professionnel : taux d'invalidité 50 % → taux d'indemnisation 50/66 = 75,76 % de la rente du certificat ; taux 75 % → 100 %.",
+     "resume_humain": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -4029,7 +4029,7 @@
       "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
       "page": 6,
       "section": "1.2. Votre cotisation",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -4176,7 +4176,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "frais",
-     "resume_humain": "frais. Information documentaire à consulter dans la source.",
+     "resume_humain": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -4192,7 +4192,7 @@
       "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
       "page": 6,
       "section": "1.2. Votre cotisation",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -4798,7 +4798,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "determination_part_taxable",
-     "resume_humain": "determination_part_taxable. Information documentaire à consulter dans la source.",
+     "resume_humain": "Mise en réduction : décrite au §4.4 « Rachat et réduction » de la notice (réduction des garanties en cas de cessation de paiement des cotisations). Voir la notice.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -4814,7 +4814,7 @@
       "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
       "page": 3,
       "section": "1.1.4. La fiscalité applicable",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6254,7 +6254,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "tableaux",
-     "resume_humain": "tableaux. Information documentaire à consulter dans la source.",
+     "resume_humain": "Cotisation personnalisée (âge à l'adhésion, formule et niveau de rente choisis) : figure sur le devis et les conditions particulières, pas sous forme de grille dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -6270,7 +6270,7 @@
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
       "page": 9,
       "section": "1.2 Votre cotisation",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6869,7 +6869,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "determination_part_taxable",
-     "resume_humain": "determination_part_taxable. Information documentaire à consulter dans la source.",
+     "resume_humain": "Fiscalité du capital décès : relève des articles 990 I / 757 B du Code général des impôts (abattements et prélèvements selon l'âge de l'assuré au versement des primes). Cadre réglementaire évolutif — à vérifier sur impots.gouv.fr. Non détaillé sous forme de tableau dans la notice.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -6885,7 +6885,7 @@
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
       "page": 3,
       "section": "Régime fiscal (indications générales)",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -7124,7 +7124,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "conditions_de_rachat",
-     "resume_humain": "conditions_de_rachat. Information documentaire à consulter dans la source.",
+     "resume_humain": "Contrat de dépendance (rente viagère) : voir §7.3 « Valeur de rachat » de la notice. Il ne s'agit pas d'une épargne rachetable au sens d'un contrat d'assurance vie.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -7140,7 +7140,7 @@
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
       "page": 28,
       "section": "7.3 Valeur de rachat",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -11195,7 +11195,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "tableaux",
-     "resume_humain": "tableaux. Information documentaire à consulter dans la source.",
+     "resume_humain": "Exemples de primes mensuelles par âge (30 / 55 / 75 ans) pour la garantie « Revalorisée » — notice p.18. Chiffres illustratifs à lire dans la notice, jamais cités de mémoire.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -11366,7 +11366,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "réductions",
-     "resume_humain": "réductions. Information documentaire à consulter dans la source.",
+     "resume_humain": "Contrat d'épargne : les frais et les modalités de versement figurent aux conditions particulières et au devis ; la notice ne contient pas de grille tarifaire.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -11382,7 +11382,7 @@
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
       "page": 18,
       "section": "5.1 Comment effectuer un versement ?",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -11540,7 +11540,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "mise_en_reduction",
-     "resume_humain": "mise_en_reduction. Information documentaire à consulter dans la source.",
+     "resume_humain": "Assurance vie : rachat et mise en réduction décrits au §7.1 « Les règles du rachat » de la notice. Voir la notice.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -11556,7 +11556,7 @@
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
       "page": 43,
       "section": "7.1 Les règles du rachat",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -11580,7 +11580,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "fiscalité",
-     "resume_humain": "fiscalité. Information documentaire à consulter dans la source.",
+     "resume_humain": "Régime fiscal de l'assurance vie (fiscalité des rachats ; transmission via art. 990 I / 757 B CGI) : voir l'annexe fiscale de la notice et impots.gouv.fr. Cadre réglementaire évolutif.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -11596,7 +11596,7 @@
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
       "page": 72,
       "section": "Annexe fiscale (au 1er janvier 2026)",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13495,7 +13495,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "réductions",
-     "resume_humain": "réductions. Information documentaire à consulter dans la source.",
+     "resume_humain": "Réductions éventuelles : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -13511,7 +13511,7 @@
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
       "page": 20,
       "section": "6.5. Cotisations",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13578,7 +13578,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "tableaux",
-     "resume_humain": "tableaux. Information documentaire à consulter dans la source.",
+     "resume_humain": "Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -13594,7 +13594,7 @@
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
       "page": 20,
       "section": "6.5. Cotisations",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13617,7 +13617,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "frais",
-     "resume_humain": "frais. Information documentaire à consulter dans la source.",
+     "resume_humain": "Frais : Le tarif est personnalisé (âge de l'assuré, garanties choisies, état de santé) : il figure sur le devis et les conditions particulières d'adhésion, pas dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -13633,7 +13633,7 @@
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
       "page": 20,
       "section": "6.5. Cotisations",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13656,7 +13656,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "exemples_chiffrés",
-     "resume_humain": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+     "resume_humain": "Exemples chiffrés : le tarif étant personnalisé, les montants figurent sur le devis, pas dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -13672,7 +13672,7 @@
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
       "page": 20,
       "section": "6.5. Cotisations",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15465,7 +15465,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "réductions",
-     "resume_humain": "réductions. Information documentaire à consulter dans la source.",
+     "resume_humain": "Contrat d'épargne : les frais et les modalités de versement figurent aux conditions particulières et au devis ; la notice ne contient pas de grille tarifaire.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -15481,7 +15481,7 @@
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
       "page": 12,
       "section": "6.1 Versements réguliers",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15504,7 +15504,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "tableaux",
-     "resume_humain": "tableaux. Information documentaire à consulter dans la source.",
+     "resume_humain": "Contrat d'épargne : les frais et les modalités de versement figurent aux conditions particulières et au devis ; la notice ne contient pas de grille tarifaire.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -15520,7 +15520,7 @@
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
       "page": 12,
       "section": "6.1 Versements réguliers",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15827,7 +15827,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "fiscalité",
-     "resume_humain": "fiscalité. Information documentaire à consulter dans la source.",
+     "resume_humain": "Régime fiscal du PER (§3.5 de la notice) : déductibilité des versements (art. 154 bis / 163 quatervicies CGI), fiscalité des rentes et du capital (art. 158 CGI), décès après 70 ans (art. 757 B, abattement 30 500 €). Cadre réglementaire évolutif — impots.gouv.fr.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -15843,7 +15843,7 @@
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
       "page": 7,
       "section": "3.5 Indications générales relatives au régime fiscal",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -17968,7 +17968,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "exemples_chiffrés",
-     "resume_humain": "exemples_chiffrés. Information documentaire à consulter dans la source.",
+     "resume_humain": "Exemples chiffrés : cotisation personnalisée (capital emprunté, âge, garanties) — figure sur les conditions particulières d'adhésion et le devis, pas dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -17984,7 +17984,7 @@
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
       "page": 9,
       "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -18093,7 +18093,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "réductions",
-     "resume_humain": "réductions. Information documentaire à consulter dans la source.",
+     "resume_humain": "Réductions éventuelles : cotisation personnalisée, voir conditions particulières / devis.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -18109,7 +18109,7 @@
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
       "page": 9,
       "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -18132,7 +18132,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "frais",
-     "resume_humain": "frais. Information documentaire à consulter dans la source.",
+     "resume_humain": "Frais : cotisation personnalisée, voir conditions particulières / devis.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -18148,7 +18148,7 @@
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
       "page": 9,
       "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -18171,7 +18171,7 @@
      "categorie": "cotisation_prix",
      "categorie_label": "Cotisation / prix",
      "titre": "tableaux",
-     "resume_humain": "tableaux. Information documentaire à consulter dans la source.",
+     "resume_humain": "Cotisation personnalisée (capital emprunté, âge, garanties) : figure sur les conditions particulières d'adhésion, pas sous forme de grille dans la notice.",
      "impact_client": "Élément de coût ou de tarification à confirmer avec le tarif ou le devis applicable.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -18187,7 +18187,7 @@
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
       "page": 9,
       "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -18533,7 +18533,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "mise_en_reduction",
-     "resume_humain": "mise_en_reduction. Information documentaire à consulter dans la source.",
+     "resume_humain": "Assurance emprunteur : pas d'épargne. La mise en réduction est traitée à l'Article 8 « Rachat et réduction » de la notice. Voir la notice.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -18549,7 +18549,7 @@
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
       "page": 21,
       "section": "Article 8. Rachat et réduction",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,
@@ -18612,7 +18612,7 @@
      "categorie": "fiscalite",
      "categorie_label": "Fiscalité / rachat / réduction",
      "titre": "conditions_de_rachat",
-     "resume_humain": "conditions_de_rachat. Information documentaire à consulter dans la source.",
+     "resume_humain": "Assurance emprunteur : pas de valeur de rachat (ce n'est pas un contrat d'épargne). Le rachat/réduction est traité à l'Article 8 de la notice. Voir la notice.",
      "impact_client": "Conséquence fiscale ou règle de rachat/réduction à valider selon la situation.",
      "conditions_importantes": [],
      "limites_exclusions": [],
@@ -18628,7 +18628,7 @@
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
       "page": 21,
       "section": "Article 8. Rachat et réduction",
-      "statut_tracabilite": "tableau_non_extrait"
+      "statut_tracabilite": "editorial"
      },
      "flags": {
       "pdf_disponible": true,

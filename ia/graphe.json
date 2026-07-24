@@ -3,7 +3,7 @@
   "version": "2.3.0",
   "genere_le": "2026-07-17",
   "noeuds": 692,
-  "aretes": 2169,
+  "aretes": 2186,
   "types_noeuds": [
    "article_reglementaire",
    "concept",
@@ -10159,6 +10159,11 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_2025_04_cotisations_et_prix_2ca4d97bb9ae_knowledge_6ed9ced498a7",
+   "to": "concept:souscription",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:axa_axa_axa_avizen_2025_04_cotisations_et_prix_2ca4d97bb9ae_knowledge_6ed9ced498a7",
    "to": "notice:2025-04-notice-d-information-avizen-pdf",
    "rel": "source"
   },
@@ -10166,6 +10171,11 @@
    "from": "el:axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
    "to": "contrat:avizen",
    "rel": "appartient_a"
+  },
+  {
+   "from": "el:axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
+   "to": "concept:souscription",
+   "rel": "concerne"
   },
   {
    "from": "el:axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
@@ -10264,6 +10274,11 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
+   "to": "concept:souscription",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
    "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
    "rel": "source"
   },
@@ -10274,7 +10289,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
-   "to": "concept:invalidite",
+   "to": "concept:souscription",
    "rel": "concerne"
   },
   {
@@ -10326,6 +10341,11 @@
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
    "to": "contrat:avizen-pro",
    "rel": "appartient_a"
+  },
+  {
+   "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
+   "to": "concept:souscription",
+   "rel": "concerne"
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
@@ -10369,6 +10389,11 @@
   },
   {
    "from": "el:axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89",
+   "to": "concept:souscription",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89",
    "to": "notice:2025-06-notice-d-information-entour-age-pdf",
    "rel": "source"
   },
@@ -10665,6 +10690,11 @@
   {
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
    "to": "concept:rachat",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
+   "to": "concept:souscription",
    "rel": "concerne"
   },
   {
@@ -10686,6 +10716,11 @@
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_9a686a6a2b25_knowledge_23fb738e71fb",
    "to": "contrat:ma-protection-accident-garantie-des-accidents-de-la-vie",
    "rel": "appartient_a"
+  },
+  {
+   "from": "el:axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_9a686a6a2b25_knowledge_23fb738e71fb",
+   "to": "concept:souscription",
+   "rel": "concerne"
   },
   {
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_9a686a6a2b25_knowledge_23fb738e71fb",
@@ -10696,6 +10731,11 @@
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e",
    "to": "contrat:ma-protection-accident-garantie-des-accidents-de-la-vie",
    "rel": "appartient_a"
+  },
+  {
+   "from": "el:axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e",
+   "to": "concept:souscription",
+   "rel": "concerne"
   },
   {
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e",
@@ -10791,6 +10831,11 @@
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95",
    "to": "contrat:masterlife-credit",
    "rel": "appartient_a"
+  },
+  {
+   "from": "el:axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95",
+   "to": "concept:souscription",
+   "rel": "concerne"
   },
   {
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95",
@@ -10841,6 +10886,11 @@
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_f904852eb47e_knowledge_1f5ef94b1625",
    "to": "contrat:masterlife-credit",
    "rel": "appartient_a"
+  },
+  {
+   "from": "el:axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_f904852eb47e_knowledge_1f5ef94b1625",
+   "to": "concept:souscription",
+   "rel": "concerne"
   },
   {
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_f904852eb47e_knowledge_1f5ef94b1625",
@@ -11529,6 +11579,16 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17",
+   "to": "concept:fiscalite",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_185d1f12af5a_knowledge_76511eb44b17",
    "to": "notice:2025-04-notice-d-information-avizen-pdf",
    "rel": "source"
   },
@@ -11689,6 +11749,11 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_b51bc4461cfc_knowledge_3e9616ceeed6",
+   "to": "concept:rachat",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_b51bc4461cfc_knowledge_3e9616ceeed6",
    "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
    "rel": "source"
   },
@@ -11696,6 +11761,16 @@
    "from": "el:axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
    "to": "contrat:entour-age",
    "rel": "appartient_a"
+  },
+  {
+   "from": "el:axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
+   "to": "concept:deces",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
+   "to": "concept:fiscalite",
+   "rel": "concerne"
   },
   {
    "from": "el:axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
@@ -11934,6 +12009,11 @@
   },
   {
    "from": "el:axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba",
+   "to": "concept:rachat",
+   "rel": "concerne"
+  },
+  {
+   "from": "el:axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba",
    "to": "concept:fiscalite",
    "rel": "concerne"
   },
@@ -12081,6 +12161,11 @@
    "from": "el:axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779",
    "to": "contrat:ma-retraite-plan-d-epargne-retraite-individuel-per",
    "rel": "appartient_a"
+  },
+  {
+   "from": "el:axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779",
+   "to": "concept:deces",
+   "rel": "concerne"
   },
   {
    "from": "el:axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779",
