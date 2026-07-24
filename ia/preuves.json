@@ -5128,9 +5128,9 @@
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null,
+   "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_cotisations_et_prix_2ca4d97bb9ae_knowledge_6ed9ced498a7",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
    "concepts": []
   },
   {
@@ -5141,9 +5141,9 @@
    "titre": "frais",
    "texte": "frais. Information documentaire à consulter dans la source.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null,
+   "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
    "concepts": []
   },
   {
@@ -5154,9 +5154,9 @@
    "titre": "exemples_chiffrés",
    "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null,
+   "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_cotisations_et_prix_7f531ad19cd0_knowledge_0d72b99a5472",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
    "concepts": []
   },
   {
@@ -5167,9 +5167,9 @@
    "titre": "mode_calcul",
    "texte": "Cotisation annuelle calculée selon : âge de l'assuré (millésime année d'adhésion - millésime année de naissance, recalculé à chaque date anniversaire), groupe tarifaire selon la profession, qualité fumeur/non-fumeur ; dépend aussi des conditions d'acceptation médicale, des conditions d'exercice de la profession, des activités/sports/loisirs et des taxes réglementaires. Payables d'avance dans les 10 jours suivant l'échéance (périodicité mensuelle, trimestrielle, semestrielle ou annuelle au certificat). Le paiement s'arrête au décès ou à la reconnaissance…",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null,
+   "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_cotisations_et_prix_abc3375d4853_knowledge_811b06665e8e",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
    "concepts": [
     "deces",
     "souscription",
@@ -5200,9 +5200,9 @@
    "titre": "réductions",
    "texte": "Abattement non-fumeur · Abattement tarifaire sur les garanties capital décès/IPT toutes causes, rente éducation décès/IPT et rente décès/IPT lorsque l'assuré est non-fumeur (définition : 24 mois sans fumer ni sevrage).",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null,
+   "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_cotisations_et_prix_c8ec4cc1bd2f_knowledge_76782051e2db",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
    "concepts": [
     "invalidite",
     "deces",
@@ -5217,10 +5217,10 @@
    "type": "cotisations",
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null,
+   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
    "concepts": []
   },
   {
@@ -5230,10 +5230,10 @@
    "type": "cotisations",
    "titre": "exemples_chiffrés",
    "texte": "Option taux professionnel : taux d'invalidité 50 % → taux d'indemnisation 50/66 = 75,76 % de la rente du certificat ; taux 75 % → 100 %.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null,
+   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
    "concepts": [
     "invalidite"
    ]
@@ -5261,10 +5261,10 @@
    "type": "cotisations",
    "titre": "mode_calcul",
    "texte": "Identique à Avizen : âge (différence de millésimes), groupe tarifaire professionnel, fumeur/non-fumeur, conditions d'acceptation médicale, conditions d'exercice, activités/sports, taxes. Payables d'avance sous 10 jours de l'échéance (périodicité au certificat). Arrêt du paiement au décès ou à la reconnaissance d'IPT.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null,
+   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_819a475f3f85_knowledge_f28130b0ac7c",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
    "concepts": [
     "invalidite",
     "deces"
@@ -5277,10 +5277,10 @@
    "type": "cotisations",
    "titre": "frais",
    "texte": "frais. Information documentaire à consulter dans la source.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null,
+   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
    "concepts": []
   },
   {
@@ -5290,10 +5290,10 @@
    "type": "cotisations",
    "titre": "réductions",
    "texte": "Abattement non-fumeur · Abattement tarifaire pour non-fumeur (24 mois sans tabac ni sevrage) sur les garanties décès/IPT, rente éducation, rente décès.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null,
+   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 9,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9",
    "concepts": [
     "invalidite",
     "deces",
@@ -5504,9 +5504,9 @@
    "titre": "mode_calcul",
    "texte": "Versements libres et/ou programmés. Minima (annexe 3, au 20/05/2026) : versement initial 300 € (5 000 € gestion pilotée ; 10 000 € avec investissement progressif en pilotée) ; complémentaires 750 € ; programmés 50 €/mois, 150 €/trimestre, 300 €/semestre, 600 €/an ; rachat partiel 750 € (programmé : 150 €) avec solde minimal 750 € ; arbitrage gestion personnelle 750 €.",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null,
+   "page": 18,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_171c5a3a4b19_knowledge_833f37b8be6f",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=18",
    "concepts": [
     "rachat"
    ]
@@ -5519,9 +5519,9 @@
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null,
+   "page": 18,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_297d8ca1d613_knowledge_5d36dfd4585a",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=18",
    "concepts": []
   },
   {
@@ -5532,9 +5532,9 @@
    "titre": "exemples_chiffrés",
    "texte": "VR support euros après 1 an pour 2 500 € nets : 2 500 × (1 − 0,8 %) = 2 480 €. · Prime mensuelle Revalorisée : 30 ans, capital sous risque 250 € → 0,04 €/mois ; 75 ans → 1,48 €/mois.",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null,
+   "page": 18,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_4f3778d27635_knowledge_d5c460f0fa07",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=18",
    "concepts": []
   },
   {
@@ -5545,9 +5545,9 @@
    "titre": "frais",
    "texte": "Frais de dossier · 30 € maximum, prélevés uniquement au premier versement (conditions de suppression possibles, art. 5.1.1). · Droits d'adhésion ANPERE · 15 € maximum, une fois, pour les non-adhérents. · Frais sur versements · 4,85 % maximum sur chaque versement (illustrations plafonnées à 5 % cumulé la 1re année avec frais de dossier). · Frais de gestion · Support en euros : 0,80 %/an max ; fonds Croissance : 0,80 %/an max (taux mensuel équivalent 0,0669 %) ; UC hors mandat et hors AXA Immo Avenir : 0,96 %/an max (0,0804 %/mois) ; AXA Immo Avenir : 1,5…",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null,
+   "page": 18,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_58fc69bea0e9_knowledge_6dce3bffa380",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=18",
    "concepts": [
     "souscription",
     "association"
@@ -5561,9 +5561,9 @@
    "titre": "réductions",
    "texte": "réductions. Information documentaire à consulter dans la source.",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null,
+   "page": 18,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=18",
    "concepts": [
     "rachat"
    ]
@@ -5658,9 +5658,9 @@
    "titre": "mode_calcul",
    "texte": "Versements réguliers fixés à l'adhésion : minima 45 €/mois, 150 €/trimestre, 300 €/semestre, 600 €/an ; PLAFOND de versement 24 000 € entre deux dates anniversaires. Versements complémentaires ≥ 500 €. Modifications de montant/périodicité sans frais.",
    "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null,
+   "page": 12,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_0d373eee8846_knowledge_4a70ecf97022",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=12",
    "concepts": [
     "souscription"
    ]
@@ -5673,9 +5673,9 @@
    "titre": "exemples_chiffrés",
    "texte": "Conversion en rente : retraite à 61 ans en 2022, capital constitutif 100 € → rente viagère annuelle 3,0303 € (brut de fiscalité et PS).",
    "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null,
+   "page": 12,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_5f78886419a6_knowledge_e1c82020b80b",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=12",
    "concepts": [
     "fiscalite"
    ]
@@ -5688,9 +5688,9 @@
    "titre": "frais",
    "texte": "Droits d'adhésion ANPERE Retraite · 20 € maximum, prélevés à l'adhésion et reversés intégralement à l'association. · Frais sur versements · 3,85 % maximum sur chaque montant versé. · Frais de gestion · Fonds Croissance : 0,80 %/an max (taux mensuel équivalent 0,0669 %) ; UC hors AXA Immo Avenir : 0,96 %/an max (0,0804 %/mois) ; AXA Immo Avenir : 1,50 %/an max (0,1259 %/mois). 100 % des coupons/dividendes réinvestis (≥ 80 % pour AXA Immo Avenir, au plus tard le 1er juin). · Frais de performance fonds Croissance · 10 % max de la somme des produits nets de…",
    "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null,
+   "page": 12,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_949c0d6b1fe0_knowledge_868134057060",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=12",
    "concepts": [
     "souscription",
     "association"
@@ -5704,9 +5704,9 @@
    "titre": "réductions",
    "texte": "réductions. Information documentaire à consulter dans la source.",
    "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null,
+   "page": 12,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_9ba03053e69a_knowledge_d8f10c7d1ce0",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=12",
    "concepts": [
     "rachat"
    ]
@@ -5719,9 +5719,9 @@
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
    "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null,
+   "page": 12,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_a5a20f809364_knowledge_79846d0b1e50",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=12",
    "concepts": []
   },
   {
@@ -6496,9 +6496,9 @@
    "titre": "conditions_de_rachat",
    "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null,
+   "page": 27,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_204b27a8e03e_knowledge_5ff4bfc9fc09",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27",
    "concepts": [
     "rachat"
    ]
@@ -6527,9 +6527,9 @@
    "titre": "valeurs_de_rachat",
    "texte": "valeurs_de_rachat. Information documentaire à consulter dans la source.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null,
+   "page": 27,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_906eb3ee9913_knowledge_306ed551c6e9",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27",
    "concepts": [
     "rachat"
    ]
@@ -6542,9 +6542,9 @@
    "titre": "mise_en_reduction",
    "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null,
+   "page": 27,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_d15d09b28f2a_knowledge_f7005bf2d30b",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27",
    "concepts": [
     "rachat"
    ]
@@ -6556,10 +6556,10 @@
    "type": "fiscalite",
    "titre": "conditions_de_rachat",
    "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null,
+   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 27,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2b1334381d5d_knowledge_1ed566556524",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27",
    "concepts": [
     "rachat"
    ]
@@ -6586,10 +6586,10 @@
    "type": "fiscalite",
    "titre": "mise_en_reduction",
    "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null,
+   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 27,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_43a1be7843ad_knowledge_c5adf18d1814",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27",
    "concepts": [
     "rachat"
    ]
@@ -6601,10 +6601,10 @@
    "type": "fiscalite",
    "titre": "valeurs_de_rachat",
    "texte": "valeurs_de_rachat. Information documentaire à consulter dans la source.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null,
+   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 27,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_98ed4e335a5b_knowledge_6bb9408ea279",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27",
    "concepts": [
     "rachat"
    ]
@@ -6822,9 +6822,9 @@
    "titre": "mise_en_reduction",
    "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null,
+   "page": 43,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_3dfb729787c5_knowledge_8280ed50233d",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=43",
    "concepts": [
     "rachat"
    ]
@@ -6837,9 +6837,9 @@
    "titre": "fiscalité",
    "texte": "fiscalité. Information documentaire à consulter dans la source.",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null,
+   "page": 72,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=72",
    "concepts": [
     "fiscalite"
    ]
@@ -6852,9 +6852,9 @@
    "titre": "conditions_de_rachat",
    "texte": "à tout moment · rachat partiel ≥ 750 € et solde ≥ 750 € · accord du bénéficiaire acceptant",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null,
+   "page": 43,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_85bea04ba9d3_knowledge_ad9b384335e5",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=43",
    "concepts": [
     "rachat",
     "beneficiaire"
@@ -6868,9 +6868,9 @@
    "titre": "determination_part_taxable",
    "texte": "Rachat : seuls les PRODUITS sont imposables. Versements avant le 27/09/2017 : IR par défaut, option PFL irrévocable (7,5 % à 8 ans+, tous ces versements ayant plus de 8 ans au 01/01/2026). Versements depuis le 27/09/2017 : PFU par défaut — 12,8 % avant 8 ans ; après 8 ans : 7,5 % pour les produits issus de versements ≤ 150 000 € (primes nettes au 31/12 N-1, tous contrats) et 12,8 % au-delà ; option globale possible pour le barème progressif. Abattement annuel après 8 ans : 4 600 € (seul) / 9 200 € (couple). Prélèvements sociaux 17,2 % (produits depuis 1…",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null,
+   "page": 72,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_c0f287ca10a5_knowledge_4b1481c5d49d",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=72",
    "concepts": [
     "rachat",
     "fiscalite"
@@ -6884,9 +6884,9 @@
    "titre": "valeurs_de_rachat",
    "texte": "Faculté de rachat partiel ou total à tout moment ; valeur de rachat = somme des valeurs sur Global Euro + fonds Croissance + UC ; UC/parts converties en euros à la date de valeur applicable. Versement sous 2 mois max après demande complète ; délai possible > 3 semaines pour AXA Immo Avenir, AXA Avenir Infrastructure, AXA Avenir Entrepreneurs. Minima : rachat partiel 750 € (programmé 150 €), solde restant ≥ 750 €. Rachat total = fin de l'adhésion ; accord du bénéficiaire acceptant requis.",
    "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null,
+   "page": 43,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_ee50e7e2015b_knowledge_076ec1b062c1",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=43",
    "concepts": [
     "rachat",
     "souscription",
@@ -7004,9 +7004,9 @@
    "titre": "fiscalité",
    "texte": "fiscalité. Information documentaire à consulter dans la source.",
    "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null,
+   "page": 7,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_1d3c1355d227_knowledge_9b8057b66779",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=7",
    "concepts": [
     "fiscalite"
    ]
@@ -7034,9 +7034,9 @@
    "titre": "mise_en_reduction",
    "texte": "Le contrat ne comporte pas de valeurs de réduction.",
    "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null,
+   "page": 35,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_58efaba51d48_knowledge_4b450012844f",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=35",
    "concepts": [
     "rachat"
    ]
@@ -7049,9 +7049,9 @@
    "titre": "determination_part_taxable",
    "texte": "Versements (compartiment 1, hors transferts) : déductibles dans les limites des art. 154 bis / 154 bis-0 A (TNS) et 163 quatervicies CGI ; option de renonciation à la déductibilité au plus tard au jour du versement (change la fiscalité de sortie) ; AUCUNE déductibilité pour les versements à partir du 70e anniversaire. · Sortie en rente : imposée en pensions/retraites (158-5a CGI) ou rentes viagères à titre onéreux (158-6) selon le compartiment + PS. Sortie en capital : IR ou exonération selon compartiment, PS sur les produits. Rachats anticipés hors rés…",
    "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null,
+   "page": 7,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_78d2a3fea36c_knowledge_b714c809e8b8",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=7",
    "concepts": [
     "rachat",
     "fiscalite"
@@ -7139,9 +7139,9 @@
    "titre": "Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.",
    "texte": "Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.",
    "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null,
+   "page": 30,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_points_de_vigilance_0fe3eed1b758_knowledge_70e30390986f",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=30",
    "concepts": []
   },
   {
@@ -7151,10 +7151,10 @@
    "type": "points-vigilance",
    "titre": "IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.",
    "texte": "IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.",
-   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_points_de_vigilance_35a954074956_knowledge_5c564f1268c0",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": null,
    "concepts": [
     "incapacite-temporaire"
    ]
@@ -7166,10 +7166,10 @@
    "type": "points-vigilance",
    "titre": "Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).",
    "texte": "Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).",
-   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_points_de_vigilance_4be05876c398_knowledge_c48f67d5f295",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": null,
    "concepts": [
     "incapacite-temporaire"
    ]
@@ -7181,10 +7181,10 @@
    "type": "points-vigilance",
    "titre": "Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotif…",
    "texte": "Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotifs exclus de la qualification d'accident.",
-   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_points_de_vigilance_7bce30284464_knowledge_2cd764868136",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": null,
    "concepts": [
     "accident"
    ]
@@ -7196,10 +7196,10 @@
    "type": "points-vigilance",
    "titre": "Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en…",
    "texte": "Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en euros pour les garanties.",
-   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_points_de_vigilance_7fcd9a720eb6_knowledge_0576f001d0e2",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": null,
    "concepts": [
     "souscription"
    ]
@@ -7211,10 +7211,10 @@
    "type": "points-vigilance",
    "titre": "Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie.",
    "texte": "Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie.",
-   "source_pdf": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen.html#axa_axa_axa_avizen_2025_04_points_de_vigilance_cc15c2c82089_knowledge_a0dae9627c20",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf",
+   "lien_notice": null,
    "concepts": [
     "incapacite-temporaire",
     "souscription"
@@ -7227,10 +7227,10 @@
    "type": "points-vigilance",
    "titre": "Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.",
    "texte": "Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_0b64a692c15f_knowledge_f543fa5ba4e4",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7240,10 +7240,10 @@
    "type": "points-vigilance",
    "titre": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
    "texte": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_26fde9bd19a5_knowledge_77e0f0881c3c",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": null,
    "concepts": [
     "invalidite",
     "deces",
@@ -7258,10 +7258,10 @@
    "type": "points-vigilance",
    "titre": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
    "texte": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": null,
    "concepts": [
     "invalidite",
     "deces",
@@ -7276,10 +7276,10 @@
    "type": "points-vigilance",
    "titre": "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — véri…",
    "texte": "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — vérifier le choix au certificat.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_b3c4d3f2b5e8_knowledge_7db2ae0bff95",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": null,
    "concepts": [
     "invalidite",
     "accident"
@@ -7292,10 +7292,10 @@
    "type": "points-vigilance",
    "titre": "Aucun montant garanti dans la notice — tout est au certificat d'adhésion.",
    "texte": "Aucun montant garanti dans la notice — tout est au certificat d'adhésion.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_bb01f772b8f5_knowledge_b348f1b96a11",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": null,
    "concepts": [
     "souscription"
    ]
@@ -7307,10 +7307,10 @@
    "type": "points-vigilance",
    "titre": "Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.",
    "texte": "Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_d3e550a93ef8_knowledge_9310380f9152",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7320,10 +7320,10 @@
    "type": "points-vigilance",
    "titre": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
    "texte": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
-   "source_pdf": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/avizen-pro.html#axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_f99ef92bee2b_knowledge_314b37ae71ff",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf",
+   "lien_notice": null,
    "concepts": [
     "invalidite"
    ]
@@ -7641,10 +7641,10 @@
    "type": "points-vigilance",
    "titre": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
    "texte": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
-   "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_0aa645be29d8_knowledge_2075dc1b8feb",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": null,
    "concepts": [
     "rachat"
    ]
@@ -7656,10 +7656,10 @@
    "type": "points-vigilance",
    "titre": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
    "texte": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
-   "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_218bb9d14039_knowledge_adbe0d8ec182",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7669,10 +7669,10 @@
    "type": "points-vigilance",
    "titre": "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
    "texte": "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
-   "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_33113b1f8da2_knowledge_5731bc2dd8df",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": null,
    "concepts": [
     "fiscalite"
    ]
@@ -7684,10 +7684,10 @@
    "type": "points-vigilance",
    "titre": "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
    "texte": "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
-   "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_6dbdc19c69e0_knowledge_ab0f944dd026",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7697,10 +7697,10 @@
    "type": "points-vigilance",
    "titre": "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
    "texte": "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
-   "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_73a0c3f0cb6e_knowledge_63403609a675",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7710,10 +7710,10 @@
    "type": "points-vigilance",
    "titre": "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
    "texte": "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
-   "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_ad67ed6a280f_knowledge_c720aef2dd6c",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7723,10 +7723,10 @@
    "type": "points-vigilance",
    "titre": "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.",
    "texte": "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.",
-   "source_pdf": "Excelium/2026-05 Notice Excelium Vie.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/excelium-assurance-vie.html#axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_c375b97eae3b_knowledge_7109df78eb58",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7803,10 +7803,10 @@
    "type": "points-vigilance",
    "titre": "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégré…",
    "texte": "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégrés.",
-   "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_29dbe9dd07a5_knowledge_bf0dd90f6ec7",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7816,10 +7816,10 @@
    "type": "points-vigilance",
    "titre": "Compartiment 3 : sortie en rente UNIQUEMENT.",
    "texte": "Compartiment 3 : sortie en rente UNIQUEMENT.",
-   "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_40a6471abe1e_knowledge_f517d36babe3",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7829,10 +7829,10 @@
    "type": "points-vigilance",
    "titre": "Plus de déductibilité fiscale des versements après 70 ans.",
    "texte": "Plus de déductibilité fiscale des versements après 70 ans.",
-   "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_4638a08834d5_knowledge_0ba923dcc369",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": null,
    "concepts": [
     "fiscalite"
    ]
@@ -7844,10 +7844,10 @@
    "type": "points-vigilance",
    "titre": "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).",
    "texte": "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).",
-   "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_7e539c84f84b_knowledge_3f6297fa7729",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7857,10 +7857,10 @@
    "type": "points-vigilance",
    "titre": "Frais de transfert 1 % uniquement les 5 premières années.",
    "texte": "Frais de transfert 1 % uniquement les 5 premières années.",
-   "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_88050d867e12_knowledge_3300e810ad31",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7870,10 +7870,10 @@
    "type": "points-vigilance",
    "titre": "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.",
    "texte": "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.",
-   "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_9a1413ab3b74_knowledge_a3ade0f48deb",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7883,10 +7883,10 @@
    "type": "points-vigilance",
    "titre": "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).",
    "texte": "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).",
-   "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_c9108a1f7554_knowledge_24bafdb8e47e",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": null,
    "concepts": []
   },
   {
@@ -7896,10 +7896,10 @@
    "type": "points-vigilance",
    "titre": "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.",
    "texte": "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.",
-   "source_pdf": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
+   "source_pdf": null,
    "page": null,
    "lien_contrat": "https://gabuz22.github.io/AXA/ia/contrat/ma-retraite-plan-d-epargne-retraite-individuel-per.html#axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_db274a95a51e_knowledge_af2979bd8634",
-   "lien_notice": "https://gabuz22.github.io/AXA/data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf",
+   "lien_notice": null,
    "concepts": [
     "souscription"
    ]

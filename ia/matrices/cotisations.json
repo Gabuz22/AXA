@@ -11,7 +11,7 @@
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_45b00e073e5e_knowledge_9ef49b911767",
@@ -19,7 +19,7 @@
    "titre": "frais",
    "texte": "frais. Information documentaire à consulter dans la source.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_7f531ad19cd0_knowledge_0d72b99a5472",
@@ -27,7 +27,7 @@
    "titre": "exemples_chiffrés",
    "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_abc3375d4853_knowledge_811b06665e8e",
@@ -35,7 +35,7 @@
    "titre": "mode_calcul",
    "texte": "Cotisation annuelle calculée selon : âge de l'assuré (millésime année d'adhésion - millésime année de naissance, recalculé à chaque date anniversaire), groupe tarifaire selon la profession, qualité fumeur/non-fumeur ; dépend aussi des conditions d'acceptation médicale, des conditions d'exercice de la profession, des activités/sports/loisirs et des taxes réglementaires. Payables d'avance dans les 10 jours suivant l'échéance (périodicité mensuelle, trimestrielle, semestrielle ou annuelle au certificat). Le paiement s'arrête au décès ou à la reconnaissance…",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_avizen_2025_04_cotisations_et_prix_b516c9e6cfb0_knowledge_09a0e053a243",
@@ -51,23 +51,23 @@
    "titre": "réductions",
    "texte": "Abattement non-fumeur · Abattement tarifaire sur les garanties capital décès/IPT toutes causes, rente éducation décès/IPT et rente décès/IPT lorsque l'assuré est non-fumeur (définition : 24 mois sans fumer ni sevrage).",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
    "contrat": "Avizen Pro",
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
-   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 9
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
    "contrat": "Avizen Pro",
    "titre": "exemples_chiffrés",
    "texte": "Option taux professionnel : taux d'invalidité 50 % → taux d'indemnisation 50/66 = 75,76 % de la rente du certificat ; taux 75 % → 100 %.",
-   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 9
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_759b89f27c1f_knowledge_d18add8ca1f6",
@@ -82,24 +82,24 @@
    "contrat": "Avizen Pro",
    "titre": "mode_calcul",
    "texte": "Identique à Avizen : âge (différence de millésimes), groupe tarifaire professionnel, fumeur/non-fumeur, conditions d'acceptation médicale, conditions d'exercice, activités/sports, taxes. Payables d'avance sous 10 jours de l'échéance (périodicité au certificat). Arrêt du paiement au décès ou à la reconnaissance d'IPT.",
-   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 9
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
    "contrat": "Avizen Pro",
    "titre": "frais",
    "texte": "frais. Information documentaire à consulter dans la source.",
-   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 9
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
    "contrat": "Avizen Pro",
    "titre": "réductions",
    "texte": "Abattement non-fumeur · Abattement tarifaire pour non-fumeur (24 mois sans tabac ni sevrage) sur les garanties décès/IPT, rente éducation, rente décès.",
-   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 9
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89",
@@ -211,7 +211,7 @@
    "titre": "mode_calcul",
    "texte": "Versements libres et/ou programmés. Minima (annexe 3, au 20/05/2026) : versement initial 300 € (5 000 € gestion pilotée ; 10 000 € avec investissement progressif en pilotée) ; complémentaires 750 € ; programmés 50 €/mois, 150 €/trimestre, 300 €/semestre, 600 €/an ; rachat partiel 750 € (programmé : 150 €) avec solde minimal 750 € ; arbitrage gestion personnelle 750 €.",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null
+   "page": 18
   },
   {
    "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_297d8ca1d613_knowledge_5d36dfd4585a",
@@ -219,7 +219,7 @@
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null
+   "page": 18
   },
   {
    "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_4f3778d27635_knowledge_d5c460f0fa07",
@@ -227,7 +227,7 @@
    "titre": "exemples_chiffrés",
    "texte": "VR support euros après 1 an pour 2 500 € nets : 2 500 × (1 − 0,8 %) = 2 480 €. · Prime mensuelle Revalorisée : 30 ans, capital sous risque 250 € → 0,04 €/mois ; 75 ans → 1,48 €/mois.",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null
+   "page": 18
   },
   {
    "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_58fc69bea0e9_knowledge_6dce3bffa380",
@@ -235,7 +235,7 @@
    "titre": "frais",
    "texte": "Frais de dossier · 30 € maximum, prélevés uniquement au premier versement (conditions de suppression possibles, art. 5.1.1). · Droits d'adhésion ANPERE · 15 € maximum, une fois, pour les non-adhérents. · Frais sur versements · 4,85 % maximum sur chaque versement (illustrations plafonnées à 5 % cumulé la 1re année avec frais de dossier). · Frais de gestion · Support en euros : 0,80 %/an max ; fonds Croissance : 0,80 %/an max (taux mensuel équivalent 0,0669 %) ; UC hors mandat et hors AXA Immo Avenir : 0,96 %/an max (0,0804 %/mois) ; AXA Immo Avenir : 1,5…",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null
+   "page": 18
   },
   {
    "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_d5f0b093eee7_knowledge_17c33e648674",
@@ -243,7 +243,7 @@
    "titre": "réductions",
    "texte": "réductions. Information documentaire à consulter dans la source.",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null
+   "page": 18
   },
   {
    "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_0abf98aa5778_knowledge_445e279cef50",
@@ -299,7 +299,7 @@
    "titre": "mode_calcul",
    "texte": "Versements réguliers fixés à l'adhésion : minima 45 €/mois, 150 €/trimestre, 300 €/semestre, 600 €/an ; PLAFOND de versement 24 000 € entre deux dates anniversaires. Versements complémentaires ≥ 500 €. Modifications de montant/périodicité sans frais.",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null
+   "page": 12
   },
   {
    "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_5f78886419a6_knowledge_e1c82020b80b",
@@ -307,7 +307,7 @@
    "titre": "exemples_chiffrés",
    "texte": "Conversion en rente : retraite à 61 ans en 2022, capital constitutif 100 € → rente viagère annuelle 3,0303 € (brut de fiscalité et PS).",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null
+   "page": 12
   },
   {
    "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_949c0d6b1fe0_knowledge_868134057060",
@@ -315,7 +315,7 @@
    "titre": "frais",
    "texte": "Droits d'adhésion ANPERE Retraite · 20 € maximum, prélevés à l'adhésion et reversés intégralement à l'association. · Frais sur versements · 3,85 % maximum sur chaque montant versé. · Frais de gestion · Fonds Croissance : 0,80 %/an max (taux mensuel équivalent 0,0669 %) ; UC hors AXA Immo Avenir : 0,96 %/an max (0,0804 %/mois) ; AXA Immo Avenir : 1,50 %/an max (0,1259 %/mois). 100 % des coupons/dividendes réinvestis (≥ 80 % pour AXA Immo Avenir, au plus tard le 1er juin). · Frais de performance fonds Croissance · 10 % max de la somme des produits nets de…",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null
+   "page": 12
   },
   {
    "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_9ba03053e69a_knowledge_d8f10c7d1ce0",
@@ -323,7 +323,7 @@
    "titre": "réductions",
    "texte": "réductions. Information documentaire à consulter dans la source.",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null
+   "page": 12
   },
   {
    "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_a5a20f809364_knowledge_79846d0b1e50",
@@ -331,7 +331,7 @@
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null
+   "page": 12
   },
   {
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_21c3f64c1b05_knowledge_bff17a646e95",

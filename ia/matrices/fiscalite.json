@@ -27,7 +27,7 @@
    "titre": "conditions_de_rachat",
    "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null
+   "page": 27
   },
   {
    "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_23f113174dd4_knowledge_0ecf20a9cf62",
@@ -43,7 +43,7 @@
    "titre": "valeurs_de_rachat",
    "texte": "valeurs_de_rachat. Information documentaire à consulter dans la source.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null
+   "page": 27
   },
   {
    "id": "axa_axa_axa_avizen_2025_04_rachats_reductions_fiscalite_d15d09b28f2a_knowledge_f7005bf2d30b",
@@ -51,15 +51,15 @@
    "titre": "mise_en_reduction",
    "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
    "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": null
+   "page": 27
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2b1334381d5d_knowledge_1ed566556524",
    "contrat": "Avizen Pro",
    "titre": "conditions_de_rachat",
    "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
-   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 27
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2db09360e436_knowledge_a3a809ae7819",
@@ -74,16 +74,16 @@
    "contrat": "Avizen Pro",
    "titre": "mise_en_reduction",
    "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
-   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 27
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_98ed4e335a5b_knowledge_6bb9408ea279",
    "contrat": "Avizen Pro",
    "titre": "valeurs_de_rachat",
    "texte": "valeurs_de_rachat. Information documentaire à consulter dans la source.",
-   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-   "page": null
+   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
+   "page": 27
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_a9a1ff6e4623_knowledge_b16b93a33ab5",
@@ -195,7 +195,7 @@
    "titre": "mise_en_reduction",
    "texte": "mise_en_reduction. Information documentaire à consulter dans la source.",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null
+   "page": 43
   },
   {
    "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_79fcf78b91ea_knowledge_a3052db6b2ba",
@@ -203,7 +203,7 @@
    "titre": "fiscalité",
    "texte": "fiscalité. Information documentaire à consulter dans la source.",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null
+   "page": 72
   },
   {
    "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_85bea04ba9d3_knowledge_ad9b384335e5",
@@ -211,7 +211,7 @@
    "titre": "conditions_de_rachat",
    "texte": "à tout moment · rachat partiel ≥ 750 € et solde ≥ 750 € · accord du bénéficiaire acceptant",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null
+   "page": 43
   },
   {
    "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_c0f287ca10a5_knowledge_4b1481c5d49d",
@@ -219,7 +219,7 @@
    "titre": "determination_part_taxable",
    "texte": "Rachat : seuls les PRODUITS sont imposables. Versements avant le 27/09/2017 : IR par défaut, option PFL irrévocable (7,5 % à 8 ans+, tous ces versements ayant plus de 8 ans au 01/01/2026). Versements depuis le 27/09/2017 : PFU par défaut — 12,8 % avant 8 ans ; après 8 ans : 7,5 % pour les produits issus de versements ≤ 150 000 € (primes nettes au 31/12 N-1, tous contrats) et 12,8 % au-delà ; option globale possible pour le barème progressif. Abattement annuel après 8 ans : 4 600 € (seul) / 9 200 € (couple). Prélèvements sociaux 17,2 % (produits depuis 1…",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null
+   "page": 72
   },
   {
    "id": "axa_axa_axa_excelium_vie_2026_05_rachats_reductions_fiscalite_ee50e7e2015b_knowledge_076ec1b062c1",
@@ -227,7 +227,7 @@
    "titre": "valeurs_de_rachat",
    "texte": "Faculté de rachat partiel ou total à tout moment ; valeur de rachat = somme des valeurs sur Global Euro + fonds Croissance + UC ; UC/parts converties en euros à la date de valeur applicable. Versement sous 2 mois max après demande complète ; délai possible > 3 semaines pour AXA Immo Avenir, AXA Avenir Infrastructure, AXA Avenir Entrepreneurs. Minima : rachat partiel 750 € (programmé 150 €), solde restant ≥ 750 €. Rachat total = fin de l'adhésion ; accord du bénéficiaire acceptant requis.",
    "notice": "Excelium/2026-05 Notice Excelium Vie.pdf",
-   "page": null
+   "page": 43
   },
   {
    "id": "axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_12a04ea57d41_knowledge_347f5f4fe5ab",
@@ -291,7 +291,7 @@
    "titre": "fiscalité",
    "texte": "fiscalité. Information documentaire à consulter dans la source.",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null
+   "page": 7
   },
   {
    "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_30d289ee955a_knowledge_7c124417b8b5",
@@ -307,7 +307,7 @@
    "titre": "mise_en_reduction",
    "texte": "Le contrat ne comporte pas de valeurs de réduction.",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null
+   "page": 35
   },
   {
    "id": "axa_axa_axa_ma_retraite_2026_05_rachats_reductions_fiscalite_78d2a3fea36c_knowledge_b714c809e8b8",
@@ -315,7 +315,7 @@
    "titre": "determination_part_taxable",
    "texte": "Versements (compartiment 1, hors transferts) : déductibles dans les limites des art. 154 bis / 154 bis-0 A (TNS) et 163 quatervicies CGI ; option de renonciation à la déductibilité au plus tard au jour du versement (change la fiscalité de sortie) ; AUCUNE déductibilité pour les versements à partir du 70e anniversaire. · Sortie en rente : imposée en pensions/retraites (158-5a CGI) ou rentes viagères à titre onéreux (158-6) selon le compartiment + PS. Sortie en capital : IR ou exonération selon compartiment, PS sur les produits. Rachats anticipés hors rés…",
    "notice": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-   "page": null
+   "page": 7
   },
   {
    "id": "axa_axa_axa_masterlife_credit_2024_10_rachats_reductions_fiscalite_6184af0ed0bb_knowledge_d2b949a61e4b",

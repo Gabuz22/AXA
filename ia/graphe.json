@@ -3,7 +3,7 @@
   "version": "2.3.0",
   "genere_le": "2026-07-17",
   "noeuds": 692,
-  "aretes": 2222,
+  "aretes": 2195,
   "types_noeuds": [
    "article_reglementaire",
    "concept",
@@ -10264,7 +10264,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pdf",
    "rel": "source"
   },
   {
@@ -10279,7 +10279,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pdf",
    "rel": "source"
   },
   {
@@ -10319,7 +10319,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_819a475f3f85_knowledge_f28130b0ac7c",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pdf",
    "rel": "source"
   },
   {
@@ -10329,7 +10329,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pdf",
    "rel": "source"
   },
   {
@@ -10359,7 +10359,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pdf",
    "rel": "source"
   },
   {
@@ -11609,7 +11609,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2b1334381d5d_knowledge_1ed566556524",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pdf",
    "rel": "source"
   },
   {
@@ -11639,7 +11639,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_43a1be7843ad_knowledge_c5adf18d1814",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pdf",
    "rel": "source"
   },
   {
@@ -11654,7 +11654,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_98ed4e335a5b_knowledge_6bb9408ea279",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pdf",
    "rel": "source"
   },
   {
@@ -12268,11 +12268,6 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_35a954074956_knowledge_5c564f1268c0",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_4be05876c398_knowledge_c48f67d5f295",
    "to": "contrat:avizen",
    "rel": "appartient_a"
@@ -12281,11 +12276,6 @@
    "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_4be05876c398_knowledge_c48f67d5f295",
    "to": "concept:incapacite-temporaire",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_4be05876c398_knowledge_c48f67d5f295",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_7bce30284464_knowledge_2cd764868136",
@@ -12298,11 +12288,6 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_7bce30284464_knowledge_2cd764868136",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_7fcd9a720eb6_knowledge_0576f001d0e2",
    "to": "contrat:avizen",
    "rel": "appartient_a"
@@ -12311,11 +12296,6 @@
    "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_7fcd9a720eb6_knowledge_0576f001d0e2",
    "to": "concept:souscription",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_7fcd9a720eb6_knowledge_0576f001d0e2",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_cc15c2c82089_knowledge_a0dae9627c20",
@@ -12333,19 +12313,9 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_avizen_2025_04_points_de_vigilance_cc15c2c82089_knowledge_a0dae9627c20",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_0b64a692c15f_knowledge_f543fa5ba4e4",
    "to": "contrat:avizen-pro",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_0b64a692c15f_knowledge_f543fa5ba4e4",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_26fde9bd19a5_knowledge_77e0f0881c3c",
@@ -12373,11 +12343,6 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_26fde9bd19a5_knowledge_77e0f0881c3c",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
    "to": "contrat:avizen-pro",
    "rel": "appartient_a"
@@ -12403,11 +12368,6 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_b3c4d3f2b5e8_knowledge_7db2ae0bff95",
    "to": "contrat:avizen-pro",
    "rel": "appartient_a"
@@ -12423,11 +12383,6 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_b3c4d3f2b5e8_knowledge_7db2ae0bff95",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_bb01f772b8f5_knowledge_b348f1b96a11",
    "to": "contrat:avizen-pro",
    "rel": "appartient_a"
@@ -12438,19 +12393,9 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_bb01f772b8f5_knowledge_b348f1b96a11",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_d3e550a93ef8_knowledge_9310380f9152",
    "to": "contrat:avizen-pro",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_d3e550a93ef8_knowledge_9310380f9152",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_f99ef92bee2b_knowledge_314b37ae71ff",
@@ -12461,11 +12406,6 @@
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_f99ef92bee2b_knowledge_314b37ae71ff",
    "to": "concept:invalidite",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_f99ef92bee2b_knowledge_314b37ae71ff",
-   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_16c84e8a15cc_knowledge_00dcf84ccfed",
@@ -12778,19 +12718,9 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_0aa645be29d8_knowledge_2075dc1b8feb",
-   "to": "notice:2026-05-notice-excelium-vie-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_218bb9d14039_knowledge_adbe0d8ec182",
    "to": "contrat:excelium-assurance-vie",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_218bb9d14039_knowledge_adbe0d8ec182",
-   "to": "notice:2026-05-notice-excelium-vie-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_33113b1f8da2_knowledge_5731bc2dd8df",
@@ -12803,19 +12733,9 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_33113b1f8da2_knowledge_5731bc2dd8df",
-   "to": "notice:2026-05-notice-excelium-vie-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_6dbdc19c69e0_knowledge_ab0f944dd026",
    "to": "contrat:excelium-assurance-vie",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_6dbdc19c69e0_knowledge_ab0f944dd026",
-   "to": "notice:2026-05-notice-excelium-vie-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_73a0c3f0cb6e_knowledge_63403609a675",
@@ -12823,29 +12743,14 @@
    "rel": "appartient_a"
   },
   {
-   "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_73a0c3f0cb6e_knowledge_63403609a675",
-   "to": "notice:2026-05-notice-excelium-vie-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_ad67ed6a280f_knowledge_c720aef2dd6c",
    "to": "contrat:excelium-assurance-vie",
    "rel": "appartient_a"
   },
   {
-   "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_ad67ed6a280f_knowledge_c720aef2dd6c",
-   "to": "notice:2026-05-notice-excelium-vie-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_c375b97eae3b_knowledge_7109df78eb58",
    "to": "contrat:excelium-assurance-vie",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_excelium_vie_2026_05_points_de_vigilance_c375b97eae3b_knowledge_7109df78eb58",
-   "to": "notice:2026-05-notice-excelium-vie-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4bcd5a5c99f0_knowledge_9e023765fd47",
@@ -12908,19 +12813,9 @@
    "rel": "appartient_a"
   },
   {
-   "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_29dbe9dd07a5_knowledge_bf0dd90f6ec7",
-   "to": "notice:2026-05-notice-ma-retraite-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_40a6471abe1e_knowledge_f517d36babe3",
    "to": "contrat:ma-retraite-plan-d-epargne-retraite-individuel-per",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_40a6471abe1e_knowledge_f517d36babe3",
-   "to": "notice:2026-05-notice-ma-retraite-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_4638a08834d5_knowledge_0ba923dcc369",
@@ -12933,19 +12828,9 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_4638a08834d5_knowledge_0ba923dcc369",
-   "to": "notice:2026-05-notice-ma-retraite-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_7e539c84f84b_knowledge_3f6297fa7729",
    "to": "contrat:ma-retraite-plan-d-epargne-retraite-individuel-per",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_7e539c84f84b_knowledge_3f6297fa7729",
-   "to": "notice:2026-05-notice-ma-retraite-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_88050d867e12_knowledge_3300e810ad31",
@@ -12953,29 +12838,14 @@
    "rel": "appartient_a"
   },
   {
-   "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_88050d867e12_knowledge_3300e810ad31",
-   "to": "notice:2026-05-notice-ma-retraite-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_9a1413ab3b74_knowledge_a3ade0f48deb",
    "to": "contrat:ma-retraite-plan-d-epargne-retraite-individuel-per",
    "rel": "appartient_a"
   },
   {
-   "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_9a1413ab3b74_knowledge_a3ade0f48deb",
-   "to": "notice:2026-05-notice-ma-retraite-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_c9108a1f7554_knowledge_24bafdb8e47e",
    "to": "contrat:ma-retraite-plan-d-epargne-retraite-individuel-per",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_c9108a1f7554_knowledge_24bafdb8e47e",
-   "to": "notice:2026-05-notice-ma-retraite-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_db274a95a51e_knowledge_af2979bd8634",
@@ -12986,11 +12856,6 @@
    "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_db274a95a51e_knowledge_af2979bd8634",
    "to": "concept:souscription",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_db274a95a51e_knowledge_af2979bd8634",
-   "to": "notice:2026-05-notice-ma-retraite-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_14236254decd_knowledge_8c4dc54fa7d1",

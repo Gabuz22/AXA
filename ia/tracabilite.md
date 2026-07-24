@@ -12,7 +12,7 @@
 **Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
 
 
-**Global : 556 éléments, 416 pleinement traçables (75 %). 139 à vérifier · 1 note(s) éditoriale(s) assumée(s).**
+**Global : 556 éléments, 432 pleinement traçables (78 %). 96 à vérifier · 28 note(s) éditoriale(s) assumée(s).**
 
 > Traçable = source pointant la **notice + la page**. « À vérifier » ne veut pas dire faux : la donnée existe mais sa localisation exacte reste à confirmer dans la notice (page imprécise, tableau non extrait, ou source à rattacher). Une **note éditoriale** est une mise en garde conseiller assumée (ex. comparaison inter-produits) : elle n'a pas de citation de notice, et ne doit pas être présentée comme un fait contractuel. **La notice PDF fait foi.**
 
@@ -20,57 +20,43 @@
 
 | Contrat | Éléments | Traçables | À vérifier |
 |---|---|---|---|
-| Avizen | 92 | 83 % | 16 |
-| Avizen Pro | 89 | 81 % | 17 |
+| Avizen | 92 | 86 % | 8 |
+| Avizen Pro | 89 | 83 % | 8 |
 | Entour'Age | 62 | 71 % | 18 |
 | Essen'Ciel (assurance obsèques) | 61 | 72 % | 17 |
 | Essen'Ciel Patrimoine | 14 | 71 % | 3 |
-| Excelium (assurance vie) | 46 | 63 % | 17 |
+| Excelium (assurance vie) | 46 | 76 % | 4 |
 | Ma Protection Accident (Garantie des accidents de la vie) | 69 | 77 % | 16 |
-| Ma Retraite (plan d'épargne retraite individuel — PER) | 46 | 61 % | 18 |
+| Ma Retraite (plan d'épargne retraite individuel — PER) | 46 | 72 % | 5 |
 | Masterlife CREDIT | 77 | 78 % | 17 |
 
-## Avizen — 83 % traçable
+## Avizen — 86 % traçable
 
-Répartition : 76 pleinement traçable · 16 source connue, page imprécise.
+Répartition : 79 pleinement traçable · 5 note conseiller éditoriale · 2 source connue, page imprécise · 6 valeur dans un tableau non extrait.
 
-À vérifier (16) — tableau non extrait et sans source d'abord :
-- **[cotisations]** tableaux — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- **[cotisations]** frais — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- **[cotisations]** exemples_chiffrés — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- **[cotisations]** mode_calcul — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- **[cotisations]** réductions — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
+À vérifier (8) — tableau non extrait et sans source d'abord :
+- **[cotisations]** tableaux — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.9, 1.2 Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9)
+- **[cotisations]** frais — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.9, 1.2 Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9)
+- **[cotisations]** exemples_chiffrés — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.9, 1.2 Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9)
+- **[fiscalite]** conditions_de_rachat — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.4 Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27)
+- **[fiscalite]** valeurs_de_rachat — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.4 Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27)
+- **[fiscalite]** mise_en_reduction — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.4 Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27)
 - **[fiscalite]** fiscalité — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
 - **[fiscalite]** determination_part_taxable — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- **[fiscalite]** conditions_de_rachat — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- **[fiscalite]** valeurs_de_rachat — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- **[fiscalite]** mise_en_reduction — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- **[points-vigilance]** Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de  — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- **[points-vigilance]** IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au m — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- **[points-vigilance]** Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique  — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- **[points-vigilance]** Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
-- _… et 2 autres (voir tracabilite.json)._
 
-## Avizen Pro — 81 % traçable
+## Avizen Pro — 83 % traçable
 
-Répartition : 72 pleinement traçable · 17 source connue, page imprécise.
+Répartition : 74 pleinement traçable · 7 note conseiller éditoriale · 2 source connue, page imprécise · 6 valeur dans un tableau non extrait.
 
-À vérifier (17) — tableau non extrait et sans source d'abord :
-- **[cotisations]** tableaux — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[cotisations]** exemples_chiffrés — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[cotisations]** mode_calcul — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[cotisations]** frais — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[cotisations]** réductions — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[fiscalite]** conditions_de_rachat — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[fiscalite]** mise_en_reduction — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[fiscalite]** valeurs_de_rachat — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
+À vérifier (8) — tableau non extrait et sans source d'abord :
+- **[cotisations]** tableaux — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.9, 1.2 Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9)
+- **[cotisations]** exemples_chiffrés — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.9, 1.2 Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9)
+- **[cotisations]** frais — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.9, 1.2 Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9)
+- **[fiscalite]** conditions_de_rachat — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.4 Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27)
+- **[fiscalite]** mise_en_reduction — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.4 Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27)
+- **[fiscalite]** valeurs_de_rachat — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.4 Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27)
 - **[fiscalite]** fiscalité — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
 - **[fiscalite]** determination_part_taxable — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[points-vigilance]** Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justifi — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[points-vigilance]** Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3) — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[points-vigilance]** Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une  — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[points-vigilance]** Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- _… et 3 autres (voir tracabilite.json)._
 
 ## Entour'Age — 71 % traçable
 
@@ -123,26 +109,15 @@ Répartition : 10 pleinement traçable · 1 note conseiller éditoriale · 3 val
 - **[options]** Faculté de rachat (total / partiel) + tableau des valeurs de rachat — _⚠ tableau non extrait_ [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.2, 14, 15, 4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=2)
 - **[options]** Mise en réduction (valeur de réduction) — _⚠ tableau non extrait_ [Notice : 2023-09 Notice d'information Essen'Ciel Patrimoine.pdf, p.13, 14, 15, 4.3](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel%20Patrimoine/2023-09%20Notice%20d%27information%20Essen%27Ciel%20Patrimoine.pdf#page=13)
 
-## Excelium (assurance vie) — 63 % traçable
+## Excelium (assurance vie) — 76 % traçable
 
-Répartition : 29 pleinement traçable · 17 source connue, page imprécise.
+Répartition : 35 pleinement traçable · 7 note conseiller éditoriale · 4 valeur dans un tableau non extrait.
 
-À vérifier (17) — tableau non extrait et sans source d'abord :
-- **[cotisations]** mode_calcul — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[cotisations]** tableaux — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[cotisations]** exemples_chiffrés — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[cotisations]** frais — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[cotisations]** réductions — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[fiscalite]** mise_en_reduction — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[fiscalite]** fiscalité — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[fiscalite]** conditions_de_rachat — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[fiscalite]** determination_part_taxable — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[fiscalite]** valeurs_de_rachat — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[points-vigilance]** Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvem — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[points-vigilance]** Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; p — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[points-vigilance]** Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le ta — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- **[points-vigilance]** UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de  — _page à préciser_ [Notice : 2026-05 Notice Excelium Vie.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf)
-- _… et 3 autres (voir tracabilite.json)._
+À vérifier (4) — tableau non extrait et sans source d'abord :
+- **[cotisations]** tableaux — _⚠ tableau non extrait_ [Notice : 2026-05 Notice Excelium Vie.pdf, p.18, 5.1 Comment effectuer un versement ?](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=18)
+- **[cotisations]** réductions — _⚠ tableau non extrait_ [Notice : 2026-05 Notice Excelium Vie.pdf, p.18, 5.1 Comment effectuer un versement ?](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=18)
+- **[fiscalite]** mise_en_reduction — _⚠ tableau non extrait_ [Notice : 2026-05 Notice Excelium Vie.pdf, p.43, 7.1 Les règles du rachat](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=43)
+- **[fiscalite]** fiscalité — _⚠ tableau non extrait_ [Notice : 2026-05 Notice Excelium Vie.pdf, p.72, Annexe fiscale (au 1er janvier 2026)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=72)
 
 ## Ma Protection Accident (Garantie des accidents de la vie) — 77 % traçable
 
@@ -165,26 +140,16 @@ Répartition : 53 pleinement traçable · 16 source connue, page imprécise.
 - **[points-vigilance]** Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité na — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
 - _… et 2 autres (voir tracabilite.json)._
 
-## Ma Retraite (plan d'épargne retraite individuel — PER) — 61 % traçable
+## Ma Retraite (plan d'épargne retraite individuel — PER) — 72 % traçable
 
-Répartition : 28 pleinement traçable · 18 source connue, page imprécise.
+Répartition : 33 pleinement traçable · 8 note conseiller éditoriale · 2 source connue, page imprécise · 3 valeur dans un tableau non extrait.
 
-À vérifier (18) — tableau non extrait et sans source d'abord :
-- **[cotisations]** mode_calcul — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- **[cotisations]** exemples_chiffrés — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- **[cotisations]** frais — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- **[cotisations]** réductions — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- **[cotisations]** tableaux — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
+À vérifier (5) — tableau non extrait et sans source d'abord :
+- **[cotisations]** réductions — _⚠ tableau non extrait_ [Notice : 2026-05 Notice Ma Retraite.pdf, p.12, 6.1 Versements réguliers](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=12)
+- **[cotisations]** tableaux — _⚠ tableau non extrait_ [Notice : 2026-05 Notice Ma Retraite.pdf, p.12, 6.1 Versements réguliers](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=12)
+- **[fiscalite]** fiscalité — _⚠ tableau non extrait_ [Notice : 2026-05 Notice Ma Retraite.pdf, p.7, 3.5 Indications générales relatives au régime fiscal](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf#page=7)
 - **[fiscalite]** valeurs_de_rachat — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- **[fiscalite]** fiscalité — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
 - **[fiscalite]** conditions_de_rachat — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- **[fiscalite]** mise_en_reduction — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- **[fiscalite]** determination_part_taxable — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- **[points-vigilance]** Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si  — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- **[points-vigilance]** Compartiment 3 : sortie en rente UNIQUEMENT. — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- **[points-vigilance]** Plus de déductibilité fiscale des versements après 70 ans. — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- **[points-vigilance]** Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limit — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
-- _… et 4 autres (voir tracabilite.json)._
 
 ## Masterlife CREDIT — 78 % traçable
 

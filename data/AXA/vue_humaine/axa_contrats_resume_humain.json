@@ -3416,9 +3416,9 @@
      },
      "source": {
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -3455,9 +3455,9 @@
      },
      "source": {
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -3494,9 +3494,9 @@
      },
      "source": {
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -3534,9 +3534,9 @@
      },
      "source": {
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -3667,9 +3667,9 @@
      },
      "source": {
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -4222,9 +4222,9 @@
      },
      "source": {
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 27,
+      "section": "4.4 Rachat et réduction",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -4306,9 +4306,9 @@
      },
      "source": {
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 27,
+      "section": "4.4 Rachat et réduction",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -4347,9 +4347,9 @@
      },
      "source": {
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 27,
+      "section": "4.4 Rachat et réduction",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -4389,9 +4389,9 @@
      },
      "source": {
       "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 30,
+      "section": "4.10 Contrats non réclamés – Loi Eckert",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -4434,10 +4434,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -4484,10 +4482,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -4534,10 +4530,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -4590,10 +4584,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -4648,10 +4640,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -6112,10 +6102,10 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6151,10 +6141,10 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6245,10 +6235,10 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6314,10 +6304,10 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6353,10 +6343,10 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6708,10 +6698,10 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 27,
+      "section": "4.4 Rachat et réduction",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6789,10 +6779,10 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 27,
+      "section": "4.4 Rachat et réduction",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6829,10 +6819,10 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 27,
+      "section": "4.4 Rachat et réduction",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6979,10 +6969,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -7033,10 +7021,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -7082,10 +7068,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -7135,10 +7119,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -7193,10 +7175,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -7240,10 +7220,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -7290,10 +7268,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -15251,9 +15227,9 @@
      },
      "source": {
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 18,
+      "section": "5.1 Comment effectuer un versement ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15318,9 +15294,9 @@
      },
      "source": {
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 18,
+      "section": "5.1 Comment effectuer un versement ?",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15357,9 +15333,9 @@
      },
      "source": {
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 18,
+      "section": "5.1 Comment effectuer un versement ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15410,9 +15386,9 @@
      },
      "source": {
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 18,
+      "section": "5.1 Comment effectuer un versement ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15489,9 +15465,9 @@
      },
      "source": {
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 18,
+      "section": "5.1 Comment effectuer un versement ?",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15663,9 +15639,9 @@
      },
      "source": {
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 43,
+      "section": "7.1 Les règles du rachat",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15703,9 +15679,9 @@
      },
      "source": {
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 72,
+      "section": "Annexe fiscale (au 1er janvier 2026)",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15742,9 +15718,9 @@
      },
      "source": {
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 43,
+      "section": "7.1 Les règles du rachat",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15791,9 +15767,9 @@
      },
      "source": {
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 72,
+      "section": "Annexe fiscale (au 1er janvier 2026)",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15870,9 +15846,9 @@
      },
      "source": {
       "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 43,
+      "section": "7.1 Les règles du rachat",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -15952,10 +15928,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -16004,10 +15978,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -16056,10 +16028,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -16105,10 +16075,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -16157,10 +16125,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -16209,10 +16175,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -16256,10 +16220,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Excelium/2026-05 Notice Excelium Vie.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -17308,9 +17270,9 @@
      },
      "source": {
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 12,
+      "section": "6.1 Versements réguliers",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -17370,9 +17332,9 @@
      },
      "source": {
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 12,
+      "section": "6.1 Versements réguliers",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -17423,9 +17385,9 @@
      },
      "source": {
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 12,
+      "section": "6.1 Versements réguliers",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -17502,9 +17464,9 @@
      },
      "source": {
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 12,
+      "section": "6.1 Versements réguliers",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -17541,9 +17503,9 @@
      },
      "source": {
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 12,
+      "section": "6.1 Versements réguliers",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -17864,9 +17826,9 @@
      },
      "source": {
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 7,
+      "section": "3.5 Indications générales relatives au régime fiscal",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -17953,9 +17915,9 @@
      },
      "source": {
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 35,
+      "section": "9.3 Valeurs de réduction",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -17996,9 +17958,9 @@
      },
      "source": {
       "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 7,
+      "section": "3.5 Indications générales relatives au régime fiscal",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -18079,10 +18041,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -18136,10 +18096,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -18179,10 +18137,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -18223,10 +18179,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -18273,10 +18227,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -18317,10 +18269,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -18366,10 +18316,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -18417,10 +18365,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma retraite/2026-05 Notice Ma Retraite.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,

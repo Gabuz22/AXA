@@ -12,7 +12,7 @@
 **Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
 
 ## Contenu
-- **692 nœuds**, **2222 relations**. Types de nœuds : contrat, concept, garantie, exclusion, définition, condition, déclencheur, notice, article réglementaire.
+- **692 nœuds**, **2195 relations**. Types de nœuds : contrat, concept, garantie, exclusion, définition, condition, déclencheur, notice, article réglementaire.
 - Relations dérivées : `appartient_a` (élément→contrat), `concerne` (élément→concept), `source` (élément→notice), `reglementation_recommandee` (concept→autorité).
 - Aucune relation inventée ; tout est vérifiable dans les pages.
 
