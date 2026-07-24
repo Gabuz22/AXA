@@ -1,0 +1,12 @@
+# Configuration du Worker « axa » (modèle Workers + Static Assets, URL *.workers.dev).
+# Le Worker sert d'abord les fichiers statiques du dépôt (binding ASSETS) et n'exécute du code que
+# pour les routes non couvertes par un fichier — notamment /api/preselection.
+name = "axa"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+
+[assets]
+directory = "."
+binding = "ASSETS"
+# Un fichier statique qui matche l'URL est servi directement (le Worker n'est pas invoqué) ; sinon le
+# Worker prend la main. /api/preselection n'a aucun fichier correspondant -> il exécute le moteur.
