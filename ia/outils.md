@@ -21,6 +21,7 @@
 - **[Détecteur de couverture](couverture-recherche.html)** — présent / absent de la base / à vérifier en notice
 - **[Comparateur thématique](comparateur.html)** — un sujet, tous les contrats côte à côte, sourcé
 - **[Divergences inter-contrats](divergences.html)** — où les contrats diffèrent sur un chiffre (âge, délais) — signal à vérifier, jamais une contradiction
+- **[Matrice de pièges](pieges.html)** — le revers de chaque contrat : exclusions, déchéances, délais, plafonds — à croiser avec toute garantie
 - **[Audit de traçabilité](tracabilite.html)** — par contrat : quelle part est pleinement sourcée (notice + page), et la liste de ce qui est à vérifier
 - **[Graphe de preuves](preuves.html)** — chaque élément citable (id, source, page, concepts)
 - **[Méthode & assembleur](methode-question-complexe.html)** — 5 parcours + structure de réponse sécurisée

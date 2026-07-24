@@ -189,7 +189,7 @@ CATS_NAV = [("start", "START"), ("index", "Index"), ("instructions-maitres", "In
             ("qualite-routage", "Qualité routage"), ("hierarchie", "Hiérarchie"), ("choix-sources", "Choix sources"),
             ("methode-question-complexe", "Méthode"), ("contrats", "Contrats"), ("garanties", "Garanties"), ("exclusions", "Exclusions"),
             ("definitions", "Définitions"), ("conditions", "Conditions"), ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
-            ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"), ("divergences", "Divergences"), ("matrices", "Matrices"), ("graphe", "Graphe"),
+            ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"), ("divergences", "Divergences"), ("pieges", "Pièges"), ("matrices", "Matrices"), ("graphe", "Graphe"),
             ("notices", "Notices"), ("tracabilite", "Traçabilité"), ("sources", "Sources"), ("sources-officielles", "Sources officielles"), ("reglementation", "Réglementation"), ("surveillance", "Surveillance"),
             ("pack-a", "Pack A"), ("pack-b", "Pack B"), ("couverture", "Couverture"), ("maturite", "Maturité")]
 def nav_html(depth):
@@ -687,6 +687,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 
 ## Étape 3 — Où chercher quoi (la carte)
 - Garantie couverte ou pas → [routage](routage.html) · [garanties](garanties.html) · [exclusions](exclusions.html) · fiche du contrat via [contrats](contrats.html)
+- **Le REVERS d'une garantie** (ce qui l'exclut, la déchoit, la plafonne) → [pièges](pieges.html) — à croiser avant de présenter toute garantie
 - Comparer des contrats → [comparateur](comparateur.html) · [matrices](matrices.html) · les 2 fiches contrat
 - Vérifier où les contrats DIFFÈRENT (âge, délais) → [divergences](divergences.html)
 - Définition d'un terme → [glossaire](glossaire.html) · [définitions](definitions.html)
@@ -809,7 +810,7 @@ def build_static_pages(theme_counts):
     # Manifeste lisible + ai-manifest.json
     pages = ["start", "index", "instructions-maitres", "guide-ia", "niveaux-competence", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
              "planificateur", "concepts", "couverture-recherche",
-             "comparateur", "divergences", "tracabilite", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
+             "comparateur", "divergences", "pieges", "tracabilite", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
              "sources-officielles", "reglementation", "surveillance", "connaissances-dynamiques", "matrices",
              "graphe", "maturite", "pack-a", "pack-b", "contrats",
              "garanties", "exclusions", "options", "cotisations", "delais", "fiscalite", "points-vigilance",
@@ -860,6 +861,7 @@ def build_static_pages(theme_counts):
             "garantie_couverte_ou_pas": ["instructions-maitres", "routage", "garanties", "exclusions", "contrats"],
             "comparer_des_contrats": ["comparateur", "matrices", "contrats"],
             "verifier_les_ecarts_entre_contrats": ["divergences", "comparateur", "matrices"],
+            "les_pieges_et_exclusions_d_un_contrat": ["pieges", "exclusions", "points-vigilance"],
             "definition_d_un_terme": ["glossaire", "definitions"],
             "delais_franchises_plafonds": ["delais", "franchises", "plafonds"],
             "cotisations_et_fiscalite": ["cotisations", "fiscalite"],
@@ -1316,7 +1318,7 @@ def build_niveaux():
             {"id": "conseiller", "nom": "Niveau conseiller", "resume": "Complétude utile au client : garanties avec leurs exclusions et conditions, éligibilité, structure de cas client, action concrète.",
              "ajoute_sur": "socle", "pages": ["exclusions", "conditions", "franchises", "plafonds", "pertinence", "methode-question-complexe", "routage"]},
             {"id": "inspecteur", "nom": "Niveau inspecteur fonction support", "resume": "Rigueur de contrôle : cohérence inter-contrats, exhaustivité vérifiée, traçabilité auditée, frontière réglementaire tenue, escalade explicite.",
-             "ajoute_sur": "conseiller", "pages": ["divergences", "tracabilite", "comparateur", "matrices", "points-vigilance", "reglementation", "sources-officielles", "couverture"]},
+             "ajoute_sur": "conseiller", "pages": ["pieges", "divergences", "tracabilite", "comparateur", "matrices", "points-vigilance", "reglementation", "sources-officielles", "couverture"]},
         ],
         "grille_auto_evaluation": grille,
         "criteres_escalade": escalade,
@@ -1610,6 +1612,86 @@ def build_tracabilite():
     write("tracabilite.md", "\n".join(md))
     write("tracabilite.html", page_html("Audit de traçabilité", "".join(hb), depth, SITE + "/ia/tracabilite.html"))
 
+def build_pieges():
+    """Matrice de pièges par contrat. Là où le reste de la base répond « ce que couvre X », cette
+    page répond « ce qui l'ANNULE » : exclusions, déchéances, états antérieurs, délais/franchises,
+    plafonds, renvois au certificat. Objectif : une IA ne peut plus présenter une garantie sans son
+    revers. 100 % déterministe : chaque piège vient d'une exclusion ou d'un point de vigilance
+    RÉEL de la notice, cité, classé par type via mots-clés (aucune donnée inventée)."""
+    depth = 0
+    # Types de piège, du plus grave au moins grave. Motifs sur texte NORMALISÉ (sans accent).
+    TYPES = [
+        ("decheance",  "Déchéance — perte totale du droit", r"decheance|perte (de|des) garantie|nullite|fausse declar|sanction|prive de"),
+        ("exclusion",  "Exclusion — la garantie ne joue pas", r"\bexclu|non couvert|ne couvre pas|jamais couvert|sans objet|hors garantie|non pris en charge"),
+        ("anteriorite","État antérieur / absence d'aléa", r"anterieur|preexistant|\balea|en cours a la (signature|souscription|adhesion)|deja survenu|deja constate"),
+        ("delai",      "Délai, carence ou franchise", r"franchise|carence|delai d.attente|delai de declar|delai de|jours suivant"),
+        ("plafond",    "Plafond / montant limité", r"plafond|plafonn|limite a |montant maximum|maximum de"),
+        ("certificat", "Renvoyé au certificat / conditions particulières", r"au certificat|conditions particuli|aucun montant|ne figurent pas|ne contient aucun montant"),
+    ]
+    def type_de(txt):
+        t = norm(txt)
+        for tid, lbl, pat in TYPES:
+            if re.search(pat, t): return tid, lbl
+        return "vigilance", "Point de vigilance à contrôler"
+    ORDRE = {tid: i for i, (tid, _, _) in enumerate(TYPES)}
+    ORDRE["vigilance"] = len(TYPES)
+
+    data = {"meta": {"version": VERSION, "genere_le": DATE,
+                     "usage": "Le REVERS de chaque contrat : ce qui exclut, déchoit, plafonne ou diffère une garantie. "
+                              "À croiser avec toute garantie avant de la présenter à un client.",
+                     "regle": "Ne jamais présenter une garantie sans vérifier ici ses pièges transverses. La notice PDF fait foi."},
+            "contrats": []}
+    md = [md_hdr("Matrice de pièges par contrat",
+                 "Le revers de chaque contrat : exclusions, déchéances, états antérieurs, délais, plafonds, renvois au "
+                 "certificat. Une garantie ne se présente jamais sans son revers."), ""]
+    md += ["> **Comment s'en servir.** Avant de citer une garantie d'un contrat, ouvre son bloc ici : ces pièges "
+           "s'appliquent **transversalement**. Chacun vient d'une exclusion ou d'un point de vigilance réel, cité. "
+           "La déchéance et l'exclusion d'abord (elles annulent le droit), puis les délais, plafonds et renvois au certificat.", ""]
+    hb = ['<h1>Matrice de pièges par contrat</h1>',
+          '<p>Le <strong>revers</strong> de chaque contrat : ce qui exclut, déchoit, plafonne ou diffère une garantie. '
+          'Une garantie ne se présente jamais sans son revers. Chaque piège est sourcé ; la notice PDF fait foi.</p>']
+
+    for c in CONTRATS:
+        cs = slug(c["nom"])
+        items = []
+        for e in (c.get("exclusions_importantes") or []):
+            tid, lbl = type_de((e.get("titre") or "") + " " + (e.get("texte_source") or e.get("resume_humain") or ""))
+            if tid == "vigilance": tid, lbl = "exclusion", "Exclusion — la garantie ne joue pas"  # une exclusion reste une exclusion
+            items.append((tid, lbl, e))
+        for e in (c.get("points_de_vigilance") or []):
+            tid, lbl = type_de((e.get("titre") or "") + " " + (e.get("resume_humain") or ""))
+            items.append((tid, lbl, e))
+        items.sort(key=lambda x: ORDRE[x[0]])
+        cd = {"contrat": c["nom"], "slug": cs, "nb": len(items), "pieges": []}
+        md += ["", "## %s" % c["nom"], "", "_%d piège(s) transverse(s). Avant toute présentation d'une garantie de ce contrat, vérifie ce revers._" % len(items), ""]
+        hb.append('<h2 id="c-%s">%s</h2><p><em>%d piège(s) transverse(s) — à croiser avec toute garantie de ce contrat.</em></p>' % (cs, html.escape(c["nom"]), len(items)))
+        cur = None
+        hb.append("<ul>")
+        for tid, lbl, e in items:
+            if tid != cur:
+                cur = tid
+                md.append("**%s**" % lbl)
+                hb.append('</ul><p><strong>%s</strong></p><ul>' % html.escape(lbl))
+            titre = (e.get("titre") or e.get("resume_humain") or "").strip()
+            detail = (e.get("resume_humain") or "").strip()
+            impact = (e.get("impact_client") or "").strip()
+            src = e.get("source")
+            md.append("- %s%s%s" % (titre[:150], (" — %s" % impact) if impact and impact.lower() not in titre.lower() else "", cite_md(src, depth)))
+            hb.append("<li>%s%s%s</li>" % (html.escape(titre[:150]),
+                      (' — <em>%s</em>' % html.escape(impact)) if impact and impact.lower() not in titre.lower() else "",
+                      cite_html(src, depth)))
+            cd["pieges"].append({"type": tid, "type_label": lbl, "libelle": titre[:200], "detail": detail[:400],
+                                 "impact_client": impact, "notice": (src or {}).get("document_source"), "page": (src or {}).get("page")})
+        hb.append("</ul>")
+        data["contrats"].append(cd)
+
+    write("pieges.json", json.dumps(data, ensure_ascii=False, indent=1))
+    md += ["", "## Format machine", "- [pieges.json](pieges.json) — par contrat : chaque piège avec son type, son impact "
+           "client, sa notice et sa page. Une IA s'en sert pour ne jamais présenter une garantie sans son revers.", ""]
+    hb.append('<h2>Format machine</h2><p><a href="pieges.json">pieges.json</a> — par contrat : type, impact client, notice, page.</p>')
+    write("pieges.md", "\n".join(md))
+    write("pieges.html", page_html("Matrice de pièges", "".join(hb), depth, SITE + "/ia/pieges.html"))
+
 def build_outils():
     depth = 0
     items = [("niveaux-competence", "Niveaux de compétence", "escalier de rigueur conseiller → inspecteur + grille d'auto-évaluation (JSON)"),
@@ -1621,6 +1703,7 @@ def build_outils():
              ("couverture-recherche", "Détecteur de couverture", "présent / absent de la base / à vérifier en notice"),
              ("comparateur", "Comparateur thématique", "un sujet, tous les contrats côte à côte, sourcé"),
              ("divergences", "Divergences inter-contrats", "où les contrats diffèrent sur un chiffre (âge, délais) — signal à vérifier, jamais une contradiction"),
+             ("pieges", "Matrice de pièges", "le revers de chaque contrat : exclusions, déchéances, délais, plafonds — à croiser avec toute garantie"),
              ("tracabilite", "Audit de traçabilité", "par contrat : quelle part est pleinement sourcée (notice + page), et la liste de ce qui est à vérifier"),
              ("preuves", "Graphe de preuves", "chaque élément citable (id, source, page, concepts)"),
              ("methode-question-complexe", "Méthode & assembleur", "5 parcours + structure de réponse sécurisée"),
@@ -2353,6 +2436,7 @@ def build():
     build_methode()
     build_niveaux()                  # escalier de rigueur conseiller → inspecteur + grille machine
     build_divergences()              # détecteur d'écarts chiffrés inter-contrats (contrôle inspecteur)
+    build_pieges()                   # matrice de pièges par contrat (le revers de chaque garantie)
     build_tracabilite()              # audit de traçabilité par contrat (qualité de preuve, contrôle inspecteur)
     metrics = build_tests(concepts)  # tests-qualité + harness de précision
     # Infrastructure de raisonnement documentaire (Parties 2–10, 12)

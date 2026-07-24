@@ -29,6 +29,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 
 ## Étape 3 — Où chercher quoi (la carte)
 - Garantie couverte ou pas → [routage](routage.html) · [garanties](garanties.html) · [exclusions](exclusions.html) · fiche du contrat via [contrats](contrats.html)
+- **Le REVERS d'une garantie** (ce qui l'exclut, la déchoit, la plafonne) → [pièges](pieges.html) — à croiser avant de présenter toute garantie
 - Comparer des contrats → [comparateur](comparateur.html) · [matrices](matrices.html) · les 2 fiches contrat
 - Vérifier où les contrats DIFFÈRENT (âge, délais) → [divergences](divergences.html)
 - Définition d'un terme → [glossaire](glossaire.html) · [définitions](definitions.html)
