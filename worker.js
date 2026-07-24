@@ -7,14 +7,22 @@
 // Il RÉUTILISE la logique de functions/api/preselection.js (aucune duplication) : ce fichier existe
 // pour le modèle Cloudflare Pages ; celui-ci fait pareil pour le modèle Worker. Même moteur, mêmes
 // garde-fous (lecture seule, aucune donnée nominative).
-import { onRequestGet, onRequestPost } from "./functions/api/preselection.js";
+import * as preselection from "./functions/api/preselection.js";
+import * as diagnostic from "./functions/api/diagnostic.js";
+
+// Table de routage : chemin → module Function (mêmes handlers que le modèle Pages).
+const ROUTES = {
+  "/api/preselection": preselection,
+  "/api/diagnostic": diagnostic,
+};
 
 export default {
   async fetch(request, env) {
     const { pathname } = new URL(request.url);
-    if (pathname === "/api/preselection") {
-      if (request.method === "GET") return onRequestGet({ request, env });
-      if (request.method === "POST") return onRequestPost();
+    const mod = ROUTES[pathname];
+    if (mod) {
+      if (request.method === "GET") return mod.onRequestGet({ request, env });
+      if (request.method === "POST") return mod.onRequestPost();
       return new Response(JSON.stringify({ erreur: "Méthode non autorisée (GET uniquement)." }), {
         status: 405, headers: { "Content-Type": "application/json; charset=utf-8" },
       });
