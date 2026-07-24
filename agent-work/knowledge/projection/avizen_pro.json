@@ -1,0 +1,1156 @@
+{
+  "projection_version": "1.0.0",
+  "subject": "Avizen Pro",
+  "domain": "axa-contrat",
+  "synthese": {
+    "depth_score": 0.903,
+    "semantic_coverage": 0.385,
+    "profondeur": {
+      "L1": 26,
+      "L2": 31,
+      "L3": 33,
+      "L4": 21
+    },
+    "rates": {
+      "proof": 0.839,
+      "unrelated": 0.161,
+      "uncertainty": 0.226,
+      "contradiction": 0.0,
+      "n_entities": 31
+    }
+  },
+  "connaissances": {
+    "garantie": [
+      {
+        "label": "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)",
+        "resume": "IJ courtes complémentaires aux IJ des régimes obligatoires : cessent au 90e OU 365e jour d'arrêt (franchise incluse) selon la garantie souscrite au certificat. Mêmes règles de rechute, reconstruction mammaire sans nouvelle franchise. Non cumulable avec IJ ITT par accident.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 15,
+            "citation": "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Rente invalidité par accident (optionnelle)",
+        "resume": "Évaluée sur le seul taux d'invalidité fonctionnelle (tableau spécifique), seuil 11 %. Médecin conseil de l'assureur indépendant des décisions Sécurité sociale.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 23,
+            "citation": "Rente invalidité par accident (optionnelle)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Capital invalidité permanente partielle ou totale (optionnelle)",
+        "resume": "Capital = montant du certificat × taux d'indemnisation (croisé ou professionnel selon le choix). Taux fixé définitivement à la consolidation, sans révision ; versement met fin à la garantie. Distincte de l'extension IPT de la garantie décès.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 21,
+            "citation": "Capital invalidité permanente partielle ou totale (optionnelle)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Rente éducation décès / IPT + double effet",
+        "resume": "Comme Avizen : enfants fiscalement à charge (et nés < 300 jours après le décès), jusqu'à 26 ans ; viagère si allocation handicapé attribuée avant 21 ans et garantie souscrite avant les 16 ans de l'enfant ; paliers 100 % (0-11 ans), 125 % (12-17), 150 % (18-26) ; rente doublée en double effet.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 12,
+            "citation": "Rente éducation décès / IPT + double effet"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Capital décès par accident / IPT par accident",
+        "resume": "Décès directement lié à un accident, < 12 mois après ; IPT par accident < 24 mois après l'accident ; versement anticipé à la consolidation.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 11,
+            "citation": "Capital décès par accident / IPT par accident"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Indemnités Remboursement des frais professionnels (optionnelle)",
+        "resume": "En ITT (maladie ou accident), indemnités versées à l'adhérent : soit équivalent journalier des frais professionnels échus et payés déclarés au fisc, soit équivalent journalier des frais de remplacement de l'assuré — plafonné au plafond journalier garanti au 1er jour d'arrêt. Si cessation définitive d'activité : reliquat des frais engagés avant cessation pris en charge. Frais couverts (fixes et permanents, nets des ressources de remplacement) : salaires nets et avantages en nature des collaborateurs ; charges sociales sur salaires des collaborateurs ; ta…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 16,
+            "citation": "Indemnités Remboursement des frais professionnels (optionnelle)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "IJ ITT par accident (optionnelle)",
+        "resume": "Comme IJ toutes causes, limitées à l'accident ; plafond 1 095 jours. Non cumulable avec IJ toutes causes.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 15,
+            "citation": "IJ ITT par accident (optionnelle)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Capital invalidité par accident (optionnelle)",
+        "resume": "Capital × taux d'indemnisation fonctionnel ; taux définitif à la consolidation ; versement met fin à la garantie.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 24,
+            "citation": "Capital invalidité par accident (optionnelle)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "exclusion": [
+      {
+        "label": "Décès/IPT toutes causes",
+        "resume": "Suicide/tentative la 1re année (et 1 an sur le supplément en cas d'augmentation) ; guerre, insurrection, opérations de maintien de l'ordre/paix ; meurtre de l'assuré par le bénéficiaire.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 42,
+            "citation": "Décès/IPT toutes causes"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Exclusions communes — activités/sports à risque",
+        "resume": "Liste identique à Avizen (sports extrêmes, aériens, mécaniques, montagne > 3 500 m, équestres, nautiques, tauromachie… ; métiers à risque : armée-aviation, police, journalistes, pétrole/gaz, pompiers, plongée pro, mer ; déplacements pays sensibles ou > 60 jours), sauf acceptation au certificat. Baptêmes encadrés par professionnel diplômé d'État couverts sauf sports extrêmes.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 41,
+            "citation": "Exclusions communes — activités/sports à risque"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "ITT/Invalidité",
+        "resume": "Identiques à Avizen (faits volontaires, guerres/émeutes, antériorités non déclarées, drogues, alcoolisme chronique, alcoolémie, cures et maisons de repos pour l'ITT, chirurgie plastique, nucléaire, refus de traitements) + exclusion explicite de « toute affection ou maladie dont la première constatation médicale survient pendant le délai d'attente ainsi que ses conséquences ».",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 43,
+            "citation": "ITT/Invalidité"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Décès/IPT par accident",
+        "resume": "Guerres/insurrection/maintien de l'ordre ; participation active à émeutes, terrorisme, sabotage, crimes/délits intentionnels, rixes (sauf légitime défense/devoir professionnel) ; nucléaire (mention spécifique « sinistres résultant directement ou indirectement de la désintégration du noyau de l'atome ») ; accident antérieur à l'adhésion non déclaré ; drogues/médicaments hors prescription ; ALCOOLISME CHRONIQUE (présent ici contrairement à Avizen) ; alcoolémie ≥ taux légal du pays ; chirurgie plastique non consécutive à accident garanti, malformations con…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 42,
+            "citation": "Décès/IPT par accident"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "option": [
+      {
+        "label": "Cadre fiscal Madelin",
+        "resume": "Adhésion possible dans le cadre fiscal Madelin (TNS) : prestations alors imposables ; obligation de justifier chaque année (et à l'adhésion) être à jour des cotisations maladie et vieillesse obligatoires (attestations des caisses).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 4,
+            "citation": "Cadre fiscal Madelin"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Exonération cotisations invalidité",
+        "resume": "Dispense de cotisations si invalidité ≥ 66 % (appréciée selon le taux croisé, professionnel ou fonctionnel suivant la garantie rente détenue) tant qu'elle perdure.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 24,
+            "citation": "Exonération cotisations invalidité"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)",
+        "resume": "+20 % max du capital décès/IPT sans sélection médicale, dans les 3 mois de l'événement.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 9,
+            "citation": "Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Indexation PASS",
+        "resume": "Comme Avizen : réévaluation annuelle garanties+cotisations selon le PASS, sans examen médical, jusqu'à 70 ans ; refus définitif possible 1 mois avant la date anniversaire.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 8,
+            "citation": "Indexation PASS"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Exonération cotisations ITT",
+        "resume": "1/365e de la cotisation annuelle remboursé par jour d'arrêt total indemnisé ; garanties maintenues, pas d'augmentation possible.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 24,
+            "citation": "Exonération cotisations ITT"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Capital décès double garantie",
+        "resume": "Capital supplémentaire (égal au capital IPT versé) si décès ≥ 1 an après consolidation IPT, avant fin de l'année d'assurance des 85 ans.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 11,
+            "citation": "Capital décès double garantie"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Option taux invalidité professionnelle (barème spécifique)",
+        "resume": "Pour 28 professions éligibles (liste contractuelle p.21), fixation du taux d'invalidité (n) uniquement selon l'invalidité professionnelle, avec barème spécifique remis à l'adhésion (n retenu jamais inférieur au barème de la profession). Indemnisation : n/66 si n < 66 %, 100 % si n ≥ 66 %. Exemple contractuel : n = 50 % → 75,76 % de la rente.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 20,
+            "citation": "Option taux invalidité professionnelle (barème spécifique)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Option taux d'invalidité 15 % maladie",
+        "resume": "Abaisse le seuil d'intervention invalidité maladie de 33 % à 15 % (rente et capital). Acquise seulement si mentionnée au certificat.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 17,
+            "citation": "Option taux d'invalidité 15 % maladie"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "point_vigilance": [
+      {
+        "label": "Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.",
+        "resume": "Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
+        "resume": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
+        "confidence": 0.35,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 40,
+            "citation": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT."
+          }
+        ],
+        "validation_required": false,
+        "version": 2
+      },
+      {
+        "label": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+        "resume": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+        "confidence": 0.35,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 12,
+            "citation": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14)."
+          }
+        ],
+        "validation_required": false,
+        "version": 2
+      },
+      {
+        "label": "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — véri…",
+        "resume": "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — vérifier le choix au certificat.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Aucun montant garanti dans la notice — tout est au certificat d'adhésion.",
+        "resume": "Aucun montant garanti dans la notice — tout est au certificat d'adhésion.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.",
+        "resume": "Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
+        "resume": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
+        "confidence": 0.35,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 4,
+            "citation": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital."
+          }
+        ],
+        "validation_required": false,
+        "version": 2
+      }
+    ],
+    "formule": [
+      {
+        "label": "Prestation invalidité (croisé)",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 19,
+            "citation": "Prestation invalidité (croisé)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Prestation invalidité (option professionnelle)",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 20,
+            "citation": "Prestation invalidité (option professionnelle)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Exonération ITT",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+            "page": 24,
+            "citation": "Exonération ITT"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "contrat": [
+      {
+        "label": "Avizen Pro",
+        "resume": null,
+        "confidence": 0.55,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      }
+    ]
+  },
+  "relations": [],
+  "environnement": [
+    {
+      "clause": "Rente invalidité par accident (optionnelle)",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital invalidité permanente partielle ou totale (optionnelle)",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital invalidité permanente partielle ou totale (optionnelle)",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital invalidité permanente partielle ou totale (optionnelle)",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Rente éducation décès / IPT + double effet",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Rente éducation décès / IPT + double effet",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital décès par accident / IPT par accident",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital décès par accident / IPT par accident",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital invalidité par accident (optionnelle)",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès/IPT toutes causes",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès/IPT toutes causes",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès/IPT toutes causes",
+      "concept": "Bénéficiaire",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "ITT/Invalidité",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès/IPT par accident",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès/IPT par accident",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Cadre fiscal Madelin",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Exonération cotisations invalidité",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital décès double garantie",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Capital décès double garantie",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Option taux invalidité professionnelle (barème spécifique)",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Option taux invalidité professionnelle (barème spécifique)",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Option taux d'invalidité 15 % maladie",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — véri…",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Aucun montant garanti dans la notice — tout est au certificat d'adhésion.",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle complète les indemnités journalières versées par les régimes obligatoires. Elle s'applique en cas d'arrêt de travail, indépendamment de la cause de celui-ci.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Rente invalidité par accident (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle prévoit le versement d'une rente en cas d'invalidité résultant d'un accident. Le montant est évalué selon un taux d'invalidité fonctionnelle d'au moins 11 %, déterminé par le médecin conseil de l'assureur indépendamment de la Sécurité sociale.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Capital invalidité permanente partielle ou totale (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle consiste en un versement de capital calculé en multipliant le montant du certificat par un taux d'indemnisation professionnel ou croisé. Ce versement est effectué lors de la consolidation, met fin à la garantie et est fixé de manière définitive sans possibilité de révision.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Rente éducation décès / IPT + double effet",
+      "aspect": "role",
+      "explication": "Cette garantie prévoit le versement d'une rente aux enfants fiscalement à charge jusqu'à leurs 26 ans, ou de manière viagère en cas de handicap reconnu avant 21 ans si la garantie a été souscrite avant les 16 ans de l'enfant. Elle s'active en cas de décès ou d'invalidité permanente totale (IPT) de l'assuré, avec une option double effet.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Capital décès par accident / IPT par accident",
+      "aspect": "role",
+      "explication": "Cette garantie prévoit le versement d'un capital en cas de décès survenant dans les 12 mois suivant un accident ou en cas d'invalidité permanente totale (IPT) survenant dans les 24 mois. Le versement du capital IPT est effectué de manière anticipée lors de la consolidation de l'état de l'assuré.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Indemnités Remboursement des frais professionnels (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle permet de couvrir les frais professionnels en cas d'incapacité temporaire totale (maladie ou accident). L'indemnité versée correspond soit aux frais professionnels déclarés au fisc, soit aux frais de remplacement de l'adhérent.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "IJ ITT par accident (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle prévoit le versement d'indemnités journalières en cas d'incapacité temporaire totale consécutive à un accident. Elle est limitée à un plafond de 1 095 jours et ne peut pas être cumulée avec les indemnités journalières toutes causes.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Capital invalidité par accident (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle prévoit le versement d'un capital calculé selon le taux d'indemnisation fonctionnel déterminé à la consolidation. Le paiement de ce capital met fin à la garantie.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Décès/IPT toutes causes",
+      "aspect": "role",
+      "explication": "L'exclusion « Décès/IPT toutes causes » concerne le suicide ou sa tentative durant la première année du contrat, les actes de guerre, d'insurrection ou de maintien de la paix, ainsi que le meurtre de l'assuré par le bénéficiaire. Ces conditions limitent la couverture en cas de décès ou d'invalidité permanente totale.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Exclusions communes — activités/sports à risque",
+      "aspect": "role",
+      "explication": "Cette clause exclut la couverture pour la pratique de sports extrêmes, aériens, mécaniques, nautiques, équestres, de montagne au-delà de 3 500 mètres et la tauromachie. Elle s'applique également aux assurés exerçant des métiers à risque tels que les forces de l'ordre, les pompiers, les journalistes ou les secteurs pétrolier et gazier.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "ITT/Invalidité",
+      "aspect": "role",
+      "explication": "L'ITT/Invalidité est soumise à des exclusions spécifiques incluant les faits volontaires, les guerres, les émeutes, les antériorités non déclarées, l'usage de drogues, l'alcoolisme chronique, l'alcoolémie, ainsi que les cures, maisons de repos, la chirurgie plastique et le nucléaire.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Décès/IPT par accident",
+      "aspect": "role",
+      "explication": "L'exclusion pour « Décès/IPT par accident » s'applique aux événements liés aux guerres, insurrections, maintien de l'ordre, ainsi qu'à la participation active à des émeutes, actes de terrorisme, sabotages, crimes ou délits intentionnels et rixes. Sont également exclus les dommages liés au nucléaire, à l'exception des cas de légitime défense ou de devoir professionnel.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Cadre fiscal Madelin",
+      "aspect": "role",
+      "explication": "Le cadre fiscal Madelin est une option destinée aux travailleurs non salariés (TNS). Elle impose une obligation de justification annuelle du paiement des cotisations sociales obligatoires et rend les prestations versées imposables.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Exonération cotisations invalidité",
+      "aspect": "role",
+      "explication": "Cette option permet de suspendre le paiement des cotisations d'assurance en cas d'invalidité reconnue à un taux supérieur ou égal à 66 %. Cette dispense est maintenue tant que l'état d'invalidité perdure, selon les critères professionnels ou fonctionnels définis par la garantie.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)",
+      "aspect": "role",
+      "explication": "Cette option permet d'augmenter le capital décès ou IPT de 20 % maximum sans passer par une sélection médicale. Cette modification doit être effectuée dans un délai de 3 mois suivant un événement de vie tel qu'un mariage, un PACS, une naissance ou une adoption.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Indexation PASS",
+      "aspect": "role",
+      "explication": "L'indexation PASS permet une réévaluation annuelle automatique des garanties et des cotisations en fonction du Plafond Annuel de la Sécurité Sociale, sans nécessiter d'examen médical. Cette option est disponible jusqu'à l'âge de 70 ans, avec une possibilité de refus définitif formulable un mois avant la date anniversaire.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Exonération cotisations ITT",
+      "aspect": "role",
+      "explication": "Cette option permet le remboursement d'1/365e de la cotisation annuelle par jour d'arrêt total indemnisé. Elle garantit le maintien des couvertures sans possibilité d'augmentation des cotisations durant cette période.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Capital décès double garantie",
+      "aspect": "role",
+      "explication": "Cette option permet le versement d'un capital supplémentaire équivalent au montant de l'IPT déjà versé. Ce versement intervient en cas de décès survenant au moins un an après la consolidation de l'IPT et avant la fin de l'année d'assurance des 85 ans de l'assuré.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Option taux invalidité professionnelle (barème spécifique)",
+      "aspect": "role",
+      "explication": "Cette option permet de fixer le taux d'invalidité exclusivement selon l'invalidité professionnelle pour 28 professions éligibles. Le taux est déterminé à l'aide d'un barème spécifique fourni lors de l'adhésion.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Option taux d'invalidité 15 % maladie",
+      "aspect": "role",
+      "explication": "Cette option permet d'abaisser le seuil d'intervention pour l'invalidité maladie de 33 % à 15 % pour le versement de la rente et du capital. Elle n'est applicable que si elle est explicitement mentionnée sur le certificat d'assurance.",
+      "confidence": 0.9,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Avizen Pro",
+      "aspect": "finalite",
+      "explication": "Déclinaison professionnelle de la prévoyance : compléter les prestations des régimes obligatoires du travailleur indépendant ou du professionnel en cas d'arrêt de travail, d'invalidité ou de décès (IJ complémentaires aux régimes obligatoires, rentes d'invalidité, rente éducation avec double effet).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Avizen Pro",
+      "aspect": "logique_contractuelle",
+      "explication": "Les indemnités journalières sont pensées comme un COMPLÉMENT des régimes obligatoires du professionnel : la prestation s'ajoute au régime de base sans viser le remplacement intégral du revenu. La clause de double effet prolonge la protection des enfants si le second parent décède à son tour.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Avizen Pro",
+      "aspect": "confusions_frequentes",
+      "explication": "« Complémentaire aux régimes obligatoires » ne signifie pas « revenu garanti intégral ». Le double effet concerne la rente éducation, pas l'ensemble des garanties. Ne pas confondre avec Avizen (particulier) : mécanismes proches, public et assiettes différents.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Avizen Pro",
+      "aspect": "situations_favorables",
+      "explication": "Travailleur non salarié, profession libérale ou dirigeant dont les régimes obligatoires couvrent mal l'arrêt de travail.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Avizen Pro",
+      "aspect": "situations_defavorables",
+      "explication": "Salarié déjà couvert par un contrat collectif riche ; états antérieurs ; activités exclues.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    }
+  ],
+  "preuves": [
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 15,
+      "citation": "IJ toutes causes complémentaires aux régimes obligatoires (optionnelle)"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 23,
+      "citation": "Rente invalidité par accident (optionnelle)"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 21,
+      "citation": "Capital invalidité permanente partielle ou totale (optionnelle)"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 12,
+      "citation": "Rente éducation décès / IPT + double effet"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 11,
+      "citation": "Capital décès par accident / IPT par accident"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 16,
+      "citation": "Indemnités Remboursement des frais professionnels (optionnelle)"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 15,
+      "citation": "IJ ITT par accident (optionnelle)"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 24,
+      "citation": "Capital invalidité par accident (optionnelle)"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 42,
+      "citation": "Décès/IPT toutes causes"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 41,
+      "citation": "Exclusions communes — activités/sports à risque"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 43,
+      "citation": "ITT/Invalidité"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 42,
+      "citation": "Décès/IPT par accident"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 4,
+      "citation": "Cadre fiscal Madelin"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 24,
+      "citation": "Exonération cotisations invalidité"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 9,
+      "citation": "Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 8,
+      "citation": "Indexation PASS"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 24,
+      "citation": "Exonération cotisations ITT"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 11,
+      "citation": "Capital décès double garantie"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 20,
+      "citation": "Option taux invalidité professionnelle (barème spécifique)"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 17,
+      "citation": "Option taux d'invalidité 15 % maladie"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 19,
+      "citation": "Prestation invalidité (croisé)"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 20,
+      "citation": "Prestation invalidité (option professionnelle)"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 24,
+      "citation": "Exonération ITT"
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 40,
+      "citation": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT."
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 12,
+      "citation": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14)."
+    },
+    {
+      "document": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 4,
+      "citation": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital."
+    }
+  ],
+  "incertitudes": [
+    {
+      "label": "Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — véri…",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Aucun montant garanti dans la notice — tout est au certificat d'adhésion.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
+      "confidence": 0.35,
+      "ambiguities": []
+    }
+  ],
+  "fraicheur": {
+    "axe": 1.0
+  },
+  "axes_faibles": []
+}

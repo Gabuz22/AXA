@@ -1,0 +1,722 @@
+{
+  "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+  "domain": "axa-contrat",
+  "finalite": {
+    "texte": "Indemniser les préjudices corporels consécutifs aux accidents de la vie privée (activités courantes, accidents médicaux, infections nosocomiales, certains accidents de la route par dérogation) selon une logique INDEMNITAIRE de droit commun.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "À la différence de la prévoyance forfaitaire, la GAV répare le PRÉJUDICE réel (barème type AQV, postes de préjudices du droit commun) : l'indemnisation dépend des séquelles évaluées, pas d'un capital fixé à l'avance. Elle intervient là où il n'y a pas de tiers responsable identifiable ou solvable.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Famille exposée aux accidents domestiques/loisirs, complément indemnitaire d'une prévoyance forfaitaire, accidents médicaux.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Attente de couverture maladie ; préjudices légers sous les seuils d'intervention ; faits intentionnels.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [
+    {
+      "type": "refines",
+      "de": "Indemnisation des préjudices corporels (barème AQV)",
+      "vers": "Préjudices indemnisés selon droit commun",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Faits intentionnels, suicide",
+      "vers": "En cas de décès",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Alcool, médicaments, stupéfiants",
+      "vers": "Accidents lors de la conduite d'un véhicule (dérogations)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Accidents du travail et activités électives/syndicales",
+      "vers": "Accidents corporels d'activités courantes",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Délit intentionnel ou crime",
+      "vers": "En cas de décès",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Alcool, médicaments, stupéfiants",
+      "vers": "En cas de décès",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Affections même consécutives à un accident garanti",
+      "vers": "Indemnisation des préjudices corporels (barème AQV)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Affections même consécutives à un accident garanti",
+      "vers": "Indemnisation des préjudices corporels (barème AQV)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    }
+  ],
+  "architecture_garanties": {
+    "principales": [],
+    "secondaires": [
+      "Accidents lors de la conduite d'un véhicule (dérogations)",
+      "Accidents médicaux et infections nosocomiales",
+      "Préjudices indemnisés selon droit commun",
+      "Indemnisation des préjudices corporels (barème AQV)",
+      "En cas de décès",
+      "Accidents corporels d'activités courantes",
+      "Accidents corporels lors d'événements exceptionnels"
+    ],
+    "total": 7
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "Faits intentionnels, suicide",
+    "Affections même consécutives à un accident garanti",
+    "Délit intentionnel ou crime",
+    "Accidents du travail et activités électives/syndicales",
+    "Alcool, médicaments, stupéfiants",
+    "Sports professionnels, rémunérés, à risques, extrêmes",
+    "Non-respect de réglementation (véhicules motorisés)",
+    "Expérimentations biomédicales"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Mes Sports à risque"
+  ],
+  "points_vigilance": [
+    "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
+    "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+    "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
+    "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (ar…",
+    "Subrogation de l'assureur contre le tiers responsable (6.7)."
+  ],
+  "concepts_structurants": [
+    "Décès",
+    "Décès accidentel",
+    "Hospitalisation"
+  ],
+  "environnement": [
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 5,
+      "citation": "Accidents lors de la conduite d'un véhicule (dérogations)"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "citation": "Accidents médicaux et infections nosocomiales"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 9,
+      "citation": "Préjudices indemnisés selon droit commun"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 7,
+      "citation": "Indemnisation des préjudices corporels (barème AQV)"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 9,
+      "citation": "En cas de décès"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "citation": "Accidents corporels d'activités courantes"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 4,
+      "citation": "Accidents corporels lors d'événements exceptionnels"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Faits intentionnels, suicide"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Affections même consécutives à un accident garanti"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Délit intentionnel ou crime"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Accidents du travail et activités électives/syndicales"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Alcool, médicaments, stupéfiants"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Sports professionnels, rémunérés, à risques, extrêmes"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Non-respect de réglementation (véhicules motorisés)"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 6,
+      "citation": "Expérimentations biomédicales"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 5,
+      "citation": "Mes Sports à risque"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 8,
+      "citation": "Indice AQV"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 19,
+      "citation": "Renonciation vente à distance — cotisation due"
+    },
+    {
+      "document": "2026-05 Notice Ma Retraite.pdf",
+      "page": 13,
+      "citation": "Les versements réguliers, ainsi que les arbitrages en gestion Activ’Retraite Croissance, seront arrêtés dès traitement de l’acte de décès"
+    },
+    {
+      "document": "2026-05 Notice Ma Retraite.pdf",
+      "page": 5,
+      "citation": "prévoir, en cas de décès de l’assuré avant la liquidation totale de l’adhésion, le versement d’un capital, d’une rente viagère, ou temporaire, ou d’éducation"
+    },
+    {
+      "document": "2026-05 Notice Ma Retraite.pdf",
+      "page": 14,
+      "citation": "Ma Retraite vous permet de combiner plusieurs types de versements"
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 8,
+      "citation": "Assistance après accident et handicap : France métropolitaine uniquement (p.10)."
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 14,
+      "citation": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16)."
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 14,
+      "citation": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2)."
+    },
+    {
+      "document": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+      "page": 20,
+      "citation": "Subrogation de l'assureur contre le tiers responsable (6.7)."
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "finalite",
+      "explication": "Indemniser les préjudices corporels consécutifs aux accidents de la vie privée (activités courantes, accidents médicaux, infections nosocomiales, certains accidents de la route par dérogation) selon une logique INDEMNITAIRE de droit commun.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "logique_contractuelle",
+      "explication": "À la différence de la prévoyance forfaitaire, la GAV répare le PRÉJUDICE réel (barème type AQV, postes de préjudices du droit commun) : l'indemnisation dépend des séquelles évaluées, pas d'un capital fixé à l'avance. Elle intervient là où il n'y a pas de tiers responsable identifiable ou solvable.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "confusions_frequentes",
+      "explication": "La GAV ne couvre PAS la maladie (les affections, même consécutives à un accident garanti, sont exclues). Elle est indemnitaire (préjudice évalué) là où Avizen est forfaitaire (montants souscrits) : les deux logiques se complètent et peuvent se cumuler dans les limites contractuelles. Les accidents de la circulation ne sont couverts que par dérogations précises.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "situations_favorables",
+      "explication": "Famille exposée aux accidents domestiques/loisirs, complément indemnitaire d'une prévoyance forfaitaire, accidents médicaux.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "aspect": "situations_defavorables",
+      "explication": "Attente de couverture maladie ; préjudices légers sous les seuils d'intervention ; faits intentionnels.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "La GAV ne couvre PAS la maladie (les affections, même consécutives à un accident garanti, sont exclues). Elle est indemnitaire (préjudice évalué) là où Avizen est forfaitaire (montants souscrits) : les deux logiques se complètent et peuvent se cumuler dans les limites contractuelles. Les accidents de la circulation ne sont couverts que par dérogations précises.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.037,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    },
+    {
+      "axis": "relations",
+      "current": 0.444,
+      "why": "entités isolées (peu ou pas de relations)",
+      "recommended_task": "relier"
+    }
+  ],
+  "profondeur": 0.696,
+  "couverture_semantique": 0.385,
+  "validation": {
+    "blocks": {
+      "validated_knowledge": [
+        {
+          "label": "Accidents lors de la conduite d'un véhicule (dérogations)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Accidents médicaux et infections nosocomiales",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Préjudices indemnisés selon droit commun",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Indemnisation des préjudices corporels (barème AQV)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "En cas de décès",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Accidents corporels d'activités courantes",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Accidents corporels lors d'événements exceptionnels",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Faits intentionnels, suicide",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Affections même consécutives à un accident garanti",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Délit intentionnel ou crime",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Accidents du travail et activités électives/syndicales",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Alcool, médicaments, stupéfiants",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Sports professionnels, rémunérés, à risques, extrêmes",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Non-respect de réglementation (véhicules motorisés)",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Expérimentations biomédicales",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Mes Sports à risque",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (ar…",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Subrogation de l'assureur contre le tiers responsable (6.7).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Indice AQV",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        },
+        {
+          "label": "Renonciation vente à distance — cotisation due",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        }
+      ],
+      "derived_relations": [
+        {
+          "type": "governed_by",
+          "src": "k_a5ef093f6bca86c42c0e",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_a5ef093f6bca86c42c0e",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_4884b4ec6db598cf3f76",
+          "dst": "k_3b78b0e1920767575f57",
+          "statut": "derived_deterministic"
+        }
+      ],
+      "pending_interpretations": [
+        {
+          "label": "Aucune information sur les franchises liées au décès n'est présente dans le document.",
+          "subtype": "franchises",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Absence de mention de franchises pour les garanties invalidité, décès, décès-accidentel, accident, hospitalisation ou in",
+          "subtype": "franchises",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Aucune information sur les franchises liées à l'hospitalisation n'est présente dans le document.",
+          "subtype": "franchises",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "type": "refines",
+          "src": "k_0d1b917fdb6648330d84",
+          "dst": "k_7f3d41b9ae8897496840",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_cdc2c29be8c3b633eb84",
+          "dst": "k_a5ef093f6bca86c42c0e",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_eca34eb36d004af53e14",
+          "dst": "k_6ac498d01bf0ca11d6e9",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_513d2e42c2654884c72a",
+          "dst": "k_a023b362b0a8fcbc46da",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_3d99d376c76814ab1b22",
+          "dst": "k_a5ef093f6bca86c42c0e",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_eca34eb36d004af53e14",
+          "dst": "k_a5ef093f6bca86c42c0e",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_3c6901cc098f9d5386de",
+          "dst": "k_0d1b917fdb6648330d84",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_3c6901cc098f9d5386de",
+          "dst": "k_0d1b917fdb6648330d84",
+          "statut": "pending_review"
+        }
+      ],
+      "simulated_claude": [
+        {
+          "label": "Ma Protection Accident (Garantie des accidents de la vie)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "complements",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_87e655fa31a3bd0c6020",
+          "statut": "simulated_claude"
+        }
+      ],
+      "uncertainties": [],
+      "human_review_required": [
+        {
+          "label": "Aucune information sur les franchises liées au décès n'est présente dans le document.",
+          "subtype": "franchises",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Absence de mention de franchises pour les garanties invalidité, décès, décès-accidentel, accident, hospitalisation ou in",
+          "subtype": "franchises",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Aucune information sur les franchises liées à l'hospitalisation n'est présente dans le document.",
+          "subtype": "franchises",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "type": "refines",
+          "src": "k_0d1b917fdb6648330d84",
+          "dst": "k_7f3d41b9ae8897496840",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_cdc2c29be8c3b633eb84",
+          "dst": "k_a5ef093f6bca86c42c0e",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_eca34eb36d004af53e14",
+          "dst": "k_6ac498d01bf0ca11d6e9",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_513d2e42c2654884c72a",
+          "dst": "k_a023b362b0a8fcbc46da",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_3d99d376c76814ab1b22",
+          "dst": "k_a5ef093f6bca86c42c0e",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_eca34eb36d004af53e14",
+          "dst": "k_a5ef093f6bca86c42c0e",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_3c6901cc098f9d5386de",
+          "dst": "k_0d1b917fdb6648330d84",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_3c6901cc098f9d5386de",
+          "dst": "k_0d1b917fdb6648330d84",
+          "statut": "pending_review"
+        },
+        {
+          "label": "Ma Protection Accident (Garantie des accidents de la vie)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "complements",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_87e655fa31a3bd0c6020",
+          "statut": "simulated_claude"
+        }
+      ],
+      "stale": [],
+      "contradictory": []
+    },
+    "counts": {
+      "validated": 23,
+      "pending_review": 11,
+      "simulated_claude": 2,
+      "derived_deterministic": 3
+    },
+    "legend": {
+      "exposable_as_truth": [
+        "derived_deterministic",
+        "validated"
+      ],
+      "visible_if_labeled_only": [
+        "contradictory",
+        "pending_review",
+        "simulated_claude",
+        "stale",
+        "uncertain"
+      ],
+      "never_exposed": [
+        "rejected"
+      ]
+    }
+  },
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Blocs de validation SÉPARÉS : 'validated_knowledge' (masters validés) exposable comme vérité ; 'pending_interpretations'/'simulated_claude'/'stale'/'contradictory' visibles UNIQUEMENT étiquetés, jamais comme clause/règle certaine. Vérifier les preuves."
+}

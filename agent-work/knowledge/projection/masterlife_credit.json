@@ -1,0 +1,971 @@
+{
+  "projection_version": "1.0.0",
+  "subject": "Masterlife CREDIT",
+  "domain": "axa-contrat",
+  "synthese": {
+    "depth_score": 0.75,
+    "semantic_coverage": 0.385,
+    "profondeur": {
+      "L1": 22,
+      "L2": 28,
+      "L3": 36,
+      "L4": 1
+    },
+    "rates": {
+      "proof": 0.786,
+      "unrelated": 0.286,
+      "uncertainty": 0.25,
+      "contradiction": 0.0,
+      "n_entities": 28
+    }
+  },
+  "connaissances": {
+    "garantie": [
+      {
+        "label": "Incapacité de travail (IJ)",
+        "resume": "IJ aux bénéficiaires × quotité assurée, plafonnées à 1/30e de la mensualité (1/90e trimestrialité, 1/180e semestrialité, 1/365e annuité ; prêt in fine : 1/365e des intérêts annuels — capital final toujours exclu). Cessent : fin d'incapacité ou consolidation, 1 095e jour (franchise incluse), 70 ans, fin/remboursement du prêt, liquidation retraite (y compris inaptitude L351-7). Mi-temps thérapeutique : 50 % maintenus 90 jours max. Rechute ≤ 90 jours (même affection) : reprise immédiate sans franchise ; > 90 jours : nouvelle franchise, et si même affection…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 13,
+            "citation": "Incapacité de travail (IJ)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Invalidité totale ou partielle",
+        "resume": "IJ trimestrielles × quotité, pour chaque jour d'invalidité : taux (n) ≥ 66 % → 100 % des IJ plafond (1/30e mensualité…) ; 33 % ≤ n < 66 % → IJ × taux d'indemnisation(n) ; n < 33 % → rien. Taux croisé fonctionnel × professionnel (tableau) pour les actifs ; fonctionnel seul pour chômeurs/inactifs. Taux révisable. Non cumulable avec l'incapacité. Si n ≥ 66 % et prêt amortissable à échéances constantes : ADIS peut verser le capital restant dû (met fin à l'adhésion).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 14,
+            "citation": "Invalidité totale ou partielle"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Exonération du paiement des cotisations",
+        "resume": "Incapacité : remboursement de 1/365e de la cotisation annuelle par journée d'incapacité, après déduction d'une FRANCHISE DE 90 JOURS, remboursement en fin de période. Aide à la famille : remboursement 1/365e par jour indemnisé (plafond global 4 000 €/mois). Invalidité totale ou GIS : exonération des cotisations à échoir jusqu'à 70 ans max, garanties intégralement maintenues sans modification possible.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 16,
+            "citation": "Exonération du paiement des cotisations"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Invalidité spécifique AERAS (GIS)",
+        "resume": "Proposée par l'assureur (pas une option à la demande) si incapacité et invalidité refusées pour raisons médicales. IJ trimestrielles × quotité si incapacité professionnelle TOTALE (titre de pension 2e/3e catégorie SS, congé longue maladie fonctionnaires, ou notification d'inaptitude totale non-salariés) ET incapacité fonctionnelle ≥ 70 % (barème du Code des pensions civiles). Cessent sous 70 %. Faculté de verser le capital restant dû (fin d'adhésion). Prestations en cours maintenues même si la convention ANPERE/AXA est résiliée.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 16,
+            "citation": "Invalidité spécifique AERAS (GIS)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "PTIA",
+        "resume": "Capital restant dû à la date de consolidation de la PTIA × quotité assurée, si consolidation avant le 70e anniversaire. Le versement met fin à l'adhésion.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 12,
+            "citation": "PTIA"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Garantie Aide à la famille",
+        "resume": "IJ = 50 % des IJ incapacité, si garantie incapacité souscrite, enfant à charge < 20 ans gravement malade/handicapé/accidenté, AJPP perçue, cessation ponctuelle d'activité, et prêt immobilier ou professionnel. Versées dès le 1er jour d'AJPP. Max 14 mois par enfant et pathologie, renouvelable une fois. Plafond GLOBAL avec l'exonération : 4 000 €/mois/assuré.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 14,
+            "citation": "Garantie Aide à la famille"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Décès",
+        "resume": "Capital égal au montant restant dû au jour du décès (quelle qu'en soit la cause), à concurrence de la quotité assurée, versé aux bénéficiaires. Échéances impayées antérieures au décès exclues. Co-emprunteurs décédés simultanément : versement total plafonné au restant dû du prêt. Règlement sous 10 jours après pièces (avec accord de prise en charge ADIS).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 12,
+            "citation": "Décès"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "exclusion": [
+      {
+        "label": "États antérieurs",
+        "resume": "Accidents antérieurs à la prise d'effet, maladies à premières manifestations antérieures, malformations congénitales connues : exclus des garanties incapacité/invalidité/GIS. EXCEPTIONS : droit à l'oubli ; assurés dispensés d'acceptation médicale (Lemoine) ; antériorités déclarées et non exclues aux conditions particulières.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 21,
+            "citation": "États antérieurs"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)",
+        "resume": "Exclusion de principe de l'incapacité/invalidité consécutive aux troubles psychologiques (liste large incl. burn/bore/brown out, dépression post-partum), asthénie/fibromyalgie, et affections disco-vertébrales (hernie discale, discopathie, lombalgie, sciatique…, sauf fracture sans pathologie osseuse). RACHATS sans option : psy et asthénie/fibromyalgie indemnisées si hospitalisation continue ≥ 30 jours en établissement spécialisé (hors cure de repos), franchise 90 jours dès le 1er jour d'hospitalisation ; disco-vertébrales si hospitalisation continue ≥ 15…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 21,
+            "citation": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "PTIA/incapacité/invalidité — exclusions",
+        "resume": "Faits volontaires, tentative de suicide, mutilations volontaires ; stupéfiants/tranquillisants hors prescription ; refus volontaire de soins ; désintégration du noyau atomique ; sportifs professionnels et amateurs de haut niveau (sauf acceptation) ; arrêts liés au traitement de la stérilité (incapacité).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 20,
+            "citation": "PTIA/incapacité/invalidité — exclusions"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Sports et activités exclus (sauf acceptation)",
+        "resume": "Sports à moteur hors voie ouverte au public ; plongée > 20 m sans bouteille / > 40 m avec ; navigation > 40 milles ; alpinisme et randonnée > 4 000 m, escalade (hors salle) ; speed riding, ski artistique/acrobatique/héliporté, paraski, char à glace, kilomètre lancé, combiné nordique ; spéléologie, canyoning, rafting, kitesurf ; sports de combat (hors escrime) ; longue liste équestre ; saut à l'élastique, base jump, wingsuit ; sports aériens motorisés et non motorisés ; ULM, parapente, deltaplane, parachutisme ; tout sport non représenté par une fédérati…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 20,
+            "citation": "Sports et activités exclus (sauf acceptation)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Décès — guerre/émeutes/crimes",
+        "resume": "Guerres civiles/étrangères, insurrection, opérations de maintien de l'ordre/paix (ONU…) ; participation active à émeutes, terrorisme, sabotage, crimes ou délits intentionnels, rixes (sauf légitime défense/devoir professionnel).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 20,
+            "citation": "Décès — guerre/émeutes/crimes"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Décès — suicide",
+        "resume": "Suicide exclu la 1re année d'adhésion (et 1 an sur le supplément en cas d'augmentation). EXCEPTION : prêts immobiliers finançant l'acquisition du logement principal → suicide couvert dès la date d'effet dans la limite de l'art. R132-5 (120 000 € au 15/08/2024).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 20,
+            "citation": "Décès — suicide"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Cures et esthétique",
+        "resume": "Cures thermales/marines/rajeunissement/amaigrissement/désintoxication et maisons de repos : exclues de l'incapacité (et leurs conséquences). Traitements esthétiques, chirurgie esthétique, malformations constitutionnelles : exclus incapacité/invalidité/PTIA (et conséquences).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 22,
+            "citation": "Cures et esthétique"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "option": [
+      {
+        "label": "Option Psy/Dos+",
+        "resume": "Prise en charge des affections psychologiques/asthénie/fibromyalgie SANS condition d'hospitalisation (franchise 90 jours ou franchise du contrat si supérieure ; si franchise souscrite < 90 jours et hospitalisation continue en établissement spécialisé > franchise : franchise du contrat dès le 1er jour d'hospitalisation, prise en charge au plus tard 90 jours après le début de l'arrêt) et des affections disco-vertébrales SANS condition d'hospitalisation (franchise 30 jours ou supérieure du contrat). Vaut pour l'incapacité ET l'invalidité.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 13,
+            "citation": "Option Psy/Dos+"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Tarif constant",
+        "resume": "Cotisation annuelle fixe jusqu'au terme ; assiette = montant emprunté × quotité. NON proposée en cas de dispense Lemoine de questionnaire médical. Choix irrévocable.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 11,
+            "citation": "Tarif constant"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Tarif capital restant dû",
+        "resume": "Cotisation fluctuant selon le capital restant dû et l'âge ; assiette = capital restant dû × quotité. Choix irrévocable.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 11,
+            "citation": "Tarif capital restant dû"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "point_vigilance": [
+      {
+        "label": "Pas de valeur de rachat ni de réduction.",
+        "resume": "Pas de valeur de rachat ni de réduction.",
+        "confidence": 0.35,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 21,
+            "citation": "Pas de valeur de rachat ni de réduction."
+          }
+        ],
+        "validation_required": false,
+        "version": 2
+      },
+      {
+        "label": "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+        "resume": "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
+        "resume": "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
+        "resume": "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
+        "resume": "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).",
+        "resume": "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).",
+        "confidence": 0.35,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 27,
+            "citation": "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici)."
+          }
+        ],
+        "validation_required": false,
+        "version": 2
+      },
+      {
+        "label": "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.",
+        "resume": "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "formule": [
+      {
+        "label": "IJ incapacité (plafond)",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 12,
+            "citation": "IJ incapacité (plafond)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "IJ invalidité partielle",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 15,
+            "citation": "IJ invalidité partielle"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Exonération incapacité",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+            "page": 16,
+            "citation": "Exonération incapacité"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "contrat": [
+      {
+        "label": "Masterlife CREDIT",
+        "resume": null,
+        "confidence": 0.55,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      }
+    ]
+  },
+  "relations": [
+    {
+      "type": "complements",
+      "de": "Option Psy/Dos+",
+      "vers": "Incapacité de travail (IJ)",
+      "directed": true,
+      "confidence": 0.55,
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)",
+      "vers": "Incapacité de travail (IJ)",
+      "directed": true,
+      "confidence": 0.55,
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "États antérieurs",
+      "vers": "Invalidité totale ou partielle",
+      "directed": true,
+      "confidence": 0.55,
+      "validation_required": true
+    }
+  ],
+  "environnement": [
+    {
+      "clause": "Incapacité de travail (IJ)",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Invalidité totale ou partielle",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Exonération du paiement des cotisations",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Exonération du paiement des cotisations",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Invalidité spécifique AERAS (GIS)",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Invalidité spécifique AERAS (GIS)",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "PTIA",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Garantie Aide à la famille",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "États antérieurs",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "États antérieurs",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "PTIA/incapacité/invalidité — exclusions",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "PTIA/incapacité/invalidité — exclusions",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès — guerre/émeutes/crimes",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès — guerre/émeutes/crimes",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès — suicide",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès — suicide",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Décès — suicide",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Cures et esthétique",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Cures et esthétique",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Option Psy/Dos+",
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Pas de valeur de rachat ni de réduction.",
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.",
+      "concept": "Hospitalisation",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "finalite",
+      "explication": "Assurance emprunteur : garantir le remboursement d'un crédit en cas de décès, PTIA, invalidité ou incapacité de travail de l'assuré — protéger simultanément le prêteur (remboursement) et la famille (dette éteinte ou échéances prises en charge).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "logique_contractuelle",
+      "explication": "Les prestations sont adossées au CRÉDIT (capital restant dû ou échéances) à hauteur de la quotité assurée : elles éteignent la dette, elles ne versent pas un revenu. Le dispositif AERAS (garantie invalidité spécifique GIS) ouvre l'accès aux profils médicaux aggravés. Les exclusions santé sensibles (affections psychologiques, dorso-vertébrales) peuvent être RACHETÉES par l'option Psy/Dos+.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "confusions_frequentes",
+      "explication": "L'assurance emprunteur ne remplace pas la prévoyance : elle paie la banque, pas la famille. La quotité choisie détermine la part de dette couverte par assuré. Sans l'option Psy/Dos+, les arrêts pour affections psychologiques ou dorsales peuvent n'être pas couverts — point de vigilance majeur en pratique.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "situations_favorables",
+      "explication": "Tout emprunteur ; co-emprunteurs devant arbitrer les quotités ; profils AERAS.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "situations_defavorables",
+      "explication": "Attente d'un revenu complémentaire pour la famille (voir prévoyance) ; états antérieurs non couverts ; arrêts psy/dos sans l'option dédiée.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Masterlife CREDIT",
+      "aspect": "relation_complements_avizen",
+      "explication": "L'emprunteur éteint la dette envers la banque ; la prévoyance procure un revenu/capital à la famille : deux besoins distincts en cas de décès/invalidité.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    }
+  ],
+  "preuves": [
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 13,
+      "citation": "Incapacité de travail (IJ)"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 14,
+      "citation": "Invalidité totale ou partielle"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 16,
+      "citation": "Exonération du paiement des cotisations"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 16,
+      "citation": "Invalidité spécifique AERAS (GIS)"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 12,
+      "citation": "PTIA"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 14,
+      "citation": "Garantie Aide à la famille"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 12,
+      "citation": "Décès"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 21,
+      "citation": "États antérieurs"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 21,
+      "citation": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "citation": "PTIA/incapacité/invalidité — exclusions"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "citation": "Sports et activités exclus (sauf acceptation)"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "citation": "Décès — guerre/émeutes/crimes"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 20,
+      "citation": "Décès — suicide"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 22,
+      "citation": "Cures et esthétique"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 13,
+      "citation": "Option Psy/Dos+"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 11,
+      "citation": "Tarif constant"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 11,
+      "citation": "Tarif capital restant dû"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 12,
+      "citation": "IJ incapacité (plafond)"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 15,
+      "citation": "IJ invalidité partielle"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 16,
+      "citation": "Exonération incapacité"
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 21,
+      "citation": "Pas de valeur de rachat ni de réduction."
+    },
+    {
+      "document": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+      "page": 27,
+      "citation": "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici)."
+    }
+  ],
+  "incertitudes": [
+    {
+      "label": "Pas de valeur de rachat ni de réduction.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.",
+      "confidence": 0.35,
+      "ambiguities": []
+    }
+  ],
+  "fraicheur": {
+    "axe": 1.0
+  },
+  "axes_faibles": [
+    "understanding"
+  ]
+}

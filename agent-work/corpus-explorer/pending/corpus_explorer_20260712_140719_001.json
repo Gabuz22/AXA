@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260712_140719_001",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260712_140714",
+  "created_at": "2026-07-12T14:07:19Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-04 Notice d'information Avizen.pdf",
+    "pages": "10-18",
+    "excerpt": "Contrat « Avizen » — zone garanties (pages 10-18) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Ces indemnités seront uniquement versées, Capital \nInvalidité Permanente Totale, Capital Invalidité Permanente \nTotale, Capital Invalidité Permanente Totale, Rente Inva"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Avizen",
+      "doc_id": "axa_pdf_01",
+      "zone": "axa_pdf_01#garanties:10-18",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Ces indemnités seront uniquement versées",
+        "Capital \nInvalidité Permanente Totale",
+        "Capital Invalidité Permanente \nTotale",
+        "Capital Invalidité Permanente Totale",
+        "Rente Invalidité \nPermanente Totale",
+        "Rente Invalidité Permanente Totale",
+        "Évolution du montant de la rente",
+        "Invalidité \nPermanente \nTotale"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Avizen » — zone garanties (pages 10-18) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Ces indemnités seront uniquement versées, Capital \nInvalidité Permanente Totale, Capital Invalidité Permanente \nTotale, Capital Invalidité Permanente Totale, Rente Invalidité \nPermanente Totale, Rente Invalidité Permanente Totale, Évolution du montant de la rente, Invalidité \nPermanente \nTotale. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

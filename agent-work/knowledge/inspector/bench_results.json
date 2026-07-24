@@ -1,0 +1,94 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-07-24T08:45:45Z",
+  "domain": "axa-contrat",
+  "n_tests": 6,
+  "score_global": 0.967,
+  "score_par_famille": {
+    "mono": 1.0,
+    "multi": 1.0,
+    "cas_mono": 0.933,
+    "cas_multi": 1.0
+  },
+  "cards": [
+    {
+      "test": "mono_1",
+      "kind": "mono",
+      "checks": {
+        "aucune_invention": true
+      },
+      "failures": [],
+      "score": 1.0
+    },
+    {
+      "test": "multi_1",
+      "kind": "multi",
+      "checks": {
+        "aucune_invention": true,
+        "pas_de_melange": true,
+        "echoue_proprement": true
+      },
+      "failures": [],
+      "score": 1.0
+    },
+    {
+      "test": "cas_mono_incomplet",
+      "kind": "cas_mono",
+      "checks": {
+        "aucune_invention": true,
+        "donnees_manquantes_signalees": true,
+        "conclusion_conditionnelle": true,
+        "distingue_faits_hypotheses": true
+      },
+      "failures": [],
+      "score": 1.0
+    },
+    {
+      "test": "cas_mono_faits",
+      "kind": "cas_mono",
+      "checks": {
+        "aucune_invention": true,
+        "donnees_manquantes_signalees": true,
+        "conclusion_conditionnelle": true,
+        "distingue_faits_hypotheses": true
+      },
+      "failures": [],
+      "score": 1.0
+    },
+    {
+      "test": "cas_mono_no_match",
+      "kind": "cas_mono",
+      "checks": {
+        "aucune_invention": true,
+        "donnees_manquantes_signalees": true,
+        "conclusion_conditionnelle": true,
+        "distingue_faits_hypotheses": true,
+        "dit_je_ne_sais_pas": false
+      },
+      "failures": [
+        "dit_je_ne_sais_pas"
+      ],
+      "score": 0.8
+    },
+    {
+      "test": "cas_multi_solutions",
+      "kind": "cas_multi",
+      "checks": {
+        "aucune_invention": true,
+        "arbitrage_non_absolu": true,
+        "validation_requise": true,
+        "aucun_cout_invente": true
+      },
+      "failures": [],
+      "score": 1.0
+    }
+  ],
+  "taches_correctives": [
+    {
+      "cause": "réponse alors qu'aucun contrat ne correspond",
+      "type": "amelioration_prompt",
+      "test": "cas_mono_no_match",
+      "priority": 3
+    }
+  ]
+}

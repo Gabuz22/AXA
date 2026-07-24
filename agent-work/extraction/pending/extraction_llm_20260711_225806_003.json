@@ -1,0 +1,61 @@
+{
+  "proposal_id": "extraction_llm_20260711_225806_003",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260711_225802",
+  "created_at": "2026-07-11T22:58:06Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_assurance_obseques",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "plafonds"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+    "page": 25,
+    "url": null,
+    "excerpt": "Le montant total des frais pris en charge au titre des 3 prestations ci-dessous (Garde des enfants, Garde des animaux et Aide -ménagère) est limité à 750 € TTC au global."
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "plafonds",
+      "texte": "Le montant total des frais pris en charge pour la garde des enfants, la garde des animaux et l'aide-ménagère est limité à 750 € TTC au global.",
+      "diff": "Ajoute une limite financière globale sur un ensemble de services.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.95 : citation nette.",
+      "importance": "forte",
+      "review_cost": "1 min",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Essen'Ciel (assurance obsèques)\"] / plafonds",
+      "citation_exacte": "Le montant total des frais pris en charge au titre des 3 prestations ci-dessous (Garde des enfants, Garde des animaux et Aide -ménagère) est limité à 750 € TTC au global.",
+      "why_missing": "nouveau contrat",
+      "why_interesting": "Définit un plafond global pour plusieurs garanties d'assistance.",
+      "why_probably_absent": "nouveau contrat",
+      "documentary_interest": 0.9,
+      "priority_level": "haute",
+      "value_score": 0.84,
+      "bloc": []
+    }
+  },
+  "reasoning_summary": "Définit un plafond global pour plusieurs garanties d'assistance.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

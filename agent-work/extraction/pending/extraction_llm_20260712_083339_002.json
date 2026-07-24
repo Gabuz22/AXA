@@ -1,0 +1,74 @@
+{
+  "proposal_id": "extraction_llm_20260712_083339_002",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260712_083336",
+  "created_at": "2026-07-12T08:33:39Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_assurance_obseques",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "bloc:declencheurs"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+    "page": 28,
+    "url": null,
+    "excerpt": "Notre équipe médicale décide, en fonction des seuls impératifs médicaux et techniques, de la nécessité et des modalités de notre intervention."
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "declencheurs",
+      "texte": "La nécessité de l'intervention de l'assistance est déterminée exclusivement par l'équipe médicale d'AXA.",
+      "diff": "Précise le pouvoir décisionnel médical comme condition de déclenchement.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.95 : citation nette.",
+      "importance": "forte",
+      "review_cost": "1 min",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Essen'Ciel (assurance obsèques)\"] / declencheurs",
+      "citation_exacte": "Notre équipe médicale décide, en fonction des seuls impératifs médicaux et techniques, de la nécessité et des modalités de notre intervention.",
+      "why_missing": "nouveau contrat",
+      "why_interesting": "Définit le déclencheur décisionnel pour les services d'assistance.",
+      "why_probably_absent": "nouveau contrat",
+      "documentary_interest": 1.0,
+      "priority_level": "haute",
+      "value_score": 0.87,
+      "bloc": [
+        {
+          "categorie": "declencheurs",
+          "page": 28,
+          "citation": "Notre équipe médicale décide, en fonction des seuls impératifs médicaux et techniques, de la nécessité et des modalités de notre intervention.",
+          "texte": "La nécessité de l'intervention de l'assistance est déterminée exclusivement par l'équipe médicale d'AXA."
+        },
+        {
+          "categorie": "conditions",
+          "page": 28,
+          "citation": "votre accord ou celui d’un membre de votre famille  est un préalable nécessaire.",
+          "texte": "L'accord de l'assuré ou de sa famille est un préalable obligatoire à l'intervention de l'assistance."
+        }
+      ]
+    }
+  },
+  "reasoning_summary": "Définit le déclencheur décisionnel pour les services d'assistance.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

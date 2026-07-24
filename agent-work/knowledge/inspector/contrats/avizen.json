@@ -1,0 +1,1749 @@
+{
+  "subject": "Avizen",
+  "domain": "axa-contrat",
+  "finalite": {
+    "texte": "Contrat de prévoyance individuelle : protéger le revenu et la famille de l'assuré contre les conséquences financières d'un arrêt de travail (ITT), d'une invalidité ou d'un décès, via des indemnités journalières, des capitaux ou rentes d'invalidité et une rente éducation pour les enfants.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "Architecture modulaire : une garantie principale (rente éducation en cas de décès ou d'IPT) entourée de garanties optionnelles à combiner (IJ ITT toutes causes ou par accident ; capital ou rente d'invalidité, toutes causes ou par accident). Les prestations d'invalidité sont proportionnelles au taux d'invalidité (barème d'indemnisation, seuil et plafond définis dans la notice). L'option d'exonération des cotisations maintient les garanties pendant une ITT indemnisée.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Actif avec enfants à charge (rente éducation), besoin de compléter le revenu en cas d'arrêt de travail long, indépendance vis-à-vis d'un contrat collectif d'entreprise.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Antécédents médicaux antérieurs à l'adhésion (exclusion des états antérieurs non déclarés), pratique régulière de sports ou activités à risque (exclusions communes), invalidité inférieure au seuil du barème.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [
+    {
+      "type": "comparable_to",
+      "de": "Rente invalidité permanente partielle ou totale par accident (optionnelle)",
+      "vers": "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "comparable_to",
+      "de": "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)",
+      "vers": "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "comparable_to",
+      "de": "Indemnités journalières ITT par accident (optionnelle)",
+      "vers": "Indemnités journalières ITT toutes causes (optionnelle)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "ITT/Invalidité — exclusions spécifiques",
+      "vers": "Indemnités journalières ITT par accident (optionnelle)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "ITT/Invalidité — exclusions spécifiques",
+      "vers": "Indemnités journalières ITT toutes causes (optionnelle)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire",
+      "vers": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Décès/IPT toutes causes — suicide 1re année",
+      "vers": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Exclusions communes — activités et sports à risque",
+      "vers": "Rente invalidité permanente partielle ou totale par accident (optionnelle)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Exclusions communes — activités et sports à risque",
+      "vers": "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Exclusions communes — activités et sports à risque",
+      "vers": "Indemnités journalières ITT par accident (optionnelle)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Exclusions communes — activités et sports à risque",
+      "vers": "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Exclusions communes — activités et sports à risque",
+      "vers": "Indemnités journalières ITT toutes causes (optionnelle)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Exclusions communes — activités et sports à risque",
+      "vers": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "limits",
+      "de": "Exclusions communes — activités et sports à risque",
+      "vers": "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "ITT/Invalidité — exclusions spécifiques",
+      "vers": "Indemnités journalières ITT toutes causes (optionnelle)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "ITT/Invalidité — exclusions spécifiques",
+      "vers": "Indemnités journalières ITT par accident (optionnelle)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "type": "excludes",
+      "de": "Exclusions communes — activités et sports à risque",
+      "vers": "Indemnités journalières ITT par accident (optionnelle)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "type": "comparable_to",
+      "de": "Indemnités journalières ITT toutes causes (optionnelle)",
+      "vers": "Indemnités journalières ITT par accident (optionnelle)",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "architecture_garanties": {
+    "principales": [
+      "Rente éducation décès / Rente éducation IPT (garantie principale)"
+    ],
+    "secondaires": [
+      "Rente invalidité permanente partielle ou totale par accident (optionnelle)",
+      "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)",
+      "Indemnités journalières ITT par accident (optionnelle)",
+      "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+      "Indemnités journalières ITT toutes causes (optionnelle)",
+      "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+      "Garantie aide à la famille"
+    ],
+    "total": 8
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "ITT/Invalidité — exclusions spécifiques",
+    "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire",
+    "Décès/IPT toutes causes — suicide 1re année",
+    "Exclusions communes — activités et sports à risque",
+    "Décès/IPT par accident — exclusions spécifiques"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Exonération des cotisations en cas d'ITT",
+    "Indexation des garanties (option à l'adhésion)",
+    "Exonération des cotisations en cas d'invalidité",
+    "Capital décès double garantie",
+    "Augmentation sans sélection médicale (mariage/naissance/adoption)"
+  ],
+  "points_vigilance": [
+    "Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.",
+    "IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.",
+    "Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).",
+    "Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotif…",
+    "Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en…",
+    "Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie."
+  ],
+  "concepts_structurants": [
+    "Invalidité",
+    "Invalidité",
+    "Invalidité",
+    "Invalidité",
+    "Souscription & adhésion",
+    "Décès",
+    "Décès accidentel",
+    "Invalidité"
+  ],
+  "environnement": [
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Bénéficiaire",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Invalidité",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Incapacité temporaire",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 16,
+      "citation": "Rente invalidité permanente partielle ou totale par accident (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 16,
+      "citation": "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 14,
+      "citation": "Indemnités journalières ITT par accident (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 17,
+      "citation": "Capital invalidité permanente partielle ou totale par accident (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 13,
+      "citation": "Indemnités journalières ITT toutes causes (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 12,
+      "citation": "Rente éducation décès / Rente éducation IPT (garantie principale)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 15,
+      "citation": "Rente invalidité fonctionnelle toutes causes (optionnelle)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 18,
+      "citation": "Garantie aide à la famille"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 27,
+      "citation": "ITT/Invalidité — exclusions spécifiques"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 26,
+      "citation": "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 26,
+      "citation": "Décès/IPT toutes causes — suicide 1re année"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 25,
+      "citation": "Exclusions communes — activités et sports à risque"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 26,
+      "citation": "Décès/IPT par accident — exclusions spécifiques"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 17,
+      "citation": "Exonération des cotisations en cas d'ITT"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 8,
+      "citation": "Indexation des garanties (option à l'adhésion)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 18,
+      "citation": "Exonération des cotisations en cas d'invalidité"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 11,
+      "citation": "Capital décès double garantie"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 9,
+      "citation": "Augmentation sans sélection médicale (mariage/naissance/adoption)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 16,
+      "citation": "Prestation invalidité (rente ou capital)"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 17,
+      "citation": "Exonération ITT"
+    },
+    {
+      "document": "Avizen/2025-04 Notice d'information Avizen.pdf",
+      "page": 16,
+      "citation": "Taux d'indemnisation zone linéaire 11-30 %"
+    },
+    {
+      "document": "2025-04 Notice d'information Avizen.pdf",
+      "page": 4,
+      "citation": "des prestations en cas de décès ou d’invalidité permanente totale (IPT) de l’assuré"
+    },
+    {
+      "document": "2025-04 Notice d'information Avizen.pdf",
+      "page": 4,
+      "citation": "d’incapacité temporaire totale de travail (ITT) de l’assuré survenant pendant la période de couverture de ce risque"
+    },
+    {
+      "document": "2025-04 Notice d'information Avizen.pdf",
+      "page": 4,
+      "citation": "Avizen a pour objet de garantir, en fonction des garanties souscrites, des prestations en cas de décès"
+    },
+    {
+      "document": "2025-04 Notice d'information Avizen.pdf",
+      "page": 7,
+      "citation": "après expiration, le cas échéant, du délai d’attente (pour les garanties incapacité temporaire totale de travail et invalidité permanente partielle ou totale)."
+    },
+    {
+      "document": "2025-04 Notice d'information Avizen.pdf",
+      "page": 9,
+      "citation": "Vous pouvez demander une augmentation du capital garanti en cas de décès ou d’invalidité permanente totale, sans sélection médicale dans une limite de 20 % de son montant"
+    },
+    {
+      "document": "2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 4,
+      "citation": "Le contrat prévoit également des prestations d’assistance."
+    },
+    {
+      "document": "2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 4,
+      "citation": "Avizen Pro a pour objet de garantir, en fonction des garanties souscrites, des prestations en cas de décès"
+    },
+    {
+      "document": "2025-04 Notice d'information Avizen.pdf",
+      "page": 17,
+      "citation": "Un capital invalidité est versé à l’assuré qui se"
+    },
+    {
+      "document": "2025-04 Notice d'information Avizen.pdf",
+      "page": 18,
+      "citation": "L’assuré bénéficie du versement d’indemnités journalières en cas de cessation totale ou partielle de son activité professionnelle afin d’accompagner un enfant gravement malade, atteint d’un handicap ou victime d’un accident grave."
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "Rente invalidité permanente partielle ou totale par accident (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle verse une rente en cas d'invalidité permanente, partielle ou totale, résultant exclusivement d'un accident. Elle s'active à partir d'un seuil de taux d'invalidité de 11 % et ne peut pas être cumulée avec la rente toutes causes.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle permet le versement d'un capital calculé en multipliant le montant garanti à la consolidation par un taux d'indemnisation fixé définitivement. Le versement de ce capital entraîne la fin de la garantie, quel que soit le taux d'invalidité retenu.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Indemnités journalières ITT par accident (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle prévoit le versement d'indemnités journalières en cas d'incapacité temporaire totale consécutive à un accident. Elle suit les mêmes modalités que les indemnités toutes causes, sans pouvoir se cumuler avec celles-ci, et prend fin au plus tard au 1 095e jour d'arrêt.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle prévoit le versement d'un capital en cas d'invalidité permanente, totale ou partielle, résultant exclusivement d'un accident. Le versement est conditionné par un seuil d'invalidité d'au moins 11 %, le taux étant fixé de manière définitive lors de la consolidation.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Indemnités journalières ITT toutes causes (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle prévoit le versement d'indemnités journalières en cas d'arrêt de travail médicalement constaté. Les versements s'effectuent à terme échu par quinzaine, après application de la franchise, et prennent fin lors de la reprise d'activité ou de la consolidation de l'invalidité.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+      "aspect": "role",
+      "explication": "Cette garantie prévoit le versement d'une rente aux enfants bénéficiaires fiscalement à charge jusqu'à leur 26e anniversaire. Le versement devient viager si l'enfant perçoit une allocation handicapés.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+      "aspect": "role",
+      "explication": "Cette garantie optionnelle prévoit le versement d'une rente en cas d'invalidité permanente, partielle ou totale, résultant d'une maladie ou d'un accident. Le montant versé est calculé en fonction du taux d'invalidité fonctionnelle constaté lors de la consolidation et du taux d'indemnisation prévu au contrat.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Garantie aide à la famille",
+      "aspect": "role",
+      "explication": "Cette garantie prévoit le versement d'indemnités journalières en cas de cessation totale ou partielle d'activité professionnelle pour accompagner un enfant gravement malade, handicapé ou victime d'un accident grave. Les indemnités sont versées à compter du premier jour d'attribution de l'AJPP.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "ITT/Invalidité — exclusions spécifiques",
+      "aspect": "role",
+      "explication": "Les exclusions spécifiques pour l'ITT et l'invalidité concernent les dommages résultant de faits volontaires de l'assuré, tels que les suicides, mutilations ou blessures. Sont également exclus les dommages liés à la participation active à des guerres, émeutes, actes de terrorisme, crimes ou rixes, sauf en cas de légitime défense ou de devoir professionnel.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire",
+      "aspect": "role",
+      "explication": "Cette clause exclut la garantie en cas de décès ou d'IPT résultant de faits de guerre (civile, étrangère, insurrection ou opérations de maintien de la paix). Elle exclut également le bénéfice de l'assurance pour toute personne ayant causé volontairement le décès ou l'IPT de l'assuré.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Décès/IPT toutes causes — suicide 1re année",
+      "aspect": "role",
+      "explication": "Cette clause exclut la prise en charge du décès ou de l'invalidité permanente totale (IPT) si l'événement survient suite à un suicide ou une tentative de suicide durant la première année du contrat. En cas d'augmentation des garanties, cette exclusion s'applique également au supplément pendant une période d'un an suivant sa prise d'effet.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Exclusions communes — activités et sports à risque",
+      "aspect": "role",
+      "explication": "Cette clause exclut de la garantie les essais de records, les sports de haut niveau, les sports professionnels ainsi que les sports et loisirs extrêmes. Ces activités ne sont couvertes que si l'assureur a donné son acceptation expresse sur le certificat d'assurance.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Décès/IPT par accident — exclusions spécifiques",
+      "aspect": "role",
+      "explication": "Les exclusions spécifiques pour le décès ou l'IPT par accident incluent les situations de guerre, d'insurrection ou de maintien de l'ordre. Sont également exclus les dommages résultant d'une participation active à des émeutes, au terrorisme, au sabotage, à des crimes ou délits intentionnels, ainsi qu'aux rixes, sauf en cas de légitime défense ou de devoir professionnel.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Exonération des cotisations en cas d'ITT",
+      "aspect": "role",
+      "explication": "Cette option permet le remboursement des cotisations de l'ensemble des garanties en cours pendant la période de versement des indemnités journalières. Le remboursement est calculé au prorata de 1/365e de la cotisation annuelle par jour d'arrêt total indemnisé, tout en maintenant les garanties.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Indexation des garanties (option à l'adhésion)",
+      "aspect": "role",
+      "explication": "Cette option permet une réévaluation annuelle des garanties en fonction de l'évolution du PASS, sans nécessiter d'examen médical. En contrepartie, la cotisation est ajustée selon le même pourcentage, le mécanisme cessant au décès ou à la date anniversaire des 70 ans de l'assuré.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Exonération des cotisations en cas d'invalidité",
+      "aspect": "role",
+      "explication": "Cette option permet la prise en charge des cotisations par l'assureur en cas d'invalidité permanente égale ou supérieure à 66 % due à une maladie ou un accident. Cette exonération est maintenue jusqu'au terme de la garantie, sous réserve que le taux d'invalidité demeure au moins égal à 66 %.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Capital décès double garantie",
+      "aspect": "role",
+      "explication": "Cette option permet le versement d'un capital supplémentaire aux bénéficiaires en cas de décès de l'assuré, sous réserve que celui-ci survienne au moins un an après la consolidation d'une Invalidité Permanente Totale (IPT) et avant la fin de l'année d'assurance des 85 ans. Le montant de ce capital est égal à celui déjà versé au titre de l'IPT.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Augmentation sans sélection médicale (mariage/naissance/adoption)",
+      "aspect": "role",
+      "explication": "Cette option permet d'augmenter le capital décès ou IPT sans sélection médicale lors d'un mariage, PACS, naissance ou adoption. La hausse est limitée à 20 % du montant initial et doit être sollicitée dans les 3 mois suivant l'événement.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.",
+      "aspect": "role",
+      "explication": "La loi Eckert prévoit le transfert des sommes non réclamées vers la Caisse des Dépôts et Consignations (CDC) dix ans après la connaissance du décès ou l'échéance du contrat. Ces fonds sont ensuite définitivement acquis par l'État après une période de vingt ans de dépôt auprès de la CDC.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.",
+      "aspect": "role",
+      "explication": "Les indemnités journalières pour incapacité temporaire de travail (IJ ITT) ne sont pas versées si l'assuré se trouve en situation de chômage, de retraite ou de cessation d'activité au moment de l'arrêt. Cette clause exclut donc toute prestation pour les personnes n'exerçant pas d'activité professionnelle lors de la survenance de l'arrêt.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).",
+      "aspect": "point_vigilance",
+      "explication": "Le contrat impose un délai de déclaration de sinistre ITT limité à 15 jours suivant la fin de la période de franchise. Le non-respect de cette échéance entraîne une pénalité automatique se traduisant par une prolongation de la franchise.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotif…",
+      "aspect": "role",
+      "explication": "La définition contractuelle d'accident est limitée par l'exclusion explicite de certaines pathologies et événements. Sont ainsi exclus de la qualification d'accident le rachis, les tendinopathies, le tendon d'Achille, les fractures de fatigue, les pathologies cardiaques et les chocs émotifs.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en…",
+      "aspect": "role",
+      "explication": "La notice d'information ne précise aucun montant financier pour les garanties. Les plafonds, franchises et durées d'indemnisation sont exclusivement définis dans le certificat d'adhésion.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie.",
+      "aspect": "role",
+      "explication": "Cette clause limite l'indemnisation totale de l'Incapacité Temporaire de Travail (ITT) à 365 jours sur toute la durée de l'adhésion pour les pathologies liées au psychisme, au rachis et à la fibromyalgie. Il s'agit d'un plafond global cumulé pour ces affections spécifiques.",
+      "confidence": 0.9,
+      "nature": "interpretation",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "finalite",
+      "explication": "Contrat de prévoyance individuelle : protéger le revenu et la famille de l'assuré contre les conséquences financières d'un arrêt de travail (ITT), d'une invalidité ou d'un décès, via des indemnités journalières, des capitaux ou rentes d'invalidité et une rente éducation pour les enfants.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "logique_contractuelle",
+      "explication": "Architecture modulaire : une garantie principale (rente éducation en cas de décès ou d'IPT) entourée de garanties optionnelles à combiner (IJ ITT toutes causes ou par accident ; capital ou rente d'invalidité, toutes causes ou par accident). Les prestations d'invalidité sont proportionnelles au taux d'invalidité (barème d'indemnisation, seuil et plafond définis dans la notice). L'option d'exonération des cotisations maintient les garanties pendant une ITT indemnisée.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "confusions_frequentes",
+      "explication": "Ne pas confondre les variantes « toutes causes » et « par accident » : les secondes ne couvrent pas la maladie. Les rentes toutes causes et par accident ne se cumulent pas entre elles. L'IPT (invalidité permanente totale) n'est pas l'ITT (incapacité temporaire de travail).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "situations_favorables",
+      "explication": "Actif avec enfants à charge (rente éducation), besoin de compléter le revenu en cas d'arrêt de travail long, indépendance vis-à-vis d'un contrat collectif d'entreprise.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "situations_defavorables",
+      "explication": "Antécédents médicaux antérieurs à l'adhésion (exclusion des états antérieurs non déclarés), pratique régulière de sports ou activités à risque (exclusions communes), invalidité inférieure au seuil du barème.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "relation_comparable_to_avizen_pro",
+      "explication": "Mécanismes de prévoyance proches ; publics différents (particulier vs professionnel/TNS) et articulation aux régimes obligatoires différente.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Avizen",
+      "aspect": "relation_complements_ma_protection_accident_g",
+      "explication": "Logiques complémentaires sur un même accident : prévoyance FORFAITAIRE (montants souscrits) + GAV INDEMNITAIRE (préjudice réel de droit commun).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "Ne pas confondre les variantes « toutes causes » et « par accident » : les secondes ne couvrent pas la maladie. Les rentes toutes causes et par accident ne se cumulent pas entre elles. L'IPT (invalidité permanente totale) n'est pas l'ITT (incapacité temporaire de travail).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "incertitudes": [],
+  "profondeur": 0.865,
+  "couverture_semantique": 0.385,
+  "validation": {
+    "blocks": {
+      "validated_knowledge": [
+        {
+          "label": "Rente invalidité permanente partielle ou totale par accident (optionnelle)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Capital invalidité permanente partielle ou totale toutes causes (optionnelle)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Indemnités journalières ITT par accident (optionnelle)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Indemnités journalières ITT toutes causes (optionnelle)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Garantie aide à la famille",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "ITT/Invalidité — exclusions spécifiques",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Décès/IPT toutes causes — suicide 1re année",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Exclusions communes — activités et sports à risque",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Décès/IPT par accident — exclusions spécifiques",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Exonération des cotisations en cas d'ITT",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Indexation des garanties (option à l'adhésion)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Exonération des cotisations en cas d'invalidité",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Capital décès double garantie",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Augmentation sans sélection médicale (mariage/naissance/adoption)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotif…",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en…",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Prestation invalidité (rente ou capital)",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        },
+        {
+          "label": "Exonération ITT",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        },
+        {
+          "label": "Taux d'indemnisation zone linéaire 11-30 %",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        }
+      ],
+      "derived_relations": [
+        {
+          "type": "governed_by",
+          "src": "k_3c780ae09f08b24bafb1",
+          "dst": "k_5a1df5b1d80e0ce41538",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_3beab745a27e18349fc2",
+          "dst": "k_5a1df5b1d80e0ce41538",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_2ec238864e5a789612eb",
+          "dst": "k_5a1df5b1d80e0ce41538",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7aeb68bed77896c62bc4",
+          "dst": "k_5a1df5b1d80e0ce41538",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7aeb68bed77896c62bc4",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_cce0a9b49efbf2bb1541",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_cce0a9b49efbf2bb1541",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_5f6212c32aa20c9f2010",
+          "dst": "k_5a1df5b1d80e0ce41538",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_5a1df5b1d80e0ce41538",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7d84a6360b277ccb25cc",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7d84a6360b277ccb25cc",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_7d84a6360b277ccb25cc",
+          "dst": "k_ad9971cdac5df97957f2",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_07af5d2477d6ef20a18d",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_07af5d2477d6ef20a18d",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_471fdf42da5d2e195a67",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_471fdf42da5d2e195a67",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_d09358a4547fc5259c2d",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_d09358a4547fc5259c2d",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_d09358a4547fc5259c2d",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_f6652eee24c182e2172d",
+          "dst": "k_5a1df5b1d80e0ce41538",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_c8f1e083c6ea64daf3b4",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_c8f1e083c6ea64daf3b4",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_b1948c5edb9a2b5d3836",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_b1948c5edb9a2b5d3836",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_ababa2002b6fee2de026",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_e247fc5368c9babd719b",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_a241f3a76a80e2ad0f93",
+          "dst": "k_4351670d8159a0a15187",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_c1156182a5447ab4e2e0",
+          "dst": "k_4351670d8159a0a15187",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_29b9f6c5b4d9ea68d798",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        }
+      ],
+      "pending_interpretations": [
+        {
+          "label": "Garantie invalidité permanente totale (IPT)",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Garantie incapacité temporaire totale de travail (ITT)",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Garantie décès",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Délai d'attente pour les garanties incapacité temporaire totale de travail et invalidité permanente partielle ou totale.",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Possibilité d'augmentation du capital garanti en cas de décès ou d'invalidité permanente totale sans sélection médicale ",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Prestations d'assistance",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Garantie décès accidentel",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.8
+        },
+        {
+          "label": "Capital en cas d’invalidité permanente partielle ou totale par accident",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Garantie aide à la famille",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Calcul de la rente en cas d'invalidité",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Liste des professions éligibles au barème spécifique",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Conditions de déclenchement du capital invalidité permanente",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_3c780ae09f08b24bafb1",
+          "dst": "k_2ec238864e5a789612eb",
+          "statut": "pending_review"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_3beab745a27e18349fc2",
+          "dst": "k_2ec238864e5a789612eb",
+          "statut": "pending_review"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_ea924774d02ca2dbd284",
+          "dst": "k_7aeb68bed77896c62bc4",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_7aeb68bed77896c62bc4",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_7d84a6360b277ccb25cc",
+          "dst": "k_cce0a9b49efbf2bb1541",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_07af5d2477d6ef20a18d",
+          "dst": "k_cce0a9b49efbf2bb1541",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_3c780ae09f08b24bafb1",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_3beab745a27e18349fc2",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_2ec238864e5a789612eb",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_7aeb68bed77896c62bc4",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_cce0a9b49efbf2bb1541",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_5f6212c32aa20c9f2010",
+          "statut": "pending_review"
+        }
+      ],
+      "simulated_claude": [
+        {
+          "label": "Avizen",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "excludes",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_7aeb68bed77896c62bc4",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_7aeb68bed77896c62bc4",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_8da8e410671884c2f1ef",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_87e655fa31a3bd0c6020",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_b79787e5e1124b9ad420",
+          "dst": "k_530d1688fe8357355f83",
+          "statut": "simulated_claude"
+        }
+      ],
+      "uncertainties": [],
+      "human_review_required": [
+        {
+          "label": "Garantie invalidité permanente totale (IPT)",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Garantie incapacité temporaire totale de travail (ITT)",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Garantie décès",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Délai d'attente pour les garanties incapacité temporaire totale de travail et invalidité permanente partielle ou totale.",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Possibilité d'augmentation du capital garanti en cas de décès ou d'invalidité permanente totale sans sélection médicale ",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Prestations d'assistance",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Garantie décès accidentel",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.8
+        },
+        {
+          "label": "Capital en cas d’invalidité permanente partielle ou totale par accident",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Garantie aide à la famille",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Calcul de la rente en cas d'invalidité",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.9
+        },
+        {
+          "label": "Liste des professions éligibles au barème spécifique",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "label": "Conditions de déclenchement du capital invalidité permanente",
+          "subtype": "garanties",
+          "statut": "pending_review",
+          "confidence": 0.95
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_3c780ae09f08b24bafb1",
+          "dst": "k_2ec238864e5a789612eb",
+          "statut": "pending_review"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_3beab745a27e18349fc2",
+          "dst": "k_2ec238864e5a789612eb",
+          "statut": "pending_review"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_ea924774d02ca2dbd284",
+          "dst": "k_7aeb68bed77896c62bc4",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_7aeb68bed77896c62bc4",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_7d84a6360b277ccb25cc",
+          "dst": "k_cce0a9b49efbf2bb1541",
+          "statut": "pending_review"
+        },
+        {
+          "type": "excludes",
+          "src": "k_07af5d2477d6ef20a18d",
+          "dst": "k_cce0a9b49efbf2bb1541",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_3c780ae09f08b24bafb1",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_3beab745a27e18349fc2",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_2ec238864e5a789612eb",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_7aeb68bed77896c62bc4",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_cce0a9b49efbf2bb1541",
+          "statut": "pending_review"
+        },
+        {
+          "type": "limits",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_5f6212c32aa20c9f2010",
+          "statut": "pending_review"
+        },
+        {
+          "label": "Avizen",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "excludes",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_7aeb68bed77896c62bc4",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_9f0d769314c4b62cd0c4",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "excludes",
+          "src": "k_7cc4263f7279996515a7",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_7aeb68bed77896c62bc4",
+          "dst": "k_ea924774d02ca2dbd284",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_8da8e410671884c2f1ef",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_530d1688fe8357355f83",
+          "dst": "k_87e655fa31a3bd0c6020",
+          "statut": "simulated_claude"
+        },
+        {
+          "type": "complements",
+          "src": "k_b79787e5e1124b9ad420",
+          "dst": "k_530d1688fe8357355f83",
+          "statut": "simulated_claude"
+        }
+      ],
+      "stale": [],
+      "contradictory": []
+    },
+    "counts": {
+      "validated": 27,
+      "pending_review": 26,
+      "simulated_claude": 8,
+      "derived_deterministic": 29
+    },
+    "legend": {
+      "exposable_as_truth": [
+        "derived_deterministic",
+        "validated"
+      ],
+      "visible_if_labeled_only": [
+        "contradictory",
+        "pending_review",
+        "simulated_claude",
+        "stale",
+        "uncertain"
+      ],
+      "never_exposed": [
+        "rejected"
+      ]
+    }
+  },
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Blocs de validation SÉPARÉS : 'validated_knowledge' (masters validés) exposable comme vérité ; 'pending_interpretations'/'simulated_claude'/'stale'/'contradictory' visibles UNIQUEMENT étiquetés, jamais comme clause/règle certaine. Vérifier les preuves."
+}

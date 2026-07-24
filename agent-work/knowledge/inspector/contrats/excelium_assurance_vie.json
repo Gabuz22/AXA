@@ -1,0 +1,722 @@
+{
+  "subject": "Excelium (assurance vie)",
+  "domain": "axa-contrat",
+  "finalite": {
+    "texte": "Assurance vie d'épargne multi-supports : constituer et valoriser un capital (garantie en cas de vie au terme, rachats), tout en protégeant les bénéficiaires en cas de décès (garantie décès, variantes « Revalorisée » et « Sérénité » plancher).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "Double nature vie/décès : en cas de vie, l'épargne appartient à l'assuré (rachats partiels ou programmés, types de gestion) ; en cas de décès, les garanties déterminent ce que reçoivent les bénéficiaires — la garantie plancher « Sérénité » protège contre une baisse des supports, la « Revalorisée » applique sa propre mécanique (avec ses exclusions propres).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Épargne de long terme avec disponibilité, transmission encadrée par le régime propre de l'assurance vie (à vérifier selon les règles en vigueur).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Besoin d'un revenu garanti à la retraite sans discipline d'épargne (comparer au PER) ; aversion totale au risque si supports en unités de compte.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [
+    {
+      "type": "limits",
+      "de": "Garantie « Revalorisée »",
+      "vers": "Exclusions de la garantie « Revalorisée »",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "refines",
+      "de": "Garantie « Revalorisée »",
+      "vers": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "refines",
+      "de": "Garantie « Sérénité » (plancher, incluse)",
+      "vers": "Garantie en cas de décès",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    }
+  ],
+  "architecture_garanties": {
+    "principales": [],
+    "secondaires": [
+      "Garantie en cas de décès",
+      "Garantie « Revalorisée »",
+      "Garantie « Sérénité » (plancher, incluse)",
+      "Garantie en cas de vie (au terme)"
+    ],
+    "total": 4
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "Exclusions de la garantie « Revalorisée »"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Prorogation du fonds Croissance",
+    "Types de gestion",
+    "Rachats partiels programmés"
+  ],
+  "points_vigilance": [
+    "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+    "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+    "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
+    "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+    "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
+    "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+    "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant."
+  ],
+  "concepts_structurants": [
+    "Décès",
+    "Décès accidentel",
+    "Souscription & adhésion",
+    "Décès",
+    "Décès accidentel",
+    "Souscription & adhésion",
+    "Décès",
+    "Décès accidentel"
+  ],
+  "environnement": [
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Fiscalité",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Fiscalité",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Types de gestion",
+      "domaine": "axa-contrat",
+      "fraicheur": {
+        "as_of": "2026-07-11T22:58:00Z",
+        "ttl_days": null,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    },
+    {
+      "concept": "Types de gestion",
+      "domaine": "axa-contrat",
+      "fraicheur": {
+        "as_of": "2026-07-11T22:58:00Z",
+        "ttl_days": null,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "citation": "Garantie en cas de décès"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "citation": "Garantie « Revalorisée »"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "citation": "Garantie « Sérénité » (plancher, incluse)"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "citation": "Garantie en cas de vie (au terme)"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "citation": "Exclusions de la garantie « Revalorisée »"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 20,
+      "citation": "Prorogation du fonds Croissance"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 79,
+      "citation": "Types de gestion"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 45,
+      "citation": "Rachats partiels programmés"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 46,
+      "citation": "Valeur de rachat minimale support euros"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 47,
+      "citation": "Nombre d'UC/parts après frais"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 17,
+      "citation": "Prime mensuelle garantie Revalorisée"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "citation": "Montant garanti Revalorisée"
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "finalite",
+      "explication": "Assurance vie d'épargne multi-supports : constituer et valoriser un capital (garantie en cas de vie au terme, rachats), tout en protégeant les bénéficiaires en cas de décès (garantie décès, variantes « Revalorisée » et « Sérénité » plancher).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "logique_contractuelle",
+      "explication": "Double nature vie/décès : en cas de vie, l'épargne appartient à l'assuré (rachats partiels ou programmés, types de gestion) ; en cas de décès, les garanties déterminent ce que reçoivent les bénéficiaires — la garantie plancher « Sérénité » protège contre une baisse des supports, la « Revalorisée » applique sa propre mécanique (avec ses exclusions propres).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "confusions_frequentes",
+      "explication": "La garantie plancher protège les BÉNÉFICIAIRES en cas de décès, pas la valeur de rachat du vivant. Les exclusions de la garantie « Revalorisée » ne s'appliquent qu'à cette garantie, pas au contrat entier. L'assurance vie n'est pas un PER : l'épargne reste disponible (rachat), la fiscalité diffère (règles externes à vérifier).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "situations_favorables",
+      "explication": "Épargne de long terme avec disponibilité, transmission encadrée par le régime propre de l'assurance vie (à vérifier selon les règles en vigueur).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "situations_defavorables",
+      "explication": "Besoin d'un revenu garanti à la retraite sans discipline d'épargne (comparer au PER) ; aversion totale au risque si supports en unités de compte.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "relation_comparable_to_ma_retraite_plan_d_eparg",
+      "explication": "Deux épargnes longues aux liquidités opposées : assurance vie rachetable à tout moment vs PER en principe indisponible jusqu'à la retraite ; fiscalités externes distinctes (à vérifier).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "La garantie plancher protège les BÉNÉFICIAIRES en cas de décès, pas la valeur de rachat du vivant. Les exclusions de la garantie « Revalorisée » ne s'appliquent qu'à cette garantie, pas au contrat entier. L'assurance vie n'est pas un PER : l'épargne reste disponible (rachat), la fiscalité diffère (règles externes à vérifier).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.05,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    }
+  ],
+  "profondeur": 0.74,
+  "couverture_semantique": 0.385,
+  "validation": {
+    "blocks": {
+      "validated_knowledge": [
+        {
+          "label": "Garantie en cas de décès",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Garantie « Revalorisée »",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Garantie « Sérénité » (plancher, incluse)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Garantie en cas de vie (au terme)",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Exclusions de la garantie « Revalorisée »",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Prorogation du fonds Croissance",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Types de gestion",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Rachats partiels programmés",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.",
+          "subtype": "point_vigilance",
+          "statut": "validated",
+          "confidence": 0.35
+        },
+        {
+          "label": "Valeur de rachat minimale support euros",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        },
+        {
+          "label": "Nombre d'UC/parts après frais",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        },
+        {
+          "label": "Prime mensuelle garantie Revalorisée",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        },
+        {
+          "label": "Montant garanti Revalorisée",
+          "subtype": "formule",
+          "statut": "validated",
+          "confidence": 0.6
+        }
+      ],
+      "derived_relations": [
+        {
+          "type": "governed_by",
+          "src": "k_b6af0afa8c212962a05f",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_b6af0afa8c212962a05f",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_b6af0afa8c212962a05f",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_292f5254485896f9efa0",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_292f5254485896f9efa0",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_292f5254485896f9efa0",
+          "dst": "k_d0f78f7f7adf10b33f22",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_f3c65f35ee9a9da43dfa",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_f3c65f35ee9a9da43dfa",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_1cc55cae7463b593bda7",
+          "dst": "k_1b83dccf2933a960d95a",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_1cc55cae7463b593bda7",
+          "dst": "k_85e2756c0ba43d9d7355",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_b264d234a9330c329cdd",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_b264d234a9330c329cdd",
+          "dst": "k_92afac9bce12bfc328f0",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_fa4470a9a159db09bc5d",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_1fcd5acd34b93b7290dc",
+          "dst": "k_92afac9bce12bfc328f0",
+          "statut": "derived_deterministic"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_a86c49153b54b3135feb",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        }
+      ],
+      "pending_interpretations": [
+        {
+          "type": "limits",
+          "src": "k_292f5254485896f9efa0",
+          "dst": "k_b4c344360465d24d7f09",
+          "statut": "pending_review"
+        },
+        {
+          "type": "refines",
+          "src": "k_292f5254485896f9efa0",
+          "dst": "k_876208abc9d45e47c1b9",
+          "statut": "pending_review"
+        },
+        {
+          "type": "refines",
+          "src": "k_f3c65f35ee9a9da43dfa",
+          "dst": "k_b6af0afa8c212962a05f",
+          "statut": "pending_review"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_fa4470a9a159db09bc5d",
+          "dst": "k_f9754220ae7b5c30ba3d",
+          "statut": "pending_review"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_3210056207b526bd37c3",
+          "dst": "k_f9754220ae7b5c30ba3d",
+          "statut": "pending_review"
+        }
+      ],
+      "simulated_claude": [
+        {
+          "label": "Excelium (assurance vie)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_cddb58e5374c53e28382",
+          "dst": "k_ec75024e03dc18706ce1",
+          "statut": "simulated_claude"
+        }
+      ],
+      "uncertainties": [],
+      "human_review_required": [
+        {
+          "type": "limits",
+          "src": "k_292f5254485896f9efa0",
+          "dst": "k_b4c344360465d24d7f09",
+          "statut": "pending_review"
+        },
+        {
+          "type": "refines",
+          "src": "k_292f5254485896f9efa0",
+          "dst": "k_876208abc9d45e47c1b9",
+          "statut": "pending_review"
+        },
+        {
+          "type": "refines",
+          "src": "k_f3c65f35ee9a9da43dfa",
+          "dst": "k_b6af0afa8c212962a05f",
+          "statut": "pending_review"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_fa4470a9a159db09bc5d",
+          "dst": "k_f9754220ae7b5c30ba3d",
+          "statut": "pending_review"
+        },
+        {
+          "type": "governed_by",
+          "src": "k_3210056207b526bd37c3",
+          "dst": "k_f9754220ae7b5c30ba3d",
+          "statut": "pending_review"
+        },
+        {
+          "label": "Excelium (assurance vie)",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_cddb58e5374c53e28382",
+          "dst": "k_ec75024e03dc18706ce1",
+          "statut": "simulated_claude"
+        }
+      ],
+      "stale": [],
+      "contradictory": []
+    },
+    "counts": {
+      "validated": 19,
+      "pending_review": 5,
+      "simulated_claude": 2,
+      "derived_deterministic": 15
+    },
+    "legend": {
+      "exposable_as_truth": [
+        "derived_deterministic",
+        "validated"
+      ],
+      "visible_if_labeled_only": [
+        "contradictory",
+        "pending_review",
+        "simulated_claude",
+        "stale",
+        "uncertain"
+      ],
+      "never_exposed": [
+        "rejected"
+      ]
+    }
+  },
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Blocs de validation SÉPARÉS : 'validated_knowledge' (masters validés) exposable comme vérité ; 'pending_interpretations'/'simulated_claude'/'stale'/'contradictory' visibles UNIQUEMENT étiquetés, jamais comme clause/règle certaine. Vérifier les preuves."
+}

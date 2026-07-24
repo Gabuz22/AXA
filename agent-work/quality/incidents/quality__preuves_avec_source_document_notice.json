@@ -1,8 +1,8 @@
 {
   "proposal_id": "quality__preuves_avec_source_document_notice",
   "agent_id": "quality",
-  "run_id": "run_quality_20260723_110041",
-  "created_at": "2026-07-23T11:00:50Z",
+  "run_id": "run_quality_20260724_084545",
+  "created_at": "2026-07-24T08:45:47Z",
   "status": "pending_review",
   "origin": "deterministic",
   "task": {
@@ -17,18 +17,18 @@
   "source": {
     "type": "repo",
     "document": "scripts/build_ia.py + ia/",
-    "excerpt": "sans source: 6 /616"
+    "excerpt": "sans source: 32 /647"
   },
   "proposed_change": {
     "operation": "report",
     "payload": {
       "check": "preuves avec source (document/notice)",
-      "detail": "sans source: 6 /616",
+      "detail": "sans source: 32 /647",
       "severity": "warn",
       "state": "connue"
     }
   },
-  "reasoning_summary": "Contrôle qualité déterministe en échec (connue) : preuves avec source (document/notice) — sans source: 6 /616",
+  "reasoning_summary": "Contrôle qualité déterministe en échec (connue) : preuves avec source (document/notice) — sans source: 32 /647",
   "confidence": 0.99,
   "ambiguities": [],
   "risks": [

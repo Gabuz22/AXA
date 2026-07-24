@@ -1,0 +1,61 @@
+{
+  "proposal_id": "extraction_llm_20260713_195318_006",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260713_195311",
+  "created_at": "2026-07-13T19:53:18Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "avizen_pro",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-04 Notice d'information Avizen Pro (AEP).pdf",
+    "page": 4,
+    "url": null,
+    "excerpt": "Avizen Pro a pour objet de garantir, en fonction des garanties souscrites, des prestations en cas de décès"
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "garanties",
+      "texte": "Garantie décès accidentel",
+      "diff": "Précise l'objet de la garantie décès sans confirmer la couverture spécifique accidentelle.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.80 : citation nette.",
+      "importance": "forte",
+      "review_cost": "1 min",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Avizen Pro\"] / garanties",
+      "citation_exacte": "Avizen Pro a pour objet de garantir, en fonction des garanties souscrites, des prestations en cas de décès",
+      "why_missing": "categorie vide",
+      "why_interesting": "Le texte mentionne le décès mais ne précise pas la distinction ou l'inclusion d'une garantie spécifique 'décès accidentel'.",
+      "why_probably_absent": "catégorie vide chez Avizen Pro alors que couverte chez Avizen, Entour'Age",
+      "documentary_interest": 0.9,
+      "priority_level": "haute",
+      "value_score": 0.81,
+      "bloc": []
+    }
+  },
+  "reasoning_summary": "Le texte mentionne le décès mais ne précise pas la distinction ou l'inclusion d'une garantie spécifique 'décès accidentel'.",
+  "confidence": 0.8,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

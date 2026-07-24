@@ -1,0 +1,144 @@
+{
+  "run_id": "run_quality_20260711_171141",
+  "agent_id": "quality",
+  "generated_at": "2026-07-11T17:11:43Z",
+  "summary": {
+    "total": 18,
+    "passed": 14,
+    "failed": 4,
+    "new_anomalies": 0,
+    "known_anomalies": 4,
+    "corrected": 0
+  },
+  "metrics": {
+    "json_files_checked": 52,
+    "pages_ia": 46,
+    "links_checked": 2266,
+    "links_broken": 19,
+    "notices_checked": 11,
+    "notices_unresolved": 11,
+    "orphan_pages": 0,
+    "coverage": "100%",
+    "routing": "76 tests, faux positifs 0"
+  },
+  "anomalies": {
+    "new": [],
+    "known": [
+      "sorties /ia publiées synchronisées",
+      "liens internes /ia valides",
+      "notices PDF résolues sur disque",
+      "preuves avec source (document/notice)"
+    ],
+    "corrected": []
+  },
+  "checks": [
+    {
+      "name": "tous les JSON valides",
+      "ok": true,
+      "detail": "invalides: []",
+      "severity": "high"
+    },
+    {
+      "name": "ai-manifest.json cohérent",
+      "ok": true,
+      "detail": "entry_point=https://gabuz22.github.io/AXA/ia/instructions-maitres.html pages=45",
+      "severity": "high"
+    },
+    {
+      "name": "sitemap-ia.xml présent et non vide",
+      "ok": true,
+      "detail": "135 URLs",
+      "severity": "warn"
+    },
+    {
+      "name": "version.json présent",
+      "ok": true,
+      "detail": "version.json=2.1.0",
+      "severity": "high"
+    },
+    {
+      "name": "cohérence version build_ia vs footer /ia",
+      "ok": true,
+      "detail": "build=2.1.0 footer=2.1.0",
+      "severity": "high"
+    },
+    {
+      "name": "générateur /ia s'exécute",
+      "ok": true,
+      "detail": "ok",
+      "severity": "high"
+    },
+    {
+      "name": "couverture données = 100%",
+      "ok": true,
+      "detail": "couverture=100%",
+      "severity": "high"
+    },
+    {
+      "name": "routage sans faux positif contrat",
+      "ok": true,
+      "detail": "tests=76 faux_positifs=0",
+      "severity": "high"
+    },
+    {
+      "name": "sorties /ia publiées synchronisées",
+      "ok": false,
+      "detail": "désynchronisés: 161",
+      "severity": "high"
+    },
+    {
+      "name": "liens internes /ia valides",
+      "ok": false,
+      "detail": "cassés: 19 ['glossaire.html -> contrat/essenciel.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/ma-protection-accident.html', 'glossaire.html -> contrat/essenciel.html']",
+      "severity": "high"
+    },
+    {
+      "name": "pages IA attendues présentes",
+      "ok": true,
+      "detail": "manquantes: []",
+      "severity": "high"
+    },
+    {
+      "name": "notices PDF résolues sur disque",
+      "ok": false,
+      "detail": "0/11 résolues",
+      "severity": "warn"
+    },
+    {
+      "name": "IDs contrats présents et uniques",
+      "ok": true,
+      "detail": "manquants=0 doublons=0 /9",
+      "severity": "high"
+    },
+    {
+      "name": "IDs de preuves sans doublon",
+      "ok": true,
+      "detail": "doublons=0 /616",
+      "severity": "warn"
+    },
+    {
+      "name": "preuves avec source (document/notice)",
+      "ok": false,
+      "detail": "sans source: 6 /616",
+      "severity": "warn"
+    },
+    {
+      "name": "cohérence des totaux contrats (JSON↔pages↔matrice)",
+      "ok": true,
+      "detail": "{'contrats.json': 9, 'pages /ia/contrat': 9, 'matrice couverture': 9}",
+      "severity": "high"
+    },
+    {
+      "name": "aucune page /ia orpheline",
+      "ok": true,
+      "detail": "orphelines: 0 []",
+      "severity": "warn"
+    },
+    {
+      "name": "pages catégorie avec citations de notice",
+      "ok": true,
+      "detail": "sans citation: []",
+      "severity": "warn"
+    }
+  ]
+}

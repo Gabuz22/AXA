@@ -1,0 +1,20 @@
+{
+  "providers": {
+    "gemini": {
+      "calls": 309,
+      "success": 300,
+      "error": 9,
+      "timeout": 0,
+      "tokens_in": 258129,
+      "tokens_out": 42701,
+      "total_time_s": 269.508,
+      "models": {
+        "gemini-2.5-flash-lite": 5,
+        "gemini-2.5-flash": 2,
+        "gemini-2.0-flash": 2,
+        "gemini-3.1-flash-lite": 300
+      }
+    }
+  },
+  "updated_at": "2026-07-24T03:58:24Z"
+}

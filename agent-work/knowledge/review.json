@@ -1,0 +1,2353 @@
+{
+  "version": "1.0.0",
+  "domain": "axa-contrat",
+  "generated_at": "2026-07-24T08:45:45Z",
+  "total": 262,
+  "auto": 109,
+  "second_model": 98,
+  "human": 55,
+  "auto_ratio": 0.416,
+  "human_ratio": 0.21,
+  "queue": [
+    {
+      "id": "k_916e1315cfb3364cac46",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Loi Eckert : sommes non réclamées déposées à la CDC après 10 ans, acquises à l'État après 20 ans de dépôt.",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_d60d0130f275ccf9b006",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "IJ ITT : aucune prestation si l'assuré est au chômage, à la retraite ou en cessation d'activité au moment de l'arrêt.",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_11840dc7a3786daa3e9a",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Délai de déclaration sinistre ITT serré (15 jours après fin de franchise) avec pénalité automatique (prolongation de franchise).",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_8b8c2a1cbac3cef70580",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Définition contractuelle d'« accident » très restrictive : rachis, tendinopathies, tendon d'Achille, fractures de fatigue, pathologies cardiaques, chocs émotif…",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_ababa2002b6fee2de026",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Tous les montants garantis, franchises et durées d'indemnisation (365/1095 jours) sont fixés au certificat d'adhésion — la notice ne contient aucun montant en…",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_e247fc5368c9babd719b",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Plafonds spécifiques 365 jours d'ITT à vie de l'adhésion pour psy, rachis et fibromyalgie.",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_628b80b673c0b83b40be",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Garantie frais professionnels : remboursement plafonné au plafond journalier du certificat ; justificatifs fiscaux (2033/2035/2052-2053) exigés.",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_61073905c3359f6e2399",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_9a88b9e05f05b8b2aab3",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_24e7c40b6b34dd5f89a9",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Invalidité : trois bases d'évaluation possibles (croisé / professionnel en option / fonctionnel pour les garanties accident) avec des tables différentes — véri…",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_dea180b631da0a6e897f",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Aucun montant garanti dans la notice — tout est au certificat d'adhésion.",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_70dbfb76e529d23e70bd",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Cadre Madelin : déductibilité des cotisations mais prestations imposables et obligation d'attestations annuelles.",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_22b52b17d0ffc7779dd3",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_f5aa53bd069c323fbe9e",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à charge sauf plafonds explicites (500 €, 1 000 €/an, 200 €……",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_b1ef04114ed3956b2236",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce personne définitive + critères AVQ/Folstein) ; GIR 5-6 jam…",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_331564a91298a388ad32",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_4b37fd8d0287c786c83a",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur », ajustable par le comité paritaire).",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_31d475188e7f66d19e22",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheimer, Parkinson…) — cause fréquente de dépendance.",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_51b9fc376a23da5e43b3",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "La mise en réduction met fin aux prestations d'assistance.",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_d043dea37754054ab95d",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_15870da4e05856d229d8",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans dépendance, avant 85 ans).",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_653f897e09b309a6b37c",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_2565329af93e6db0ccd9",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 € de VR pour 3 907 € versés à 10 ans).",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_f08a05fd91e3f2e39baa",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes de frais.",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_1c71e508e2f2b0da9997",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, quelle que soit la formule (avertissement contractuel explici…",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_bfbba47537e7b0fdef43",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiaires (L132-18).",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_8111bd6321c3243811bf",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec le capital obsèques.",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_9dd6ea1d686302e851d2",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance.",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_fa4470a9a159db09bc5d",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_876208abc9d45e47c1b9",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_1fcd5acd34b93b7290dc",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_3210056207b526bd37c3",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_0c02023de5fa29e05195",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_4a50b98700adbc91efe7",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_2f61cc9b91272dd1824a",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_e2b73f7ccda8f06f9fd6",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_30bc0a366d32c193bf29",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_ff6059004d07129519f6",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_5d3bc037bf12a63fc980",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (ar…",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_c24972e2f2c466f597c4",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Subrogation de l'assureur contre le tiers responsable (6.7).",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_b81f4c6fc8be81b110db",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Coefficients de conversion garantis par génération de versement (Protection Retraite) : avantage si les tables se dégradent ; mais frais d'arrérage 1 % intégré…",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_0196636741dab6dde279",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Compartiment 3 : sortie en rente UNIQUEMENT.",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_292753b3e011fc28f7eb",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Plus de déductibilité fiscale des versements après 70 ans.",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_29d05f01e9f4453f7166",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Le coût de la garantie Sérénité est prélevé via les frais de gestion UC même après 80 ans (âge limite de couverture).",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_57db8a37744a92e58d7c",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Frais de transfert 1 % uniquement les 5 premières années.",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_05589eddc82add513fc8",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Pas de fonds en euros : uniquement fonds Croissance (garanti seulement à l'échéance) et UC — risque de perte en capital.",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_49c42e4ae022365e3378",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "La simple survenance d'un événement de déblocage rend le plan rachetable et donc taxable à l'IFI (fraction immobilière).",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_d0295e5e3b5d6c1e27ea",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Versements plafonnés à 24 000 €/année d'adhésion — inhabituel pour un PER, à intégrer dans les stratégies de versements importants.",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_ec7bb5649772bd973dfa",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Pas de valeur de rachat ni de réduction.",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_46019a90da82944b6ce3",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_456eb8b03998f11d6348",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_fd03903dec1b7fcd01f7",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_d43ae50cd4fa62370d63",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_f0f3bc4634924ac109a8",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_9aa67aeda08ce393a203",
+      "kind": "node",
+      "subtype": "point_vigilance",
+      "label": "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": true,
+      "contradiction": false,
+      "escalate": "human",
+      "priority": 5,
+      "reasons": [
+        "N1: entité sans preuve (dérivée)",
+        "élément sensible ET faible confiance"
+      ]
+    },
+    {
+      "id": "k_3c780ae09f08b24bafb1",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Rente invalidité permanente partielle ou totale par accident (optionnelle)",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_2ec238864e5a789612eb",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Capital invalidité permanente partielle ou totale par accident (optionnelle)",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_7aeb68bed77896c62bc4",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Indemnités journalières ITT toutes causes (optionnelle)",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_cce0a9b49efbf2bb1541",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Rente éducation décès / Rente éducation IPT (garantie principale)",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_5f6212c32aa20c9f2010",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Rente invalidité fonctionnelle toutes causes (optionnelle)",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_9f0d769314c4b62cd0c4",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "ITT/Invalidité — exclusions spécifiques",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_7d84a6360b277ccb25cc",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Décès/IPT toutes causes — guerre et meurtre du bénéficiaire",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_07af5d2477d6ef20a18d",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Décès/IPT toutes causes — suicide 1re année",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_7cc4263f7279996515a7",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Exclusions communes — activités et sports à risque",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_471fdf42da5d2e195a67",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Décès/IPT par accident — exclusions spécifiques",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_f6652eee24c182e2172d",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Exonération des cotisations en cas d'invalidité",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_b1948c5edb9a2b5d3836",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Augmentation sans sélection médicale (mariage/naissance/adoption)",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_9fcf3d795113e1fde1c8",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Prestation invalidité (rente ou capital)",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_3b84589f36cf88699fa9",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Exonération ITT",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_e307ed9368a0510e7b24",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Taux d'indemnisation zone linéaire 11-30 %",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_cb5a4066cd3bd7ed8fd5",
+      "kind": "node",
+      "subtype": "garanties",
+      "label": "Conditions de déclenchement du capital invalidité permanente",
+      "subject": "Avizen",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_359783af0bff58c95153",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Rente invalidité par accident (optionnelle)",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_b7254d7766b9583c817f",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Rente éducation décès / IPT + double effet",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_f16d12fe869fad3fa737",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Décès/IPT toutes causes",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_6acba46e66861fad841e",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Exclusions communes — activités/sports à risque",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_ecd256287056c5671d7d",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "ITT/Invalidité",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_01e67eb9f1441817473b",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Décès/IPT par accident",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_5e2f23d35894e3c07b9b",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Exonération cotisations invalidité",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_d94a2b1460ed63db9cff",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Augmentation sans sélection médicale (mariage/PACS/naissance/adoption)",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_2dbe49bdf058ed1c078b",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Option taux invalidité professionnelle (barème spécifique)",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_b262f3dba486050499d2",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Option taux d'invalidité 15 % maladie",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_a161580651f983815d29",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Prestation invalidité (croisé)",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_cb61172ea88c5e693b64",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Prestation invalidité (option professionnelle)",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_6b62b6beac0e86ac0620",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Exonération ITT",
+      "subject": "Avizen Pro",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_4e89c97dd12642e5b63a",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Services pour l'aidant de l'assuré",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_e8592ec6f0dbd9eec7e6",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Services dès l'adhésion « ENTREAIDANTS »",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_639fdca5b45bcebd0f1b",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Rente viagère dépendance (garantie principale obligatoire)",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_7b00ca36e878d88347bb",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Services d'assistance dédiés en perte d'autonomie",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_5d810c01494d92f6a6b2",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "GIR 5 et 6",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_79188eb8532c8cfe7437",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Dépendance suite à accidents — cas exclus",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_a7fd903a3047bf7880ff",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Exclusions générales (dépendance et décès)",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_6de58c3707f41f1d9efa",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Réduction couple",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_2b7a398578182600892a",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Formule Dépendance Totale et Partielle",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_da946838196f376d1692",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Capital Premiers Frais",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_7c3708ca46b66194338c",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Capital décès",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_18e5f52e595a45258b82",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Rente dépendance totale",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_ea6216d09cd87f32f10e",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Capital décès remboursement des cotisations",
+      "subject": "Entour'Age",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_7c11b09f137f0c666993",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Garantie décès (capital obsèques)",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_76416d3cfdaed9013f18",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Revalorisation du capital",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_43bf063aa84cb24ae0db",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Assistance au moment du décès",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_60e723a8ac802f5d8dbc",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Assistance après le décès (proches)",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_134450af865408dc18ee",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Exclusions assistance",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_87ae97b93d494b822fb7",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Décès accidentel exclu",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_57a45e5c255bab4eff45",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Décès exclus",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_a9a995058cad20ea9e71",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Réduction adhésion simultanée (couple)",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_71b04da27a4e802d02e6",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Capital revalorisé",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_df4d3a6764f6dfda4428",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Pénalité de rachat",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_6db240ead04454051692",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Valeur de rachat",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_35a252fde0c0c76ecf14",
+      "kind": "node",
+      "subtype": "cotisations",
+      "label": "Réduction de 10% sur les cotisations en cas d'adhésion simultanée du conjoint",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_e40ea49fd19377f2d9c0",
+      "kind": "node",
+      "subtype": "plafonds",
+      "label": "Le montant total des frais pris en charge pour la garde des enfants, la garde des animaux et l'aide-ménagère est limité ",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_f7b7a7a3f4effe4a76d3",
+      "kind": "node",
+      "subtype": "plafonds",
+      "label": "La prise en charge de l'assistance psychologique est limitée à 6 entretiens et 80 € par séance en cabinet.",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_387bcf6517e1874d9763",
+      "kind": "node",
+      "subtype": "plafonds",
+      "label": "Le capital garanti choisi lors de l'adhésion est compris entre 2 000 et 10 000 €.",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_7255488673c0bd0bd2df",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Risques exclus de la garantie décès",
+      "subject": "Essen'Ciel Patrimoine",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_4280cb92e23dd1a457c7",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Réduction tarifaire couple (-10 %)",
+      "subject": "Essen'Ciel Patrimoine",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_b4c344360465d24d7f09",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Exclusions de la garantie « Revalorisée »",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_f9754220ae7b5c30ba3d",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Types de gestion",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_b264d234a9330c329cdd",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Rachats partiels programmés",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_a86c49153b54b3135feb",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Valeur de rachat minimale support euros",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_315a50cd1c23b8de22cf",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Nombre d'UC/parts après frais",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_0b0b67419ebec171b7d6",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Prime mensuelle garantie Revalorisée",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_260c9d3b9017e6b2325a",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Montant garanti Revalorisée",
+      "subject": "Excelium (assurance vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_a5ef093f6bca86c42c0e",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "En cas de décès",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_cdc2c29be8c3b633eb84",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Faits intentionnels, suicide",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_3c6901cc098f9d5386de",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Affections même consécutives à un accident garanti",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_3d99d376c76814ab1b22",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Délit intentionnel ou crime",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_513d2e42c2654884c72a",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Accidents du travail et activités électives/syndicales",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_eca34eb36d004af53e14",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Alcool, médicaments, stupéfiants",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_cd2e825116ac6389c362",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Sports professionnels, rémunérés, à risques, extrêmes",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_c397d129b93655a6b126",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Non-respect de réglementation (véhicules motorisés)",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_567d908c34222418e5aa",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Expérimentations biomédicales",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_f9994faa8a72b4a1b20d",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Indice AQV",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_c8c1c9ebc3a31c8f58ae",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Renonciation vente à distance — cotisation due",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_8c947397ae840ba7d374",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "En cas de vie — sortie en capital",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_faeaf4d56010892aa627",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "En cas de vie — sortie en rente viagère",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_4a30d5119a0bf1c31706",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Indisponibilité de l'épargne",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_f5fa587a293b23f3d0ec",
+      "kind": "node",
+      "subtype": "option",
+      "label": "Transfert individuel sortant",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_5c55ab2bb832168c50fe",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Valeur de transfert en parts/UC",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_5ed67aacb73753a6b8a0",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Rente initiale",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_37ab0952f721df7c5920",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Incapacité de travail (IJ)",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_0d1403c5963097a7cead",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Invalidité totale ou partielle",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_634f7f4670c0d9026073",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Exonération du paiement des cotisations",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_e07ba177cf2d45fec389",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Invalidité spécifique AERAS (GIS)",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_33e26366af07a1a026a8",
+      "kind": "node",
+      "subtype": "garantie",
+      "label": "Garantie Aide à la famille",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_b8c346a3582d8a8ce9b6",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "États antérieurs",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_7ff09e96a0ea82902da2",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Affections psychologiques / asthénie-fibromyalgie / disco-vertébrales (exclusion de principe avec rachats)",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_671c7b2c19a9a41c7f97",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "PTIA/incapacité/invalidité — exclusions",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_2a03518bff79734b986f",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Sports et activités exclus (sauf acceptation)",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_f6c40cf580ecf0668834",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Décès — guerre/émeutes/crimes",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_1b37e380b288c87661d3",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Décès — suicide",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_75fe48d661e810f78bdf",
+      "kind": "node",
+      "subtype": "exclusion",
+      "label": "Cures et esthétique",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_e16a6ae51412e5a8583c",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "IJ incapacité (plafond)",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_c10e35754aafd68af4f4",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "IJ invalidité partielle",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    },
+    {
+      "id": "k_65aea6eb86c80213fe14",
+      "kind": "node",
+      "subtype": "formule",
+      "label": "Exonération incapacité",
+      "subject": "Masterlife CREDIT",
+      "sensitive": true,
+      "low_conf": false,
+      "contradiction": false,
+      "escalate": "model",
+      "priority": 3,
+      "reasons": [
+        "élément sensible (exclusion/montant/plafond/condition)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "cycle_id": "cycle_20260724_084544",
+  "generated_at": "2026-07-24T08:45:47Z",
+  "next_cycle_estimate": "2026-07-24T12:17:00Z",
+  "deterministic_ran": [
+    "knowledge-curator",
+    "inspector-evaluator",
+    "coverage-gaps",
+    "quality"
+  ],
+  "tasks_done_this_cycle": 0,
+  "tasks_ready": 0,
+  "tasks_waiting_provider": 0,
+  "tasks_waiting_reset": 0,
+  "tasks_blocked_human_review": 12,
+  "tasks_completed": 3,
+  "tasks_failed_terminal": 0,
+  "tasks_waiting": 0,
+  "providers_detected": [
+    "gemini",
+    "groq",
+    "cloudflare",
+    "openrouter"
+  ],
+  "providers_available": [
+    "gemini",
+    "groq",
+    "cloudflare",
+    "openrouter"
+  ],
+  "providers_resting": [
+    {
+      "provider": "claude-assisted-test",
+      "state": "cle_absente",
+      "reprise": null
+    }
+  ],
+  "providers_used": [],
+  "quota_estimate_calls": {
+    "gemini": 15,
+    "groq": 0,
+    "cloudflare": 0,
+    "openrouter": 0
+  },
+  "llm_calls": 0,
+  "tokens_in_est": 0,
+  "tokens_out_est": 0,
+  "errors": [],
+  "progression": "attente_revue_humaine",
+  "reopened_tasks": [],
+  "incidents_human": [],
+  "next_priority": null
+}

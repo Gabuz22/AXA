@@ -1,0 +1,74 @@
+{
+  "proposal_id": "extraction_llm_20260711_171146_001",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260711_171143",
+  "created_at": "2026-07-11T17:11:46Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_patrimoine",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "bloc:conditions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+    "page": 10,
+    "url": null,
+    "excerpt": "Cette garantie est accordée pendant les 3 mois suivant la date de décès de l’assuré."
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "conditions",
+      "texte": "La garantie est limitée à une période de 3 mois suivant le décès de l'assuré.",
+      "diff": "Ajoute une condition temporelle spécifique à la garantie d'accompagnement.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.95 : citation nette.",
+      "importance": "moyenne",
+      "review_cost": "30 s",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Essen'Ciel Patrimoine\"] / conditions",
+      "citation_exacte": "Cette garantie est accordée pendant les 3 mois suivant la date de décès de l’assuré.",
+      "why_missing": "nouveau contrat",
+      "why_interesting": "Définit la durée de validité de la prestation d'assistance.",
+      "why_probably_absent": "nouveau contrat",
+      "documentary_interest": 1.0,
+      "priority_level": "haute",
+      "value_score": 0.978,
+      "bloc": [
+        {
+          "categorie": "conditions",
+          "page": 10,
+          "citation": "Cette garantie est accordée pendant les 3 mois suivant la date de décès de l’assuré.",
+          "texte": "La garantie est limitée à une période de 3 mois suivant le décès de l'assuré."
+        },
+        {
+          "categorie": "plafonds",
+          "page": 10,
+          "citation": "Les honoraires de l’accompagnateur et les déplacements dans un rayon de 50 km sont pris en charge par AXA Assistance dans la limite de 160 € TTC.",
+          "texte": "Prise en charge limitée à 160 € TTC pour les honoraires et déplacements dans un rayon de 50 km."
+        }
+      ]
+    }
+  },
+  "reasoning_summary": "Définit la durée de validité de la prestation d'assistance.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

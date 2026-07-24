@@ -1,0 +1,25 @@
+{
+  "projection": "inspector",
+  "version": "1.0.0",
+  "generated_at": "2026-07-24T08:45:45Z",
+  "domain": "axa-contrat",
+  "graph_fingerprint": "i_4c0326befdcac337",
+  "contrats": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+  ],
+  "fichiers": [
+    "contrats/<slug>.json",
+    "comparison.json",
+    "matrices.json",
+    "tools.json",
+    "GUIDE_IA.md"
+  ]
+}

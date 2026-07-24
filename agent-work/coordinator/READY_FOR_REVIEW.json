@@ -1,83 +1,81 @@
 {
-  "generated_at": "2026-07-12T19:30:48Z",
+  "generated_at": "2026-07-24T10:27:34Z",
   "high_priority": [
     {
-      "proposal_id": "quality__liens_internes_ia_valides",
-      "agent": "quality",
-      "score": 0.775,
-      "type": "quality",
-      "confidence": 0.99,
-      "origin": "deterministic",
-      "target_file": "ia/",
+      "proposal_id": "extraction_llm_20260711_171146_001",
+      "agent": "extraction-llm",
+      "score": 0.8965,
+      "type": "extraction",
+      "confidence": 0.95,
+      "origin": "llm",
+      "target_file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
       "regulatory_status": "none",
-      "risk": "signal de qualité ; aucune correction appliquée automatiquement",
-      "human_action": "vérification documentaire / correction manuelle",
-      "file": "agent-work/quality/incidents/quality__liens_internes_ia_valides.json",
-      "summary": "Contrôle qualité déterministe en échec (connue) : liens internes /ia valides — cassés: 19 ['glossaire.html -> contrat/essenciel.html', 'glossaire.html -> contra"
+      "risk": "validation notice PDF obligatoire ; master jamais modifie",
+      "human_action": "revue humaine",
+      "file": "agent-work/extraction/pending/extraction_llm_20260711_171146_001.json",
+      "summary": "Définit la durée de validité de la prestation d'assistance."
     },
     {
-      "proposal_id": "quality__notices_pdf_r_solues_sur_disque",
-      "agent": "quality",
-      "score": 0.775,
-      "type": "quality",
-      "confidence": 0.99,
-      "origin": "deterministic",
-      "target_file": "ia/",
+      "proposal_id": "extraction_llm_20260711_175433_001",
+      "agent": "extraction-llm",
+      "score": 0.8965,
+      "type": "extraction",
+      "confidence": 0.95,
+      "origin": "llm",
+      "target_file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
       "regulatory_status": "none",
-      "risk": "signal de qualité ; aucune correction appliquée automatiquement",
-      "human_action": "vérification documentaire / correction manuelle",
-      "file": "agent-work/quality/incidents/quality__notices_pdf_r_solues_sur_disque.json",
-      "summary": "Contrôle qualité déterministe en échec (connue) : notices PDF résolues sur disque — 0/11 résolues"
+      "risk": "validation notice PDF obligatoire ; master jamais modifie",
+      "human_action": "revue humaine",
+      "file": "agent-work/extraction/pending/extraction_llm_20260711_175433_001.json",
+      "summary": "Ces concepts sont absents des définitions du contrat alors qu'ils sont souvent liés aux garanties de prévoyance."
     },
     {
-      "proposal_id": "quality__preuves_avec_source_document_notice",
-      "agent": "quality",
-      "score": 0.775,
-      "type": "quality",
-      "confidence": 0.99,
-      "origin": "deterministic",
-      "target_file": "ia/",
+      "proposal_id": "extraction_llm_20260711_171146_003",
+      "agent": "extraction-llm",
+      "score": 0.878,
+      "type": "extraction",
+      "confidence": 0.95,
+      "origin": "llm",
+      "target_file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
       "regulatory_status": "none",
-      "risk": "signal de qualité ; aucune correction appliquée automatiquement",
-      "human_action": "vérification documentaire / correction manuelle",
-      "file": "agent-work/quality/incidents/quality__preuves_avec_source_document_notice.json",
-      "summary": "Contrôle qualité déterministe en échec (connue) : preuves avec source (document/notice) — sans source: 6 /616"
+      "risk": "validation notice PDF obligatoire ; master jamais modifie",
+      "human_action": "revue humaine",
+      "file": "agent-work/extraction/pending/extraction_llm_20260711_171146_003.json",
+      "summary": "Définit la période d'éligibilité au service."
     },
     {
-      "proposal_id": "quality__sorties_ia_publi_es_synchronis_es",
-      "agent": "quality",
-      "score": 0.775,
-      "type": "quality",
-      "confidence": 0.99,
-      "origin": "deterministic",
-      "target_file": "ia/",
+      "proposal_id": "extraction_llm_20260711_172002_003",
+      "agent": "extraction-llm",
+      "score": 0.878,
+      "type": "extraction",
+      "confidence": 0.95,
+      "origin": "llm",
+      "target_file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
       "regulatory_status": "none",
-      "risk": "signal de qualité ; aucune correction appliquée automatiquement",
-      "human_action": "vérification documentaire / correction manuelle",
-      "file": "agent-work/quality/incidents/quality__sorties_ia_publi_es_synchronis_es.json",
-      "summary": "Contrôle qualité déterministe en échec (connue) : sorties /ia publiées synchronisées — désynchronisés: 146"
+      "risk": "validation notice PDF obligatoire ; master jamais modifie",
+      "human_action": "revue humaine",
+      "file": "agent-work/extraction/pending/extraction_llm_20260711_172002_003.json",
+      "summary": "Définit une condition temporelle pour la sortie du contrat."
     },
     {
-      "proposal_id": "coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques",
-      "agent": "coverage-gaps",
-      "score": 0.73,
-      "type": "coverage",
-      "confidence": 0.9,
-      "origin": "deterministic",
-      "target_file": "ia/matrices/couverture.json",
+      "proposal_id": "extraction_llm_20260711_172002_004",
+      "agent": "extraction-llm",
+      "score": 0.878,
+      "type": "extraction",
+      "confidence": 0.95,
+      "origin": "llm",
+      "target_file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
       "regulatory_status": "none",
-      "risk": "ne signifie pas que la donnée manque dans le contrat : seulement absente des don",
-      "human_action": "vérification documentaire humaine (donnée structurée manquante)",
-      "file": "agent-work/quality/incidents/coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques.json",
-      "summary": "Contrat « Essen'Ciel (assurance obsèques) » : catégorie(s) definitions, conditions, declencheurs absente(s) des données structurées. — Constat sur DONNÉES STRUC"
+      "risk": "validation notice PDF obligatoire ; master jamais modifie",
+      "human_action": "revue humaine",
+      "file": "agent-work/extraction/pending/extraction_llm_20260711_172002_004.json",
+      "summary": "Définit le mécanisme de maintien des garanties en cas d'arrêt de paiement."
     }
   ],
   "anomalies": {
     "new": [],
     "known": [
       "sorties /ia publiées synchronisées",
-      "liens internes /ia valides",
-      "notices PDF résolues sur disque",
       "preuves avec source (document/notice)"
     ],
     "corrected": []
@@ -86,21 +84,22 @@
   "official_source_changes": [],
   "conflicts": [],
   "recommended_order": [
-    "quality__liens_internes_ia_valides",
-    "quality__notices_pdf_r_solues_sur_disque",
-    "quality__preuves_avec_source_document_notice",
-    "quality__sorties_ia_publi_es_synchronis_es",
-    "coverage__categorie_absente_donnees_essen_ciel_assurance_obs_ques"
+    "extraction_llm_20260711_171146_001",
+    "extraction_llm_20260711_175433_001",
+    "extraction_llm_20260711_171146_003",
+    "extraction_llm_20260711_172002_003",
+    "extraction_llm_20260711_172002_004"
   ],
   "counts": {
-    "real_pending": 8,
+    "real_pending": 56,
     "fixtures": 0,
     "by_agent": {
-      "quality": 4,
+      "extraction-llm": 50,
+      "quality": 2,
       "coverage-gaps": 4
     },
-    "summary_bytes": 3803
+    "summary_bytes": 5794
   },
   "fixtures_note": "0 fixture(s) de démonstration exclue(s) de la priorisation (origin example_fixture/mock).",
-  "estimated_work_saved": "8 contrôle(s)/trou(s) déjà transformé(s) en incidents structurés et sourcés : Claude examine les 5 éléments prioritaires (~24 min économisées) au lieu de refaire l'analyse."
+  "estimated_work_saved": "56 contrôle(s)/trou(s) déjà transformé(s) en incidents structurés et sourcés : Claude examine les 5 éléments prioritaires (~168 min économisées) au lieu de refaire l'analyse."
 }

@@ -1,0 +1,99 @@
+{
+  "version": "1.0.0",
+  "tools": [
+    {
+      "nom": "analyser_contrat",
+      "moteur": "inspector_mono.reasoning_sheet",
+      "entree": {
+        "subject": "str"
+      },
+      "sortie": "fiche mono-contrat (finalité, garanties, exclusions, environnement, incertitudes)",
+      "fichier": "contrats/<slug>.json"
+    },
+    {
+      "nom": "comparer_contrats",
+      "moteur": "inspector_multi.compare",
+      "entree": {
+        "subjects": "[str]"
+      },
+      "sortie": "paires classées (substituables/complémentaires/…) + trous",
+      "fichier": "comparison.json"
+    },
+    {
+      "nom": "analyser_cas_client",
+      "moteur": "inspector_mono.apply_case",
+      "entree": {
+        "subject": "str",
+        "case": "objet cas (statuts requis)"
+      },
+      "sortie": "conclusion PROVISOIRE conditionnelle + données manquantes"
+    },
+    {
+      "nom": "decomposer_besoin",
+      "moteur": "inspector_needs.decompose",
+      "entree": {
+        "case": "objet cas"
+      },
+      "sortie": "arbre objectifs→besoins→contrats candidats→données nécessaires"
+    },
+    {
+      "nom": "construire_solutions",
+      "moteur": "inspector_solution.build_scenarios",
+      "entree": {
+        "case": "objet cas"
+      },
+      "sortie": "scénarios (mono/multi/renforcé/existant) + besoins non couverts + doublons"
+    },
+    {
+      "nom": "comparer_solutions",
+      "moteur": "inspector_solution.arbitrate",
+      "entree": {
+        "scenarios": "[...]"
+      },
+      "sortie": "meilleur par axe + compromis, jamais de 'meilleur' absolu"
+    },
+    {
+      "nom": "avis_inspecteur",
+      "moteur": "inspector_advice.advise",
+      "entree": {
+        "case": "objet cas (statuts requis)"
+      },
+      "sortie": "avis structuré : profil, risques PRIORISÉS (protéger avant d'épargner, dettes d'abord), audit de l'existant (couvert/trou/doublon), plan d'action ordonné avec pourquoi + questions + pièges fréquents, objections probables, réserves",
+      "fichier": "cas-clients/avis_inspecteur.example.json",
+      "validation": "HUMAINE (avis conditionnel, heuristiques étiquetées)"
+    },
+    {
+      "nom": "kit_rendez_vous",
+      "moteur": "commercial_kit.build_kit",
+      "entree": {
+        "case": "objet cas (statuts requis)"
+      },
+      "sortie": "kit d'entretien complet : fiche de préparation, plan en 6 phases, questions de découverte, argumentaires par contrat (accroche + pièges + parades aux objections), trame de compte-rendu/mail. JSON + Markdown copiable.",
+      "fichier": "commercial/kit_rdv.example.json",
+      "validation": "HUMAINE (relire avant usage ; aucun tarif/règle fiscale affirmés)"
+    },
+    {
+      "nom": "identifier_informations_manquantes",
+      "moteur": "inspector_case.completeness",
+      "entree": {
+        "case": "objet cas"
+      },
+      "sortie": "champs manquants + score de complétude"
+    },
+    {
+      "nom": "detecter_doublons_et_trous",
+      "moteur": "inspector_multi.coverage_gaps",
+      "entree": {
+        "subjects": "[str]"
+      },
+      "sortie": "trous de couverture par mécanisme"
+    },
+    {
+      "nom": "matrices",
+      "moteur": "inspector_projection",
+      "entree": {},
+      "sortie": "mecanisme→contrats, contrat→garanties/conditions/exclusions, concept→définitions",
+      "fichier": "matrices.json"
+    }
+  ]
+}

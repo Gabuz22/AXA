@@ -1,0 +1,99 @@
+{
+  "cycle_id": "cycle_20260711_130002",
+  "started_at": "2026-07-11T13:00:02Z",
+  "dry_run": false,
+  "status": "ok",
+  "deterministic_ran": [
+    {
+      "agent": "coverage-gaps",
+      "status": "ok"
+    },
+    {
+      "agent": "quality",
+      "status": "ok"
+    }
+  ],
+  "llm_decisions": [
+    {
+      "task_id": "t_40c54f633d4328c5",
+      "agent": "extraction-llm",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite",
+      "alternatives": [],
+      "rejected": [
+        [
+          "cloudflare",
+          "clé absente"
+        ],
+        [
+          "openrouter",
+          "clé absente"
+        ],
+        [
+          "groq",
+          "clé absente"
+        ]
+      ],
+      "reason": "meilleur score gratuit (qualité=50, fiabilité=1.00, prio=1, latence=1.00s)",
+      "estimated_cost": 0,
+      "next_on_fail": "bascule fournisseur suivant ou waiting_reset"
+    }
+  ],
+  "tasks_executed": [
+    {
+      "task_id": "t_40c54f633d4328c5",
+      "provider": "gemini",
+      "model": "gemini-2.5-flash-lite",
+      "status": "completed"
+    }
+  ],
+  "tasks_deferred": [
+    {
+      "task_id": "t_4fa2b72f23346bae",
+      "raison": "regroupé avec le run unique de extraction-llm ce cycle"
+    },
+    {
+      "task_id": "t_bcee5155c6c44062",
+      "raison": "regroupé avec le run unique de extraction-llm ce cycle"
+    }
+  ],
+  "provider_changes": [
+    {
+      "provider": "gemini",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 0
+    },
+    {
+      "provider": "groq",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 0
+    },
+    {
+      "provider": "cloudflare",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 0
+    },
+    {
+      "provider": "openrouter",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 0
+    }
+  ],
+  "notes": []
+}

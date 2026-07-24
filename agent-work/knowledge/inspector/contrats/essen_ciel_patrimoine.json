@@ -1,0 +1,347 @@
+{
+  "subject": "Essen'Ciel Patrimoine",
+  "domain": "axa-contrat",
+  "finalite": {
+    "texte": "Garantir un capital décès aux bénéficiaires dans une logique viagère et patrimoniale : protection décès permanente avec revalorisation/participation aux bénéfices, faculté de rachat et valeur de réduction — à la frontière entre prévoyance décès et transmission.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "logique_contractuelle": {
+    "texte": "Contrat de type « vie entière » : le capital décès est dû quel que soit le moment du décès, la valeur du contrat se constitue dans le temps (revalorisation), et l'assuré conserve des droits du vivant (rachat total/partiel selon tableau de valeurs, mise en réduction si arrêt des cotisations).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_favorables": {
+    "texte": "Transmission d'un capital certain aux bénéficiaires, souhait de conserver une porte de sortie (rachat).",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "situations_defavorables": {
+    "texte": "Recherche de rendement d'épargne pure (voir assurance vie) ; horizon très court.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "articulations": [
+    {
+      "type": "limits",
+      "de": "Risques exclus de la garantie décès",
+      "vers": "Garantie décès — versement d'un capital aux bénéficiaires",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Mise en réduction (valeur de réduction)",
+      "vers": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    },
+    {
+      "type": "complements",
+      "de": "Prestations d'assistance (suite au décès)",
+      "vers": "Garantie décès — versement d'un capital aux bénéficiaires",
+      "origine": "knowledge-builder",
+      "statut": "pending_review",
+      "validation_required": true
+    }
+  ],
+  "architecture_garanties": {
+    "principales": [],
+    "secondaires": [
+      "Garantie décès — versement d'un capital aux bénéficiaires",
+      "Revalorisation / participation aux bénéfices"
+    ],
+    "total": 2
+  },
+  "declencheurs": [],
+  "conditions": [],
+  "exclusions": [
+    "Risques exclus de la garantie décès"
+  ],
+  "limites_plafonds": [],
+  "options": [
+    "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+    "Mise en réduction (valeur de réduction)",
+    "Réduction tarifaire couple (-10 %)",
+    "Prestations d'assistance (suite au décès)"
+  ],
+  "points_vigilance": [],
+  "concepts_structurants": [
+    "Rachat"
+  ],
+  "environnement": [
+    {
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      }
+    }
+  ],
+  "preuves": [
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "2, 4, 16",
+      "citation": "Garantie décès — versement d'un capital aux bénéficiaires"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "6, 8",
+      "citation": "Revalorisation / participation aux bénéfices"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "6",
+      "citation": "Risques exclus de la garantie décès"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "2, 14, 15",
+      "citation": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "13, 14, 15",
+      "citation": "Mise en réduction (valeur de réduction)"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "13",
+      "citation": "Réduction tarifaire couple (-10 %)"
+    },
+    {
+      "document": "EssenCiel Patrimoine/2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+      "page": "7, 9, 10",
+      "citation": "Prestations d'assistance (suite au décès)"
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "finalite",
+      "explication": "Garantir un capital décès aux bénéficiaires dans une logique viagère et patrimoniale : protection décès permanente avec revalorisation/participation aux bénéfices, faculté de rachat et valeur de réduction — à la frontière entre prévoyance décès et transmission.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "logique_contractuelle",
+      "explication": "Contrat de type « vie entière » : le capital décès est dû quel que soit le moment du décès, la valeur du contrat se constitue dans le temps (revalorisation), et l'assuré conserve des droits du vivant (rachat total/partiel selon tableau de valeurs, mise en réduction si arrêt des cotisations).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "confusions_frequentes",
+      "explication": "Ne pas confondre avec Essen'Ciel « obsèques » : ici la logique est patrimoniale (capital transmis, rachat possible), pas seulement le financement des funérailles. La mise en réduction diminue la garantie mais ne l'annule pas ; le rachat, lui, met fin au contrat.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "situations_favorables",
+      "explication": "Transmission d'un capital certain aux bénéficiaires, souhait de conserver une porte de sortie (rachat).",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    },
+    {
+      "element": "Essen'Ciel Patrimoine",
+      "aspect": "situations_defavorables",
+      "explication": "Recherche de rendement d'épargne pure (voir assurance vie) ; horizon très court.",
+      "confidence": 0.55,
+      "nature": "interpretation",
+      "origine": "simulation_assistee_par_claude",
+      "statut": "simulated_claude",
+      "validation_required": true
+    }
+  ],
+  "confusions_frequentes": {
+    "texte": "Ne pas confondre avec Essen'Ciel « obsèques » : ici la logique est patrimoniale (capital transmis, rachat possible), pas seulement le financement des funérailles. La mise en réduction diminue la garantie mais ne l'annule pas ; le rachat, lui, met fin au contrat.",
+    "nature": "interpretation",
+    "origine": "simulation_assistee_par_claude",
+    "statut": "simulated_claude",
+    "validation_required": true
+  },
+  "incertitudes": [
+    {
+      "axis": "understanding",
+      "current": 0.125,
+      "why": "entités sans explication (finalité/logique)",
+      "recommended_task": "expliquer"
+    }
+  ],
+  "profondeur": 0.775,
+  "couverture_semantique": 0.231,
+  "validation": {
+    "blocks": {
+      "validated_knowledge": [
+        {
+          "label": "Garantie décès — versement d'un capital aux bénéficiaires",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.92
+        },
+        {
+          "label": "Revalorisation / participation aux bénéfices",
+          "subtype": "garantie",
+          "statut": "validated",
+          "confidence": 0.88
+        },
+        {
+          "label": "Risques exclus de la garantie décès",
+          "subtype": "exclusion",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Faculté de rachat (total / partiel) + tableau des valeurs de rachat",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Mise en réduction (valeur de réduction)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.9
+        },
+        {
+          "label": "Réduction tarifaire couple (-10 %)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.92
+        },
+        {
+          "label": "Prestations d'assistance (suite au décès)",
+          "subtype": "option",
+          "statut": "validated",
+          "confidence": 0.85
+        }
+      ],
+      "derived_relations": [
+        {
+          "type": "governed_by",
+          "src": "k_b8c594a211938f0d3cd2",
+          "dst": "k_6fe6e9b4e241d728d145",
+          "statut": "derived_deterministic"
+        }
+      ],
+      "pending_interpretations": [
+        {
+          "type": "limits",
+          "src": "k_7255488673c0bd0bd2df",
+          "dst": "k_d60615daf3d45e9f428a",
+          "statut": "pending_review"
+        },
+        {
+          "type": "complements",
+          "src": "k_c023a058ed4be68bc409",
+          "dst": "k_b8c594a211938f0d3cd2",
+          "statut": "pending_review"
+        },
+        {
+          "type": "complements",
+          "src": "k_89bf15085d83bbc668fc",
+          "dst": "k_d60615daf3d45e9f428a",
+          "statut": "pending_review"
+        }
+      ],
+      "simulated_claude": [
+        {
+          "label": "Essen'Ciel Patrimoine",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_9ad0bdf56e38a944f23e",
+          "dst": "k_76439d714f95c0e6faef",
+          "statut": "simulated_claude"
+        }
+      ],
+      "uncertainties": [],
+      "human_review_required": [
+        {
+          "type": "limits",
+          "src": "k_7255488673c0bd0bd2df",
+          "dst": "k_d60615daf3d45e9f428a",
+          "statut": "pending_review"
+        },
+        {
+          "type": "complements",
+          "src": "k_c023a058ed4be68bc409",
+          "dst": "k_b8c594a211938f0d3cd2",
+          "statut": "pending_review"
+        },
+        {
+          "type": "complements",
+          "src": "k_89bf15085d83bbc668fc",
+          "dst": "k_d60615daf3d45e9f428a",
+          "statut": "pending_review"
+        },
+        {
+          "label": "Essen'Ciel Patrimoine",
+          "subtype": "contrat",
+          "statut": "simulated_claude",
+          "confidence": 0.55
+        },
+        {
+          "type": "comparable_to",
+          "src": "k_9ad0bdf56e38a944f23e",
+          "dst": "k_76439d714f95c0e6faef",
+          "statut": "simulated_claude"
+        }
+      ],
+      "stale": [],
+      "contradictory": []
+    },
+    "counts": {
+      "validated": 7,
+      "pending_review": 3,
+      "simulated_claude": 2,
+      "derived_deterministic": 1
+    },
+    "legend": {
+      "exposable_as_truth": [
+        "derived_deterministic",
+        "validated"
+      ],
+      "visible_if_labeled_only": [
+        "contradictory",
+        "pending_review",
+        "simulated_claude",
+        "stale",
+        "uncertain"
+      ],
+      "never_exposed": [
+        "rejected"
+      ]
+    }
+  },
+  "avertissement": "Fiche dérivée du graphe (lecture seule). Blocs de validation SÉPARÉS : 'validated_knowledge' (masters validés) exposable comme vérité ; 'pending_interpretations'/'simulated_claude'/'stale'/'contradictory' visibles UNIQUEMENT étiquetés, jamais comme clause/règle certaine. Vérifier les preuves."
+}

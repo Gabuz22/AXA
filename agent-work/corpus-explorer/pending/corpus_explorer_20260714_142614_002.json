@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260714_142614_002",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260714_142609",
+  "created_at": "2026-07-14T14:26:14Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "titre"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-04 Notice d'information Avizen Pro (AEP).pdf",
+    "pages": "2-2",
+    "excerpt": "Contrat « Avizen Pro » — zone titre (pages 2-2) : couverture partielle. 10 élément(s) possiblement absent(s) de la connaissance : Assurances Vie Mutuelle, Avizen Pro\nCette Notice, Avizen Pro, France Vie, Notice, Objet, AXA France Vie, AXA Assurances Vie Mutuelle."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Avizen Pro",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#titre:2-2",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Assurances Vie Mutuelle",
+        "Avizen Pro\nCette Notice",
+        "Avizen Pro",
+        "France Vie",
+        "Notice",
+        "Objet",
+        "AXA France Vie",
+        "AXA Assurances Vie Mutuelle"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Avizen Pro » — zone titre (pages 2-2) : couverture partielle. 10 élément(s) possiblement absent(s) de la connaissance : Assurances Vie Mutuelle, Avizen Pro\nCette Notice, Avizen Pro, France Vie, Notice, Objet, AXA France Vie, AXA Assurances Vie Mutuelle. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

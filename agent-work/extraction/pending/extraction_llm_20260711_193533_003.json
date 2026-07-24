@@ -1,0 +1,74 @@
+{
+  "proposal_id": "extraction_llm_20260711_193533_003",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260711_193528",
+  "created_at": "2026-07-11T19:35:33Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_assurance_obseques",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "bloc:plafonds"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+    "page": 24,
+    "url": null,
+    "excerpt": "Le montant total des frais pris en charge au titre des 3 garanties ci-dessous (Rapatriement de corps, Retour d’un membre de la famille et Présence d’un membre de la famille) est limité à 3 600 € TTC au global."
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "plafonds",
+      "texte": "Plafond global des garanties d'assistance décès",
+      "diff": "Ajoute une limite monétaire globale pour les garanties d'assistance.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.95 : citation nette.",
+      "importance": "forte",
+      "review_cost": "1 min",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Essen'Ciel (assurance obsèques)\"] / plafonds",
+      "citation_exacte": "Le montant total des frais pris en charge au titre des 3 garanties ci-dessous (Rapatriement de corps, Retour d’un membre de la famille et Présence d’un membre de la famille) est limité à 3 600 € TTC au global.",
+      "why_missing": "nouveau contrat",
+      "why_interesting": "Définit la limite financière globale pour les prestations d'assistance.",
+      "why_probably_absent": "nouveau contrat",
+      "documentary_interest": 1.0,
+      "priority_level": "haute",
+      "value_score": 0.87,
+      "bloc": [
+        {
+          "categorie": "plafonds",
+          "page": 24,
+          "citation": "Le montant total des frais pris en charge au titre des 3 garanties ci-dessous (Rapatriement de corps, Retour d’un membre de la famille et Présence d’un membre de la famille) est limité à 3 600 € TTC au global.",
+          "texte": "Plafond global des garanties d'assistance décès"
+        },
+        {
+          "categorie": "conditions",
+          "page": 24,
+          "citation": "Ces garanties s’exercent dans le monde entier, lorsque le décès survient à plus de 30 km du domicile de l’assuré. À l’étranger, seuls les séjours de moins de 90 jours sont couverts.",
+          "texte": "Conditions géographiques et temporelles pour l'assistance décès"
+        }
+      ]
+    }
+  },
+  "reasoning_summary": "Définit la limite financière globale pour les prestations d'assistance.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

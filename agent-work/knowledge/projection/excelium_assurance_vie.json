@@ -1,0 +1,632 @@
+{
+  "projection_version": "1.0.0",
+  "subject": "Excelium (assurance vie)",
+  "domain": "axa-contrat",
+  "synthese": {
+    "depth_score": 0.74,
+    "semantic_coverage": 0.385,
+    "profondeur": {
+      "L1": 12,
+      "L2": 20,
+      "L3": 21,
+      "L4": 1
+    },
+    "rates": {
+      "proof": 0.6,
+      "unrelated": 0.35,
+      "uncertainty": 0.35,
+      "contradiction": 0.0,
+      "n_entities": 20
+    }
+  },
+  "connaissances": {
+    "garantie": [
+      {
+        "label": "Garantie en cas de décès",
+        "resume": "Capital décès = épargne tous supports confondus, OU montant dû au titre de la garantie « Sérénité », OU montant dû au titre de la garantie « Revalorisée ». Le versement met fin à l'adhésion.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 15,
+            "citation": "Garantie en cas de décès"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Garantie « Revalorisée »",
+        "resume": "Souscrite automatiquement et exclusivement si gestion par convention Conviction Fortissimo ou Horizon Actions Fortissimo (sans fonds Croissance) ET âge < 70 ans à l'adhésion. Capital décès minimum = cumul des versements NETS revalorisés au taux mensuel du Livret A (du 1er jour du mois suivant l'encaissement au dernier jour du mois précédant le décès), minorés proportionnellement à chaque rachat partiel. Effet à la fin du délai de renonciation ; cesse en cas de changement de gestion/convention avec fonds Croissance, rachat total, renonciation, ou au 1er…",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 16,
+            "citation": "Garantie « Revalorisée »"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Garantie « Sérénité » (plancher, incluse)",
+        "resume": "Capital décès jamais inférieur aux versements BRUTS de frais diminués des rachats. Cesse au 80e anniversaire (coût inclus dans les frais de gestion des UC, prélevé toute la durée y compris après 80 ans). Fonds Croissance : si décès entre 80 et 90 ans avant l'échéance, minimum = montant garanti du fonds Croissance, sans frais. Cesse en cas de renonciation ou rachat total.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 15,
+            "citation": "Garantie « Sérénité » (plancher, incluse)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Garantie en cas de vie (au terme)",
+        "resume": "Capital, ou sur proposition de l'assureur rente viagère (conditions et tarif en vigueur à la demande : frais d'arrérage, taux technique, table de mortalité ; trop-perçus post-décès remboursés par les héritiers). Le règlement met fin à l'adhésion.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 15,
+            "citation": "Garantie en cas de vie (au terme)"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "exclusion": [
+      {
+        "label": "Exclusions de la garantie « Revalorisée »",
+        "resume": "Suicide/tentative (conscient ou non) ou tout acte volontaire de l'assuré dans l'année suivant la prise d'effet ; guerre civile/étrangère/insurrection, opérations de maintien de l'ordre/paix ; accident en conduite d'engin à moteur avec alcoolémie ≥ taux légal du pays ou sous toxiques/stupéfiants/médicaments non prescrits ; accident antérieur à la prise d'effet ou maladie à premières manifestations antérieures, sauf acceptation expresse d'AXA.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 16,
+            "citation": "Exclusions de la garantie « Revalorisée »"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "option": [
+      {
+        "label": "Prorogation du fonds Croissance",
+        "resume": "Option expresse, sans frais, à tout moment : à l'échéance, la garantie (10 ans) est prorogée ; renonciation possible par lettre simple ; l'assureur peut refuser jusqu'à 3 mois avant l'échéance. Les prélèvements sociaux du fonds Croissance sont reportés à la nouvelle échéance.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 20,
+            "citation": "Prorogation du fonds Croissance"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Types de gestion",
+        "resume": "Gestion personnelle (libre choix des supports) ; gestion par convention (profils, dont conventions Conviction/Horizon, avec ou sans fonds Croissance, équilibrages automatiques) ; gestion pilotée / sous mandat (profils d'allocation, frais de mandat +0,25 %/an sur UC). Options d'arbitrage automatique en gestion personnelle : investissement progressif (0 %), sécurisation des performances (0,80 %), stop loss (0 %).",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 79,
+            "citation": "Types de gestion"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Rachats partiels programmés",
+        "resume": "Durée max 3 ans, montant en euros (brut ou net de fiscalité), périodicité au choix ; min 150 €/rachat, valeur de rachat restante ≥ 750 € ; incompatible avec versements programmés et options d'arbitrage automatique ; modifications avec préavis 1 mois ; une seule suspension/reprise ; l'assureur peut arrêter l'option.",
+        "confidence": 0.9,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 45,
+            "citation": "Rachats partiels programmés"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "point_vigilance": [
+      {
+        "label": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+        "resume": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+        "resume": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
+        "resume": "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+        "resume": "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
+        "resume": "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+        "resume": "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.",
+        "resume": "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.",
+        "confidence": 0.35,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "formule": [
+      {
+        "label": "Valeur de rachat minimale support euros",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 46,
+            "citation": "Valeur de rachat minimale support euros"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Nombre d'UC/parts après frais",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 47,
+            "citation": "Nombre d'UC/parts après frais"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Prime mensuelle garantie Revalorisée",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 17,
+            "citation": "Prime mensuelle garantie Revalorisée"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      },
+      {
+        "label": "Montant garanti Revalorisée",
+        "resume": null,
+        "confidence": 0.6,
+        "sources": [
+          {
+            "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+            "page": 16,
+            "citation": "Montant garanti Revalorisée"
+          }
+        ],
+        "validation_required": false,
+        "version": 1
+      }
+    ],
+    "contrat": [
+      {
+        "label": "Excelium (assurance vie)",
+        "resume": null,
+        "confidence": 0.55,
+        "sources": [],
+        "validation_required": false,
+        "version": 1
+      }
+    ]
+  },
+  "relations": [
+    {
+      "type": "limits",
+      "de": "Garantie « Revalorisée »",
+      "vers": "Exclusions de la garantie « Revalorisée »",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "refines",
+      "de": "Garantie « Revalorisée »",
+      "vers": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    },
+    {
+      "type": "refines",
+      "de": "Garantie « Sérénité » (plancher, incluse)",
+      "vers": "Garantie en cas de décès",
+      "directed": true,
+      "confidence": 0.9,
+      "validation_required": true
+    }
+  ],
+  "environnement": [
+    {
+      "clause": "Garantie en cas de décès",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Garantie en cas de décès",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Garantie en cas de décès",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Garantie « Revalorisée »",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Garantie « Revalorisée »",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Garantie « Revalorisée »",
+      "concept": "Souscription & adhésion",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Garantie « Sérénité » (plancher, incluse)",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Garantie « Sérénité » (plancher, incluse)",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Garantie en cas de vie (au terme)",
+      "concept": "Décès",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Garantie en cas de vie (au terme)",
+      "concept": "Décès accidentel",
+      "domaine": "reglementation",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Rachats partiels programmés",
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Rachats partiels programmés",
+      "concept": "Fiscalité",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
+      "concept": "Fiscalité",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Valeur de rachat minimale support euros",
+      "concept": "Rachat",
+      "domaine": "fiscalite",
+      "fraicheur": {
+        "as_of": "2026-07-10",
+        "ttl_days": 365,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+      "concept": "Types de gestion",
+      "domaine": "axa-contrat",
+      "fraicheur": {
+        "as_of": "2026-07-11T22:58:00Z",
+        "ttl_days": null,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    },
+    {
+      "clause": "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+      "concept": "Types de gestion",
+      "domaine": "axa-contrat",
+      "fraicheur": {
+        "as_of": "2026-07-11T22:58:00Z",
+        "ttl_days": null,
+        "checked_at": "2026-07-24T08:45:45Z"
+      },
+      "validation_required": true
+    }
+  ],
+  "comprehension": [
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "finalite",
+      "explication": "Assurance vie d'épargne multi-supports : constituer et valoriser un capital (garantie en cas de vie au terme, rachats), tout en protégeant les bénéficiaires en cas de décès (garantie décès, variantes « Revalorisée » et « Sérénité » plancher).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "logique_contractuelle",
+      "explication": "Double nature vie/décès : en cas de vie, l'épargne appartient à l'assuré (rachats partiels ou programmés, types de gestion) ; en cas de décès, les garanties déterminent ce que reçoivent les bénéficiaires — la garantie plancher « Sérénité » protège contre une baisse des supports, la « Revalorisée » applique sa propre mécanique (avec ses exclusions propres).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "confusions_frequentes",
+      "explication": "La garantie plancher protège les BÉNÉFICIAIRES en cas de décès, pas la valeur de rachat du vivant. Les exclusions de la garantie « Revalorisée » ne s'appliquent qu'à cette garantie, pas au contrat entier. L'assurance vie n'est pas un PER : l'épargne reste disponible (rachat), la fiscalité diffère (règles externes à vérifier).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "situations_favorables",
+      "explication": "Épargne de long terme avec disponibilité, transmission encadrée par le régime propre de l'assurance vie (à vérifier selon les règles en vigueur).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "situations_defavorables",
+      "explication": "Besoin d'un revenu garanti à la retraite sans discipline d'épargne (comparer au PER) ; aversion totale au risque si supports en unités de compte.",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    },
+    {
+      "element": "Excelium (assurance vie)",
+      "aspect": "relation_comparable_to_ma_retraite_plan_d_eparg",
+      "explication": "Deux épargnes longues aux liquidités opposées : assurance vie rachetable à tout moment vs PER en principe indisponible jusqu'à la retraite ; fiscalités externes distinctes (à vérifier).",
+      "confidence": 0.55,
+      "nature": "interpretation"
+    }
+  ],
+  "preuves": [
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "citation": "Garantie en cas de décès"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "citation": "Garantie « Revalorisée »"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "citation": "Garantie « Sérénité » (plancher, incluse)"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 15,
+      "citation": "Garantie en cas de vie (au terme)"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "citation": "Exclusions de la garantie « Revalorisée »"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 20,
+      "citation": "Prorogation du fonds Croissance"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 79,
+      "citation": "Types de gestion"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 45,
+      "citation": "Rachats partiels programmés"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 46,
+      "citation": "Valeur de rachat minimale support euros"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 47,
+      "citation": "Nombre d'UC/parts après frais"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 17,
+      "citation": "Prime mensuelle garantie Revalorisée"
+    },
+    {
+      "document": "Excelium/2026-05 Notice Excelium Vie.pdf",
+      "page": 16,
+      "citation": "Montant garanti Revalorisée"
+    }
+  ],
+  "incertitudes": [
+    {
+      "label": "Gestion personnelle : pas de valeur de rachat minimale en euros (frais forfaitaires 25 € et prélèvements non plafonnés en nombre d'UC).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Garantie Revalorisée : hypothèse Livret A 1 %/an dans les simulations — taux variable en réalité ; plafond de capital sous risque 1,2 M€.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Fiscalité : annexe au 01/01/2026, susceptible d'évolutions ; seuil de 150 000 € de primes pour le taux 7,5 % après 8 ans.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "UC : l'assureur ne s'engage que sur le NOMBRE d'unités de compte, jamais sur leur valeur (risque de perte en capital).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Garantie Sérénité : coût inclus dans les frais de gestion UC et prélevé même APRÈS l'âge limite de couverture (80 ans).",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "AXA Immo Avenir : frais de gestion majorés (1,50 %/an) et délais de règlement allongés.",
+      "confidence": 0.35,
+      "ambiguities": []
+    },
+    {
+      "label": "Fonds Croissance : garantie de capital uniquement À L'ÉCHÉANCE (10 ans, prorogeable) ; valeur fluctuante avant.",
+      "confidence": 0.35,
+      "ambiguities": []
+    }
+  ],
+  "fraicheur": {
+    "axe": 1.0
+  },
+  "axes_faibles": [
+    "understanding"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "proposal_id": "extraction_llm_20260723_084737_003",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260723_084730",
+  "created_at": "2026-07-23T08:47:37Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "avizen_pro",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-04 Notice d'information Avizen Pro (AEP).pdf",
+    "page": 21,
+    "url": null,
+    "excerpt": "Les professions mentionnées ci-après peuvent bénéficier du barème spécifique : Administrateurs – Mandataires de justice ; Anesthésistes-réanimateurs ; Architectes ; Audioprothésistes ; Avocats ; Biologistes (médecins) ; Biologistes (pharmaciens) ; Chiropracteurs ; Chirurgiens ; Chirurgiens-dentistes, orthodontistes et stomatologistes ; Commissaires aux comptes ; Commissaires-Priseurs ; Experts comptables ; Géomètres-Experts ; Greffiers des tribunaux de commerce ; Huissiers de justice ; Infirmiers et sages-femmes ; Masseurs-kinésithérapeutes ; Médecins généralistes ; Médecins spécialistes ; Notaires ; Opticiens ; Orthophonistes ; Orthoptistes ; Ostéopathes ; Pédicures-podologues ; Pharmaciens ; Vétérinaires."
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "garanties",
+      "texte": "Liste des professions éligibles au barème spécifique",
+      "diff": "Liste exhaustive des professions éligibles au barème spécifique.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.95 : citation nette.",
+      "importance": "moyenne",
+      "review_cost": "30 s",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Avizen Pro\"] / garanties",
+      "citation_exacte": "Les professions mentionnées ci-après peuvent bénéficier du barème spécifique : Administrateurs – Mandataires de justice ; Anesthésistes-réanimateurs ; Architectes ; Audioprothésistes ; Avocats ; Biologistes (médecins) ; Biologistes (pharmaciens) ; Chiropracteurs ; Chirurgiens ; Chirurgiens-dentistes, orthodontistes et stomatologistes ; Commissaires aux comptes ; Commissaires-Priseurs ; Experts comptables ; Géomètres-Experts ; Greffiers des tribunaux de commerce ; Huissiers de justice ; Infirmiers et sages-femmes ; Masseurs-kinésithérapeutes ; Médecins généralistes ; Médecins spécialistes ; Notaires ; Opticiens ; Orthophonistes ; Orthoptistes ; Ostéopathes ; Pédicures-podologues ; Pharmaciens ; Vétérinaires.",
+      "why_missing": "nouveau contrat",
+      "why_interesting": "Détaille les professions pouvant bénéficier d'une évaluation spécifique de l'invalidité.",
+      "why_probably_absent": "nouveau contrat",
+      "documentary_interest": 0.9,
+      "priority_level": "haute",
+      "value_score": 0.941,
+      "bloc": []
+    }
+  },
+  "reasoning_summary": "Détaille les professions pouvant bénéficier d'une évaluation spécifique de l'invalidité.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}
