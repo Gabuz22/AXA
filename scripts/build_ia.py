@@ -770,11 +770,15 @@ l'adresse exacte à lui indiquer est : **%(site_ia)sinstructions-maitres.txt** (
 **%(site_ia)sstart.txt**). Applique alors ces règles et **signale comme non vérifiée** toute affirmation
 que tu n'as pas pu sourcer.
 """ % {"nc": len(CONTRACT_META), "nel": n_el, "version": VERSION, "date": DATE, "site_ia": SITE_IA,
-       "ligne_api": ("\n- **Présélection CHIFFRÉE et garantie** (jamais approximée par toi) : construis et appelle "
-                     "`%sapi/preselection?age=<âge>&budget=<€/mois>&besoins=<id:importance,...>&existants=<noms séparés par virgule>` "
+       "ligne_api": (("\n- **Présélection CHIFFRÉE et garantie** (jamais approximée par toi) : construis et appelle "
+                     "`%(b)sapi/preselection?age=<âge>&budget=<€/mois>&besoins=<id:importance,...>&existants=<noms séparés par virgule>` "
                      "— les ids de besoins valides apparaissent dans l'erreur si tu en donnes un inconnu. Le résultat est "
-                     "DÉJÀ calculé et sourcé, tu n'as pas à réappliquer le barème toi-même. Lecture seule, aucune donnée "
-                     "nominative acceptée." % CLOUDFLARE_API_BASE) if CLOUDFLARE_API_BASE else "",
+                     "DÉJÀ calculé et sourcé, tu n'as pas à réappliquer le barème toi-même."
+                     "\n- **Diagnostic CAS CLIENT exécuté** (raisonnement priorisé, pour n'importe quel profil, pas seulement les 6 cas-types) : "
+                     "`%(b)sapi/diagnostic?statut=<salarie|tns|fonctionnaire|retraite|sans_activite>&famille=<celibataire|couple|enfants|recomposee>&age=<âge>&credit=<1|0>&collectif=<1|0>&evts=<événements>&besoins=<risques exprimés>&existants=<contrats en place>` "
+                     "— rend les risques priorisés (déclaré/déduit/hypothèse), la couverture (doublon/trou), les contrats à examiner et ce qui reste à clarifier. "
+                     "Un profil vide renvoie le vocabulaire accepté."
+                     "\n  Les deux endpoints sont en LECTURE SEULE et n'acceptent AUCUNE donnée nominative.") % {"b": CLOUDFLARE_API_BASE}) if CLOUDFLARE_API_BASE else "",
        "ex1_q": ex1_q, "ex1_d": ex1_d, "ex2_q": ex2_q, "ex2_d": ex2_d, "ex3_q": ex3_q, "ex3_d": ex3_d,
        "e1_txt": e1_txt, "e1_cite": e1_cite,
        "at1_q": at1_q, "at1_d": at1_d, "at2_q": at2_q, "at2_d": at2_d, "at3_q": at3_q, "at3_d": at3_d}

@@ -54,8 +54,10 @@
 <li><strong>Contrôler ta propre réponse</strong> avant de l&#x27;envoyer → <a href="tests-qualite.html">tests de qualité</a> · <a href="verifier.html">vérificateur</a></li>
 <li>Limites de la base → <a href="couverture.html">couverture</a> · <a href="qualite-routage.html">qualité du routage</a></li>
 <li>Version machine de cette carte : <a href="selection.json">selection.json</a> · tout le reste : <a href="ai-manifest.json">ai-manifest.json</a></li>
-<li><strong>Présélection CHIFFRÉE et garantie</strong> (jamais approximée par toi) : construis et appelle <code>https://axa.guzan99.workers.dev/api/preselection?age=&lt;âge&gt;&amp;budget=&lt;€/mois&gt;&amp;besoins=&lt;id:importance,...&gt;&amp;existants=&lt;noms séparés par virgule&gt;</code> — les ids de besoins valides apparaissent dans l&#x27;erreur si tu en donnes un inconnu. Le résultat est DÉJÀ calculé et sourcé, tu n&#x27;as pas à réappliquer le barème toi-même. Lecture seule, aucune donnée nominative acceptée.</li>
+<li><strong>Présélection CHIFFRÉE et garantie</strong> (jamais approximée par toi) : construis et appelle <code>https://axa.guzan99.workers.dev/api/preselection?age=&lt;âge&gt;&amp;budget=&lt;€/mois&gt;&amp;besoins=&lt;id:importance,...&gt;&amp;existants=&lt;noms séparés par virgule&gt;</code> — les ids de besoins valides apparaissent dans l&#x27;erreur si tu en donnes un inconnu. Le résultat est DÉJÀ calculé et sourcé, tu n&#x27;as pas à réappliquer le barème toi-même.</li>
+<li><strong>Diagnostic CAS CLIENT exécuté</strong> (raisonnement priorisé, pour n&#x27;importe quel profil, pas seulement les 6 cas-types) : <code>https://axa.guzan99.workers.dev/api/diagnostic?statut=&lt;salarie|tns|fonctionnaire|retraite|sans_activite&gt;&amp;famille=&lt;celibataire|couple|enfants|recomposee&gt;&amp;age=&lt;âge&gt;&amp;credit=&lt;1|0&gt;&amp;collectif=&lt;1|0&gt;&amp;evts=&lt;événements&gt;&amp;besoins=&lt;risques exprimés&gt;&amp;existants=&lt;contrats en place&gt;</code> — rend les risques priorisés (déclaré/déduit/hypothèse), la couverture (doublon/trou), les contrats à examiner et ce qui reste à clarifier. Un profil vide renvoie le vocabulaire accepté.</li>
 </ul>
+<p>  Les deux endpoints sont en LECTURE SEULE et n&#x27;acceptent AUCUNE donnée nominative.</p>
 
 <h2>Étape 4 — Trois exemples travaillés (calculés par le moteur réel)</h2>
 <h3>Exemple 1 · Contrat précis</h3>
