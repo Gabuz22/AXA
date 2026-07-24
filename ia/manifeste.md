@@ -41,6 +41,8 @@ Index → (Contrat | Catégorie | Thème) → Élément `#id` → Notice → Pag
 - [pieges](pieges.html) · [.md](pieges.md)
 - [cas-types](cas-types.html) · [.md](cas-types.md)
 - [tracabilite](tracabilite.html) · [.md](tracabilite.md)
+- [tests-qualite](tests-qualite.html) · [.md](tests-qualite.md)
+- [verifier](verifier.html) · [.md](verifier.md)
 - [preuves](preuves.html) · [.md](preuves.md)
 - [methode-question-complexe](methode-question-complexe.html) · [.md](methode-question-complexe.md)
 - [tests](tests.html) · [.md](tests.md)

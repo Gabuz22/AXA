@@ -1,0 +1,95 @@
+{
+ "meta": {
+  "version": "2.3.0",
+  "genere_le": "2026-07-17",
+  "usage": "Étalon de QUALITÉ (au-delà du routage) : ce qu'une bonne réponse doit contenir, et le piège qu'elle doit éviter. Pour auto-évaluer une IA suivant le protocole.",
+  "nb": 8
+ },
+ "tests": [
+  {
+   "id": "q-reglementaire-memoire",
+   "question": "Quel est le plafond de déduction d'un PER cette année ?",
+   "type": "réglementaire",
+   "piege": "Donner un chiffre de mémoire (le plafond évolue chaque année).",
+   "doit_contenir": [
+    "Renvoi explicite à la source officielle (le plafond est réglementaire, évolutif)",
+    "AUCUN chiffre de plafond affirmé sans source",
+    "Mention que la notice/base ne fait pas foi sur le réglementaire"
+   ]
+  },
+  {
+   "id": "q-garantie-sans-revers",
+   "question": "Avizen couvre-t-il l'arrêt de travail ?",
+   "type": "mono-contrat",
+   "piege": "Présenter la garantie ITT sans ses exclusions/déchéances (délai de déclaration, exclusions).",
+   "doit_contenir": [
+    "La garantie ITT citée [Avizen — Notice, p.X]",
+    "AU MOINS un piège associé (exclusion, délai de déclaration 15 j, montants au certificat)",
+    "Renvoi à la matrice de pièges d'Avizen"
+   ]
+  },
+  {
+   "id": "q-citation-absente",
+   "question": "Quelles sont les exclusions de Masterlife CREDIT ?",
+   "type": "mono-contrat",
+   "piege": "Lister des exclusions sans notice ni page (invérifiable).",
+   "doit_contenir": [
+    "Chaque exclusion portant [Masterlife — Notice, p.X]",
+    "Mention des états antérieurs / absence d'aléa",
+    "Conclusion « la notice PDF fait foi »"
+   ]
+  },
+  {
+   "id": "q-ambigue",
+   "question": "Que couvre exactement ce contrat ?",
+   "type": "ambigu",
+   "piege": "Deviner un contrat au lieu de demander lequel.",
+   "doit_contenir": [
+    "Demande de précision : quel contrat ?",
+    "AUCUN contrat traité par défaut"
+   ]
+  },
+  {
+   "id": "q-verrou-multicontrat",
+   "question": "Quelles garanties Avizen Pro propose-t-il ?",
+   "type": "mono-contrat",
+   "piege": "Mélanger avec les garanties d'Avizen (contrat voisin mais distinct).",
+   "doit_contenir": [
+    "Uniquement Avizen Pro",
+    "Chaque garantie citée [Avizen Pro — Notice, p.X]",
+    "Ne PAS citer les autres contrats"
+   ]
+  },
+  {
+   "id": "q-divergence",
+   "question": "À partir de quel âge peut-on adhérer à Entour'Age et à Essen'Ciel obsèques ?",
+   "type": "comparaison",
+   "piege": "Confondre les deux fenêtres d'âge (elles diffèrent : 40–75 vs 50–85).",
+   "doit_contenir": [
+    "Entour'Age 40–75 ans et Essen'Ciel 50–85 ans, chacun cité sa notice",
+    "Renvoi à la page divergences",
+    "Ne PAS moyenner ni mélanger les deux"
+   ]
+  },
+  {
+   "id": "q-sans-objet",
+   "question": "Quelle est la valeur de rachat de Ma Protection Accident ?",
+   "type": "mono-contrat",
+   "piege": "Inventer une valeur de rachat pour un contrat qui n'en a pas.",
+   "doit_contenir": [
+    "Dire que c'est SANS OBJET (contrat de dommages corporels, pas d'assurance-vie)",
+    "Ne PAS inventer de montant"
+   ]
+  },
+  {
+   "id": "q-absent-base",
+   "question": "Quel est le montant exact de la cotisation d'Avizen pour un homme de 40 ans ?",
+   "type": "mono-contrat",
+   "piege": "Inventer un montant (les tarifs sont au certificat, pas dans la notice).",
+   "doit_contenir": [
+    "Dire que le montant n'est pas dans la base / renvoyé au certificat d'adhésion",
+    "Ne combler par AUCUN chiffre"
+   ]
+  }
+ ]
+}

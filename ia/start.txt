@@ -41,6 +41,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 - **Raisonner sur un profil client** (comme un conseiller) → [cas-types travaillés](https://gabuz22.github.io/AXA/ia/cas-types.html)
 - Réglementaire vs contractuel → [réglementation](https://gabuz22.github.io/AXA/ia/reglementation.html) · [sources officielles](https://gabuz22.github.io/AXA/ia/sources-officielles.html) · [hiérarchie](https://gabuz22.github.io/AXA/ia/hierarchie.html)
 - **Monter en rigueur** (répondre niveau conseiller, contrôler niveau inspecteur) → [niveaux de compétence](https://gabuz22.github.io/AXA/ia/niveaux-competence.html)
+- **Contrôler ta propre réponse** avant de l'envoyer → [tests de qualité](https://gabuz22.github.io/AXA/ia/tests-qualite.html) · [vérificateur](https://gabuz22.github.io/AXA/ia/verifier.html)
 - Limites de la base → [couverture](https://gabuz22.github.io/AXA/ia/couverture.html) · [qualité du routage](https://gabuz22.github.io/AXA/ia/qualite-routage.html)
 - Version machine de cette carte : [selection.json](https://gabuz22.github.io/AXA/ia/selection.json) · tout le reste : [ai-manifest.json](https://gabuz22.github.io/AXA/ia/ai-manifest.json)
 

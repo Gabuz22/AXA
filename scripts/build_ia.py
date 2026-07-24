@@ -190,7 +190,7 @@ CATS_NAV = [("start", "START"), ("index", "Index"), ("instructions-maitres", "In
             ("qualite-routage", "Qualité routage"), ("hierarchie", "Hiérarchie"), ("choix-sources", "Choix sources"),
             ("methode-question-complexe", "Méthode"), ("contrats", "Contrats"), ("garanties", "Garanties"), ("exclusions", "Exclusions"),
             ("definitions", "Définitions"), ("conditions", "Conditions"), ("declencheurs", "Déclencheurs"), ("plafonds", "Plafonds"), ("franchises", "Franchises"),
-            ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"), ("divergences", "Divergences"), ("pieges", "Pièges"), ("cas-types", "Cas-types"), ("matrices", "Matrices"), ("graphe", "Graphe"),
+            ("glossaire", "Glossaire"), ("concepts", "Concepts"), ("themes", "Thèmes"), ("comparateur", "Comparateur"), ("divergences", "Divergences"), ("pieges", "Pièges"), ("cas-types", "Cas-types"), ("tests-qualite", "Tests qualité"), ("verifier", "Vérificateur"), ("matrices", "Matrices"), ("graphe", "Graphe"),
             ("notices", "Notices"), ("tracabilite", "Traçabilité"), ("sources", "Sources"), ("sources-officielles", "Sources officielles"), ("reglementation", "Réglementation"), ("surveillance", "Surveillance"),
             ("pack-a", "Pack A"), ("pack-b", "Pack B"), ("couverture", "Couverture"), ("maturite", "Maturité")]
 def nav_html(depth):
@@ -700,6 +700,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 - **Raisonner sur un profil client** (comme un conseiller) → [cas-types travaillés](cas-types.html)
 - Réglementaire vs contractuel → [réglementation](reglementation.html) · [sources officielles](sources-officielles.html) · [hiérarchie](hierarchie.html)
 - **Monter en rigueur** (répondre niveau conseiller, contrôler niveau inspecteur) → [niveaux de compétence](niveaux-competence.html)
+- **Contrôler ta propre réponse** avant de l'envoyer → [tests de qualité](tests-qualite.html) · [vérificateur](verifier.html)
 - Limites de la base → [couverture](couverture.html) · [qualité du routage](qualite-routage.html)
 - Version machine de cette carte : [selection.json](selection.json) · tout le reste : [ai-manifest.json](ai-manifest.json)
 
@@ -812,7 +813,7 @@ def build_static_pages(theme_counts):
     # Manifeste lisible + ai-manifest.json
     pages = ["start", "index", "instructions-maitres", "guide-ia", "niveaux-competence", "manifeste", "outils", "routage", "pertinence", "qualite-routage",
              "planificateur", "concepts", "couverture-recherche",
-             "comparateur", "divergences", "pieges", "cas-types", "tracabilite", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
+             "comparateur", "divergences", "pieges", "cas-types", "tracabilite", "tests-qualite", "verifier", "preuves", "methode-question-complexe", "tests", "hierarchie", "choix-sources",
              "sources-officielles", "reglementation", "surveillance", "connaissances-dynamiques", "matrices",
              "graphe", "maturite", "pack-a", "pack-b", "contrats",
              "garanties", "exclusions", "options", "cotisations", "delais", "fiscalite", "points-vigilance",
@@ -865,6 +866,7 @@ def build_static_pages(theme_counts):
             "verifier_les_ecarts_entre_contrats": ["divergences", "comparateur", "matrices"],
             "les_pieges_et_exclusions_d_un_contrat": ["pieges", "exclusions", "points-vigilance"],
             "raisonner_sur_un_profil_client": ["cas-types", "pieges", "methode-question-complexe"],
+            "verifier_la_qualite_d_une_reponse": ["tests-qualite", "verifier", "niveaux-competence"],
             "definition_d_un_terme": ["glossaire", "definitions"],
             "delais_franchises_plafonds": ["delais", "franchises", "plafonds"],
             "cotisations_et_fiscalite": ["cotisations", "fiscalite"],
@@ -1812,6 +1814,137 @@ def build_cas_types():
     write("cas-types.md", "\n".join(md))
     write("cas-types.html", page_html("Cas-types travaillés", "".join(hb), depth, SITE + "/ia/cas-types.html"))
 
+# Banque de tests de QUALITÉ (au-delà du routage) : chaque item décrit ce qu'une bonne réponse DOIT
+# contenir et le piège qu'elle doit éviter. Sert d'étalon pour mesurer une IA suivant le protocole.
+TESTS_QUALITE = [
+    {"id": "q-reglementaire-memoire", "question": "Quel est le plafond de déduction d'un PER cette année ?",
+     "type": "réglementaire", "piege": "Donner un chiffre de mémoire (le plafond évolue chaque année).",
+     "doit_contenir": ["Renvoi explicite à la source officielle (le plafond est réglementaire, évolutif)",
+                       "AUCUN chiffre de plafond affirmé sans source", "Mention que la notice/base ne fait pas foi sur le réglementaire"]},
+    {"id": "q-garantie-sans-revers", "question": "Avizen couvre-t-il l'arrêt de travail ?",
+     "type": "mono-contrat", "piege": "Présenter la garantie ITT sans ses exclusions/déchéances (délai de déclaration, exclusions).",
+     "doit_contenir": ["La garantie ITT citée [Avizen — Notice, p.X]", "AU MOINS un piège associé (exclusion, délai de déclaration 15 j, montants au certificat)",
+                       "Renvoi à la matrice de pièges d'Avizen"]},
+    {"id": "q-citation-absente", "question": "Quelles sont les exclusions de Masterlife CREDIT ?",
+     "type": "mono-contrat", "piege": "Lister des exclusions sans notice ni page (invérifiable).",
+     "doit_contenir": ["Chaque exclusion portant [Masterlife — Notice, p.X]", "Mention des états antérieurs / absence d'aléa",
+                       "Conclusion « la notice PDF fait foi »"]},
+    {"id": "q-ambigue", "question": "Que couvre exactement ce contrat ?",
+     "type": "ambigu", "piege": "Deviner un contrat au lieu de demander lequel.",
+     "doit_contenir": ["Demande de précision : quel contrat ?", "AUCUN contrat traité par défaut"]},
+    {"id": "q-verrou-multicontrat", "question": "Quelles garanties Avizen Pro propose-t-il ?",
+     "type": "mono-contrat", "piege": "Mélanger avec les garanties d'Avizen (contrat voisin mais distinct).",
+     "doit_contenir": ["Uniquement Avizen Pro", "Chaque garantie citée [Avizen Pro — Notice, p.X]",
+                       "Ne PAS citer les autres contrats"]},
+    {"id": "q-divergence", "question": "À partir de quel âge peut-on adhérer à Entour'Age et à Essen'Ciel obsèques ?",
+     "type": "comparaison", "piege": "Confondre les deux fenêtres d'âge (elles diffèrent : 40–75 vs 50–85).",
+     "doit_contenir": ["Entour'Age 40–75 ans et Essen'Ciel 50–85 ans, chacun cité sa notice",
+                       "Renvoi à la page divergences", "Ne PAS moyenner ni mélanger les deux"]},
+    {"id": "q-sans-objet", "question": "Quelle est la valeur de rachat de Ma Protection Accident ?",
+     "type": "mono-contrat", "piege": "Inventer une valeur de rachat pour un contrat qui n'en a pas.",
+     "doit_contenir": ["Dire que c'est SANS OBJET (contrat de dommages corporels, pas d'assurance-vie)",
+                       "Ne PAS inventer de montant"]},
+    {"id": "q-absent-base", "question": "Quel est le montant exact de la cotisation d'Avizen pour un homme de 40 ans ?",
+     "type": "mono-contrat", "piege": "Inventer un montant (les tarifs sont au certificat, pas dans la notice).",
+     "doit_contenir": ["Dire que le montant n'est pas dans la base / renvoyé au certificat d'adhésion",
+                       "Ne combler par AUCUN chiffre"]},
+]
+
+VERIFIER_JS = r"""
+(function(){
+  var CTR = /(garanti|garantie|couvr|exclu|exclusion|franchise|carence|délai|plafond|capital|rente|cotisation|indemnit|prestation|décès|invalidit|incapacit)/i;
+  var REG = /(abattement|barème|plafond fiscal|déductib|990\s*I|757\s*B|taux\s|impôt|fiscalit)/i;
+  // Redirection réglementaire correcte : une phrase qui renvoie à la source officielle n'a PAS à
+  // porter de citation contractuelle (ce n'est pas une affirmation de fait tirée de la notice).
+  var REDIR = /(source officielle|réglementaire|législation|impots\.gouv|service-public|urssaf|autorité|évolue|à vérifier (sur|auprès)|non présent dans la base)/i;
+  var CITE = /\[[^\]]*(?:notice|p\.?\s*\d)/i;
+  var NUM = /\d/;
+  var $ = function(id){ return document.getElementById(id); };
+  function analyse(){
+    var t = $("in").value || "";
+    var out = [];
+    // Attestation de lecture
+    if(!/Base\s+consultée\s*:\s*Gabriel AXA/i.test(t))
+      out.push(["grave","Attestation manquante : la réponse ne commence pas par « Base consultée : Gabriel AXA vX.X.X » (règle 0)."]);
+    // Clôture
+    if(!/notice\s+PDF\s+fait\s+foi/i.test(t))
+      out.push(["moyen","Clôture manquante : « La notice PDF fait foi. »"]);
+    // Phrases : fait contractuel sans citation
+    var phr = t.split(/(?<=[.!?])\s+|\n+/);
+    var nCtr=0, nSansCite=0, exemples=[];
+    for(var i=0;i<phr.length;i++){
+      var p = phr[i].trim(); if(p.length<12) continue;
+      if(CTR.test(p) && !REDIR.test(p)){
+        nCtr++;
+        if(!CITE.test(p)){ nSansCite++; if(exemples.length<3) exemples.push(p.slice(0,90)); }
+      }
+    }
+    if(nSansCite>0)
+      out.push(["grave", nSansCite+" affirmation(s) contractuelle(s) sans citation [Contrat — Notice, p.X]. Ex. : « "+exemples.join(" » ; « ")+" »"]);
+    // Réglementaire chiffré sans source officielle
+    var regHit=false;
+    for(var j=0;j<phr.length;j++){ var q=phr[j]; if(REG.test(q)&&NUM.test(q)&&!/source officielle|législation|impots\.gouv|service-public|urssaf|autorité/i.test(q)){ regHit=true; break; } }
+    if(regHit)
+      out.push(["grave","Un chiffre réglementaire (plafond/abattement/taux) apparaît sans renvoi à une source officielle. Le réglementaire évolue : jamais de chiffre de mémoire."]);
+    // Rendu
+    var box = $("out"); box.innerHTML="";
+    if(!t.trim()){ box.innerHTML='<p class="muted">Colle la réponse de l\'IA ci-dessus.</p>'; return; }
+    if(out.length===0){ box.innerHTML='<div class="ok">✓ Aucun défaut détecté automatiquement.<br><span class="muted">Ce contrôle est mécanique : il ne juge pas l\'exactitude, seulement la forme (citations, source, clôture). La notice PDF fait foi.</span></div>'; return; }
+    var h='<p class="muted">Contrôle mécanique de la FORME (pas de l\'exactitude). À relire humainement.</p>';
+    for(var k=0;k<out.length;k++){ h+='<div class="warn '+out[k][0]+'">'+ (out[k][0]==="grave"?"⚠ ":"• ") + out[k][1] +'</div>'; }
+    box.innerHTML=h;
+  }
+  $("in").addEventListener("input", analyse); analyse();
+})();
+"""
+
+def build_tests_qualite():
+    depth = 0
+    # --- Banque de tests de qualité (JSON + page lisible) ---
+    data = {"meta": {"version": VERSION, "genere_le": DATE,
+                     "usage": "Étalon de QUALITÉ (au-delà du routage) : ce qu'une bonne réponse doit contenir, et le "
+                              "piège qu'elle doit éviter. Pour auto-évaluer une IA suivant le protocole.",
+                     "nb": len(TESTS_QUALITE)},
+            "tests": TESTS_QUALITE}
+    write("tests-qualite.json", json.dumps(data, ensure_ascii=False, indent=1))
+    md = [md_hdr("Tests de qualité de réponse",
+                 "Au-delà du routage : ce qu'une bonne réponse DOIT contenir et le piège qu'elle doit éviter. "
+                 "L'étalon pour mesurer si une IA suivant le protocole tient la route."), ""]
+    md += ["> Décide mentalement ta réponse à chaque question, puis vérifie qu'elle coche **tous** les critères et "
+           "**évite** le piège. Un défaut = relis le protocole (START) et les pages concernées.", ""]
+    hb = ['<h1>Tests de qualité de réponse</h1>',
+          '<p>Au-delà du routage : ce qu\'une bonne réponse doit contenir, et le piège à éviter. '
+          '<a href="verifier.html">→ Vérificateur automatique d\'une réponse</a></p>']
+    for t in TESTS_QUALITE:
+        md += ["", "### %s" % t["question"], "", "- **Type** : %s" % t["type"],
+               "- **Piège à éviter** : %s" % t["piege"], "- **Une bonne réponse contient** :"] + ["  - %s" % c for c in t["doit_contenir"]]
+        hb.append('<div class="fitem"><div class="fitem-t">%s</div><p><em>Type : %s</em></p>'
+                  '<p><strong>Piège à éviter :</strong> %s</p><p><strong>Une bonne réponse contient :</strong></p><ul>%s</ul></div>'
+                  % (html.escape(t["question"]), html.escape(t["type"]), html.escape(t["piege"]),
+                     "".join("<li>%s</li>" % html.escape(c) for c in t["doit_contenir"])))
+    md += ["", "## Format machine", "- [tests-qualite.json](tests-qualite.json) — %d questions-étalon (question, type, "
+           "piège, critères). - [verifier.html](verifier.html) — contrôle mécanique d'une réponse." % len(TESTS_QUALITE), ""]
+    hb.append('<h2>Format machine</h2><p><a href="tests-qualite.json">tests-qualite.json</a> · <a href="verifier.html">verifier.html</a></p>')
+    write("tests-qualite.md", "\n".join(md))
+    write("tests-qualite.html", page_html("Tests de qualité", "".join(hb), depth, SITE + "/ia/tests-qualite.html"))
+
+    # --- Vérificateur mécanique côté navigateur (pour le conseiller : colle la réponse de l'IA) ---
+    # Concaténation (pas de % : le CSS contient des « width:100% » qui casseraient le formatage).
+    body = ('<h1>Vérificateur de réponse</h1>'
+            '<p>Colle ici la réponse produite par l\'IA. Ce contrôle <strong>mécanique</strong> vérifie la FORME '
+            '— citations, source officielle sur le réglementaire, clôture, attestation — <strong>pas l\'exactitude</strong>. '
+            'La notice PDF fait toujours foi.</p>'
+            '<textarea id="in" rows="12" style="width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;'
+            'padding:12px;border-radius:8px;border:1px solid #33415a;background:#0e1726;color:#e8ebf0" '
+            'placeholder="Base consultée : Gabriel AXA v' + VERSION + ' (' + DATE + ')&#10;&#10;Colle la réponse ici…"></textarea>'
+            '<div id="out" style="margin-top:14px"></div>'
+            '<style>#out .ok{background:rgba(91,208,122,.12);border:1px solid rgba(91,208,122,.5);border-radius:8px;padding:12px}'
+            '#out .warn{border-radius:8px;padding:10px 12px;margin:8px 0;background:rgba(245,196,81,.08);border:1px solid rgba(245,196,81,.4)}'
+            '#out .warn.grave{background:rgba(226,103,74,.1);border-color:rgba(226,103,74,.5)}'
+            '#out .muted,.muted{color:#9fb0c8;font-size:13px}</style>'
+            '<script>' + VERIFIER_JS + '</script>')
+    write("verifier.html", page_html("Vérificateur de réponse", body, depth, SITE + "/ia/verifier.html"))
+
 def build_outils():
     depth = 0
     items = [("niveaux-competence", "Niveaux de compétence", "escalier de rigueur conseiller → inspecteur + grille d'auto-évaluation (JSON)"),
@@ -1825,6 +1958,8 @@ def build_outils():
              ("divergences", "Divergences inter-contrats", "où les contrats diffèrent sur un chiffre (âge, délais) — signal à vérifier, jamais une contradiction"),
              ("pieges", "Matrice de pièges", "le revers de chaque contrat : exclusions, déchéances, délais, plafonds — à croiser avec toute garantie"),
              ("cas-types", "Cas-types travaillés", "parcours de raisonnement profil → besoins → contrats → pièges → questions"),
+             ("tests-qualite", "Tests de qualité", "questions-étalon : ce qu'une bonne réponse doit contenir et le piège à éviter"),
+             ("verifier", "Vérificateur de réponse", "colle la réponse de l'IA : contrôle mécanique des citations, source, clôture"),
              ("tracabilite", "Audit de traçabilité", "par contrat : quelle part est pleinement sourcée (notice + page), et la liste de ce qui est à vérifier"),
              ("preuves", "Graphe de preuves", "chaque élément citable (id, source, page, concepts)"),
              ("methode-question-complexe", "Méthode & assembleur", "5 parcours + structure de réponse sécurisée"),
@@ -2559,6 +2694,7 @@ def build():
     build_divergences()              # détecteur d'écarts chiffrés inter-contrats (contrôle inspecteur)
     build_pieges()                   # matrice de pièges par contrat (le revers de chaque garantie)
     build_cas_types()                # cas-types travaillés (patrons de raisonnement, après build_pieges)
+    build_tests_qualite()            # banque de tests qualité + vérificateur mécanique de réponse
     build_tracabilite()              # audit de traçabilité par contrat (qualité de preuve, contrôle inspecteur)
     metrics = build_tests(concepts)  # tests-qualité + harness de précision
     # Infrastructure de raisonnement documentaire (Parties 2–10, 12)

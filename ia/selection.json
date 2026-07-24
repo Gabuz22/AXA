@@ -32,6 +32,11 @@
    "pieges",
    "methode-question-complexe"
   ],
+  "verifier_la_qualite_d_une_reponse": [
+   "tests-qualite",
+   "verifier",
+   "niveaux-competence"
+  ],
   "definition_d_un_terme": [
    "glossaire",
    "definitions"

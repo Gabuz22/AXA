@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vérificateur de réponse — Gabriel AXA (Vue IA)</title><meta name="description" content="Vue IA de Gabriel AXA — projection statique, sourcée, lisible sans JavaScript."><link rel="canonical" href="https://gabuz22.github.io/AXA/ia/verifier.html"><link rel="stylesheet" href="ia.css"></head>
+<body>
+<nav class="ianav"><a href="start.html">START</a> · <a href="index.html">Index</a> · <a href="instructions-maitres.html">Instructions maîtres</a> · <a href="guide-ia.html">Guide IA</a> · <a href="niveaux-competence.html">Niveaux</a> · <a href="outils.html">Outils</a> · <a href="routage.html">Routage</a> · <a href="pertinence.html">Pertinence</a> · <a href="qualite-routage.html">Qualité routage</a> · <a href="hierarchie.html">Hiérarchie</a> · <a href="choix-sources.html">Choix sources</a> · <a href="methode-question-complexe.html">Méthode</a> · <a href="contrats.html">Contrats</a> · <a href="garanties.html">Garanties</a> · <a href="exclusions.html">Exclusions</a> · <a href="definitions.html">Définitions</a> · <a href="conditions.html">Conditions</a> · <a href="declencheurs.html">Déclencheurs</a> · <a href="plafonds.html">Plafonds</a> · <a href="franchises.html">Franchises</a> · <a href="glossaire.html">Glossaire</a> · <a href="concepts.html">Concepts</a> · <a href="themes.html">Thèmes</a> · <a href="comparateur.html">Comparateur</a> · <a href="divergences.html">Divergences</a> · <a href="pieges.html">Pièges</a> · <a href="cas-types.html">Cas-types</a> · <a href="tests-qualite.html">Tests qualité</a> · <a href="verifier.html">Vérificateur</a> · <a href="matrices.html">Matrices</a> · <a href="graphe.html">Graphe</a> · <a href="notices.html">Notices</a> · <a href="tracabilite.html">Traçabilité</a> · <a href="sources.html">Sources</a> · <a href="sources-officielles.html">Sources officielles</a> · <a href="reglementation.html">Réglementation</a> · <a href="surveillance.html">Surveillance</a> · <a href="pack-a.html">Pack A</a> · <a href="pack-b.html">Pack B</a> · <a href="couverture.html">Couverture</a> · <a href="maturite.html">Maturité</a></nav>
+<main>
+<h1>Vérificateur de réponse</h1><p>Colle ici la réponse produite par l'IA. Ce contrôle <strong>mécanique</strong> vérifie la FORME — citations, source officielle sur le réglementaire, clôture, attestation — <strong>pas l'exactitude</strong>. La notice PDF fait toujours foi.</p><textarea id="in" rows="12" style="width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;padding:12px;border-radius:8px;border:1px solid #33415a;background:#0e1726;color:#e8ebf0" placeholder="Base consultée : Gabriel AXA v2.3.0 (2026-07-17)&#10;&#10;Colle la réponse ici…"></textarea><div id="out" style="margin-top:14px"></div><style>#out .ok{background:rgba(91,208,122,.12);border:1px solid rgba(91,208,122,.5);border-radius:8px;padding:12px}#out .warn{border-radius:8px;padding:10px 12px;margin:8px 0;background:rgba(245,196,81,.08);border:1px solid rgba(245,196,81,.4)}#out .warn.grave{background:rgba(226,103,74,.1);border-color:rgba(226,103,74,.5)}#out .muted,.muted{color:#9fb0c8;font-size:13px}</style><script>
+(function(){
+  var CTR = /(garanti|garantie|couvr|exclu|exclusion|franchise|carence|délai|plafond|capital|rente|cotisation|indemnit|prestation|décès|invalidit|incapacit)/i;
+  var REG = /(abattement|barème|plafond fiscal|déductib|990\s*I|757\s*B|taux\s|impôt|fiscalit)/i;
+  // Redirection réglementaire correcte : une phrase qui renvoie à la source officielle n'a PAS à
+  // porter de citation contractuelle (ce n'est pas une affirmation de fait tirée de la notice).
+  var REDIR = /(source officielle|réglementaire|législation|impots\.gouv|service-public|urssaf|autorité|évolue|à vérifier (sur|auprès)|non présent dans la base)/i;
+  var CITE = /\[[^\]]*(?:notice|p\.?\s*\d)/i;
+  var NUM = /\d/;
+  var $ = function(id){ return document.getElementById(id); };
+  function analyse(){
+    var t = $("in").value || "";
+    var out = [];
+    // Attestation de lecture
+    if(!/Base\s+consultée\s*:\s*Gabriel AXA/i.test(t))
+      out.push(["grave","Attestation manquante : la réponse ne commence pas par « Base consultée : Gabriel AXA vX.X.X » (règle 0)."]);
+    // Clôture
+    if(!/notice\s+PDF\s+fait\s+foi/i.test(t))
+      out.push(["moyen","Clôture manquante : « La notice PDF fait foi. »"]);
+    // Phrases : fait contractuel sans citation
+    var phr = t.split(/(?<=[.!?])\s+|\n+/);
+    var nCtr=0, nSansCite=0, exemples=[];
+    for(var i=0;i<phr.length;i++){
+      var p = phr[i].trim(); if(p.length<12) continue;
+      if(CTR.test(p) && !REDIR.test(p)){
+        nCtr++;
+        if(!CITE.test(p)){ nSansCite++; if(exemples.length<3) exemples.push(p.slice(0,90)); }
+      }
+    }
+    if(nSansCite>0)
+      out.push(["grave", nSansCite+" affirmation(s) contractuelle(s) sans citation [Contrat — Notice, p.X]. Ex. : « "+exemples.join(" » ; « ")+" »"]);
+    // Réglementaire chiffré sans source officielle
+    var regHit=false;
+    for(var j=0;j<phr.length;j++){ var q=phr[j]; if(REG.test(q)&&NUM.test(q)&&!/source officielle|législation|impots\.gouv|service-public|urssaf|autorité/i.test(q)){ regHit=true; break; } }
+    if(regHit)
+      out.push(["grave","Un chiffre réglementaire (plafond/abattement/taux) apparaît sans renvoi à une source officielle. Le réglementaire évolue : jamais de chiffre de mémoire."]);
+    // Rendu
+    var box = $("out"); box.innerHTML="";
+    if(!t.trim()){ box.innerHTML='<p class="muted">Colle la réponse de l\'IA ci-dessus.</p>'; return; }
+    if(out.length===0){ box.innerHTML='<div class="ok">✓ Aucun défaut détecté automatiquement.<br><span class="muted">Ce contrôle est mécanique : il ne juge pas l\'exactitude, seulement la forme (citations, source, clôture). La notice PDF fait foi.</span></div>'; return; }
+    var h='<p class="muted">Contrôle mécanique de la FORME (pas de l\'exactitude). À relire humainement.</p>';
+    for(var k=0;k<out.length;k++){ h+='<div class="warn '+out[k][0]+'">'+ (out[k][0]==="grave"?"⚠ ":"• ") + out[k][1] +'</div>'; }
+    box.innerHTML=h;
+  }
+  $("in").addEventListener("input", analyse); analyse();
+})();
+</script>
+</main>
+<footer><p>Gabriel AXA — Vue IA v2.3.0 (2026-07-17). Outil indépendant et non officiel, non affilié ni validé par AXA — construit à partir de documents accessibles publiquement. Projection des JSON (source de vérité) ; masters non modifiés. La notice PDF fait foi ; toute information doit être vérifiée humainement avant une réponse au client. <a href="../">← Application</a></p></footer>
+</body></html>
