@@ -12,7 +12,7 @@
 **Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
 
 
-**Global : 556 éléments, 448 pleinement traçables (81 %). 76 à vérifier · 32 note(s) éditoriale(s) assumée(s).**
+**Global : 556 éléments, 462 pleinement traçables (83 %). 47 à vérifier · 47 note(s) éditoriale(s) assumée(s).**
 
 > Traçable = source pointant la **notice + la page**. « À vérifier » ne veut pas dire faux : la donnée existe mais sa localisation exacte reste à confirmer dans la notice (page imprécise, tableau non extrait, ou source à rattacher). Une **note éditoriale** est une mise en garde conseiller assumée (ex. comparaison inter-produits) : elle n'a pas de citation de notice, et ne doit pas être présentée comme un fait contractuel. **La notice PDF fait foi.**
 
@@ -22,8 +22,8 @@
 |---|---|---|---|
 | Avizen | 92 | 86 % | 8 |
 | Avizen Pro | 89 | 91 % | 4 |
-| Entour'Age | 62 | 71 % | 18 |
-| Essen'Ciel (assurance obsèques) | 61 | 72 % | 17 |
+| Entour'Age | 62 | 79 % | 5 |
+| Essen'Ciel (assurance obsèques) | 61 | 87 % | 1 |
 | Essen'Ciel Patrimoine | 14 | 71 % | 3 |
 | Excelium (assurance vie) | 46 | 76 % | 4 |
 | Ma Protection Accident (Garantie des accidents de la vie) | 69 | 84 % | 9 |
@@ -54,47 +54,23 @@ Répartition : 81 pleinement traçable · 4 note conseiller éditoriale · 4 val
 - **[cotisations]** frais — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.6, 1.2. Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=6)
 - **[fiscalite]** determination_part_taxable — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.3, 1.1.4. La fiscalité applicable](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=3)
 
-## Entour'Age — 71 % traçable
+## Entour'Age — 79 % traçable
 
-Répartition : 44 pleinement traçable · 18 source connue, page imprécise.
+Répartition : 49 pleinement traçable · 8 note conseiller éditoriale · 3 source connue, page imprécise · 2 valeur dans un tableau non extrait.
 
-À vérifier (18) — tableau non extrait et sans source d'abord :
-- **[cotisations]** tableaux — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
-- **[cotisations]** mode_calcul — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
-- **[cotisations]** frais — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
-- **[cotisations]** exemples_chiffrés — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
-- **[cotisations]** réductions — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
+À vérifier (5) — tableau non extrait et sans source d'abord :
+- **[cotisations]** tableaux — _⚠ tableau non extrait_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.9, 1.2 Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=9)
+- **[fiscalite]** conditions_de_rachat — _⚠ tableau non extrait_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf, p.28, 7.3 Valeur de rachat](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf#page=28)
 - **[fiscalite]** determination_part_taxable — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
 - **[fiscalite]** fiscalité — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
-- **[fiscalite]** valeurs_de_rachat — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
 - **[fiscalite]** mise_en_reduction — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
-- **[fiscalite]** conditions_de_rachat — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
-- **[points-vigilance]** La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
-- **[points-vigilance]** La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
-- **[points-vigilance]** Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période). — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
-- **[points-vigilance]** Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur — _page à préciser_ [Notice : 2025-06 Notice d'Information Entour'Age.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EntourAge/2025-06%20Notice%20d%27Information%20Entour%27Age.pdf)
-- _… et 4 autres (voir tracabilite.json)._
 
-## Essen'Ciel (assurance obsèques) — 72 % traçable
+## Essen'Ciel (assurance obsèques) — 87 % traçable
 
-Répartition : 44 pleinement traçable · 17 source connue, page imprécise.
+Répartition : 53 pleinement traçable · 7 note conseiller éditoriale · 1 valeur dans un tableau non extrait.
 
-À vérifier (17) — tableau non extrait et sans source d'abord :
-- **[cotisations]** réductions — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[cotisations]** frais — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[cotisations]** exemples_chiffrés — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[cotisations]** tableaux — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[cotisations]** mode_calcul — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[fiscalite]** valeurs_de_rachat — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[fiscalite]** conditions_de_rachat — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[fiscalite]** fiscalité — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[fiscalite]** determination_part_taxable — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[fiscalite]** mise_en_reduction — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[points-vigilance]** Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations). — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[points-vigilance]** Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828 — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[points-vigilance]** Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes d — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- **[points-vigilance]** Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, qu — _page à préciser_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf)
-- _… et 3 autres (voir tracabilite.json)._
+À vérifier (1) — tableau non extrait et sans source d'abord :
+- **[cotisations]** tableaux — _⚠ tableau non extrait_ [Notice : 2025-06 Notice d'information Essen'Ciel.pdf, p.17, 4.1 Comment est calculée votre cotisation ?](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/EssenCiel/2025-06%20Notice%20d%27information%20Essen%27Ciel.pdf#page=17)
 
 ## Essen'Ciel Patrimoine — 71 % traçable
 

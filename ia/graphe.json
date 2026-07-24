@@ -3,7 +3,7 @@
   "version": "2.3.0",
   "genere_le": "2026-07-17",
   "noeuds": 692,
-  "aretes": 2191,
+  "aretes": 2176,
   "types_noeuds": [
    "article_reglementaire",
    "concept",
@@ -12423,29 +12423,14 @@
    "rel": "appartient_a"
   },
   {
-   "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_16c84e8a15cc_knowledge_00dcf84ccfed",
-   "to": "notice:2025-06-notice-d-information-entour-age-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_39e9899bad5a_knowledge_38c24a8b1762",
    "to": "contrat:entour-age",
    "rel": "appartient_a"
   },
   {
-   "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_39e9899bad5a_knowledge_38c24a8b1762",
-   "to": "notice:2025-06-notice-d-information-entour-age-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_6a2656a952a6_knowledge_d8ab8642609e",
    "to": "contrat:entour-age",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_6a2656a952a6_knowledge_d8ab8642609e",
-   "to": "notice:2025-06-notice-d-information-entour-age-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_6f230082ba39_knowledge_79617a24203d",
@@ -12456,11 +12441,6 @@
    "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_6f230082ba39_knowledge_79617a24203d",
    "to": "concept:rachat",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_6f230082ba39_knowledge_79617a24203d",
-   "to": "notice:2025-06-notice-d-information-entour-age-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_8eb68cebc424_knowledge_c2ef0572d645",
@@ -12473,11 +12453,6 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_8eb68cebc424_knowledge_c2ef0572d645",
-   "to": "notice:2025-06-notice-d-information-entour-age-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_acdb551cb108_knowledge_8417d05b72d9",
    "to": "contrat:entour-age",
    "rel": "appartient_a"
@@ -12486,11 +12461,6 @@
    "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_acdb551cb108_knowledge_8417d05b72d9",
    "to": "concept:rachat",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_acdb551cb108_knowledge_8417d05b72d9",
-   "to": "notice:2025-06-notice-d-information-entour-age-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_e441d358bb4c_knowledge_b70fb02a5650",
@@ -12508,11 +12478,6 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_e441d358bb4c_knowledge_b70fb02a5650",
-   "to": "notice:2025-06-notice-d-information-entour-age-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119",
    "to": "contrat:entour-age",
    "rel": "appartient_a"
@@ -12523,19 +12488,9 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119",
-   "to": "notice:2025-06-notice-d-information-entour-age-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_0a61c726cd35_knowledge_4ebecf35bc1c",
    "to": "contrat:essen-ciel-assurance-obseques",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_0a61c726cd35_knowledge_4ebecf35bc1c",
-   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_62de1e7dadfb_knowledge_09e6e3b5f2e2",
@@ -12546,11 +12501,6 @@
    "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_62de1e7dadfb_knowledge_09e6e3b5f2e2",
    "to": "concept:rachat",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_62de1e7dadfb_knowledge_09e6e3b5f2e2",
-   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174",
@@ -12573,19 +12523,9 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174",
-   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_aeb56e7d32c3_knowledge_2c080b3d95be",
    "to": "contrat:essen-ciel-assurance-obseques",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_aeb56e7d32c3_knowledge_2c080b3d95be",
-   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c",
@@ -12608,19 +12548,9 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c",
-   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_d5ec81079541_knowledge_86cdae42467c",
    "to": "contrat:essen-ciel-assurance-obseques",
    "rel": "appartient_a"
-  },
-  {
-   "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_d5ec81079541_knowledge_86cdae42467c",
-   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_e2fddb92cc3a_knowledge_194eb1adda54",
@@ -12631,11 +12561,6 @@
    "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_e2fddb92cc3a_knowledge_194eb1adda54",
    "to": "concept:rachat",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_essenciel_2025_06_points_de_vigilance_e2fddb92cc3a_knowledge_194eb1adda54",
-   "to": "notice:2025-06-notice-d-information-essen-ciel-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_essenciel_patrimoine_2023-09_point_vigilance_09cc2c565c43",

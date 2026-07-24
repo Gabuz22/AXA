@@ -123,7 +123,7 @@
    "titre": "valeurs_de_rachat",
    "texte": "L'adhésion ne comporte PAS de valeur de rachat.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-   "page": null
+   "page": 28
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_933bb6edae6e_knowledge_55a3c4fbd645",
@@ -139,7 +139,7 @@
    "titre": "conditions_de_rachat",
    "texte": "conditions_de_rachat. Information documentaire à consulter dans la source.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-   "page": null
+   "page": 28
   },
   {
    "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_10b11fed39d8_knowledge_81a9d27bb02d",
@@ -147,7 +147,7 @@
    "titre": "valeurs_de_rachat",
    "texte": "Rachat TOTAL possible après la première année. Valeur de rachat = provision mathématique, fonction de l'âge à l'adhésion, des années payées, du capital et du type/durée de cotisation. Pénalité : 5 % la 1re année, -0,5 %/an, nulle au-delà de la 10e. La valeur de rachat peut être inférieure au cumul des cotisations versées. Règlement sous 2 mois max après réception des pièces (demande signée, original du certificat, pièce d'identité, RIB, accord du bénéficiaire acceptant le cas échéant). Le rachat met fin à l'adhésion. Accord du bénéficiaire acceptant req…",
    "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-   "page": null
+   "page": 33
   },
   {
    "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_622c88ea9f4b_knowledge_9e5bc789bca2",
@@ -155,7 +155,7 @@
    "titre": "conditions_de_rachat",
    "texte": "après la 1re année d'adhésion · accord du bénéficiaire acceptant (L132-9) · pièces : demande signée, original du certificat d'adhésion, justificatif d'identité, RIB",
    "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-   "page": null
+   "page": 33
   },
   {
    "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_6b52755aa9bc_knowledge_bf8cc347b759",
@@ -163,7 +163,7 @@
    "titre": "fiscalité",
    "texte": "Support en euros : promotion de caractéristiques environnementales (SFDR) ; annexes durabilité p.49 s. ; pas de part minimale obligatoire d'actifs durables.",
    "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-   "page": null
+   "page": 43
   },
   {
    "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641",
@@ -171,7 +171,7 @@
    "titre": "determination_part_taxable",
    "texte": "Régime fiscal de l'assurance vie (au 01/01/2025) : en cas de RACHAT, les PRODUITS attachés au contrat sont imposables (prélèvement forfaitaire ou, sur option expresse et irrévocable, barème progressif après abattement — art. 125-0 A et 200 A CGI) + prélèvements sociaux. En cas de DÉCÈS : capital exonéré de droits de succession et de la taxation 990 I si bénéficiaire = conjoint, partenaire PACS ou, sous conditions, frères et sœurs.",
    "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-   "page": null
+   "page": 43
   },
   {
    "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_94c8368f6856_knowledge_d80119f3d2ae",
@@ -179,7 +179,7 @@
    "titre": "mise_en_reduction",
    "texte": "En cas d'arrêt de paiement au-delà de la 1re année : mise en réduction = nouveau capital garanti réduit (fonction âge à l'adhésion, années révolues payées, capital choisi, type/durée de cotisation). Rachat substitué d'office si VR < 1/2 SMIC mensuel brut (R132-2). Met fin aux garanties d'assistance. Tableaux d'exemples contractuels (voir tableaux_contractuels).",
    "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-   "page": null
+   "page": 18
   },
   {
    "id": "axa_essenciel_patrimoine_2023-09_fiscalite_d81aa98e400a",

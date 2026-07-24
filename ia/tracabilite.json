@@ -13,10 +13,10 @@
  },
  "global": {
   "elements": 556,
-  "pleinement_tracables": 448,
-  "pct": 81,
-  "a_verifier": 76,
-  "notes_editoriales": 32
+  "pleinement_tracables": 462,
+  "pct": 83,
+  "a_verifier": 47,
+  "notes_editoriales": 47
  },
  "contrats": [
   {
@@ -161,59 +161,32 @@
    "contrat": "Entour'Age",
    "slug": "entour-age",
    "elements": 62,
-   "pct_tracable": 71,
+   "pct_tracable": 79,
    "repartition": {
-    "complete": 44,
-    "editorial": 0,
-    "incomplete": 18,
-    "tableau_non_extrait": 0,
+    "complete": 49,
+    "editorial": 8,
+    "incomplete": 3,
+    "tableau_non_extrait": 2,
     "sans_source": 0
    },
    "a_verifier": [
     {
      "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89",
      "type": "cotisations",
-     "niveau": "incomplete",
+     "niveau": "tableau_non_extrait",
      "libelle": "tableaux",
      "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
+     "page": 9,
+     "section": "1.2 Votre cotisation"
     },
     {
-     "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d",
-     "type": "cotisations",
-     "niveau": "incomplete",
-     "libelle": "mode_calcul",
+     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117",
+     "type": "fiscalite",
+     "niveau": "tableau_non_extrait",
+     "libelle": "conditions_de_rachat",
      "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b71f718b3818_knowledge_2ceb18ba5d21",
-     "type": "cotisations",
-     "niveau": "incomplete",
-     "libelle": "frais",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_bda7c72e6e68_knowledge_c08c819e085e",
-     "type": "cotisations",
-     "niveau": "incomplete",
-     "libelle": "exemples_chiffrés",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_df0f22fdd097_knowledge_21a4375ed5e3",
-     "type": "cotisations",
-     "niveau": "incomplete",
-     "libelle": "réductions",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
+     "page": 28,
+     "section": "7.3 Valeur de rachat"
     },
     {
      "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_08d65dfb5f5c_knowledge_a336e619e458",
@@ -234,100 +207,10 @@
      "section": null
     },
     {
-     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_6e3dedbb6c6b_knowledge_e47bdf2e7075",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "valeurs_de_rachat",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
      "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_933bb6edae6e_knowledge_55a3c4fbd645",
      "type": "fiscalite",
      "niveau": "incomplete",
      "libelle": "mise_en_reduction",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_rachats_reductions_fiscalite_ab263c830d01_knowledge_ce4f7ccf7117",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "conditions_de_rachat",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_16c84e8a15cc_knowledge_00dcf84ccfed",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "La plupart des services d'aide aux aidants sont de l'ORGANISATION : le coût des prestataires reste à",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_39e9899bad5a_knowledge_38c24a8b1762",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "La dépendance totale au sens du contrat est PLUS restrictive que la grille AGGIR seule (cumul tierce",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_6a2656a952a6_knowledge_d8ab8642609e",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "Franchise absolue de 3 mois sur la rente (aucun rappel pour cette période).",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_6f230082ba39_knowledge_79617a24203d",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "Le barème des coefficients de mise en réduction n'est pas publié dans la notice (« barème en vigueur",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_8eb68cebc424_knowledge_c2ef0572d645",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "Délai d'attente de 3 ans pour les maladies neurologiques/neurodégénératives/psychiatriques (Alzheime",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_acdb551cb108_knowledge_8417d05b72d9",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "La mise en réduction met fin aux prestations d'assistance.",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_e441d358bb4c_knowledge_b70fb02a5650",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "Adhésion annulée si dépendance reconnue pendant le délai d'attente (remboursement intégral).",
-     "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_f31486c95e05_knowledge_6b08697ef119",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "Cotisations ni rachetables ni récupérables (sauf option remboursement des cotisations au décès sans ",
      "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
      "page": null,
      "section": null
@@ -338,167 +221,23 @@
    "contrat": "Essen'Ciel (assurance obsèques)",
    "slug": "essen-ciel-assurance-obseques",
    "elements": 61,
-   "pct_tracable": 72,
+   "pct_tracable": 87,
    "repartition": {
-    "complete": 44,
-    "editorial": 0,
-    "incomplete": 17,
-    "tableau_non_extrait": 0,
+    "complete": 53,
+    "editorial": 7,
+    "incomplete": 0,
+    "tableau_non_extrait": 1,
     "sans_source": 0
    },
    "a_verifier": [
     {
-     "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0d109ff2f1ce_knowledge_b64c3388e76a",
-     "type": "cotisations",
-     "niveau": "incomplete",
-     "libelle": "réductions",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_80919fdc48df_knowledge_88ef567fdcb8",
-     "type": "cotisations",
-     "niveau": "incomplete",
-     "libelle": "frais",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d352dd9df6b0_knowledge_a18b90c925a0",
-     "type": "cotisations",
-     "niveau": "incomplete",
-     "libelle": "exemples_chiffrés",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
      "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d54c486f45e6_knowledge_9b690d586091",
      "type": "cotisations",
-     "niveau": "incomplete",
+     "niveau": "tableau_non_extrait",
      "libelle": "tableaux",
      "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d5f8f13b0b5c_knowledge_a95f12312a57",
-     "type": "cotisations",
-     "niveau": "incomplete",
-     "libelle": "mode_calcul",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_10b11fed39d8_knowledge_81a9d27bb02d",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "valeurs_de_rachat",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_622c88ea9f4b_knowledge_9e5bc789bca2",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "conditions_de_rachat",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_6b52755aa9bc_knowledge_bf8cc347b759",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "fiscalité",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_8554cf175c9a_knowledge_a3096c93a641",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "determination_part_taxable",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_rachats_reductions_fiscalite_94c8368f6856_knowledge_d80119f3d2ae",
-     "type": "fiscalite",
-     "niveau": "incomplete",
-     "libelle": "mise_en_reduction",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_0a61c726cd35_knowledge_4ebecf35bc1c",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "Le contrat ne finance pas l'organisation des obsèques (pas de contrat en prestations).",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_62de1e7dadfb_knowledge_09e6e3b5f2e2",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "Valeur de rachat inférieure au cumul des cotisations pendant de longues périodes (ex. viager : 1 828",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_6c17bcff880b_knowledge_98fba0137174",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "Décès non accidentel la 1re année : pas de capital, seulement remboursement des cotisations nettes d",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_aeb56e7d32c3_knowledge_2c080b3d95be",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "Contrat de prévoyance, PAS d'épargne : le cumul des cotisations peut dépasser le capital garanti, qu",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_b020c6be3529_knowledge_282e88bbfc1c",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "En cas d'exclusion du décès, la valeur de rachat est tout de même versée aux bénéficiaires subsidiai",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_d5ec81079541_knowledge_86cdae42467c",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "Plafonds d'assistance globaux : 3 600 € (rapatriement) et 750 € (services), à ne pas confondre avec ",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
-    },
-    {
-     "id": "axa_axa_axa_essenciel_2025_06_points_de_vigilance_e2fddb92cc3a_knowledge_194eb1adda54",
-     "type": "points-vigilance",
-     "niveau": "incomplete",
-     "libelle": "La mise en réduction (arrêt de paiement après 1 an) met fin aux garanties d'assistance.",
-     "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-     "page": null,
-     "section": null
+     "page": 17,
+     "section": "4.1 Comment est calculée votre cotisation ?"
     }
    ]
   },

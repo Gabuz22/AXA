@@ -17,7 +17,7 @@ Une réponse peut être **juste et pauvre**. La base permet plus : répondre **c
 que fait le conseiller, plus le contrôle. On ne descend jamais sous le socle.
 
 Repères de la base (calculés, non déclaratifs) : **9 contrats**, **556 éléments citables**, dont
-**86 %** portent une page de notice précise — 50 garanties, 33 exclusions, 21 conditions de
+**89 %** portent une page de notice précise — 50 garanties, 33 exclusions, 21 conditions de
 souscription, 61 points de vigilance. C'est ce matériau que les niveaux exploitent.
 
 ## Niveau 0 — Répondeur fiable (le plancher, jamais négociable)

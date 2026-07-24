@@ -8379,9 +8379,9 @@
      },
      "source": {
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -8419,9 +8419,9 @@
      },
      "source": {
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -8510,9 +8510,9 @@
      },
      "source": {
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -8563,9 +8563,9 @@
      },
      "source": {
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -8658,9 +8658,9 @@
      },
      "source": {
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "1.2 Votre cotisation",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -9119,9 +9119,9 @@
      },
      "source": {
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 28,
+      "section": "7.3 Valeur de rachat",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -9249,9 +9249,9 @@
      },
      "source": {
       "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 28,
+      "section": "7.3 Valeur de rachat",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -9292,10 +9292,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -9345,10 +9343,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -9410,10 +9406,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -9460,10 +9454,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -9510,10 +9502,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -9561,10 +9551,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -9605,10 +9593,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -9653,10 +9639,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -10628,9 +10612,9 @@
      },
      "source": {
       "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 17,
+      "section": "4.1 Comment est calculée votre cotisation ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -10715,9 +10699,9 @@
      },
      "source": {
       "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 17,
+      "section": "4.1 Comment est calculée votre cotisation ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -10783,9 +10767,9 @@
      },
      "source": {
       "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 17,
+      "section": "4.1 Comment est calculée votre cotisation ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -10832,9 +10816,9 @@
      },
      "source": {
       "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 17,
+      "section": "4.1 Comment est calculée votre cotisation ?",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -10899,9 +10883,9 @@
      },
      "source": {
       "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 17,
+      "section": "4.1 Comment est calculée votre cotisation ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -11227,9 +11211,9 @@
      },
      "source": {
       "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 33,
+      "section": "8.3 Comment pouvez-vous mettre fin à votre adhésion ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -11311,9 +11295,9 @@
      },
      "source": {
       "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 33,
+      "section": "8.3 Comment pouvez-vous mettre fin à votre adhésion ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -11367,9 +11351,9 @@
      },
      "source": {
       "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 43,
+      "section": "11.5 Que faut-il savoir en termes de fiscalité ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -11419,9 +11403,9 @@
      },
      "source": {
       "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 43,
+      "section": "11.5 Que faut-il savoir en termes de fiscalité ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -11498,9 +11482,9 @@
      },
      "source": {
       "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 18,
+      "section": "4.4 Que se passe-t-il en cas de non-paiement de votre cotisation ?",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -11572,10 +11556,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -11617,10 +11599,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -11671,10 +11651,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -11721,10 +11699,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -11778,10 +11754,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -11830,10 +11804,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -11879,10 +11851,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,

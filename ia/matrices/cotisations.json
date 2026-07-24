@@ -107,7 +107,7 @@
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b469ea936b98_knowledge_330ec644bd2d",
@@ -115,7 +115,7 @@
    "titre": "mode_calcul",
    "texte": "Cotisation calculée à l'adhésion selon : âge de l'assuré (différence de millésimes), garanties souscrites et niveau de rente choisi, majoration éventuelle pour risque aggravé. Payable à terme d'avance (périodicité mensuelle/trimestrielle/semestrielle/annuelle, modifiable à chaque échéance anniversaire). PAS de modification en raison de l'âge ou de la détérioration de l'état de santé en cours d'adhésion ; majorations possibles uniquement sur décision du comité de gestion paritaire (revalorisation, résultats techniques/financiers, évolutions législatives/…",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_b71f718b3818_knowledge_2ceb18ba5d21",
@@ -123,7 +123,7 @@
    "titre": "frais",
    "texte": "Frais de fractionnement · Mentionnés comme déduits du remboursement des cotisations (garantie décès remboursement) — montant non précisé dans la notice.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_bda7c72e6e68_knowledge_c08c819e085e",
@@ -131,7 +131,7 @@
    "titre": "exemples_chiffrés",
    "texte": "Calcul de l'âge par différence de millésimes : né en 1947, adhésion en 2012 → 2012-1947 = 65 ans.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_d8f6e55152e0_knowledge_4ce4ee258710",
@@ -147,7 +147,7 @@
    "titre": "réductions",
    "texte": "Réduction couple 10 % · Voir options.",
    "notice": "EntourAge/2025-06 Notice d'Information Entour'Age.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_e4d3550ca172_knowledge_4e2e3f2d5105",
@@ -163,7 +163,7 @@
    "titre": "réductions",
    "texte": "Réduction couple 10 % · Voir options.",
    "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-   "page": null
+   "page": 17
   },
   {
    "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_0fdc19816413_knowledge_010612cb7537",
@@ -179,7 +179,7 @@
    "titre": "frais",
    "texte": "Frais de fonctionnement et de gestion de la garantie décès · Inclus dans les cotisations, exprimés en % du capital souscrit, fonction de l'âge à l'adhésion et de la durée : 0,9 % max du capital souscrit pour les cotisations viagères ; 0,4 % max pour les cotisations 10 ans ; 0,4 % max pour les cotisations 20 ans. Ces frais n'affectent pas le capital garanti. · Pénalité de rachat · 5 % de la valeur de rachat la 1re année, diminuée de 0,5 % par année ; nulle au-delà de la 10e année.",
    "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-   "page": null
+   "page": 17
   },
   {
    "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d352dd9df6b0_knowledge_a18b90c925a0",
@@ -187,7 +187,7 @@
    "titre": "exemples_chiffrés",
    "texte": "Capital 5 000 € souscrit → 5 804,92 € après 12 ans (revalorisation 1 %/an, +16 % global). · 50 ans, capital 4 500 € : 48,84 €/mois (10 ans) ou 25,12 €/mois (viager).",
    "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-   "page": null
+   "page": 17
   },
   {
    "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d54c486f45e6_knowledge_9b690d586091",
@@ -195,7 +195,7 @@
    "titre": "tableaux",
    "texte": "Exemple de cumul de cotisations (60 ans, capital 5 000 €) · 18 · type · durée · cotisation_annuelle_eur · cumul à 65/70/75/80/85/90/95 ans · Viager · jusqu'au décès · 390.68 · 1953 · 3907 · 5860 · 7814 · 9767 · 11720 · 13674 · Temporaire · 20 ans · 423.39 · 2117 · 4234 · 6351 · 8468 · 10 ans · 663.61 · 3318 · 6636",
    "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-   "page": null
+   "page": 17
   },
   {
    "id": "axa_axa_axa_essenciel_2025_06_cotisations_et_prix_d5f8f13b0b5c_knowledge_a95f12312a57",
@@ -203,7 +203,7 @@
    "titre": "mode_calcul",
    "texte": "Cotisation déterminée à l'adhésion selon : montant du capital choisi (2 000-10 000 €), âge de l'adhérent (différence de millésimes), durée de paiement (10 ans, 20 ans, viagère). Cotisations CONSTANTES (n'évoluent ni avec l'âge ni avec l'état de santé). Payables d'avance, périodicité mensuelle/trimestrielle/semestrielle/annuelle.",
    "notice": "EssenCiel/2025-06 Notice d'information Essen'Ciel.pdf",
-   "page": null
+   "page": 17
   },
   {
    "id": "axa_axa_axa_excelium_vie_2026_05_cotisations_et_prix_171c5a3a4b19_knowledge_833f37b8be6f",
