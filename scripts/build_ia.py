@@ -41,7 +41,7 @@ SITE = "https://gabuz22.github.io/AXA"
 # None tant que le projet Cloudflare n'est pas créé : la ligne correspondante dans START ne
 # s'affiche pas plutôt que de publier un lien mort. À renseigner une fois l'URL pages.dev connue
 # (ex. "https://axa-ia.pages.dev") — voir CLOUDFLARE_SETUP.md.
-CLOUDFLARE_API_BASE = None
+CLOUDFLARE_API_BASE = "https://axa.guzan99.workers.dev/"
 
 def load(p, d=None):
     try:

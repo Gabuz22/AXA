@@ -44,6 +44,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 - **Contrôler ta propre réponse** avant de l'envoyer → [tests de qualité](tests-qualite.html) · [vérificateur](verifier.html)
 - Limites de la base → [couverture](couverture.html) · [qualité du routage](qualite-routage.html)
 - Version machine de cette carte : [selection.json](selection.json) · tout le reste : [ai-manifest.json](ai-manifest.json)
+- **Présélection CHIFFRÉE et garantie** (jamais approximée par toi) : construis et appelle `https://axa.guzan99.workers.dev/api/preselection?age=<âge>&budget=<€/mois>&besoins=<id:importance,...>&existants=<noms séparés par virgule>` — les ids de besoins valides apparaissent dans l'erreur si tu en donnes un inconnu. Le résultat est DÉJÀ calculé et sourcé, tu n'as pas à réappliquer le barème toi-même. Lecture seule, aucune donnée nominative acceptée.
 
 ## Étape 4 — Trois exemples travaillés (calculés par le moteur réel)
 ### Exemple 1 · Contrat précis
