@@ -7,3 +7,4 @@ __pycache__/
 *.pyc
 agent-work/runs/quota_state.json
 agent-work/orchestrator/locks/*.lock
+.wrangler/

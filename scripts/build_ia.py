@@ -37,6 +37,11 @@ if _VMETA.get("version") and _VMETA["version"] != VERSION:
     print("[build_ia] ATTENTION version desynchronisee : version.json=%s / build_ia=%s"
           % (_VMETA["version"], VERSION))
 SITE = "https://gabuz22.github.io/AXA"
+# Endpoint de calcul déterministe (Cloudflare Pages Function, functions/api/preselection.js).
+# None tant que le projet Cloudflare n'est pas créé : la ligne correspondante dans START ne
+# s'affiche pas plutôt que de publier un lien mort. À renseigner une fois l'URL pages.dev connue
+# (ex. "https://axa-ia.pages.dev") — voir CLOUDFLARE_SETUP.md.
+CLOUDFLARE_API_BASE = None
 
 def load(p, d=None):
     try:
@@ -702,7 +707,7 @@ dis-le tel quel ; ne la présente jamais comme un service officiel AXA.
 - **Monter en rigueur** (répondre niveau conseiller, contrôler niveau inspecteur) → [niveaux de compétence](niveaux-competence.html)
 - **Contrôler ta propre réponse** avant de l'envoyer → [tests de qualité](tests-qualite.html) · [vérificateur](verifier.html)
 - Limites de la base → [couverture](couverture.html) · [qualité du routage](qualite-routage.html)
-- Version machine de cette carte : [selection.json](selection.json) · tout le reste : [ai-manifest.json](ai-manifest.json)
+- Version machine de cette carte : [selection.json](selection.json) · tout le reste : [ai-manifest.json](ai-manifest.json)%(ligne_api)s
 
 ## Étape 4 — Trois exemples travaillés (calculés par le moteur réel)
 ### Exemple 1 · Contrat précis
@@ -765,6 +770,11 @@ l'adresse exacte à lui indiquer est : **%(site_ia)sinstructions-maitres.txt** (
 **%(site_ia)sstart.txt**). Applique alors ces règles et **signale comme non vérifiée** toute affirmation
 que tu n'as pas pu sourcer.
 """ % {"nc": len(CONTRACT_META), "nel": n_el, "version": VERSION, "date": DATE, "site_ia": SITE_IA,
+       "ligne_api": ("\n- **Présélection CHIFFRÉE et garantie** (jamais approximée par toi) : construis et appelle "
+                     "`%sapi/preselection?age=<âge>&budget=<€/mois>&besoins=<id:importance,...>&existants=<noms séparés par virgule>` "
+                     "— les ids de besoins valides apparaissent dans l'erreur si tu en donnes un inconnu. Le résultat est "
+                     "DÉJÀ calculé et sourcé, tu n'as pas à réappliquer le barème toi-même. Lecture seule, aucune donnée "
+                     "nominative acceptée." % CLOUDFLARE_API_BASE) if CLOUDFLARE_API_BASE else "",
        "ex1_q": ex1_q, "ex1_d": ex1_d, "ex2_q": ex2_q, "ex2_d": ex2_d, "ex3_q": ex3_q, "ex3_d": ex3_d,
        "e1_txt": e1_txt, "e1_cite": e1_cite,
        "at1_q": at1_q, "at1_d": at1_d, "at2_q": at2_q, "at2_d": at2_d, "at3_q": at3_q, "at3_d": at3_d}
