@@ -999,9 +999,9 @@
      },
      "source": {
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 20,
+      "section": "6.5. Cotisations",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -1068,9 +1068,9 @@
      },
      "source": {
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 20,
+      "section": "6.5. Cotisations",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -1151,9 +1151,9 @@
      },
      "source": {
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 20,
+      "section": "6.5. Cotisations",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -1190,9 +1190,9 @@
      },
      "source": {
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 20,
+      "section": "6.5. Cotisations",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -1229,9 +1229,9 @@
      },
      "source": {
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 20,
+      "section": "6.5. Cotisations",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -1580,10 +1580,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -1755,9 +1753,9 @@
      },
      "source": {
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 8,
+      "section": "4. Vos services d'assistance",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -1800,9 +1798,9 @@
      },
      "source": {
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 14,
+      "section": "5.1. Comment déclarer l'accident",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -1845,9 +1843,9 @@
      },
      "source": {
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 14,
+      "section": "5.2. La réparation des préjudices",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -1897,10 +1895,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -1949,9 +1945,9 @@
      },
      "source": {
       "document_source": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 20,
+      "section": "6.7. Subrogation",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6102,9 +6098,9 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": 9,
-      "section": "1.2 Votre cotisation",
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 6,
+      "section": "1.2. Votre cotisation",
       "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
@@ -6141,9 +6137,9 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": 9,
-      "section": "1.2 Votre cotisation",
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 6,
+      "section": "1.2. Votre cotisation",
       "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
@@ -6235,9 +6231,9 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": 9,
-      "section": "1.2 Votre cotisation",
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 6,
+      "section": "1.2.1. La détermination de votre cotisation annuelle",
       "statut_tracabilite": "complete"
      },
      "flags": {
@@ -6304,9 +6300,9 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": 9,
-      "section": "1.2 Votre cotisation",
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 6,
+      "section": "1.2. Votre cotisation",
       "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
@@ -6343,9 +6339,9 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": 9,
-      "section": "1.2 Votre cotisation",
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 51,
+      "section": "6. Définitions - Non-fumeur",
       "statut_tracabilite": "complete"
      },
      "flags": {
@@ -6698,10 +6694,10 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": 27,
-      "section": "4.4 Rachat et réduction",
-      "statut_tracabilite": "tableau_non_extrait"
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 43,
+      "section": "4.4. Rachat et réduction",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6779,10 +6775,10 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": 27,
-      "section": "4.4 Rachat et réduction",
-      "statut_tracabilite": "tableau_non_extrait"
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 43,
+      "section": "4.4. Rachat et réduction",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6819,10 +6815,10 @@
       "score": 35
      },
      "source": {
-      "document_source": "Avizen/2025-04 Notice d'information Avizen.pdf",
-      "page": 27,
-      "section": "4.4 Rachat et réduction",
-      "statut_tracabilite": "tableau_non_extrait"
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 43,
+      "section": "4.4. Rachat et réduction",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6861,9 +6857,9 @@
      },
      "source": {
       "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 3,
+      "section": "1.1.4. La fiscalité applicable",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -6927,9 +6923,9 @@
      },
      "source": {
       "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 3,
+      "section": "1.1.4. La fiscalité applicable",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -7021,8 +7017,10 @@
       "score": 35
      },
      "source": {
-      "statut_tracabilite": "editorial",
-      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 40,
+      "section": "4.1.3. Exclusions des garanties décès par accident et invalidité permanente totale par accident",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -7068,8 +7066,10 @@
       "score": 35
      },
      "source": {
-      "statut_tracabilite": "editorial",
-      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 12,
+      "section": "2.2. Garanties en cas d'incapacité temporaire totale de travail ou d'invalidité permanente partielle ou totale",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -7268,8 +7268,10 @@
       "score": 35
      },
      "source": {
-      "statut_tracabilite": "editorial",
-      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
+      "document_source": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+      "page": 4,
+      "section": "1.1.5.b) En cours d'adhésion",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13315,9 +13317,9 @@
      },
      "source": {
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13355,9 +13357,9 @@
      },
      "source": {
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13440,9 +13442,9 @@
      },
      "source": {
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13479,9 +13481,9 @@
      },
      "source": {
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13518,9 +13520,9 @@
      },
      "source": {
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 9,
+      "section": "Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13880,9 +13882,9 @@
      },
      "source": {
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 21,
+      "section": "Article 8. Rachat et réduction",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -13961,9 +13963,9 @@
      },
      "source": {
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 21,
+      "section": "Article 8. Rachat et réduction",
+      "statut_tracabilite": "tableau_non_extrait"
      },
      "flags": {
       "pdf_disponible": true,
@@ -14001,9 +14003,9 @@
      },
      "source": {
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 21,
+      "section": "Article 8. Rachat et réduction",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -14088,9 +14090,9 @@
      },
      "source": {
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 21,
+      "section": "Article 8. Rachat et réduction",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -14129,10 +14131,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -14175,10 +14175,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -14228,10 +14226,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -14282,10 +14278,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,
@@ -14334,9 +14328,9 @@
      },
      "source": {
       "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "page": 27,
+      "section": "Annexe — Encours cumulé des contrats de crédit",
+      "statut_tracabilite": "complete"
      },
      "flags": {
       "pdf_disponible": true,
@@ -14380,10 +14374,8 @@
       "score": 35
      },
      "source": {
-      "document_source": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-      "page": null,
-      "section": null,
-      "statut_tracabilite": "incomplete"
+      "statut_tracabilite": "editorial",
+      "note": "Synthèse conseiller de plusieurs clauses de la notice — mise en garde, pas une citation ponctuelle."
      },
      "flags": {
       "pdf_disponible": true,

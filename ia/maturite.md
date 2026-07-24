@@ -41,7 +41,7 @@
 - Franchises : 14/14
 - Glossaire (définitions) : 46/46
 - Notices (PDF) : 11/11
-- Sources (références) : 164/164
+- Sources (références) : 169/169
 - Contrats : 9/9
 
 ## Limites restantes

@@ -66,16 +66,16 @@
    "contrat": "Avizen Pro",
    "titre": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
    "texte": "Exclusion de l'alcoolisme chronique présente aussi pour les garanties décès/IPT par accident (4.1.3), pas seulement pour l'ITT.",
-   "notice": null,
-   "page": null
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 40
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
    "contrat": "Avizen Pro",
    "titre": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
    "texte": "Différence majeure avec Avizen : garanties ITT/invalidité accordées UNIQUEMENT en couplage avec une garantie décès à l'adhésion (encadré p.14).",
-   "notice": null,
-   "page": null
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 12
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_b3c4d3f2b5e8_knowledge_7db2ae0bff95",
@@ -106,8 +106,8 @@
    "contrat": "Avizen Pro",
    "titre": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
    "texte": "Changement de profession non signalé = suspension automatique de la garantie rente invalidité, et sanctions 1.1.5.b pour le capital.",
-   "notice": null,
-   "page": null
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 4
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_points_de_vigilance_16c84e8a15cc_knowledge_00dcf84ccfed",
@@ -339,7 +339,7 @@
    "titre": "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
    "texte": "Assistance après accident et handicap : France métropolitaine uniquement (p.10).",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-   "page": null
+   "page": 8
   },
   {
    "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_4fe1d6193758_knowledge_5b9c5fea95b4",
@@ -347,7 +347,7 @@
    "titre": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
    "texte": "Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16).",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-   "page": null
+   "page": 14
   },
   {
    "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_5256a4785e84_knowledge_c7303cf5027d",
@@ -355,14 +355,14 @@
    "titre": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
    "texte": "Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité nationale (FGTI, CIVI, FGAO) — pas de cumul (5.2).",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-   "page": null
+   "page": 14
   },
   {
    "id": "axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_b635c47c8e25_knowledge_40c607965a24",
    "contrat": "Ma Protection Accident (Garantie des accidents de la vie)",
    "titre": "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (ar…",
    "texte": "Les formules, plafonds de garantie et montants de cotisation ne figurent PAS dans ces Conditions générales : ils sont renvoyés aux Conditions particulières (art. 6.5, 6.6).",
-   "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+   "notice": null,
    "page": null
   },
   {
@@ -371,7 +371,7 @@
    "titre": "Subrogation de l'assureur contre le tiers responsable (6.7).",
    "texte": "Subrogation de l'assureur contre le tiers responsable (6.7).",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-   "page": null
+   "page": 20
   },
   {
    "id": "axa_axa_axa_ma_retraite_2026_05_points_de_vigilance_29dbe9dd07a5_knowledge_bf0dd90f6ec7",
@@ -443,14 +443,14 @@
    "titre": "Pas de valeur de rachat ni de réduction.",
    "texte": "Pas de valeur de rachat ni de réduction.",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-   "page": null
+   "page": 21
   },
   {
    "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_173b632105ef_knowledge_af69875b3299",
    "contrat": "Masterlife CREDIT",
    "titre": "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
    "texte": "Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours).",
-   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "notice": null,
    "page": null
   },
   {
@@ -458,7 +458,7 @@
    "contrat": "Masterlife CREDIT",
    "titre": "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
    "texte": "Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (garanties sans objet).",
-   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "notice": null,
    "page": null
   },
   {
@@ -466,7 +466,7 @@
    "contrat": "Masterlife CREDIT",
    "titre": "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
    "texte": "Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu des garanties incapacité/invalidité.",
-   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "notice": null,
    "page": null
   },
   {
@@ -474,7 +474,7 @@
    "contrat": "Masterlife CREDIT",
    "titre": "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
    "texte": "Aucun aléa = aucune garantie : toute incapacité/invalidité/PTIA en cours à la signature n'est jamais couverte.",
-   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "notice": null,
    "page": null
   },
   {
@@ -483,14 +483,14 @@
    "titre": "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).",
    "texte": "Annexe p.27 : exemples de calcul de l'encours cumulé pour le seuil Lemoine de 200 000 € (non détaillés ici).",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-   "page": null
+   "page": 27
   },
   {
    "id": "axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_c3162986a52f_knowledge_df9e127805c0",
    "contrat": "Masterlife CREDIT",
    "titre": "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.",
    "texte": "Affections psychologiques, asthénie/fibromyalgie et dos exclues par principe — couverture seulement via hospitalisation qualifiante ou option Psy/Dos+.",
-   "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
+   "notice": null,
    "page": null
   }
  ]

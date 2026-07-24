@@ -31,7 +31,7 @@
 | Franchises | 14 | 14 | 100 % |
 | Glossaire (définitions) | 46 | 46 | 100 % |
 | Notices (PDF) | 11 | 11 | 100 % |
-| Sources (références) | 164 | 164 | 100 % |
+| Sources (références) | 169 | 169 | 100 % |
 | Contrats | 9 | 9 | 100 % |
 
 **Verdict.** ✅ Couverture complète : aucune information exploitable perdue.

@@ -58,16 +58,16 @@
    "contrat": "Avizen Pro",
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
-   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": 9
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 6
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
    "contrat": "Avizen Pro",
    "titre": "exemples_chiffrés",
    "texte": "Option taux professionnel : taux d'invalidité 50 % → taux d'indemnisation 50/66 = 75,76 % de la rente du certificat ; taux 75 % → 100 %.",
-   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": 9
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 6
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_759b89f27c1f_knowledge_d18add8ca1f6",
@@ -82,24 +82,24 @@
    "contrat": "Avizen Pro",
    "titre": "mode_calcul",
    "texte": "Identique à Avizen : âge (différence de millésimes), groupe tarifaire professionnel, fumeur/non-fumeur, conditions d'acceptation médicale, conditions d'exercice, activités/sports, taxes. Payables d'avance sous 10 jours de l'échéance (périodicité au certificat). Arrêt du paiement au décès ou à la reconnaissance d'IPT.",
-   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": 9
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 6
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
    "contrat": "Avizen Pro",
    "titre": "frais",
    "texte": "frais. Information documentaire à consulter dans la source.",
-   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": 9
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 6
   },
   {
    "id": "axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
    "contrat": "Avizen Pro",
    "titre": "réductions",
    "texte": "Abattement non-fumeur · Abattement tarifaire pour non-fumeur (24 mois sans tabac ni sevrage) sur les garanties décès/IPT, rente éducation, rente décès.",
-   "notice": "Avizen/2025-04 Notice d'information Avizen.pdf",
-   "page": 9
+   "notice": "Avizen Pro/2025-04 Notice d'information Avizen Pro (AEP).pdf",
+   "page": 51
   },
   {
    "id": "axa_axa_axa_entourage_2025_06_cotisations_et_prix_838b008b1906_knowledge_5662096fed89",
@@ -251,7 +251,7 @@
    "titre": "mode_calcul",
    "texte": "Cotisations fixées en fonction de la formule et des garanties choisies (montants aux Conditions particulières, non chiffrés dans les CG). Indexation à chaque échéance principale sur le « taux d'inflation annuel en France » ou indice substitué ; modification possible hors indice avec droit de résiliation. Payables d'avance à l'échéance.",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-   "page": null
+   "page": 20
   },
   {
    "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_43cde47be6c5_knowledge_84f0cc5d506e",
@@ -259,7 +259,7 @@
    "titre": "réductions",
    "texte": "réductions. Information documentaire à consulter dans la source.",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-   "page": null
+   "page": 20
   },
   {
    "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_8e0714ae258e_knowledge_4063da2b858c",
@@ -275,7 +275,7 @@
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-   "page": null
+   "page": 20
   },
   {
    "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_a87147f47563_knowledge_27c874b6f06e",
@@ -283,7 +283,7 @@
    "titre": "frais",
    "texte": "frais. Information documentaire à consulter dans la source.",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-   "page": null
+   "page": 20
   },
   {
    "id": "axa_axa_axa_ma_protection_accident_2024_03_cotisations_et_prix_c22a5aa37858_knowledge_579359b13918",
@@ -291,7 +291,7 @@
    "titre": "exemples_chiffrés",
    "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
    "notice": "Ma Protection Accident/2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
-   "page": null
+   "page": 20
   },
   {
    "id": "axa_axa_axa_ma_retraite_2026_05_cotisations_et_prix_0d373eee8846_knowledge_4a70ecf97022",
@@ -339,7 +339,7 @@
    "titre": "exemples_chiffrés",
    "texte": "exemples_chiffrés. Information documentaire à consulter dans la source.",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_317921e2cd84_knowledge_8dcd710beb80",
@@ -347,7 +347,7 @@
    "titre": "mode_calcul",
    "texte": "Cotisation annuelle calculée selon : âge à l'adhésion (différence de millésimes), profession, type/taux d'intérêt/durée/modalités de remboursement/montant de l'emprunt, quotité assurée, garanties et options, conditions d'acceptation médicale et activités sportives. Deux options de tarification irrévocables (constante / capital restant dû). Payables d'avance sous 10 jours des échéances (mensuelle/trimestrielle/annuelle ; mensuel et trimestriel par prélèvement automatique obligatoire).",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_8936eebaa5cc_knowledge_85eab19f89d6",
@@ -355,7 +355,7 @@
    "titre": "réductions",
    "texte": "réductions. Information documentaire à consulter dans la source.",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_a8de7fb08bee_knowledge_fc624b04e8d5",
@@ -363,7 +363,7 @@
    "titre": "frais",
    "texte": "frais. Information documentaire à consulter dans la source.",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_f904852eb47e_knowledge_1f5ef94b1625",
@@ -371,7 +371,7 @@
    "titre": "tableaux",
    "texte": "tableaux. Information documentaire à consulter dans la source.",
    "notice": "MasterLife/Notice-Masterlife-Credit-202410.pdf",
-   "page": null
+   "page": 9
   },
   {
    "id": "axa_axa_axa_masterlife_credit_2024_10_cotisations_et_prix_fcc33a37f235_knowledge_bdaff89df963",

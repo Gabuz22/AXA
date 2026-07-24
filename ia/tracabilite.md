@@ -12,7 +12,7 @@
 **Limites.** Certains tableaux chiffrés (valeurs de rachat, barèmes) sont à vérifier dans la notice. La notice PDF reste la seule source qui fait foi.
 
 
-**Global : 556 éléments, 432 pleinement traçables (78 %). 96 à vérifier · 28 note(s) éditoriale(s) assumée(s).**
+**Global : 556 éléments, 448 pleinement traçables (81 %). 76 à vérifier · 32 note(s) éditoriale(s) assumée(s).**
 
 > Traçable = source pointant la **notice + la page**. « À vérifier » ne veut pas dire faux : la donnée existe mais sa localisation exacte reste à confirmer dans la notice (page imprécise, tableau non extrait, ou source à rattacher). Une **note éditoriale** est une mise en garde conseiller assumée (ex. comparaison inter-produits) : elle n'a pas de citation de notice, et ne doit pas être présentée comme un fait contractuel. **La notice PDF fait foi.**
 
@@ -21,14 +21,14 @@
 | Contrat | Éléments | Traçables | À vérifier |
 |---|---|---|---|
 | Avizen | 92 | 86 % | 8 |
-| Avizen Pro | 89 | 83 % | 8 |
+| Avizen Pro | 89 | 91 % | 4 |
 | Entour'Age | 62 | 71 % | 18 |
 | Essen'Ciel (assurance obsèques) | 61 | 72 % | 17 |
 | Essen'Ciel Patrimoine | 14 | 71 % | 3 |
 | Excelium (assurance vie) | 46 | 76 % | 4 |
-| Ma Protection Accident (Garantie des accidents de la vie) | 69 | 77 % | 16 |
+| Ma Protection Accident (Garantie des accidents de la vie) | 69 | 84 % | 9 |
 | Ma Retraite (plan d'épargne retraite individuel — PER) | 46 | 72 % | 5 |
-| Masterlife CREDIT | 77 | 78 % | 17 |
+| Masterlife CREDIT | 77 | 83 % | 8 |
 
 ## Avizen — 86 % traçable
 
@@ -44,19 +44,15 @@ Répartition : 79 pleinement traçable · 5 note conseiller éditoriale · 2 sou
 - **[fiscalite]** fiscalité — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
 - **[fiscalite]** determination_part_taxable — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf)
 
-## Avizen Pro — 83 % traçable
+## Avizen Pro — 91 % traçable
 
-Répartition : 74 pleinement traçable · 7 note conseiller éditoriale · 2 source connue, page imprécise · 6 valeur dans un tableau non extrait.
+Répartition : 81 pleinement traçable · 4 note conseiller éditoriale · 4 valeur dans un tableau non extrait.
 
-À vérifier (8) — tableau non extrait et sans source d'abord :
-- **[cotisations]** tableaux — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.9, 1.2 Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9)
-- **[cotisations]** exemples_chiffrés — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.9, 1.2 Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9)
-- **[cotisations]** frais — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.9, 1.2 Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=9)
-- **[fiscalite]** conditions_de_rachat — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.4 Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27)
-- **[fiscalite]** mise_en_reduction — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.4 Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27)
-- **[fiscalite]** valeurs_de_rachat — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen.pdf, p.27, 4.4 Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen/2025-04%20Notice%20d%27information%20Avizen.pdf#page=27)
-- **[fiscalite]** fiscalité — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
-- **[fiscalite]** determination_part_taxable — _page à préciser_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf)
+À vérifier (4) — tableau non extrait et sans source d'abord :
+- **[cotisations]** tableaux — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.6, 1.2. Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=6)
+- **[cotisations]** exemples_chiffrés — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.6, 1.2. Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=6)
+- **[cotisations]** frais — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.6, 1.2. Votre cotisation](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=6)
+- **[fiscalite]** determination_part_taxable — _⚠ tableau non extrait_ [Notice : 2025-04 Notice d'information Avizen Pro (AEP).pdf, p.3, 1.1.4. La fiscalité applicable](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Avizen%20Pro/2025-04%20Notice%20d%27information%20Avizen%20Pro%20%28AEP%29.pdf#page=3)
 
 ## Entour'Age — 71 % traçable
 
@@ -119,26 +115,20 @@ Répartition : 35 pleinement traçable · 7 note conseiller éditoriale · 4 val
 - **[fiscalite]** mise_en_reduction — _⚠ tableau non extrait_ [Notice : 2026-05 Notice Excelium Vie.pdf, p.43, 7.1 Les règles du rachat](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=43)
 - **[fiscalite]** fiscalité — _⚠ tableau non extrait_ [Notice : 2026-05 Notice Excelium Vie.pdf, p.72, Annexe fiscale (au 1er janvier 2026)](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Excelium/2026-05%20Notice%20Excelium%20Vie.pdf#page=72)
 
-## Ma Protection Accident (Garantie des accidents de la vie) — 77 % traçable
+## Ma Protection Accident (Garantie des accidents de la vie) — 84 % traçable
 
-Répartition : 53 pleinement traçable · 16 source connue, page imprécise.
+Répartition : 58 pleinement traçable · 2 note conseiller éditoriale · 5 source connue, page imprécise · 4 valeur dans un tableau non extrait.
 
-À vérifier (16) — tableau non extrait et sans source d'abord :
-- **[cotisations]** mode_calcul — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
-- **[cotisations]** réductions — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
-- **[cotisations]** tableaux — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
-- **[cotisations]** frais — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
-- **[cotisations]** exemples_chiffrés — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
+À vérifier (9) — tableau non extrait et sans source d'abord :
+- **[cotisations]** réductions — _⚠ tableau non extrait_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.20, 6.5. Cotisations](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=20)
+- **[cotisations]** tableaux — _⚠ tableau non extrait_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.20, 6.5. Cotisations](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=20)
+- **[cotisations]** frais — _⚠ tableau non extrait_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.20, 6.5. Cotisations](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=20)
+- **[cotisations]** exemples_chiffrés — _⚠ tableau non extrait_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf, p.20, 6.5. Cotisations](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf#page=20)
 - **[fiscalite]** fiscalité — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
 - **[fiscalite]** valeurs_de_rachat — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
-- **[fiscalite]** note — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
 - **[fiscalite]** conditions_de_rachat — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
 - **[fiscalite]** determination_part_taxable — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
 - **[fiscalite]** mise_en_reduction — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
-- **[points-vigilance]** Assistance après accident et handicap : France métropolitaine uniquement (p.10). — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
-- **[points-vigilance]** Déchéance de garantie totale en cas de fausse déclaration intentionnelle sur le sinistre (p.16). — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
-- **[points-vigilance]** Indemnisation versée sous déduction des prestations des tiers payeurs et organismes de solidarité na — _page à préciser_ [Notice : 2024-03 CG Ma Protection Accident (AGA-AEP).pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20Protection%20Accident/2024-03%20CG%20Ma%20Protection%20Accident%20%28AGA-AEP%29.pdf)
-- _… et 2 autres (voir tracabilite.json)._
 
 ## Ma Retraite (plan d'épargne retraite individuel — PER) — 72 % traçable
 
@@ -151,26 +141,19 @@ Répartition : 33 pleinement traçable · 8 note conseiller éditoriale · 2 sou
 - **[fiscalite]** valeurs_de_rachat — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
 - **[fiscalite]** conditions_de_rachat — _page à préciser_ [Notice : 2026-05 Notice Ma Retraite.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/Ma%20retraite/2026-05%20Notice%20Ma%20Retraite.pdf)
 
-## Masterlife CREDIT — 78 % traçable
+## Masterlife CREDIT — 83 % traçable
 
-Répartition : 60 pleinement traçable · 17 source connue, page imprécise.
+Répartition : 64 pleinement traçable · 5 note conseiller éditoriale · 2 source connue, page imprécise · 6 valeur dans un tableau non extrait.
 
-À vérifier (17) — tableau non extrait et sans source d'abord :
-- **[cotisations]** exemples_chiffrés — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- **[cotisations]** mode_calcul — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- **[cotisations]** réductions — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- **[cotisations]** frais — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- **[cotisations]** tableaux — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- **[fiscalite]** mise_en_reduction — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
+À vérifier (8) — tableau non extrait et sans source d'abord :
+- **[cotisations]** exemples_chiffrés — _⚠ tableau non extrait_ [Notice : Notice-Masterlife-Credit-202410.pdf, p.9, Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=9)
+- **[cotisations]** réductions — _⚠ tableau non extrait_ [Notice : Notice-Masterlife-Credit-202410.pdf, p.9, Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=9)
+- **[cotisations]** frais — _⚠ tableau non extrait_ [Notice : Notice-Masterlife-Credit-202410.pdf, p.9, Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=9)
+- **[cotisations]** tableaux — _⚠ tableau non extrait_ [Notice : Notice-Masterlife-Credit-202410.pdf, p.9, Article 2. Votre cotisation — 1. La détermination de votre cotisation annuelle](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=9)
+- **[fiscalite]** mise_en_reduction — _⚠ tableau non extrait_ [Notice : Notice-Masterlife-Credit-202410.pdf, p.21, Article 8. Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=21)
+- **[fiscalite]** conditions_de_rachat — _⚠ tableau non extrait_ [Notice : Notice-Masterlife-Credit-202410.pdf, p.21, Article 8. Rachat et réduction](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf#page=21)
 - **[fiscalite]** determination_part_taxable — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- **[fiscalite]** conditions_de_rachat — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- **[fiscalite]** valeurs_de_rachat — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
 - **[fiscalite]** fiscalité — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- **[points-vigilance]** Pas de valeur de rachat ni de réduction. — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- **[points-vigilance]** Délais de déclaration stricts (10 jours après franchise ; déchéance possible à 180 jours). — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- **[points-vigilance]** Départ à la retraite non déclaré : cotisations payées à fonds perdus sur incapacité/invalidité (gara — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- **[points-vigilance]** Échéances de prêt impayées antérieures au sinistre jamais couvertes ; capital in fine toujours exclu — _page à préciser_ [Notice : Notice-Masterlife-Credit-202410.pdf](../data/AXA/00_PACKAGE_ACTIF/Contrats-AXA/MasterLife/Notice-Masterlife-Credit-202410.pdf)
-- _… et 3 autres (voir tracabilite.json)._
 
 ## Format machine
 - [tracabilite.json](tracabilite.json) — par contrat : score, répartition, et la liste exacte des éléments à vérifier (type, niveau, notice, page). Une IA de contrôle s'en sert pour dire ce qu'il faut confirmer avant de citer.

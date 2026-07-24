@@ -3,7 +3,7 @@
   "version": "2.3.0",
   "genere_le": "2026-07-17",
   "noeuds": 692,
-  "aretes": 2195,
+  "aretes": 2191,
   "types_noeuds": [
    "article_reglementaire",
    "concept",
@@ -10264,7 +10264,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_14ffc33eeaf0_knowledge_14f83df2014e",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
    "rel": "source"
   },
   {
@@ -10279,7 +10279,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_3d72e8841ed9_knowledge_8d16644182d3",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
    "rel": "source"
   },
   {
@@ -10319,7 +10319,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_819a475f3f85_knowledge_f28130b0ac7c",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
    "rel": "source"
   },
   {
@@ -10329,7 +10329,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_c1e309f0900b_knowledge_52e78d47d201",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
    "rel": "source"
   },
   {
@@ -10359,7 +10359,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_cotisations_et_prix_de84853eb4a2_knowledge_c405418c785b",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
    "rel": "source"
   },
   {
@@ -11609,7 +11609,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_2b1334381d5d_knowledge_1ed566556524",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
    "rel": "source"
   },
   {
@@ -11639,7 +11639,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_43a1be7843ad_knowledge_c5adf18d1814",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
    "rel": "source"
   },
   {
@@ -11654,7 +11654,7 @@
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_rachats_reductions_fiscalite_98ed4e335a5b_knowledge_6bb9408ea279",
-   "to": "notice:2025-04-notice-d-information-avizen-pdf",
+   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
    "rel": "source"
   },
   {
@@ -12048,11 +12048,6 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_243bf8cd8a2e_knowledge_fd2afdcc6a20",
-   "to": "notice:2024-03-cg-ma-protection-accident-aga-aep-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_rachats_reductions_fiscalite_72c35224482f_knowledge_a9a24a4c6a38",
    "to": "contrat:ma-protection-accident-garantie-des-accidents-de-la-vie",
    "rel": "appartient_a"
@@ -12343,6 +12338,11 @@
    "rel": "concerne"
   },
   {
+   "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_26fde9bd19a5_knowledge_77e0f0881c3c",
+   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
+   "rel": "source"
+  },
+  {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
    "to": "contrat:avizen-pro",
    "rel": "appartient_a"
@@ -12366,6 +12366,11 @@
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
    "to": "concept:souscription",
    "rel": "concerne"
+  },
+  {
+   "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_4e4a4cd72d68_knowledge_9f9de7c02291",
+   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
+   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_b3c4d3f2b5e8_knowledge_7db2ae0bff95",
@@ -12406,6 +12411,11 @@
    "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_f99ef92bee2b_knowledge_314b37ae71ff",
    "to": "concept:invalidite",
    "rel": "concerne"
+  },
+  {
+   "from": "el:axa_axa_axa_avizen_pro_2025_04_points_de_vigilance_f99ef92bee2b_knowledge_314b37ae71ff",
+   "to": "notice:2025-04-notice-d-information-avizen-pro-aep-pdf",
+   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_entourage_2025_06_points_de_vigilance_16c84e8a15cc_knowledge_00dcf84ccfed",
@@ -12793,11 +12803,6 @@
    "rel": "appartient_a"
   },
   {
-   "from": "el:axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_b635c47c8e25_knowledge_40c607965a24",
-   "to": "notice:2024-03-cg-ma-protection-accident-aga-aep-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_ma_protection_accident_2024_03_points_de_vigilance_e3bb18915674_knowledge_4d9eb5b02c92",
    "to": "contrat:ma-protection-accident-garantie-des-accidents-de-la-vie",
    "rel": "appartient_a"
@@ -12878,11 +12883,6 @@
    "rel": "appartient_a"
   },
   {
-   "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_173b632105ef_knowledge_af69875b3299",
-   "to": "notice:notice-masterlife-credit-202410-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_484c871eb4bf_knowledge_7b643e57951b",
    "to": "contrat:masterlife-credit",
    "rel": "appartient_a"
@@ -12891,11 +12891,6 @@
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_484c871eb4bf_knowledge_7b643e57951b",
    "to": "concept:invalidite",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_484c871eb4bf_knowledge_7b643e57951b",
-   "to": "notice:notice-masterlife-credit-202410-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_5f5655d49ac6_knowledge_91b5fa511851",
@@ -12908,11 +12903,6 @@
    "rel": "concerne"
   },
   {
-   "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_5f5655d49ac6_knowledge_91b5fa511851",
-   "to": "notice:notice-masterlife-credit-202410-pdf",
-   "rel": "source"
-  },
-  {
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_6acaf82de4d0_knowledge_c33f87b96f7d",
    "to": "contrat:masterlife-credit",
    "rel": "appartient_a"
@@ -12921,11 +12911,6 @@
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_6acaf82de4d0_knowledge_c33f87b96f7d",
    "to": "concept:invalidite",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_6acaf82de4d0_knowledge_c33f87b96f7d",
-   "to": "notice:notice-masterlife-credit-202410-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_b54b61128019_knowledge_405b144e09ef",
@@ -12946,11 +12931,6 @@
    "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_c3162986a52f_knowledge_df9e127805c0",
    "to": "concept:hospitalisation",
    "rel": "concerne"
-  },
-  {
-   "from": "el:axa_axa_axa_masterlife_credit_2024_10_points_de_vigilance_c3162986a52f_knowledge_df9e127805c0",
-   "to": "notice:notice-masterlife-credit-202410-pdf",
-   "rel": "source"
   },
   {
    "from": "el:axa_avizen_2025-04_formule_01",
