@@ -21,7 +21,65 @@ const CITE = /\[[^\]]*(?:notice|p\.?\s*\d)/i;
 const NUM = /\d/;
 const NOMINATIF = /\b(monsieur|madame|m\.|mme)\s+[A-ZÉÈÀ][a-zé]+|\b\d{2}[.\s]?\d{2}[.\s]?\d{2}[.\s]?\d{2}[.\s]?\d{2}\b|@[a-z0-9.-]+\.[a-z]{2,}/i;
 
-function analyser(texte) {
+// Normalisation légère pour rapprocher un nom cité d'un contrat de l'index.
+const cle = s => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+// Cœur d'un nom de notice : sans la date de tête ni l'extension (« 2025-06 Notice … Essen'Ciel.pdf »
+// → « Notice … Essen'Ciel »). Sert à identifier le contrat cité SANS ambiguïté préfixe.
+const noticeCore = f => cle(String(f || "").replace(/^\s*\d{4}-\d{2}\s*/, "").replace(/\.pdf$/i, ""));
+// Identifie le contrat d'une citation : parmi ceux dont le cœur de notice (ou le nom) est contenu
+// dans le texte cité, on retient le PLUS SPÉCIFIQUE (le plus long) — « …Essen'Ciel Patrimoine »
+// l'emporte sur « …Essen'Ciel », et « p.14 » ne peut plus matcher « Patrimoine » par accident.
+function identifierContrat(cInner, contrats) {
+  const cand = [];
+  for (const c of contrats) {
+    const core = noticeCore(c.notice_court), nom = cle(c.nom);
+    if (core.length > 8 && cInner.includes(core)) cand.push({ c, poids: core.length });
+    else if (nom.length > 8 && cInner.includes(nom)) cand.push({ c, poids: nom.length });
+  }
+  if (!cand.length) return null;
+  cand.sort((a, b) => b.poids - a.poids);
+  return cand[0].c;
+}
+
+// Contrôle des citations [Contrat — Notice…, p.X, §Y] contre l'index section→page.
+// Attrape : page hors bornes, décalage GROSSIER d'une section, contrat non identifié. Ne certifie
+// JAMAIS la page exacte (un fait est à 0–2 pages du début de sa section — mesuré). Localise, guide.
+function verifierCitations(texte, index) {
+  if (!index || !index.contrats) return [];
+  const out = [];
+  const TOL = (index.meta && index.meta.tolerance_pages) || 2;
+  const contrats = Object.values(index.contrats);
+  // [ ... p.14 ... §3.1 ]  ou  [ ... p.14, 3.1 ]
+  const reCit = /\[([^\]]*?p\.?\s*\d{1,3}[^\]]*)\]/gi;
+  let m;
+  while ((m = reCit.exec(texte)) !== null) {
+    const inner = m[1];
+    const pg = Number((inner.match(/p\.?\s*(\d{1,3})/i) || [])[1]);
+    if (!pg) continue;
+    const secM = inner.match(/§\s*(\d+(?:\.\d+){1,2})|(?:^|[,;\s])(\d+\.\d+(?:\.\d+)?)(?=[\s,;\]])/);
+    const sec = secM ? (secM[1] || secM[2]) : null;
+    // Identifier le contrat (le plus spécifique), sans ambiguïté préfixe.
+    const cInner = cle(inner);
+    const hit = identifierContrat(cInner, contrats);
+    const label = inner.trim().slice(0, 55);
+    if (!hit) { out.push({ niveau: "info", regle: "citation_non_identifiee", message: `Citation « ${label} » : contrat non identifié dans l'index — page non vérifiable.` }); continue; }
+    if (pg < 1 || pg > hit.total_pages) {
+      out.push({ niveau: "grave", regle: "page_hors_bornes", message: `Citation « ${label} » : page ${pg} HORS BORNES pour ${hit.nom} (notice de ${hit.total_pages} pages) — page probablement inventée.` });
+      continue;
+    }
+    if (sec && hit.sections[sec] != null) {
+      const deb = hit.sections[sec];
+      if (pg < deb - 1 || pg > deb + TOL + 1) {
+        out.push({ niveau: "grave", regle: "section_page_incoherente", message: `Citation « ${label} » : le § ${sec} de ${hit.nom} débute p.${deb}, or tu cites p.${pg} — décalage trop grand, vérifie.` });
+      } else {
+        out.push({ niveau: "info", regle: "citation_a_confirmer", message: `§ ${sec} de ${hit.nom} débute p.${deb} (tu cites p.${pg}, cohérent) — confirme que le FAIT est bien à cette page : un fait s'étale sur 1–3 pages, cet outil ne certifie pas la page exacte.` });
+      }
+    }
+  }
+  return out;
+}
+
+function analyser(texte, index) {
   const t = String(texte || "");
   const defauts = [];
   if (!t.trim()) return { erreur: "Aucun texte fourni. Envoie le brouillon de réponse à vérifier (paramètre ?texte= en GET, ou corps de la requête en POST)." };
@@ -57,12 +115,23 @@ function analyser(texte) {
       break;
     }
   }
+  for (const d of verifierCitations(t, index)) defauts.push(d);   // bornes + décalage de section (jamais la page exacte)
+  // « propre » ne compte que les défauts à corriger (grave/moyen) ; les « info » sont des aides.
+  const bloquants = defauts.filter(d => d.niveau !== "info");
   return {
-    propre: defauts.length === 0,
-    note: "Contrôle MÉCANIQUE de la forme (citations, source officielle, clôture, attestation, absence de nominatif). " +
-          "Il ne juge PAS l'exactitude du contenu — la notice PDF fait foi.",
+    propre: bloquants.length === 0,
+    note: "Contrôle MÉCANIQUE de la forme (citations, source officielle, clôture, attestation, absence de nominatif) " +
+          "et des pages citées (bornes + décalage de section). Il ne certifie PAS la page exacte ni l'exactitude du " +
+          "contenu — la notice PDF fait foi.",
     defauts,
   };
+}
+
+async function chargerIndex(env, request) {
+  try {
+    const r = await env.ASSETS.fetch(new Request(new URL("/ia/citations-index.json", request.url)));
+    return r.ok ? await r.json() : null;
+  } catch { return null; }
 }
 
 function reponseJSON(obj, status = 200) {
@@ -72,7 +141,7 @@ function reponseJSON(obj, status = 200) {
 }
 
 // GET ?texte=... (brouillons courts)
-export async function onRequestGet({ request }) {
+export async function onRequestGet({ request, env }) {
   const texte = new URL(request.url).searchParams.get("texte");
   if (texte === null) {
     return reponseJSON({
@@ -80,22 +149,25 @@ export async function onRequestGet({ request }) {
              "dans le corps (recommandé pour un vrai brouillon). Renvoie les défauts de forme à corriger avant d'envoyer.",
       controle: ["attestation de lecture présente", "chaque fait contractuel cité [Contrat — Notice, p.X]",
                  "chiffre réglementaire renvoyé à une source officielle", "clôture « la notice PDF fait foi »",
-                 "aucune donnée nominative"],
-      note: "Contrôle mécanique de la forme, pas de l'exactitude. Écriture nulle : le texte est analysé puis jeté.",
+                 "aucune donnée nominative", "page citée dans les bornes de la notice et cohérente avec sa section"],
+      note: "Contrôle mécanique de la forme, pas de l'exactitude. Il localise la section d'une citation mais ne " +
+            "certifie pas la page exacte (un fait est à 0–2 pages du début de sa section). Écriture nulle.",
     });
   }
-  const r = analyser(texte);
+  const index = await chargerIndex(env, request);
+  const r = analyser(texte, index);
   return reponseJSON(r, r.erreur ? 400 : 200);
 }
 
 // POST : le corps EST le brouillon (texte brut, ou JSON {"texte": "..."}). Aucune écriture.
-export async function onRequestPost({ request }) {
+export async function onRequestPost({ request, env }) {
   let texte = "";
   try {
     const brut = await request.text();
     if (/^\s*[{[]/.test(brut)) { try { const j = JSON.parse(brut); texte = j.texte ?? j.text ?? brut; } catch { texte = brut; } }
     else texte = brut;
   } catch { texte = ""; }
-  const r = analyser(texte);
+  const index = await chargerIndex(env, request);
+  const r = analyser(texte, index);
   return reponseJSON(r, r.erreur ? 400 : 200);
 }

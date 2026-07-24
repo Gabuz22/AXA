@@ -3,7 +3,7 @@
 <body>
 <nav class="ianav"><a href="start.html">START</a> · <a href="index.html">Index</a> · <a href="instructions-maitres.html">Instructions maîtres</a> · <a href="guide-ia.html">Guide IA</a> · <a href="niveaux-competence.html">Niveaux</a> · <a href="outils.html">Outils</a> · <a href="routage.html">Routage</a> · <a href="pertinence.html">Pertinence</a> · <a href="qualite-routage.html">Qualité routage</a> · <a href="hierarchie.html">Hiérarchie</a> · <a href="choix-sources.html">Choix sources</a> · <a href="methode-question-complexe.html">Méthode</a> · <a href="contrats.html">Contrats</a> · <a href="garanties.html">Garanties</a> · <a href="exclusions.html">Exclusions</a> · <a href="definitions.html">Définitions</a> · <a href="conditions.html">Conditions</a> · <a href="declencheurs.html">Déclencheurs</a> · <a href="plafonds.html">Plafonds</a> · <a href="franchises.html">Franchises</a> · <a href="glossaire.html">Glossaire</a> · <a href="concepts.html">Concepts</a> · <a href="themes.html">Thèmes</a> · <a href="comparateur.html">Comparateur</a> · <a href="divergences.html">Divergences</a> · <a href="pieges.html">Pièges</a> · <a href="cas-types.html">Cas-types</a> · <a href="tests-qualite.html">Tests qualité</a> · <a href="verifier.html">Vérificateur</a> · <a href="matrices.html">Matrices</a> · <a href="graphe.html">Graphe</a> · <a href="notices.html">Notices</a> · <a href="tracabilite.html">Traçabilité</a> · <a href="sources.html">Sources</a> · <a href="sources-officielles.html">Sources officielles</a> · <a href="reglementation.html">Réglementation</a> · <a href="surveillance.html">Surveillance</a> · <a href="pack-a.html">Pack A</a> · <a href="pack-b.html">Pack B</a> · <a href="couverture.html">Couverture</a> · <a href="maturite.html">Maturité</a></nav>
 <main>
-<h1>Vérificateur de réponse</h1><p>Colle ici la réponse produite par l'IA. Ce contrôle <strong>mécanique</strong> vérifie la FORME — citations, source officielle sur le réglementaire, clôture, attestation — <strong>pas l'exactitude</strong>. La notice PDF fait toujours foi.</p><textarea id="in" rows="12" style="width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;padding:12px;border-radius:8px;border:1px solid #33415a;background:#0e1726;color:#e8ebf0" placeholder="Base consultée : Gabriel AXA v2.3.0 (2026-07-17)&#10;&#10;Colle la réponse ici…"></textarea><div id="out" style="margin-top:14px"></div><style>#out .ok{background:rgba(91,208,122,.12);border:1px solid rgba(91,208,122,.5);border-radius:8px;padding:12px}#out .warn{border-radius:8px;padding:10px 12px;margin:8px 0;background:rgba(245,196,81,.08);border:1px solid rgba(245,196,81,.4)}#out .warn.grave{background:rgba(226,103,74,.1);border-color:rgba(226,103,74,.5)}#out .muted,.muted{color:#9fb0c8;font-size:13px}</style><script>
+<h1>Vérificateur de réponse</h1><p>Colle ici la réponse produite par l'IA. Ce contrôle <strong>mécanique</strong> vérifie la FORME — citations, source officielle sur le réglementaire, clôture, attestation — <strong>pas l'exactitude</strong>. La notice PDF fait toujours foi.</p><textarea id="in" rows="12" style="width:100%;box-sizing:border-box;font-family:inherit;font-size:15px;padding:12px;border-radius:8px;border:1px solid #33415a;background:#0e1726;color:#e8ebf0" placeholder="Base consultée : Gabriel AXA v2.3.0 (2026-07-17)&#10;&#10;Colle la réponse ici…"></textarea><div id="out" style="margin-top:14px"></div><style>#out .ok{background:rgba(91,208,122,.12);border:1px solid rgba(91,208,122,.5);border-radius:8px;padding:12px}#out .warn{border-radius:8px;padding:10px 12px;margin:8px 0;background:rgba(245,196,81,.08);border:1px solid rgba(245,196,81,.4)}#out .warn.grave{background:rgba(226,103,74,.1);border-color:rgba(226,103,74,.5)}#out .warn.info{background:rgba(96,139,255,.08);border-color:rgba(96,139,255,.4)}#out .muted,.muted{color:#9fb0c8;font-size:13px}</style><script>
 (function(){
   var CTR = /(couv|garanti|exclu|verse|prévoit|plafonn|indemnis|prise? en charge|s'applique|franchise|carence|délai de|remboursé|éligib)/i;
   var REG = /(abattement|barème|plafond fiscal|déduct|madelin|990\s*I|757\s*B|taux\s|impôt|fiscalit)/i;
@@ -13,6 +13,36 @@
   var CITE = /\[[^\]]*(?:notice|p\.?\s*\d)/i;
   var NUM = /\d/;
   var $ = function(id){ return document.getElementById(id); };
+  // Index de citations (bornes + section→page), chargé une fois. null tant qu'indisponible.
+  var IDX = null;
+  fetch("citations-index.json").then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(j){ IDX = j; if($("in").value) analyse(); }).catch(function(){});
+  var cle = function(s){ return String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9]/g,""); };
+  var noticeCore = function(f){ return cle(String(f||"").replace(/^\s*\d{4}-\d{2}\s*/,"").replace(/\.pdf$/i,"")); };
+  function verifCitations(t){
+    if(!IDX || !IDX.contrats) return [];
+    var contrats = Object.keys(IDX.contrats).map(function(k){ return IDX.contrats[k]; });
+    var TOL = (IDX.meta && IDX.meta.tolerance_pages) || 2;
+    var res = [], re = /\[([^\]]*?p\.?\s*\d{1,3}[^\]]*)\]/gi, m;
+    while((m = re.exec(t)) !== null){
+      var inner = m[1], pg = Number((inner.match(/p\.?\s*(\d{1,3})/i)||[])[1]); if(!pg) continue;
+      var sm = inner.match(/§\s*(\d+(?:\.\d+){1,2})|(?:^|[,;\s])(\d+\.\d+(?:\.\d+)?)(?=[\s,;\]])/);
+      var sec = sm ? (sm[1]||sm[2]) : null, cInner = cle(inner);
+      var cand = [];
+      for(var i=0;i<contrats.length;i++){ var c=contrats[i], core=noticeCore(c.notice_court), nom=cle(c.nom);
+        if(core.length>8 && cInner.indexOf(core)>=0) cand.push([c,core.length]);
+        else if(nom.length>8 && cInner.indexOf(nom)>=0) cand.push([c,nom.length]); }
+      cand.sort(function(a,b){ return b[1]-a[1]; });
+      var hit = cand.length ? cand[0][0] : null, label = inner.trim().slice(0,55);
+      if(!hit){ res.push(["info","Citation « "+label+" » : contrat non identifié — page non vérifiable."]); continue; }
+      if(pg<1 || pg>hit.total_pages){ res.push(["grave","Citation « "+label+" » : page "+pg+" HORS BORNES pour "+hit.nom+" ("+hit.total_pages+" pages) — page probablement inventée."]); continue; }
+      if(sec && hit.sections[sec]!=null){ var deb=hit.sections[sec];
+        if(pg<deb-1 || pg>deb+TOL+1) res.push(["grave","Citation « "+label+" » : le § "+sec+" de "+hit.nom+" débute p."+deb+", or tu cites p."+pg+" — décalage trop grand, vérifie."]);
+        else res.push(["info","§ "+sec+" débute p."+deb+" (tu cites p."+pg+", cohérent) — confirme que le FAIT y est : un fait s'étale sur 1–3 pages, cet outil ne certifie pas la page exacte."]);
+      }
+    }
+    return res;
+  }
   function analyse(){
     var t = $("in").value || "";
     var out = [];
@@ -39,12 +69,19 @@
     for(var j=0;j<phr.length;j++){ var q=phr[j]; if(REG.test(q)&&NUM.test(q)&&!/source officielle|législation|impots\.gouv|service-public|urssaf|autorité/i.test(q)){ regHit=true; break; } }
     if(regHit)
       out.push(["grave","Un chiffre réglementaire (plafond/abattement/taux) apparaît sans renvoi à une source officielle. Le réglementaire évolue : jamais de chiffre de mémoire."]);
+    // Citations : bornes + décalage de section (jamais la page exacte)
+    var cits = verifCitations(t);
+    for(var c=0;c<cits.length;c++) out.push(cits[c]);
     // Rendu
     var box = $("out"); box.innerHTML="";
     if(!t.trim()){ box.innerHTML='<p class="muted">Colle la réponse de l\'IA ci-dessus.</p>'; return; }
-    if(out.length===0){ box.innerHTML='<div class="ok">✓ Aucun défaut détecté automatiquement.<br><span class="muted">Ce contrôle est mécanique : il ne juge pas l\'exactitude, seulement la forme (citations, source, clôture). La notice PDF fait foi.</span></div>'; return; }
-    var h='<p class="muted">Contrôle mécanique de la FORME (pas de l\'exactitude). À relire humainement.</p>';
-    for(var k=0;k<out.length;k++){ h+='<div class="warn '+out[k][0]+'">'+ (out[k][0]==="grave"?"⚠ ":"• ") + out[k][1] +'</div>'; }
+    var bloquants = out.filter(function(o){ return o[0]!=="info"; });
+    var h='';
+    if(bloquants.length===0)
+      h+='<div class="ok">✓ Aucun défaut bloquant détecté.<br><span class="muted">Contrôle mécanique de la forme et des pages (bornes, section) — PAS de l\'exactitude ni de la page exacte. La notice PDF fait foi.</span></div>';
+    else
+      h+='<p class="muted">Contrôle mécanique de la FORME (pas de l\'exactitude). À relire humainement.</p>';
+    for(var k=0;k<out.length;k++){ h+='<div class="warn '+out[k][0]+'">'+ (out[k][0]==="grave"?"⚠ ":(out[k][0]==="info"?"ℹ ":"• ")) + out[k][1] +'</div>'; }
     box.innerHTML=h;
   }
   $("in").addEventListener("input", analyse); analyse();

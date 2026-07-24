@@ -1878,6 +1878,36 @@ VERIFIER_JS = r"""
   var CITE = /\[[^\]]*(?:notice|p\.?\s*\d)/i;
   var NUM = /\d/;
   var $ = function(id){ return document.getElementById(id); };
+  // Index de citations (bornes + section→page), chargé une fois. null tant qu'indisponible.
+  var IDX = null;
+  fetch("citations-index.json").then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(j){ IDX = j; if($("in").value) analyse(); }).catch(function(){});
+  var cle = function(s){ return String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().replace(/[^a-z0-9]/g,""); };
+  var noticeCore = function(f){ return cle(String(f||"").replace(/^\s*\d{4}-\d{2}\s*/,"").replace(/\.pdf$/i,"")); };
+  function verifCitations(t){
+    if(!IDX || !IDX.contrats) return [];
+    var contrats = Object.keys(IDX.contrats).map(function(k){ return IDX.contrats[k]; });
+    var TOL = (IDX.meta && IDX.meta.tolerance_pages) || 2;
+    var res = [], re = /\[([^\]]*?p\.?\s*\d{1,3}[^\]]*)\]/gi, m;
+    while((m = re.exec(t)) !== null){
+      var inner = m[1], pg = Number((inner.match(/p\.?\s*(\d{1,3})/i)||[])[1]); if(!pg) continue;
+      var sm = inner.match(/§\s*(\d+(?:\.\d+){1,2})|(?:^|[,;\s])(\d+\.\d+(?:\.\d+)?)(?=[\s,;\]])/);
+      var sec = sm ? (sm[1]||sm[2]) : null, cInner = cle(inner);
+      var cand = [];
+      for(var i=0;i<contrats.length;i++){ var c=contrats[i], core=noticeCore(c.notice_court), nom=cle(c.nom);
+        if(core.length>8 && cInner.indexOf(core)>=0) cand.push([c,core.length]);
+        else if(nom.length>8 && cInner.indexOf(nom)>=0) cand.push([c,nom.length]); }
+      cand.sort(function(a,b){ return b[1]-a[1]; });
+      var hit = cand.length ? cand[0][0] : null, label = inner.trim().slice(0,55);
+      if(!hit){ res.push(["info","Citation « "+label+" » : contrat non identifié — page non vérifiable."]); continue; }
+      if(pg<1 || pg>hit.total_pages){ res.push(["grave","Citation « "+label+" » : page "+pg+" HORS BORNES pour "+hit.nom+" ("+hit.total_pages+" pages) — page probablement inventée."]); continue; }
+      if(sec && hit.sections[sec]!=null){ var deb=hit.sections[sec];
+        if(pg<deb-1 || pg>deb+TOL+1) res.push(["grave","Citation « "+label+" » : le § "+sec+" de "+hit.nom+" débute p."+deb+", or tu cites p."+pg+" — décalage trop grand, vérifie."]);
+        else res.push(["info","§ "+sec+" débute p."+deb+" (tu cites p."+pg+", cohérent) — confirme que le FAIT y est : un fait s'étale sur 1–3 pages, cet outil ne certifie pas la page exacte."]);
+      }
+    }
+    return res;
+  }
   function analyse(){
     var t = $("in").value || "";
     var out = [];
@@ -1904,17 +1934,112 @@ VERIFIER_JS = r"""
     for(var j=0;j<phr.length;j++){ var q=phr[j]; if(REG.test(q)&&NUM.test(q)&&!/source officielle|législation|impots\.gouv|service-public|urssaf|autorité/i.test(q)){ regHit=true; break; } }
     if(regHit)
       out.push(["grave","Un chiffre réglementaire (plafond/abattement/taux) apparaît sans renvoi à une source officielle. Le réglementaire évolue : jamais de chiffre de mémoire."]);
+    // Citations : bornes + décalage de section (jamais la page exacte)
+    var cits = verifCitations(t);
+    for(var c=0;c<cits.length;c++) out.push(cits[c]);
     // Rendu
     var box = $("out"); box.innerHTML="";
     if(!t.trim()){ box.innerHTML='<p class="muted">Colle la réponse de l\'IA ci-dessus.</p>'; return; }
-    if(out.length===0){ box.innerHTML='<div class="ok">✓ Aucun défaut détecté automatiquement.<br><span class="muted">Ce contrôle est mécanique : il ne juge pas l\'exactitude, seulement la forme (citations, source, clôture). La notice PDF fait foi.</span></div>'; return; }
-    var h='<p class="muted">Contrôle mécanique de la FORME (pas de l\'exactitude). À relire humainement.</p>';
-    for(var k=0;k<out.length;k++){ h+='<div class="warn '+out[k][0]+'">'+ (out[k][0]==="grave"?"⚠ ":"• ") + out[k][1] +'</div>'; }
+    var bloquants = out.filter(function(o){ return o[0]!=="info"; });
+    var h='';
+    if(bloquants.length===0)
+      h+='<div class="ok">✓ Aucun défaut bloquant détecté.<br><span class="muted">Contrôle mécanique de la forme et des pages (bornes, section) — PAS de l\'exactitude ni de la page exacte. La notice PDF fait foi.</span></div>';
+    else
+      h+='<p class="muted">Contrôle mécanique de la FORME (pas de l\'exactitude). À relire humainement.</p>';
+    for(var k=0;k<out.length;k++){ h+='<div class="warn '+out[k][0]+'">'+ (out[k][0]==="grave"?"⚠ ":(out[k][0]==="info"?"ℹ ":"• ")) + out[k][1] +'</div>'; }
     box.innerHTML=h;
   }
   $("in").addEventListener("input", analyse); analyse();
 })();
 """
+
+def build_citations_index():
+    """Index de vérification des citations : par contrat, le nombre total de pages de la notice et un
+    index section→page (début de section). Sert au vérificateur à détecter une page HORS BORNES
+    (hallucinée) ou GROSSIÈREMENT décalée d'une section.
+
+    LIMITE ASSUMÉE, mesurée sur 72 citations réelles : un fait se trouve à section+0/1/2 pages (jamais
+    au-delà). Une erreur d'UNE page est donc INDÉTECTABLE sans faux positif (un fait à la 2e page d'une
+    section est parfaitement légitime). Le vérificateur le dit : il localise la section pour guider la
+    vérification humaine, il ne certifie jamais la page exacte.
+
+    L'index section→page vient de la SOMMAIRE de chaque notice (nettoyée par plus-longue-sous-suite
+    non-décroissante pour jeter les erreurs d'extraction), enrichie du format « Article N » (Masterlife).
+    Nécessite pypdf ; sans lui, conserve l'index existant et prévient (le build ne casse pas)."""
+    try:
+        import pypdf
+    except ImportError:
+        print("[build_ia] pypdf absent : citations-index.json conservé tel quel (index des citations non régénéré).")
+        return
+
+    PAT = re.compile(r"(\d(?:\.\d){1,2})\.?\s+[A-ZÀ-Ûa-zà-ûé][^\n]{3,70}?\s*p?\.?\s*(\d{1,2})\b")
+    ARTPAT = re.compile(r"(\d{1,2})\s+Article\s+(\d{1,2})\.")
+    PDF_ROOT = os.path.join(ROOT, "data", "AXA", "00_PACKAGE_ACTIF", "Contrats-AXA")
+
+    def sec_key(s):
+        try: return [int(n) for n in s.split(".")]
+        except ValueError: return [999]
+    def lnds(items):  # plus longue sous-suite non décroissante (en page), par ordre de section
+        n = len(items)
+        if not n: return set()
+        best = [1] * n; prev = [-1] * n
+        for i in range(n):
+            for j in range(i):
+                if items[j][1] <= items[i][1] and best[j] + 1 > best[i]: best[i] = best[j] + 1; prev[i] = j
+        i = max(range(n), key=lambda k: best[k]); keep = []
+        while i != -1: keep.append(items[i][0]); i = prev[i]
+        return set(keep)
+
+    index = {}
+    for c in CONTRATS:
+        doc = None
+        for cat in CONCEPT_ORDER + ["faits"]:
+            for e in ELEMENTS.get(cat, []):
+                if e.get("cslug") == slug(c["nom"]) and (e.get("src") or {}).get("document_source"):
+                    doc = e["src"]["document_source"]; break
+            if doc: break
+        if not doc: continue
+        path = os.path.join(PDF_ROOT, *doc.split("/"))
+        if not os.path.exists(path):
+            print("[build_ia] notice absente pour l'index citations :", doc); continue
+        try:
+            r = pypdf.PdfReader(path); npages = len(r.pages)
+            som = "\n".join((r.pages[i].extract_text() or "") for i in range(1, 6))
+        except Exception as exc:
+            print("[build_ia] lecture PDF échouée (%s) : %s" % (doc, exc)); continue
+        raw = {}
+        for m in PAT.finditer(som):
+            s = m.group(1); pg = int(m.group(2))
+            if s not in raw and 1 <= pg <= npages: raw[s] = pg
+        items = sorted(raw.items(), key=lambda x: sec_key(x[0]))
+        keep = lnds(items)
+        sections = {s: p for s, p in items if s in keep}
+        for m in ARTPAT.finditer(som):  # Masterlife : « PAGE Article N. »
+            pg = int(m.group(1)); art = m.group(2)
+            if 1 <= pg <= npages: sections.setdefault("art" + art, pg)
+        # Comble les trous de la sommaire avec les sections VÉRIFIÉES à la main cette session (elles
+        # font autorité). Ne remplace pas une valeur de sommaire (= début de section, plus précis) ;
+        # ajoute seulement les sections absentes (ex. §8.3 qu'un LNDS trop strict avait jetée).
+        base_secs = {}
+        for cat in CONCEPT_ORDER + ["faits"]:
+            for e in ELEMENTS.get(cat, []):
+                if e.get("cslug") != slug(c["nom"]): continue
+                src = e.get("src") or {}
+                m2 = re.match(r"^(\d+\.\d+(?:\.\d+)?)\b", str(src.get("section") or ""))
+                if m2 and isinstance(src.get("page"), int) and 1 <= src["page"] <= npages:
+                    base_secs.setdefault(m2.group(1), src["page"])  # 1re page vue pour cette section
+        for s, p in base_secs.items():
+            sections.setdefault(s, p)
+        index[slug(c["nom"])] = {"nom": c["nom"], "notice": doc, "notice_court": doc.split("/")[-1], "total_pages": npages, "sections": sections}
+
+    data = {"meta": {"version": VERSION, "genere_le": DATE,
+                     "usage": "Vérifier qu'une citation [Contrat — Notice, p.X] ne pointe pas une page HORS BORNES ou "
+                              "GROSSIÈREMENT décalée d'une section. Ne certifie PAS la page exacte : un fait se trouve "
+                              "légitimement à 0–2 pages du début de sa section (mesuré). Localise, guide — ne remplace "
+                              "pas la lecture humaine de la notice.",
+                     "tolerance_pages": 2},
+            "contrats": index}
+    write("citations-index.json", json.dumps(data, ensure_ascii=False, indent=1))
 
 def build_tests_qualite():
     depth = 0
@@ -1959,6 +2084,7 @@ def build_tests_qualite():
             '<style>#out .ok{background:rgba(91,208,122,.12);border:1px solid rgba(91,208,122,.5);border-radius:8px;padding:12px}'
             '#out .warn{border-radius:8px;padding:10px 12px;margin:8px 0;background:rgba(245,196,81,.08);border:1px solid rgba(245,196,81,.4)}'
             '#out .warn.grave{background:rgba(226,103,74,.1);border-color:rgba(226,103,74,.5)}'
+            '#out .warn.info{background:rgba(96,139,255,.08);border-color:rgba(96,139,255,.4)}'
             '#out .muted,.muted{color:#9fb0c8;font-size:13px}</style>'
             '<script>' + VERIFIER_JS + '</script>')
     write("verifier.html", page_html("Vérificateur de réponse", body, depth, SITE + "/ia/verifier.html"))
@@ -2713,6 +2839,7 @@ def build():
     build_pieges()                   # matrice de pièges par contrat (le revers de chaque garantie)
     build_cas_types()                # cas-types travaillés (patrons de raisonnement, après build_pieges)
     build_tests_qualite()            # banque de tests qualité + vérificateur mécanique de réponse
+    build_citations_index()          # index section→page pour vérifier les citations (bornes + décalage grossier)
     build_tracabilite()              # audit de traçabilité par contrat (qualité de preuve, contrôle inspecteur)
     metrics = build_tests(concepts)  # tests-qualité + harness de précision
     # Infrastructure de raisonnement documentaire (Parties 2–10, 12)
