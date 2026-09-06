@@ -1,0 +1,60 @@
+{
+  "proposal_id": "corpus_explorer_20260826_021034_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260826_021027",
+  "created_at": "2026-08-26T02:10:34Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+    "pages": "8-12",
+    "excerpt": "Contrat « Essen'Ciel Patrimoine » — zone garanties (pages 8-12) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : AINSI QUE LES ACCIDENTS RÉSUL TANTS, EST EXCLU LE DÉCÈS RÉSUL TANT, Proche\nConjoint, Accompagnement, revalorisation, Étranger\nTout, Conformément, Organ"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Essen'Ciel Patrimoine",
+      "doc_id": "axa_pdf_11",
+      "zone": "axa_pdf_11#garanties:8-12",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "AINSI QUE LES ACCIDENTS RÉSUL TANTS",
+        "EST EXCLU LE DÉCÈS RÉSUL TANT",
+        "Proche\nConjoint",
+        "Accompagnement",
+        "revalorisation",
+        "Étranger\nTout",
+        "Conformément",
+        "Organisation"
+      ],
+      "knowledge_suspect": [
+        "suicide (la base connaît le terme, mais la notice précise une exclusion spécifiq"
+      ]
+    }
+  },
+  "reasoning_summary": "Contrat « Essen'Ciel Patrimoine » — zone garanties (pages 8-12) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : AINSI QUE LES ACCIDENTS RÉSUL TANTS, EST EXCLU LE DÉCÈS RÉSUL TANT, Proche\nConjoint, Accompagnement, revalorisation, Étranger\nTout, Conformément, Organisation. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

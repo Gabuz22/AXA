@@ -1,0 +1,23 @@
+{
+  "run_id": "run_knowledge-curator_20260712_040233",
+  "agent_id": "knowledge-curator",
+  "started_at": "2026-07-12T04:02:33Z",
+  "finished_at": "2026-07-12T04:02:34Z",
+  "dry_run": false,
+  "status": "no_work",
+  "task_id": null,
+  "provider_used": null,
+  "model_used": null,
+  "counters": {
+    "llm_calls": 0,
+    "tokens_in_est": 0,
+    "tokens_out_est": 0,
+    "proposals_generated": 0,
+    "proposals_written": 0,
+    "proposals_deduplicated": 0,
+    "proposals_rejected_auto": 0
+  },
+  "notes": [
+    "knowledge-curator: 9 sujet(s), 18 tâche(s) au backlog (0 nouvelle(s)), 0 token"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260730_145202_001",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260730_145157",
+  "created_at": "2026-07-30T14:52:02Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Notice Excelium Vie.pdf",
+    "pages": "15-26",
+    "excerpt": "Contrat « Excelium (assurance vie) » — zone garanties (pages 15-26) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Conviction \nCrescendo \nCroissance\nConviction, Horizon \nActions \nCrescendo \nCroissance, Horizon \nActions \nAllegro \nCroissance, Piano \nCroissance\nConvic"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Excelium (assurance vie)",
+      "doc_id": "axa_pdf_05",
+      "zone": "axa_pdf_05#garanties:15-26",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Conviction \nCrescendo \nCroissance\nConviction",
+        "Horizon \nActions \nCrescendo \nCroissance",
+        "Horizon \nActions \nAllegro \nCroissance",
+        "Piano \nCroissance\nConviction \nAllegro",
+        "Horizon \nActions \nFortissimo\nSupport",
+        "Horizon Actions Crescendo Croissance",
+        "Horizon \nActions \nPiano \nCroissance",
+        "Mix\nConviction \nAllegro \nCroissance"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Excelium (assurance vie) » — zone garanties (pages 15-26) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Conviction \nCrescendo \nCroissance\nConviction, Horizon \nActions \nCrescendo \nCroissance, Horizon \nActions \nAllegro \nCroissance, Piano \nCroissance\nConviction \nAllegro, Horizon \nActions \nFortissimo\nSupport, Horizon Actions Crescendo Croissance, Horizon \nActions \nPiano \nCroissance, Mix\nConviction \nAllegro \nCroissance. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

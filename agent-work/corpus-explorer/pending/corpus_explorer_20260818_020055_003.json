@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260818_020055_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260818_020031",
+  "created_at": "2026-08-18T02:00:55Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "titre"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2024-03 CG Ma Protection Accident (AGA-AEP).pdf",
+    "pages": "27-27",
+    "excerpt": "Contrat « Ma Protection Accident (Garantie des accidents de la vie) » — zone titre (pages 27-27) : couverture partielle. 11 élément(s) possiblement absent(s) de la connaissance : Souscripteur\nLe, Définitions, Conditions, Guadeloupe, Martinique, Vous\nDans, garantie, Mayotte."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "doc_id": "axa_pdf_07",
+      "zone": "axa_pdf_07#titre:27-27",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Souscripteur\nLe",
+        "Définitions",
+        "Conditions",
+        "Guadeloupe",
+        "Martinique",
+        "Vous\nDans",
+        "garantie",
+        "Mayotte"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Ma Protection Accident (Garantie des accidents de la vie) » — zone titre (pages 27-27) : couverture partielle. 11 élément(s) possiblement absent(s) de la connaissance : Souscripteur\nLe, Définitions, Conditions, Guadeloupe, Martinique, Vous\nDans, garantie, Mayotte. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.6,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

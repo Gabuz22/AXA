@@ -1,0 +1,61 @@
+{
+  "proposal_id": "extraction_llm_20260718_193540_005",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260718_193535",
+  "created_at": "2026-07-18T19:35:40Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "avizen",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-04 Notice d'information Avizen.pdf",
+    "page": 18,
+    "url": null,
+    "excerpt": "L’assuré bénéficie du versement d’indemnités journalières en cas de cessation totale ou partielle de son activité professionnelle afin d’accompagner un enfant gravement malade, atteint d’un handicap ou victime d’un accident grave."
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "garanties",
+      "texte": "Garantie aide à la famille",
+      "diff": "Ajoute une garantie d'aide à la famille non listée précédemment.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.95 : citation nette.",
+      "importance": "moyenne",
+      "review_cost": "30 s",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Avizen\"] / garanties",
+      "citation_exacte": "L’assuré bénéficie du versement d’indemnités journalières en cas de cessation totale ou partielle de son activité professionnelle afin d’accompagner un enfant gravement malade, atteint d’un handicap ou victime d’un accident grave.",
+      "why_missing": "categorie vide",
+      "why_interesting": "Définit une garantie spécifique pour l'accompagnement d'un enfant.",
+      "why_probably_absent": "catégorie vide chez Avizen alors que couverte chez Avizen Pro, Entour'Age",
+      "documentary_interest": 0.9,
+      "priority_level": "haute",
+      "value_score": 0.941,
+      "bloc": []
+    }
+  },
+  "reasoning_summary": "Définit une garantie spécifique pour l'accompagnement d'un enfant.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

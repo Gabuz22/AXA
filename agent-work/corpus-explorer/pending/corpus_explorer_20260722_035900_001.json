@@ -1,0 +1,60 @@
+{
+  "proposal_id": "corpus_explorer_20260722_035900_001",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260722_035857",
+  "created_at": "2026-07-22T03:59:00Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "definitions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'Information Entour'Age.pdf",
+    "pages": "42-42",
+    "excerpt": "Contrat « Entour'Age » — zone definitions (pages 42-42) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Le Médecin Conseil, Assuré\nPersonne, Médecin Conseil, Accident\nToute, Vous\nPersonne, Aidant\nDans, Conjoint\nIl, Définitions."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Entour'Age",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#definitions:42-42",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Le Médecin Conseil",
+        "Assuré\nPersonne",
+        "Médecin Conseil",
+        "Accident\nToute",
+        "Vous\nPersonne",
+        "Aidant\nDans",
+        "Conjoint\nIl",
+        "Définitions"
+      ],
+      "knowledge_suspect": [
+        "Définition de l'accident (exclusion spécifique des affections de la colonne vert"
+      ]
+    }
+  },
+  "reasoning_summary": "Contrat « Entour'Age » — zone definitions (pages 42-42) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Le Médecin Conseil, Assuré\nPersonne, Médecin Conseil, Accident\nToute, Vous\nPersonne, Aidant\nDans, Conjoint\nIl, Définitions. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

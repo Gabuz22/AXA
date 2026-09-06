@@ -1,0 +1,535 @@
+{
+  "version": "1.0.0",
+  "domain": "axa-contrat",
+  "generated_at": "2026-09-06T15:32:10Z",
+  "subjects": {
+    "Avizen": {
+      "subject": "Avizen",
+      "domain": "axa-contrat",
+      "vector": {
+        "evidence": 1.0,
+        "normalized": 1.0,
+        "relations": 0.674,
+        "understanding": 0.605,
+        "environment": 1.0,
+        "freshness": 1.0
+      },
+      "depth_score": 0.856,
+      "categories": {
+        "garantie": true,
+        "definition": false,
+        "condition": false,
+        "declencheur": false,
+        "exclusion": true,
+        "limite": false,
+        "plafond": false,
+        "delai": false,
+        "beneficiaire": false,
+        "formalite": false,
+        "option": true,
+        "formule": true,
+        "point_vigilance": true
+      },
+      "semantic_coverage": 0.385,
+      "rates": {
+        "proof": 0.86,
+        "unrelated": 0.326,
+        "uncertainty": 0.14,
+        "contradiction": 0.0,
+        "n_entities": 43
+      },
+      "depth": {
+        "L1": 37,
+        "L2": 43,
+        "L3": 49,
+        "L4": 26
+      },
+      "weak_axes": [],
+      "explanations": [
+        {
+          "axis": "semantic",
+          "current": 0.385,
+          "why": "catégories absentes : definition, condition, declencheur, limite, plafond, delai, beneficiaire, formalite",
+          "recommended_task": "extraire"
+        }
+      ]
+    },
+    "Avizen Pro": {
+      "subject": "Avizen Pro",
+      "domain": "axa-contrat",
+      "vector": {
+        "evidence": 1.0,
+        "normalized": 1.0,
+        "relations": 0.839,
+        "understanding": 0.677,
+        "environment": 1.0,
+        "freshness": 1.0
+      },
+      "depth_score": 0.903,
+      "categories": {
+        "garantie": true,
+        "definition": false,
+        "condition": false,
+        "declencheur": false,
+        "exclusion": true,
+        "limite": false,
+        "plafond": false,
+        "delai": false,
+        "beneficiaire": false,
+        "formalite": false,
+        "option": true,
+        "formule": true,
+        "point_vigilance": true
+      },
+      "semantic_coverage": 0.385,
+      "rates": {
+        "proof": 0.839,
+        "unrelated": 0.161,
+        "uncertainty": 0.226,
+        "contradiction": 0.0,
+        "n_entities": 31
+      },
+      "depth": {
+        "L1": 26,
+        "L2": 31,
+        "L3": 33,
+        "L4": 21
+      },
+      "weak_axes": [],
+      "explanations": [
+        {
+          "axis": "semantic",
+          "current": 0.385,
+          "why": "catégories absentes : definition, condition, declencheur, limite, plafond, delai, beneficiaire, formalite",
+          "recommended_task": "extraire"
+        }
+      ]
+    },
+    "Entour'Age": {
+      "subject": "Entour'Age",
+      "domain": "axa-contrat",
+      "vector": {
+        "evidence": 1.0,
+        "normalized": 1.0,
+        "relations": 0.792,
+        "understanding": 0.708,
+        "environment": 1.0,
+        "freshness": 1.0
+      },
+      "depth_score": 0.9,
+      "categories": {
+        "garantie": true,
+        "definition": false,
+        "condition": false,
+        "declencheur": false,
+        "exclusion": true,
+        "limite": false,
+        "plafond": false,
+        "delai": false,
+        "beneficiaire": false,
+        "formalite": false,
+        "option": true,
+        "formule": true,
+        "point_vigilance": true
+      },
+      "semantic_coverage": 0.385,
+      "rates": {
+        "proof": 0.625,
+        "unrelated": 0.208,
+        "uncertainty": 0.333,
+        "contradiction": 0.0,
+        "n_entities": 24
+      },
+      "depth": {
+        "L1": 14,
+        "L2": 24,
+        "L3": 24,
+        "L4": 17
+      },
+      "weak_axes": [],
+      "explanations": [
+        {
+          "axis": "semantic",
+          "current": 0.385,
+          "why": "catégories absentes : definition, condition, declencheur, limite, plafond, delai, beneficiaire, formalite",
+          "recommended_task": "extraire"
+        }
+      ]
+    },
+    "Essen'Ciel (assurance obsèques)": {
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "domain": "axa-contrat",
+      "vector": {
+        "evidence": 1.0,
+        "normalized": 1.0,
+        "relations": 0.5,
+        "understanding": 0.449,
+        "environment": 1.0,
+        "freshness": 1.0
+      },
+      "depth_score": 0.79,
+      "categories": {
+        "garantie": true,
+        "definition": true,
+        "condition": true,
+        "declencheur": true,
+        "exclusion": true,
+        "limite": false,
+        "plafond": true,
+        "delai": true,
+        "beneficiaire": false,
+        "formalite": false,
+        "option": true,
+        "formule": true,
+        "point_vigilance": true
+      },
+      "semantic_coverage": 0.769,
+      "rates": {
+        "proof": 0.897,
+        "unrelated": 0.5,
+        "uncertainty": 0.09,
+        "contradiction": 0.0,
+        "n_entities": 78
+      },
+      "depth": {
+        "L1": 64,
+        "L2": 78,
+        "L3": 53,
+        "L4": 35
+      },
+      "weak_axes": [
+        "understanding",
+        "relations"
+      ],
+      "explanations": [
+        {
+          "axis": "understanding",
+          "current": 0.449,
+          "why": "entités sans explication (finalité/logique)",
+          "recommended_task": "expliquer"
+        },
+        {
+          "axis": "relations",
+          "current": 0.5,
+          "why": "entités isolées (peu ou pas de relations)",
+          "recommended_task": "relier"
+        },
+        {
+          "axis": "semantic",
+          "current": 0.769,
+          "why": "catégories absentes : limite, beneficiaire, formalite",
+          "recommended_task": "extraire"
+        }
+      ]
+    },
+    "Essen'Ciel Patrimoine": {
+      "subject": "Essen'Ciel Patrimoine",
+      "domain": "axa-contrat",
+      "vector": {
+        "evidence": 1.0,
+        "normalized": 1.0,
+        "relations": 0.875,
+        "understanding": 0.375,
+        "environment": 1.0,
+        "freshness": 1.0
+      },
+      "depth_score": 0.85,
+      "categories": {
+        "garantie": true,
+        "definition": false,
+        "condition": false,
+        "declencheur": false,
+        "exclusion": true,
+        "limite": false,
+        "plafond": false,
+        "delai": false,
+        "beneficiaire": false,
+        "formalite": false,
+        "option": true,
+        "formule": false,
+        "point_vigilance": false
+      },
+      "semantic_coverage": 0.231,
+      "rates": {
+        "proof": 0.875,
+        "unrelated": 0.125,
+        "uncertainty": 0.0,
+        "contradiction": 0.0,
+        "n_entities": 8
+      },
+      "depth": {
+        "L1": 7,
+        "L2": 8,
+        "L3": 4,
+        "L4": 3
+      },
+      "weak_axes": [
+        "understanding"
+      ],
+      "explanations": [
+        {
+          "axis": "understanding",
+          "current": 0.375,
+          "why": "entités sans explication (finalité/logique)",
+          "recommended_task": "expliquer"
+        },
+        {
+          "axis": "semantic",
+          "current": 0.231,
+          "why": "catégories absentes : definition, condition, declencheur, limite, plafond, delai, beneficiaire, formalite, formule, point_vigilance",
+          "recommended_task": "extraire"
+        }
+      ]
+    },
+    "Excelium (assurance vie)": {
+      "subject": "Excelium (assurance vie)",
+      "domain": "axa-contrat",
+      "vector": {
+        "evidence": 1.0,
+        "normalized": 1.0,
+        "relations": 0.65,
+        "understanding": 0.05,
+        "environment": 1.0,
+        "freshness": 1.0
+      },
+      "depth_score": 0.74,
+      "categories": {
+        "garantie": true,
+        "definition": false,
+        "condition": false,
+        "declencheur": false,
+        "exclusion": true,
+        "limite": false,
+        "plafond": false,
+        "delai": false,
+        "beneficiaire": false,
+        "formalite": false,
+        "option": true,
+        "formule": true,
+        "point_vigilance": true
+      },
+      "semantic_coverage": 0.385,
+      "rates": {
+        "proof": 0.6,
+        "unrelated": 0.35,
+        "uncertainty": 0.35,
+        "contradiction": 0.0,
+        "n_entities": 20
+      },
+      "depth": {
+        "L1": 12,
+        "L2": 20,
+        "L3": 21,
+        "L4": 1
+      },
+      "weak_axes": [
+        "understanding"
+      ],
+      "explanations": [
+        {
+          "axis": "understanding",
+          "current": 0.05,
+          "why": "entités sans explication (finalité/logique)",
+          "recommended_task": "expliquer"
+        },
+        {
+          "axis": "semantic",
+          "current": 0.385,
+          "why": "catégories absentes : definition, condition, declencheur, limite, plafond, delai, beneficiaire, formalite",
+          "recommended_task": "extraire"
+        }
+      ]
+    },
+    "Ma Protection Accident (Garantie des accidents de la vie)": {
+      "subject": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "domain": "axa-contrat",
+      "vector": {
+        "evidence": 1.0,
+        "normalized": 1.0,
+        "relations": 0.444,
+        "understanding": 0.037,
+        "environment": 1.0,
+        "freshness": 1.0
+      },
+      "depth_score": 0.696,
+      "categories": {
+        "garantie": true,
+        "definition": false,
+        "condition": false,
+        "declencheur": false,
+        "exclusion": true,
+        "limite": false,
+        "plafond": false,
+        "delai": false,
+        "beneficiaire": false,
+        "formalite": false,
+        "option": true,
+        "formule": true,
+        "point_vigilance": true
+      },
+      "semantic_coverage": 0.385,
+      "rates": {
+        "proof": 0.926,
+        "unrelated": 0.556,
+        "uncertainty": 0.185,
+        "contradiction": 0.0,
+        "n_entities": 27
+      },
+      "depth": {
+        "L1": 25,
+        "L2": 27,
+        "L3": 15,
+        "L4": 1
+      },
+      "weak_axes": [
+        "understanding",
+        "relations"
+      ],
+      "explanations": [
+        {
+          "axis": "understanding",
+          "current": 0.037,
+          "why": "entités sans explication (finalité/logique)",
+          "recommended_task": "expliquer"
+        },
+        {
+          "axis": "relations",
+          "current": 0.444,
+          "why": "entités isolées (peu ou pas de relations)",
+          "recommended_task": "relier"
+        },
+        {
+          "axis": "semantic",
+          "current": 0.385,
+          "why": "catégories absentes : definition, condition, declencheur, limite, plafond, delai, beneficiaire, formalite",
+          "recommended_task": "extraire"
+        }
+      ]
+    },
+    "Ma Retraite (plan d'épargne retraite individuel — PER)": {
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "domain": "axa-contrat",
+      "vector": {
+        "evidence": 1.0,
+        "normalized": 1.0,
+        "relations": 0.238,
+        "understanding": 0.048,
+        "environment": 1.0,
+        "freshness": 1.0
+      },
+      "depth_score": 0.657,
+      "categories": {
+        "garantie": true,
+        "definition": false,
+        "condition": false,
+        "declencheur": false,
+        "exclusion": true,
+        "limite": false,
+        "plafond": false,
+        "delai": false,
+        "beneficiaire": false,
+        "formalite": false,
+        "option": true,
+        "formule": true,
+        "point_vigilance": true
+      },
+      "semantic_coverage": 0.385,
+      "rates": {
+        "proof": 0.571,
+        "unrelated": 0.762,
+        "uncertainty": 0.381,
+        "contradiction": 0.0,
+        "n_entities": 21
+      },
+      "depth": {
+        "L1": 12,
+        "L2": 21,
+        "L3": 11,
+        "L4": 1
+      },
+      "weak_axes": [
+        "understanding",
+        "relations"
+      ],
+      "explanations": [
+        {
+          "axis": "understanding",
+          "current": 0.048,
+          "why": "entités sans explication (finalité/logique)",
+          "recommended_task": "expliquer"
+        },
+        {
+          "axis": "relations",
+          "current": 0.238,
+          "why": "entités isolées (peu ou pas de relations)",
+          "recommended_task": "relier"
+        },
+        {
+          "axis": "semantic",
+          "current": 0.385,
+          "why": "catégories absentes : definition, condition, declencheur, limite, plafond, delai, beneficiaire, formalite",
+          "recommended_task": "extraire"
+        }
+      ]
+    },
+    "Masterlife CREDIT": {
+      "subject": "Masterlife CREDIT",
+      "domain": "axa-contrat",
+      "vector": {
+        "evidence": 1.0,
+        "normalized": 1.0,
+        "relations": 0.714,
+        "understanding": 0.036,
+        "environment": 1.0,
+        "freshness": 1.0
+      },
+      "depth_score": 0.75,
+      "categories": {
+        "garantie": true,
+        "definition": false,
+        "condition": false,
+        "declencheur": false,
+        "exclusion": true,
+        "limite": false,
+        "plafond": false,
+        "delai": false,
+        "beneficiaire": false,
+        "formalite": false,
+        "option": true,
+        "formule": true,
+        "point_vigilance": true
+      },
+      "semantic_coverage": 0.385,
+      "rates": {
+        "proof": 0.786,
+        "unrelated": 0.286,
+        "uncertainty": 0.25,
+        "contradiction": 0.0,
+        "n_entities": 28
+      },
+      "depth": {
+        "L1": 22,
+        "L2": 28,
+        "L3": 36,
+        "L4": 1
+      },
+      "weak_axes": [
+        "understanding"
+      ],
+      "explanations": [
+        {
+          "axis": "understanding",
+          "current": 0.036,
+          "why": "entités sans explication (finalité/logique)",
+          "recommended_task": "expliquer"
+        },
+        {
+          "axis": "semantic",
+          "current": 0.385,
+          "why": "catégories absentes : definition, condition, declencheur, limite, plafond, delai, beneficiaire, formalite",
+          "recommended_task": "extraire"
+        }
+      ]
+    }
+  }
+}

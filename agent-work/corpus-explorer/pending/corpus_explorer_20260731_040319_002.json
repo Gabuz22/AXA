@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260731_040319_002",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260731_040315",
+  "created_at": "2026-07-31T04:03:19Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "resiliation"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Notice Excelium Vie.pdf",
+    "pages": "32-32",
+    "excerpt": "Contrat « Excelium (assurance vie) » — zone resiliation (pages 32-32) : couverture non_couverte. 27 élément(s) possiblement absent(s) de la connaissance : Paribas Europe Strategic Autonomy, Avenir Infrastructure, Avenir Entrepreneurs, Notice Excelium, France Épargne, Nanterre Cedex, Définitions, Imm"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Excelium (assurance vie)",
+      "doc_id": "axa_pdf_05",
+      "zone": "axa_pdf_05#resiliation:32-32",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Paribas Europe Strategic Autonomy",
+        "Avenir Infrastructure",
+        "Avenir Entrepreneurs",
+        "Notice Excelium",
+        "France Épargne",
+        "Nanterre Cedex",
+        "Définitions",
+        "Immo Avenir"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Excelium (assurance vie) » — zone resiliation (pages 32-32) : couverture non_couverte. 27 élément(s) possiblement absent(s) de la connaissance : Paribas Europe Strategic Autonomy, Avenir Infrastructure, Avenir Entrepreneurs, Notice Excelium, France Épargne, Nanterre Cedex, Définitions, Immo Avenir. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

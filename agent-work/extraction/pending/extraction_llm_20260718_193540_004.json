@@ -1,0 +1,61 @@
+{
+  "proposal_id": "extraction_llm_20260718_193540_004",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260718_193535",
+  "created_at": "2026-07-18T19:35:40Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "avizen",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-04 Notice d'information Avizen.pdf",
+    "page": 17,
+    "url": null,
+    "excerpt": "Un capital invalidité est versé à l’assuré qui se"
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "garanties",
+      "texte": "Capital en cas d’invalidité permanente partielle ou totale par accident",
+      "diff": "Ajoute la mention d'un capital invalidité par accident distinct de la rente invalidité fonctionnelle.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.90 : citation nette ; formulation ambiguë.",
+      "importance": "forte",
+      "review_cost": "1 min",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Avizen\"] / garanties",
+      "citation_exacte": "Un capital invalidité est versé à l’assuré qui se",
+      "why_missing": "categorie vide",
+      "why_interesting": "Définit une garantie de capital invalidité spécifique aux accidents.",
+      "why_probably_absent": "catégorie vide chez Avizen alors que couverte chez Avizen Pro, Entour'Age",
+      "documentary_interest": 0.9,
+      "priority_level": "haute",
+      "value_score": 0.83,
+      "bloc": []
+    }
+  },
+  "reasoning_summary": "Définit une garantie de capital invalidité spécifique aux accidents.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

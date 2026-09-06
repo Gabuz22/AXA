@@ -1,0 +1,74 @@
+{
+  "proposal_id": "extraction_llm_20260711_193533_002",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260711_193528",
+  "created_at": "2026-07-11T19:35:33Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_assurance_obseques",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "bloc:franchises"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+    "page": 22,
+    "url": null,
+    "excerpt": "La fraction de capital nouvellement garantie sera soumise à un nouveau délai d’attente d’1 an."
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "franchises",
+      "texte": "Délai d'attente appliqué à l'augmentation du capital garanti",
+      "diff": "Précise l'application d'un délai d'attente spécifique aux augmentations.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.95 : citation nette.",
+      "importance": "critique",
+      "review_cost": "2 min",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Essen'Ciel (assurance obsèques)\"] / franchises",
+      "citation_exacte": "La fraction de capital nouvellement garantie sera soumise à un nouveau délai d’attente d’1 an.",
+      "why_missing": "nouveau contrat",
+      "why_interesting": "Définit la période de carence spécifique pour les augmentations de capital.",
+      "why_probably_absent": "nouveau contrat",
+      "documentary_interest": 1.0,
+      "priority_level": "haute",
+      "value_score": 0.671,
+      "bloc": [
+        {
+          "categorie": "franchises",
+          "page": 22,
+          "citation": "La fraction de capital nouvellement garantie sera soumise à un nouveau délai d’attente d’1 an.",
+          "texte": "Délai d'attente appliqué à l'augmentation du capital garanti"
+        },
+        {
+          "categorie": "declencheurs",
+          "page": 22,
+          "citation": "Pendant cette période, AXA garantit le versement du capital nouvellement choisi uniquement en cas de décès par accident.",
+          "texte": "Déclencheur spécifique pendant le délai d'attente d'une augmentation"
+        }
+      ]
+    }
+  },
+  "reasoning_summary": "Définit la période de carence spécifique pour les augmentations de capital.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

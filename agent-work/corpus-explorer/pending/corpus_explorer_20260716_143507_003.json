@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260716_143507_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260716_143503",
+  "created_at": "2026-07-16T14:35:07Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "titre"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-04 Notice d'information Avizen Pro (AEP).pdf",
+    "pages": "47-49",
+    "excerpt": "Contrat « Avizen Pro » — zone titre (pages 47-49) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Service Information Clients, Informatique et Libertés, Contrôle Prudentiel, Lois Eckert\nDépôt, Il a pour objet, Nanterre Cedex, Consignations, Conformément."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Avizen Pro",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#titre:47-49",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Service Information Clients",
+        "Informatique et Libertés",
+        "Contrôle Prudentiel",
+        "Lois Eckert\nDépôt",
+        "Il a pour objet",
+        "Nanterre Cedex",
+        "Consignations",
+        "Conformément"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Avizen Pro » — zone titre (pages 47-49) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Service Information Clients, Informatique et Libertés, Contrôle Prudentiel, Lois Eckert\nDépôt, Il a pour objet, Nanterre Cedex, Consignations, Conformément. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

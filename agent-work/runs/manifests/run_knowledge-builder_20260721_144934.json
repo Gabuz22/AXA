@@ -1,0 +1,23 @@
+{
+  "run_id": "run_knowledge-builder_20260721_144934",
+  "agent_id": "knowledge-builder",
+  "started_at": "2026-07-21T14:49:34Z",
+  "finished_at": "2026-07-21T14:49:38Z",
+  "dry_run": false,
+  "status": "no_work",
+  "task_id": null,
+  "provider_used": "gemini",
+  "model_used": "gemini-3.1-flash-lite",
+  "counters": {
+    "llm_calls": 6,
+    "tokens_in_est": 1809,
+    "tokens_out_est": 367,
+    "proposals_generated": 0,
+    "proposals_written": 0,
+    "proposals_deduplicated": 0,
+    "proposals_rejected_auto": 0
+  },
+  "notes": [
+    "knowledge-builder: +10 relation(s), +1 explication(s) sur 3 sujet(s)"
+  ]
+}

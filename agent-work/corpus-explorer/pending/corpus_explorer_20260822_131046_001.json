@@ -1,0 +1,57 @@
+{
+  "proposal_id": "corpus_explorer_20260822_131046_001",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260822_131042",
+  "created_at": "2026-08-22T13:10:46Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "contenu"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Recueil DIC Ma Retraite.pdf",
+    "pages": "1-2",
+    "excerpt": "Contrat « Ma Retraite (plan d'épargne retraite individuel — PER) » — zone contenu (pages 1-2) : couverture non_couverte. 7 élément(s) possiblement absent(s) de la connaissance : Ma Retraite\nRecueil, Documents, Date, Ma Retraite, Recueil des Documents d’informations clés (DIC), Mai 2026, 2008870."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "doc_id": "axa_pdf_09",
+      "zone": "axa_pdf_09#contenu:1-2",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Ma Retraite\nRecueil",
+        "Documents",
+        "Date",
+        "Ma Retraite",
+        "Recueil des Documents d’informations clés (DIC)",
+        "Mai 2026",
+        "2008870"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Ma Retraite (plan d'épargne retraite individuel — PER) » — zone contenu (pages 1-2) : couverture non_couverte. 7 élément(s) possiblement absent(s) de la connaissance : Ma Retraite\nRecueil, Documents, Date, Ma Retraite, Recueil des Documents d’informations clés (DIC), Mai 2026, 2008870. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

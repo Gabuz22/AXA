@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260806_145641_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260806_145637",
+  "created_at": "2026-08-06T14:56:41Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "contenu"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Recueil des DIC Excelium.pdf",
+    "pages": "26-26",
+    "excerpt": "Contrat « Excelium (assurance vie) » — zone contenu (pages 26-26) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Titres du portefeuilleg, LU1883303635 - Deviseg, Processus de gestion g, Indice de référenceg, Société de gestion g, Amundi Luxembourg, Ce Compartime"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Excelium (assurance vie)",
+      "doc_id": "axa_pdf_06",
+      "zone": "axa_pdf_06#contenu:26-26",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Titres du portefeuilleg",
+        "LU1883303635 - Deviseg",
+        "Processus de gestion g",
+        "Indice de référenceg",
+        "Société de gestion g",
+        "Amundi Luxembourg",
+        "Ce Compartiment",
+        "Le Compartiment"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Excelium (assurance vie) » — zone contenu (pages 26-26) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Titres du portefeuilleg, LU1883303635 - Deviseg, Processus de gestion g, Indice de référenceg, Société de gestion g, Amundi Luxembourg, Ce Compartiment, Le Compartiment. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

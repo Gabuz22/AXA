@@ -1,0 +1,23 @@
+{
+  "run_id": "run_inspector-evaluator_20260714_083030",
+  "agent_id": "inspector-evaluator",
+  "started_at": "2026-07-14T08:30:30Z",
+  "finished_at": "2026-07-14T08:30:30Z",
+  "dry_run": false,
+  "status": "no_work",
+  "task_id": null,
+  "provider_used": null,
+  "model_used": null,
+  "counters": {
+    "llm_calls": 0,
+    "tokens_in_est": 0,
+    "tokens_out_est": 0,
+    "proposals_generated": 0,
+    "proposals_written": 0,
+    "proposals_deduplicated": 0,
+    "proposals_rejected_auto": 0
+  },
+  "notes": [
+    "inspector-evaluator: banc 6 tests, score global 0.97, 1 tâche(s) corrective(s)"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "cycle_id": "cycle_20260711_193526",
+  "started_at": "2026-07-11T19:35:26Z",
+  "dry_run": false,
+  "status": "ok",
+  "deterministic_ran": [
+    {
+      "agent": "coverage-gaps",
+      "status": "ok"
+    },
+    {
+      "agent": "quality",
+      "status": "ok"
+    }
+  ],
+  "llm_decisions": [
+    {
+      "task_id": "t_4fa2b72f23346bae",
+      "agent": "extraction-llm",
+      "provider": "gemini",
+      "model": "gemini-3.1-flash-lite",
+      "alternatives": [
+        {
+          "provider": "groq",
+          "model": "llama-3.3-70b-versatile",
+          "score": 60.45
+        },
+        {
+          "provider": "cloudflare",
+          "model": "@cf/meta/llama-3.1-8b-instruct",
+          "score": 60.3
+        },
+        {
+          "provider": "openrouter",
+          "model": "meta-llama/llama-3.3-70b-instruct:free",
+          "score": 60.15
+        }
+      ],
+      "rejected": [],
+      "reason": "meilleur score gratuit (qualité=50, fiabilité=1.00, prio=1, latence=1.00s)",
+      "estimated_cost": 0,
+      "next_on_fail": "bascule fournisseur suivant ou waiting_reset"
+    }
+  ],
+  "tasks_executed": [
+    {
+      "task_id": "t_4fa2b72f23346bae",
+      "provider": "gemini",
+      "model": "gemini-3.1-flash-lite",
+      "status": "blocked_human_review",
+      "agent_status": "ok",
+      "task_outcome": "produced",
+      "llm_calls": 3,
+      "proposals_written": 3,
+      "tokens_in": 6137,
+      "tokens_out": 980
+    }
+  ],
+  "tasks_deferred": [
+    {
+      "task_id": "t_bcee5155c6c44062",
+      "raison": "regroupé avec le run unique de extraction-llm ce cycle"
+    }
+  ],
+  "provider_changes": [
+    {
+      "provider": "gemini",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 5
+    },
+    {
+      "provider": "groq",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 0
+    },
+    {
+      "provider": "cloudflare",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 0
+    },
+    {
+      "provider": "openrouter",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 0
+    }
+  ],
+  "notes": []
+}

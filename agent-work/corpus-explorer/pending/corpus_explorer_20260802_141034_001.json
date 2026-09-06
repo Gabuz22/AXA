@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260802_141034_001",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260802_141030",
+  "created_at": "2026-08-02T14:10:34Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "sommaire"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Notice Excelium Vie.pdf",
+    "pages": "63-63",
+    "excerpt": "Contrat « Excelium (assurance vie) » — zone sommaire (pages 63-63) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Cette saisine peut se faire, Service Réclamations\nPassé, Service Réclamations, Notice Excelium, Pontoise \nCedex, Assurance\nVous, Service Client, Esp"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Excelium (assurance vie)",
+      "doc_id": "axa_pdf_05",
+      "zone": "axa_pdf_05#sommaire:63-63",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Cette saisine peut se faire",
+        "Service Réclamations\nPassé",
+        "Service Réclamations",
+        "Notice Excelium",
+        "Pontoise \nCedex",
+        "Assurance\nVous",
+        "Service Client",
+        "Espace Client"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Excelium (assurance vie) » — zone sommaire (pages 63-63) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Cette saisine peut se faire, Service Réclamations\nPassé, Service Réclamations, Notice Excelium, Pontoise \nCedex, Assurance\nVous, Service Client, Espace Client. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

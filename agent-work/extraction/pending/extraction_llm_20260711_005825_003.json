@@ -1,0 +1,50 @@
+{
+  "proposal_id": "extraction_llm_20260711_005825_003",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260711_005820",
+  "created_at": "2026-07-11T00:58:25Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_assurance_obseques",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "plafonds"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+    "page": 6,
+    "url": null,
+    "excerpt": "dans la limite du capital garanti compris entre 2 000 € et 10 000 €"
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "plafonds",
+      "texte": "Plafond du capital garanti",
+      "diff": "Précision des montants minimum et maximum du capital.",
+      "closest_existing": "",
+      "raison": "Le texte définit les limites financières du capital garanti."
+    }
+  },
+  "reasoning_summary": "Le texte définit les limites financières du capital garanti.",
+  "confidence": 1.0,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

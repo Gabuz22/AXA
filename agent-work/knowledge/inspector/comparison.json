@@ -1,0 +1,650 @@
+{
+  "subjects": [
+    "Avizen",
+    "Avizen Pro",
+    "Entour'Age",
+    "Essen'Ciel (assurance obsèques)",
+    "Essen'Ciel Patrimoine",
+    "Excelium (assurance vie)",
+    "Ma Protection Accident (Garantie des accidents de la vie)",
+    "Ma Retraite (plan d'épargne retraite individuel — PER)",
+    "Masterlife CREDIT"
+  ],
+  "pairs": [
+    {
+      "a": "Avizen",
+      "b": "Avizen Pro",
+      "relation": "partiellement_comparables",
+      "recouvrement_garanties": 0.385,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen",
+      "b": "Entour'Age",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.12,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen",
+      "b": "Essen'Ciel (assurance obsèques)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.124,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen",
+      "b": "Essen'Ciel Patrimoine",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.038,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "option"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen",
+      "b": "Excelium (assurance vie)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.117,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen",
+      "b": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.075,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen",
+      "b": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.13,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen",
+      "b": "Masterlife CREDIT",
+      "relation": "partiellement_comparables",
+      "recouvrement_garanties": 0.241,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen Pro",
+      "b": "Entour'Age",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.106,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen Pro",
+      "b": "Essen'Ciel (assurance obsèques)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.104,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen Pro",
+      "b": "Essen'Ciel Patrimoine",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.029,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "option"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen Pro",
+      "b": "Excelium (assurance vie)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.114,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen Pro",
+      "b": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.078,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen Pro",
+      "b": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.133,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Avizen Pro",
+      "b": "Masterlife CREDIT",
+      "relation": "partiellement_comparables",
+      "recouvrement_garanties": 0.225,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Entour'Age",
+      "b": "Essen'Ciel (assurance obsèques)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.14,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Entour'Age",
+      "b": "Essen'Ciel Patrimoine",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.034,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "option"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Entour'Age",
+      "b": "Excelium (assurance vie)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.086,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Entour'Age",
+      "b": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.062,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Entour'Age",
+      "b": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.096,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Entour'Age",
+      "b": "Masterlife CREDIT",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.097,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Essen'Ciel (assurance obsèques)",
+      "b": "Essen'Ciel Patrimoine",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.068,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "option"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Essen'Ciel (assurance obsèques)",
+      "b": "Excelium (assurance vie)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.119,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Essen'Ciel (assurance obsèques)",
+      "b": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.087,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Essen'Ciel (assurance obsèques)",
+      "b": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.119,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Essen'Ciel (assurance obsèques)",
+      "b": "Masterlife CREDIT",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.101,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Essen'Ciel Patrimoine",
+      "b": "Excelium (assurance vie)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.053,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "option"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Essen'Ciel Patrimoine",
+      "b": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.017,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "option"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Essen'Ciel Patrimoine",
+      "b": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.064,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "option"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Essen'Ciel Patrimoine",
+      "b": "Masterlife CREDIT",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.026,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "option"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Excelium (assurance vie)",
+      "b": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.035,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Excelium (assurance vie)",
+      "b": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "relation": "partiellement_comparables",
+      "recouvrement_garanties": 0.259,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Excelium (assurance vie)",
+      "b": "Masterlife CREDIT",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.104,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "b": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.054,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Ma Protection Accident (Garantie des accidents de la vie)",
+      "b": "Masterlife CREDIT",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.065,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    },
+    {
+      "a": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "b": "Masterlife CREDIT",
+      "relation": "complementaires",
+      "recouvrement_garanties": 0.105,
+      "mecanismes_structurants_partages": [
+        "exclusion",
+        "garantie"
+      ],
+      "mecanismes_secondaires_partages": [
+        "formule",
+        "option",
+        "point_vigilance"
+      ],
+      "validation_required": false,
+      "note": "classement déterministe (recoupement de mécanismes) — une différence de vocabulaire n'est pas une différence contractuelle ; à confirmer"
+    }
+  ],
+  "coverage_gaps": [
+    {
+      "mecanisme": "formule",
+      "present": [
+        "Avizen",
+        "Avizen Pro",
+        "Entour'Age",
+        "Essen'Ciel (assurance obsèques)",
+        "Excelium (assurance vie)",
+        "Ma Protection Accident (Garantie des accidents de la vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)",
+        "Masterlife CREDIT"
+      ],
+      "absent": [
+        "Essen'Ciel Patrimoine"
+      ],
+      "structurant": false,
+      "nature": "difference_secondaire"
+    },
+    {
+      "mecanisme": "point_vigilance",
+      "present": [
+        "Avizen",
+        "Avizen Pro",
+        "Entour'Age",
+        "Essen'Ciel (assurance obsèques)",
+        "Excelium (assurance vie)",
+        "Ma Protection Accident (Garantie des accidents de la vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)",
+        "Masterlife CREDIT"
+      ],
+      "absent": [
+        "Essen'Ciel Patrimoine"
+      ],
+      "structurant": false,
+      "nature": "difference_secondaire"
+    }
+  ],
+  "avertissement": "Comparaison structurelle prudente. Preuves conservées par contrat (jamais mélangées). Toute paire 'substituables/doublon' reste à confirmer."
+}
