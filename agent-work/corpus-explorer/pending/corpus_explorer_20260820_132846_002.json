@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260820_132846_002",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260820_132841",
+  "created_at": "2026-08-20T13:28:46Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "titre"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Notice Ma Retraite.pdf",
+    "pages": "27-27",
+    "excerpt": "Contrat « Ma Retraite (plan d'épargne retraite individuel — PER) » — zone titre (pages 27-27) : couverture non_couverte. 17 élément(s) possiblement absent(s) de la connaissance : Ma Retraite, Certificat, Transfert, Sécurité, assuré, Aucun, Code, Nous."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "doc_id": "axa_pdf_08",
+      "zone": "axa_pdf_08#titre:27-27",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Ma Retraite",
+        "Certificat",
+        "Transfert",
+        "Sécurité",
+        "assuré",
+        "Aucun",
+        "Code",
+        "Nous"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Ma Retraite (plan d'épargne retraite individuel — PER) » — zone titre (pages 27-27) : couverture non_couverte. 17 élément(s) possiblement absent(s) de la connaissance : Ma Retraite, Certificat, Transfert, Sécurité, assuré, Aucun, Code, Nous. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

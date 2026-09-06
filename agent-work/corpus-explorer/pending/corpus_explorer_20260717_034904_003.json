@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260717_034904_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260717_034859",
+  "created_at": "2026-07-17T03:49:04Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-04 Notice d'information Avizen Pro (AEP).pdf",
+    "pages": "53-53",
+    "excerpt": "Contrat « Avizen Pro » — zone garanties (pages 53-53) : couverture partielle. 26 élément(s) possiblement absent(s) de la connaissance : Invalidité Permanente Totale, Partenaire\nPartenaire, Affaires Étrangères, Maladie\nToute, Définitions, Le Médecin, Ministère, Pratique."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Avizen Pro",
+      "doc_id": "axa_pdf_02",
+      "zone": "axa_pdf_02#garanties:53-53",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Invalidité Permanente Totale",
+        "Partenaire\nPartenaire",
+        "Affaires Étrangères",
+        "Maladie\nToute",
+        "Définitions",
+        "Le Médecin",
+        "Ministère",
+        "Pratique"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Avizen Pro » — zone garanties (pages 53-53) : couverture partielle. 26 élément(s) possiblement absent(s) de la connaissance : Invalidité Permanente Totale, Partenaire\nPartenaire, Affaires Étrangères, Maladie\nToute, Définitions, Le Médecin, Ministère, Pratique. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

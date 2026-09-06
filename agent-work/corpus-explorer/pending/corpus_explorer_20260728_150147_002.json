@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260728_150147_002",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260728_150144",
+  "created_at": "2026-07-28T15:01:47Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Notice Excelium Vie.pdf",
+    "pages": "2-2",
+    "excerpt": "Contrat « Excelium (assurance vie) » — zone garanties (pages 2-2) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : J Frais en cours de vie du contrat, Assurances Vie Mutuelle, Informations Clés, J Frais de sortie, J Autres frais, Sécurisation, Immo Avenir, Croissa"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Excelium (assurance vie)",
+      "doc_id": "axa_pdf_05",
+      "zone": "axa_pdf_05#garanties:2-2",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "J Frais en cours de vie du contrat",
+        "Assurances Vie Mutuelle",
+        "Informations Clés",
+        "J Frais de sortie",
+        "J Autres frais",
+        "Sécurisation",
+        "Immo Avenir",
+        "Croissance"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Excelium (assurance vie) » — zone garanties (pages 2-2) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : J Frais en cours de vie du contrat, Assurances Vie Mutuelle, Informations Clés, J Frais de sortie, J Autres frais, Sécurisation, Immo Avenir, Croissance. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

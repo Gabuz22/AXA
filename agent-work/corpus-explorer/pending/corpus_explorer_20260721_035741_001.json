@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260721_035741_001",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260721_035738",
+  "created_at": "2026-07-21T03:57:41Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "contenu"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'Information Entour'Age.pdf",
+    "pages": "34-34",
+    "excerpt": "Contrat « Entour'Age » — zone contenu (pages 34-34) : couverture non_couverte. 12 élément(s) possiblement absent(s) de la connaissance : Conformément, Assurances, France Vie, Mutuelle, Rapport, Accord, Code, Rapport sur la solvabilité et la situation financière."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Entour'Age",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#contenu:34-34",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Conformément",
+        "Assurances",
+        "France Vie",
+        "Mutuelle",
+        "Rapport",
+        "Accord",
+        "Code",
+        "Rapport sur la solvabilité et la situation financière"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Entour'Age » — zone contenu (pages 34-34) : couverture non_couverte. 12 élément(s) possiblement absent(s) de la connaissance : Conformément, Assurances, France Vie, Mutuelle, Rapport, Accord, Code, Rapport sur la solvabilité et la situation financière. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

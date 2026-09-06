@@ -1,0 +1,75 @@
+{
+  "cycle_id": "cycle_20260716_142719",
+  "started_at": "2026-07-16T14:27:19Z",
+  "dry_run": false,
+  "status": "ok",
+  "deterministic_ran": [
+    {
+      "agent": "knowledge-curator",
+      "status": "ok"
+    },
+    {
+      "agent": "inspector-evaluator",
+      "status": "ok"
+    },
+    {
+      "agent": "coverage-gaps",
+      "status": "ok"
+    },
+    {
+      "agent": "quality",
+      "status": "ok"
+    }
+  ],
+  "llm_decisions": [],
+  "tasks_executed": [],
+  "tasks_deferred": [],
+  "provider_changes": [
+    {
+      "provider": "gemini",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 10
+    },
+    {
+      "provider": "groq",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 0
+    },
+    {
+      "provider": "cloudflare",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 0
+    },
+    {
+      "provider": "openrouter",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 0
+    },
+    {
+      "provider": "claude-assisted-test",
+      "state": "available",
+      "next_available_at": null,
+      "success_rate": 1.0,
+      "quality": 50.0,
+      "needs_human": false,
+      "calls_used_est": 0
+    }
+  ],
+  "notes": []
+}

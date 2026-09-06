@@ -1,0 +1,10 @@
+{
+  "providers": {
+    "gemini": {
+      "quality": 50.0,
+      "success": 1114,
+      "error": 13
+    }
+  },
+  "updated_at": "2026-09-06T15:49:14Z"
+}

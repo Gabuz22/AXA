@@ -1,0 +1,23 @@
+{
+  "run_id": "run_corpus-explorer_20260818_132453",
+  "agent_id": "corpus-explorer",
+  "started_at": "2026-08-18T13:24:53Z",
+  "finished_at": "2026-08-18T13:25:17Z",
+  "dry_run": false,
+  "status": "ok",
+  "task_id": null,
+  "provider_used": "gemini",
+  "model_used": "gemini-3.1-flash-lite",
+  "counters": {
+    "llm_calls": 2,
+    "tokens_in_est": 1890,
+    "tokens_out_est": 411,
+    "proposals_generated": 3,
+    "proposals_written": 3,
+    "proposals_deduplicated": 0,
+    "proposals_rejected_auto": 0
+  },
+  "notes": [
+    "corpus-explorer: exploration terminée (couverture 0%)"
+  ]
+}

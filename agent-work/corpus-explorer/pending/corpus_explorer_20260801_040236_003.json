@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260801_040236_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260801_040232",
+  "created_at": "2026-08-01T04:02:36Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Notice Excelium Vie.pdf",
+    "pages": "43-43",
+    "excerpt": "Contrat « Excelium (assurance vie) » — zone garanties (pages 43-43) : couverture non_couverte. 28 élément(s) possiblement absent(s) de la connaissance : Euro Valeurs \nResponsables, Lundi Mardi Mercredi Jeudi, Euro Valeurs \nResponsable, Vendredi Samedi Dimanche, Avenir \nEntrepreneur, Avenir Entrepren"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Excelium (assurance vie)",
+      "doc_id": "axa_pdf_05",
+      "zone": "axa_pdf_05#garanties:43-43",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Euro Valeurs \nResponsables",
+        "Lundi Mardi Mercredi Jeudi",
+        "Euro Valeurs \nResponsable",
+        "Vendredi Samedi Dimanche",
+        "Avenir \nEntrepreneur",
+        "Avenir Entrepreneur",
+        "Placement Collectif",
+        "Exemple  \nVotre"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Excelium (assurance vie) » — zone garanties (pages 43-43) : couverture non_couverte. 28 élément(s) possiblement absent(s) de la connaissance : Euro Valeurs \nResponsables, Lundi Mardi Mercredi Jeudi, Euro Valeurs \nResponsable, Vendredi Samedi Dimanche, Avenir \nEntrepreneur, Avenir Entrepreneur, Placement Collectif, Exemple  \nVotre. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

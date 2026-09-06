@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260806_035151_002",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260806_035147",
+  "created_at": "2026-08-06T03:51:51Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "definitions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Recueil des DIC Excelium.pdf",
+    "pages": "20-20",
+    "excerpt": "Contrat « Excelium (assurance vie) » — zone definitions (pages 20-20) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Thèmes liés à l'investissement durable, Dépositaire\nBrown Brothers Harriman, Autres objectifs d'investissement, Luxembourg\nProduit\nSustainable, D"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Excelium (assurance vie)",
+      "doc_id": "axa_pdf_06",
+      "zone": "axa_pdf_06#definitions:20-20",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Thèmes liés à l'investissement durable",
+        "Dépositaire\nBrown Brothers Harriman",
+        "Autres objectifs d'investissement",
+        "Luxembourg\nProduit\nSustainable",
+        "Durée\nLe Portefeuille",
+        "Glossaire\nInstruments",
+        "Instruments dérivés",
+        "Thematic Portfolio"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Excelium (assurance vie) » — zone definitions (pages 20-20) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Thèmes liés à l'investissement durable, Dépositaire\nBrown Brothers Harriman, Autres objectifs d'investissement, Luxembourg\nProduit\nSustainable, Durée\nLe Portefeuille, Glossaire\nInstruments, Instruments dérivés, Thematic Portfolio. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

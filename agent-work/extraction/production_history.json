@@ -1,0 +1,628 @@
+{
+  "runs": [
+    {
+      "at": "2026-07-11T11:37:38Z",
+      "run_id": "run_extraction-llm_20260711_113730",
+      "provider": "github-models",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 7978,
+      "tokens_out": 45,
+      "produced": 0,
+      "kept": 0,
+      "rejected": 0,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Avizen",
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-11T17:11:53Z",
+      "run_id": "run_extraction-llm_20260711_171143",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 8657,
+      "tokens_out": 2256,
+      "produced": 12,
+      "kept": 5,
+      "rejected": 5,
+      "time_saved_min": 60,
+      "rentability": 0.458,
+      "contracts": [
+        "Avizen Pro",
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-11T17:20:06Z",
+      "run_id": "run_extraction-llm_20260711_171959",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 9832,
+      "tokens_out": 1064,
+      "produced": 6,
+      "kept": 4,
+      "rejected": 2,
+      "time_saved_min": 48,
+      "rentability": 0.367,
+      "contracts": [
+        "Entour'Age",
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-11T17:38:25Z",
+      "run_id": "run_extraction-llm_20260711_173818",
+      "provider": "gemini",
+      "pages": 12,
+      "zones": 4,
+      "tokens_in": 8007,
+      "tokens_out": 1655,
+      "produced": 9,
+      "kept": 9,
+      "rejected": 0,
+      "time_saved_min": 108,
+      "rentability": 0.931,
+      "contracts": [
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-11T17:54:35Z",
+      "run_id": "run_extraction-llm_20260711_175428",
+      "provider": "gemini",
+      "pages": 12,
+      "zones": 4,
+      "tokens_in": 8222,
+      "tokens_out": 1348,
+      "produced": 7,
+      "kept": 3,
+      "rejected": 2,
+      "time_saved_min": 36,
+      "rentability": 0.313,
+      "contracts": [
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-11T19:35:33Z",
+      "run_id": "run_extraction-llm_20260711_193528",
+      "provider": "gemini",
+      "pages": 9,
+      "zones": 3,
+      "tokens_in": 6137,
+      "tokens_out": 980,
+      "produced": 5,
+      "kept": 3,
+      "rejected": 0,
+      "time_saved_min": 36,
+      "rentability": 0.422,
+      "contracts": [
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)"
+      ]
+    },
+    {
+      "at": "2026-07-11T22:58:07Z",
+      "run_id": "run_extraction-llm_20260711_225802",
+      "provider": "gemini",
+      "pages": 9,
+      "zones": 3,
+      "tokens_in": 6156,
+      "tokens_out": 836,
+      "produced": 4,
+      "kept": 4,
+      "rejected": 0,
+      "time_saved_min": 48,
+      "rentability": 0.572,
+      "contracts": [
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)"
+      ]
+    },
+    {
+      "at": "2026-07-12T08:33:42Z",
+      "run_id": "run_extraction-llm_20260712_083336",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 9245,
+      "tokens_out": 1493,
+      "produced": 8,
+      "kept": 2,
+      "rejected": 4,
+      "time_saved_min": 24,
+      "rentability": 0.186,
+      "contracts": [
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Protection Accident (Garantie des accidents de la vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-12T13:59:21Z",
+      "run_id": "run_extraction-llm_20260712_135914",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 9444,
+      "tokens_out": 1238,
+      "produced": 7,
+      "kept": 3,
+      "rejected": 3,
+      "time_saved_min": 36,
+      "rentability": 0.281,
+      "contracts": [
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)",
+        "Masterlife CREDIT"
+      ]
+    },
+    {
+      "at": "2026-07-12T19:34:33Z",
+      "run_id": "run_extraction-llm_20260712_193428",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 10575,
+      "tokens_out": 670,
+      "produced": 4,
+      "kept": 3,
+      "rejected": 0,
+      "time_saved_min": 36,
+      "rentability": 0.267,
+      "contracts": [
+        "Avizen",
+        "Essen'Ciel (assurance obsèques)",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-13T19:53:18Z",
+      "run_id": "run_extraction-llm_20260713_195311",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 9697,
+      "tokens_out": 1364,
+      "produced": 7,
+      "kept": 6,
+      "rejected": 1,
+      "time_saved_min": 72,
+      "rentability": 0.542,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Essen'Ciel (assurance obsèques)",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-18T08:11:57Z",
+      "run_id": "run_extraction-llm_20260718_081151",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 10226,
+      "tokens_out": 1163,
+      "produced": 6,
+      "kept": 0,
+      "rejected": 6,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Essen'Ciel (assurance obsèques)",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-18T13:53:33Z",
+      "run_id": "run_extraction-llm_20260718_135327",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 10180,
+      "tokens_out": 579,
+      "produced": 3,
+      "kept": 0,
+      "rejected": 3,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Essen'Ciel (assurance obsèques)",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-18T19:35:42Z",
+      "run_id": "run_extraction-llm_20260718_193535",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 11146,
+      "tokens_out": 1502,
+      "produced": 8,
+      "kept": 5,
+      "rejected": 3,
+      "time_saved_min": 60,
+      "rentability": 0.395,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Essen'Ciel (assurance obsèques)",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-20T09:38:25Z",
+      "run_id": "run_extraction-llm_20260720_093818",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 10111,
+      "tokens_out": 1008,
+      "produced": 5,
+      "kept": 0,
+      "rejected": 5,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Essen'Ciel (assurance obsèques)",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-23T08:47:37Z",
+      "run_id": "run_extraction-llm_20260723_084730",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 11308,
+      "tokens_out": 1052,
+      "produced": 4,
+      "kept": 3,
+      "rejected": 1,
+      "time_saved_min": 36,
+      "rentability": 0.243,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Essen'Ciel (assurance obsèques)",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-25T08:26:53Z",
+      "run_id": "run_extraction-llm_20260725_082644",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 11136,
+      "tokens_out": 1801,
+      "produced": 10,
+      "kept": 0,
+      "rejected": 10,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Entour'Age",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-27T19:58:31Z",
+      "run_id": "run_extraction-llm_20260727_195823",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 12497,
+      "tokens_out": 2065,
+      "produced": 11,
+      "kept": 0,
+      "rejected": 11,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Entour'Age",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-28T19:55:47Z",
+      "run_id": "run_extraction-llm_20260728_195541",
+      "provider": "gemini",
+      "pages": 15,
+      "zones": 5,
+      "tokens_in": 12868,
+      "tokens_out": 601,
+      "produced": 3,
+      "kept": 0,
+      "rejected": 3,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Entour'Age",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-29T09:14:52Z",
+      "run_id": "run_extraction-llm_20260729_091446",
+      "provider": "gemini",
+      "pages": 13,
+      "zones": 5,
+      "tokens_in": 9346,
+      "tokens_out": 824,
+      "produced": 4,
+      "kept": 0,
+      "rejected": 4,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Entour'Age",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-07-29T19:48:08Z",
+      "run_id": "run_extraction-llm_20260729_194800",
+      "provider": "gemini",
+      "pages": 12,
+      "zones": 5,
+      "tokens_in": 6785,
+      "tokens_out": 1456,
+      "produced": 8,
+      "kept": 0,
+      "rejected": 8,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Entour'Age",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-08-01T08:36:04Z",
+      "run_id": "run_extraction-llm_20260801_083557",
+      "provider": "gemini",
+      "pages": 10,
+      "zones": 5,
+      "tokens_in": 7167,
+      "tokens_out": 1253,
+      "produced": 7,
+      "kept": 0,
+      "rejected": 7,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Avizen",
+        "Avizen Pro",
+        "Entour'Age",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-08-03T20:02:12Z",
+      "run_id": "run_extraction-llm_20260803_200204",
+      "provider": "gemini",
+      "pages": 12,
+      "zones": 5,
+      "tokens_in": 8242,
+      "tokens_out": 1481,
+      "produced": 8,
+      "kept": 4,
+      "rejected": 4,
+      "time_saved_min": 48,
+      "rentability": 0.411,
+      "contracts": [
+        "Avizen Pro",
+        "Entour'Age",
+        "Essen'Ciel (assurance obsèques)",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-08-08T07:19:43Z",
+      "run_id": "run_extraction-llm_20260808_071935",
+      "provider": "gemini",
+      "pages": 12,
+      "zones": 5,
+      "tokens_in": 8376,
+      "tokens_out": 1391,
+      "produced": 7,
+      "kept": 0,
+      "rejected": 7,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Avizen Pro",
+        "Entour'Age",
+        "Essen'Ciel (assurance obsèques)",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-08-15T18:50:47Z",
+      "run_id": "run_extraction-llm_20260815_185036",
+      "provider": "gemini",
+      "pages": 12,
+      "zones": 5,
+      "tokens_in": 8291,
+      "tokens_out": 711,
+      "produced": 4,
+      "kept": 3,
+      "rejected": 0,
+      "time_saved_min": 36,
+      "rentability": 0.333,
+      "contracts": [
+        "Avizen Pro",
+        "Entour'Age",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-08-16T07:03:26Z",
+      "run_id": "run_extraction-llm_20260816_070319",
+      "provider": "gemini",
+      "pages": 12,
+      "zones": 5,
+      "tokens_in": 8364,
+      "tokens_out": 1235,
+      "produced": 7,
+      "kept": 3,
+      "rejected": 4,
+      "time_saved_min": 36,
+      "rentability": 0.313,
+      "contracts": [
+        "Avizen Pro",
+        "Entour'Age",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-08-16T13:03:57Z",
+      "run_id": "run_extraction-llm_20260816_130343",
+      "provider": "gemini",
+      "pages": 12,
+      "zones": 5,
+      "tokens_in": 8022,
+      "tokens_out": 1261,
+      "produced": 7,
+      "kept": 2,
+      "rejected": 3,
+      "time_saved_min": 24,
+      "rentability": 0.215,
+      "contracts": [
+        "Avizen Pro",
+        "Entour'Age",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-08-16T18:49:58Z",
+      "run_id": "run_extraction-llm_20260816_184934",
+      "provider": "gemini",
+      "pages": 11,
+      "zones": 5,
+      "tokens_in": 7444,
+      "tokens_out": 894,
+      "produced": 5,
+      "kept": 3,
+      "rejected": 0,
+      "time_saved_min": 36,
+      "rentability": 0.36,
+      "contracts": [
+        "Avizen Pro",
+        "Entour'Age",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-08-17T07:26:22Z",
+      "run_id": "run_extraction-llm_20260817_072613",
+      "provider": "gemini",
+      "pages": 9,
+      "zones": 5,
+      "tokens_in": 6876,
+      "tokens_out": 1480,
+      "produced": 9,
+      "kept": 0,
+      "rejected": 9,
+      "time_saved_min": 0,
+      "rentability": 0.0,
+      "contracts": [
+        "Entour'Age",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Protection Accident (Garantie des accidents de la vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    },
+    {
+      "at": "2026-08-23T18:51:17Z",
+      "run_id": "run_extraction-llm_20260823_185109",
+      "provider": "gemini",
+      "pages": 9,
+      "zones": 5,
+      "tokens_in": 7711,
+      "tokens_out": 1739,
+      "produced": 10,
+      "kept": 4,
+      "rejected": 6,
+      "time_saved_min": 48,
+      "rentability": 0.423,
+      "contracts": [
+        "Entour'Age",
+        "Essen'Ciel Patrimoine",
+        "Excelium (assurance vie)",
+        "Ma Protection Accident (Garantie des accidents de la vie)",
+        "Ma Retraite (plan d'épargne retraite individuel — PER)"
+      ]
+    }
+  ]
+}

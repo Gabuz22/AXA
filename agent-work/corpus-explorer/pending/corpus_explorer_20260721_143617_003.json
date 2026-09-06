@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260721_143617_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260721_143614",
+  "created_at": "2026-07-21T14:36:17Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "declencheurs"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'Information Entour'Age.pdf",
+    "pages": "41-41",
+    "excerpt": "Contrat « Entour'Age » — zone declencheurs (pages 41-41) : couverture non_couverte. 16 élément(s) possiblement absent(s) de la connaissance : Espace Client, Définitions, Archivage, Services, Données, SIGNER, Ainsi, Tiers."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Entour'Age",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#declencheurs:41-41",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Espace Client",
+        "Définitions",
+        "Archivage",
+        "Services",
+        "Données",
+        "SIGNER",
+        "Ainsi",
+        "Tiers"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Entour'Age » — zone declencheurs (pages 41-41) : couverture non_couverte. 16 élément(s) possiblement absent(s) de la connaissance : Espace Client, Définitions, Archivage, Services, Données, SIGNER, Ainsi, Tiers. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

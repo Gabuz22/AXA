@@ -1,8 +1,8 @@
 {
   "proposal_id": "coverage__couverture_faible_essen_ciel_patrimoine",
   "agent_id": "coverage-gaps",
-  "run_id": "run_coverage-gaps_20260711_121913",
-  "created_at": "2026-07-11T12:19:13Z",
+  "run_id": "run_coverage-gaps_20260906_153211",
+  "created_at": "2026-09-06T15:32:11Z",
   "status": "pending_review",
   "origin": "deterministic",
   "task": {

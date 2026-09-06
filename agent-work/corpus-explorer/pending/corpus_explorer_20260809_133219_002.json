@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260809_133219_002",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260809_133216",
+  "created_at": "2026-08-09T13:32:19Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "titre"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Recueil des DIC Excelium.pdf",
+    "pages": "43-43",
+    "excerpt": "Contrat « Excelium (assurance vie) » — zone titre (pages 43-43) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Que va me coûter cet investissement ?, Période de détention recommandée, Valeur \nLiquidative, Tour Majunga, Commissions, Ce Produit, Concernant, La Déf"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Excelium (assurance vie)",
+      "doc_id": "axa_pdf_06",
+      "zone": "axa_pdf_06#titre:43-43",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Que va me coûter cet investissement ?",
+        "Période de détention recommandée",
+        "Valeur \nLiquidative",
+        "Tour Majunga",
+        "Commissions",
+        "Ce Produit",
+        "Concernant",
+        "La Défense"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Excelium (assurance vie) » — zone titre (pages 43-43) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Que va me coûter cet investissement ?, Période de détention recommandée, Valeur \nLiquidative, Tour Majunga, Commissions, Ce Produit, Concernant, La Défense. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

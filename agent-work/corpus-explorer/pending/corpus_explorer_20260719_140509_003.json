@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260719_140509_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260719_140506",
+  "created_at": "2026-07-19T14:05:09Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'Information Entour'Age.pdf",
+    "pages": "15-27",
+    "excerpt": "Contrat « Entour'Age » — zone garanties (pages 15-27) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Autonomie Gérontologie Groupe Iso, Cette évaluation prend en compte, Capital Décès Remboursement, Formule \nDépendance Totale, Garanties Hospitalisation, Le Capit"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Entour'Age",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#garanties:15-27",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Autonomie Gérontologie Groupe Iso",
+        "Cette évaluation prend en compte",
+        "Capital Décès Remboursement",
+        "Formule \nDépendance Totale",
+        "Garanties Hospitalisation",
+        "Le Capital Premiers Frais",
+        "Allocation Personnalisée",
+        "Assurances Vie \nMutuelle"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Entour'Age » — zone garanties (pages 15-27) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Autonomie Gérontologie Groupe Iso, Cette évaluation prend en compte, Capital Décès Remboursement, Formule \nDépendance Totale, Garanties Hospitalisation, Le Capital Premiers Frais, Allocation Personnalisée, Assurances Vie \nMutuelle. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

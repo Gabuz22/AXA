@@ -1,0 +1,23 @@
+{
+  "run_id": "run_quality_20260719_193608",
+  "agent_id": "quality",
+  "started_at": "2026-07-19T19:36:08Z",
+  "finished_at": "2026-07-19T19:36:10Z",
+  "dry_run": false,
+  "status": "ok",
+  "task_id": "task_quality_daily_scan",
+  "provider_used": null,
+  "model_used": null,
+  "counters": {
+    "llm_calls": 0,
+    "tokens_in_est": 0,
+    "tokens_out_est": 0,
+    "proposals_generated": 3,
+    "proposals_written": 3,
+    "proposals_deduplicated": 0,
+    "proposals_rejected_auto": 0
+  },
+  "notes": [
+    "qualité: 15/18 OK, 0 nouvelle(s) anomalie(s)"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260718_135916_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260718_135912",
+  "created_at": "2026-07-18T13:59:16Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "conditions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'Information Entour'Age.pdf",
+    "pages": "7-8",
+    "excerpt": "Contrat « Entour'Age » — zone conditions (pages 7-8) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Capital \nDécès Remboursement, Formule Dépendance Totale, Service Dépendance, Résiliation\nVous, Médecin Conseil, Ultérieurement, Remboursement, Conformément."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Entour'Age",
+      "doc_id": "axa_pdf_03",
+      "zone": "axa_pdf_03#conditions:7-8",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Capital \nDécès Remboursement",
+        "Formule Dépendance Totale",
+        "Service Dépendance",
+        "Résiliation\nVous",
+        "Médecin Conseil",
+        "Ultérieurement",
+        "Remboursement",
+        "Conformément"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Entour'Age » — zone conditions (pages 7-8) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Capital \nDécès Remboursement, Formule Dépendance Totale, Service Dépendance, Résiliation\nVous, Médecin Conseil, Ultérieurement, Remboursement, Conformément. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

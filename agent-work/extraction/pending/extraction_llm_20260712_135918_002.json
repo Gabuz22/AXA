@@ -1,0 +1,74 @@
+{
+  "proposal_id": "extraction_llm_20260712_135918_002",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260712_135914",
+  "created_at": "2026-07-12T13:59:18Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_assurance_obseques",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "bloc:declencheurs"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+    "page": 32,
+    "url": null,
+    "excerpt": "En cas de décès non accidentel la garantie est acquise 1 an après la date de prise d’effet de l’adhésion. [...] En cas de décès suite à un accident , il n’y a pas de délai d’attente et la garantie est acquise dès la prise d’effet de l’adhésion."
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "declencheurs",
+      "texte": "Déclenchement de la garantie décès selon la cause (accidentelle ou non).",
+      "diff": "Définit les délais d'attente spécifiques au contrat Essen'Ciel.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.90 : citation nette ; formulation ambiguë.",
+      "importance": "critique",
+      "review_cost": "2 min",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Essen'Ciel (assurance obsèques)\"] / declencheurs",
+      "citation_exacte": "En cas de décès non accidentel la garantie est acquise 1 an après la date de prise d’effet de l’adhésion. [...] En cas de décès suite à un accident , il n’y a pas de délai d’attente et la garantie est acquise dès la prise d’effet de l’adhésion.",
+      "why_missing": "nouveau contrat",
+      "why_interesting": "Précise les conditions temporelles de mise en jeu de la garantie.",
+      "why_probably_absent": "nouveau contrat",
+      "documentary_interest": 1.0,
+      "priority_level": "haute",
+      "value_score": 0.664,
+      "bloc": [
+        {
+          "categorie": "declencheurs",
+          "page": 32,
+          "citation": "En cas de décès non accidentel la garantie est acquise 1 an après la date de prise d’effet de l’adhésion. [...] En cas de décès suite à un accident , il n’y a pas de délai d’attente et la garantie est acquise dès la prise d’effet de l’adhésion.",
+          "texte": "Déclenchement de la garantie décès selon la cause (accidentelle ou non)."
+        },
+        {
+          "categorie": "franchises",
+          "page": 32,
+          "citation": "En cas de décès non accidentel la garantie est acquise 1 an après la date de prise d’effet de l’adhésion.",
+          "texte": "Délai d'attente d'un an pour les décès non accidentels."
+        }
+      ]
+    }
+  },
+  "reasoning_summary": "Précise les conditions temporelles de mise en jeu de la garantie.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

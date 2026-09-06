@@ -1,0 +1,61 @@
+{
+  "proposal_id": "extraction_llm_20260711_173824_006",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260711_173818",
+  "created_at": "2026-07-11T17:38:24Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_assurance_obseques",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "conditions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+    "page": 16,
+    "url": null,
+    "excerpt": "être résident fiscal français ; être adhérent d’ANPERE"
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "conditions",
+      "texte": "Conditions cumulatives pour adhérer au contrat",
+      "diff": "Ajoute les prérequis légaux et associatifs pour l'adhésion.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.95 : citation nette.",
+      "importance": "critique",
+      "review_cost": "2 min",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Essen'Ciel (assurance obsèques)\"] / conditions",
+      "citation_exacte": "être résident fiscal français ; être adhérent d’ANPERE",
+      "why_missing": "nouveau contrat",
+      "why_interesting": "Définit les critères d'éligibilité obligatoires pour souscrire.",
+      "why_probably_absent": "nouveau contrat",
+      "documentary_interest": 0.9,
+      "priority_level": "moyenne",
+      "value_score": 0.65,
+      "bloc": []
+    }
+  },
+  "reasoning_summary": "Définit les critères d'éligibilité obligatoires pour souscrire.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

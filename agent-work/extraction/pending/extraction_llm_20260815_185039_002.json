@@ -1,0 +1,74 @@
+{
+  "proposal_id": "extraction_llm_20260815_185039_002",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260815_185036",
+  "created_at": "2026-08-15T18:50:39Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_patrimoine",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "bloc:delais"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+    "page": 2,
+    "url": null,
+    "excerpt": "Les sommes sont versées par l’assureur dans un délai de 2 mois."
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "delais",
+      "texte": "Délai de versement des sommes en cas de rachat",
+      "diff": "Ajoute le délai de traitement des rachats.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.90 : citation nette ; formulation ambiguë.",
+      "importance": "moyenne",
+      "review_cost": "30 s",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Essen'Ciel Patrimoine\"] / delais",
+      "citation_exacte": "Les sommes sont versées par l’assureur dans un délai de 2 mois.",
+      "why_missing": "categorie vide",
+      "why_interesting": "Précise les conditions de liquidité du contrat.",
+      "why_probably_absent": "catégorie vide chez Essen'Ciel Patrimoine alors que couverte chez Avizen, Avizen Pro",
+      "documentary_interest": 1.0,
+      "priority_level": "haute",
+      "value_score": 0.966,
+      "bloc": [
+        {
+          "categorie": "delais",
+          "page": 2,
+          "citation": "Les sommes sont versées par l’assureur dans un délai de 2 mois.",
+          "texte": "Délai de versement des sommes en cas de rachat"
+        },
+        {
+          "categorie": "franchises",
+          "page": 2,
+          "citation": "En cas de rachat pendant les 10 premières années de l’adhésion, une pénalité sera appliquée sur le montant racheté. Cette pénalité s’élève à 5 % de la valeur de rachat la 1re année d’adhésion, pour être ensuite diminuée de 0,5 % par année.",
+          "texte": "Pénalités de rachat (franchise de sortie)"
+        }
+      ]
+    }
+  },
+  "reasoning_summary": "Précise les conditions de liquidité du contrat.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

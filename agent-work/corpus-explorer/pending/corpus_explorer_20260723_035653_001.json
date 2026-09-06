@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260723_035653_001",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260723_035649",
+  "created_at": "2026-07-23T03:56:53Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "titre"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+    "pages": "3-3",
+    "excerpt": "Contrat « Essen'Ciel (assurance obsèques) » — zone titre (pages 3-3) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Vos contacts principaux, Association Nationale, Contrôle Prudentiel, Banque Nationale, Espace Client, Le Certificat, Bienvenue\nLe, Cette Notice."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#titre:3-3",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Vos contacts principaux",
+        "Association Nationale",
+        "Contrôle Prudentiel",
+        "Banque Nationale",
+        "Espace Client",
+        "Le Certificat",
+        "Bienvenue\nLe",
+        "Cette Notice"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Essen'Ciel (assurance obsèques) » — zone titre (pages 3-3) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Vos contacts principaux, Association Nationale, Contrôle Prudentiel, Banque Nationale, Espace Client, Le Certificat, Bienvenue\nLe, Cette Notice. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

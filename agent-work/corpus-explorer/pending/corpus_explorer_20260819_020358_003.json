@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260819_020358_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260819_020355",
+  "created_at": "2026-08-19T02:03:58Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "titre"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Notice Ma Retraite.pdf",
+    "pages": "6-6",
+    "excerpt": "Contrat « Ma Retraite (plan d'épargne retraite individuel — PER) » — zone titre (pages 6-6) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Votre adhésion est constituée, Informations Clés, Fonctionnement, Ma Retraite, Assurances, Certificat, Conditions, Croissance."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_partielle",
+      "subject": "Ma Retraite (plan d'épargne retraite individuel — PER)",
+      "doc_id": "axa_pdf_08",
+      "zone": "axa_pdf_08#titre:6-6",
+      "level": "partielle",
+      "knowledge_absent": [
+        "Votre adhésion est constituée",
+        "Informations Clés",
+        "Fonctionnement",
+        "Ma Retraite",
+        "Assurances",
+        "Certificat",
+        "Conditions",
+        "Croissance"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Ma Retraite (plan d'épargne retraite individuel — PER) » — zone titre (pages 6-6) : couverture partielle. 30 élément(s) possiblement absent(s) de la connaissance : Votre adhésion est constituée, Informations Clés, Fonctionnement, Ma Retraite, Assurances, Certificat, Conditions, Croissance. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

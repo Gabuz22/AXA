@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260811_023624_003",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260811_023620",
+  "created_at": "2026-08-11T02:36:24Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "conditions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2026-05 Recueil des DIC Excelium.pdf",
+    "pages": "53-53",
+    "excerpt": "Contrat « Excelium (assurance vie) » — zone conditions (pages 53-53) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Site internet de l'initiateur du PRIIP, Autres informations pertinentes, Nom de l'initiateur du PRIIP, AXA Avenir Infrastructure, Avenir Infrastru"
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Excelium (assurance vie)",
+      "doc_id": "axa_pdf_06",
+      "zone": "axa_pdf_06#conditions:53-53",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Site internet de l'initiateur du PRIIP",
+        "Autres informations pertinentes",
+        "Nom de l'initiateur du PRIIP",
+        "AXA Avenir Infrastructure",
+        "Avenir Infrastructure",
+        "Marchés Financiers",
+        "Objectifs\nObjectif",
+        "Informations Clés"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Excelium (assurance vie) » — zone conditions (pages 53-53) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Site internet de l'initiateur du PRIIP, Autres informations pertinentes, Nom de l'initiateur du PRIIP, AXA Avenir Infrastructure, Avenir Infrastructure, Marchés Financiers, Objectifs\nObjectif, Informations Clés. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

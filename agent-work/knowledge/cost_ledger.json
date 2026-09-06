@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0",
+  "weeks": {
+    "2026-W28": {
+      "axa-contrat": {
+        "llm_calls": 9,
+        "tokens": 0
+      }
+    },
+    "2026-W29": {
+      "axa-contrat": {
+        "llm_calls": 42,
+        "tokens": 0
+      }
+    },
+    "2026-W30": {
+      "axa-contrat": {
+        "llm_calls": 42,
+        "tokens": 0
+      }
+    },
+    "2026-W31": {
+      "axa-contrat": {
+        "llm_calls": 42,
+        "tokens": 0
+      }
+    },
+    "2026-W32": {
+      "axa-contrat": {
+        "llm_calls": 42,
+        "tokens": 0
+      }
+    },
+    "2026-W33": {
+      "axa-contrat": {
+        "llm_calls": 42,
+        "tokens": 0
+      }
+    },
+    "2026-W34": {
+      "axa-contrat": {
+        "llm_calls": 44,
+        "tokens": 0
+      }
+    },
+    "2026-W35": {
+      "axa-contrat": {
+        "llm_calls": 42,
+        "tokens": 0
+      }
+    },
+    "2026-W36": {
+      "axa-contrat": {
+        "llm_calls": 42,
+        "tokens": 0
+      }
+    }
+  }
+}

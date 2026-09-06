@@ -1,0 +1,58 @@
+{
+  "proposal_id": "corpus_explorer_20260723_035653_002",
+  "agent_id": "corpus-explorer",
+  "run_id": "run_corpus-explorer_20260723_035649",
+  "created_at": "2026-07-23T03:56:53Z",
+  "status": "pending_review",
+  "origin": "deterministic",
+  "task": {
+    "id": "",
+    "type": "coverage",
+    "scope": ""
+  },
+  "target": {
+    "file": "agent-work/exploration/coverage_map.json",
+    "section": "garanties"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2025-06 Notice d'information Essen'Ciel.pdf",
+    "pages": "4-6",
+    "excerpt": "Contrat « Essen'Ciel (assurance obsèques) » — zone garanties (pages 4-6) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Sommaire \nNotice Essen, Ciel\nNotice Essen, En savoir plus, Informations, Sommaire\nLes, Définitions, Assistance, Bénéficier."
+  },
+  "proposed_change": {
+    "operation": "flag",
+    "payload": {
+      "gap": "zone_non_couverte",
+      "subject": "Essen'Ciel (assurance obsèques)",
+      "doc_id": "axa_pdf_04",
+      "zone": "axa_pdf_04#garanties:4-6",
+      "level": "non_couverte",
+      "knowledge_absent": [
+        "Sommaire \nNotice Essen",
+        "Ciel\nNotice Essen",
+        "En savoir plus",
+        "Informations",
+        "Sommaire\nLes",
+        "Définitions",
+        "Assistance",
+        "Bénéficier"
+      ],
+      "knowledge_suspect": []
+    }
+  },
+  "reasoning_summary": "Contrat « Essen'Ciel (assurance obsèques) » — zone garanties (pages 4-6) : couverture non_couverte. 30 élément(s) possiblement absent(s) de la connaissance : Sommaire \nNotice Essen, Ciel\nNotice Essen, En savoir plus, Informations, Sommaire\nLes, Définitions, Assistance, Bénéficier. — Constat d'EXPLORATION (cartographie + comparaison à la connaissance existante). Ne signifie pas que la donnée manque dans le contrat : vérification documentaire humaine.",
+  "confidence": 0.9,
+  "ambiguities": [],
+  "risks": [
+    "exploration heuristique : la structure des zones est approximative ; à confirmer humainement"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}

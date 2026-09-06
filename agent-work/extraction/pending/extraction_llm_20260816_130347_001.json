@@ -1,0 +1,80 @@
+{
+  "proposal_id": "extraction_llm_20260816_130347_001",
+  "agent_id": "extraction-llm",
+  "run_id": "run_extraction-llm_20260816_130343",
+  "created_at": "2026-08-16T13:03:47Z",
+  "status": "pending_review",
+  "origin": "llm",
+  "task": {
+    "id": "task_extraction_llm_micro_zones",
+    "type": "extraction",
+    "scope": "Micro-zones (2-5 pages) des notices a trous de couverture ; l'agent choisit la zone suivante via sa memoire."
+  },
+  "target": {
+    "contract": "essen_ciel_patrimoine",
+    "file": "data/AXA/AXA_MASTER_DONNEES_PACK_A_STABLE.json",
+    "section": "bloc:definitions"
+  },
+  "source": {
+    "type": "pdf",
+    "document": "2023-09 Notice d'information Essen'Ciel Patrimoine.pdf",
+    "page": 9,
+    "url": null,
+    "excerpt": "Conjoint de l’assuré de droit ou de fait ou toute personne liée à l’assuré par un Pacs ; leurs enfants et ascendants jusqu’au 2e degré."
+  },
+  "proposed_change": {
+    "operation": "add",
+    "payload": {
+      "categorie": "definitions",
+      "texte": "Définition du terme Proche",
+      "diff": "Ajoute la définition contractuelle de Proche pour les prestations d'assistance.",
+      "closest_existing": "",
+      "confidence_reason": "Confiance 0.95 : citation nette.",
+      "importance": "moyenne",
+      "review_cost": "30 s",
+      "target_path": "AXA_MASTER_DONNEES_PACK_A_STABLE.json :: contrat[\"Essen'Ciel Patrimoine\"] / definitions",
+      "citation_exacte": "Conjoint de l’assuré de droit ou de fait ou toute personne liée à l’assuré par un Pacs ; leurs enfants et ascendants jusqu’au 2e degré.",
+      "why_missing": "categorie vide",
+      "why_interesting": "Définit les bénéficiaires potentiels des services d'assistance.",
+      "why_probably_absent": "catégorie vide chez Essen'Ciel Patrimoine alors que couverte chez Avizen, Avizen Pro",
+      "documentary_interest": 1.0,
+      "priority_level": "haute",
+      "value_score": 0.978,
+      "bloc": [
+        {
+          "categorie": "definitions",
+          "page": 9,
+          "citation": "Conjoint de l’assuré de droit ou de fait ou toute personne liée à l’assuré par un Pacs ; leurs enfants et ascendants jusqu’au 2e degré.",
+          "texte": "Définition du terme Proche"
+        },
+        {
+          "categorie": "definitions",
+          "page": 9,
+          "citation": "Les animaux domestiques sont les animaux de compagnie, et familiers, appartenant à l’adhérent assuré, et vivant habituellement à son domicile : chiens et/ou chats uniquement",
+          "texte": "Définition des animaux domestiques"
+        },
+        {
+          "categorie": "conditions",
+          "page": 9,
+          "citation": "Pour bénéficier des prestations d’assistance et avant d’engager toute dépense, vous devez appeler AXA Assistance",
+          "texte": "Condition de recours à l'assistance"
+        }
+      ]
+    }
+  },
+  "reasoning_summary": "Définit les bénéficiaires potentiels des services d'assistance.",
+  "confidence": 0.95,
+  "ambiguities": [],
+  "risks": [
+    "validation notice PDF obligatoire ; master jamais modifie",
+    "citation verifiee presente sur la page citee"
+  ],
+  "validation_required": true,
+  "regulatory_status": "none",
+  "automatic_checks": {
+    "schema_valid": true,
+    "source_resolves": true,
+    "duplicate_detected": false,
+    "scope_allowed": true
+  }
+}
